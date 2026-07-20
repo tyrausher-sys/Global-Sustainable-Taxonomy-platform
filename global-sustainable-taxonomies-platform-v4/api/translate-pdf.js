@@ -65,8 +65,12 @@ async function extractText(url) {
   }
   const contentType = upstream.headers.get("content-type") || "";
   const buffer = Buffer.from(await upstream.arrayBuffer());
+  // Some official sources serve PDFs from download endpoints that don't end in
+  // ".pdf" and don't send a "pdf" content-type (e.g. korea.kr/common/download.do).
+  // Sniffing the actual file signature is the only reliable check.
+  const isPdfBySignature = buffer.length > 4 && buffer.toString("ascii", 0, 5) === "%PDF-";
 
-  if (contentType.includes("pdf") || url.toLowerCase().endsWith(".pdf")) {
+  if (contentType.includes("pdf") || url.toLowerCase().endsWith(".pdf") || isPdfBySignature) {
     const pdfParse = require("pdf-parse");
     const parsed = await pdfParse(buffer);
     return { text: (parsed.text || "").trim(), kind: "pdf", pages: parsed.numpages || null };
