@@ -67,8 +67,11 @@ async function extractText(url) {
   const buffer = Buffer.from(await upstream.arrayBuffer());
   // Some official sources serve PDFs from download endpoints that don't end in
   // ".pdf" and don't send a "pdf" content-type (e.g. korea.kr/common/download.do).
-  // Sniffing the actual file signature is the only reliable check.
-  const isPdfBySignature = buffer.length > 4 && buffer.toString("ascii", 0, 5) === "%PDF-";
+  // Sniffing the actual file signature is the only reliable check. Per the PDF
+  // spec the "%PDF-" header may appear anywhere in the first 1024 bytes (some
+  // servers prepend a few extra bytes), so scan a window rather than byte 0.
+  const headerWindow = buffer.subarray(0, 1024).toString("latin1");
+  const isPdfBySignature = headerWindow.includes("%PDF-");
 
   if (contentType.includes("pdf") || url.toLowerCase().endsWith(".pdf") || isPdfBySignature) {
     const pdfParse = require("pdf-parse");
@@ -77,6 +80,25 @@ async function extractText(url) {
   }
 
   return { text: stripHtml(buffer.toString("utf8")), kind: "html", pages: null };
+}
+
+// Safety net: if extraction produced text that's mostly unprintable/control
+// characters (a sign we accidentally read raw binary as if it were text —
+// e.g. an undetected PDF, image, or other non-text file), don't hand that to
+// the model. Count replacement/control characters in a sample of the text.
+function looksLikeBinaryGarbage(text) {
+  const sample = text.slice(0, 2000);
+  if (!sample) return false;
+  let bad = 0;
+  for (let i = 0; i < sample.length; i++) {
+    const code = sample.charCodeAt(i);
+    // allow common whitespace; count other control chars and the Unicode
+    // replacement character (0xFFFD, produced by decoding invalid bytes) as "bad"
+    if (code === 0xfffd || (code < 32 && code !== 9 && code !== 10 && code !== 13)) {
+      bad++;
+    }
+  }
+  return bad / sample.length > 0.02; // more than 2% control/garbage chars
 }
 
 module.exports = async function handler(req, res) {
@@ -115,11 +137,11 @@ module.exports = async function handler(req, res) {
     return;
   }
 
-  if (!extracted.text || extracted.text.length < 20) {
+  if (!extracted.text || extracted.text.length < 20 || looksLikeBinaryGarbage(extracted.text)) {
     res.status(200).json({
       error: extracted.kind === "pdf"
         ? "This PDF appears to be a scanned image with no selectable text layer, so it can't be machine-translated. Please refer to the original document."
-        : "No readable text could be extracted from this document."
+        : "This document's raw content couldn't be read as text (it may be a non-text file format the server didn't identify correctly). Please refer to the original document."
     });
     return;
   }
