@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Subscribe — Global Sustainable Taxonomies</title>
+<script>
+  (function () {
+    var saved = localStorage.getItem("gst-theme");
+    if (saved === "dark") document.documentElement.setAttribute("data-theme", "dark");
+  })();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="topnav">
+  <div class="topnav-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mark"></span>
+      <span class="brand-text">Global Sustainable Taxonomies</span>
+    </a>
+    <nav class="topnav-links">
+      <a href="index.html" data-i18n="nav.map">Interactive Global Map</a>
+      <a href="advisor.html" data-i18n="nav.advisor">AI Advisor</a>
+      <a href="media.html" data-i18n="nav.media">Media Hub</a>
+      <a href="subscribe.html" class="active" data-i18n="nav.subscribe">Subscribe</a>
+      <a href="#" class="disabled" title="Coming soon" data-i18n="nav.resources" data-i18n-title="nav.comingSoon">Resources</a>
+      <a href="about.html" data-i18n="nav.about">About</a>
+    </nav>
+    <div class="topnav-actions">
+      <button class="icon-btn" id="globalSearchBtn" title="Search" aria-label="Search" data-i18n-title="nav.search" type="button">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+      <select class="lang-select" id="globalLangSelect" aria-label="Language"></select>
+      <button class="icon-btn" id="themeToggleBtn" title="Toggle theme" aria-label="Toggle theme" data-i18n-title="nav.toggleTheme">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+<div class="global-search-overlay" id="globalSearchOverlay">
+  <div class="global-search-panel">
+    <div class="global-search-input-row">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input id="globalSearchInput" type="text" data-i18n-placeholder="search.placeholder" placeholder="Search by country, taxonomy or regulator…" autocomplete="off" />
+      <button class="icon-btn" id="globalSearchCloseBtn" title="Close" aria-label="Close" data-i18n-title="search.close" type="button">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="global-search-results" id="globalSearchResults"></div>
+  </div>
+</div>
+
+<main class="page subscribe-page-wide">
+  <a class="back-link" href="media.html">&larr; <span data-i18n="subscribe.backToMedia">Back to Media Hub</span></a>
+  <div class="subscribe-header">
+    <h1 data-i18n="subscribe.heading">Subscribe to the Weekly Digest</h1>
+    <p class="lede" data-i18n="subscribe.lede">Get a weekly summary of taxonomy news, reports and AI trend insights, delivered to your inbox. Only your email address is required — everything else is optional.</p>
+  </div>
+
+  <div class="sample-banner" data-i18n="subscribe.sampleBanner">This form adds subscribers to a real Brevo mailing list once the site is deployed with a Brevo API key (see DEPLOY_INSTRUCTIONS.md). Sending the weekly digest itself is still done manually from the Brevo dashboard — this form only handles sign-ups.</div>
+
+  <div class="subscribe-layout">
+    <section class="advisor-panel subscribe-form-panel" id="subscribeFormPanel">
+      <form id="subscribeForm" novalidate>
+        <label class="field-label" for="subscribeEmail"><span data-i18n="subscribe.emailLabel">Email Address</span> <span class="required-mark">*</span></label>
+        <input type="email" id="subscribeEmail" placeholder="you@company.com" required />
+        <div class="field-error" id="emailError"></div>
+
+        <label class="field-label" for="subscribeName"><span data-i18n="subscribe.nameLabel">Name</span> <span class="optional-mark" data-i18n="subscribe.optional">(optional)</span></label>
+        <input type="text" id="subscribeName" placeholder="Your name" />
+
+        <label class="field-label"><span data-i18n="subscribe.interestLabel">Area of Interest</span> <span class="optional-mark" data-i18n="subscribe.optional">(optional)</span></label>
+        <div class="interest-list" id="interestList">
+          <label class="interest-check"><input type="checkbox" value="eu" checked /> <span data-i18n="subscribe.interestEu">EU Taxonomy Updates</span></label>
+          <label class="interest-check"><input type="checkbox" value="apac" /> <span data-i18n="subscribe.interestApac">Asia-Pacific Taxonomies</span></label>
+          <label class="interest-check"><input type="checkbox" value="green-bonds" checked /> <span data-i18n="subscribe.interestGreenBonds">Green Bonds &amp; Finance</span></label>
+          <label class="interest-check"><input type="checkbox" value="compliance" /> <span data-i18n="subscribe.interestCompliance">Compliance &amp; Assurance</span></label>
+        </div>
+
+        <label class="field-label" for="subscribeLang" data-i18n="subscribe.langLabel">Language Preference</label>
+        <select id="subscribeLang">
+          <option value="en">English</option>
+          <option value="sv">Svenska</option>
+          <option value="ko">한국어</option>
+          <option value="es">Español</option>
+          <option value="fr">Français</option>
+          <option value="de">Deutsch</option>
+          <option value="ja">日本語</option>
+          <option value="zh">中文</option>
+        </select>
+
+        <div class="consent-group">
+          <label class="interest-check"><input type="checkbox" id="consentComms" /> <span data-i18n="subscribe.consentComms">I agree to receive the weekly digest and occasional platform updates from Global Sustainable Taxonomies / BNZ Partners.</span> <span class="required-mark">*</span></label>
+          <label class="interest-check"><input type="checkbox" id="consentPrivacy" /> <span data-i18n="subscribe.consentPrivacy">I have read and accept the Privacy Policy, and consent to my data being processed in line with GDPR (EU) and PIPA (South Korea) requirements.</span> <span class="required-mark">*</span></label>
+        </div>
+        <div class="field-error" id="consentError"></div>
+
+        <button class="btn-subscribe-large" type="submit" data-i18n="subscribe.submitBtn">Subscribe for Free</button>
+
+        <p class="privacy-note" data-i18n="subscribe.privacyNote">We only use your email to send the digest you've signed up for — it is stored in our Brevo mailing list and is not sold or shared. You can "unsubscribe" at any time via the (non-functional) preferences link below.</p>
+      </form>
+
+      <div class="subscribe-confirm" id="subscribeConfirm"></div>
+
+      <a class="manage-prefs-link" href="preferences.html"><span data-i18n="subscribe.managePrefs">Manage your preferences</span> &rarr;</a>
+    </section>
+
+    <aside class="subscribe-benefits">
+      <div class="benefit-grid">
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </div>
+          <h3 data-i18n="subscribe.benefit1Title">Weekly Digest</h3>
+          <p data-i18n="subscribe.benefit1Text">A concise Monday-morning summary of the week's taxonomy news, reports and regulatory updates.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13.73 21a2 2 0 0 1-3.46 0"/><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/></svg>
+          </div>
+          <h3 data-i18n="subscribe.benefit2Title">Platform Alerts</h3>
+          <p data-i18n="subscribe.benefit2Text">Be first to know when a country's taxonomy status changes, or a new official document is published.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          </div>
+          <h3 data-i18n="subscribe.benefit3Title">BNZ PARTNERS Insights</h3>
+          <p data-i18n="subscribe.benefit3Text">Occasional analysis pieces from the BNZ Partners AI Centre on emerging taxonomy and compliance themes.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/></svg>
+          </div>
+          <h3 data-i18n="subscribe.benefit4Title">Event Invitations</h3>
+          <p data-i18n="subscribe.benefit4Text">Invites to webinars, panel discussions and briefings on sustainable finance taxonomies worldwide.</p>
+        </div>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <span>© 2026 BNZ PARTNERS</span>
+  <span><span data-i18n="footer.developedBy">Developed by</span> Tyra Usher | <span data-i18n="footer.supervisedBy">Supervised by</span> Yoo, So Young, <span data-i18n="footer.headOfAI">Head of AI Centre</span></span>
+  <a href="http://bnzpartners.co.kr/en/" target="_blank" rel="noopener">bnzpartners.co.kr</a>
+</footer>
+
+<script src="theme.js"></script>
+<script src="data.js"></script>
+<script src="global.js"></script>
+<script src="subscribe.js"></script>
+</body>
+</html>

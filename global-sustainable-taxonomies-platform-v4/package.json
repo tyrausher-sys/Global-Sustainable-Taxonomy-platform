@@ -1,0 +1,12 @@
+{
+  "name": "global-sustainable-taxonomies",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static site + Vercel serverless AI Advisor backend for the Global Sustainable Taxonomies website.",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "pdf-parse": "^1.1.1"
+  }
+}

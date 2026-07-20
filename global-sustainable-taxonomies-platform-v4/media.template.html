@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Media & Trend Hub — Global Sustainable Taxonomies</title>
+<script>
+  (function () {
+    var saved = localStorage.getItem("gst-theme");
+    if (saved === "dark") document.documentElement.setAttribute("data-theme", "dark");
+  })();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="topnav">
+  <div class="topnav-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mark"></span>
+      <span class="brand-text">Global Sustainable Taxonomies</span>
+    </a>
+    <nav class="topnav-links">
+      <a href="index.html" data-i18n="nav.map">Interactive Global Map</a>
+      <a href="advisor.html" data-i18n="nav.advisor">AI Advisor</a>
+      <a href="media.html" class="active" data-i18n="nav.media">Media Hub</a>
+      <a href="subscribe.html" data-i18n="nav.subscribe">Subscribe</a>
+      <a href="#" class="disabled" title="Coming soon" data-i18n="nav.resources" data-i18n-title="nav.comingSoon">Resources</a>
+      <a href="about.html" data-i18n="nav.about">About</a>
+    </nav>
+    <div class="topnav-actions">
+      <button class="icon-btn" id="globalSearchBtn" title="Search" aria-label="Search" data-i18n-title="nav.search" type="button">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+      <select class="lang-select" id="globalLangSelect" aria-label="Language"></select>
+      <button class="icon-btn" id="themeToggleBtn" title="Toggle theme" aria-label="Toggle theme" data-i18n-title="nav.toggleTheme">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+<div class="global-search-overlay" id="globalSearchOverlay">
+  <div class="global-search-panel">
+    <div class="global-search-input-row">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input id="globalSearchInput" type="text" data-i18n-placeholder="search.placeholder" placeholder="Search by country, taxonomy or regulator…" autocomplete="off" />
+      <button class="icon-btn" id="globalSearchCloseBtn" title="Close" aria-label="Close" data-i18n-title="search.close" type="button">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="global-search-results" id="globalSearchResults"></div>
+  </div>
+</div>
+
+<main class="page media-page">
+  <div class="media-header">
+    <h1 data-i18n="media.heading">Global Media &amp; Trend Hub</h1>
+    <p class="lede" data-i18n="media.lede">Taxonomy-related media and AI-generated trend insights, in one place.</p>
+  </div>
+
+  <div class="sample-banner" data-i18n="media.sampleBanner">Sample content for demonstration purposes only — no live media feed is connected. The taxonomy-development timeline chart below is built from real data; everything else on this page is illustrative placeholder content.</div>
+
+  <div class="filter-bar">
+    <div class="chip-row" id="typeChips">
+      <button class="chip active" data-type="All" type="button" data-i18n="media.filterAll">All</button>
+      <button class="chip" data-type="News" type="button" data-i18n="media.filterNews">News</button>
+      <button class="chip" data-type="Reports" type="button" data-i18n="media.filterReports">Reports</button>
+      <button class="chip" data-type="Videos" type="button" data-i18n="media.filterVideos">Videos</button>
+      <button class="chip" data-type="Papers" type="button" data-i18n="media.filterPapers">Papers</button>
+      <button class="chip" data-type="Podcasts" type="button" data-i18n="media.filterPodcasts">Podcasts</button>
+    </div>
+    <div class="media-search">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input id="mediaSearchInput" type="text" data-i18n-placeholder="media.searchPlaceholder" placeholder="Search media…" autocomplete="off" />
+    </div>
+  </div>
+
+  <div class="trend-banner">
+    <div class="trend-banner-label" data-i18n="media.trendLabel">AI Trend Insights (sample)</div>
+    <div class="trend-grid" id="trendGrid"></div>
+  </div>
+
+  <div class="featured-card" id="featuredCard"></div>
+
+  <div class="media-grid" id="mediaGrid"></div>
+
+  <div class="charts-section">
+    <div class="chart-block">
+      <h2 data-i18n="media.timelineHeading">Taxonomy Development Timeline</h2>
+      <p class="sample-note" data-i18n="media.timelineNote">Real data — number of taxonomies published per year, from the compiled dataset.</p>
+      <div id="timelineChart"></div>
+      <div class="timeline-labels" id="timelineLabels"></div>
+    </div>
+    <div class="chart-block">
+      <h2 data-i18n="media.thematicHeading">Thematic Policy Trends</h2>
+      <p class="sample-note" data-i18n="media.thematicNote">Illustrative weighting for demonstration only — not measured from real media volume.</p>
+      <div id="thematicChart"></div>
+    </div>
+  </div>
+
+  <div class="subscribe-cta">
+    <h2 data-i18n="media.ctaHeading">Get the Weekly Taxonomy Digest</h2>
+    <p data-i18n="media.ctaText">A weekly summary of taxonomy news, reports and trend insights — free.</p>
+    <a class="btn-primary" href="subscribe.html" data-i18n="media.ctaBtn">Subscribe Free</a>
+  </div>
+</main>
+
+<div class="media-modal-overlay" id="mediaModalOverlay">
+  <div class="media-modal" id="mediaModal" role="dialog" aria-modal="true"></div>
+</div>
+
+<footer class="site-footer">
+  <span>© 2026 BNZ PARTNERS</span>
+  <span><span data-i18n="footer.developedBy">Developed by</span> Tyra Usher | <span data-i18n="footer.supervisedBy">Supervised by</span> Yoo, So Young, <span data-i18n="footer.headOfAI">Head of AI Centre</span></span>
+  <a href="http://bnzpartners.co.kr/en/" target="_blank" rel="noopener">bnzpartners.co.kr</a>
+</footer>
+
+<script src="theme.js"></script>
+<script src="data.js"></script>
+<script src="global.js"></script>
+<script src="media.js"></script>
+</body>
+</html>
