@@ -209,7 +209,11 @@ module.exports = async function handler(req, res) {
       truncated,
       sourceChars: extracted.text.length,
       pages: extracted.pages,
-      lang: langCode
+      lang: langCode,
+      // Temporary diagnostic info (safe, not sent to the AI) so we can see
+      // exactly what was extracted without needing server log access.
+      debugKind: extracted.kind,
+      debugSample: extracted.text.slice(0, 200)
     });
   } catch (err) {
     res.status(500).json({ error: "Failed to reach the AI provider: " + err.message });
