@@ -529,11 +529,23 @@ function closeTranslateModal() {
   document.body.style.overflow = "";
 }
 
+// Google's own translator reliably renders and translates PDFs (including
+// scanned/design-heavy ones our own text-extraction pipeline struggles with),
+// without needing our serverless backend at all. Simpler and more robust.
+const GOOGLE_TRANSLATE_LANG = { en: "en", sv: "sv", ko: "ko", es: "es", fr: "fr", de: "de", ja: "ja", zh: "zh-CN" };
+
+function openInGoogleTranslate(url) {
+  const lang = (typeof gstCurrentLang !== "undefined" && gstCurrentLang) ? gstCurrentLang : "en";
+  const tl = GOOGLE_TRANSLATE_LANG[lang] || "en";
+  const translateUrl = "https://translate.google.com/translate?sl=auto&tl=" + encodeURIComponent(tl) + "&u=" + encodeURIComponent(url);
+  window.open(translateUrl, "_blank", "noopener");
+}
+
 function setupTranslateModal() {
   document.addEventListener("click", e => {
     const btn = e.target.closest(".doc-translate-btn");
     if (btn) {
-      openTranslateModal(btn.dataset.docUrl, btn.dataset.docTitle);
+      openInGoogleTranslate(btn.dataset.docUrl);
       return;
     }
     if (e.target.id === "translateModalCloseBtn" || e.target.closest("#translateModalCloseBtn") ||
