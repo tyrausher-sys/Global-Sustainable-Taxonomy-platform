@@ -9277,9 +9277,6 @@ function openTranslateModal(url, title) {
       if (data.truncated) {
         html += `<p class="translate-modal-truncated-note">${t("translate.truncatedNote")}</p>`;
       }
-      if (data.debugKind) {
-        html += `<p class="translate-modal-truncated-note">Debug: detected as "${data.debugKind}" (${data.sourceChars} chars), sample: ${escapeAttr((data.debugSample || "").slice(0, 200))}</p>`;
-      }
       body.innerHTML = html;
     })
     .catch(err => {
@@ -9315,7 +9312,7 @@ function setupTranslateModal() {
   document.addEventListener("click", e => {
     const btn = e.target.closest(".doc-translate-btn");
     if (btn) {
-      openInGoogleTranslate(btn.dataset.docUrl);
+      openTranslateModal(btn.dataset.docUrl, btn.dataset.docTitle);
       return;
     }
     if (e.target.id === "translateModalCloseBtn" || e.target.closest("#translateModalCloseBtn") ||
