@@ -595,6 +595,17 @@ button.chip.active { background: var(--green); border-color: var(--green); color
 .card-block h2 { font-size: 1.15rem; margin: 0 0 14px; }
 .sample-note { font-size: 0.78rem; color: var(--text-muted); font-style: italic; margin: -4px 0 12px; }
 
+.sources-note { font-size: 0.8rem; color: var(--text-muted); margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--border); line-height: 1.5; }
+.sources-note .sources-reviewed { display: block; margin-top: 2px; opacity: 0.85; }
+
+.citation-mark a { color: var(--green); text-decoration: none; font-weight: 600; }
+.citation-mark a:hover { text-decoration: underline; }
+.citations-block { margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--border); }
+.citations-block h3 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-muted); margin: 0 0 8px; }
+.citations-list { margin: 0; padding-left: 18px; font-size: 0.82rem; color: var(--text-muted); line-height: 1.6; }
+.citations-list li { margin-bottom: 4px; }
+.citations-list a { color: var(--green); }
+
 .overview-table { width: 100%; border-collapse: collapse; }
 .overview-table th, .overview-table td { text-align: left; padding: 9px 4px; border-bottom: 1px solid var(--border); font-size: 0.9rem; }
 .overview-table th { color: var(--text-muted); font-weight: 600; width: 40%; }
@@ -1274,7 +1285,6 @@ button.chip.active { background: var(--green); border-color: var(--green); color
       <a href="advisor.html" class="active" data-i18n="nav.advisor">AI Advisor</a>
       <a href="media.html" data-i18n="nav.media">Media Hub</a>
       <a href="subscribe.html" data-i18n="nav.subscribe">Subscribe</a>
-      <a href="#" class="disabled" title="Coming soon" data-i18n="nav.resources" data-i18n-title="nav.comingSoon">Resources</a>
       <a href="about.html" data-i18n="nav.about">About</a>
     </nav>
     <div class="topnav-actions">
@@ -5934,14 +5944,14 @@ window.TAXONOMY_DATA = {
     "region": "Asia-Pacific",
     "taxonomy": "K-Taxonomy (Korean Green Taxonomy)",
     "year": 2021,
-    "note": "Established by the Ministry of Climate, Energy and Environment (MCEE) in late 2021. Based on Substantial Contribution, DNSH and Minimum Safeguards; 100 activities (93 Green area, 7 Transitional area).",
+    "note": "Established by the Ministry of Environment (now Ministry of Climate, Energy and Environment) in December 2021. Based on Substantial Contribution, DNSH and Minimum Safeguards; originally 69 activities (64 Green, 5 Transitional), expanded by a December 2024 amendment.",
     "source": "https://www.me.go.kr/eng/web/main.do",
     "overlays": [],
     "features": [
-      "Established by the Ministry of Climate, Energy and Environment (MCEE) in late 2021 to support South Korea's 2050 carbon-neutrality goal.",
+      "Established by the Ministry of Environment (renamed Ministry of Climate, Energy and Environment in October 2025) in December 2021 to support South Korea's 2050 carbon-neutrality goal. [1][5]",
       "Based on three principles: Substantial Contribution to at least one of six environmental objectives, Do No Significant Harm (DNSH), and Minimum Safeguards (MS).",
       "Six environmental objectives: greenhouse gas reduction, climate change adaptation, sustainable water management, circular economy, pollution prevention and control, and biodiversity conservation.",
-      "Two categories covering 100 activities total: a Green area (93 activities that directly contribute to carbon neutrality) and a Transitional area (7 activities, e.g. nuclear power and LNG-related activities, considered necessary bridges toward a low-carbon economy).",
+      "Two categories, originally covering 69 activities in the 2021 guideline: a Green area (64 activities that directly contribute to carbon neutrality) and a Transitional area (5 activities, e.g. nuclear power and LNG-related activities, considered necessary bridges toward a low-carbon economy); a December 2024 amendment added 10 further green activities. [1][2]",
       "Alignment requires passing a four-step Alignment Assessment Process: Activity Criteria → Recognition Criteria (technical thresholds) → Exclusion Criteria (DNSH) → Protection Criteria (Minimum Safeguards).",
       "Widely used for green bonds, green loans, green asset-backed securities, sustainable investment funds, and ESG disclosures."
     ],
@@ -5973,7 +5983,7 @@ window.TAXONOMY_DATA = {
       }
     ],
     "facts": {
-      "activities": "100 activities (93 Green + 7 Transitional)",
+      "activities": "69 activities originally (64 Green + 5 Transitional) under the 2021 guideline; +10 new green activities added Dec 2024",
       "objectives": 6,
       "dnsh": true,
       "minimumSafeguards": true,
@@ -5982,16 +5992,24 @@ window.TAXONOMY_DATA = {
     },
     "timeline": [
       {
-        "label": "Framework Act on Carbon Neutrality",
-        "date": "2021"
+        "label": "Framework Act on Carbon Neutrality and Green Growth enacted",
+        "date": "Sep 2021",
+        "citationId": 3
       },
       {
-        "label": "K-Taxonomy established",
-        "date": "2021"
+        "label": "K-Taxonomy established (69 activities: 64 Green, 5 Transitional)",
+        "date": "Dec 2021",
+        "citationId": 1
       },
       {
-        "label": "Ongoing updates",
-        "date": "2024"
+        "label": "Nuclear power and LNG added to Transitional area",
+        "date": "Dec 2022",
+        "citationId": 4
+      },
+      {
+        "label": "Amendment adds 10 new green activities, revises 21; Green Credit Management Guidelines enacted",
+        "date": "Dec 2024",
+        "citationId": 2
       }
     ],
     "sectors": [
@@ -6003,9 +6021,16 @@ window.TAXONOMY_DATA = {
       "Nuclear & Transition Industries"
     ],
     "fullDescription": [
-      "South Korea's K-Taxonomy (Korean Green Taxonomy) was established by the (then) Ministry of Environment in December 2021, under the Environmental Technology and Environmental Industry Support Act, as part of the country's push toward its 2050 carbon-neutrality goal. It is built on the same three core principles used by most major taxonomies: an activity must make a Substantial Contribution to at least one of six environmental objectives, satisfy Do No Significant Harm (DNSH) toward the others, and meet Minimum Safeguards on social and governance conduct.",
-      "The six environmental objectives are greenhouse gas reduction, climate change adaptation, sustainable water management, transition to a circular economy, pollution prevention and control, and biodiversity conservation. Activities are organised into two areas: a Green area (currently 93 activities that directly and substantially contribute to carbon neutrality, spanning energy, transport, manufacturing, water and buildings) and a smaller Transitional area (7 activities, including specific nuclear power and LNG-related activities, treated as bridge technologies toward a low-carbon economy rather than end-state green activities).",
-      "Alignment is assessed through a four-step process: Activity Criteria (is the activity on the list at all), Recognition Criteria (does it meet the technical/quantitative thresholds), Exclusion Criteria (does it avoid significant harm to the other objectives), and Protection Criteria (does it meet minimum safeguards). In December 2024, the guidelines were updated to add 10 new eligible activities and revise 21 existing ones — particularly around water conservation, the circular economy, pollution control and biodiversity — introducing 25 new and 6 updated technical criteria. The K-Taxonomy is used mainly for green bond and green loan verification, and increasingly as the reference point for banks' green finance guidelines, rather than as an economy-wide mandatory disclosure regime."
+      "South Korea's K-Taxonomy (Korean Green Taxonomy) was established by the (then) Ministry of Environment in December 2021, as part of the country's push toward its 2050 carbon-neutrality goal. [1] It is built on the same three core principles used by most major taxonomies: an activity must make a Substantial Contribution to at least one of six environmental objectives, satisfy Do No Significant Harm (DNSH) toward the others, and meet Minimum Safeguards on social and governance conduct.",
+      "The six environmental objectives are greenhouse gas reduction, climate change adaptation, sustainable water management, transition to a circular economy, pollution prevention and control, and biodiversity conservation. Activities were originally organised into two areas under the 2021 guideline: a Green area (64 activities that directly and substantially contribute to carbon neutrality, spanning energy, transport, manufacturing, water and buildings) and a smaller Transitional area (5 activities, including specific nuclear power and LNG-related activities, treated as bridge technologies toward a low-carbon economy rather than end-state green activities). [1][4]",
+      "Alignment is assessed through a four-step process: Activity Criteria (is the activity on the list at all), Recognition Criteria (does it meet the technical/quantitative thresholds), Exclusion Criteria (does it avoid significant harm to the other objectives), and Protection Criteria (does it meet minimum safeguards). In December 2024, the guidelines were updated to add 10 new eligible activities and revise 21 existing ones — particularly around water conservation, the circular economy, pollution control and biodiversity — introducing 25 new and 6 updated technical criteria. [2] The K-Taxonomy is used mainly for green bond and green loan verification, and since December 2024 also underpins Green Credit Management Guidelines applied to bank lending. [2]"
+    ],
+    "citations": [
+      { "id": 1, "label": "Kim & Chang, \"Introduction of K-Taxonomy Guideline\"", "url": "https://www.kimchang.com/en/insights/detail.kc?sch_section=4&idx=24748" },
+      { "id": 2, "label": "Kim & Chang, \"Amendment to K-Taxonomy and Establishment of Green Credit Management Guidelines\" (2024)", "url": "https://www.kimchang.com/en/insights/detail.kc?sch_section=4&idx=31914" },
+      { "id": 3, "label": "IEA, \"Carbon Neutrality and Green Growth Act for the Climate Change\"", "url": "https://www.iea.org/policies/14212-carbon-neutrality-and-green-growth-act-for-the-climate-change" },
+      { "id": 4, "label": "Lexology, \"The Korean Green Taxonomy (K-Taxonomy) Guideline and Its Implications\"", "url": "https://www.lexology.com/library/detail.aspx?g=861eba8d-0fdd-44d8-af20-2dc26ce55fbc" },
+      { "id": 5, "label": "Lexology, \"The new Ministry of Climate, Energy and Environment of Korea\"", "url": "https://www.lexology.com/library/detail.aspx?g=83c7592e-f02b-4276-bd3e-223a537eeb15" }
     ],
     "activityList": [
       {
@@ -6156,9 +6181,15 @@ window.TAXONOMY_DATA = {
       "Waste Management"
     ],
     "fullDescription": [
-      "Brunei is one of the ten ASEAN member states covered by the ASEAN Taxonomy for Sustainable Finance, a regional framework developed by the ASEAN Taxonomy Board rather than a purely national one. It is explicitly built around the principle of a 'just and orderly transition' — recognising that member states are at very different stages of economic development and allowing each country flexibility in how it applies the framework, rather than imposing a single uniform pathway.",
-      "The taxonomy defines four environmental objectives: climate change mitigation, climate change adaptation, protection of healthy ecosystems and biodiversity, and resource resilience/transition to a circular economy. It uses a distinctive traffic-light classification instead of a simple pass/fail test: activities are graded Green (substantial contribution), Amber (a credible transition pathway, not yet fully aligned) or Red (not aligned, or causing significant harm).",
-      "Two assessment approaches sit underneath this: the Foundation Framework, a qualitative, principles-based checklist intended to be accessible to a wide range of users, and the more rigorous Plus Standard, which applies quantitative technical screening criteria split into Tier 1 Green, Tier 2 Amber and Tier 3 Amber. Distinctively, the framework allows 'remedial measures to transition' — an activity causing some harm can still qualify if a credible plan exists to eliminate that harm within five years. The ASEAN Taxonomy was designed with interoperability with the EU Taxonomy in mind, though as a regional reference framework it is voluntary rather than a mandatory national disclosure regime."
+      "Brunei is one of the ten ASEAN member states covered by the ASEAN Taxonomy for Sustainable Finance, a regional framework developed by the ASEAN Taxonomy Board rather than a purely national one. [1] No separate national green taxonomy for Brunei has been identified; the country's monetary authority, Autoriti Monetari Brunei Darussalam, has instead focused on sustainable finance instruments such as green sukuk rather than publishing its own classification framework. [2] The regional taxonomy is explicitly built around the principle of a 'just and orderly transition' — recognising that member states are at very different stages of economic development and allowing each country flexibility in how it applies the framework, rather than imposing a single uniform pathway.",
+      "The taxonomy defines four environmental objectives: climate change mitigation, climate change adaptation, protection of healthy ecosystems and biodiversity, and resource resilience/transition to a circular economy. It uses a distinctive traffic-light classification instead of a simple pass/fail test: activities are graded Green (substantial contribution), Amber (a credible transition pathway, not yet fully aligned) or Red (not aligned, or causing significant harm). [1][3]",
+      "Two assessment approaches sit underneath this: the Foundation Framework, a qualitative, principles-based checklist intended to be accessible to a wide range of users, and the more rigorous Plus Standard, which applies quantitative technical screening criteria. [3] Distinctively, the framework includes 'Remedial Measures to Transition' as one of its Essential Criteria — an activity causing some harm can still qualify if a credible plan exists to eliminate that harm within five years. [4] The ASEAN Taxonomy was designed with interoperability with the EU Taxonomy in mind, though as a regional reference framework it is voluntary rather than a mandatory national disclosure regime."
+    ],
+    "citations": [
+      { "id": 1, "label": "ASEAN Taxonomy Board, \"ASEAN Taxonomy for Sustainable Finance, Version 3\" (20 Dec 2024)", "url": "https://asean.org/wp-content/uploads/2024/12/ASEAN-Taxonomy-Finalised-Version-3-4.pdf" },
+      { "id": 2, "label": "Green Institute for Belt & Road / regional reporting on Brunei's sustainable finance landscape (Autoriti Monetari Brunei Darussalam and green sukuk)", "url": "https://www.gipbr.net/upload/file/20250424/6388111165872982044293118.pdf" },
+      { "id": 3, "label": "Asian Development Bank SEADS, \"ASEAN Taxonomy for Sustainable Finance: 5 Things to Know\"", "url": "https://seads.adb.org/articles/asean-taxonomy-sustainable-finance-5-things-know" },
+      { "id": 4, "label": "Lexology, \"ASEAN Taxonomy V2: Enabling a Just Transition Towards Sustainable Finance Adoption by ASEAN\"", "url": "https://www.lexology.com/library/detail.aspx?g=4ac79b38-190a-4e55-be42-cf8fc6b1cc14" }
     ],
     "activityList": [
       {
@@ -6418,9 +6449,15 @@ window.TAXONOMY_DATA = {
       "Waste Management"
     ],
     "fullDescription": [
-      "Myanmar is one of the ten ASEAN member states covered by the ASEAN Taxonomy for Sustainable Finance, a regional framework developed by the ASEAN Taxonomy Board rather than a purely national one. It is explicitly built around the principle of a 'just and orderly transition' — recognising that member states are at very different stages of economic development and allowing each country flexibility in how it applies the framework, rather than imposing a single uniform pathway.",
-      "The taxonomy defines four environmental objectives: climate change mitigation, climate change adaptation, protection of healthy ecosystems and biodiversity, and resource resilience/transition to a circular economy. It uses a distinctive traffic-light classification instead of a simple pass/fail test: activities are graded Green (substantial contribution), Amber (a credible transition pathway, not yet fully aligned) or Red (not aligned, or causing significant harm).",
-      "Two assessment approaches sit underneath this: the Foundation Framework, a qualitative, principles-based checklist intended to be accessible to a wide range of users, and the more rigorous Plus Standard, which applies quantitative technical screening criteria split into Tier 1 Green, Tier 2 Amber and Tier 3 Amber. Distinctively, the framework allows 'remedial measures to transition' — an activity causing some harm can still qualify if a credible plan exists to eliminate that harm within five years. The ASEAN Taxonomy was designed with interoperability with the EU Taxonomy in mind, though as a regional reference framework it is voluntary rather than a mandatory national disclosure regime."
+      "Myanmar is one of the ten ASEAN member states covered by the ASEAN Taxonomy for Sustainable Finance, a regional framework developed by the ASEAN Taxonomy Board rather than a purely national one. [1] No Myanmar-specific national green taxonomy has been identified; available reporting on the country's financial-sector reform and green-finance capacity-building does not describe a separate national classification framework. [2] The regional taxonomy is explicitly built around the principle of a 'just and orderly transition' — recognising that member states are at very different stages of economic development and allowing each country flexibility in how it applies the framework, rather than imposing a single uniform pathway.",
+      "The taxonomy defines four environmental objectives: climate change mitigation, climate change adaptation, protection of healthy ecosystems and biodiversity, and resource resilience/transition to a circular economy. It uses a distinctive traffic-light classification instead of a simple pass/fail test: activities are graded Green (substantial contribution), Amber (a credible transition pathway, not yet fully aligned) or Red (not aligned, or causing significant harm). [1][3]",
+      "Two assessment approaches sit underneath this: the Foundation Framework, a qualitative, principles-based checklist intended to be accessible to a wide range of users, and the more rigorous Plus Standard, which applies quantitative technical screening criteria. [3] Distinctively, the framework includes 'Remedial Measures to Transition' as one of its Essential Criteria: an activity causing some harm can still qualify if a credible plan exists to eliminate that harm within five years. [4] The ASEAN Taxonomy was designed with interoperability with the EU Taxonomy in mind, though as a regional reference framework it is voluntary rather than a mandatory national disclosure regime."
+    ],
+    "citations": [
+      { "id": 1, "label": "ASEAN Taxonomy Board, \"ASEAN Taxonomy for Sustainable Finance, Version 3\" (20 Dec 2024)", "url": "https://asean.org/wp-content/uploads/2024/12/ASEAN-Taxonomy-Finalised-Version-3-4.pdf" },
+      { "id": 2, "label": "Asian Development Bank, \"Developing Myanmar's Finance Sector to Support Rapid, Inclusive, and Sustainable Economic Growth\"", "url": "https://www.adb.org/publications/developing-myanmar-finance-sector-rapid-inclusive-sustainable-growth" },
+      { "id": 3, "label": "Asian Development Bank SEADS, \"ASEAN Taxonomy for Sustainable Finance: 5 Things to Know\"", "url": "https://seads.adb.org/articles/asean-taxonomy-sustainable-finance-5-things-know" },
+      { "id": 4, "label": "Lexology, \"ASEAN Taxonomy V2: Enabling a Just Transition Towards Sustainable Finance Adoption by ASEAN\"", "url": "https://www.lexology.com/library/detail.aspx?g=4ac79b38-190a-4e55-be42-cf8fc6b1cc14" }
     ],
     "activityList": [
       {
@@ -6596,9 +6633,9 @@ window.TAXONOMY_DATA = {
     "name": "China",
     "status": "established",
     "region": "Asia-Pacific",
-    "taxonomy": "China SDG Finance Taxonomy",
+    "taxonomy": "Green Finance Project Catalogue (2025) — formerly the Green Bond Endorsed Project Catalogue (2021)",
     "year": 2025,
-    "note": "Focuses on energy conservation, industrial decarbonisation, digitalisation/smart manufacturing, CCUS, circular economy, pollution control and biodiversity. SDG-oriented; strong emphasis on heavy-industry transition.",
+    "note": "Unified national catalogue jointly issued by the PBOC, National Financial Regulatory Administration and CSRC, merging the former green bond and green loan catalogues into one standard, effective 1 Oct 2025. Supersedes the 2021 Green Bond Endorsed Project Catalogue (6 categories, 21 subcategories, 204 project types).",
     "source": "https://www.pbc.gov.cn/goutongjiaoliu/113456/113469/5779612/2025071418513641380.pdf",
     "officialDocuments": [
       {
@@ -6607,120 +6644,142 @@ window.TAXONOMY_DATA = {
         "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/4342400/2021091617180089879.pdf"
       },
       {
-        "title": "PBOC / NDRC / CSRC — updated Green Bond Endorsed Project Catalogue (2025 update)",
+        "title": "PBOC / National Financial Regulatory Administration / CSRC — Green Finance Project Catalogue (2025 edition)",
         "date": "2025",
         "url": "https://www.pbc.gov.cn/goutongjiaoliu/113456/113469/5779612/2025071418513641380.pdf"
       }
     ],
     "overlays": [],
     "features": [
-      "Combines environmental, social and economic sustainability objectives by integrating the UN Sustainable Development Goals (SDGs) alongside environmental criteria.",
-      "Covers seven focus areas: energy conservation & efficiency, industrial decarbonisation, digitalisation & smart manufacturing, greenhouse gas control & carbon capture (CCUS), circular economy & resource efficiency, pollution prevention and control, and biodiversity/ecosystem protection.",
-      "Places strong emphasis on transforming heavy industry (steel, cement, chemicals), rather than focusing mainly on renewable energy as many Western taxonomies do.",
-      "Treats carbon capture, utilisation and storage (CCUS) as a key recognised transition technology for large-scale emissions reduction in carbon-intensive industries.",
-      "Technology-neutral: activities can qualify through energy efficiency gains, process innovation, digitalisation or resource efficiency, not only through a single clean technology.",
-      "Designed to support green bonds, sustainable lending, green investment products and other environmental financing mechanisms."
+      "Issued jointly by the People's Bank of China (PBOC), the National Financial Regulatory Administration and the China Securities Regulatory Commission (CSRC); the 2025 edition merges what were previously separate green bond and green loan catalogues into one unified national standard. [1]",
+      "Covers seven broad categories: energy conservation and carbon reduction, environmental protection, resource recycling, green and low-carbon energy transition, ecological protection and restoration, green infrastructure upgrades, and green services and trade. [1]",
+      "Supersedes the 2021 Green Bond Endorsed Project Catalogue, itself China's first unified green bond standard, which organised 204 specific eligible project types under 6 main categories and 21 subcategories. [2][3]",
+      "The 2025 edition expands eligible activities to include digital/IT services and smart manufacturing, and takes effect 1 October 2025. [1][4]",
+      "Used as the reference standard for green bond and green loan eligibility in China's domestic financial market, rather than as a mandatory economy-wide disclosure regime.",
+      "Unlike EU- or Korea-style taxonomies, it does not use a formally codified Do No Significant Harm or Minimum Safeguards test — eligibility is determined by a project's inclusion in the listed categories."
     ],
-    "regulator": "People's Bank of China (PBoC)",
+    "regulator": "People's Bank of China (PBOC), National Financial Regulatory Administration, and China Securities Regulatory Commission (CSRC)",
     "objectives": [
       {
-        "label": "Energy Conservation",
+        "label": "Energy Conservation & Carbon Reduction",
         "icon": "energy"
       },
       {
-        "label": "Industrial Decarbonisation",
-        "icon": "industry"
-      },
-      {
-        "label": "Digitalisation & Smart Manufacturing",
-        "icon": "digital"
-      },
-      {
-        "label": "GHG Control & Carbon Capture",
-        "icon": "carbon-capture"
-      },
-      {
-        "label": "Circular Economy",
-        "icon": "circular"
-      },
-      {
-        "label": "Pollution Prevention",
+        "label": "Environmental Protection",
         "icon": "pollution"
       },
       {
-        "label": "Biodiversity & Ecosystems",
+        "label": "Resource Recycling",
+        "icon": "circular"
+      },
+      {
+        "label": "Green & Low-Carbon Energy Transition",
+        "icon": "climate"
+      },
+      {
+        "label": "Ecological Protection & Restoration",
         "icon": "biodiversity"
+      },
+      {
+        "label": "Green Infrastructure Upgrades",
+        "icon": "industry"
+      },
+      {
+        "label": "Green Services & Trade",
+        "icon": "digital"
       }
     ],
     "facts": {
-      "activities": "7 focus areas covering industrial decarbonisation",
+      "activities": "7 broad categories (2025 edition); predecessor 2021 catalogue had 204 specific project types under 6 categories / 21 subcategories",
       "objectives": 7,
-      "dnsh": "Not formally specified — focuses on environmental outcomes",
-      "minimumSafeguards": "Not specified",
-      "euAlignment": "Distinct SDG-oriented approach; partial interoperability efforts underway",
-      "mandatory": "Used to guide green bond and lending eligibility"
+      "dnsh": false,
+      "minimumSafeguards": false,
+      "euAlignment": "Distinct approach; no formal DNSH/safeguards test; some interoperability discussion with the EU taxonomy ongoing",
+      "mandatory": "Reference standard for green bond/loan eligibility; not a mandatory disclosure regime"
     },
     "timeline": [
       {
-        "label": "Published",
-        "date": "2025"
+        "label": "Green Bond Endorsed Project Catalogue (2021 Edition) published — first unified national green bond standard",
+        "date": "Apr 2021",
+        "citationId": 2
+      },
+      {
+        "label": "2021 Catalogue enters into effect",
+        "date": "Jul 2021",
+        "citationId": 2
+      },
+      {
+        "label": "Unified Green Finance Project Catalogue published, merging bond and loan standards",
+        "date": "Jul 2025",
+        "citationId": 1
+      },
+      {
+        "label": "2025 Catalogue enters into effect",
+        "date": "Oct 2025",
+        "citationId": 1
       }
     ],
     "sectors": [
       "Energy",
-      "Industrial Manufacturing",
-      "Digital & Smart Manufacturing",
-      "Carbon Capture",
-      "Circular Economy",
-      "Pollution Control",
-      "Biodiversity"
+      "Environmental Protection",
+      "Resource Recycling",
+      "Energy Transition",
+      "Ecological Restoration",
+      "Infrastructure",
+      "Green Services & Trade"
     ],
     "fullDescription": [
-      "China's SDG Finance Taxonomy takes a broader approach than most Western frameworks by combining environmental sustainability with the UN Sustainable Development Goals, rather than focusing narrowly on 'green' activities. It was published with People's Bank of China involvement and reflects China's specific industrial structure, placing particular emphasis on transforming heavy, emissions-intensive industry (steel, cement, chemicals) rather than centring mainly on renewable energy deployment.",
-      "The framework organises eligible activities into seven focus areas: energy conservation and efficiency, industrial decarbonisation, digitalisation and smart manufacturing, greenhouse gas control and carbon capture, utilisation and storage (CCUS), circular economy and resource efficiency, pollution prevention and control, and biodiversity and ecosystem protection. It treats CCUS as a strategically important transition technology for large-scale emissions reduction in carbon-intensive industry — a more prominent role than in most other taxonomies.",
-      "The taxonomy is technology-neutral: activities can qualify through energy-efficiency gains, process innovation, digitalisation or resource efficiency, not only via a single 'clean technology' pathway. It is primarily used to guide green bond and green lending eligibility. Formal DNSH and minimum-safeguards requirements are less codified than in the EU or Korean frameworks, and interoperability work with other major taxonomies (including the EU's) is ongoing but partial."
+      "China's green finance classification system was substantially consolidated in 2025: the People's Bank of China (PBOC), the National Financial Regulatory Administration and the China Securities Regulatory Commission (CSRC) jointly issued a unified Green Finance Project Catalogue that, for the first time, merges what had previously been separate green bond and green loan catalogues into a single national standard, effective 1 October 2025. [1]",
+      "The 2025 Catalogue organises eligible projects into seven broad categories: energy conservation and carbon reduction, environmental protection, resource recycling, green and low-carbon energy transition, ecological protection and restoration, green infrastructure upgrades, and green services and trade — the update also expands eligible activities to include digital/IT services and smart manufacturing. [1]",
+      "It supersedes the Green Bond Endorsed Project Catalogue (2021 Edition), China's first unified green bond standard, jointly issued by the PBOC, the National Development and Reform Commission (NDRC) and the CSRC in April 2021 and effective from July 2021. That catalogue organised 204 specific eligible project types under 6 main categories and 21 subcategories, and notably removed 'clean utilisation of coal' from the eligible list. [2][3] Unlike the EU or Korean taxonomies, China's framework does not use a formally codified Do No Significant Harm or Minimum Safeguards test — eligibility is determined by a project's inclusion in the listed categories — and it is used primarily as the reference standard for green bond and green loan issuance rather than as an economy-wide mandatory disclosure regime."
+    ],
+    "citations": [
+      { "id": 1, "label": "Xinhua via China Gov.cn, \"China unveils catalogue of green finance-supported projects\" (14 Jul 2025)", "url": "https://english.www.gov.cn/news/202507/15/content_WS68759571c6d0868f4e8f4254.html" },
+      { "id": 2, "label": "People's Bank of China, notice on issuing the Green Bond Endorsed Projects Catalogue (2021 Edition)", "url": "https://www.pbc.gov.cn/en/3688006/3995557/4239595/index.html" },
+      { "id": 3, "label": "Climate Bonds Initiative / Carrots & Sticks, \"Green Bond Endorsed Projects Catalogue (2021 Edition)\"", "url": "https://carrotsandsticks.net/policies/33-51-green-bond-endorsed-projects-catalogue-2021-edition/" },
+      { "id": 4, "label": "Green Central Banking, \"China updates green taxonomy to increase energy transition finance\"", "url": "https://greencentralbanking.com/2025/08/04/china-updates-green-taxonomy-to-increase-energy-transition-finance/" }
     ],
     "activityList": [
       {
-        "activity": "Energy",
-        "criteria": "Energy conservation and efficiency improvements across generation, transmission and industrial energy use.",
-        "threshold": "Sector-specific criteria under the SDG Finance Taxonomy",
-        "dnsh": "Not formally specified — framework focuses on environmental/SDG outcomes"
+        "activity": "Energy Conservation & Carbon Reduction",
+        "criteria": "Energy-saving retrofits, efficiency improvements and carbon-reduction projects across industry, buildings and transport.",
+        "threshold": "Category criteria under the 2025 Green Finance Project Catalogue",
+        "dnsh": "Not formally specified — eligibility based on listed categories"
       },
       {
-        "activity": "Industrial Manufacturing",
-        "criteria": "Decarbonisation of heavy industry (steel, cement, chemicals) through process improvement, fuel switching or efficiency gains.",
-        "threshold": "Sector-specific criteria",
+        "activity": "Environmental Protection",
+        "criteria": "Pollution prevention and control, environmental remediation and monitoring infrastructure.",
+        "threshold": "Category criteria under the 2025 Catalogue",
         "dnsh": "Not formally specified"
       },
       {
-        "activity": "Digital & Smart Manufacturing",
-        "criteria": "Digitalisation and smart-manufacturing solutions that measurably reduce resource or energy intensity.",
-        "threshold": "Sector-specific criteria",
+        "activity": "Resource Recycling",
+        "criteria": "Recycling, resource recovery and circular-economy activities.",
+        "threshold": "Category criteria under the 2025 Catalogue",
         "dnsh": "Not formally specified"
       },
       {
-        "activity": "Carbon Capture",
-        "criteria": "Carbon capture, utilisation and storage (CCUS) deployed in carbon-intensive industrial processes.",
-        "threshold": "Sector-specific criteria",
+        "activity": "Green & Low-Carbon Energy Transition",
+        "criteria": "Renewable energy generation, grid upgrades and low-carbon energy infrastructure.",
+        "threshold": "Category criteria under the 2025 Catalogue",
         "dnsh": "Not formally specified"
       },
       {
-        "activity": "Circular Economy",
-        "criteria": "Resource-efficiency and circular-economy activities, including recycling and materials recovery.",
-        "threshold": "Sector-specific criteria",
+        "activity": "Ecological Protection & Restoration",
+        "criteria": "Ecosystem, land and biodiversity protection and restoration projects.",
+        "threshold": "Category criteria under the 2025 Catalogue",
         "dnsh": "Not formally specified"
       },
       {
-        "activity": "Pollution Control",
-        "criteria": "Activities substantially reducing air, water or soil pollution.",
-        "threshold": "Sector-specific criteria",
+        "activity": "Green Infrastructure Upgrades",
+        "criteria": "Sustainable upgrades to urban, water and transport infrastructure.",
+        "threshold": "Category criteria under the 2025 Catalogue",
         "dnsh": "Not formally specified"
       },
       {
-        "activity": "Biodiversity",
-        "criteria": "Ecosystem and biodiversity protection and restoration activities.",
-        "threshold": "Sector-specific criteria",
+        "activity": "Green Services & Trade",
+        "criteria": "Green consulting, certification, digital/IT and smart-manufacturing services supporting the green transition — a newly expanded scope in the 2025 edition.",
+        "threshold": "Category criteria under the 2025 Catalogue",
         "dnsh": "Not formally specified"
       }
     ]
@@ -6742,13 +6801,14 @@ window.TAXONOMY_DATA = {
     ],
     "overlays": [],
     "features": [
-      "A voluntary classification system (not a mandatory regulatory requirement).",
-      "Currently focused on climate change mitigation, with a strong emphasis on transition finance for emissions-intensive sectors.",
-      "Based on four elements: Technical Screening Criteria (TSC), Do No Significant Harm (DNSH), Minimum Social Safeguards (MSS), and science-based emissions thresholds.",
-      "Classifies activities as \"Green\" (already aligned with a 1.5°C pathway) or \"Transition\" (contributing to decarbonisation but not yet fully aligned).",
-      "Intended to support sustainable investment, green finance, corporate disclosures, and credible transition planning."
+      "A voluntary classification system (not a mandatory regulatory requirement), developed by the Australian Sustainable Finance Institute (ASFI) in partnership with the Commonwealth Treasury. [1]",
+      "Version 1 was released on 17 June 2025, focused on climate change mitigation, with a strong emphasis on transition finance for emissions-intensive sectors. [1]",
+      "Sets technical screening criteria across six priority sectors, plus Do No Significant Harm (DNSH) criteria for other environmental objectives and Minimum Social Safeguards (MSS) covering corporate governance, human rights and First Nations peoples' rights. [1][2]",
+      "Classifies activities as \"Green\" (already aligned with a 1.5°C pathway) or \"Transition\" (contributing to decarbonisation but not yet fully aligned). [1]",
+      "Covers hard-to-abate sectors reflecting Australia's economic structure, including mining (lithium, copper, nickel, iron ore), agriculture, and transport (passenger, freight, rail, maritime, aviation). [2]",
+      "Intended to support sustainable investment product labelling, green and transition finance, corporate disclosures, and credible transition planning."
     ],
-    "regulator": "Australian Sustainable Finance Institute (ASFI)",
+    "regulator": "Australian Sustainable Finance Institute (ASFI), developed in partnership with the Commonwealth Treasury",
     "objectives": [
       {
         "label": "Climate Change Mitigation",
@@ -6756,7 +6816,7 @@ window.TAXONOMY_DATA = {
       }
     ],
     "facts": {
-      "activities": "Sector-based Technical Screening Criteria (climate focus)",
+      "activities": "Technical Screening Criteria across 6 priority sectors (climate focus)",
       "objectives": 1,
       "dnsh": true,
       "minimumSafeguards": true,
@@ -6765,12 +6825,19 @@ window.TAXONOMY_DATA = {
     },
     "timeline": [
       {
-        "label": "Development launched",
-        "date": "2023"
+        "label": "ASFI taxonomy scoping project (international taxonomy review, design recommendations)",
+        "date": "Jun 2022 – Jul 2023",
+        "citationId": 3
       },
       {
-        "label": "Taxonomy released",
-        "date": "2025"
+        "label": "Development phase: technical screening criteria, DNSH framework and Minimum Social Safeguards drafted, with public consultation",
+        "date": "Jul 2023 – Feb 2025",
+        "citationId": 3
+      },
+      {
+        "label": "Australian Sustainable Finance Taxonomy Version 1 released",
+        "date": "17 Jun 2025",
+        "citationId": 1
       }
     ],
     "sectors": [
@@ -6781,9 +6848,14 @@ window.TAXONOMY_DATA = {
       "Manufacturing"
     ],
     "fullDescription": [
-      "The Australian Sustainable Finance Taxonomy is a voluntary classification system developed by the Australian Sustainable Finance Institute (ASFI), rather than a government-mandated regulatory requirement. It currently focuses on climate change mitigation, with particular emphasis on transition finance for emissions-intensive sectors of the Australian economy (such as mining, agriculture and heavy industry) that need credible pathways to decarbonise rather than being excluded outright.",
-      "It is built on four elements: Technical Screening Criteria (TSC) for eligible activities, Do No Significant Harm (DNSH) safeguards, Minimum Social Safeguards, and science-based emissions thresholds aligned with a 1.5°C pathway. Activities are classified as either 'Green' (already aligned with a 1.5°C pathway) or 'Transition' (contributing meaningfully to decarbonisation but not yet fully aligned) — a two-tier structure designed to bring emissions-intensive but transitioning activities into the scope of sustainable finance rather than leaving them entirely outside it.",
-      "Because it was developed independently of the EU framework, the Australian taxonomy is not legally interoperable with the EU Taxonomy, but it was designed with broadly similar principles (substantial contribution, DNSH, safeguards) to support cross-border comparability for investors. It is intended to support sustainable investment product labelling, green and transition finance, corporate disclosures, and credible transition planning across the Australian market."
+      "The Australian Sustainable Finance Taxonomy is a voluntary classification system, with Version 1 released on 17 June 2025 by the Australian Sustainable Finance Institute (ASFI) in partnership with the Commonwealth Treasury, rather than as a government-mandated regulatory requirement. [1] It currently focuses on climate change mitigation, with particular emphasis on transition finance for emissions-intensive sectors of the Australian economy (such as mining, agriculture and heavy industry) that need credible pathways to decarbonise rather than being excluded outright. [2]",
+      "To be taxonomy-aligned, an activity must meet three conditions: Technical Screening Criteria across six priority sectors, Do No Significant Harm (DNSH) safeguards for other environmental objectives, and Minimum Social Safeguards (MSS) covering corporate governance, human rights and First Nations peoples' rights. [1][2] Activities are classified as either 'Green' (already aligned with a 1.5°C pathway) or 'Transition' (contributing meaningfully to decarbonisation but not yet fully aligned) — a two-tier structure designed to bring emissions-intensive but transitioning activities into the scope of sustainable finance rather than leaving them entirely outside it. [1]",
+      "The taxonomy followed an extended scoping and development process: an ASFI-led scoping project ran from June 2022 to July 2023 (reviewing international taxonomies and recommending Australia's design elements), followed by a development phase from July 2023 to February 2025 involving broad-based collaboration and public consultation over twenty months. [3] Because it was developed independently of the EU framework, the Australian taxonomy is not legally interoperable with the EU Taxonomy, but it was designed with broadly similar principles (substantial contribution, DNSH, safeguards) to support cross-border comparability for investors."
+    ],
+    "citations": [
+      { "id": 1, "label": "ESG Today, \"Australia Launches Sustainable Finance Taxonomy\" (17 Jun 2025 release coverage)", "url": "https://www.esgtoday.com/australia-launches-sustainable-finance-taxonomy/" },
+      { "id": 2, "label": "Grant Thornton Australia, \"Navigating Australia's green capital landscape: a deep dive into the Australian sustainable finance taxonomy\"", "url": "https://www.grantthornton.com.au/insights/blogs/navigating-australias-green-capital-landscape/" },
+      { "id": 3, "label": "Australian Sustainable Finance Institute, \"Taxonomy Scoping and Development\"", "url": "https://www.asfi.org.au/taxonomy-development" }
     ],
     "activityList": [
       {
@@ -8182,8 +8254,11 @@ const GST_I18N = {
     "translate.button": "Translate", "translate.modalTitle": "Translated Document",
     "translate.loading": "Translating this document\u2026",
     "translate.disclaimer": "Machine translation of an official document, for reference only \u2014 always refer to the original for legal or compliance purposes.",
+    "sources.note": "This overview is compiled from the official documents and regulatory sources listed above.",
+    "sources.lastReviewed": "Content last compiled/reviewed:",
     "translate.viewOriginal": "View Original PDF \u2197", "translate.close": "Close",
     "translate.errorGeneric": "Couldn't translate this document right now.",
+    "translate.errorNotDeployed": "Translate needs the live site backend, which isn't connected here — this only works once the site is deployed to Vercel with an API key (see DEPLOY_INSTRUCTIONS.md). You can still open the original PDF below.",
     "translate.truncatedNote": "This document is long \u2014 showing a translation of the first portion only.",
     "home.heroTitle": "Explore Sustainable Finance Taxonomies Worldwide",
     "home.heroSub": "Select a country on the map, or use the search bar below.",
@@ -8250,8 +8325,11 @@ const GST_I18N = {
     "translate.button": "Översätt", "translate.modalTitle": "Översatt dokument",
     "translate.loading": "Översätter dokumentet\u2026",
     "translate.disclaimer": "Maskinöversättning av ett officiellt dokument, endast som referens \u2014 se alltid originalet för juridiska eller regelefterlevnadssyften.",
+    "sources.note": "Den här översikten är sammanställd från de officiella dokument och regulatoriska källor som listas ovan.",
+    "sources.lastReviewed": "Innehållet senast sammanställt/granskat:",
     "translate.viewOriginal": "Visa original-PDF \u2197", "translate.close": "Stäng",
     "translate.errorGeneric": "Det gick inte att översätta dokumentet just nu.",
+    "translate.errorNotDeployed": "Översätt kräver den live serverdelen, som inte är ansluten här — detta fungerar först när webbplatsen är driftsatt på Vercel med en API-nyckel (se DEPLOY_INSTRUCTIONS.md). Du kan fortfarande öppna original-PDF:en nedan.",
     "translate.truncatedNote": "Dokumentet är långt \u2014 endast en översättning av den första delen visas.",
     "home.heroTitle": "Utforska hållbara finanstaxonomier världen över",
     "home.heroSub": "Välj ett land på kartan, eller använd sökfältet nedan.",
@@ -8318,8 +8396,11 @@ const GST_I18N = {
     "translate.button": "번역", "translate.modalTitle": "번역된 문서",
     "translate.loading": "문서를 번역하는 중\u2026",
     "translate.disclaimer": "공식 문서의 기계 번역이며 참고용입니다 \u2014 법적 또는 규정 준수 목적으로는 항상 원본을 참조하십시오.",
+    "sources.note": "이 개요는 위에 나열된 공식 문서 및 규제 출처를 바탕으로 작성되었습니다.",
+    "sources.lastReviewed": "콘텐츠 최종 작성/검토일:",
     "translate.viewOriginal": "원본 PDF 보기 \u2197", "translate.close": "닫기",
     "translate.errorGeneric": "지금은 이 문서를 번역할 수 없습니다.",
+    "translate.errorNotDeployed": "번역 기능은 실제 서버 백엔드가 필요하지만 현재 연결되어 있지 않습니다 — 이 기능은 사이트가 API 키와 함께 Vercel에 배포된 후에만 작동합니다(DEPLOY_INSTRUCTIONS.md 참고). 아래에서 원본 PDF는 계속 열어볼 수 있습니다.",
     "translate.truncatedNote": "문서가 길어서 처음 일부만 번역하여 표시합니다.",
     "home.heroTitle": "전 세계 지속가능금융 택소노미 살펴보기",
     "home.heroSub": "지도에서 국가를 선택하거나 아래 검색창을 이용하세요.",
@@ -8386,8 +8467,11 @@ const GST_I18N = {
     "translate.button": "Traducir", "translate.modalTitle": "Documento traducido",
     "translate.loading": "Traduciendo este documento\u2026",
     "translate.disclaimer": "Traducción automática de un documento oficial, solo como referencia \u2014 consulte siempre el original para fines legales o de cumplimiento.",
+    "sources.note": "Este resumen se ha elaborado a partir de los documentos oficiales y las fuentes regulatorias enumeradas arriba.",
+    "sources.lastReviewed": "Contenido compilado/revisado por última vez:",
     "translate.viewOriginal": "Ver PDF original \u2197", "translate.close": "Cerrar",
     "translate.errorGeneric": "No se pudo traducir este documento en este momento.",
+    "translate.errorNotDeployed": "Traducir requiere el backend en vivo del sitio, que no está conectado aquí — esto solo funciona una vez que el sitio esté desplegado en Vercel con una clave de API (consulte DEPLOY_INSTRUCTIONS.md). Aún puede abrir el PDF original a continuación.",
     "translate.truncatedNote": "Este documento es extenso \u2014 se muestra la traducción solo de la primera parte.",
     "home.heroTitle": "Explore las taxonomías de finanzas sostenibles en todo el mundo",
     "home.heroSub": "Seleccione un país en el mapa, o use la barra de búsqueda a continuación.",
@@ -8454,8 +8538,11 @@ const GST_I18N = {
     "translate.button": "Traduire", "translate.modalTitle": "Document traduit",
     "translate.loading": "Traduction du document en cours\u2026",
     "translate.disclaimer": "Traduction automatique d'un document officiel, à titre indicatif uniquement \u2014 consultez toujours l'original à des fins juridiques ou de conformité.",
+    "sources.note": "Ce résumé a été compilé à partir des documents officiels et des sources réglementaires indiqués ci-dessus.",
+    "sources.lastReviewed": "Contenu compilé/révisé pour la dernière fois le :",
     "translate.viewOriginal": "Voir le PDF original \u2197", "translate.close": "Fermer",
     "translate.errorGeneric": "Impossible de traduire ce document pour le moment.",
+    "translate.errorNotDeployed": "La traduction nécessite le backend en direct du site, qui n'est pas connecté ici — cela ne fonctionne qu'une fois le site déployé sur Vercel avec une clé API (voir DEPLOY_INSTRUCTIONS.md). Vous pouvez toujours ouvrir le PDF original ci-dessous.",
     "translate.truncatedNote": "Ce document est long \u2014 seule la traduction de la première partie est affichée.",
     "home.heroTitle": "Explorez les taxonomies de la finance durable dans le monde",
     "home.heroSub": "Sélectionnez un pays sur la carte, ou utilisez la barre de recherche ci-dessous.",
@@ -8522,8 +8609,11 @@ const GST_I18N = {
     "translate.button": "Übersetzen", "translate.modalTitle": "Übersetztes Dokument",
     "translate.loading": "Dokument wird übersetzt\u2026",
     "translate.disclaimer": "Maschinelle Übersetzung eines offiziellen Dokuments, nur zur Information \u2014 für rechtliche oder Compliance-Zwecke stets das Original heranziehen.",
+    "sources.note": "Dieser Überblick wurde anhand der oben aufgeführten offiziellen Dokumente und behördlichen Quellen erstellt.",
+    "sources.lastReviewed": "Inhalt zuletzt zusammengestellt/überprüft am:",
     "translate.viewOriginal": "Original-PDF ansehen \u2197", "translate.close": "Schließen",
     "translate.errorGeneric": "Dieses Dokument konnte gerade nicht übersetzt werden.",
+    "translate.errorNotDeployed": "Übersetzen benötigt das Live-Backend der Website, das hier nicht verbunden ist — dies funktioniert erst, wenn die Website mit einem API-Schlüssel auf Vercel bereitgestellt wurde (siehe DEPLOY_INSTRUCTIONS.md). Sie können unten weiterhin das Original-PDF öffnen.",
     "translate.truncatedNote": "Dieses Dokument ist lang \u2014 es wird nur eine Übersetzung des ersten Abschnitts angezeigt.",
     "home.heroTitle": "Nachhaltige Finanztaxonomien weltweit entdecken",
     "home.heroSub": "Wählen Sie ein Land auf der Karte, oder nutzen Sie die Suchleiste unten.",
@@ -8590,8 +8680,11 @@ const GST_I18N = {
     "translate.button": "翻訳", "translate.modalTitle": "翻訳された文書",
     "translate.loading": "文書を翻訳中\u2026",
     "translate.disclaimer": "公式文書の機械翻訳であり、参考情報です \u2014 法的または規制遵守の目的では常に原文をご確認ください。",
+    "sources.note": "この概要は、上記に記載された公式文書および規制当局の情報源をもとに作成されています。",
+    "sources.lastReviewed": "コンテンツの最終作成・確認日:",
     "translate.viewOriginal": "元のPDFを見る \u2197", "translate.close": "閉じる",
     "translate.errorGeneric": "現在この文書を翻訳できませんでした。",
+    "translate.errorNotDeployed": "翻訳機能にはライブのサイトバックエンドが必要ですが、ここでは接続されていません — この機能はサイトがAPIキー付きでVercelにデプロイされた後にのみ動作します（DEPLOY_INSTRUCTIONS.mdを参照）。下の元のPDFは引き続き開くことができます。",
     "translate.truncatedNote": "この文書は長いため、最初の部分のみの翻訳を表示しています。",
     "home.heroTitle": "世界のサステナブルファイナンス・タクソノミーを探る",
     "home.heroSub": "地図から国を選択するか、下の検索バーをご利用ください。",
@@ -8658,8 +8751,11 @@ const GST_I18N = {
     "translate.button": "翻译", "translate.modalTitle": "翻译文档",
     "translate.loading": "正在翻译此文档\u2026",
     "translate.disclaimer": "官方文档的机器翻译，仅供参考——法律或合规目的请始终参阅原文。",
+    "sources.note": "本概述基于上文列出的官方文件和监管来源编写。",
+    "sources.lastReviewed": "内容最后编制/审核时间：",
     "translate.viewOriginal": "查看原始PDF \u2197", "translate.close": "关闭",
     "translate.errorGeneric": "目前无法翻译此文档。",
+    "translate.errorNotDeployed": "翻译功能需要网站的实时后端支持，但此处尚未连接——只有在网站部署到 Vercel 并配置 API 密钥后才能使用（请参阅 DEPLOY_INSTRUCTIONS.md）。您仍然可以打开下方的原始 PDF。",
     "translate.truncatedNote": "此文档较长——仅显示前半部分的翻译。",
     "home.heroTitle": "探索全球可持续金融分类标准",
     "home.heroSub": "在地图上选择一个国家，或使用下方的搜索栏。",
