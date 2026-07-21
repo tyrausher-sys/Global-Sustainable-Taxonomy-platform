@@ -107,10 +107,10 @@ function looksLikeBinaryGarbage(text) {
   // definitions) rather than document prose. Count how much of the sample is
   // made of these known structural tokens; if it's a large share, this isn't
   // readable content even though it "looks like" plain text.
-  const structuralTokens = /\b(obj|endobj|stream|endstream|xref|trailer|xmpmeta|rdf:|cmyk|gotham|illustrator|colorswatch)\b/gi;
+  const structuralTokens = /\b(obj|endobj|stream|endstream|xref|trailer|xmp|xmpmeta|rdf|cmyk|gotham|illustrator|colorswatch|flatedecode|sandoll)\b/gi;
   const tokenMatches = sample.match(structuralTokens) || [];
   const tokenCharCount = tokenMatches.join("").length;
-  if (tokenCharCount / sample.length > 0.08) return true; // >8% of sample is structural jargon
+  if (tokenCharCount / sample.length > 0.05) return true; // >5% of sample is structural jargon
 
   return false;
 }
@@ -209,11 +209,7 @@ module.exports = async function handler(req, res) {
       truncated,
       sourceChars: extracted.text.length,
       pages: extracted.pages,
-      lang: langCode,
-      // Temporary diagnostic info (safe, not sent to the AI) so we can see
-      // exactly what was extracted without needing server log access.
-      debugKind: extracted.kind,
-      debugSample: extracted.text.slice(0, 200)
+      lang: langCode
     });
   } catch (err) {
     res.status(500).json({ error: "Failed to reach the AI provider: " + err.message });
