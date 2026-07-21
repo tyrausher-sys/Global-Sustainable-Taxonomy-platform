@@ -563,6 +563,18 @@ button.chip.active { background: var(--green); border-color: var(--green); color
 .country-header-row { display: flex; justify-content: space-between; align-items: flex-end; gap: 20px; flex-wrap: wrap; }
 .country-header-titles h1 { color: #fff; font-size: 2.2rem; margin: 10px 0 4px; }
 .country-header-sub { color: #B9C2D4; margin: 0; font-size: 1rem; font-weight: 500; }
+.header-overlay-tag {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 2px 9px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #DCE4F2;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 20px;
+  vertical-align: middle;
+}
 .lang-select-wrap { display: flex; flex-direction: column; gap: 4px; }
 .lang-select-wrap label { color: #93A2B8; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.05em; }
 .lang-select-wrap select {
@@ -9834,8 +9846,22 @@ const DEFAULT_OBJECTIVES = [
 
 const GENERIC_ACTIVITIES = ["Renewable energy generation", "Low-carbon transport", "Sustainable buildings"];
 
+// When a country has its own national taxonomy *and* is also covered by a
+// regional overlay framework (ASEAN, UMOA, LAC Common Framework, etc.), make
+// that dual coverage visible right in the header — not just buried in the
+// "Also Applies" section further down the page.
+function overlayHeaderTags(entry) {
+  if (!entry || !entry.taxonomy || !entry.overlays || !entry.overlays.length) return "";
+  const names = entry.overlays
+    .map(o => o && o.name)
+    .filter(n => n && !entry.taxonomy.includes(n));
+  if (!names.length) return "";
+  return names.map(n => `<span class="header-overlay-tag">+ ${escapeHtml(n)}</span>`).join("");
+}
+
 function renderHeader(entry, status, label, name) {
   const taxonomyName = entry && entry.taxonomy ? entry.taxonomy : "No taxonomy established";
+  const overlayTags = overlayHeaderTags(entry);
   return `
     <section class="country-header-dark">
       <div class="country-header-inner">
@@ -9843,7 +9869,7 @@ function renderHeader(entry, status, label, name) {
           <div class="country-header-titles">
             <span class="badge badge-${status}">${label}</span>
             <h1>${name}</h1>
-            <p class="country-header-sub">${taxonomyName}${entry && entry.year ? " · Published " + entry.year : ""}</p>
+            <p class="country-header-sub">${taxonomyName}${entry && entry.year ? " · Published " + entry.year : ""}${overlayTags}</p>
           </div>
           <div class="lang-select-wrap">
             <label for="langSelect">Language</label>
