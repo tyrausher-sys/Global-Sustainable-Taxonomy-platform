@@ -497,7 +497,10 @@ function openTranslateModal(url, title) {
     .then(res => res.json().catch(() => ({})).then(data => ({ ok: res.ok, data })))
     .then(({ ok, data }) => {
       if (!ok || !data || data.error) {
-        body.innerHTML = `<p class="translate-modal-error">${(data && data.error) || t("translate.errorGeneric")}</p>`;
+        const debugLine = data && data.debugKind
+          ? `<p class="translate-modal-truncated-note">Debug: detected as "${data.debugKind}", sample: ${escapeAttr((data.debugSample || "").slice(0, 150))}</p>`
+          : "";
+        body.innerHTML = `<p class="translate-modal-error">${(data && data.error) || t("translate.errorGeneric")}</p>${debugLine}`;
         return;
       }
       let html = renderTranslatedMarkdown(data.translatedText);
