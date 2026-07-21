@@ -507,6 +507,9 @@ function openTranslateModal(url, title) {
       if (data.truncated) {
         html += `<p class="translate-modal-truncated-note">${t("translate.truncatedNote")}</p>`;
       }
+      if (data.debugKind) {
+        html += `<p class="translate-modal-truncated-note">Debug: detected as "${data.debugKind}" (${data.sourceChars} chars), sample: ${escapeAttr((data.debugSample || "").slice(0, 200))}</p>`;
+      }
       body.innerHTML = html;
     })
     .catch(err => {
