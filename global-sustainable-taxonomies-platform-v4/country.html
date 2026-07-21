@@ -598,6 +598,14 @@ button.chip.active { background: var(--green); border-color: var(--green); color
 .sources-note { font-size: 0.8rem; color: var(--text-muted); margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--border); line-height: 1.5; }
 .sources-note .sources-reviewed { display: block; margin-top: 2px; opacity: 0.85; }
 
+.citation-mark a { color: var(--green); text-decoration: none; font-weight: 600; }
+.citation-mark a:hover { text-decoration: underline; }
+.citations-block { margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--border); }
+.citations-block h3 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-muted); margin: 0 0 8px; }
+.citations-list { margin: 0; padding-left: 18px; font-size: 0.82rem; color: var(--text-muted); line-height: 1.6; }
+.citations-list li { margin-bottom: 4px; }
+.citations-list a { color: var(--green); }
+
 .overview-table { width: 100%; border-collapse: collapse; }
 .overview-table th, .overview-table td { text-align: left; padding: 9px 4px; border-bottom: 1px solid var(--border); font-size: 0.9rem; }
 .overview-table th { color: var(--text-muted); font-weight: 600; width: 40%; }
@@ -5873,14 +5881,14 @@ window.TAXONOMY_DATA = {
     "region": "Asia-Pacific",
     "taxonomy": "K-Taxonomy (Korean Green Taxonomy)",
     "year": 2021,
-    "note": "Established by the Ministry of Climate, Energy and Environment (MCEE) in late 2021. Based on Substantial Contribution, DNSH and Minimum Safeguards; 100 activities (93 Green area, 7 Transitional area).",
+    "note": "Established by the Ministry of Environment (now Ministry of Climate, Energy and Environment) in December 2021. Based on Substantial Contribution, DNSH and Minimum Safeguards; originally 69 activities (64 Green, 5 Transitional), expanded by a December 2024 amendment.",
     "source": "https://www.me.go.kr/eng/web/main.do",
     "overlays": [],
     "features": [
-      "Established by the Ministry of Climate, Energy and Environment (MCEE) in late 2021 to support South Korea's 2050 carbon-neutrality goal.",
+      "Established by the Ministry of Environment (renamed Ministry of Climate, Energy and Environment in October 2025) in December 2021 to support South Korea's 2050 carbon-neutrality goal. [1][5]",
       "Based on three principles: Substantial Contribution to at least one of six environmental objectives, Do No Significant Harm (DNSH), and Minimum Safeguards (MS).",
       "Six environmental objectives: greenhouse gas reduction, climate change adaptation, sustainable water management, circular economy, pollution prevention and control, and biodiversity conservation.",
-      "Two categories covering 100 activities total: a Green area (93 activities that directly contribute to carbon neutrality) and a Transitional area (7 activities, e.g. nuclear power and LNG-related activities, considered necessary bridges toward a low-carbon economy).",
+      "Two categories, originally covering 69 activities in the 2021 guideline: a Green area (64 activities that directly contribute to carbon neutrality) and a Transitional area (5 activities, e.g. nuclear power and LNG-related activities, considered necessary bridges toward a low-carbon economy); a December 2024 amendment added 10 further green activities. [1][2]",
       "Alignment requires passing a four-step Alignment Assessment Process: Activity Criteria → Recognition Criteria (technical thresholds) → Exclusion Criteria (DNSH) → Protection Criteria (Minimum Safeguards).",
       "Widely used for green bonds, green loans, green asset-backed securities, sustainable investment funds, and ESG disclosures."
     ],
@@ -5912,7 +5920,7 @@ window.TAXONOMY_DATA = {
       }
     ],
     "facts": {
-      "activities": "100 activities (93 Green + 7 Transitional)",
+      "activities": "69 activities originally (64 Green + 5 Transitional) under the 2021 guideline; +10 new green activities added Dec 2024",
       "objectives": 6,
       "dnsh": true,
       "minimumSafeguards": true,
@@ -5921,16 +5929,24 @@ window.TAXONOMY_DATA = {
     },
     "timeline": [
       {
-        "label": "Framework Act on Carbon Neutrality",
-        "date": "2021"
+        "label": "Framework Act on Carbon Neutrality and Green Growth enacted",
+        "date": "Sep 2021",
+        "citationId": 3
       },
       {
-        "label": "K-Taxonomy established",
-        "date": "2021"
+        "label": "K-Taxonomy established (69 activities: 64 Green, 5 Transitional)",
+        "date": "Dec 2021",
+        "citationId": 1
       },
       {
-        "label": "Ongoing updates",
-        "date": "2024"
+        "label": "Nuclear power and LNG added to Transitional area",
+        "date": "Dec 2022",
+        "citationId": 4
+      },
+      {
+        "label": "Amendment adds 10 new green activities, revises 21; Green Credit Management Guidelines enacted",
+        "date": "Dec 2024",
+        "citationId": 2
       }
     ],
     "sectors": [
@@ -5942,9 +5958,16 @@ window.TAXONOMY_DATA = {
       "Nuclear & Transition Industries"
     ],
     "fullDescription": [
-      "South Korea's K-Taxonomy (Korean Green Taxonomy) was established by the (then) Ministry of Environment in December 2021, under the Environmental Technology and Environmental Industry Support Act, as part of the country's push toward its 2050 carbon-neutrality goal. It is built on the same three core principles used by most major taxonomies: an activity must make a Substantial Contribution to at least one of six environmental objectives, satisfy Do No Significant Harm (DNSH) toward the others, and meet Minimum Safeguards on social and governance conduct.",
-      "The six environmental objectives are greenhouse gas reduction, climate change adaptation, sustainable water management, transition to a circular economy, pollution prevention and control, and biodiversity conservation. Activities are organised into two areas: a Green area (currently 93 activities that directly and substantially contribute to carbon neutrality, spanning energy, transport, manufacturing, water and buildings) and a smaller Transitional area (7 activities, including specific nuclear power and LNG-related activities, treated as bridge technologies toward a low-carbon economy rather than end-state green activities).",
-      "Alignment is assessed through a four-step process: Activity Criteria (is the activity on the list at all), Recognition Criteria (does it meet the technical/quantitative thresholds), Exclusion Criteria (does it avoid significant harm to the other objectives), and Protection Criteria (does it meet minimum safeguards). In December 2024, the guidelines were updated to add 10 new eligible activities and revise 21 existing ones — particularly around water conservation, the circular economy, pollution control and biodiversity — introducing 25 new and 6 updated technical criteria. The K-Taxonomy is used mainly for green bond and green loan verification, and increasingly as the reference point for banks' green finance guidelines, rather than as an economy-wide mandatory disclosure regime."
+      "South Korea's K-Taxonomy (Korean Green Taxonomy) was established by the (then) Ministry of Environment in December 2021, as part of the country's push toward its 2050 carbon-neutrality goal. [1] It is built on the same three core principles used by most major taxonomies: an activity must make a Substantial Contribution to at least one of six environmental objectives, satisfy Do No Significant Harm (DNSH) toward the others, and meet Minimum Safeguards on social and governance conduct.",
+      "The six environmental objectives are greenhouse gas reduction, climate change adaptation, sustainable water management, transition to a circular economy, pollution prevention and control, and biodiversity conservation. Activities were originally organised into two areas under the 2021 guideline: a Green area (64 activities that directly and substantially contribute to carbon neutrality, spanning energy, transport, manufacturing, water and buildings) and a smaller Transitional area (5 activities, including specific nuclear power and LNG-related activities, treated as bridge technologies toward a low-carbon economy rather than end-state green activities). [1][4]",
+      "Alignment is assessed through a four-step process: Activity Criteria (is the activity on the list at all), Recognition Criteria (does it meet the technical/quantitative thresholds), Exclusion Criteria (does it avoid significant harm to the other objectives), and Protection Criteria (does it meet minimum safeguards). In December 2024, the guidelines were updated to add 10 new eligible activities and revise 21 existing ones — particularly around water conservation, the circular economy, pollution control and biodiversity — introducing 25 new and 6 updated technical criteria. [2] The K-Taxonomy is used mainly for green bond and green loan verification, and since December 2024 also underpins Green Credit Management Guidelines applied to bank lending. [2]"
+    ],
+    "citations": [
+      { "id": 1, "label": "Kim & Chang, \"Introduction of K-Taxonomy Guideline\"", "url": "https://www.kimchang.com/en/insights/detail.kc?sch_section=4&idx=24748" },
+      { "id": 2, "label": "Kim & Chang, \"Amendment to K-Taxonomy and Establishment of Green Credit Management Guidelines\" (2024)", "url": "https://www.kimchang.com/en/insights/detail.kc?sch_section=4&idx=31914" },
+      { "id": 3, "label": "IEA, \"Carbon Neutrality and Green Growth Act for the Climate Change\"", "url": "https://www.iea.org/policies/14212-carbon-neutrality-and-green-growth-act-for-the-climate-change" },
+      { "id": 4, "label": "Lexology, \"The Korean Green Taxonomy (K-Taxonomy) Guideline and Its Implications\"", "url": "https://www.lexology.com/library/detail.aspx?g=861eba8d-0fdd-44d8-af20-2dc26ce55fbc" },
+      { "id": 5, "label": "Lexology, \"The new Ministry of Climate, Energy and Environment of Korea\"", "url": "https://www.lexology.com/library/detail.aspx?g=83c7592e-f02b-4276-bd3e-223a537eeb15" }
     ],
     "activityList": [
       {
@@ -8912,6 +8935,22 @@ function escapeAttr(s) {
 // can't verify, just a factual statement about this data file.
 const DATA_LAST_REVIEWED = "2026-07-20";
 
+// Turns inline "[1]", "[2]" markers written in fullDescription/features text into
+// small superscript links pointing at the matching entry in that country's
+// "citations" array (rendered via citationsListHtml). If the country has no
+// citations array, markers are left as plain text (shouldn't normally happen).
+function linkifyCitations(text) {
+  return String(text).replace(/\[(\d+)\]/g, (m, n) => `<sup class="citation-mark"><a href="#cite-${n}">[${n}]</a></sup>`);
+}
+
+function citationsListHtml(entry) {
+  if (!entry || !entry.citations || !entry.citations.length) return "";
+  const items = entry.citations.map(c =>
+    `<li id="cite-${c.id}">${c.id}. ${escapeHtml(c.label)}${c.url ? ` — <a href="${c.url}" target="_blank" rel="noopener">source ↗</a>` : ""}</li>`
+  ).join("");
+  return `<div class="citations-block"><h3>References</h3><ol class="citations-list">${items}</ol></div>`;
+}
+
 function sourcesNote() {
   const t = (typeof gstT === "function") ? gstT : (k => k);
   return `<p class="sources-note">${t("sources.note")} <span class="sources-reviewed">${t("sources.lastReviewed")} ${DATA_LAST_REVIEWED}</span></p>`;
@@ -9189,7 +9228,8 @@ function renderCountry() {
 
   if (entry && entry.fullDescription && entry.fullDescription.length) {
     left += `<div class="card-block"><h2>About the Taxonomy</h2>` +
-      entry.fullDescription.map(p => `<p class="section-text">${p}</p>`).join("") + `</div>`;
+      entry.fullDescription.map(p => `<p class="section-text">${linkifyCitations(p)}</p>`).join("") +
+      citationsListHtml(entry) + `</div>`;
   } else if (entry && entry.note) {
     left += `<div class="card-block"><h2>About the Taxonomy</h2><p class="section-text">${entry.note}</p><p class="sample-note">Limited public information compiled so far — this summary may be expanded as more sources are reviewed.</p></div>`;
   } else if (!entry) {
