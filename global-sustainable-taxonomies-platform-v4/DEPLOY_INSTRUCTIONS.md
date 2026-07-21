@@ -1,14 +1,18 @@
-# Deploying the "Ask AI", "Translate Document" and "Subscribe" features
+# Deploying the "Ask AI", "Translate Document", "Subscribe" and "Media Hub" features
 
-Everything on this site (the map, country pages, the simulated AI Advisor tools, the Media Hub) is plain static HTML/CSS/JS — you can keep opening `index.html` directly and it all works exactly as before.
+Everything on this site (the map, country pages, the Media Hub's layout) is plain static HTML/CSS/JS — you can keep opening `index.html` directly and it all works exactly as before.
 
-There are **three exceptions**, each of which needs a tiny backend because they rely on a private API key (a key can never be safely placed inside a webpage — anyone could read it in their browser's dev tools and use it on your bill):
+There are several backend-powered features, each needing a tiny serverless function because they rely on a private API key (a key can never be safely placed inside a webpage — anyone could read it in their browser's dev tools and use it on your bill):
 
 - The **"Ask AI" tab** on the AI Advisor page — a real conversation with an AI model. Backend: `api/ask.js`.
 - The **"Translate" button** next to each official document on a country page — fetches the official PDF/page, extracts its text, and translates it into the reader's selected site language via the same AI model. Backend: `api/translate-pdf.js`. Uses the same `ANTHROPIC_API_KEY` as "Ask AI" — no separate key needed.
 - The **Subscribe page** — adds real subscribers to a Brevo mailing list. Backend: `api/subscribe.js`.
+- The **Media Hub**'s News/Reports/Papers tabs — live headlines via Google News' public RSS feed. Backend: `api/news.js` (+ shared helper `api/_lib/rss.js`). **No API key needed.**
+- The **Media Hub**'s Podcasts tab — live episodes via Apple's iTunes Search API. Backend: `api/podcasts.js`. **No API key needed.**
+- The **Media Hub**'s AI Trend Insights cards and thematic chart — real AI analysis of the live News headlines above. Backend: `api/trends.js`. Uses the same `ANTHROPIC_API_KEY` as "Ask AI" — no separate key needed.
+- The **Media Hub**'s Videos tab — live results via the YouTube Data API v3. Backend: `api/videos.js`. This is the **one** Media Hub source that needs its own key (`YOUTUBE_API_KEY`, optional — see below); YouTube has no keyless public search feed the way Google News and iTunes do.
 
-All three are built for [Vercel](https://vercel.com). Until you deploy them, each feature shows a friendly error explaining it isn't connected yet — everything else keeps working.
+All of these are built for [Vercel](https://vercel.com). Until you deploy them (or until an optional key like `YOUTUBE_API_KEY` is added), each feature shows a friendly, honest "not connected yet" message instead of fake content — everything else keeps working.
 
 ## What you need
 
@@ -16,6 +20,11 @@ All three are built for [Vercel](https://vercel.com). Until you deploy them, eac
 2. A Brevo account — sign up free at **brevo.com**. Go to **Settings → SMTP & API → API Keys** and generate a new API key. Then go to **Contacts → Lists**, create a list (e.g. "Website Subscribers"), and note its numeric list ID (shown in the list's settings/URL).
    - Optional: if you want the subscriber's interests and language preference to actually be stored on the contact (not just their email/name), go to **Contacts → Settings → Contact Attributes** and add two text attributes named `INTERESTS` and `LANGUAGE`. If you skip this, those two fields are simply not saved — email and name still are.
 3. A free Vercel account — **vercel.com** (you can sign up with GitHub, GitLab, or email).
+4. **Optional** — a free YouTube Data API key, only if you want the Media Hub's Videos tab to show live results (without it, that tab just shows "not connected yet" and everything else on the Media Hub still works, including News/Reports/Papers/Podcasts and the AI trend analysis):
+   - Go to **console.cloud.google.com**, create (or select) a project.
+   - **APIs & Services → Library**, search for "YouTube Data API v3", click **Enable**.
+   - **APIs & Services → Credentials → Create Credentials → API Key**. Copy the key.
+   - The free quota is generous for a search volume like this site's (a few searches per hour at most, thanks to caching).
 
 ## Option A — Deploy from the Vercel dashboard (no command line)
 
@@ -27,6 +36,7 @@ All three are built for [Vercel](https://vercel.com). Until you deploy them, eac
    - (optional) `ANTHROPIC_MODEL` = `claude-sonnet-5` (this is the default if you skip it)
    - `BREVO_API_KEY` = your key from step 2 above
    - `BREVO_LIST_ID` = the numeric list ID from step 2 above (optional, but without it new subscribers are created in Brevo without being added to a specific list)
+   - (optional) `YOUTUBE_API_KEY` = your key from step 4 above, only if you want the Media Hub's Videos tab to show live results
 5. Click **Deploy**. Vercel will give you a URL like `https://your-project.vercel.app`.
 6. Open that URL, go to **AI Advisor → Ask AI**, and try a question like "Compare the EU and South Korea taxonomies." Then open any country page and click **Translate** next to an official document to confirm that works too.
 7. Go to **Subscribe**, submit the form with a real email, then check **Contacts → Lists** in your Brevo dashboard — the new contact should appear there within a few seconds.
