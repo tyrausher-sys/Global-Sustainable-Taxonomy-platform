@@ -1076,6 +1076,7 @@ button.chip.active { background: var(--green); border-color: var(--green); color
 .media-modal h3 { font-size: 1.15rem; margin: 10px 0 6px; padding-right: 20px; }
 .media-modal .media-meta { font-size: 0.82rem; color: var(--text-muted); margin-bottom: 14px; }
 .media-modal .modal-body-text { font-size: 0.92rem; line-height: 1.6; margin-bottom: 14px; }
+.media-modal .btn-primary { display: inline-block; margin-bottom: 14px; }
 .media-modal .modal-disclaimer {
   font-size: 0.8rem; color: var(--text-muted); background: var(--bg-soft); border: 1px solid var(--border);
   border-radius: 10px; padding: 10px 14px;
@@ -9234,7 +9235,7 @@ const GST_I18N = {
     "prefs.privacyNote": "This screen is a non-functional placeholder. To actually change your interests or language in the future, you'd use a page like this one, but it isn't wired up to a real subscriber database yet.",
     "prefs.unsubscribeLink": "Unsubscribe (demo — disabled)", "prefs.backToSubscribe": "Back to Subscribe",
     "media.heading": "Global Media & Trend Hub", "media.lede": "Taxonomy-related media and AI-generated trend insights, in one place.",
-    "media.sampleBanner": "Sample content for demonstration purposes only — no live media feed is connected. The taxonomy-development timeline chart below is built from real data; everything else on this page is illustrative placeholder content.",
+    "media.sampleBanner": "News headlines below are pulled live from Google News and refresh automatically. Everything else on this page — AI Trend Insights, Reports, Videos, Papers, Podcasts and the thematic chart — remains illustrative placeholder content. The taxonomy-development timeline chart is built from this site\u2019s real data.",
     "media.filterAll": "All", "media.filterNews": "News", "media.filterReports": "Reports",
     "media.filterVideos": "Videos", "media.filterPapers": "Papers", "media.filterPodcasts": "Podcasts",
     "media.searchPlaceholder": "Search media…", "media.trendLabel": "AI Trend Insights (sample)",
@@ -9305,7 +9306,7 @@ const GST_I18N = {
     "prefs.privacyNote": "Den här skärmen är en icke-funktionell platshållare. För att faktiskt ändra dina intressen eller språk i framtiden skulle du använda en sida som denna, men den är inte kopplad till en riktig prenumerantdatabas ännu.",
     "prefs.unsubscribeLink": "Avsluta prenumeration (demo — inaktiverad)", "prefs.backToSubscribe": "Tillbaka till Prenumerera",
     "media.heading": "Global medie- och trendhubb", "media.lede": "Taxonomirelaterade medier och AI-genererade trendinsikter, på ett ställe.",
-    "media.sampleBanner": "Exempelinnehåll endast för demonstration — inget live-medieflöde är anslutet. Tidslinjediagrammet för taxonomiutveckling nedan bygger på riktig data; allt annat på den här sidan är illustrativt platshållarinnehåll.",
+    "media.sampleBanner": "Nyhetsrubrikerna nedan hämtas live från Google News och uppdateras automatiskt. Allt annat på den här sidan — AI-trendinsikter, rapporter, videor, papper, poddar och det tematiska diagrammet — är fortfarande illustrativt exempelinnehåll. Tidslinjediagrammet för taxonomiutveckling bygger på webbplatsens riktiga data.",
     "media.filterAll": "Alla", "media.filterNews": "Nyheter", "media.filterReports": "Rapporter",
     "media.filterVideos": "Videor", "media.filterPapers": "Papper", "media.filterPodcasts": "Poddar",
     "media.searchPlaceholder": "Sök medier…", "media.trendLabel": "AI-trendinsikter (exempel)",
@@ -9376,7 +9377,7 @@ const GST_I18N = {
     "prefs.privacyNote": "이 화면은 작동하지 않는 자리표시자입니다. 앞으로 관심사나 언어를 실제로 변경하려면 이와 같은 페이지를 사용하겠지만, 아직 실제 구독자 데이터베이스에 연결되어 있지 않습니다.",
     "prefs.unsubscribeLink": "구독 취소 (데모 — 비활성화됨)", "prefs.backToSubscribe": "구독 페이지로 돌아가기",
     "media.heading": "글로벌 미디어 및 트렌드 허브", "media.lede": "택소노미 관련 미디어와 AI 생성 트렌드 인사이트를 한곳에서 만나보세요.",
-    "media.sampleBanner": "시연 목적의 예시 콘텐츠입니다 — 실시간 미디어 피드는 연결되어 있지 않습니다. 아래 택소노미 개발 타임라인 차트는 실제 데이터로 만들어졌으며, 이 페이지의 나머지 내용은 모두 예시용 플레이스홀더 콘텐츠입니다.",
+    "media.sampleBanner": "아래 뉴스 헤드라인은 Google 뉴스에서 실시간으로 가져와 자동으로 업데이트됩니다. 이 페이지의 다른 모든 항목 — AI 트렌드 인사이트, 보고서, 동영상, 논문, 팟캐스트 및 테마별 차트 — 는 여전히 예시용 플레이스홀더 콘텐츠입니다. 택소노미 개발 타임라인 차트는 이 사이트의 실제 데이터로 만들어졌습니다.",
     "media.filterAll": "전체", "media.filterNews": "뉴스", "media.filterReports": "보고서",
     "media.filterVideos": "동영상", "media.filterPapers": "논문", "media.filterPodcasts": "팟캐스트",
     "media.searchPlaceholder": "미디어 검색…", "media.trendLabel": "AI 트렌드 인사이트 (예시)",
@@ -9447,7 +9448,7 @@ const GST_I18N = {
     "prefs.privacyNote": "Esta pantalla es un marcador de posición no funcional. Para cambiar realmente sus intereses o idioma en el futuro, usaría una página como esta, pero aún no está conectada a una base de datos de suscriptores real.",
     "prefs.unsubscribeLink": "Cancelar suscripción (demo — deshabilitado)", "prefs.backToSubscribe": "Volver a Suscribirse",
     "media.heading": "Centro Global de Medios y Tendencias", "media.lede": "Medios relacionados con taxonomías e ideas de tendencias generadas por IA, en un solo lugar.",
-    "media.sampleBanner": "Contenido de ejemplo solo con fines de demostración — no hay ningún feed de medios en vivo conectado. El gráfico de la cronología de desarrollo de taxonomías a continuación se construye con datos reales; todo lo demás en esta página es contenido de marcador de posición ilustrativo.",
+    "media.sampleBanner": "Los titulares de noticias a continuación se obtienen en vivo de Google News y se actualizan automáticamente. Todo lo demás en esta página —perspectivas de tendencias de IA, informes, videos, documentos, pódcasts y el gráfico temático— sigue siendo contenido de marcador de posición ilustrativo. El gráfico de la cronología de desarrollo de taxonomías se basa en los datos reales de este sitio.",
     "media.filterAll": "Todo", "media.filterNews": "Noticias", "media.filterReports": "Informes",
     "media.filterVideos": "Videos", "media.filterPapers": "Documentos", "media.filterPodcasts": "Pódcasts",
     "media.searchPlaceholder": "Buscar medios…", "media.trendLabel": "Perspectivas de tendencias de IA (ejemplo)",
@@ -9518,7 +9519,7 @@ const GST_I18N = {
     "prefs.privacyNote": "Cet écran est un espace réservé non fonctionnel. Pour réellement modifier vos centres d'intérêt ou votre langue à l'avenir, vous utiliseriez une page comme celle-ci, mais elle n'est pas encore connectée à une véritable base de données d'abonnés.",
     "prefs.unsubscribeLink": "Se désabonner (démo — désactivé)", "prefs.backToSubscribe": "Retour à Abonnement",
     "media.heading": "Centre mondial de médias et tendances", "media.lede": "Médias liés aux taxonomies et analyses de tendances générées par IA, en un seul endroit.",
-    "media.sampleBanner": "Contenu d'exemple à des fins de démonstration uniquement — aucun flux média en direct n'est connecté. Le graphique de la chronologie de développement des taxonomies ci-dessous est construit à partir de données réelles ; tout le reste sur cette page est un contenu d'exemple illustratif.",
+    "media.sampleBanner": "Les titres d'actualité ci-dessous proviennent en direct de Google News et se mettent à jour automatiquement. Tout le reste sur cette page — analyses de tendances IA, rapports, vidéos, articles, podcasts et le graphique thématique — reste un contenu d'exemple illustratif. Le graphique de la chronologie de développement des taxonomies est basé sur les données réelles de ce site.",
     "media.filterAll": "Tout", "media.filterNews": "Actualités", "media.filterReports": "Rapports",
     "media.filterVideos": "Vidéos", "media.filterPapers": "Articles", "media.filterPodcasts": "Podcasts",
     "media.searchPlaceholder": "Rechercher des médias…", "media.trendLabel": "Analyses de tendances IA (exemple)",
@@ -9589,7 +9590,7 @@ const GST_I18N = {
     "prefs.privacyNote": "Dieser Bildschirm ist ein nicht funktionsfähiger Platzhalter. Um Ihre Interessen oder Ihre Sprache künftig tatsächlich zu ändern, würden Sie eine Seite wie diese verwenden, aber sie ist noch nicht mit einer echten Abonnentendatenbank verbunden.",
     "prefs.unsubscribeLink": "Abmelden (Demo — deaktiviert)", "prefs.backToSubscribe": "Zurück zu Abonnieren",
     "media.heading": "Globaler Medien- und Trend-Hub", "media.lede": "Taxonomiebezogene Medien und KI-generierte Trendeinblicke an einem Ort.",
-    "media.sampleBanner": "Beispielinhalt nur zu Demonstrationszwecken — es ist kein Live-Medienfeed verbunden. Das Taxonomie-Entwicklungs-Zeitachsen-Diagramm unten basiert auf echten Daten; alles andere auf dieser Seite ist illustrativer Platzhalterinhalt.",
+    "media.sampleBanner": "Die Nachrichtenüberschriften unten werden live von Google News abgerufen und automatisch aktualisiert. Alles andere auf dieser Seite — KI-Trendeinblicke, Berichte, Videos, Fachartikel, Podcasts und das thematische Diagramm — bleibt illustrativer Platzhalterinhalt. Das Taxonomie-Entwicklungs-Zeitachsen-Diagramm basiert auf den echten Daten dieser Website.",
     "media.filterAll": "Alle", "media.filterNews": "Nachrichten", "media.filterReports": "Berichte",
     "media.filterVideos": "Videos", "media.filterPapers": "Fachartikel", "media.filterPodcasts": "Podcasts",
     "media.searchPlaceholder": "Medien durchsuchen…", "media.trendLabel": "KI-Trendeinblicke (Beispiel)",
@@ -9660,7 +9661,7 @@ const GST_I18N = {
     "prefs.privacyNote": "この画面は機能しないプレースホルダーです。今後、関心事項や言語を実際に変更するにはこのようなページを使用しますが、まだ実際の購読者データベースには接続されていません。",
     "prefs.unsubscribeLink": "登録解除 (デモ — 無効)", "prefs.backToSubscribe": "登録ページに戻る",
     "media.heading": "グローバル・メディア&トレンドハブ", "media.lede": "タクソノミー関連のメディアとAI生成のトレンドインサイトを一箇所で。",
-    "media.sampleBanner": "デモンストレーション目的のみのサンプルコンテンツです — ライブメディアフィードは接続されていません。以下のタクソノミー開発タイムラインのグラフは実データに基づいて作成されていますが、このページの他の内容はすべて例示的なプレースホルダーコンテンツです。",
+    "media.sampleBanner": "以下のニュース見出しはGoogleニュースからライブで取得され、自動的に更新されます。このページの他の内容—AIトレンドインサイト、レポート、動画、論文、ポッドキャスト、テーマ別チャート—は引き続き例示的なプレースホルダーコンテンツです。タクソノミー開発タイムラインのグラフはこのサイトの実データに基づいて作成されています。",
     "media.filterAll": "すべて", "media.filterNews": "ニュース", "media.filterReports": "レポート",
     "media.filterVideos": "動画", "media.filterPapers": "論文", "media.filterPodcasts": "ポッドキャスト",
     "media.searchPlaceholder": "メディアを検索…", "media.trendLabel": "AIトレンドインサイト(サンプル)",
@@ -9731,7 +9732,7 @@ const GST_I18N = {
     "prefs.privacyNote": "此屏幕是一个不起作用的占位符。将来要真正更改您的兴趣或语言，您会使用类似这样的页面，但目前尚未连接到真实的订阅者数据库。",
     "prefs.unsubscribeLink": "取消订阅（演示——已禁用）", "prefs.backToSubscribe": "返回订阅页面",
     "media.heading": "全球媒体与趋势中心", "media.lede": "分类标准相关媒体与AI生成的趋势洞察，尽在一处。",
-    "media.sampleBanner": "仅供演示的示例内容——未连接实时媒体源。下方的分类标准发展时间线图表基于真实数据构建；本页面其他内容均为示例性占位内容。",
+    "media.sampleBanner": "下方的新闻标题实时来自Google新闻并自动更新。本页面其他内容——AI趋势洞察、报告、视频、论文、播客和主题图表——仍为示例性占位内容。分类标准发展时间线图表基于本网站的真实数据构建。",
     "media.filterAll": "全部", "media.filterNews": "新闻", "media.filterReports": "报告",
     "media.filterVideos": "视频", "media.filterPapers": "论文", "media.filterPodcasts": "播客",
     "media.searchPlaceholder": "搜索媒体…", "media.trendLabel": "AI 趋势洞察（示例）",
@@ -9853,12 +9854,20 @@ document.addEventListener("DOMContentLoaded", gstInit);
 </script>
 <script>
 /* Global Sustainable Taxonomies — Media & Trend Hub (Screen 4)
-   NOTE: There is no live media feed behind this page. All items, trend cards
-   and the thematic chart are generic sample/placeholder content clearly
-   labelled as such. The taxonomy-development timeline chart is the one
-   exception — it is built from the real "year" field in data.js. */
+   NOTE on what's real vs illustrative:
+   - "News" items are live — fetched from /api/news (a Vercel serverless
+     function that pulls current headlines from Google News' public search
+     feed). See api/news.js for how that works.
+   - The "Reports / Videos / Papers / Podcasts" filters have no live source
+     connected yet, so they show an honest "nothing here yet" state instead
+     of fake sample cards.
+   - The AI Trend Insights cards and the Thematic Policy Trends chart remain
+     illustrative sample content, clearly labelled as such.
+   - The taxonomy-development timeline chart is real — built from the
+     "year" field in data.js. */
 
-const CONTENT_TYPES = ["News", "Reports", "Videos", "Papers", "Podcasts"];
+const NEWS_TYPE = "News";
+const EMPTY_TYPES = ["Reports", "Videos", "Papers", "Podcasts"];
 
 const TREND_CARDS = [
   {
@@ -9883,47 +9892,55 @@ const TREND_CARDS = [
   }
 ];
 
-const SOURCE_TAGS = ["Sample Source", "Sample Wire", "Sample Bulletin", "Sample Review"];
-
-function buildSampleItems() {
-  const countries = Object.values(window.TAXONOMY_DATA || {});
-  const names = countries.map(c => c.name);
-  const pick = (arr, i) => arr[i % arr.length];
-
-  const templates = [
-    { type: "News", title: "{c} regulator signals review of taxonomy screening criteria" },
-    { type: "News", title: "Draft guidance published on aligning {c}'s taxonomy with international standards" },
-    { type: "Reports", title: "Annual review of sustainable finance taxonomies — {c} spotlight" },
-    { type: "Reports", title: "Comparative study: DNSH implementation across {c} and regional peers" },
-    { type: "Videos", title: "Explainer: how {c}'s taxonomy classifies eligible activities" },
-    { type: "Videos", title: "Panel discussion — taxonomy interoperability and {c}'s approach" },
-    { type: "Papers", title: "Working paper on transition activities within {c}'s framework" },
-    { type: "Papers", title: "Academic review of minimum safeguards provisions, referencing {c}" },
-    { type: "Podcasts", title: "Podcast: what {c}'s taxonomy means for green bond issuers" },
-    { type: "Podcasts", title: "Weekly roundup — taxonomy developments including {c}" },
-    { type: "News", title: "Consultation opens on proposed updates to {c}'s sector coverage" },
-    { type: "Reports", title: "Investor briefing on taxonomy-aligned capital flows into {c}" },
-    { type: "Videos", title: "Webinar recording: technical screening criteria in {c}" },
-    { type: "Papers", title: "Policy brief: lessons from {c} for emerging-market taxonomies" },
-    { type: "News", title: "{c} taxonomy secretariat outlines 2026–2027 workplan" }
-  ];
-
-  const dates = ["Jul 2026", "Jun 2026", "Jun 2026", "May 2026", "May 2026", "Apr 2026", "Apr 2026", "Mar 2026", "Mar 2026", "Feb 2026", "Feb 2026", "Jan 2026", "Jan 2026", "Dec 2025", "Dec 2025"];
-
-  return templates.map((t, i) => ({
-    type: t.type,
-    title: t.title.replace("{c}", names.length ? pick(names, i * 7 + 3) : "a national"),
-    source: pick(SOURCE_TAGS, i),
-    date: dates[i % dates.length]
-  }));
-}
-
 let ITEMS = [];
 let currentType = "All";
+let newsState = "loading"; // "loading" | "ready" | "error"
+
+function escapeHtml(s) {
+  return String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+}
+
+function formatDate(raw) {
+  if (!raw) return "Recent";
+  const d = new Date(raw);
+  if (isNaN(d.getTime())) return "Recent";
+  return d.toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" });
+}
 
 function typeTagHtml(type) {
-  return `<span class="type-tag">${type}</span>`;
+  return `<span class="type-tag">${escapeHtml(type)}</span>`;
 }
+
+/* ---------- Live news (real feed via /api/news) ---------- */
+
+async function loadNews() {
+  newsState = "loading";
+  renderFeatured();
+  renderGrid();
+  try {
+    const res = await fetch("/api/news");
+    const data = await res.json();
+    if (!res.ok || !Array.isArray(data.items)) {
+      throw new Error((data && data.error) || `HTTP ${res.status}`);
+    }
+    ITEMS = data.items.map(item => ({
+      type: NEWS_TYPE,
+      title: item.title,
+      source: item.source,
+      date: formatDate(item.publishedAt),
+      link: item.link
+    }));
+    newsState = "ready";
+  } catch (err) {
+    console.error("Failed to load live news feed:", err);
+    ITEMS = [];
+    newsState = "error";
+  }
+  renderFeatured();
+  renderGrid();
+}
+
+/* ---------- Trend cards (illustrative) ---------- */
 
 function renderTrendCards() {
   const wrap = document.getElementById("trendGrid");
@@ -9944,20 +9961,34 @@ function renderTrendCards() {
   });
 }
 
+/* ---------- Featured (real) + grid (real) ---------- */
+
 function renderFeatured() {
-  const f = ITEMS[0];
   const card = document.getElementById("featuredCard");
+
+  if (newsState === "loading") {
+    card.innerHTML = `<div><p class="section-text">Loading live news…</p></div>`;
+    card.style.cursor = "default";
+    return;
+  }
+  if (newsState === "error" || !ITEMS.length) {
+    card.innerHTML = `<div><p class="section-text">Couldn't load live news right now — please try again later.</p></div>`;
+    card.style.cursor = "default";
+    return;
+  }
+
+  const f = ITEMS[0];
   card.innerHTML = `
     <div>
       ${typeTagHtml(f.type)}
-      <h2>${f.title}</h2>
-      <p class="section-text">Sample featured item for demonstration — illustrates how a lead story would appear once real media ingestion is connected.</p>
-      <div class="media-meta">${f.source} · ${f.date}</div>
+      <h2>${escapeHtml(f.title)}</h2>
+      <p class="section-text">Live headline via Google News. Click to preview, or open the original article.</p>
+      <div class="media-meta">${escapeHtml(f.source)} · ${escapeHtml(f.date)}</div>
     </div>
     <div class="featured-visual">Featured visual placeholder</div>
   `;
   card.style.cursor = "pointer";
-  card.addEventListener("click", () => openMediaModal(f));
+  card.onclick = () => openMediaModal(f);
 }
 
 function matchesFilter(item, query) {
@@ -9976,19 +10007,37 @@ let currentGridItems = [];
 function renderGrid() {
   const query = document.getElementById("mediaSearchInput").value.trim();
   const grid = document.getElementById("mediaGrid");
+
+  if (EMPTY_TYPES.includes(currentType)) {
+    grid.innerHTML = `<p class="section-text" style="grid-column:1/-1;color:var(--text-muted);">No live ${currentType.toLowerCase()} feed is connected here yet — check the News tab for live headlines.</p>`;
+    currentGridItems = [];
+    return;
+  }
+
+  if (newsState === "loading") {
+    grid.innerHTML = `<p class="section-text" style="grid-column:1/-1;color:var(--text-muted);">Loading live news…</p>`;
+    currentGridItems = [];
+    return;
+  }
+  if (newsState === "error") {
+    grid.innerHTML = `<p class="section-text" style="grid-column:1/-1;color:var(--text-muted);">Couldn't load live news right now — please try again later.</p>`;
+    currentGridItems = [];
+    return;
+  }
+
   const rest = ITEMS.slice(1).filter(item => matchesFilter(item, query));
   currentGridItems = rest;
 
   if (!rest.length) {
-    grid.innerHTML = `<p class="section-text" style="grid-column:1/-1;color:var(--text-muted);">No sample items match this filter.</p>`;
+    grid.innerHTML = `<p class="section-text" style="grid-column:1/-1;color:var(--text-muted);">No live news items match this search.</p>`;
     return;
   }
 
   grid.innerHTML = rest.map((item, i) => `
     <a class="media-card" href="#" data-idx="${i}">
       ${typeTagHtml(item.type)}
-      <h3>${item.title}</h3>
-      <div class="media-meta">${item.source} · ${item.date}</div>
+      <h3>${escapeHtml(item.title)}</h3>
+      <div class="media-meta">${escapeHtml(item.source)} · ${escapeHtml(item.date)}</div>
     </a>
   `).join("");
 
@@ -10063,32 +10112,20 @@ function renderThematicChart() {
   document.getElementById("thematicChart").innerHTML = html;
 }
 
-/* ---------- Media card detail modal (sample content, no live source yet) ---------- */
-
-function escapeHtml(s) {
-  return String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
-}
-
-const TYPE_VIEWER_NOTE = {
-  News: "open the original news article",
-  Reports: "open the full report (PDF or embedded viewer)",
-  Videos: "play the video in an embedded viewer",
-  Papers: "open the paper (PDF viewer)",
-  Podcasts: "play the episode in an embedded audio player"
-};
+/* ---------- Media card detail modal (real news items, live link out) ---------- */
 
 function openMediaModal(item) {
   const modal = document.getElementById("mediaModal");
   const overlay = document.getElementById("mediaModalOverlay");
-  const viewerAction = TYPE_VIEWER_NOTE[item.type] || "open the original source";
 
   modal.innerHTML = `
     <button class="modal-close" id="mediaModalClose" aria-label="Close" type="button">✕</button>
     ${typeTagHtml(item.type)}
     <h3>${escapeHtml(item.title)}</h3>
     <div class="media-meta">${escapeHtml(item.source)} · ${escapeHtml(item.date)}</div>
-    <p class="modal-body-text">Sample summary: this illustrative ${item.type.toLowerCase()} item stands in for a real feed entry. Once a live media source is connected, clicking this card will ${viewerAction} for "${escapeHtml(item.title)}".</p>
-    <div class="modal-disclaimer">This is sample content for demonstration only — no live media feed or real source is connected yet.</div>
+    <p class="modal-body-text">This headline is live, pulled from Google News. Click below to read the full article on the original publisher's site.</p>
+    <a class="btn-primary" href="${escapeHtml(item.link)}" target="_blank" rel="noopener noreferrer">Read full article ↗</a>
+    <div class="modal-disclaimer">Headline and link via Google News — Global Sustainable Taxonomies does not host or verify third-party articles; always check the original source.</div>
   `;
 
   overlay.classList.add("open");
@@ -10110,14 +10147,12 @@ function setupMediaModal() {
 }
 
 function init() {
-  ITEMS = buildSampleItems();
   renderTrendCards();
-  renderFeatured();
-  renderGrid();
   setupFilterChips();
   renderTimelineChart();
   renderThematicChart();
   setupMediaModal();
+  loadNews();
 }
 
 document.addEventListener("DOMContentLoaded", init);
