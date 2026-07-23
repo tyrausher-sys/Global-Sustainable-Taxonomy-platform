@@ -638,7 +638,7 @@ button.chip.active { background: var(--green); border-color: var(--green); color
 .objective-pills li { display: flex; align-items: center; gap: 10px; padding: 9px 12px; border-radius: 999px; background: var(--bg-soft); border: 1px solid var(--border); font-size: 0.88rem; font-weight: 600; }
 .objective-pills li svg { color: var(--green); flex-shrink: 0; }
 .pill-num { display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; border-radius: 50%; background: var(--navy); color: #fff; font-size: 0.72rem; font-weight: 700; flex-shrink: 0; }
-.objective-pills-generic li { opacity: 0.6; }
+.data-not-available { font-size: 0.88rem; color: var(--text-muted); margin: 0; }
 
 .criteria-table { width: 100%; border-collapse: collapse; margin-bottom: 12px; }
 .criteria-table th, .criteria-table td { text-align: left; padding: 8px 6px; border-bottom: 1px solid var(--border); font-size: 0.82rem; }
@@ -10415,17 +10415,6 @@ function icon(name) {
   return `<svg class="icon-svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${ICONS[name] || ""}</svg>`;
 }
 
-const DEFAULT_OBJECTIVES = [
-  { icon: "climate", label: "Climate Change Mitigation" },
-  { icon: "climate-adapt", label: "Climate Change Adaptation" },
-  { icon: "water", label: "Sustainable Use of Water & Marine Resources" },
-  { icon: "circular", label: "Transition to a Circular Economy" },
-  { icon: "pollution", label: "Pollution Prevention & Control" },
-  { icon: "biodiversity", label: "Protection of Biodiversity & Ecosystems" }
-];
-
-const GENERIC_ACTIVITIES = ["Renewable energy generation", "Low-carbon transport", "Sustainable buildings"];
-
 // When a country has its own national taxonomy *and* is also covered by a
 // regional overlay framework (ASEAN, UMOA, LAC Common Framework, etc.), make
 // that dual coverage visible right in the header — not just buried in the
@@ -10481,15 +10470,14 @@ function overviewTable(entry, name, label) {
 
 function objectivesSection(entry) {
   const objs = (entry && entry.objectives && entry.objectives.length) ? entry.objectives : null;
-  const list = objs || DEFAULT_OBJECTIVES;
-  let html = `<ol class="objective-pills${objs ? "" : " objective-pills-generic"}">`;
-  list.forEach((o, i) => {
+  if (!objs) {
+    return `<p class="data-not-available">Not yet documented for this taxonomy.</p>`;
+  }
+  let html = `<ol class="objective-pills">`;
+  objs.forEach((o, i) => {
     html += `<li><span class="pill-num">${i + 1}</span>${icon(o.icon)}<span>${o.label}</span></li>`;
   });
   html += `</ol>`;
-  if (!objs) {
-    html += `<p class="sample-note">Illustrative reference set — this taxonomy's specific objective structure has not yet been documented.</p>`;
-  }
   return html;
 }
 
@@ -10504,13 +10492,7 @@ function criteriaTable(entry) {
     });
     html += `</tbody></table>`;
   } else {
-    const activities = (entry && entry.sectors && entry.sectors.length) ? entry.sectors.slice(0, 3) : GENERIC_ACTIVITIES;
-    html += `<p class="sample-note">Illustrative example criteria — refer to the official documentation below for authoritative thresholds.</p>`;
-    html += `<table class="criteria-table"><thead><tr><th>Activity</th><th>Screening Criteria</th><th>Threshold</th><th>DNSH</th></tr></thead><tbody>`;
-    activities.forEach(a => {
-      html += `<tr><td>${a}</td><td>Meets sector emissions / technology pathway</td><td>See official guidance</td><td>Applies</td></tr>`;
-    });
-    html += `</tbody></table>`;
+    html += `<p class="data-not-available">Not yet documented for this taxonomy.</p>`;
   }
 
   if (entry && entry.source) {
