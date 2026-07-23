@@ -10723,10 +10723,14 @@ function onEachFeature(feature, layer) {
 
 function renderStats() {
   const counts = { established: 0, developing: 0, none: 0 };
-  // Count every country actually shown on the map (all geoJSON features),
-  // not just the ones with a research entry — otherwise countries with no
-  // entry (rendered gray/"No Taxonomy" on the map) were left out of the total.
-  const isoList = Object.keys(layerByIso).length ? Object.keys(layerByIso) : Object.keys(window.TAXONOMY_DATA);
+  // Count only countries we actually have a compiled research entry for.
+  // The map background (GeoJSON) renders ~180 country shapes total, but most
+  // of those have no entry in data.js at all — they're just gray/"No Taxonomy"
+  // by default because nobody has researched them, not because we've confirmed
+  // they have no taxonomy. Counting every map shape here would silently inflate
+  // "Total Countries Tracked" with countries we've never actually looked at,
+  // which misrepresents how much of the world this site actually covers.
+  const isoList = Object.keys(window.TAXONOMY_DATA);
   isoList.forEach(iso => {
     const bucket = getStatus(iso);
     counts[bucket] += 1;
