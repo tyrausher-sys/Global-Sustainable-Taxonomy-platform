@@ -18,6 +18,8 @@ const GEOJSON_FALLBACK_URL = "https://raw.githubusercontent.com/johan/world.geo.
 let map, geoLayer;
 let currentRegion = "All";
 let currentStatus = "All";
+let currentObjective = "All";
+let currentSector = "All";
 const layerByIso = {};
 
 function getEntry(iso) {
@@ -30,12 +32,38 @@ function getStatus(iso) {
   return (raw === "established" || raw === "developing") ? raw : "none";
 }
 
+// Environmental objective labels are free text and vary a lot between
+// countries' own data (e.g. "Climate Change Mitigation" vs "Climate Change
+// Mitigation (1.5°C-aligned)"), but every objective entry already carries a
+// canonical `icon` tag assigned when the data was compiled. Filtering on that
+// icon groups equivalent objectives together reliably instead of trying to
+// match free text. The "industry" filter bucket also matches the rarer
+// "digital" icon (only one label uses it: "Green Services & Trade") so it
+// isn't left as an unreachable filter option of its own.
+function entryMatchesObjective(entry, key) {
+  if (!entry || !Array.isArray(entry.objectives) || !entry.objectives.length) return false;
+  return entry.objectives.some(o => {
+    if (!o || !o.icon) return false;
+    if (key === "industry") return o.icon === "industry" || o.icon === "digital";
+    return o.icon === key;
+  });
+}
+
+// Sectors are stored as a plain list of clean strings per country (unlike the
+// free-text objective labels), so an exact match against that list is enough.
+function entryMatchesSector(entry, sector) {
+  if (!entry || !Array.isArray(entry.sectors) || !entry.sectors.length) return false;
+  return entry.sectors.includes(sector);
+}
+
 function matchesFilters(iso) {
   const entry = getEntry(iso);
   const status = getStatus(iso);
   const region = entry ? entry.region : null;
   if (currentStatus !== "All" && status !== currentStatus) return false;
   if (currentRegion !== "All" && region !== currentRegion) return false;
+  if (currentObjective !== "All" && !entryMatchesObjective(entry, currentObjective)) return false;
+  if (currentSector !== "All" && !entryMatchesSector(entry, currentSector)) return false;
   return true;
 }
 
@@ -51,6 +79,22 @@ function styleFeature(feature) {
   };
 }
 
+function escapeHtml(s) {
+  return String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+}
+
+// Same rule as the country page header: if a country has its own named
+// taxonomy *and* is also covered by a regional overlay (ASEAN, UMOA, LAC
+// Common Framework, etc.), surface that dual coverage right in the popup.
+function overlayPopupTags(entry) {
+  if (!entry || !entry.taxonomy || !entry.overlays || !entry.overlays.length) return "";
+  const names = entry.overlays
+    .map(o => o && o.name)
+    .filter(n => n && !entry.taxonomy.includes(n));
+  if (!names.length) return "";
+  return names.map(n => `<span class="popup-overlay-tag">+ ${escapeHtml(n)}</span>`).join("");
+}
+
 function buildPopupHtml(feature) {
   const iso = feature.id;
   const entry = getEntry(iso);
@@ -63,6 +107,7 @@ function buildPopupHtml(feature) {
   html += `<span class="badge badge-${status}">${label}</span>`;
   if (entry && entry.taxonomy) {
     html += `<div class="taxo-name">${entry.taxonomy}${entry.year ? " (" + entry.year + ")" : ""}</div>`;
+    html += overlayPopupTags(entry);
   }
   if (entry && entry.regulator) {
     html += `<div class="taxo-meta">${entry.regulator}</div>`;
@@ -96,10 +141,14 @@ function onEachFeature(feature, layer) {
 
 function renderStats() {
   const counts = { established: 0, developing: 0, none: 0 };
-  // Count every country actually shown on the map (all geoJSON features),
-  // not just the ones with a research entry — otherwise countries with no
-  // entry (rendered gray/"No Taxonomy" on the map) were left out of the total.
-  const isoList = Object.keys(layerByIso).length ? Object.keys(layerByIso) : Object.keys(window.TAXONOMY_DATA);
+  // Count only countries we actually have a compiled research entry for.
+  // The map background (GeoJSON) renders ~180 country shapes total, but most
+  // of those have no entry in data.js at all — they're just gray/"No Taxonomy"
+  // by default because nobody has researched them, not because we've confirmed
+  // they have no taxonomy. Counting every map shape here would silently inflate
+  // "Total Countries Tracked" with countries we've never actually looked at,
+  // which misrepresents how much of the world this site actually covers.
+  const isoList = Object.keys(window.TAXONOMY_DATA);
   isoList.forEach(iso => {
     const bucket = getStatus(iso);
     counts[bucket] += 1;
@@ -147,13 +196,66 @@ function refreshMapStyles() {
   geoLayer.eachLayer(l => l.setStyle(styleFeature(l.feature)));
 }
 
+// Advanced Search & Filtering (7.3): re-renders both the map highlighting
+// (via refreshMapStyles, using the existing matchesFilters opacity trick)
+// and the synced "Matching Countries" list every time any filter chip
+// (region, status, environmental objective, or sector) changes, so the two
+// views always stay in sync with each other.
+function onFiltersChanged() {
+  refreshMapStyles();
+  renderFilteredList();
+}
+
+function renderFilteredList() {
+  const listEl = document.getElementById("filteredList");
+  const countEl = document.getElementById("filteredCount");
+  if (!listEl || !countEl) return;
+
+  const matches = Object.keys(window.TAXONOMY_DATA)
+    .filter(matchesFilters)
+    .map(iso => ({ iso, entry: window.TAXONOMY_DATA[iso] }))
+    .sort((a, b) => a.entry.name.localeCompare(b.entry.name));
+
+  countEl.textContent = matches.length;
+
+  if (!matches.length) {
+    listEl.innerHTML = `<li class="search-empty">${(typeof gstT === "function" && gstT("home.noMatchingCountries")) || "No countries match these filters yet."}</li>`;
+    return;
+  }
+
+  listEl.innerHTML = matches.map(({ iso, entry }) => {
+    const status = getStatus(iso);
+    return `
+    <li>
+      <a href="country.html?iso=${iso}" data-iso="${iso}">
+        <div class="recent-top"><strong>${entry.name}</strong></div>
+        <div class="recent-sub"><span>${entry.taxonomy || ""}</span><span class="badge badge-sm badge-${status}">${STATUS_LABEL[status]}</span></div>
+      </a>
+    </li>`;
+  }).join("");
+
+  // Clicking a list entry pans/highlights the matching shape on the map
+  // instead of navigating away, when that country's shape is actually on
+  // the map (some entries — e.g. small city-states — may not have a GeoJSON
+  // shape at all, in which case the link falls through to the country page).
+  listEl.querySelectorAll("a[data-iso]").forEach(a => {
+    const iso = a.dataset.iso;
+    const layer = layerByIso[iso];
+    if (!layer) return;
+    a.addEventListener("click", e => {
+      e.preventDefault();
+      highlightLayer(layer);
+    });
+  });
+}
+
 function setupChips() {
   document.querySelectorAll("#regionChips .chip").forEach(btn => {
     btn.addEventListener("click", () => {
       document.querySelectorAll("#regionChips .chip").forEach(b => b.classList.remove("active"));
       btn.classList.add("active");
       currentRegion = btn.dataset.region;
-      refreshMapStyles();
+      onFiltersChanged();
     });
   });
   document.querySelectorAll("#statusChips .chip").forEach(btn => {
@@ -161,7 +263,23 @@ function setupChips() {
       document.querySelectorAll("#statusChips .chip").forEach(b => b.classList.remove("active"));
       btn.classList.add("active");
       currentStatus = btn.dataset.status;
-      refreshMapStyles();
+      onFiltersChanged();
+    });
+  });
+  document.querySelectorAll("#objectiveChips .chip").forEach(btn => {
+    btn.addEventListener("click", () => {
+      document.querySelectorAll("#objectiveChips .chip").forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      currentObjective = btn.dataset.objective;
+      onFiltersChanged();
+    });
+  });
+  document.querySelectorAll("#sectorChips .chip").forEach(btn => {
+    btn.addEventListener("click", () => {
+      document.querySelectorAll("#sectorChips .chip").forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      currentSector = btn.dataset.sector;
+      onFiltersChanged();
     });
   });
 }
@@ -256,6 +374,7 @@ async function init() {
   renderRecentUpdates();
   setupChips();
   setupSearch();
+  renderFilteredList();
 }
 
 document.addEventListener("DOMContentLoaded", init);
