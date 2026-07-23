@@ -381,15 +381,6 @@ a { color: inherit; }
 .search-empty { padding: 14px 18px; color: var(--text-muted); font-size: 0.88rem; }
 
 /* ---------- Filter chips ---------- */
-.chip-row-label {
-  font-size: 0.72rem;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  font-weight: 700;
-  color: #9FB0C9;
-  margin: 14px 0 6px;
-  text-align: center;
-}
 .chip-row {
   display: flex;
   flex-wrap: wrap;
@@ -463,6 +454,53 @@ button.chip.active { background: var(--green); border-color: var(--green); color
 .leaflet-container { background: var(--bg-soft); }
 .leaflet-interactive { cursor: pointer; }
 .leaflet-popup-content-wrapper { border-radius: 12px; }
+
+/* ---------- Advanced Search & Filtering (collapsible, below the map) ---------- */
+.advanced-filter-section { margin-top: 18px; }
+.advanced-filter-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 10px 16px;
+  font-family: inherit;
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--text);
+  cursor: pointer;
+  width: 100%;
+  justify-content: space-between;
+}
+.advanced-filter-toggle:hover { background: var(--bg-soft); }
+.advanced-filter-toggle .chevron { transition: transform 0.15s ease; flex-shrink: 0; }
+.advanced-filter-toggle.open .chevron { transform: rotate(180deg); }
+.advanced-filter-panel {
+  display: none;
+  gap: 20px;
+  flex-wrap: wrap;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-top: none;
+  border-radius: 0 0 var(--radius-md) var(--radius-md);
+  padding: 16px;
+  margin-top: -1px;
+}
+.advanced-filter-panel.open { display: flex; }
+.advanced-filter-field { flex: 1; min-width: 220px; display: flex; flex-direction: column; gap: 6px; }
+.advanced-filter-field label { font-size: 0.78rem; font-weight: 600; color: var(--text-muted); }
+.advanced-filter-field select {
+  height: 38px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 0.86rem;
+  padding: 0 10px;
+  cursor: pointer;
+}
 
 /* ---------- Stats sidebar ---------- */
 .stats-sidebar {

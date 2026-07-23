@@ -266,21 +266,33 @@ function setupChips() {
       onFiltersChanged();
     });
   });
-  document.querySelectorAll("#objectiveChips .chip").forEach(btn => {
-    btn.addEventListener("click", () => {
-      document.querySelectorAll("#objectiveChips .chip").forEach(b => b.classList.remove("active"));
-      btn.classList.add("active");
-      currentObjective = btn.dataset.objective;
+  const objectiveSelect = document.getElementById("homeObjectiveSelect");
+  if (objectiveSelect) {
+    objectiveSelect.addEventListener("change", () => {
+      currentObjective = objectiveSelect.value;
       onFiltersChanged();
     });
-  });
-  document.querySelectorAll("#sectorChips .chip").forEach(btn => {
-    btn.addEventListener("click", () => {
-      document.querySelectorAll("#sectorChips .chip").forEach(b => b.classList.remove("active"));
-      btn.classList.add("active");
-      currentSector = btn.dataset.sector;
+  }
+  const sectorSelect = document.getElementById("homeSectorSelect");
+  if (sectorSelect) {
+    sectorSelect.addEventListener("change", () => {
+      currentSector = sectorSelect.value;
       onFiltersChanged();
     });
+  }
+}
+
+// The Advanced Search & Filtering panel (environmental objective + sector)
+// is collapsed by default so the map page stays uncluttered — most visitors
+// just use the region/status chips above. It only expands when explicitly
+// requested.
+function setupAdvancedFilterToggle() {
+  const toggle = document.getElementById("advancedFilterToggle");
+  const panel = document.getElementById("advancedFilterPanel");
+  if (!toggle || !panel) return;
+  toggle.addEventListener("click", () => {
+    const isOpen = panel.classList.toggle("open");
+    toggle.classList.toggle("open", isOpen);
   });
 }
 
@@ -373,6 +385,7 @@ async function init() {
   renderStats();
   renderRecentUpdates();
   setupChips();
+  setupAdvancedFilterToggle();
   setupSearch();
   renderFilteredList();
 }

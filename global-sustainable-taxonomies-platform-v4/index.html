@@ -398,15 +398,6 @@ a { color: inherit; }
 .search-empty { padding: 14px 18px; color: var(--text-muted); font-size: 0.88rem; }
 
 /* ---------- Filter chips ---------- */
-.chip-row-label {
-  font-size: 0.72rem;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  font-weight: 700;
-  color: #9FB0C9;
-  margin: 14px 0 6px;
-  text-align: center;
-}
 .chip-row {
   display: flex;
   flex-wrap: wrap;
@@ -480,6 +471,53 @@ button.chip.active { background: var(--green); border-color: var(--green); color
 .leaflet-container { background: var(--bg-soft); }
 .leaflet-interactive { cursor: pointer; }
 .leaflet-popup-content-wrapper { border-radius: 12px; }
+
+/* ---------- Advanced Search & Filtering (collapsible, below the map) ---------- */
+.advanced-filter-section { margin-top: 18px; }
+.advanced-filter-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 10px 16px;
+  font-family: inherit;
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--text);
+  cursor: pointer;
+  width: 100%;
+  justify-content: space-between;
+}
+.advanced-filter-toggle:hover { background: var(--bg-soft); }
+.advanced-filter-toggle .chevron { transition: transform 0.15s ease; flex-shrink: 0; }
+.advanced-filter-toggle.open .chevron { transform: rotate(180deg); }
+.advanced-filter-panel {
+  display: none;
+  gap: 20px;
+  flex-wrap: wrap;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-top: none;
+  border-radius: 0 0 var(--radius-md) var(--radius-md);
+  padding: 16px;
+  margin-top: -1px;
+}
+.advanced-filter-panel.open { display: flex; }
+.advanced-filter-field { flex: 1; min-width: 220px; display: flex; flex-direction: column; gap: 6px; }
+.advanced-filter-field label { font-size: 0.78rem; font-weight: 600; color: var(--text-muted); }
+.advanced-filter-field select {
+  height: 38px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 0.86rem;
+  padding: 0 10px;
+  cursor: pointer;
+}
 
 /* ---------- Stats sidebar ---------- */
 .stats-sidebar {
@@ -1410,39 +1448,6 @@ button.chip.active { background: var(--green); border-color: var(--green); color
       <button class="chip" data-status="none" data-i18n="home.chipNoTaxonomy">No Taxonomy</button>
     </div>
 
-    <div class="chip-row-label" data-i18n="home.objectiveFilterHeading">Filter by Environmental Objective</div>
-    <div class="chip-row" id="objectiveChips">
-      <button class="chip active" data-objective="All" data-i18n="home.objAll">All Objectives</button>
-      <button class="chip" data-objective="climate" data-i18n="home.objClimateMitigation">Climate Change Mitigation</button>
-      <button class="chip" data-objective="climate-adapt" data-i18n="home.objClimateAdaptation">Climate Change Adaptation</button>
-      <button class="chip" data-objective="biodiversity" data-i18n="home.objBiodiversity">Biodiversity &amp; Ecosystems</button>
-      <button class="chip" data-objective="water" data-i18n="home.objWater">Water &amp; Marine Resources</button>
-      <button class="chip" data-objective="circular" data-i18n="home.objCircular">Circular Economy</button>
-      <button class="chip" data-objective="pollution" data-i18n="home.objPollution">Pollution Prevention</button>
-      <button class="chip" data-objective="energy" data-i18n="home.objEnergy">Energy</button>
-      <button class="chip" data-objective="industry" data-i18n="home.objIndustry">Industry &amp; Transition</button>
-    </div>
-
-    <div class="chip-row-label" data-i18n="home.sectorFilterHeading">Filter by Sector</div>
-    <div class="chip-row" id="sectorChips">
-      <button class="chip active" data-sector="All" data-i18n="home.secAll">All Sectors</button>
-      <button class="chip" data-sector="Agriculture" data-i18n="home.secAgriculture">Agriculture</button>
-      <button class="chip" data-sector="Buildings" data-i18n="home.secBuildings">Buildings</button>
-      <button class="chip" data-sector="Ecological Restoration" data-i18n="home.secEcologicalRestoration">Ecological Restoration</button>
-      <button class="chip" data-sector="Energy" data-i18n="home.secEnergy">Energy</button>
-      <button class="chip" data-sector="Energy Transition" data-i18n="home.secEnergyTransition">Energy Transition</button>
-      <button class="chip" data-sector="Environmental Protection" data-i18n="home.secEnvironmentalProtection">Environmental Protection</button>
-      <button class="chip" data-sector="Green Services &amp; Trade" data-i18n="home.secGreenServicesTrade">Green Services &amp; Trade</button>
-      <button class="chip" data-sector="ICT &amp; Digital" data-i18n="home.secICTDigital">ICT &amp; Digital</button>
-      <button class="chip" data-sector="Infrastructure" data-i18n="home.secInfrastructure">Infrastructure</button>
-      <button class="chip" data-sector="Manufacturing" data-i18n="home.secManufacturing">Manufacturing</button>
-      <button class="chip" data-sector="Nuclear &amp; Transition Industries" data-i18n="home.secNuclearTransition">Nuclear &amp; Transition Industries</button>
-      <button class="chip" data-sector="Resource Recycling" data-i18n="home.secResourceRecycling">Resource Recycling</button>
-      <button class="chip" data-sector="Transport" data-i18n="home.secTransport">Transport</button>
-      <button class="chip" data-sector="Waste Management" data-i18n="home.secWasteManagement">Waste Management</button>
-      <button class="chip" data-sector="Water" data-i18n="home.secWater">Water</button>
-    </div>
-
     <div class="legend legend-dark">
       <span class="legend-item"><i class="dot established"></i><span data-i18n="home.chipDeveloped">Developed</span></span>
       <span class="legend-item"><i class="dot developing"></i><span data-i18n="home.chipUnderDevelopment">Under Development</span></span>
@@ -1471,6 +1476,50 @@ button.chip.active { background: var(--green); border-color: var(--green); color
       <ul class="recent-list" id="recentList"></ul>
     </aside>
   </div>
+
+  <section class="advanced-filter-section">
+    <button type="button" class="advanced-filter-toggle" id="advancedFilterToggle">
+      <span data-i18n="home.advancedFiltersToggle">Advanced Search &amp; Filtering</span>
+      <svg class="chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+    </button>
+    <div class="advanced-filter-panel" id="advancedFilterPanel">
+      <div class="advanced-filter-field">
+        <label for="homeObjectiveSelect" data-i18n="home.objectiveFilterHeading">Filter by Environmental Objective</label>
+        <select id="homeObjectiveSelect">
+          <option value="All" data-i18n="home.objAll">All Objectives</option>
+          <option value="climate" data-i18n="home.objClimateMitigation">Climate Change Mitigation</option>
+          <option value="climate-adapt" data-i18n="home.objClimateAdaptation">Climate Change Adaptation</option>
+          <option value="biodiversity" data-i18n="home.objBiodiversity">Biodiversity &amp; Ecosystems</option>
+          <option value="water" data-i18n="home.objWater">Water &amp; Marine Resources</option>
+          <option value="circular" data-i18n="home.objCircular">Circular Economy</option>
+          <option value="pollution" data-i18n="home.objPollution">Pollution Prevention</option>
+          <option value="energy" data-i18n="home.objEnergy">Energy</option>
+          <option value="industry" data-i18n="home.objIndustry">Industry &amp; Transition</option>
+        </select>
+      </div>
+      <div class="advanced-filter-field">
+        <label for="homeSectorSelect" data-i18n="home.sectorFilterHeading">Filter by Sector</label>
+        <select id="homeSectorSelect">
+          <option value="All" data-i18n="home.secAll">All Sectors</option>
+          <option value="Agriculture" data-i18n="home.secAgriculture">Agriculture</option>
+          <option value="Buildings" data-i18n="home.secBuildings">Buildings</option>
+          <option value="Ecological Restoration" data-i18n="home.secEcologicalRestoration">Ecological Restoration</option>
+          <option value="Energy" data-i18n="home.secEnergy">Energy</option>
+          <option value="Energy Transition" data-i18n="home.secEnergyTransition">Energy Transition</option>
+          <option value="Environmental Protection" data-i18n="home.secEnvironmentalProtection">Environmental Protection</option>
+          <option value="Green Services &amp; Trade" data-i18n="home.secGreenServicesTrade">Green Services &amp; Trade</option>
+          <option value="ICT &amp; Digital" data-i18n="home.secICTDigital">ICT &amp; Digital</option>
+          <option value="Infrastructure" data-i18n="home.secInfrastructure">Infrastructure</option>
+          <option value="Manufacturing" data-i18n="home.secManufacturing">Manufacturing</option>
+          <option value="Nuclear &amp; Transition Industries" data-i18n="home.secNuclearTransition">Nuclear &amp; Transition Industries</option>
+          <option value="Resource Recycling" data-i18n="home.secResourceRecycling">Resource Recycling</option>
+          <option value="Transport" data-i18n="home.secTransport">Transport</option>
+          <option value="Waste Management" data-i18n="home.secWasteManagement">Waste Management</option>
+          <option value="Water" data-i18n="home.secWater">Water</option>
+        </select>
+      </div>
+    </div>
+  </section>
 </main>
 
 <footer class="site-footer">
@@ -11830,6 +11879,7 @@ const GST_I18N = {
     "home.globalStats": "Global Stats", "home.totalCountriesTracked": "Total Countries Tracked",
     "home.recentlyUpdated": "Recently Updated", "home.askAi": "Ask AI",
     "home.objectiveFilterHeading": "Filter by Environmental Objective", "home.sectorFilterHeading": "Filter by Sector",
+    "home.advancedFiltersToggle": "Advanced Search & Filtering",
     "home.objAll": "All Objectives", "home.objClimateMitigation": "Climate Change Mitigation", "home.objClimateAdaptation": "Climate Change Adaptation",
     "home.objBiodiversity": "Biodiversity & Ecosystems", "home.objWater": "Water & Marine Resources", "home.objCircular": "Circular Economy",
     "home.objPollution": "Pollution Prevention", "home.objEnergy": "Energy", "home.objIndustry": "Industry & Transition",
@@ -11912,6 +11962,7 @@ const GST_I18N = {
     "home.globalStats": "Global statistik", "home.totalCountriesTracked": "Totalt antal länder som bevakas",
     "home.recentlyUpdated": "Senast uppdaterat", "home.askAi": "Fråga AI",
     "home.objectiveFilterHeading": "Filtrera på miljömål", "home.sectorFilterHeading": "Filtrera på sektor",
+    "home.advancedFiltersToggle": "Avancerad sökning & filtrering",
     "home.objAll": "Alla miljömål", "home.objClimateMitigation": "Begränsning av klimatförändringar", "home.objClimateAdaptation": "Klimatanpassning",
     "home.objBiodiversity": "Biologisk mångfald & ekosystem", "home.objWater": "Vatten- & marina resurser", "home.objCircular": "Cirkulär ekonomi",
     "home.objPollution": "Förebyggande av föroreningar", "home.objEnergy": "Energi", "home.objIndustry": "Industri & omställning",
@@ -11994,6 +12045,7 @@ const GST_I18N = {
     "home.globalStats": "글로벌 통계", "home.totalCountriesTracked": "추적 중인 총 국가 수",
     "home.recentlyUpdated": "최근 업데이트", "home.askAi": "AI에게 질문",
     "home.objectiveFilterHeading": "환경 목표별 필터", "home.sectorFilterHeading": "부문별 필터",
+    "home.advancedFiltersToggle": "고급 검색 및 필터링",
     "home.objAll": "모든 환경 목표", "home.objClimateMitigation": "기후변화 완화", "home.objClimateAdaptation": "기후변화 적응",
     "home.objBiodiversity": "생물다양성 및 생태계", "home.objWater": "수자원 및 해양자원", "home.objCircular": "순환 경제",
     "home.objPollution": "오염 방지", "home.objEnergy": "에너지", "home.objIndustry": "산업 및 전환",
@@ -12076,6 +12128,7 @@ const GST_I18N = {
     "home.globalStats": "Estadísticas globales", "home.totalCountriesTracked": "Total de países monitoreados",
     "home.recentlyUpdated": "Actualizado recientemente", "home.askAi": "Preguntar a la IA",
     "home.objectiveFilterHeading": "Filtrar por objetivo ambiental", "home.sectorFilterHeading": "Filtrar por sector",
+    "home.advancedFiltersToggle": "Búsqueda y filtrado avanzados",
     "home.objAll": "Todos los objetivos", "home.objClimateMitigation": "Mitigación del cambio climático", "home.objClimateAdaptation": "Adaptación al cambio climático",
     "home.objBiodiversity": "Biodiversidad y ecosistemas", "home.objWater": "Recursos hídricos y marinos", "home.objCircular": "Economía circular",
     "home.objPollution": "Prevención de la contaminación", "home.objEnergy": "Energía", "home.objIndustry": "Industria y transición",
@@ -12158,6 +12211,7 @@ const GST_I18N = {
     "home.globalStats": "Statistiques globales", "home.totalCountriesTracked": "Total des pays suivis",
     "home.recentlyUpdated": "Récemment mis à jour", "home.askAi": "Demander à l'IA",
     "home.objectiveFilterHeading": "Filtrer par objectif environnemental", "home.sectorFilterHeading": "Filtrer par secteur",
+    "home.advancedFiltersToggle": "Recherche et filtrage avancés",
     "home.objAll": "Tous les objectifs", "home.objClimateMitigation": "Atténuation du changement climatique", "home.objClimateAdaptation": "Adaptation au changement climatique",
     "home.objBiodiversity": "Biodiversité et écosystèmes", "home.objWater": "Ressources en eau et marines", "home.objCircular": "Économie circulaire",
     "home.objPollution": "Prévention de la pollution", "home.objEnergy": "Énergie", "home.objIndustry": "Industrie et transition",
@@ -12240,6 +12294,7 @@ const GST_I18N = {
     "home.globalStats": "Globale Statistiken", "home.totalCountriesTracked": "Erfasste Länder insgesamt",
     "home.recentlyUpdated": "Kürzlich aktualisiert", "home.askAi": "KI fragen",
     "home.objectiveFilterHeading": "Nach Umweltziel filtern", "home.sectorFilterHeading": "Nach Sektor filtern",
+    "home.advancedFiltersToggle": "Erweiterte Suche & Filterung",
     "home.objAll": "Alle Umweltziele", "home.objClimateMitigation": "Klimaschutz", "home.objClimateAdaptation": "Anpassung an den Klimawandel",
     "home.objBiodiversity": "Biodiversität & Ökosysteme", "home.objWater": "Wasser- & Meeresressourcen", "home.objCircular": "Kreislaufwirtschaft",
     "home.objPollution": "Vermeidung von Umweltverschmutzung", "home.objEnergy": "Energie", "home.objIndustry": "Industrie & Transformation",
@@ -12322,6 +12377,7 @@ const GST_I18N = {
     "home.globalStats": "グローバル統計", "home.totalCountriesTracked": "追跡対象の総国数",
     "home.recentlyUpdated": "最近の更新", "home.askAi": "AIに質問",
     "home.objectiveFilterHeading": "環境目標で絞り込み", "home.sectorFilterHeading": "分野で絞り込み",
+    "home.advancedFiltersToggle": "詳細検索・絞り込み",
     "home.objAll": "すべての環境目標", "home.objClimateMitigation": "気候変動の緩和", "home.objClimateAdaptation": "気候変動への適応",
     "home.objBiodiversity": "生物多様性と生態系", "home.objWater": "水資源・海洋資源", "home.objCircular": "循環経済",
     "home.objPollution": "汚染防止", "home.objEnergy": "エネルギー", "home.objIndustry": "産業・移行",
@@ -12404,6 +12460,7 @@ const GST_I18N = {
     "home.globalStats": "全球统计", "home.totalCountriesTracked": "追踪国家总数",
     "home.recentlyUpdated": "最近更新", "home.askAi": "咨询 AI",
     "home.objectiveFilterHeading": "按环境目标筛选", "home.sectorFilterHeading": "按行业筛选",
+    "home.advancedFiltersToggle": "高级搜索与筛选",
     "home.objAll": "所有环境目标", "home.objClimateMitigation": "气候变化减缓", "home.objClimateAdaptation": "气候变化适应",
     "home.objBiodiversity": "生物多样性与生态系统", "home.objWater": "水资源与海洋资源", "home.objCircular": "循环经济",
     "home.objPollution": "污染防治", "home.objEnergy": "能源", "home.objIndustry": "产业与转型",
@@ -12486,6 +12543,7 @@ const GST_I18N = {
     "home.globalStats": "إحصاءات عالمية", "home.totalCountriesTracked": "إجمالي عدد البلدان المتابَعة",
     "home.recentlyUpdated": "آخر التحديثات", "home.askAi": "اسأل الذكاء الاصطناعي",
     "home.objectiveFilterHeading": "تصفية حسب الهدف البيئي", "home.sectorFilterHeading": "تصفية حسب القطاع",
+    "home.advancedFiltersToggle": "بحث وتصفية متقدمة",
     "home.objAll": "جميع الأهداف البيئية", "home.objClimateMitigation": "التخفيف من تغير المناخ", "home.objClimateAdaptation": "التكيف مع تغير المناخ",
     "home.objBiodiversity": "التنوع البيولوجي والنظم البيئية", "home.objWater": "الموارد المائية والبحرية", "home.objCircular": "الاقتصاد الدائري",
     "home.objPollution": "منع التلوث", "home.objEnergy": "الطاقة", "home.objIndustry": "الصناعة والتحول",
@@ -12568,6 +12626,7 @@ const GST_I18N = {
     "home.globalStats": "Estatísticas Globais", "home.totalCountriesTracked": "Total de Países Monitorados",
     "home.recentlyUpdated": "Atualizado Recentemente", "home.askAi": "Perguntar à IA",
     "home.objectiveFilterHeading": "Filtrar por objetivo ambiental", "home.sectorFilterHeading": "Filtrar por setor",
+    "home.advancedFiltersToggle": "Pesquisa e filtragem avançadas",
     "home.objAll": "Todos os objetivos", "home.objClimateMitigation": "Mitigação das mudanças climáticas", "home.objClimateAdaptation": "Adaptação às mudanças climáticas",
     "home.objBiodiversity": "Biodiversidade e ecossistemas", "home.objWater": "Recursos hídricos e marinhos", "home.objCircular": "Economia circular",
     "home.objPollution": "Prevenção da poluição", "home.objEnergy": "Energia", "home.objIndustry": "Indústria e transição",
@@ -13003,21 +13062,33 @@ function setupChips() {
       onFiltersChanged();
     });
   });
-  document.querySelectorAll("#objectiveChips .chip").forEach(btn => {
-    btn.addEventListener("click", () => {
-      document.querySelectorAll("#objectiveChips .chip").forEach(b => b.classList.remove("active"));
-      btn.classList.add("active");
-      currentObjective = btn.dataset.objective;
+  const objectiveSelect = document.getElementById("homeObjectiveSelect");
+  if (objectiveSelect) {
+    objectiveSelect.addEventListener("change", () => {
+      currentObjective = objectiveSelect.value;
       onFiltersChanged();
     });
-  });
-  document.querySelectorAll("#sectorChips .chip").forEach(btn => {
-    btn.addEventListener("click", () => {
-      document.querySelectorAll("#sectorChips .chip").forEach(b => b.classList.remove("active"));
-      btn.classList.add("active");
-      currentSector = btn.dataset.sector;
+  }
+  const sectorSelect = document.getElementById("homeSectorSelect");
+  if (sectorSelect) {
+    sectorSelect.addEventListener("change", () => {
+      currentSector = sectorSelect.value;
       onFiltersChanged();
     });
+  }
+}
+
+// The Advanced Search & Filtering panel (environmental objective + sector)
+// is collapsed by default so the map page stays uncluttered — most visitors
+// just use the region/status chips above. It only expands when explicitly
+// requested.
+function setupAdvancedFilterToggle() {
+  const toggle = document.getElementById("advancedFilterToggle");
+  const panel = document.getElementById("advancedFilterPanel");
+  if (!toggle || !panel) return;
+  toggle.addEventListener("click", () => {
+    const isOpen = panel.classList.toggle("open");
+    toggle.classList.toggle("open", isOpen);
   });
 }
 
@@ -13110,6 +13181,7 @@ async function init() {
   renderStats();
   renderRecentUpdates();
   setupChips();
+  setupAdvancedFilterToggle();
   setupSearch();
   renderFilteredList();
 }
