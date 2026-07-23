@@ -6711,7 +6711,12 @@ window.TAXONOMY_DATA = {
     "regulator": "National Bank of Georgia",
     "officialDocuments": [
       {
-        "title": "National Bank of Georgia — Sustainable Finance Taxonomy (official page)",
+        "title": "National Bank of Georgia — Sustainable Finance Taxonomy (official Georgian-language PDF)",
+        "date": "Published Aug 2022",
+        "url": "https://nbg.gov.ge/fm/%E1%83%A4%E1%83%98%E1%83%9C%E1%83%90%E1%83%9C%E1%83%A1%E1%83%A3%E1%83%A0%E1%83%98_%E1%83%A1%E1%83%A2%E1%83%90%E1%83%91%E1%83%98%E1%83%9A%E1%83%A3%E1%83%A0%E1%83%9D%E1%83%91%E1%83%90/%E1%83%9B%E1%83%93%E1%83%92%E1%83%A0%E1%83%90%E1%83%93%E1%83%98_%E1%83%93%E1%83%90%E1%83%A4%E1%83%98%E1%83%9C%E1%83%90%E1%83%9C%E1%83%A1%E1%83%94%E1%83%91%E1%83%90/%E1%83%9B%E1%83%93%E1%83%92%E1%83%A0%E1%83%90%E1%83%93%E1%83%98_%E1%83%93%E1%83%90%E1%83%A4%E1%83%98%E1%83%9C%E1%83%90%E1%83%9C%E1%83%A1%E1%83%94%E1%83%91%E1%83%98%E1%83%A1_%E1%83%A2%E1%83%90%E1%83%A5%E1%83%A1%E1%83%9D%E1%83%9C%E1%83%9D%E1%83%9B%E1%83%98%E1%83%90/sustainable-finance-taxonomy.pdf?v=anq4o"
+      },
+      {
+        "title": "National Bank of Georgia — Sustainable Finance Taxonomy (official page, English)",
         "date": "Published Aug 2022",
         "url": "https://nbg.gov.ge/en/page/sustainable-finance-taxonomy"
       }
@@ -6753,7 +6758,12 @@ window.TAXONOMY_DATA = {
     "regulator": "Central Bank of Azerbaijan",
     "officialDocuments": [
       {
-        "title": "The Green Taxonomy of Azerbaijan — Central Bank of Azerbaijan (via Sustainable Banking & Finance Network)",
+        "title": "Central Bank of Azerbaijan — Yaşıl Taksonomiya (official Azerbaijani-language page)",
+        "date": "Approved 7 Nov 2024",
+        "url": "https://www.cbar.az/page-866/the-green-taxonomy"
+      },
+      {
+        "title": "The Green Taxonomy of Azerbaijan (English, via Sustainable Banking & Finance Network)",
         "date": "Nov 2024",
         "url": "https://data.sbfnetwork.org/sites/default/files/2024-11/The%20Green%20Taxonomy.pdf"
       }
@@ -7013,7 +7023,12 @@ window.TAXONOMY_DATA = {
     "regulator": "National Bank of Moldova",
     "officialDocuments": [
       {
-        "title": "National Bank of Moldova — Approval of the Taxonomy for Sustainable Finance",
+        "title": "Banca Națională a Moldovei — Aprobarea taxonomiei pentru finanțare durabilă (official Romanian-language page)",
+        "date": "Apr 2026",
+        "url": "https://www.bnm.md/ro/content/aprobarea-taxonomiei-pentru-finantare-durabila"
+      },
+      {
+        "title": "National Bank of Moldova — Approval of the Taxonomy for Sustainable Finance (English)",
         "date": "Apr 2026",
         "url": "https://www.bnm.md/en/content/aprobarea-taxonomiei-pentru-finantare-durabila"
       },
@@ -8294,6 +8309,1968 @@ window.TAXONOMY_DATA = {
     "citations": [
       { "id": 1, "label": "UNEP FI / UNDP, \"Common Framework of Sustainable Finance Taxonomies for Latin America and the Caribbean\" (2023)", "url": "https://www.unepfi.org/publications/common-framework-for-sustainable-finance-taxonomies-for-latin-america-and-the-caribbean/" },
       { "id": 2, "label": "UNDP, \"Building a common framework of sustainable finance taxonomies in Latin America and the Caribbean\"", "url": "https://www.undp.org/latin-america/press-releases/building-common-framework-sustainable-finance-taxonomies-latin-america-and-caribbean" }
+    ]
+  },
+  "ARE": {
+    "name": "United Arab Emirates",
+    "status": "developing",
+    "region": "Middle East",
+    "taxonomy": null,
+    "year": null,
+    "note": "National taxonomy under development by the Sustainable Finance Working Group; ADGM/FSRA already recognises the EU, ASEAN and CPMFT taxonomies as acceptable pending its publication. [1]",
+    "source": "https://www.nortonrosefulbright.com/en/knowledge/publications/0dfd1e7a/roadmap-for-sustainable-finance-in-the-uae",
+    "officialDocuments": [
+      {
+        "title": "Abu Dhabi Global Market (ADGM/FSRA) — Supplementary Guidance: Sustainable Finance Regulatory Framework",
+        "date": "Jul 2023",
+        "url": "https://en.adgm.thomsonreuters.com/sites/default/files/net_file_store/ADGM1547_25739_VER01040723.pdf"
+      }
+    ],
+    "overlays": [],
+    "regulator": "UAE Sustainable Finance Working Group (SFWG); Abu Dhabi Global Market Financial Services Regulatory Authority (ADGM/FSRA) for ADGM-regulated entities",
+    "fullDescription": [
+      "The United Arab Emirates does not yet have a published national sustainable finance taxonomy, but is the only jurisdiction in the Middle East actively developing one. The UAE Sustainable Finance Working Group (SFWG) — bringing together the Ministry of Climate Change and Environment, the Central Bank of the UAE, the Securities and Commodities Authority and other regulators — has committed to developing a UAE-specific taxonomy setting out common criteria for what counts as \"sustainable\" for companies, banks and investors operating in the UAE. [1]",
+      "In the interim, the Abu Dhabi Global Market's Financial Services Regulatory Authority (ADGM/FSRA) has introduced its own sustainable finance regulatory framework, including \"Green\", \"Climate Transition\" and \"Sustainability-Linked\" designations for funds, managed portfolios, bonds and sukuk. Until a UAE-wide taxonomy is published, the FSRA treats external frameworks — the EU Taxonomy, the ASEAN Taxonomy for Sustainable Finance, and the Common Principles for Climate Mitigation Finance Tracking — as \"acceptable taxonomies\" that ADGM-regulated entities can reference. [2]"
+    ],
+    "citations": [
+      { "id": 1, "label": "Norton Rose Fulbright, \"Roadmap for sustainable finance in the UAE\"", "url": "https://www.nortonrosefulbright.com/en/knowledge/publications/0dfd1e7a/roadmap-for-sustainable-finance-in-the-uae" },
+      { "id": 2, "label": "Abu Dhabi Global Market (ADGM/FSRA), Supplementary Guidance — Sustainable Finance Regulatory Framework (Jul 2023)", "url": "https://en.adgm.thomsonreuters.com/sites/default/files/net_file_store/ADGM1547_25739_VER01040723.pdf" }
+    ]
+  },
+  "SAU": {
+    "name": "Saudi Arabia",
+    "status": "none",
+    "region": "Middle East",
+    "taxonomy": null,
+    "year": null,
+    "note": "No national green/sustainable finance taxonomy; the Green Financing Framework (2024) and CMA debt-instrument guidelines (2025) govern how green bonds/sukuk are issued, but don't classify economic activities. [1]",
+    "source": "https://www.ndmc.gov.sa/en/mediacenter/news/Pages/News_28032024.aspx",
+    "officialDocuments": [
+      {
+        "title": "Ministry of Finance — Kingdom of Saudi Arabia Green Financing Framework",
+        "date": "28 Mar 2024",
+        "url": "https://www.ndmc.gov.sa/en/mediacenter/news/Pages/News_28032024.aspx"
+      },
+      {
+        "title": "Capital Market Authority (CMA) — Guidelines for Issuing Green, Social, Sustainability and Sustainability-Linked Debt Instruments",
+        "date": "Effective 27 May 2025",
+        "url": "https://www.businesswire.com/news/home/20251103802513/en/Saudi-Arabia-Issues-Green-Social-and-Sustainable-Debt-Instruments-Guidelines-to-Support-ESG-Investment-and-Align-with-Global-Standards"
+      }
+    ],
+    "overlays": [],
+    "regulator": "Ministry of Finance; Capital Market Authority (CMA) for debt-instrument guidelines",
+    "fullDescription": [
+      "Saudi Arabia has not published a green or sustainable finance taxonomy that classifies which economic activities qualify as environmentally sustainable. Instead, its framework is built around debt-instrument issuance: the Ministry of Finance published the Kingdom's Green Financing Framework in March 2024, aligned with Vision 2030 and the Kingdom's 2060 net-zero commitment, covering sectors such as renewable energy, energy efficiency, clean transportation, water management, pollution prevention and climate adaptation. [1]",
+      "In 2025 the Capital Market Authority (CMA) went further, issuing Guidelines for Issuing Green, Social, Sustainability and Sustainability-Linked Debt Instruments (effective 27 May 2025) as part of its 2024–2026 Strategic Plan — these set eligibility and reporting standards for bond/sukuk issuers rather than a general-purpose activity taxonomy of the kind used in the EU or ASEAN models. [2]"
+    ],
+    "citations": [
+      { "id": 1, "label": "National Debt Management Center, \"The Ministry of Finance publishes the Kingdom of Saudi Arabia's Green Financing Framework\" (28 Mar 2024)", "url": "https://www.ndmc.gov.sa/en/mediacenter/news/Pages/News_28032024.aspx" },
+      { "id": 2, "label": "Business Wire, \"Saudi Arabia Issues Green, Social, and Sustainable Debt Instruments Guidelines to Support ESG Investment and Align with Global Standards\"", "url": "https://www.businesswire.com/news/home/20251103802513/en/Saudi-Arabia-Issues-Green-Social-and-Sustainable-Debt-Instruments-Guidelines-to-Support-ESG-Investment-and-Align-with-Global-Standards" }
+    ]
+  },
+  "EGY": {
+    "name": "Egypt",
+    "status": "none",
+    "region": "Africa",
+    "taxonomy": null,
+    "year": null,
+    "note": "No green taxonomy; Sovereign Sustainable Financing Framework and Central Bank sustainability rules govern disclosure and bond issuance, not activity classification. [1]",
+    "source": "https://www.afdb.org/sites/default/files/egypt_sovereign_sustainable_financing_framework.pdf",
+    "officialDocuments": [
+      {
+        "title": "Arab Republic of Egypt — Sovereign Sustainable Financing Framework",
+        "date": "2022",
+        "url": "https://www.afdb.org/sites/default/files/egypt_sovereign_sustainable_financing_framework.pdf"
+      }
+    ],
+    "overlays": [],
+    "regulator": "Ministry of Finance; Central Bank of Egypt",
+    "fullDescription": [
+      "Egypt has not published a national green or sustainable finance taxonomy. It was nonetheless a regional pioneer, issuing the Middle East and North Africa's first sovereign green bond in September 2020, followed in 2021 by the region's first corporate green bond, issued by Commercial International Bank (CIB) and backed by the International Finance Corporation. [1]",
+      "The Ministry of Finance's Sovereign Sustainable Financing Framework covers green, social, sustainability-linked instruments and sukuk, while the Central Bank of Egypt requires banks to integrate sustainability into governance, credit and risk management. Egypt has stated an aim to allocate all public investment to green projects by 2030, but none of these instruments classify, activity by activity, which parts of the economy count as sustainable in the way a formal taxonomy would. [1]"
+    ],
+    "citations": [
+      { "id": 1, "label": "Arab Republic of Egypt / African Development Bank, \"Sovereign Sustainable Financing Framework\"", "url": "https://www.afdb.org/sites/default/files/egypt_sovereign_sustainable_financing_framework.pdf" }
+    ]
+  },
+  "NGA": {
+    "name": "Nigeria",
+    "status": "developing",
+    "region": "Africa",
+    "taxonomy": null,
+    "year": null,
+    "note": "National Sustainable Finance Taxonomy in development (UNDP-backed project, Mar 2025–Mar 2026) with the Federal Ministry of Finance; Central Bank of Nigeria has signalled climate risk is financial risk. [1]",
+    "source": "https://www.undp.org/sites/g/files/zskgke326/files/2025-10/en_nigeria_rwanda_factsheet_2025.pdf",
+    "officialDocuments": [
+      {
+        "title": "UNDP — Sustainable Finance Taxonomies in African Countries: Nigeria & Rwanda Factsheet",
+        "date": "Oct 2025",
+        "url": "https://www.undp.org/sites/g/files/zskgke326/files/2025-10/en_nigeria_rwanda_factsheet_2025.pdf"
+      }
+    ],
+    "overlays": [],
+    "regulator": "Federal Ministry of Finance; Central Bank of Nigeria",
+    "fullDescription": [
+      "Nigeria does not yet have a published national green or sustainable finance taxonomy, but is developing one through a UNDP-supported project running from March 2025 to March 2026, in partnership with the Federal Ministry of Finance. The taxonomy is intended to define which economic activities and investments can be classified as delivering sustainable outcomes, supporting Nigeria's Energy Transition Plan and its 2060 net-zero commitment. [1]",
+      "Alongside the taxonomy project, the Central Bank of Nigeria has been pushing a broader 'green tagging' banking review to build monitoring and disclosure infrastructure for financial institutions' climate-related exposure, with Governor Olayemi Cardoso publicly framing climate risk as financial risk. [2]"
+    ],
+    "citations": [
+      { "id": 1, "label": "UNDP, \"Sustainable Finance Taxonomies in African Countries\" — Nigeria & Rwanda Factsheet (Oct 2025)", "url": "https://www.undp.org/sites/g/files/zskgke326/files/2025-10/en_nigeria_rwanda_factsheet_2025.pdf" },
+      { "id": 2, "label": "Green Central Banking, \"Roundup: 'Climate risk is financial risk,' says Nigeria central bank governor\" (25 Feb 2026)", "url": "https://greencentralbanking.com/2026/02/25/roundup-climate-risk-is-financial-risk-says-nigeria-central-bank-governor/" }
+    ]
+  },
+  "KWT": {
+    "name": "Kuwait",
+    "status": "none",
+    "region": "Middle East",
+    "taxonomy": null,
+    "year": null,
+    "note": "No national green/sustainable finance taxonomy identified; green finance activity is driven by individual banks rather than a regulator-issued classification system.",
+    "source": "https://thebusinessyear.org/article/kuwait-finance-innovation-2026/",
+    "officialDocuments": [],
+    "overlays": [],
+    "regulator": "Not applicable — no taxonomy-issuing authority identified",
+    "fullDescription": [
+      "No Kuwaiti green or sustainable finance taxonomy has been identified. Sustainable finance activity in Kuwait is currently led by individual banks — most visibly Kuwait Finance House, which has expanded green financing products and sustainability reporting — rather than by a central bank or government-issued classification system defining which activities count as 'green'. [1]"
+    ],
+    "citations": [
+      { "id": 1, "label": "The Business Year, \"Kuwait Finance Sector Banks on Innovation\" (2026)", "url": "https://thebusinessyear.org/article/kuwait-finance-innovation-2026/" }
+    ]
+  },
+  "QAT": {
+    "name": "Qatar",
+    "status": "developing",
+    "region": "Middle East",
+    "taxonomy": null,
+    "year": null,
+    "note": "Qatar Central Bank's Sustainable Finance Framework (2025) sets out plans to develop a sustainable taxonomy as part of a three-pillar sustainability strategy. [1]",
+    "source": "https://www.lexismiddleeast.com/regulatory/Qatar/QatarCentralBank_2025_Sustainable_Finance_Framework/en",
+    "officialDocuments": [
+      {
+        "title": "Qatar Central Bank — Sustainable Finance Framework",
+        "date": "2025",
+        "url": "https://www.lexismiddleeast.com/regulatory/Qatar/QatarCentralBank_2025_Sustainable_Finance_Framework/en"
+      }
+    ],
+    "overlays": [],
+    "regulator": "Qatar Central Bank (QCB)",
+    "fullDescription": [
+      "Qatar does not yet have a published green taxonomy, but the Qatar Central Bank (QCB) has committed to developing one as part of a broader financial-sector sustainability strategy, built on three pillars: managing climate and ESG risks, encouraging sustainable finance investment, and 'leading by example' within the central bank's own operations. [1]",
+      "In 2025 the QCB issued its inaugural Sustainable Finance Framework, immediately applicable to all banks operating in Qatar, introducing definitions for sustainable finance, sustainability-linked finance and Islamic-compliant (sukuk) sustainable finance — laying regulatory groundwork the eventual taxonomy is expected to build on. [2]"
+    ],
+    "citations": [
+      { "id": 1, "label": "Green Central Banking, \"Roundup: Qatar Central Bank aims for global leadership with new sustainability strategy\" (24 Jul 2024)", "url": "https://greencentralbanking.com/2024/07/24/roundup-qatar-new-sustainability-strategy/" },
+      { "id": 2, "label": "Lexis Middle East, \"Qatar Central Bank issues its sustainable finance framework\" (2025)", "url": "https://www.lexismiddleeast.com/regulatory/Qatar/QatarCentralBank_2025_Sustainable_Finance_Framework/en" }
+    ]
+  },
+  "BHR": {
+    "name": "Bahrain",
+    "status": "none",
+    "region": "Middle East",
+    "taxonomy": null,
+    "year": null,
+    "note": "No green taxonomy; Central Bank of Bahrain issued ESG reporting requirements (2023) but a green finance policy framework remains unfinalised. [1]",
+    "source": "https://greencentralbanking.com/2023/11/30/central-bank-of-bahrain-issues-esg-requirements/",
+    "officialDocuments": [
+      {
+        "title": "Central Bank of Bahrain — ESG reporting requirements",
+        "date": "Nov 2023",
+        "url": "https://greencentralbanking.com/2023/11/30/central-bank-of-bahrain-issues-esg-requirements/"
+      }
+    ],
+    "overlays": [],
+    "regulator": "Central Bank of Bahrain (CBB)",
+    "fullDescription": [
+      "Bahrain has not published a green or sustainable finance taxonomy. In November 2023 the Central Bank of Bahrain (CBB) issued ESG reporting requirements applying to listed companies and financial institutions, using 32 metrics and indicators to standardise climate- and social-related disclosures. [1]",
+      "The Bahrain Association of Banks has publicly advocated for a dedicated green finance policy framework to guide lenders on sustainable projects, but as of 2026 the CBB has not finalised a comprehensive taxonomy comparable to those adopted elsewhere in the region. [2]"
+    ],
+    "citations": [
+      { "id": 1, "label": "Green Central Banking, \"Central Bank of Bahrain issues ESG reporting requirements\" (30 Nov 2023)", "url": "https://greencentralbanking.com/2023/11/30/central-bank-of-bahrain-issues-esg-requirements/" },
+      { "id": 2, "label": "Oxford Business Group, \"Regional focus on ESG boosts Bahrain's green finance projects\" (Bahrain 2024 Report)", "url": "https://oxfordbusinessgroup.com/reports/bahrain/2024-report/capital-markets/universal-standards-regional-focus-on-environmental-social-and-governance-factors-is-bolstering-domestic-sustainable-finance-initiatives-analysis/" }
+    ]
+  },
+  "OMN": {
+    "name": "Oman",
+    "status": "none",
+    "region": "Middle East",
+    "taxonomy": null,
+    "year": null,
+    "note": "No green taxonomy; Ministry of Finance's Sustainable Finance Framework (Jan 2024) governs green/social/sustainability bond and sukuk issuance rather than classifying economic activities. [1]",
+    "source": "https://www.trowers.com/insights/2024/february/decoding-oman-sustainable-finance-framework",
+    "officialDocuments": [
+      {
+        "title": "Ministry of Finance, Sultanate of Oman — Sustainable Finance Framework",
+        "date": "Jan 2024",
+        "url": "https://www.mof.gov.om/download.aspx?id=L1VwbG9hZHNBbGwvUHJvamVjdHNTZWN0aW9uc1RhYnMvMTcyNDMyNDA5NDA3MzE3MDQ4ODExNzU5NTdTdXN0YWluYWJsZSBGaW5hbmNlIEZyYW1ld29ya2NvbXByZXNzZWQucGRm"
+      }
+    ],
+    "overlays": [],
+    "regulator": "Ministry of Finance (Oman); Central Bank of Oman",
+    "fullDescription": [
+      "Oman has not published a green or sustainable finance taxonomy that classifies economic activities. The Ministry of Finance instead published a Sustainable Finance Framework in January 2024, under which the government intends to issue green, social and sustainability bonds, loans or sukuk aligned with ICMA's Green Bond Principles, Social Bond Principles and Sustainability Bond Guidelines. [1]",
+      "The framework governs how the government raises and allocates sustainable debt financing rather than defining, for the wider economy, which activities count as green — the Central Bank of Oman has separately flagged climate-related risks such as extreme weather and water shortages as issues for the financial sector to monitor. [1]"
+    ],
+    "citations": [
+      { "id": 1, "label": "Trowers & Hamlins, \"Decoding Oman Sustainable Finance Framework\" (Feb 2024)", "url": "https://www.trowers.com/insights/2024/february/decoding-oman-sustainable-finance-framework" }
+    ]
+  },
+  "TUN": {
+    "name": "Tunisia",
+    "status": "developing",
+    "region": "Africa",
+    "taxonomy": null,
+    "year": null,
+    "note": "One of only four African countries (with Rwanda, Senegal, Kenya) publicly identified as developing a national sustainable finance taxonomy; no draft criteria published yet. [1]",
+    "source": "https://www.ccap.org/post/the-next-wave-global-trends-in-sustainable-finance-taxonomies",
+    "officialDocuments": [],
+    "overlays": [],
+    "regulator": "Not yet publicly specified",
+    "fullDescription": [
+      "Tunisia has not yet published a national green taxonomy, but has been publicly identified as one of only four African countries — alongside Rwanda, Senegal and Kenya — actively developing a sustainable finance taxonomy. [1] As of 2026, no draft criteria, activity list or lead regulator had been made public."
+    ],
+    "citations": [
+      { "id": 1, "label": "Center for Climate and Energy Solutions (CCAP), \"The Next Wave: Global Trends in Sustainable Finance Taxonomies\"", "url": "https://www.ccap.org/post/the-next-wave-global-trends-in-sustainable-finance-taxonomies" }
+    ]
+  },
+  "DZA": {
+    "name": "Algeria",
+    "status": "none",
+    "region": "Africa",
+    "taxonomy": null,
+    "year": null,
+    "note": "No national green or sustainable finance taxonomy identified.",
+    "source": "https://www.climatebonds.net/expertise/taxonomy/world-taxonomies",
+    "officialDocuments": [],
+    "overlays": [],
+    "regulator": "Not applicable — no taxonomy-issuing authority identified",
+    "fullDescription": [
+      "No published green or sustainable finance taxonomy for Algeria has been identified. Global taxonomy trackers, including the Climate Bonds Initiative's world taxonomies overview, do not list Algeria among the roughly 47 jurisdictions that had issued a sustainable finance taxonomy as of 2024. [1]"
+    ],
+    "citations": [
+      { "id": 1, "label": "Climate Bonds Initiative, \"World of Taxonomies\"", "url": "https://www.climatebonds.net/expertise/taxonomy/world-taxonomies" }
+    ]
+  },
+  "MUS": {
+    "name": "Mauritius",
+    "status": "developing",
+    "region": "Africa",
+    "taxonomy": null,
+    "year": null,
+    "note": "Bank of Mauritius and UNDP are working to formulate a national green taxonomy; a Climate Change Centre and bank task force have been set up to guide the framework. [1]",
+    "source": "https://www.business.gov.uk/export-opportunities/opportunities/consultancy-services-to-formulate-a-national-green-taxonomy",
+    "officialDocuments": [],
+    "overlays": [],
+    "regulator": "Bank of Mauritius",
+    "fullDescription": [
+      "Mauritius does not yet have a published national green taxonomy, but has signalled its intent to develop one. The UNDP Mauritius Country Office has sought consultancy services to formulate a national green taxonomy and an implementation roadmap, taking national environmental and climate targets into account. [1]",
+      "In June 2021 the Bank of Mauritius published a guide on the issuance of sustainable bonds, recommending alignment with the ICMA Green Bond Principles and Climate Bonds Initiative standards, and later set up a Climate Change Centre and an industry task force to work through taxonomy design and the wider sustainable finance regulatory landscape. [2]"
+    ],
+    "citations": [
+      { "id": 1, "label": "business.gov.uk export opportunities, \"Mauritius — Consultancy services to formulate a national green taxonomy\"", "url": "https://www.business.gov.uk/export-opportunities/opportunities/consultancy-services-to-formulate-a-national-green-taxonomy" },
+      { "id": 2, "label": "Mauritius Africa FinTech Hub, \"Mauritius: Emerging as a Beacon of Green Finance?\"", "url": "https://mauritiusfintech.org/blog/mauritius-emerging-as-a-beacon-of-green-finance/" }
+    ]
+  },
+  "TZA": {
+    "name": "Tanzania",
+    "status": "none",
+    "region": "Africa",
+    "taxonomy": null,
+    "year": null,
+    "note": "No national green taxonomy; analysts recommend starting with a simplified taxonomy given Tanzania's still-nascent green finance market. [1]",
+    "source": "https://documents1.worldbank.org/curated/en/099122324191011870/pdf/P1801871ea848a0451b2a916f507fe4cc0d.pdf",
+    "officialDocuments": [],
+    "overlays": [],
+    "regulator": "Not applicable — no taxonomy-issuing authority identified",
+    "fullDescription": [
+      "Tanzania currently lacks a national green taxonomy, which limits the ability to track financial institutions' overall contribution to climate finance in the country. Green finance markets remain nascent, with only a handful of green, social, sustainable and sustainability-linked bond issuances to date. [1]",
+      "Some domestic banks are nonetheless active on climate finance independent of any taxonomy — CRDB Bank, Tanzania's largest bank, is accredited by the Green Climate Fund and has launched climate-adaptation credit lines, a credit guarantee facility and a weather-indexed insurance product for agribusiness. Analysts have suggested Tanzania start with a simplified taxonomy combined with capacity-building for smaller lenders, rather than a full-scale framework, to attract foreign investment more quickly. [1]"
+    ],
+    "citations": [
+      { "id": 1, "label": "World Bank, Tanzania sustainable finance sector assessment", "url": "https://documents1.worldbank.org/curated/en/099122324191011870/pdf/P1801871ea848a0451b2a916f507fe4cc0d.pdf" }
+    ]
+  },
+  "UGA": {
+    "name": "Uganda",
+    "status": "established",
+    "region": "Africa",
+    "taxonomy": "Uganda National Green Taxonomy (NGT)",
+    "year": 2025,
+    "note": "Launched September 2025 by the Ministry of Finance, Planning & Economic Development with the Ministry of Water & Environment, EU, World Bank, UK FCDO, Denmark and GGGI. [1]",
+    "source": "https://development.finance.go.ug/knowledge-centre-reports/national-green-taxonomy",
+    "officialDocuments": [
+      {
+        "title": "Ministry of Finance, Planning and Economic Development — National Green Taxonomy",
+        "date": "Sep 2025",
+        "url": "https://development.finance.go.ug/knowledge-centre-reports/national-green-taxonomy"
+      }
+    ],
+    "overlays": [],
+    "regulator": "Ministry of Finance, Planning and Economic Development (MoFPED); Bank of Uganda",
+    "fullDescription": [
+      "Uganda launched its first National Green Taxonomy (NGT) in September 2025, becoming one of the few Sub-Saharan African countries with a published, government-adopted taxonomy. The framework was developed by the Ministry of Finance, Planning and Economic Development (MoFPED) together with the Ministry of Water and Environment, the European Union, the World Bank, the UK's Foreign, Commonwealth and Development Office, the Royal Danish Embassy, and the Global Green Growth Institute (GGGI). [1]",
+      "The NGT provides a unified, science-based classification system for environmentally sustainable economic activities, setting criteria for what counts as 'green' across key sectors of Uganda's economy, and is designed to mobilise investment aligned with the country's Nationally Determined Contributions. The Bank of Uganda has said its role is to move financial institutions beyond ESG awareness toward institutionalising it in practice, building supporting infrastructure alongside the taxonomy, including a National Climate Finance Strategy and a Green Bond Framework. [2]"
+    ],
+    "citations": [
+      { "id": 1, "label": "Global Green Growth Institute (GGGI), \"Uganda Launches First National Green Taxonomy\"", "url": "https://gggi.org/uganda-launches-first-national-green-taxonomy/" },
+      { "id": 2, "label": "Development Policy and Performance Portal (Uganda MoFPED), \"National Green Taxonomy\"", "url": "https://development.finance.go.ug/knowledge-centre-reports/national-green-taxonomy" }
+    ]
+  },
+  "SRB": {
+    "name": "Serbia",
+    "status": "none",
+    "region": "Europe",
+    "taxonomy": null,
+    "year": null,
+    "note": "No dedicated green taxonomy identified; National Bank of Serbia has issued ESG risk-management guidelines and supported green bond programmes instead. [1]",
+    "source": "https://greeneconomytracker.org/country/serbia",
+    "officialDocuments": [],
+    "overlays": [],
+    "regulator": "National Bank of Serbia (NBS)",
+    "fullDescription": [
+      "No dedicated green or sustainable finance taxonomy for Serbia has been identified. The National Bank of Serbia (NBS) has issued guidelines for banks to incorporate ESG factors into risk management and lending, and has itself issued green bonds aligned with the ICMA Green Bond Principles, financing renewable energy, energy efficiency, transport, water management, pollution prevention, circular economy, biodiversity and sustainable agriculture projects. [1]",
+      "Separately, the UNDP, Serbia's Ministry of Environmental Protection and the European Investment Bank's EIB Global arm have launched a green financing model under the 'EU for Green Agenda in Serbia' initiative, combining donor grants with concessional bank loans; with Swiss support, six projects — including Serbia's first low-temperature geothermal power plant — had secured financing under the scheme as of late 2025. [2] Neither initiative amounts to a formal activity-classification taxonomy."
+    ],
+    "citations": [
+      { "id": 1, "label": "Green Economy Tracker, \"Serbia\"", "url": "https://greeneconomytracker.org/country/serbia" },
+      { "id": 2, "label": "European Investment Bank, \"New green financing model launched in Serbia\"", "url": "https://www.eib.org/en/press/news/new-green-financing-model-launched-in-serbia" }
+    ]
+  },
+  "BLR": {
+    "name": "Belarus",
+    "status": "none",
+    "region": "Europe",
+    "taxonomy": null,
+    "year": null,
+    "note": "No national green or sustainable finance taxonomy identified.",
+    "source": "https://www.bis.org/publ/bppdf/bispap118.pdf",
+    "officialDocuments": [],
+    "overlays": [],
+    "regulator": "Not applicable — no taxonomy-issuing authority identified",
+    "fullDescription": [
+      "No published green or sustainable finance taxonomy for Belarus has been identified. Global surveys of national and regional sustainable finance taxonomies — including the Bank for International Settlements' comparative review — do not list Belarus among jurisdictions that have adopted one. [1]"
+    ],
+    "citations": [
+      { "id": 1, "label": "Bank for International Settlements, BIS Papers No. 118 — \"A taxonomy of sustainable finance taxonomies\"", "url": "https://www.bis.org/publ/bppdf/bispap118.pdf" }
+    ]
+  },
+  "IRN": {
+    "name": "Iran",
+    "status": "none",
+    "region": "Middle East",
+    "taxonomy": null,
+    "year": null,
+    "note": "No national green or sustainable finance taxonomy identified.",
+    "source": "https://www.bis.org/publ/bppdf/bispap118.pdf",
+    "officialDocuments": [],
+    "overlays": [],
+    "regulator": "Not applicable — no taxonomy-issuing authority identified",
+    "fullDescription": [
+      "No published green or sustainable finance taxonomy for Iran has been identified. Academic research has examined green financing as a tool for sustainable development within Iran, but this reflects scholarly analysis rather than a government- or central-bank-issued classification system, and international comparative surveys of national taxonomies do not list Iran among adopting jurisdictions. [1]"
+    ],
+    "citations": [
+      { "id": 1, "label": "Bank for International Settlements, BIS Papers No. 118 — \"A taxonomy of sustainable finance taxonomies\"", "url": "https://www.bis.org/publ/bppdf/bispap118.pdf" }
+    ]
+  },
+  "IRQ": {
+    "name": "Iraq",
+    "status": "developing",
+    "region": "Middle East",
+    "taxonomy": null,
+    "year": null,
+    "note": "Central Bank of Iraq's Sustainable Finance Roadmap (2023–2029) includes plans to create a green or transition taxonomy, backed by an IFC partnership since Sept 2024. [1]",
+    "source": "https://data.sbfnetwork.org/sites/default/files/file-169693870421991.pdf",
+    "officialDocuments": [
+      {
+        "title": "Central Bank of Iraq — Outline of Sustainable Finance Roadmap (2023–2029)",
+        "date": "2023",
+        "url": "https://data.sbfnetwork.org/sites/default/files/file-169693870421991.pdf"
+      }
+    ],
+    "overlays": [],
+    "regulator": "Central Bank of Iraq (CBI)",
+    "fullDescription": [
+      "Iraq does not yet have a published green taxonomy, but the Central Bank of Iraq (CBI) has committed to creating a green or transition taxonomy as part of its Sustainable Finance Roadmap, a seven-year strategic plan covering 2023–2029 that also introduced an Environmental, Social and Governance (ESG) Code for Iraqi banks. [1]",
+      "In September 2024 the International Finance Corporation (IFC) and the CBI signed an agreement to develop environmental and social risk-management guidelines for the banking sector, and the CBI has since taken practical steps such as funding the conversion of brick factories from heavy fuel oil to liquefied gas under a green lending initiative — laying groundwork the eventual taxonomy is expected to formalise. [2]"
+    ],
+    "citations": [
+      { "id": 1, "label": "Central Bank of Iraq, \"Outline of Sustainable Finance Roadmap (2023–2029)\"", "url": "https://data.sbfnetwork.org/sites/default/files/file-169693870421991.pdf" },
+      { "id": 2, "label": "IFC, \"IFC and Central Bank of Iraq Join Forces to Improve Sustainable Financing in Iraq\" (2024)", "url": "https://www.ifc.org/en/pressroom/2024/ifc-and-central-bank-of-iraq-join-forces-to-improve-sustainable-financing-in-iraq" }
+    ]
+  },
+  "LBN": {
+    "name": "Lebanon",
+    "status": "none",
+    "region": "Middle East",
+    "taxonomy": null,
+    "year": null,
+    "note": "No green taxonomy; Banque du Liban's Circular No. 236 (2010) offers reserve-requirement incentives for green-sector lending rather than an activity classification system. [1]",
+    "source": "https://www.greenfinanceplatform.org/policies-and-regulations/lebanon-issued-circular-no-236-facilitate-financing-green-sectors",
+    "officialDocuments": [
+      {
+        "title": "Banque du Liban — Circular No. 236 (green-sector financing incentives)",
+        "date": "2010",
+        "url": "https://www.greenfinanceplatform.org/policies-and-regulations/lebanon-issued-circular-no-236-facilitate-financing-green-sectors"
+      }
+    ],
+    "overlays": [],
+    "regulator": "Banque du Liban (BDL)",
+    "fullDescription": [
+      "Lebanon has not published a formal green or sustainable finance taxonomy. In 2010 Banque du Liban (BDL) issued Circular No. 236, exempting commercial banks from part of their required reserves when they finance projects in green sectors, lowering the cost of green lending without formally classifying eligible activities the way a taxonomy would. [1]",
+      "BDL is a member of the Network for Greening the Financial System (NGFS) and, with World Bank technical assistance, has worked toward clearer national definitions of green assets and projects. It has also partnered with the European Investment Bank and the French Development Agency on the Lebanon Energy Efficiency and Renewable Energy Financing Facility (LEEREFF), which supports private-sector investment in energy efficiency, renewable energy and green buildings — but this remains a financing facility rather than a published taxonomy. [2]"
+    ],
+    "citations": [
+      { "id": 1, "label": "Green Finance Platform, \"Lebanon Issued Circular No. 236 to Facilitate Financing in Green Sectors\"", "url": "https://www.greenfinanceplatform.org/policies-and-regulations/lebanon-issued-circular-no-236-facilitate-financing-green-sectors" },
+      { "id": 2, "label": "Economic Research Forum (ERF), \"Reframing sustainable finance: lessons from Lebanon\" (24 Jul 2023)", "url": "https://theforum.erf.org.eg/2023/07/24/reframing-sustainable-finance-lessons-from-lebanon/" }
+    ]
+  },
+  "SYR": {
+    "name": "Syria",
+    "status": "none",
+    "region": "Middle East",
+    "taxonomy": null,
+    "year": null,
+    "note": "No green taxonomy; the Central Bank of Syria's 2026–2030 strategy focuses on monetary stability and institutional reconstruction, not activity classification. [1]",
+    "source": "https://sana.sy/en/economic/2314884/",
+    "officialDocuments": [],
+    "overlays": [],
+    "regulator": "Central Bank of Syria",
+    "fullDescription": [
+      "Syria has not published a green or sustainable finance taxonomy. The Central Bank of Syria's 2026–2030 strategy, unveiled in 2026, focuses on restoring monetary stability, developing a transparent foreign exchange market, strengthening financial-sector integrity, expanding digital payments, and gradually reintegrating with the global financial system — reflecting the country's post-conflict institutional rebuilding rather than sustainable finance policy specifically. [1]",
+      "UNDP has formalised a partnership with the Central Bank of Syria to strengthen its institutional capacity and lay groundwork for a more resilient, transparent financial sector, but no green taxonomy or classification framework has resulted from this work as of 2026. [2]"
+    ],
+    "citations": [
+      { "id": 1, "label": "Syrian Arab News Agency (SANA), \"Syria's Central Bank unveils 2026-2030 strategy for monetary stability and recovery\"", "url": "https://sana.sy/en/economic/2314884/" },
+      { "id": 2, "label": "UNDP, \"UNDP and Central Bank of Syria join forces to bolster financial stability and drive institutional reform\"", "url": "https://www.undp.org/arab-states/press-releases/undp-and-central-bank-syria-join-forces-bolster-financial-stability-and-drive-institutional-reform" }
+    ]
+  },
+  "YEM": {
+    "name": "Yemen",
+    "status": "none",
+    "region": "Middle East",
+    "taxonomy": null,
+    "year": null,
+    "note": "No national green or sustainable finance taxonomy identified; the central bank's institutional capacity remains constrained by the 2016 split between Sana'a and Aden.",
+    "source": "https://www.oecd.org/en/publications/promoting-economic-resilience-in-yemen_81ed2898-en/full-report/the-financial-sector_4d6228a4.html",
+    "officialDocuments": [],
+    "overlays": [],
+    "regulator": "Not applicable — no taxonomy-issuing authority identified",
+    "fullDescription": [
+      "No published green or sustainable finance taxonomy for Yemen has been identified. The Central Bank of Yemen's institutional and technical capacity to supervise banking operations was significantly weakened after its 2016 relocation to Aden, and while progress has since been made rebuilding trust and capacity at CBY-Aden, sustainable finance classification has not been a focus. [1] Yemen has received support to develop a Long-Term Low Emission Development Strategy and climate finance tracking systems, but these are climate-policy instruments rather than a financial-sector taxonomy."
+    ],
+    "citations": [
+      { "id": 1, "label": "OECD, \"The Financial Sector: Promoting Economic Resilience in Yemen\"", "url": "https://www.oecd.org/en/publications/promoting-economic-resilience-in-yemen_81ed2898-en/full-report/the-financial-sector_4d6228a4.html" }
+    ]
+  },
+  "LBY": {
+    "name": "Libya",
+    "status": "none",
+    "region": "Middle East",
+    "taxonomy": null,
+    "year": null,
+    "note": "No green taxonomy; Central Bank of Libya has a General Framework for Sustainability Governance, and a 2026 UNDP-backed policy dialogue explored innovative financing, but no activity-classification system exists. [1]",
+    "source": "https://www.undp.org/libya/press-releases/exploring-innovative-financing-pathways-sustainable-development-libya",
+    "officialDocuments": [],
+    "overlays": [],
+    "regulator": "Central Bank of Libya",
+    "fullDescription": [
+      "Libya has not published a green or sustainable finance taxonomy. The Central Bank of Libya has established a General Framework for Sustainability Governance as part of its regulatory approach, and in July 2026 the Ministry of Finance, together with the UN Resident Coordinator's Office and UNDP, convened a High-Level Policy Dialogue on Innovative and Sustainable Financing for Development, bringing together government, financial institutions and civil society. [1]",
+      "These initiatives reflect early-stage institutional engagement with sustainable finance rather than a published activity-classification taxonomy of the kind adopted in more advanced jurisdictions."
+    ],
+    "citations": [
+      { "id": 1, "label": "UNDP, \"Exploring Innovative Financing Pathways for Sustainable Development in Libya\"", "url": "https://www.undp.org/libya/press-releases/exploring-innovative-financing-pathways-sustainable-development-libya" }
+    ]
+  },
+  "CUB": {
+    "name": "Cuba",
+    "status": "none",
+    "region": "Americas",
+    "taxonomy": null,
+    "year": null,
+    "note": "No national green taxonomy; within Latin America and the Caribbean, only Colombia and Mexico have adopted one so far. [1]",
+    "source": "https://www.undp.org/sites/g/files/zskgke326/files/2023-07/common-framework-of-sustainable-finance-taxonomies-lac.pdf",
+    "officialDocuments": [],
+    "overlays": [
+      {
+        "name": "LAC Common Framework of Sustainable Finance Taxonomies",
+        "scope": "Regional guidance (non-binding) for Latin America & the Caribbean",
+        "source": "https://www.unepfi.org/publications/common-framework-for-sustainable-finance-taxonomies-for-latin-america-and-the-caribbean/"
+      }
+    ],
+    "regulator": "Not applicable — no taxonomy-issuing authority identified",
+    "fullDescription": [
+      "No published green or sustainable finance taxonomy for Cuba has been identified. Across Latin America and the Caribbean, Colombia and Mexico are so far the only countries to have adopted a national green taxonomy; a growing number of other authorities in the region are developing or planning one, but Cuba was not identified among them in available research. [1] Like other countries in the region without their own framework, Cuba could in principle draw on the voluntary Common Framework of Sustainable Finance Taxonomies for Latin America and the Caribbean when designing a future taxonomy."
+    ],
+    "citations": [
+      { "id": 1, "label": "UNDP, \"Common Framework of Sustainable Finance Taxonomies for Latin America and the Caribbean\" (2023)", "url": "https://www.undp.org/sites/g/files/zskgke326/files/2023-07/common-framework-of-sustainable-finance-taxonomies-lac.pdf" }
+    ]
+  },
+  "VEN": {
+    "name": "Venezuela",
+    "status": "none",
+    "region": "Americas",
+    "taxonomy": null,
+    "year": null,
+    "note": "No national green taxonomy; within Latin America and the Caribbean, only Colombia and Mexico have adopted one so far. [1]",
+    "source": "https://www.undp.org/sites/g/files/zskgke326/files/2023-07/common-framework-of-sustainable-finance-taxonomies-lac.pdf",
+    "officialDocuments": [],
+    "overlays": [
+      {
+        "name": "LAC Common Framework of Sustainable Finance Taxonomies",
+        "scope": "Regional guidance (non-binding) for Latin America & the Caribbean",
+        "source": "https://www.unepfi.org/publications/common-framework-for-sustainable-finance-taxonomies-for-latin-america-and-the-caribbean/"
+      }
+    ],
+    "regulator": "Not applicable — no taxonomy-issuing authority identified",
+    "fullDescription": [
+      "No published green or sustainable finance taxonomy for Venezuela has been identified. Across Latin America and the Caribbean, Colombia and Mexico are so far the only countries to have adopted a national green taxonomy, and Venezuela was not identified among the jurisdictions currently developing one. [1] Like other countries in the region without their own framework, Venezuela could in principle draw on the voluntary Common Framework of Sustainable Finance Taxonomies for Latin America and the Caribbean when designing a future taxonomy."
+    ],
+    "citations": [
+      { "id": 1, "label": "UNDP, \"Common Framework of Sustainable Finance Taxonomies for Latin America and the Caribbean\" (2023)", "url": "https://www.undp.org/sites/g/files/zskgke326/files/2023-07/common-framework-of-sustainable-finance-taxonomies-lac.pdf" }
+    ]
+  },
+  "ZWE": {
+    "name": "Zimbabwe",
+    "status": "none",
+    "region": "Africa",
+    "taxonomy": null,
+    "year": null,
+    "note": "No dedicated green taxonomy; the Reserve Bank of Zimbabwe's mandate includes supporting sustainable economic growth, but no activity-classification framework has been published. [1]",
+    "source": "https://www.greenfinanceplatform.org/policies-and-regulations/reserve-bank-zimbabwe%E2%80%99s-objective-supporting-sustainable-economic-growth",
+    "officialDocuments": [],
+    "overlays": [
+      {
+        "name": "African Continental Sustainable Finance Taxonomy",
+        "scope": "Continent-wide reference framework endorsed by African regulators and financial institutions (2025)",
+        "source": "https://www.afdb.org/en/news-and-events/africas-financial-industry-validates-continental-sustainable-finance-taxonomy-85995"
+      }
+    ],
+    "regulator": "Reserve Bank of Zimbabwe (RBZ)",
+    "fullDescription": [
+      "Zimbabwe has not published a national green finance taxonomy. The Reserve Bank of Zimbabwe's (RBZ) statutory mandate includes an explicit objective of supporting sustainable economic growth, but this is a general policy objective rather than a classification system defining which activities count as green. [1]",
+      "In July 2025, Africa's financial sector validated a continent-wide Sustainable Finance Taxonomy in Nairobi, led by the African Development Bank's African Financial Alliance on Climate Change (AFAC) platform; neighbouring Zambia has since published its own national taxonomy built with UNDP support, but Zimbabwe had not published a national framework of its own as of 2026. [2]"
+    ],
+    "citations": [
+      { "id": 1, "label": "Green Finance Platform, \"Reserve Bank of Zimbabwe's objective of supporting sustainable economic growth\"", "url": "https://www.greenfinanceplatform.org/policies-and-regulations/reserve-bank-zimbabwe%E2%80%99s-objective-supporting-sustainable-economic-growth" },
+      { "id": 2, "label": "African Development Bank (AfDB), \"Africa's Financial Industry Validates the Continental Sustainable Finance Taxonomy\"", "url": "https://www.afdb.org/en/news-and-events/africas-financial-industry-validates-continental-sustainable-finance-taxonomy-85995" }
+    ]
+  },
+  "MOZ": {
+    "name": "Mozambique",
+    "status": "none",
+    "region": "Africa",
+    "taxonomy": null,
+    "year": null,
+    "note": "No dedicated national green taxonomy identified, despite regional momentum via the African Continental Sustainable Finance Taxonomy and peer examples like Kenya and Zambia. [1]",
+    "source": "https://www.afdb.org/en/news-and-events/africas-financial-industry-validates-continental-sustainable-finance-taxonomy-85995",
+    "officialDocuments": [],
+    "overlays": [
+      {
+        "name": "African Continental Sustainable Finance Taxonomy",
+        "scope": "Continent-wide reference framework endorsed by African regulators and financial institutions (2025)",
+        "source": "https://www.afdb.org/en/news-and-events/africas-financial-industry-validates-continental-sustainable-finance-taxonomy-85995"
+      }
+    ],
+    "regulator": "Not applicable — no taxonomy-issuing authority identified",
+    "fullDescription": [
+      "No published national green or sustainable finance taxonomy for Mozambique has been identified. In July 2025 Africa's financial sector validated a continent-wide Sustainable Finance Taxonomy in Nairobi, led by the African Development Bank's African Financial Alliance on Climate Change (AFAC) platform, providing standardised definitions that African financial institutions — including in Mozambique — can draw on. [1]",
+      "Other African central banks have moved faster on national frameworks, such as the Central Bank of Kenya's Green Finance Taxonomy (April 2025) and Zambia's national taxonomy (December 2025), but no equivalent Mozambican framework has been published as of 2026."
+    ],
+    "citations": [
+      { "id": 1, "label": "African Development Bank (AfDB), \"Africa's Financial Industry Validates the Continental Sustainable Finance Taxonomy\"", "url": "https://www.afdb.org/en/news-and-events/africas-financial-industry-validates-continental-sustainable-finance-taxonomy-85995" }
+    ]
+  },
+  "CMR": {
+    "name": "Cameroon",
+    "status": "none",
+    "region": "Africa",
+    "taxonomy": null,
+    "year": null,
+    "note": "No national taxonomy; regional central bank BEAC is turning CEMAC's money-market 'B window' into a green window, but this is a liquidity tool, not an activity-classification taxonomy. [1]",
+    "source": "https://www.financialafrik.com/en/2025/11/20/cemac-beacs-b-window-now-a-green-window-for-ecological-transition/",
+    "officialDocuments": [],
+    "overlays": [
+      {
+        "name": "CEMAC / BEAC Sustainable Finance Initiatives",
+        "scope": "Regional monetary and sustainable-finance initiatives covering Cameroon, Central African Republic, Chad, Congo, Equatorial Guinea and Gabon",
+        "source": "https://www.financialafrik.com/en/2025/11/20/cemac-beacs-b-window-now-a-green-window-for-ecological-transition/"
+      }
+    ],
+    "regulator": "Bank of Central African States (BEAC) — regional; no national taxonomy authority identified",
+    "fullDescription": [
+      "Cameroon has not published a national green or sustainable finance taxonomy. As one of the six CEMAC member states (with the Central African Republic, Chad, Congo, Equatorial Guinea and Gabon), it shares a common central bank, the Bank of Central African States (BEAC), which joined the Sustainable Banking and Finance Network in 2022 alongside the regional securities regulator COSUMAF. [1]",
+      "In November 2025 the Central African Banking Commission (COBAC) and BEAC announced plans to convert the money market's 'B window' into a green window, directing central bank liquidity toward low-carbon and climate-resilient investment projects across CEMAC — a monetary-policy tool rather than a taxonomy classifying eligible activities. [1]"
+    ],
+    "citations": [
+      { "id": 1, "label": "Financial Afrik, \"CEMAC: BEAC's B window now a green window for ecological transition\" (20 Nov 2025)", "url": "https://www.financialafrik.com/en/2025/11/20/cemac-beacs-b-window-now-a-green-window-for-ecological-transition/" }
+    ]
+  },
+  "GAB": {
+    "name": "Gabon",
+    "status": "none",
+    "region": "Africa",
+    "taxonomy": null,
+    "year": null,
+    "note": "No national taxonomy; Gabon pursues a 'Green Gabon' economic diversification strategy, and shares CEMAC/BEAC regional sustainable-finance initiatives, but neither is an activity-classification taxonomy. [1]",
+    "source": "https://cemac-eco.finance/gabon-heads-towards-green-economy/",
+    "officialDocuments": [],
+    "overlays": [
+      {
+        "name": "CEMAC / BEAC Sustainable Finance Initiatives",
+        "scope": "Regional monetary and sustainable-finance initiatives covering Cameroon, Central African Republic, Chad, Congo, Equatorial Guinea and Gabon",
+        "source": "https://www.financialafrik.com/en/2025/11/20/cemac-beacs-b-window-now-a-green-window-for-ecological-transition/"
+      }
+    ],
+    "regulator": "Bank of Central African States (BEAC) — regional; no national taxonomy authority identified",
+    "fullDescription": [
+      "Gabon has not published a national green or sustainable finance taxonomy. It has instead positioned itself as a regional climate leader through its 'Green Gabon' pillar of the national Strategic Plan for Emergence, aiming to shift from an extractives-based economy toward agriculture, sustainable fishery and timber, clean energy and ecotourism, in line with Agenda 2030. [1]",
+      "As a CEMAC member state, Gabon also shares the region's common central bank, BEAC, which is converting the CEMAC money market's 'B window' into a green window to direct liquidity toward low-carbon investment — a regional monetary tool rather than a national activity-classification taxonomy."
+    ],
+    "citations": [
+      { "id": 1, "label": "CEMAC ECO Finance, \"Gabon heads towards Green Economy\"", "url": "https://cemac-eco.finance/gabon-heads-towards-green-economy/" }
+    ]
+  },
+  "COD": {
+    "name": "DR Congo",
+    "status": "none",
+    "region": "Africa",
+    "taxonomy": null,
+    "year": null,
+    "note": "No national green taxonomy; IMF Resilience and Sustainability Facility supports green finance market development and forest protection reforms instead. [1]",
+    "source": "https://www.elibrary.imf.org/downloadpdf/view/journals/002/2026/002/article-A002-en.pdf",
+    "officialDocuments": [],
+    "overlays": [],
+    "regulator": "Not applicable — no taxonomy-issuing authority identified",
+    "fullDescription": [
+      "No published green or sustainable finance taxonomy for the Democratic Republic of the Congo has been identified. The IMF's Resilience and Sustainability Facility (RSF) programme is supporting the DRC's climate adaptation and mitigation agenda, including reforms to develop green finance markets, embed climate risk into fiscal planning, and protect forests through sustainable land use. [1]",
+      "With international support, green investment in utility-scale renewable energy, mini-grids and nature-based solutions has been identified as a potential economic recovery pathway, but no formal activity-classification taxonomy has resulted from this work as of 2026."
+    ],
+    "citations": [
+      { "id": 1, "label": "International Monetary Fund, Democratic Republic of the Congo country report (2026)", "url": "https://www.elibrary.imf.org/downloadpdf/view/journals/002/2026/002/article-A002-en.pdf" }
+    ]
+  },
+  "COG": {
+    "name": "Congo",
+    "status": "none",
+    "region": "Africa",
+    "taxonomy": null,
+    "year": null,
+    "note": "No national green taxonomy; National Development Plan 2022–26 and NDC commitments address climate goals without a financial-activity classification system. [1]",
+    "source": "https://documents1.worldbank.org/curated/en/099100523122539283/pdf/P1800790f3d8ae0080a38b0611593b71230.pdf",
+    "officialDocuments": [],
+    "overlays": [
+      {
+        "name": "CEMAC / BEAC Sustainable Finance Initiatives",
+        "scope": "Regional monetary and sustainable-finance initiatives covering Cameroon, Central African Republic, Chad, Congo, Equatorial Guinea and Gabon",
+        "source": "https://www.financialafrik.com/en/2025/11/20/cemac-beacs-b-window-now-a-green-window-for-ecological-transition/"
+      }
+    ],
+    "regulator": "Bank of Central African States (BEAC) — regional; no national taxonomy authority identified",
+    "fullDescription": [
+      "The Republic of Congo (Congo-Brazzaville) has not published a national green or sustainable finance taxonomy. Its National Development Plan (2022–26) links economic diversification to its climate agenda, and at COP27 the government pledged to cut emissions 48% below baseline by 2035, conditional on external finance — but these are planning and diplomatic commitments rather than a classification of which economic activities qualify as sustainable. [1]",
+      "As a CEMAC member state, Congo shares the region's common central bank, BEAC, which is converting the CEMAC money market's 'B window' into a green window for climate-resilient investment — a regional liquidity tool rather than a national taxonomy."
+    ],
+    "citations": [
+      { "id": 1, "label": "World Bank, Republic of Congo country document (2023)", "url": "https://documents1.worldbank.org/curated/en/099100523122539283/pdf/P1800790f3d8ae0080a38b0611593b71230.pdf" }
+    ]
+  },
+  "AGO": {
+    "name": "Angola",
+    "status": "none",
+    "region": "Africa",
+    "taxonomy": null,
+    "year": null,
+    "note": "No green taxonomy; government's Operational Sustainable Finance Framework (2022, Vigeo Eiris-reviewed) governs bond/loan issuance rather than classifying activities. [1]",
+    "source": "https://www.ucm.minfin.gov.ao/cs/groups/public/documents/document/aw4z/ntu1/~edisp/minfin3555614.pdf",
+    "officialDocuments": [
+      {
+        "title": "Ministry of Finance, Angola — Operational Sustainable Finance Framework",
+        "date": "2022",
+        "url": "https://www.ucm.minfin.gov.ao/cs/groups/public/documents/document/aw4z/ntu1/~edisp/minfin3555614.pdf"
+      }
+    ],
+    "overlays": [],
+    "regulator": "Ministry of Finance (Angola)",
+    "fullDescription": [
+      "Angola has not published a green or sustainable finance taxonomy that classifies economic activities. Its government published a Sustainable Finance Framework aligned with ICMA's and the LMA's 2021 Sustainability, Green and Social Bond and Loan Principles, reviewed by Vigeo Eiris, which issued a Second Party Opinion in February 2022 — this governs how Angola issues sustainable debt instruments rather than defining eligible activities across the wider economy. [1]",
+      "Separately, fifteen banking institutions operating in Angola signed a Letter of Commitment of the Banking Sector for Sustainable Finance, committing to integrate ESG criteria into governance, credit risk and new financial products — an industry pledge rather than a regulator-issued taxonomy."
+    ],
+    "citations": [
+      { "id": 1, "label": "Ministry of Finance, Angola, \"Operational Sustainable Finance Framework\" (2022)", "url": "https://www.ucm.minfin.gov.ao/cs/groups/public/documents/document/aw4z/ntu1/~edisp/minfin3555614.pdf" }
+    ]
+  },
+  "BOL": {
+    "name": "Bolivia",
+    "status": "none",
+    "region": "Americas",
+    "taxonomy": null,
+    "year": null,
+    "note": "No national green taxonomy; within Latin America and the Caribbean, only Colombia and Mexico have adopted one so far. [1]",
+    "source": "https://www.undp.org/sites/g/files/zskgke326/files/2023-07/common-framework-of-sustainable-finance-taxonomies-lac.pdf",
+    "officialDocuments": [],
+    "overlays": [
+      {
+        "name": "LAC Common Framework of Sustainable Finance Taxonomies",
+        "scope": "Regional guidance (non-binding) for Latin America & the Caribbean",
+        "source": "https://www.unepfi.org/publications/common-framework-for-sustainable-finance-taxonomies-for-latin-america-and-the-caribbean/"
+      }
+    ],
+    "regulator": "Not applicable — no taxonomy-issuing authority identified",
+    "fullDescription": [
+      "No published green or sustainable finance taxonomy for Bolivia has been identified. Across Latin America and the Caribbean, Colombia and Mexico are so far the only countries to have adopted a national green taxonomy; a growing number of other regional authorities are developing or planning one, and while regional taxonomy dialogues include Bolivia as a participant, no dedicated Bolivian project or draft taxonomy has been published. [1]"
+    ],
+    "citations": [
+      { "id": 1, "label": "UNDP, \"Common Framework of Sustainable Finance Taxonomies for Latin America and the Caribbean\" (2023)", "url": "https://www.undp.org/sites/g/files/zskgke326/files/2023-07/common-framework-of-sustainable-finance-taxonomies-lac.pdf" }
+    ]
+  },
+  "GUY": {
+    "name": "Guyana",
+    "status": "none",
+    "region": "Americas",
+    "taxonomy": null,
+    "year": null,
+    "note": "No green taxonomy; sustainable finance activity centres on forest carbon credits (REDD+) rather than an activity classification system. [1]",
+    "source": "https://climatetrackercaribbean.org/climate-justice/selling-carbon-credits-could-guyana-suriname-remain-net-zero-nations/",
+    "officialDocuments": [],
+    "overlays": [
+      {
+        "name": "LAC Common Framework of Sustainable Finance Taxonomies",
+        "scope": "Regional guidance (non-binding) for Latin America & the Caribbean",
+        "source": "https://www.unepfi.org/publications/common-framework-for-sustainable-finance-taxonomies-for-latin-america-and-the-caribbean/"
+      }
+    ],
+    "regulator": "Not applicable — no taxonomy-issuing authority identified",
+    "fullDescription": [
+      "No published green or sustainable finance taxonomy for Guyana has been identified. Guyana is regarded as a carbon-neutral country given its extensive rainforest cover, and its sustainable finance activity is currently centred on forest carbon credits and REDD+ mechanisms rather than a financial-sector classification system defining eligible green activities. [1]"
+    ],
+    "citations": [
+      { "id": 1, "label": "Climate Tracker Caribbean, \"Carbon credits in Guyana and Suriname: A complex path toward sustainability\"", "url": "https://climatetrackercaribbean.org/climate-justice/selling-carbon-credits-could-guyana-suriname-remain-net-zero-nations/" }
+    ]
+  },
+  "SUR": {
+    "name": "Suriname",
+    "status": "none",
+    "region": "Americas",
+    "taxonomy": null,
+    "year": null,
+    "note": "No green taxonomy; policy focus is on renewable-energy targets and forest carbon credits rather than an activity classification system. [1]",
+    "source": "https://delphos.co/news/blog/country-spotlight-suriname-green-infrastructure/",
+    "officialDocuments": [],
+    "overlays": [
+      {
+        "name": "LAC Common Framework of Sustainable Finance Taxonomies",
+        "scope": "Regional guidance (non-binding) for Latin America & the Caribbean",
+        "source": "https://www.unepfi.org/publications/common-framework-for-sustainable-finance-taxonomies-for-latin-america-and-the-caribbean/"
+      }
+    ],
+    "regulator": "Not applicable — no taxonomy-issuing authority identified",
+    "fullDescription": [
+      "No published green or sustainable finance taxonomy for Suriname has been identified. Suriname is one of the few carbon-negative countries in the world, with over 90% forest cover, and has committed to sourcing more than 35% of its electricity from renewable sources by 2030 — but these are climate and energy policy targets rather than a financial-sector classification system. [1]"
+    ],
+    "citations": [
+      { "id": 1, "label": "Delphos, \"Country Spotlight: Suriname & Green Infrastructure\"", "url": "https://delphos.co/news/blog/country-spotlight-suriname-green-infrastructure/" }
+    ]
+  },
+  "JAM": {
+    "name": "Jamaica",
+    "status": "none",
+    "region": "Americas",
+    "taxonomy": null,
+    "year": null,
+    "note": "No green taxonomy; Bank of Jamaica joined the Sustainable Banking and Finance Network (2022), and a GSS+ Bond Guide exists for issuance, but no activity classification system has been published. [1]",
+    "source": "https://www.ifc.org/en/pressroom/2022/bank-of-jamaica-joins-the-ifc-facilitated-sustainable-banking-and-finance-network-sbfn",
+    "officialDocuments": [
+      {
+        "title": "SBFN — Green, Social, Sustainable and Sustainability-Linked (GSS+) Bond Guide for Jamaica",
+        "date": "2025",
+        "url": "https://test.sbfn.qbox.link/sites/default/files/survey-attachments/2025-05/Jamaica%20-The%20Green,%20Social,%20Sustainable%20And%20Sustainability-Linked%20(GSS+)%20Bond%20Guide.pdf"
+      }
+    ],
+    "overlays": [
+      {
+        "name": "LAC Common Framework of Sustainable Finance Taxonomies",
+        "scope": "Regional guidance (non-binding) for Latin America & the Caribbean",
+        "source": "https://www.unepfi.org/publications/common-framework-for-sustainable-finance-taxonomies-for-latin-america-and-the-caribbean/"
+      }
+    ],
+    "regulator": "Bank of Jamaica (BOJ)",
+    "fullDescription": [
+      "Jamaica has not published a green or sustainable finance taxonomy. The Bank of Jamaica joined the IFC-facilitated Sustainable Banking and Finance Network (SBFN) in 2022 to adopt international best practice and share knowledge on sustainable banking regionally. [1]",
+      "Jamaica's government, together with the Inter-American Development Bank, the Green Climate Fund, the UK and the European Investment Bank, secured a US$764 million IMF Resilience and Sustainability Facility arrangement in March 2023 to support climate resilience and decarbonisation reforms, and the Jamaica Stock Exchange has published a GSS+ Bond Guide with IDB Invest to support green, social and sustainability-linked bond issuance — but neither constitutes a formal activity-classification taxonomy."
+    ],
+    "citations": [
+      { "id": 1, "label": "IFC, \"Bank of Jamaica Joins the IFC-facilitated Sustainable Banking and Finance Network (SBFN)\" (2022)", "url": "https://www.ifc.org/en/pressroom/2022/bank-of-jamaica-joins-the-ifc-facilitated-sustainable-banking-and-finance-network-sbfn" }
+    ]
+  },
+  "TTO": {
+    "name": "Trinidad and Tobago",
+    "status": "developing",
+    "region": "Americas",
+    "taxonomy": null,
+    "year": null,
+    "note": "Central Bank of Trinidad and Tobago is actively working to develop a climate taxonomy and assess climate risks; not yet published or in force. [1]",
+    "source": "https://greeneconomytracker.org/country/trinidad-tobago",
+    "officialDocuments": [],
+    "overlays": [
+      {
+        "name": "LAC Common Framework of Sustainable Finance Taxonomies",
+        "scope": "Regional guidance (non-binding) for Latin America & the Caribbean",
+        "source": "https://www.unepfi.org/publications/common-framework-for-sustainable-finance-taxonomies-for-latin-america-and-the-caribbean/"
+      }
+    ],
+    "regulator": "Central Bank of Trinidad and Tobago (CBTT)",
+    "fullDescription": [
+      "Trinidad and Tobago does not yet have a national green taxonomy in force, but the Central Bank of Trinidad and Tobago (CBTT) has been a key driver of green finance policy, actively working to develop a climate taxonomy and assess climate-related financial risks. There is currently no domestic carbon price. [1]",
+      "Trinidad and Tobago has also participated in international green-finance forums and shown clear interest in developing a national green bond market, signalling a strategic shift toward integrating environmental considerations into fiscal and monetary policy — though as of 2026 no taxonomy had been formally published."
+    ],
+    "citations": [
+      { "id": 1, "label": "Green Economy Tracker, \"Trinidad & Tobago\"", "url": "https://greeneconomytracker.org/country/trinidad-tobago" }
+    ]
+  },
+  "BHS": {
+    "name": "Bahamas",
+    "status": "none",
+    "region": "Americas",
+    "taxonomy": null,
+    "year": null,
+    "note": "No published green taxonomy; was reportedly expected to submit taxonomy documentation in 2022, but no confirmed publication has followed. [1]",
+    "source": "https://greeneconomytracker.org/country/trinidad-tobago",
+    "officialDocuments": [],
+    "overlays": [
+      {
+        "name": "LAC Common Framework of Sustainable Finance Taxonomies",
+        "scope": "Regional guidance (non-binding) for Latin America & the Caribbean",
+        "source": "https://www.unepfi.org/publications/common-framework-for-sustainable-finance-taxonomies-for-latin-america-and-the-caribbean/"
+      }
+    ],
+    "regulator": "Not applicable — no taxonomy-issuing authority identified",
+    "fullDescription": [
+      "No published green or sustainable finance taxonomy for the Bahamas has been identified. Regional trackers noted the Bahamas, alongside Trinidad and Tobago and Saint Vincent and the Grenadines, as expected to submit sustainable finance taxonomy documentation during 2022, but no confirmed publication has been found since. [1] The Caribbean's exposure to hurricanes and sea-level rise continues to drive broader green-finance interest across the region."
+    ],
+    "citations": [
+      { "id": 1, "label": "Green Economy Tracker, \"Trinidad & Tobago\" (regional context)", "url": "https://greeneconomytracker.org/country/trinidad-tobago" }
+    ]
+  },
+  "BRB": {
+    "name": "Barbados",
+    "status": "none",
+    "region": "Americas",
+    "taxonomy": null,
+    "year": null,
+    "note": "No national green or sustainable finance taxonomy identified.",
+    "source": "https://www.climatebonds.net/expertise/taxonomy/world-taxonomies",
+    "officialDocuments": [],
+    "overlays": [
+      {
+        "name": "LAC Common Framework of Sustainable Finance Taxonomies",
+        "scope": "Regional guidance (non-binding) for Latin America & the Caribbean",
+        "source": "https://www.unepfi.org/publications/common-framework-for-sustainable-finance-taxonomies-for-latin-america-and-the-caribbean/"
+      }
+    ],
+    "regulator": "Not applicable — no taxonomy-issuing authority identified",
+    "fullDescription": [
+      "No published green or sustainable finance taxonomy for Barbados has been identified. Global taxonomy trackers, including the Climate Bonds Initiative's world taxonomies overview, do not list Barbados among jurisdictions that had issued one as of 2024, though Barbados is well known internationally for its Bridgetown Initiative advocacy on climate finance reform at the multilateral level. [1]"
+    ],
+    "citations": [
+      { "id": 1, "label": "Climate Bonds Initiative, \"World of Taxonomies\"", "url": "https://www.climatebonds.net/expertise/taxonomy/world-taxonomies" }
+    ]
+  },
+  "HTI": {
+    "name": "Haiti",
+    "status": "none",
+    "region": "Americas",
+    "taxonomy": null,
+    "year": null,
+    "note": "No national green or sustainable finance taxonomy identified.",
+    "source": "https://www.climatebonds.net/expertise/taxonomy/world-taxonomies",
+    "officialDocuments": [],
+    "overlays": [
+      {
+        "name": "LAC Common Framework of Sustainable Finance Taxonomies",
+        "scope": "Regional guidance (non-binding) for Latin America & the Caribbean",
+        "source": "https://www.unepfi.org/publications/common-framework-for-sustainable-finance-taxonomies-for-latin-america-and-the-caribbean/"
+      }
+    ],
+    "regulator": "Not applicable — no taxonomy-issuing authority identified",
+    "fullDescription": [
+      "No published green or sustainable finance taxonomy for Haiti has been identified. Global taxonomy trackers, including the Climate Bonds Initiative's world taxonomies overview, do not list Haiti among the roughly 47 jurisdictions that had issued a sustainable finance taxonomy as of 2024. [1]"
+    ],
+    "citations": [
+      { "id": 1, "label": "Climate Bonds Initiative, \"World of Taxonomies\"", "url": "https://www.climatebonds.net/expertise/taxonomy/world-taxonomies" }
+    ]
+  },
+  "DMA": {
+    "name": "Dominica",
+    "status": "none",
+    "region": "Americas",
+    "taxonomy": null,
+    "year": null,
+    "note": "No national green taxonomy; part of the OECS regional bloc and a Green Climate Fund recipient, but no activity-classification framework exists. [1]",
+    "source": "https://www.greenclimate.fund/document/strategic-frameworks-and-entity-support-antigua-and-barbuda-dominica-grenada-saint-kitts",
+    "officialDocuments": [],
+    "overlays": [
+      {
+        "name": "LAC Common Framework of Sustainable Finance Taxonomies",
+        "scope": "Regional guidance (non-binding) for Latin America & the Caribbean",
+        "source": "https://www.unepfi.org/publications/common-framework-for-sustainable-finance-taxonomies-for-latin-america-and-the-caribbean/"
+      }
+    ],
+    "regulator": "Not applicable — no taxonomy-issuing authority identified",
+    "fullDescription": [
+      "No published green or sustainable finance taxonomy for Dominica has been identified. As a member of the Organisation of Eastern Caribbean States (OECS), Dominica has secured Green Climate Fund support for physical adaptation and community-resilience projects alongside Antigua and Barbuda and Grenada, but this is project-level climate financing rather than a financial-sector activity taxonomy. [1]"
+    ],
+    "citations": [
+      { "id": 1, "label": "Green Climate Fund, \"Strategic frameworks and entity support for Antigua and Barbuda, Dominica, Grenada, Saint Kitts and Nevis, Saint Lucia through OECS Commission\"", "url": "https://www.greenclimate.fund/document/strategic-frameworks-and-entity-support-antigua-and-barbuda-dominica-grenada-saint-kitts" }
+    ]
+  },
+  "GRD": {
+    "name": "Grenada",
+    "status": "none",
+    "region": "Americas",
+    "taxonomy": null,
+    "year": null,
+    "note": "No national green taxonomy; part of the OECS regional bloc and a Green Climate Fund recipient, but no activity-classification framework exists. [1]",
+    "source": "https://www.greenclimate.fund/document/strategic-frameworks-and-entity-support-antigua-and-barbuda-dominica-grenada-saint-kitts",
+    "officialDocuments": [],
+    "overlays": [
+      {
+        "name": "LAC Common Framework of Sustainable Finance Taxonomies",
+        "scope": "Regional guidance (non-binding) for Latin America & the Caribbean",
+        "source": "https://www.unepfi.org/publications/common-framework-for-sustainable-finance-taxonomies-for-latin-america-and-the-caribbean/"
+      }
+    ],
+    "regulator": "Not applicable — no taxonomy-issuing authority identified",
+    "fullDescription": [
+      "No published green or sustainable finance taxonomy for Grenada has been identified. As a member of the Organisation of Eastern Caribbean States (OECS), Grenada has secured Green Climate Fund support for physical adaptation and community-resilience projects alongside Antigua and Barbuda and Dominica, but this is project-level climate financing rather than a financial-sector activity taxonomy. [1]"
+    ],
+    "citations": [
+      { "id": 1, "label": "Green Climate Fund, \"Strategic frameworks and entity support for Antigua and Barbuda, Dominica, Grenada, Saint Kitts and Nevis, Saint Lucia through OECS Commission\"", "url": "https://www.greenclimate.fund/document/strategic-frameworks-and-entity-support-antigua-and-barbuda-dominica-grenada-saint-kitts" }
+    ]
+  },
+  "KNA": {
+    "name": "Saint Kitts and Nevis",
+    "status": "none",
+    "region": "Americas",
+    "taxonomy": null,
+    "year": null,
+    "note": "No national green taxonomy; part of the OECS regional bloc, but no activity-classification framework exists. [1]",
+    "source": "https://www.greenclimate.fund/document/strategic-frameworks-and-entity-support-antigua-and-barbuda-dominica-grenada-saint-kitts",
+    "officialDocuments": [],
+    "overlays": [
+      {
+        "name": "LAC Common Framework of Sustainable Finance Taxonomies",
+        "scope": "Regional guidance (non-binding) for Latin America & the Caribbean",
+        "source": "https://www.unepfi.org/publications/common-framework-for-sustainable-finance-taxonomies-for-latin-america-and-the-caribbean/"
+      }
+    ],
+    "regulator": "Not applicable — no taxonomy-issuing authority identified",
+    "fullDescription": [
+      "No published green or sustainable finance taxonomy for Saint Kitts and Nevis has been identified. As a member of the Organisation of Eastern Caribbean States (OECS), it is supported by the OECS Commission in accessing Green Climate Fund resources, but no financial-sector activity taxonomy has been published. [1]"
+    ],
+    "citations": [
+      { "id": 1, "label": "Green Climate Fund, \"Strategic frameworks and entity support for Antigua and Barbuda, Dominica, Grenada, Saint Kitts and Nevis, Saint Lucia through OECS Commission\"", "url": "https://www.greenclimate.fund/document/strategic-frameworks-and-entity-support-antigua-and-barbuda-dominica-grenada-saint-kitts" }
+    ]
+  },
+  "LCA": {
+    "name": "Saint Lucia",
+    "status": "none",
+    "region": "Americas",
+    "taxonomy": null,
+    "year": null,
+    "note": "No national green taxonomy; part of the OECS regional bloc, but no activity-classification framework exists. [1]",
+    "source": "https://www.greenclimate.fund/document/strategic-frameworks-and-entity-support-antigua-and-barbuda-dominica-grenada-saint-kitts",
+    "officialDocuments": [],
+    "overlays": [
+      {
+        "name": "LAC Common Framework of Sustainable Finance Taxonomies",
+        "scope": "Regional guidance (non-binding) for Latin America & the Caribbean",
+        "source": "https://www.unepfi.org/publications/common-framework-for-sustainable-finance-taxonomies-for-latin-america-and-the-caribbean/"
+      }
+    ],
+    "regulator": "Not applicable — no taxonomy-issuing authority identified",
+    "fullDescription": [
+      "No published green or sustainable finance taxonomy for Saint Lucia has been identified. As a member of the Organisation of Eastern Caribbean States (OECS), it is supported by the OECS Commission in accessing Green Climate Fund resources, but no financial-sector activity taxonomy has been published. [1]"
+    ],
+    "citations": [
+      { "id": 1, "label": "Green Climate Fund, \"Strategic frameworks and entity support for Antigua and Barbuda, Dominica, Grenada, Saint Kitts and Nevis, Saint Lucia through OECS Commission\"", "url": "https://www.greenclimate.fund/document/strategic-frameworks-and-entity-support-antigua-and-barbuda-dominica-grenada-saint-kitts" }
+    ]
+  },
+  "VCT": {
+    "name": "Saint Vincent and the Grenadines",
+    "status": "none",
+    "region": "Americas",
+    "taxonomy": null,
+    "year": null,
+    "note": "No published green taxonomy; was reportedly expected to submit taxonomy documentation in 2022, but no confirmed publication has followed. [1]",
+    "source": "https://greeneconomytracker.org/country/trinidad-tobago",
+    "officialDocuments": [],
+    "overlays": [
+      {
+        "name": "LAC Common Framework of Sustainable Finance Taxonomies",
+        "scope": "Regional guidance (non-binding) for Latin America & the Caribbean",
+        "source": "https://www.unepfi.org/publications/common-framework-for-sustainable-finance-taxonomies-for-latin-america-and-the-caribbean/"
+      }
+    ],
+    "regulator": "Not applicable — no taxonomy-issuing authority identified",
+    "fullDescription": [
+      "No published green or sustainable finance taxonomy for Saint Vincent and the Grenadines has been identified. Regional trackers noted the country, alongside Trinidad and Tobago and the Bahamas, as expected to submit sustainable finance taxonomy documentation during 2022, but no confirmed publication has been found since. [1] Saint Vincent and the Grenadines was the largest OECS recipient of international public climate finance between 2012 and 2019."
+    ],
+    "citations": [
+      { "id": 1, "label": "Green Economy Tracker, \"Trinidad & Tobago\" (regional context)", "url": "https://greeneconomytracker.org/country/trinidad-tobago" }
+    ]
+  },
+  "ATG": {
+    "name": "Antigua and Barbuda",
+    "status": "none",
+    "region": "Americas",
+    "taxonomy": null,
+    "year": null,
+    "note": "No national green taxonomy; part of the OECS regional bloc and a Green Climate Fund recipient, but no activity-classification framework exists. [1]",
+    "source": "https://www.greenclimate.fund/document/strategic-frameworks-and-entity-support-antigua-and-barbuda-dominica-grenada-saint-kitts",
+    "officialDocuments": [],
+    "overlays": [
+      {
+        "name": "LAC Common Framework of Sustainable Finance Taxonomies",
+        "scope": "Regional guidance (non-binding) for Latin America & the Caribbean",
+        "source": "https://www.unepfi.org/publications/common-framework-for-sustainable-finance-taxonomies-for-latin-america-and-the-caribbean/"
+      }
+    ],
+    "regulator": "Not applicable — no taxonomy-issuing authority identified",
+    "fullDescription": [
+      "No published green or sustainable finance taxonomy for Antigua and Barbuda has been identified. As a member of the Organisation of Eastern Caribbean States (OECS), it has secured Green Climate Fund support for physical adaptation and community-resilience projects alongside Dominica and Grenada, but this is project-level climate financing rather than a financial-sector activity taxonomy. [1]"
+    ],
+    "citations": [
+      { "id": 1, "label": "Green Climate Fund, \"Strategic frameworks and entity support for Antigua and Barbuda, Dominica, Grenada, Saint Kitts and Nevis, Saint Lucia through OECS Commission\"", "url": "https://www.greenclimate.fund/document/strategic-frameworks-and-entity-support-antigua-and-barbuda-dominica-grenada-saint-kitts" }
+    ]
+  },
+  "CPV": {
+    "name": "Cabo Verde",
+    "status": "none",
+    "region": "Africa",
+    "taxonomy": null,
+    "year": null,
+    "note": "No national green or sustainable finance taxonomy identified.",
+    "source": "https://www.climatebonds.net/expertise/taxonomy/world-taxonomies",
+    "officialDocuments": [],
+    "overlays": [],
+    "regulator": "Not applicable — no taxonomy-issuing authority identified",
+    "fullDescription": [
+      "No published green or sustainable finance taxonomy for Cabo Verde has been identified. Global taxonomy trackers, including the Climate Bonds Initiative's world taxonomies overview, do not list Cabo Verde among the roughly 47 jurisdictions that had issued a sustainable finance taxonomy as of 2024. [1]"
+    ],
+    "citations": [
+      { "id": 1, "label": "Climate Bonds Initiative, \"World of Taxonomies\"", "url": "https://www.climatebonds.net/expertise/taxonomy/world-taxonomies" }
+    ]
+  },
+  "BTN": {
+    "name": "Bhutan",
+    "status": "developing",
+    "region": "Asia-Pacific",
+    "taxonomy": null,
+    "year": null,
+    "note": "Royal Monetary Authority is piloting an expanded Green Finance Taxonomy from June 2026 (adding climate adaptation to the existing mitigation-focused version), with nationwide rollout planned for January 2027. [1]",
+    "source": "https://kuenselonline.com/news/bhutan-to-pilot-green-finance-taxonomy-from-june",
+    "officialDocuments": [
+      {
+        "title": "UNESCAP — Bhutan Green Finance Taxonomy presentation",
+        "date": "2024",
+        "url": "https://www.unescap.org/sites/default/d8files/event-documents/Presentation_Bhutan%20Taxonomy.pdf"
+      }
+    ],
+    "overlays": [],
+    "regulator": "Royal Monetary Authority of Bhutan (RMA)",
+    "fullDescription": [
+      "Bhutan's Royal Monetary Authority (RMA) has developed a Green Finance Taxonomy (GFT), an economy-wide classification system aligning financial flows with the country's climate and sustainable development objectives. The taxonomy was built by identifying sectoral climate goals, screening sectoral strategies for eligible activities, and consulting ministries to fill gaps — with its first version focused specifically on climate change mitigation activities. [1]",
+      "Bhutan is now expanding the taxonomy to add climate change adaptation criteria, with a six-month pilot of the expanded 2026 version running from June to November 2026, ahead of a planned nationwide rollout in January 2027. The taxonomy work sits alongside the RMA's plans to establish a Bhutan Climate Fund (BCF) as a national vehicle to channel carbon finance into high-integrity, low-carbon, climate-resilient projects. [1][2]"
+    ],
+    "citations": [
+      { "id": 1, "label": "Kuensel, \"Bhutan to pilot green finance taxonomy from June\"", "url": "https://kuenselonline.com/news/bhutan-to-pilot-green-finance-taxonomy-from-june" },
+      { "id": 2, "label": "UN ESCAP, \"Green Finance Taxonomy Bhutan\" (presentation)", "url": "https://www.unescap.org/sites/default/d8files/event-documents/Presentation_Bhutan%20Taxonomy.pdf" }
+    ]
+  },
+  "AFG": {
+    "name": "Afghanistan",
+    "status": "none",
+    "region": "Asia-Pacific",
+    "taxonomy": null,
+    "year": null,
+    "note": "No national green or sustainable finance taxonomy identified.",
+    "source": "https://www.climatebonds.net/expertise/taxonomy/world-taxonomies",
+    "officialDocuments": [],
+    "overlays": [],
+    "regulator": "Not applicable — no taxonomy-issuing authority identified",
+    "fullDescription": [
+      "No published green or sustainable finance taxonomy for Afghanistan has been identified. Afghanistan is referenced as part of the eleven-economy CAREC region (alongside Azerbaijan, China, Georgia, Kazakhstan, the Kyrgyz Republic, Mongolia, Pakistan, Tajikistan, Turkmenistan and Uzbekistan) for which the Asian Development Bank has proposed a ten-year roadmap for scaling green finance, but no Afghanistan-specific taxonomy has been published. [1]"
+    ],
+    "citations": [
+      { "id": 1, "label": "Highways Today, \"Financing the Green Transition Across Central Asia\" (7 Jun 2026)", "url": "https://highways.today/2026/06/07/green-transition-central-asia/" }
+    ]
+  },
+  "PRK": {
+    "name": "North Korea",
+    "status": "none",
+    "region": "Asia-Pacific",
+    "taxonomy": null,
+    "year": null,
+    "note": "No national green or sustainable finance taxonomy identified; North Korea's isolation from the international financial system precludes the kind of engagement that has produced taxonomies elsewhere.",
+    "source": "https://www.climatebonds.net/expertise/taxonomy/world-taxonomies",
+    "officialDocuments": [],
+    "overlays": [],
+    "regulator": "Not applicable — no taxonomy-issuing authority identified",
+    "fullDescription": [
+      "No published green or sustainable finance taxonomy for North Korea has been identified. Global taxonomy trackers, including the Climate Bonds Initiative's world taxonomies overview, do not list North Korea among jurisdictions that have adopted one, consistent with the country's broader isolation from the international financial institutions and standard-setting bodies that have driven taxonomy development elsewhere. [1]"
+    ],
+    "citations": [
+      { "id": 1, "label": "Climate Bonds Initiative, \"World of Taxonomies\"", "url": "https://www.climatebonds.net/expertise/taxonomy/world-taxonomies" }
+    ]
+  },
+  "TJK": {
+    "name": "Tajikistan",
+    "status": "developing",
+    "region": "Asia-Pacific",
+    "taxonomy": null,
+    "year": null,
+    "note": "Considering developing a green taxonomy framework as part of its Green Economy Strategy 2023–2037; ESCAP/UN-backed sustainable finance training launched Sep 2024. [1]",
+    "source": "https://jointsdgfund.org/article/tajikistan-pioneering-sustainable-finance-greener-future",
+    "officialDocuments": [],
+    "overlays": [],
+    "regulator": "Agency for Securities Market Development and Special Registration of Tajikistan",
+    "fullDescription": [
+      "Tajikistan does not yet have a published green taxonomy but has expressed interest in developing the policies and framework needed for one. Climate mitigation and adaptation are named as top priorities in the government's Strategy for the Development of the Green Economy for 2023–2037, which is steering the country's broader sustainable finance direction. [1]",
+      "In September 2024 the UN Economic and Social Commission for Asia and the Pacific (ESCAP), the UN Resident Coordinator's Office in Tajikistan, and the Agency for Securities Market Development and Special Registration of Tajikistan launched training on sustainable finance instruments, including thematic bond issuance, as part of building institutional capacity ahead of any formal taxonomy. [1]"
+    ],
+    "citations": [
+      { "id": 1, "label": "Joint SDG Fund, \"Tajikistan: Pioneering Sustainable Finance for a Greener Future\"", "url": "https://jointsdgfund.org/article/tajikistan-pioneering-sustainable-finance-greener-future" }
+    ]
+  },
+  "TKM": {
+    "name": "Turkmenistan",
+    "status": "none",
+    "region": "Asia-Pacific",
+    "taxonomy": null,
+    "year": null,
+    "note": "No national green or sustainable finance taxonomy identified.",
+    "source": "https://highways.today/2026/06/07/green-transition-central-asia/",
+    "officialDocuments": [],
+    "overlays": [],
+    "regulator": "Not applicable — no taxonomy-issuing authority identified",
+    "fullDescription": [
+      "No published green or sustainable finance taxonomy for Turkmenistan has been identified. Turkmenistan is part of the eleven-economy CAREC region for which the Asian Development Bank has proposed a ten-year roadmap for scaling green finance across Central Asia and the Caucasus, but no Turkmenistan-specific taxonomy has been published. [1]"
+    ],
+    "citations": [
+      { "id": 1, "label": "Highways Today, \"Financing the Green Transition Across Central Asia\" (7 Jun 2026)", "url": "https://highways.today/2026/06/07/green-transition-central-asia/" }
+    ]
+  },
+  "TLS": {
+    "name": "Timor-Leste",
+    "status": "none",
+    "region": "Asia-Pacific",
+    "taxonomy": null,
+    "year": null,
+    "note": "No green taxonomy; focus is on blue-economy financing and green public procurement rather than an activity classification system. [1]",
+    "source": "https://www.undp.org/timor-leste/news/new-blue-economy-opportunities-timor-leste",
+    "officialDocuments": [],
+    "overlays": [],
+    "regulator": "Not applicable — no taxonomy-issuing authority identified",
+    "fullDescription": [
+      "No published green or sustainable finance taxonomy for Timor-Leste has been identified. The country's Financing Roadmap instead explores how the blue economy can accelerate sustainable development under its Strategic Development Plan, including blue and green bonds as innovative financing tools for small island developing states. [1]",
+      "Timor-Leste's Public Financial Management Reform Strategy 2022–2027 also includes green public procurement as a priority area, alongside climate and disaster-risk resilience, but neither instrument amounts to a formal activity-classification taxonomy."
+    ],
+    "citations": [
+      { "id": 1, "label": "UNDP, \"New Blue Economy Opportunities For Timor-Leste\"", "url": "https://www.undp.org/timor-leste/news/new-blue-economy-opportunities-timor-leste" }
+    ]
+  },
+  "MNE": {
+    "name": "Montenegro",
+    "status": "none",
+    "region": "Europe",
+    "taxonomy": null,
+    "year": null,
+    "note": "No national green taxonomy; benefits from an EBRD Green Economy Financing Facility (GEFF) credit line rather than an activity classification system.",
+    "source": "https://bankwatch.org/wp-content/uploads/2024/01/2024_01_Western-Balkans-residential-Green-Economy-Financing-Facility.pdf",
+    "officialDocuments": [],
+    "overlays": [],
+    "regulator": "Not applicable — no taxonomy-issuing authority identified",
+    "fullDescription": [
+      "No published green or sustainable finance taxonomy for Montenegro has been identified. Montenegro participates in the European Bank for Reconstruction and Development's Green Economy Financing Facility (GEFF), a Western Balkans-wide credit line that channels concessional finance to residential and business energy-efficiency investments through local banks — a financing facility rather than a government-issued activity taxonomy. [1]"
+    ],
+    "citations": [
+      { "id": 1, "label": "Bankwatch, \"Western Balkans Residential Green Economy Financing Facility\" (Jan 2024)", "url": "https://bankwatch.org/wp-content/uploads/2024/01/2024_01_Western-Balkans-residential-Green-Economy-Financing-Facility.pdf" }
+    ]
+  },
+  "MKD": {
+    "name": "North Macedonia",
+    "status": "developing",
+    "region": "Europe",
+    "taxonomy": null,
+    "year": null,
+    "note": "National Bank of North Macedonia is developing green taxonomy documents with EIB advisory support under the Greening Financial Systems programme. [1]",
+    "source": "https://www.eib.org/en/stories/green-finance-north-macedonia",
+    "officialDocuments": [],
+    "overlays": [],
+    "regulator": "National Bank of the Republic of North Macedonia",
+    "fullDescription": [
+      "North Macedonia does not yet have a published green taxonomy, but the National Bank of the Republic of North Macedonia is developing green taxonomy documents and integrating related standards into financial-sector reporting requirements. The European Investment Bank is advising the National Bank on improving climate-risk regulatory and supervisory practices as part of this work. [1]",
+      "Under the Greening Financial Systems (GFS) programme, a market study surveyed more than 300 medium and large enterprises across key North Macedonian industries to assess sustainability practices, climate-risk exposure and green-finance uptake, feeding into the taxonomy's design; a separate UN Joint Programme Green Finance Facility also provides affordable financing to SMEs and underserved households."
+    ],
+    "citations": [
+      { "id": 1, "label": "European Investment Bank, \"EIB guides Macedonian banks in understanding climate risks\"", "url": "https://www.eib.org/en/stories/green-finance-north-macedonia" }
+    ]
+  },
+  "AND": {
+    "name": "Andorra",
+    "status": "none",
+    "region": "Europe",
+    "taxonomy": null,
+    "year": null,
+    "note": "No national green or sustainable finance taxonomy identified.",
+    "source": "https://www.climatebonds.net/expertise/taxonomy/world-taxonomies",
+    "officialDocuments": [],
+    "overlays": [],
+    "regulator": "Not applicable — no taxonomy-issuing authority identified",
+    "fullDescription": [
+      "No published green or sustainable finance taxonomy for Andorra has been identified. Global taxonomy trackers, including the Climate Bonds Initiative's world taxonomies overview, do not list Andorra among the roughly 47 jurisdictions that had issued a sustainable finance taxonomy as of 2024. As a micro-state outside the EU, Andorra is not directly bound by the EU Taxonomy Regulation. [1]"
+    ],
+    "citations": [
+      { "id": 1, "label": "Climate Bonds Initiative, \"World of Taxonomies\"", "url": "https://www.climatebonds.net/expertise/taxonomy/world-taxonomies" }
+    ]
+  },
+  "MCO": {
+    "name": "Monaco",
+    "status": "none",
+    "region": "Europe",
+    "taxonomy": null,
+    "year": null,
+    "note": "No national green or sustainable finance taxonomy identified.",
+    "source": "https://www.climatebonds.net/expertise/taxonomy/world-taxonomies",
+    "officialDocuments": [],
+    "overlays": [],
+    "regulator": "Not applicable — no taxonomy-issuing authority identified",
+    "fullDescription": [
+      "No published green or sustainable finance taxonomy for Monaco has been identified. Global taxonomy trackers, including the Climate Bonds Initiative's world taxonomies overview, do not list Monaco among jurisdictions that have adopted one. As a micro-state outside the EU, Monaco is not directly bound by the EU Taxonomy Regulation, despite close economic ties to France. [1]"
+    ],
+    "citations": [
+      { "id": 1, "label": "Climate Bonds Initiative, \"World of Taxonomies\"", "url": "https://www.climatebonds.net/expertise/taxonomy/world-taxonomies" }
+    ]
+  },
+  "SMR": {
+    "name": "San Marino",
+    "status": "none",
+    "region": "Europe",
+    "taxonomy": null,
+    "year": null,
+    "note": "No national green or sustainable finance taxonomy identified.",
+    "source": "https://www.climatebonds.net/expertise/taxonomy/world-taxonomies",
+    "officialDocuments": [],
+    "overlays": [],
+    "regulator": "Not applicable — no taxonomy-issuing authority identified",
+    "fullDescription": [
+      "No published green or sustainable finance taxonomy for San Marino has been identified. Global taxonomy trackers, including the Climate Bonds Initiative's world taxonomies overview, do not list San Marino among jurisdictions that have adopted one. As a micro-state enclaved within Italy but outside the EU, San Marino is not directly bound by the EU Taxonomy Regulation. [1]"
+    ],
+    "citations": [
+      { "id": 1, "label": "Climate Bonds Initiative, \"World of Taxonomies\"", "url": "https://www.climatebonds.net/expertise/taxonomy/world-taxonomies" }
+    ]
+  },
+  "VAT": {
+    "name": "Holy See (Vatican City)",
+    "status": "none",
+    "region": "Europe",
+    "taxonomy": null,
+    "year": null,
+    "note": "No national green or sustainable finance taxonomy; the Holy See has no domestic commercial banking sector of the kind a taxonomy would regulate.",
+    "source": "https://www.climatebonds.net/expertise/taxonomy/world-taxonomies",
+    "officialDocuments": [],
+    "overlays": [],
+    "regulator": "Not applicable — no taxonomy-issuing authority identified",
+    "fullDescription": [
+      "No published green or sustainable finance taxonomy for the Holy See (Vatican City) has been identified. As a city-state with no domestic commercial banking sector of the kind a financial-activity taxonomy would regulate, the Holy See has instead engaged with sustainability primarily through papal encyclicals and moral guidance on environmental stewardship (notably Laudato Si') rather than financial-sector classification instruments. [1]"
+    ],
+    "citations": [
+      { "id": 1, "label": "Climate Bonds Initiative, \"World of Taxonomies\"", "url": "https://www.climatebonds.net/expertise/taxonomy/world-taxonomies" }
+    ]
+  },
+  "PSE": {
+    "name": "Palestine",
+    "status": "none",
+    "region": "Middle East",
+    "taxonomy": null,
+    "year": null,
+    "note": "No green taxonomy; Palestine Monetary Authority launched a sustainable-financing roadmap in 2024 and runs capacity-building on climate-related financial risk, but no activity classification system has been published. [1]",
+    "source": "https://www.sadanews.ps/en/business/311639.html",
+    "officialDocuments": [],
+    "overlays": [],
+    "regulator": "Palestine Monetary Authority (PMA)",
+    "fullDescription": [
+      "Palestine has not published a green or sustainable finance taxonomy. The Palestine Monetary Authority (PMA) has organised high-level meetings to launch a strategic path for sustainable financing and managing climate-related financial risk in the Palestinian financial sector, and in 2024 launched a roadmap for sustainable financing developed with international partners including the World Bank. [1]",
+      "The PMA has also run capacity-building programmes assessing financial institutions' readiness for sustainable finance, identifying institutional gaps and delivering specialised ESG training, but this institutional groundwork has not yet produced a published activity-classification taxonomy."
+    ],
+    "citations": [
+      { "id": 1, "label": "Sada News Agency, \"The Monetary Authority Organizes a High-Level Meeting to Launch a Strategic Path to Enhance Sustainable Financing and Manage Climate Risks in the Palestinian Financial Sector\"", "url": "https://www.sadanews.ps/en/business/311639.html" }
+    ]
+  },
+  "BWA": {
+    "name": "Botswana",
+    "status": "developing",
+    "region": "Africa",
+    "taxonomy": null,
+    "year": null,
+    "note": "Botswana Sustainable Financing Strategy (2023–2030) explicitly identifies the lack of a green taxonomy as a key gap and sets out plans to address it alongside ESG lending guidelines and a green bond framework. [1]",
+    "source": "https://www.undp.org/sites/g/files/zskgke326/files/2024-03/botswana_sustainable_financing_strategy_bsfs_2023.pdf",
+    "officialDocuments": [
+      {
+        "title": "Botswana Sustainable Financing Strategy (BSFS) 2023–2030",
+        "date": "2023",
+        "url": "https://www.undp.org/sites/g/files/zskgke326/files/2024-03/botswana_sustainable_financing_strategy_bsfs_2023.pdf"
+      }
+    ],
+    "overlays": [
+      {
+        "name": "African Continental Sustainable Finance Taxonomy",
+        "scope": "Continent-wide reference framework endorsed by African regulators and financial institutions (2025)",
+        "source": "https://www.afdb.org/en/news-and-events/africas-financial-industry-validates-continental-sustainable-finance-taxonomy-85995"
+      }
+    ],
+    "regulator": "Ministry of Finance; Bank of Botswana",
+    "fullDescription": [
+      "Botswana does not yet have a published green taxonomy, and its own Botswana Sustainable Financing Strategy (BSFS) 2023–2030 explicitly names this absence as a key challenge to be addressed. The whole-of-government strategy sets out actions to mobilise climate and green investment and coordinate public and private financing instruments. [1]",
+      "The BSFS outlines plans to develop climate-related stress testing, ESG lending guidelines and a green bond framework, while the Bank of Botswana already conducts regular solvency and liquidity stress tests that flag climate risk as a growing threat to financial stability — laying groundwork that a future taxonomy would formalise. [1]"
+    ],
+    "citations": [
+      { "id": 1, "label": "UNDP, \"Botswana Sustainable Financing Strategy (BSFS) 2023–2030\" (Draft Version 1.6)", "url": "https://www.undp.org/sites/g/files/zskgke326/files/2024-03/botswana_sustainable_financing_strategy_bsfs_2023.pdf" }
+    ]
+  },
+  "NAM": {
+    "name": "Namibia",
+    "status": "none",
+    "region": "Africa",
+    "taxonomy": null,
+    "year": null,
+    "note": "No national green taxonomy; Bank of Namibia established a sustainability framework in Oct 2024, and individual banks have their own green/sustainability bond frameworks. [1]",
+    "source": "https://www.namibian.com.na/taxonomies-in-the-realm-of-sustainable-finance/",
+    "officialDocuments": [],
+    "overlays": [
+      {
+        "name": "African Continental Sustainable Finance Taxonomy",
+        "scope": "Continent-wide reference framework endorsed by African regulators and financial institutions (2025)",
+        "source": "https://www.afdb.org/en/news-and-events/africas-financial-industry-validates-continental-sustainable-finance-taxonomy-85995"
+      }
+    ],
+    "regulator": "Bank of Namibia",
+    "fullDescription": [
+      "Namibia has not yet developed a national sustainable finance taxonomy. The Bank of Namibia established a sustainability framework in October 2024 as a step toward institutionalising sustainability principles within the financial sector, though this is a supervisory framework rather than an activity-classification taxonomy. [1]",
+      "At the individual-bank level, Bank Windhoek has developed its own Green Bond, Sustainability Bond and Sustainability-Linked Bond frameworks reflecting national priorities and market demand, but a taxonomy defining eligible green activities economy-wide has not been published by the regulator."
+    ],
+    "citations": [
+      { "id": 1, "label": "The Namibian, \"Taxonomies in the realm of sustainable finance\"", "url": "https://www.namibian.com.na/taxonomies-in-the-realm-of-sustainable-finance/" }
+    ]
+  },
+  "SLE": {
+    "name": "Sierra Leone",
+    "status": "none",
+    "region": "Africa",
+    "taxonomy": null,
+    "year": null,
+    "note": "No published national taxonomy; Sierra Leone has engaged with taxonomy-development discussions alongside other West African countries, but no framework has been finalised. [1]",
+    "source": "https://www.afdb.org/en/news-and-events/africas-financial-industry-validates-continental-sustainable-finance-taxonomy-85995",
+    "officialDocuments": [],
+    "overlays": [
+      {
+        "name": "African Continental Sustainable Finance Taxonomy",
+        "scope": "Continent-wide reference framework endorsed by African regulators and financial institutions (2025)",
+        "source": "https://www.afdb.org/en/news-and-events/africas-financial-industry-validates-continental-sustainable-finance-taxonomy-85995"
+      }
+    ],
+    "regulator": "Bank of Sierra Leone",
+    "fullDescription": [
+      "No published national green or sustainable finance taxonomy for Sierra Leone has been identified. Sierra Leone has been engaged in national green taxonomy development discussions alongside Gambia, Guinea, Liberia and other West African countries, and benefits from continental initiatives such as the African Green Banks Initiative, which supports the deployment of green financing aligned with countries' climate commitments — but no finalised Sierra Leonean taxonomy has been published. [1]"
+    ],
+    "citations": [
+      { "id": 1, "label": "African Development Bank (AfDB), \"African Green Banks Initiative\"", "url": "https://www.afdb.org/en/topics-and-sectors/initiatives-and-partnerships/african-green-banks-initiative" }
+    ]
+  },
+  "LBR": {
+    "name": "Liberia",
+    "status": "none",
+    "region": "Africa",
+    "taxonomy": null,
+    "year": null,
+    "note": "No published national taxonomy; engaged in regional taxonomy-development discussions but no framework has been finalised. [1]",
+    "source": "https://www.afdb.org/en/topics-and-sectors/initiatives-and-partnerships/african-green-banks-initiative",
+    "officialDocuments": [],
+    "overlays": [
+      {
+        "name": "African Continental Sustainable Finance Taxonomy",
+        "scope": "Continent-wide reference framework endorsed by African regulators and financial institutions (2025)",
+        "source": "https://www.afdb.org/en/news-and-events/africas-financial-industry-validates-continental-sustainable-finance-taxonomy-85995"
+      }
+    ],
+    "regulator": "Central Bank of Liberia",
+    "fullDescription": [
+      "No published national green or sustainable finance taxonomy for Liberia has been identified. Liberia has been named alongside Sierra Leone, Guinea and Gambia in discussions of West African green taxonomy development, and can draw on continental initiatives like the African Green Banks Initiative, but no finalised national framework has been published. [1]"
+    ],
+    "citations": [
+      { "id": 1, "label": "African Development Bank (AfDB), \"African Green Banks Initiative\"", "url": "https://www.afdb.org/en/topics-and-sectors/initiatives-and-partnerships/african-green-banks-initiative" }
+    ]
+  },
+  "GIN": {
+    "name": "Guinea",
+    "status": "none",
+    "region": "Africa",
+    "taxonomy": null,
+    "year": null,
+    "note": "No published national taxonomy; engaged in regional taxonomy-development discussions but no framework has been finalised. [1]",
+    "source": "https://www.afdb.org/en/topics-and-sectors/initiatives-and-partnerships/african-green-banks-initiative",
+    "officialDocuments": [],
+    "overlays": [
+      {
+        "name": "African Continental Sustainable Finance Taxonomy",
+        "scope": "Continent-wide reference framework endorsed by African regulators and financial institutions (2025)",
+        "source": "https://www.afdb.org/en/news-and-events/africas-financial-industry-validates-continental-sustainable-finance-taxonomy-85995"
+      }
+    ],
+    "regulator": "Central Bank of the Republic of Guinea",
+    "fullDescription": [
+      "No published national green or sustainable finance taxonomy for Guinea has been identified. Guinea has been named alongside Sierra Leone, Liberia and Gambia in discussions of West African green taxonomy development, and can draw on continental initiatives like the African Green Banks Initiative, but no finalised national framework has been published. [1]"
+    ],
+    "citations": [
+      { "id": 1, "label": "African Development Bank (AfDB), \"African Green Banks Initiative\"", "url": "https://www.afdb.org/en/topics-and-sectors/initiatives-and-partnerships/african-green-banks-initiative" }
+    ]
+  },
+  "GMB": {
+    "name": "Gambia",
+    "status": "none",
+    "region": "Africa",
+    "taxonomy": null,
+    "year": null,
+    "note": "No published national taxonomy; engaged in regional taxonomy-development discussions but no framework has been finalised. [1]",
+    "source": "https://www.afdb.org/en/topics-and-sectors/initiatives-and-partnerships/african-green-banks-initiative",
+    "officialDocuments": [],
+    "overlays": [
+      {
+        "name": "African Continental Sustainable Finance Taxonomy",
+        "scope": "Continent-wide reference framework endorsed by African regulators and financial institutions (2025)",
+        "source": "https://www.afdb.org/en/news-and-events/africas-financial-industry-validates-continental-sustainable-finance-taxonomy-85995"
+      }
+    ],
+    "regulator": "Central Bank of The Gambia",
+    "fullDescription": [
+      "No published national green or sustainable finance taxonomy for the Gambia has been identified. The Gambia has been named alongside Sierra Leone, Liberia and Guinea in discussions of West African green taxonomy development, and can draw on continental initiatives like the African Green Banks Initiative, but no finalised national framework has been published. [1]"
+    ],
+    "citations": [
+      { "id": 1, "label": "African Development Bank (AfDB), \"African Green Banks Initiative\"", "url": "https://www.afdb.org/en/topics-and-sectors/initiatives-and-partnerships/african-green-banks-initiative" }
+    ]
+  },
+  "SDN": {
+    "name": "Sudan",
+    "status": "none",
+    "region": "Africa",
+    "taxonomy": null,
+    "year": null,
+    "note": "No national green taxonomy; participates in the multi-country Great Green Wall IGREENFIN initiative for climate-resilient agricultural finance, but no activity-classification taxonomy exists. [1]",
+    "source": "https://www.developmentaid.org/tenders/view/1165422/inclusive-green-financing-initiative-igreenfin-greening-agricultural-banks-and-the-financial-sector",
+    "officialDocuments": [],
+    "overlays": [
+      {
+        "name": "African Continental Sustainable Finance Taxonomy",
+        "scope": "Continent-wide reference framework endorsed by African regulators and financial institutions (2025)",
+        "source": "https://www.afdb.org/en/news-and-events/africas-financial-industry-validates-continental-sustainable-finance-taxonomy-85995"
+      }
+    ],
+    "regulator": "Central Bank of Sudan",
+    "fullDescription": [
+      "No published green or sustainable finance taxonomy for Sudan has been identified. Sudan participates in the Inclusive Green Financing Initiative (IGREENFIN), a multi-country programme greening agricultural banks and the financial sector across Great Green Wall countries — including Chad, Djibouti, Eritrea, Ethiopia, Mauritania and Nigeria — to support climate-resilient, low-emission smallholder agriculture, but this is a sector-specific financing programme rather than an economy-wide activity taxonomy. [1]"
+    ],
+    "citations": [
+      { "id": 1, "label": "DevelopmentAid, \"Inclusive Green Financing Initiative (IGREENFIN) — Greening Agricultural Banks and the Financial Sector\"", "url": "https://www.developmentaid.org/tenders/view/1165422/inclusive-green-financing-initiative-igreenfin-greening-agricultural-banks-and-the-financial-sector" }
+    ]
+  },
+  "SSD": {
+    "name": "South Sudan",
+    "status": "none",
+    "region": "Africa",
+    "taxonomy": null,
+    "year": null,
+    "note": "No national green taxonomy; Green Climate Fund is working with the government on climate resilience finance, but no activity-classification taxonomy exists. [1]",
+    "source": "https://www.greenclimate.fund/countries/south-sudan",
+    "officialDocuments": [],
+    "overlays": [],
+    "regulator": "Bank of South Sudan",
+    "fullDescription": [
+      "No published green or sustainable finance taxonomy for South Sudan has been identified. The Green Climate Fund is working with South Sudan's government to channel climate finance toward resilience projects, and the African Development Bank's Sustainable Energy Fund for Africa has entered long-term agreements with mini-grid developers in South Sudan as one of Africa's fragile-state frontier markets — but neither constitutes a formal activity-classification taxonomy. [1]"
+    ],
+    "citations": [
+      { "id": 1, "label": "Green Climate Fund, \"South Sudan\" country page", "url": "https://www.greenclimate.fund/countries/south-sudan" }
+    ]
+  },
+  "SOM": {
+    "name": "Somalia",
+    "status": "none",
+    "region": "Africa",
+    "taxonomy": null,
+    "year": null,
+    "note": "No national green taxonomy; benefits from AfDB's Sustainable Energy Fund for Africa for off-grid renewable projects, but no activity-classification taxonomy exists.",
+    "source": "https://www.afdb.org/en/news-and-events/press-releases/multinational-african-development-banks-sustainable-energy-fund-africa-approves-565-million-pioneer-new-climate-finance-instrument-grid-renewable-energy-projects-africas-fragile-states-91748",
+    "officialDocuments": [],
+    "overlays": [],
+    "regulator": "Central Bank of Somalia",
+    "fullDescription": [
+      "No published green or sustainable finance taxonomy for Somalia has been identified. Somalia is among the fragile states covered by the African Development Bank's Sustainable Energy Fund for Africa, which has approved financing to pioneer new climate-finance instruments for off-grid renewable energy in frontier markets, but this is a project-financing mechanism rather than an economy-wide activity taxonomy. [1]"
+    ],
+    "citations": [
+      { "id": 1, "label": "African Development Bank (AfDB), \"Sustainable Energy Fund for Africa Approves $5.65 million to Pioneer New Climate Finance Instrument for Off-Grid Renewable Energy Projects in Africa's Fragile States\"", "url": "https://www.afdb.org/en/news-and-events/press-releases/multinational-african-development-banks-sustainable-energy-fund-africa-approves-565-million-pioneer-new-climate-finance-instrument-grid-renewable-energy-projects-africas-fragile-states-91748" }
+    ]
+  },
+  "ERI": {
+    "name": "Eritrea",
+    "status": "none",
+    "region": "Africa",
+    "taxonomy": null,
+    "year": null,
+    "note": "No national green taxonomy; participates in the multi-country Great Green Wall IGREENFIN initiative for climate-resilient agricultural finance. [1]",
+    "source": "https://www.developmentaid.org/tenders/view/1165422/inclusive-green-financing-initiative-igreenfin-greening-agricultural-banks-and-the-financial-sector",
+    "officialDocuments": [],
+    "overlays": [],
+    "regulator": "Bank of Eritrea",
+    "fullDescription": [
+      "No published green or sustainable finance taxonomy for Eritrea has been identified. Eritrea participates in the Inclusive Green Financing Initiative (IGREENFIN), a multi-country programme greening agricultural banks and the financial sector across Great Green Wall countries, but this is a sector-specific financing programme rather than an economy-wide activity taxonomy, and Eritrea's broader isolation from international financial institutions has limited the kind of engagement that has produced taxonomies elsewhere. [1]"
+    ],
+    "citations": [
+      { "id": 1, "label": "DevelopmentAid, \"Inclusive Green Financing Initiative (IGREENFIN) — Greening Agricultural Banks and the Financial Sector\"", "url": "https://www.developmentaid.org/tenders/view/1165422/inclusive-green-financing-initiative-igreenfin-greening-agricultural-banks-and-the-financial-sector" }
+    ]
+  },
+  "DJI": {
+    "name": "Djibouti",
+    "status": "none",
+    "region": "Africa",
+    "taxonomy": null,
+    "year": null,
+    "note": "No national green taxonomy; participates in the multi-country Great Green Wall IGREENFIN initiative for climate-resilient agricultural finance. [1]",
+    "source": "https://www.developmentaid.org/tenders/view/1165422/inclusive-green-financing-initiative-igreenfin-greening-agricultural-banks-and-the-financial-sector",
+    "officialDocuments": [],
+    "overlays": [],
+    "regulator": "Central Bank of Djibouti",
+    "fullDescription": [
+      "No published green or sustainable finance taxonomy for Djibouti has been identified. Djibouti participates in the Inclusive Green Financing Initiative (IGREENFIN), a multi-country programme greening agricultural banks and the financial sector across Great Green Wall countries, but this is a sector-specific financing programme rather than an economy-wide activity taxonomy. [1]"
+    ],
+    "citations": [
+      { "id": 1, "label": "DevelopmentAid, \"Inclusive Green Financing Initiative (IGREENFIN) — Greening Agricultural Banks and the Financial Sector\"", "url": "https://www.developmentaid.org/tenders/view/1165422/inclusive-green-financing-initiative-igreenfin-greening-agricultural-banks-and-the-financial-sector" }
+    ]
+  },
+  "TCD": {
+    "name": "Chad",
+    "status": "none",
+    "region": "Africa",
+    "taxonomy": null,
+    "year": null,
+    "note": "No national taxonomy; CEMAC member state participating in the Great Green Wall IGREENFIN initiative for climate-resilient agricultural finance. [1]",
+    "source": "https://www.developmentaid.org/tenders/view/1165422/inclusive-green-financing-initiative-igreenfin-greening-agricultural-banks-and-the-financial-sector",
+    "officialDocuments": [],
+    "overlays": [
+      {
+        "name": "CEMAC / BEAC Sustainable Finance Initiatives",
+        "scope": "Regional monetary and sustainable-finance initiatives covering Cameroon, Central African Republic, Chad, Congo, Equatorial Guinea and Gabon",
+        "source": "https://www.financialafrik.com/en/2025/11/20/cemac-beacs-b-window-now-a-green-window-for-ecological-transition/"
+      }
+    ],
+    "regulator": "Bank of Central African States (BEAC) — regional; no national taxonomy authority identified",
+    "fullDescription": [
+      "No published green or sustainable finance taxonomy for Chad has been identified. As a CEMAC member state, Chad shares the region's common central bank, BEAC, which is converting the CEMAC money market's 'B window' into a green window for climate-resilient investment. Chad also participates in the Inclusive Green Financing Initiative (IGREENFIN) for climate-resilient smallholder agriculture across Great Green Wall countries, but neither is a national activity-classification taxonomy. [1]"
+    ],
+    "citations": [
+      { "id": 1, "label": "DevelopmentAid, \"Inclusive Green Financing Initiative (IGREENFIN) — Greening Agricultural Banks and the Financial Sector\"", "url": "https://www.developmentaid.org/tenders/view/1165422/inclusive-green-financing-initiative-igreenfin-greening-agricultural-banks-and-the-financial-sector" }
+    ]
+  },
+  "CAF": {
+    "name": "Central African Republic",
+    "status": "none",
+    "region": "Africa",
+    "taxonomy": null,
+    "year": null,
+    "note": "No national taxonomy; CEMAC member state with access to AfDB's Sustainable Energy Fund for Africa for off-grid renewable projects. [1]",
+    "source": "https://www.afdb.org/en/news-and-events/press-releases/multinational-african-development-banks-sustainable-energy-fund-africa-approves-565-million-pioneer-new-climate-finance-instrument-grid-renewable-energy-projects-africas-fragile-states-91748",
+    "officialDocuments": [],
+    "overlays": [
+      {
+        "name": "CEMAC / BEAC Sustainable Finance Initiatives",
+        "scope": "Regional monetary and sustainable-finance initiatives covering Cameroon, Central African Republic, Chad, Congo, Equatorial Guinea and Gabon",
+        "source": "https://www.financialafrik.com/en/2025/11/20/cemac-beacs-b-window-now-a-green-window-for-ecological-transition/"
+      }
+    ],
+    "regulator": "Bank of Central African States (BEAC) — regional; no national taxonomy authority identified",
+    "fullDescription": [
+      "No published green or sustainable finance taxonomy for the Central African Republic has been identified. As a CEMAC member state it shares the region's common central bank, BEAC, which is converting the CEMAC money market's 'B window' into a green window for climate-resilient investment, and it is among the fragile states covered by the African Development Bank's Sustainable Energy Fund for Africa for off-grid renewable energy financing — but neither is a national activity-classification taxonomy. [1]"
+    ],
+    "citations": [
+      { "id": 1, "label": "African Development Bank (AfDB), \"Sustainable Energy Fund for Africa Approves $5.65 million to Pioneer New Climate Finance Instrument for Off-Grid Renewable Energy Projects in Africa's Fragile States\"", "url": "https://www.afdb.org/en/news-and-events/press-releases/multinational-african-development-banks-sustainable-energy-fund-africa-approves-565-million-pioneer-new-climate-finance-instrument-grid-renewable-energy-projects-africas-fragile-states-91748" }
+    ]
+  },
+  "GNQ": {
+    "name": "Equatorial Guinea",
+    "status": "none",
+    "region": "Africa",
+    "taxonomy": null,
+    "year": null,
+    "note": "No national taxonomy; CEMAC member state sharing the regional BEAC green-window initiative.",
+    "source": "https://www.financialafrik.com/en/2025/11/20/cemac-beacs-b-window-now-a-green-window-for-ecological-transition/",
+    "officialDocuments": [],
+    "overlays": [
+      {
+        "name": "CEMAC / BEAC Sustainable Finance Initiatives",
+        "scope": "Regional monetary and sustainable-finance initiatives covering Cameroon, Central African Republic, Chad, Congo, Equatorial Guinea and Gabon",
+        "source": "https://www.financialafrik.com/en/2025/11/20/cemac-beacs-b-window-now-a-green-window-for-ecological-transition/"
+      }
+    ],
+    "regulator": "Bank of Central African States (BEAC) — regional; no national taxonomy authority identified",
+    "fullDescription": [
+      "No published green or sustainable finance taxonomy for Equatorial Guinea has been identified. As a CEMAC member state, it shares the region's common central bank, BEAC, which is converting the CEMAC money market's 'B window' into a green window directing liquidity toward low-carbon, climate-resilient investment across the six member states — a regional monetary tool rather than a national activity-classification taxonomy. [1]"
+    ],
+    "citations": [
+      { "id": 1, "label": "Financial Afrik, \"CEMAC: BEAC's B window now a green window for ecological transition\" (20 Nov 2025)", "url": "https://www.financialafrik.com/en/2025/11/20/cemac-beacs-b-window-now-a-green-window-for-ecological-transition/" }
+    ]
+  },
+  "BDI": {
+    "name": "Burundi",
+    "status": "none",
+    "region": "Africa",
+    "taxonomy": null,
+    "year": null,
+    "note": "No national green taxonomy identified; benefits from AfDB's Sustainable Energy Fund for Africa for off-grid renewable projects as a fragile-state market.",
+    "source": "https://www.afdb.org/en/news-and-events/press-releases/multinational-african-development-banks-sustainable-energy-fund-africa-approves-565-million-pioneer-new-climate-finance-instrument-grid-renewable-energy-projects-africas-fragile-states-91748",
+    "officialDocuments": [],
+    "overlays": [
+      {
+        "name": "African Continental Sustainable Finance Taxonomy",
+        "scope": "Continent-wide reference framework endorsed by African regulators and financial institutions (2025)",
+        "source": "https://www.afdb.org/en/news-and-events/africas-financial-industry-validates-continental-sustainable-finance-taxonomy-85995"
+      }
+    ],
+    "regulator": "Bank of the Republic of Burundi",
+    "fullDescription": [
+      "No published green or sustainable finance taxonomy for Burundi has been identified. Burundi is among the fragile states covered by the African Development Bank's Sustainable Energy Fund for Africa, which supports off-grid renewable energy financing through long-term purchase agreements with mini-grid developers, but this is a project-financing mechanism rather than an economy-wide activity taxonomy. [1]"
+    ],
+    "citations": [
+      { "id": 1, "label": "African Development Bank (AfDB), \"Sustainable Energy Fund for Africa Approves $5.65 million to Pioneer New Climate Finance Instrument for Off-Grid Renewable Energy Projects in Africa's Fragile States\"", "url": "https://www.afdb.org/en/news-and-events/press-releases/multinational-african-development-banks-sustainable-energy-fund-africa-approves-565-million-pioneer-new-climate-finance-instrument-grid-renewable-energy-projects-africas-fragile-states-91748" }
+    ]
+  },
+  "MRT": {
+    "name": "Mauritania",
+    "status": "none",
+    "region": "Africa",
+    "taxonomy": null,
+    "year": null,
+    "note": "No national green taxonomy; participates in the multi-country Great Green Wall IGREENFIN initiative for climate-resilient agricultural finance. [1]",
+    "source": "https://www.developmentaid.org/tenders/view/1165422/inclusive-green-financing-initiative-igreenfin-greening-agricultural-banks-and-the-financial-sector",
+    "officialDocuments": [],
+    "overlays": [],
+    "regulator": "Central Bank of Mauritania",
+    "fullDescription": [
+      "No published green or sustainable finance taxonomy for Mauritania has been identified. Mauritania participates in the Inclusive Green Financing Initiative (IGREENFIN), a multi-country programme greening agricultural banks and the financial sector across Great Green Wall countries, alongside Chad, Djibouti, Eritrea, Ethiopia, Nigeria and Sudan, but this is a sector-specific financing programme rather than an economy-wide activity taxonomy. [1]"
+    ],
+    "citations": [
+      { "id": 1, "label": "DevelopmentAid, \"Inclusive Green Financing Initiative (IGREENFIN) — Greening Agricultural Banks and the Financial Sector\"", "url": "https://www.developmentaid.org/tenders/view/1165422/inclusive-green-financing-initiative-igreenfin-greening-agricultural-banks-and-the-financial-sector" }
+    ]
+  },
+  "LSO": {
+    "name": "Lesotho",
+    "status": "none",
+    "region": "Africa",
+    "taxonomy": null,
+    "year": null,
+    "note": "No national green or sustainable finance taxonomy identified.",
+    "source": "https://www.afdb.org/en/news-and-events/africas-financial-industry-validates-continental-sustainable-finance-taxonomy-85995",
+    "officialDocuments": [],
+    "overlays": [
+      {
+        "name": "African Continental Sustainable Finance Taxonomy",
+        "scope": "Continent-wide reference framework endorsed by African regulators and financial institutions (2025)",
+        "source": "https://www.afdb.org/en/news-and-events/africas-financial-industry-validates-continental-sustainable-finance-taxonomy-85995"
+      }
+    ],
+    "regulator": "Central Bank of Lesotho",
+    "fullDescription": [
+      "No published national green or sustainable finance taxonomy for Lesotho has been identified. Lesotho can draw on the continent-wide Sustainable Finance Taxonomy validated in Nairobi in July 2025 by African regulators, commercial banks, insurers and development finance institutions, led by the African Development Bank's African Financial Alliance on Climate Change platform, but no dedicated national framework has been published. [1]"
+    ],
+    "citations": [
+      { "id": 1, "label": "African Development Bank (AfDB), \"Africa's Financial Industry Validates the Continental Sustainable Finance Taxonomy\"", "url": "https://www.afdb.org/en/news-and-events/africas-financial-industry-validates-continental-sustainable-finance-taxonomy-85995" }
+    ]
+  },
+  "COM": {
+    "name": "Comoros",
+    "status": "none",
+    "region": "Africa",
+    "taxonomy": null,
+    "year": null,
+    "note": "No national green or sustainable finance taxonomy identified.",
+    "source": "https://www.afdb.org/en/news-and-events/africas-financial-industry-validates-continental-sustainable-finance-taxonomy-85995",
+    "officialDocuments": [],
+    "overlays": [
+      {
+        "name": "African Continental Sustainable Finance Taxonomy",
+        "scope": "Continent-wide reference framework endorsed by African regulators and financial institutions (2025)",
+        "source": "https://www.afdb.org/en/news-and-events/africas-financial-industry-validates-continental-sustainable-finance-taxonomy-85995"
+      }
+    ],
+    "regulator": "Central Bank of Comoros",
+    "fullDescription": [
+      "No published national green or sustainable finance taxonomy for Comoros has been identified. Comoros can draw on the continent-wide Sustainable Finance Taxonomy validated in Nairobi in July 2025 by African regulators, commercial banks, insurers and development finance institutions, but no dedicated national framework has been published. [1]"
+    ],
+    "citations": [
+      { "id": 1, "label": "African Development Bank (AfDB), \"Africa's Financial Industry Validates the Continental Sustainable Finance Taxonomy\"", "url": "https://www.afdb.org/en/news-and-events/africas-financial-industry-validates-continental-sustainable-finance-taxonomy-85995" }
+    ]
+  },
+  "STP": {
+    "name": "Sao Tome and Principe",
+    "status": "none",
+    "region": "Africa",
+    "taxonomy": null,
+    "year": null,
+    "note": "No national green or sustainable finance taxonomy identified.",
+    "source": "https://www.afdb.org/en/news-and-events/africas-financial-industry-validates-continental-sustainable-finance-taxonomy-85995",
+    "officialDocuments": [],
+    "overlays": [
+      {
+        "name": "African Continental Sustainable Finance Taxonomy",
+        "scope": "Continent-wide reference framework endorsed by African regulators and financial institutions (2025)",
+        "source": "https://www.afdb.org/en/news-and-events/africas-financial-industry-validates-continental-sustainable-finance-taxonomy-85995"
+      }
+    ],
+    "regulator": "Central Bank of São Tomé and Príncipe",
+    "fullDescription": [
+      "No published national green or sustainable finance taxonomy for São Tomé and Príncipe has been identified. The country can draw on the continent-wide Sustainable Finance Taxonomy validated in Nairobi in July 2025 by African regulators, commercial banks, insurers and development finance institutions, but no dedicated national framework has been published. [1]"
+    ],
+    "citations": [
+      { "id": 1, "label": "African Development Bank (AfDB), \"Africa's Financial Industry Validates the Continental Sustainable Finance Taxonomy\"", "url": "https://www.afdb.org/en/news-and-events/africas-financial-industry-validates-continental-sustainable-finance-taxonomy-85995" }
+    ]
+  },
+  "SYC": {
+    "name": "Seychelles",
+    "status": "none",
+    "region": "Africa",
+    "taxonomy": null,
+    "year": null,
+    "note": "No national green taxonomy; known instead for pioneering blue-bond financing for ocean/marine conservation. [1]",
+    "source": "https://www.afdb.org/en/news-and-events/africas-financial-industry-validates-continental-sustainable-finance-taxonomy-85995",
+    "officialDocuments": [],
+    "overlays": [
+      {
+        "name": "African Continental Sustainable Finance Taxonomy",
+        "scope": "Continent-wide reference framework endorsed by African regulators and financial institutions (2025)",
+        "source": "https://www.afdb.org/en/news-and-events/africas-financial-industry-validates-continental-sustainable-finance-taxonomy-85995"
+      }
+    ],
+    "regulator": "Central Bank of Seychelles",
+    "fullDescription": [
+      "No published national green or sustainable finance taxonomy for Seychelles has been identified. Seychelles is instead internationally known as a pioneer of blue-bond financing — issuing the world's first sovereign blue bond in 2018 to fund marine protection and sustainable fisheries — and can draw on the continent-wide Sustainable Finance Taxonomy validated in Nairobi in July 2025, but no dedicated national activity-classification taxonomy has been published. [1]"
+    ],
+    "citations": [
+      { "id": 1, "label": "African Development Bank (AfDB), \"Africa's Financial Industry Validates the Continental Sustainable Finance Taxonomy\"", "url": "https://www.afdb.org/en/news-and-events/africas-financial-industry-validates-continental-sustainable-finance-taxonomy-85995" }
+    ]
+  },
+  "SLB": {
+    "name": "Solomon Islands",
+    "status": "developing",
+    "region": "Asia-Pacific",
+    "taxonomy": null,
+    "year": null,
+    "note": "Signatory to the 2024 Natadola roadmap for inclusive green finance; GGGI is developing a dedicated inclusive green finance roadmap for Solomon Islands and Vanuatu. [1]",
+    "source": "https://greencentralbanking.com/2024/06/21/pacific-islands-central-banks-sign-inclusive-green-finance-roadmap/",
+    "officialDocuments": [],
+    "overlays": [],
+    "regulator": "Central Bank of Solomon Islands",
+    "fullDescription": [
+      "Solomon Islands does not yet have a published national green taxonomy. In June 2024 its central bank joined those of Fiji, Papua New Guinea, Samoa, Seychelles, Tonga and Vanuatu in signing the Natadola roadmap for inclusive green finance, which prioritises regional capacity-building and pooled funding and technical expertise. [1]",
+      "The Global Green Growth Institute (GGGI) is separately developing an inclusive green finance roadmap specifically for Solomon Islands and Vanuatu, integrating financial inclusion with green-finance principles to address the islands' environmental and socio-economic vulnerabilities — groundwork that could feed into a future taxonomy, though none has been published as of 2026."
+    ],
+    "citations": [
+      { "id": 1, "label": "Green Central Banking, \"Pacific islands' central banks sign inclusive green finance roadmap\" (21 Jun 2024)", "url": "https://greencentralbanking.com/2024/06/21/pacific-islands-central-banks-sign-inclusive-green-finance-roadmap/" }
+    ]
+  },
+  "VUT": {
+    "name": "Vanuatu",
+    "status": "developing",
+    "region": "Asia-Pacific",
+    "taxonomy": null,
+    "year": null,
+    "note": "Signatory to the 2024 Natadola roadmap for inclusive green finance; GGGI is developing a dedicated inclusive green finance roadmap for Solomon Islands and Vanuatu. [1]",
+    "source": "https://greencentralbanking.com/2024/06/21/pacific-islands-central-banks-sign-inclusive-green-finance-roadmap/",
+    "officialDocuments": [],
+    "overlays": [],
+    "regulator": "Reserve Bank of Vanuatu",
+    "fullDescription": [
+      "Vanuatu does not yet have a published national green taxonomy. In June 2024 its central bank joined those of Fiji, Papua New Guinea, Samoa, Seychelles, the Solomon Islands and Tonga in signing the Natadola roadmap for inclusive green finance, which prioritises regional capacity-building and pooled funding and technical expertise. [1]",
+      "The Global Green Growth Institute (GGGI) is separately developing an inclusive green finance roadmap specifically for Vanuatu and the Solomon Islands, and Vanuatu has already incorporated disaster resilience into its regulatory frameworks given its high exposure to cyclones — but no formal activity-classification taxonomy has been published as of 2026."
+    ],
+    "citations": [
+      { "id": 1, "label": "Green Central Banking, \"Pacific islands' central banks sign inclusive green finance roadmap\" (21 Jun 2024)", "url": "https://greencentralbanking.com/2024/06/21/pacific-islands-central-banks-sign-inclusive-green-finance-roadmap/" }
+    ]
+  },
+  "WSM": {
+    "name": "Samoa",
+    "status": "developing",
+    "region": "Asia-Pacific",
+    "taxonomy": null,
+    "year": null,
+    "note": "Signatory to the 2024 Natadola roadmap for inclusive green finance alongside Fiji, PNG, Seychelles, Solomon Islands, Tonga and Vanuatu. [1]",
+    "source": "https://greencentralbanking.com/2024/06/21/pacific-islands-central-banks-sign-inclusive-green-finance-roadmap/",
+    "officialDocuments": [],
+    "overlays": [],
+    "regulator": "Central Bank of Samoa",
+    "fullDescription": [
+      "Samoa does not yet have a published national green taxonomy. In June 2024 its central bank joined those of Fiji, Papua New Guinea, Seychelles, the Solomon Islands, Tonga and Vanuatu in signing the Natadola roadmap for inclusive green finance, which identifies regional capacity-building as a priority and encourages pooling of funding and technical expertise between Pacific island economies. [1]",
+      "No dedicated Samoan taxonomy project or draft criteria have been published as of 2026, though the country participates in the region's broader sustainable finance capacity-building efforts."
+    ],
+    "citations": [
+      { "id": 1, "label": "Green Central Banking, \"Pacific islands' central banks sign inclusive green finance roadmap\" (21 Jun 2024)", "url": "https://greencentralbanking.com/2024/06/21/pacific-islands-central-banks-sign-inclusive-green-finance-roadmap/" }
+    ]
+  },
+  "TON": {
+    "name": "Tonga",
+    "status": "developing",
+    "region": "Asia-Pacific",
+    "taxonomy": null,
+    "year": null,
+    "note": "Signatory to the 2024 Natadola roadmap for inclusive green finance alongside Fiji, PNG, Samoa, Seychelles, Solomon Islands and Vanuatu. [1]",
+    "source": "https://greencentralbanking.com/2024/06/21/pacific-islands-central-banks-sign-inclusive-green-finance-roadmap/",
+    "officialDocuments": [],
+    "overlays": [],
+    "regulator": "National Reserve Bank of Tonga",
+    "fullDescription": [
+      "Tonga does not yet have a published national green taxonomy. In June 2024 its central bank joined those of Fiji, Papua New Guinea, Samoa, Seychelles, the Solomon Islands and Vanuatu in signing the Natadola roadmap for inclusive green finance, which identifies regional capacity-building as a priority and encourages pooling of funding and technical expertise between Pacific island economies. [1]",
+      "No dedicated Tongan taxonomy project or draft criteria have been published as of 2026, though the country participates in the region's broader sustainable finance capacity-building efforts."
+    ],
+    "citations": [
+      { "id": 1, "label": "Green Central Banking, \"Pacific islands' central banks sign inclusive green finance roadmap\" (21 Jun 2024)", "url": "https://greencentralbanking.com/2024/06/21/pacific-islands-central-banks-sign-inclusive-green-finance-roadmap/" }
+    ]
+  },
+  "MDV": {
+    "name": "Maldives",
+    "status": "developing",
+    "region": "Asia-Pacific",
+    "taxonomy": null,
+    "year": null,
+    "note": "World Bank FSAP notes the Maldives is working to introduce a national green taxonomy; its Financing Strategy envisions a taxonomy covering public and private actors. [1]",
+    "source": "https://documents1.worldbank.org/curated/en/099060624144574726/pdf/P1801001340fe10511b39f19ee5af46e4d9.pdf",
+    "officialDocuments": [
+      {
+        "title": "World Bank Group — Maldives Financial Sector Assessment Program",
+        "date": "2024",
+        "url": "https://documents1.worldbank.org/curated/en/099060624144574726/pdf/P1801001340fe10511b39f19ee5af46e4d9.pdf"
+      }
+    ],
+    "overlays": [],
+    "regulator": "Maldives Monetary Authority",
+    "fullDescription": [
+      "The Maldives does not yet have a published national green taxonomy, but is working to introduce one, according to the World Bank's Financial Sector Assessment Program for the country, which calls for a framework to track green finance from both public and private sources. [1]",
+      "The Maldives' Integrated National Financing Framework envisions developing a sustainable finance taxonomy applicable across public and private-sector actors, so that markets have a shared understanding of what counts as a sustainable economic activity. The Maldives International Financial Centre has positioned itself as a hub for institutions working on climate-risk modelling and sustainable finance taxonomy development, and neighbouring Sri Lanka's Central Bank taxonomy (launched May 2022) is a potential reference model — but no Maldivian taxonomy has been published as of 2026."
+    ],
+    "citations": [
+      { "id": 1, "label": "World Bank Group, \"Maldives Financial Sector Assessment Program\"", "url": "https://documents1.worldbank.org/curated/en/099060624144574726/pdf/P1801001340fe10511b39f19ee5af46e4d9.pdf" }
+    ]
+  },
+  "KIR": {
+    "name": "Kiribati",
+    "status": "none",
+    "region": "Asia-Pacific",
+    "taxonomy": null,
+    "year": null,
+    "note": "No national green or sustainable finance taxonomy identified; among the highest per-capita recipients of international climate adaptation finance rather than a taxonomy-issuing jurisdiction. [1]",
+    "source": "https://www.elibrary.imf.org/view/journals/087/2021/020/article-A001-en.xml",
+    "officialDocuments": [],
+    "overlays": [],
+    "regulator": "Not applicable — no taxonomy-issuing authority identified",
+    "fullDescription": [
+      "No published green or sustainable finance taxonomy for Kiribati has been identified. Kiribati is among the Pacific island states that have secured climate adaptation funding equivalent to over 30% of GDP between 2014 and 2019, reflecting its extreme vulnerability to sea-level rise, but this is climate adaptation finance rather than a financial-sector activity taxonomy. [1]"
+    ],
+    "citations": [
+      { "id": 1, "label": "International Monetary Fund, \"Unlocking Access to Climate Finance for Pacific Island Countries\"", "url": "https://www.elibrary.imf.org/view/journals/087/2021/020/article-A001-en.xml" }
+    ]
+  },
+  "TUV": {
+    "name": "Tuvalu",
+    "status": "none",
+    "region": "Asia-Pacific",
+    "taxonomy": null,
+    "year": null,
+    "note": "No national green or sustainable finance taxonomy identified; among the highest per-capita recipients of international climate adaptation finance rather than a taxonomy-issuing jurisdiction. [1]",
+    "source": "https://www.greenclimate.fund/countries/tuvalu",
+    "officialDocuments": [],
+    "overlays": [],
+    "regulator": "Not applicable — no taxonomy-issuing authority identified",
+    "fullDescription": [
+      "No published green or sustainable finance taxonomy for Tuvalu has been identified. Tuvalu has secured among the highest per-capita levels of international climate adaptation funding of any Pacific island state, reflecting its extreme vulnerability to sea-level rise, but this is climate adaptation finance channelled through bodies like the Green Climate Fund rather than a domestic financial-sector activity taxonomy. [1]"
+    ],
+    "citations": [
+      { "id": 1, "label": "Green Climate Fund, \"Tuvalu\" country page", "url": "https://www.greenclimate.fund/countries/tuvalu" }
+    ]
+  },
+  "MHL": {
+    "name": "Marshall Islands",
+    "status": "none",
+    "region": "Asia-Pacific",
+    "taxonomy": null,
+    "year": null,
+    "note": "No national green or sustainable finance taxonomy identified; among the highest recipients of international climate adaptation finance rather than a taxonomy-issuing jurisdiction. [1]",
+    "source": "https://www.elibrary.imf.org/view/journals/087/2021/020/article-A001-en.xml",
+    "officialDocuments": [],
+    "overlays": [],
+    "regulator": "Not applicable — no taxonomy-issuing authority identified",
+    "fullDescription": [
+      "No published green or sustainable finance taxonomy for the Marshall Islands has been identified. The Marshall Islands is among the Pacific island states that secured climate adaptation funding equivalent to over 30% of GDP between 2014 and 2019, reflecting its extreme vulnerability to sea-level rise, but this is climate adaptation finance rather than a financial-sector activity taxonomy. [1]"
+    ],
+    "citations": [
+      { "id": 1, "label": "International Monetary Fund, \"Unlocking Access to Climate Finance for Pacific Island Countries\"", "url": "https://www.elibrary.imf.org/view/journals/087/2021/020/article-A001-en.xml" }
+    ]
+  },
+  "FSM": {
+    "name": "Micronesia",
+    "status": "none",
+    "region": "Asia-Pacific",
+    "taxonomy": null,
+    "year": null,
+    "note": "No national green or sustainable finance taxonomy identified.",
+    "source": "https://www.jointsdgfund.org/where-we-work/federated-states-micronesia-republic-marshall-islands-palau-nauru-and-kiribati",
+    "officialDocuments": [],
+    "overlays": [],
+    "regulator": "Not applicable — no taxonomy-issuing authority identified",
+    "fullDescription": [
+      "No published green or sustainable finance taxonomy for the Federated States of Micronesia has been identified. Micronesia participates in a Joint SDG Fund programme alongside the Marshall Islands, Palau, Nauru and Kiribati that strengthens local governments' capacity to advance Sustainable Development Goals, but this is a governance and capacity-building programme rather than a financial-sector activity taxonomy. [1]"
+    ],
+    "citations": [
+      { "id": 1, "label": "Joint SDG Fund, \"Federated States of Micronesia, Republic of Marshall Islands, Palau, Nauru and Kiribati\"", "url": "https://www.jointsdgfund.org/where-we-work/federated-states-micronesia-republic-marshall-islands-palau-nauru-and-kiribati" }
+    ]
+  },
+  "NRU": {
+    "name": "Nauru",
+    "status": "none",
+    "region": "Asia-Pacific",
+    "taxonomy": null,
+    "year": null,
+    "note": "No national green or sustainable finance taxonomy identified; among the highest per-capita recipients of international climate adaptation finance rather than a taxonomy-issuing jurisdiction. [1]",
+    "source": "https://www.elibrary.imf.org/view/journals/087/2021/020/article-A001-en.xml",
+    "officialDocuments": [],
+    "overlays": [],
+    "regulator": "Not applicable — no taxonomy-issuing authority identified",
+    "fullDescription": [
+      "No published green or sustainable finance taxonomy for Nauru has been identified. Nauru is among the Pacific island states with the highest per-capita climate adaptation funding of the 2014–2019 period, but this is climate adaptation finance rather than a financial-sector activity taxonomy, and Nauru does not have the kind of commercial banking sector such a taxonomy would typically regulate. [1]"
+    ],
+    "citations": [
+      { "id": 1, "label": "International Monetary Fund, \"Unlocking Access to Climate Finance for Pacific Island Countries\"", "url": "https://www.elibrary.imf.org/view/journals/087/2021/020/article-A001-en.xml" }
+    ]
+  },
+  "PLW": {
+    "name": "Palau",
+    "status": "none",
+    "region": "Asia-Pacific",
+    "taxonomy": null,
+    "year": null,
+    "note": "No national green or sustainable finance taxonomy identified.",
+    "source": "https://www.jointsdgfund.org/where-we-work/federated-states-micronesia-republic-marshall-islands-palau-nauru-and-kiribati",
+    "officialDocuments": [],
+    "overlays": [],
+    "regulator": "Not applicable — no taxonomy-issuing authority identified",
+    "fullDescription": [
+      "No published green or sustainable finance taxonomy for Palau has been identified. Palau participates in a Joint SDG Fund programme alongside Micronesia, the Marshall Islands, Nauru and Kiribati that strengthens local governments' capacity to advance Sustainable Development Goals, but this is a governance and capacity-building programme rather than a financial-sector activity taxonomy. [1]"
+    ],
+    "citations": [
+      { "id": 1, "label": "Joint SDG Fund, \"Federated States of Micronesia, Republic of Marshall Islands, Palau, Nauru and Kiribati\"", "url": "https://www.jointsdgfund.org/where-we-work/federated-states-micronesia-republic-marshall-islands-palau-nauru-and-kiribati" }
     ]
   }
 };
