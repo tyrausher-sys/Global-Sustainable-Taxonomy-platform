@@ -2207,6 +2207,18 @@ window.TAXONOMY_DATA = {
     "year": 2020,
     "note": "EU member state; EU Taxonomy Regulation (EU 2020/852) applies directly.",
     "source": "https://finance.ec.europa.eu/sustainable-finance/tools-and-standards/eu-taxonomy-sustainable-activities_en",
+    "officialDocuments": [
+      {
+        "title": "Taxonomy Regulation (EU) 2020/852 — full legal text",
+        "date": "2020",
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32020R0852&from=EN"
+      },
+      {
+        "title": "Taxonomy Regulation (EU) 2020/852 — official Irish-language text (PDF)",
+        "date": "2020",
+        "url": "https://eur-lex.europa.eu/legal-content/GA/TXT/PDF/?uri=CELEX:32020R0852"
+      }
+    ],
     "overlays": [],
     "features": [
       "Defines which economic activities count as environmentally sustainable, under the EU Taxonomy Regulation (EU 2020/852).",
@@ -4572,6 +4584,11 @@ window.TAXONOMY_DATA = {
     "regulator": "Finanstilsynet (Norway) — pending EEA incorporation",
     "officialDocuments": [
       {
+        "title": "Lov om offentliggjøring av bærekraftsinformasjon i finanssektoren og et rammeverk for bærekraftige investeringer (Norwegian implementing act, official Lovdata text)",
+        "date": "Enacted 22 Dec 2021, in force 1 Jan 2023",
+        "url": "https://lovdata.no/lov/2021-12-22-161"
+      },
+      {
         "title": "Finanstilsynet — Finanstilsynet and EEA legislation (regulatory status tracker)",
         "date": "Updated periodically",
         "url": "https://www.finanstilsynet.no/en/topics/finanstilsynet-and-eea-legislation/"
@@ -4606,6 +4623,11 @@ window.TAXONOMY_DATA = {
     "regulator": "Central Bank of Iceland — pending EEA incorporation",
     "officialDocuments": [
       {
+        "title": "Lög nr. 25/2023 um upplýsingagjöf um sjálfbærni á sviði fjármálaþjónustu og flokkunarkerfi fyrir sjálfbærar fjárfestingar (Icelandic implementing law, official Stjórnartíðindi text)",
+        "date": "In force 1 Jun 2023",
+        "url": "https://www.althingi.is/altext/stjt/2023.025.html"
+      },
+      {
         "title": "European Commission — EU Taxonomy for Sustainable Activities (applies in Iceland once EEA incorporation completes)",
         "date": "Updated periodically",
         "url": "https://finance.ec.europa.eu/sustainable-finance/tools-and-standards/eu-taxonomy-sustainable-activities_en"
@@ -4639,6 +4661,11 @@ window.TAXONOMY_DATA = {
     "overlays": [],
     "regulator": "FMA Liechtenstein — pending EEA incorporation",
     "officialDocuments": [
+      {
+        "title": "EWR-FNDG (Gesetz vom 11. März 2022 zur Durchführung der Verordnungen (EU) 2019/2088 und (EU) 2020/852) — official Liechtenstein law text (PDF)",
+        "date": "In force 1 May 2022",
+        "url": "https://www.gesetze.li/konso/pdf/2022120000?version=2"
+      },
       {
         "title": "FMA Liechtenstein — Bases of sustainable finance (EU/EEA)",
         "date": "Updated periodically",
@@ -4739,6 +4766,13 @@ window.TAXONOMY_DATA = {
     "year": 2021,
     "note": "Established by the Ministry of Environment (now Ministry of Climate, Energy and Environment) in December 2021. Based on Substantial Contribution, DNSH and Minimum Safeguards; originally 69 activities (64 Green, 5 Transitional), expanded by a December 2024 amendment.",
     "source": "https://www.me.go.kr/eng/web/main.do",
+    "officialDocuments": [
+      {
+        "title": "Ministry of Environment — K-Taxonomy Guideline (한국형 녹색분류체계 가이드라인), original guideline (official PDF)",
+        "date": "30 Dec 2021",
+        "url": "https://www.korea.kr/common/download.do?tblKey=EDN&fileId=196851182"
+      }
+    ],
     "overlays": [],
     "features": [
       "Established by the Ministry of Environment (renamed Ministry of Climate, Energy and Environment in October 2025) in December 2021 to support South Korea's 2050 carbon-neutrality goal. [1][5]",
@@ -5084,6 +5118,21 @@ window.TAXONOMY_DATA = {
     "source": "https://www.ojk.go.id/id/Publikasi/Roadmap-dan-Pedoman/Sektor-Jasa-Keuangan/Keuangan-Berkelanjutan/Pages/TKBI-Versi-3-2026.aspx",
     "officialDocuments": [
       {
+        "title": "OJK — TKBI Versi 3, FAQ document (official PDF)",
+        "date": "2026",
+        "url": "https://ojk.go.id/id/Publikasi/Roadmap-dan-Pedoman/Sektor-Jasa-Keuangan/Keuangan-Berkelanjutan/Documents/FAQ%20Taksonomi%20untuk%20Keuangan%20Berkelanjutan%20Indonesia%20(TKBI)%20Versi%203.pdf"
+      },
+      {
+        "title": "OJK — TKBI Versi 2, FAQ document (official PDF)",
+        "date": "Feb 2025",
+        "url": "https://ojk.go.id/id/Publikasi/Roadmap-dan-Pedoman/Sektor-Jasa-Keuangan/Keuangan-Berkelanjutan/Documents/FAQ%20Taksonomi%20untuk%20Keuangan%20Berkelanjutan%20Indonesia%20(TKBI)%20Versi%202.pdf"
+      },
+      {
+        "title": "OJK — TKBI Versi 1, main document (official PDF)",
+        "date": "2024",
+        "url": "https://keuanganberkelanjutan.ojk.go.id/keuanganberkelanjutan/BE/uploads/berita/files/file_d657b2c9-b944-4b6d-9012-1f07ffa59157-24082024092133.pdf"
+      },
+      {
         "title": "OJK — Indonesia Taxonomy for Sustainable Finance (TKBI) Version 3 (official page)",
         "date": "5 Feb 2026",
         "url": "https://keuanganberkelanjutan.ojk.go.id/keuanganberkelanjutan/en/ArticleList/View/2045/taksonomi-untuk-keuangan-berkelanjutan-indonesia-tkbi-versi-3"
@@ -5194,7 +5243,12 @@ window.TAXONOMY_DATA = {
     "source": "https://repoemc.ukm.my/server/api/core/bitstreams/91f1c401-3ccd-4134-90e0-32b9c4979e01/content",
     "officialDocuments": [
       {
-        "title": "Bank Negara Malaysia — Climate Change and Principle-based Taxonomy (CCPT)",
+        "title": "Bank Negara Malaysia — Climate Change and Principle-based Taxonomy (CCPT), full document (official PDF)",
+        "date": "30 Apr 2021",
+        "url": "https://www.bnm.gov.my/documents/20124/938039/Climate+Change+and+Principle-based+Taxonomy.pdf"
+      },
+      {
+        "title": "Bank Negara Malaysia — Climate Change and Principle-based Taxonomy (CCPT), overview page",
         "date": "30 Apr 2021",
         "url": "https://www.bnm.gov.my/climatechange"
       },
@@ -5486,6 +5540,11 @@ window.TAXONOMY_DATA = {
     "source": "https://www.bot.or.th/content/dam/bot/financial-innovation/sustainable-finance/green/taxonomy/01_EN_Thailand_Taxonomy-Introduction.pdf",
     "officialDocuments": [
       {
+        "title": "Bank of Thailand — Thailand Taxonomy Phase I: A Reference Tool for Sustainable Economy (official PDF)",
+        "date": "Jun 2023",
+        "url": "https://www.bot.or.th/content/dam/bot/financial-innovation/sustainable-finance/green/taxonomy/01_EN_Thailand_Taxonomy-Introduction.pdf"
+      },
+      {
         "title": "Bank of Thailand / SEC — Thailand Taxonomy Phase I (joint press release)",
         "date": "5 Jul 2023",
         "url": "https://www.bot.or.th/en/news-and-media/news/news-20230630-2.html"
@@ -5539,6 +5598,11 @@ window.TAXONOMY_DATA = {
     "note": "Established via Decision No. 21/2025/QD-TTg.",
     "source": "https://congbao.chinhphu.vn/van-ban/quyet-dinh-so-21-2025-qd-ttg-45465.htm",
     "officialDocuments": [
+      {
+        "title": "Decision No. 21/2025/QD-TTg — Vietnam Green Taxonomy, full text (Government Document Portal)",
+        "date": "4 Jul 2025 (effective 22 Aug 2025)",
+        "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=214447"
+      },
       {
         "title": "Decision No. 21/2025/QD-TTg — Vietnam Green Taxonomy (official gazette)",
         "date": "4 Jul 2025 (effective 22 Aug 2025)",
@@ -5747,8 +5811,13 @@ window.TAXONOMY_DATA = {
     "source": "https://www.asfi.org.au/australian-taxonomy",
     "officialDocuments": [
       {
+        "title": "Australian Sustainable Finance Institute — Australian Sustainable Finance Taxonomy, Version 1 (official PDF)",
+        "date": "17 Jun 2025",
+        "url": "https://www.asfi.org.au/s/Australian-Sustainable-Finance-Taxonomy.pdf"
+      },
+      {
         "title": "Australian Sustainable Finance Institute — Australian Sustainable Finance Taxonomy (official page)",
-        "date": "Ongoing", 
+        "date": "Ongoing",
         "url": "https://www.asfi.org.au/australian-taxonomy"
       }
     ],
@@ -5918,6 +5987,11 @@ window.TAXONOMY_DATA = {
     "regulator": "Bank of Russia",
     "officialDocuments": [
       {
+        "title": "Official text of Russia's green project taxonomy, direct PDF (Government of Russia publication portal)",
+        "date": "24 Sep 2021",
+        "url": "http://publication.pravo.gov.ru/file/pdf?eoNumber=0001202109240043"
+      },
+      {
         "title": "Official text of Russia's green project taxonomy (Government of Russia publication portal)",
         "date": "24 Sep 2021",
         "url": "http://publication.pravo.gov.ru/Document/View/0001202109240043"
@@ -6015,6 +6089,11 @@ window.TAXONOMY_DATA = {
     "source": "https://ssf.gob.sv/taxonomiaverdeelsalvador/",
     "officialDocuments": [
       {
+        "title": "SSF El Salvador — Taxonomía Verde de El Salvador (documento oficial, PDF)",
+        "date": "Dic 2025",
+        "url": "https://ssf.gob.sv/download/taxonomia-verde-el-salvador/"
+      },
+      {
         "title": "SSF El Salvador — presentación de la Taxonomía Verde",
         "date": "Dic 2025",
         "url": "https://ssf.gob.sv/2025/12/02/el-salvador-presenta-la-taxonomia-verde-para-impulsar-el-financiamiento-climatico-y-la-sostenibilidad-nacional/"
@@ -6057,6 +6136,11 @@ window.TAXONOMY_DATA = {
     "source": "https://www.mef.gov.py/es/dependencias/viceministerio-de-capital-humano-y-gestion-organizacional",
     "officialDocuments": [
       {
+        "title": "Ministerio de Economía y Finanzas — Taxonomía Verde de Paraguay (documento borrador, PDF)",
+        "date": "Ago 2025",
+        "url": "https://www.mef.gov.py/sites/default/files/2025-08/Taxonomia_Verde_de_Paraguay.pdf"
+      },
+      {
         "title": "Ministerio de Economía y Finanzas — Taxonomía Verde de Paraguay (página oficial)",
         "date": "Consulta pública oct-nov 2024",
         "url": "https://www.mef.gov.py/es/dependencias/viceministerio-de-economia-y-planificacion/taxonomia-verde-de-paraguay"
@@ -6089,7 +6173,12 @@ window.TAXONOMY_DATA = {
     "source": "https://ambiente.gob.do/app/uploads/2024/06/Taxonomia-Verde_RD_V2-OK.pdf",
     "officialDocuments": [
       {
-        "title": "Ministerio de Medio Ambiente — publicación oficial de la Taxonomía Verde RD",
+        "title": "Ministerio de Medio Ambiente — Taxonomía Verde RD, V2 (official PDF)",
+        "date": "Jun 2024",
+        "url": "https://ambiente.gob.do/app/uploads/2024/06/Taxonomia-Verde_RD_V2-OK.pdf"
+      },
+      {
+        "title": "Ministerio de Medio Ambiente — publicación oficial de la Taxonomía Verde RD (announcement)",
         "date": "Jun 2024",
         "url": "https://ambiente.gob.do/el-gobierno-publica-la-taxonomia-verde-de-la-republica-dominicana/"
       }
@@ -6133,6 +6222,11 @@ window.TAXONOMY_DATA = {
     "note": null,
     "source": "https://www.taxonomiaverde.gov.co/",
     "officialDocuments": [
+      {
+        "title": "Taxonomía Verde de Colombia — documento completo (PDF oficial)",
+        "date": "Abr 2022",
+        "url": "https://www.taxonomiaverde.gov.co/documents/316219/336660/Taxonom%C3%ADa+Verde+de+Colombia.pdf/f25c7843-9a15-17da-90f9-5d63763b85b6?t=1649352720000"
+      },
       {
         "title": "Superintendencia Financiera de Colombia — Circular Externa 005 de 2022",
         "date": "Abr 2022",
@@ -6983,6 +7077,11 @@ window.TAXONOMY_DATA = {
     "source": "https://www.rbf.gov.fj/wp-content/uploads/2025/12/Fiji-Green-Finance-Taxonomy-FA-V5-Digital-Copy.pdf",
     "officialDocuments": [
       {
+        "title": "Reserve Bank of Fiji — Fiji Green Finance Taxonomy, V5 (official PDF)",
+        "date": "Dec 2025",
+        "url": "https://www.rbf.gov.fj/wp-content/uploads/2025/12/Fiji-Green-Finance-Taxonomy-FA-V5-Digital-Copy.pdf"
+      },
+      {
         "title": "Reserve Bank of Fiji — press release on Green Finance Taxonomy launch",
         "date": "Dec 2025",
         "url": "https://www.rbf.gov.fj/press-release-no-30-fiji-launches-green-finance-taxonomy-to-drive-climate-resilient-investments/"
@@ -7439,7 +7538,12 @@ window.TAXONOMY_DATA = {
     "source": "https://www.canada.ca/en/department-finance/programs/financial-sector-policy/sustainable-finance/sustainable-finance-action-council/taxonomy-roadmap-report.html",
     "officialDocuments": [
       {
-        "title": "Government of Canada — Taxonomy Roadmap Report",
+        "title": "Government of Canada — Taxonomy Roadmap Report (official PDF, Cat. No. F2-295/2023E-PDF)",
+        "date": "2 Mar 2023",
+        "url": "https://publications.gc.ca/site/eng/9.919362/publication.html"
+      },
+      {
+        "title": "Government of Canada — Taxonomy Roadmap Report (announcement page)",
         "date": "2022",
         "url": "https://www.canada.ca/en/department-finance/programs/financial-sector-policy/sustainable-finance/sustainable-finance-action-council/taxonomy-roadmap-report.html"
       },
@@ -7486,9 +7590,9 @@ window.TAXONOMY_DATA = {
     "regulator": "Bank of Albania (framework in development)",
     "officialDocuments": [
       {
-        "title": "Bank of Albania — green strategy progress update (May 2023–2024)",
+        "title": "Bank of Albania — green strategy progress report, May 2023–2024 (official PDF; the taxonomy itself is still in development and not yet published)",
         "date": "2024",
-        "url": "https://www.lse.ac.uk/granthaminstitute/publication/insights-and-progress-from-the-bank-of-albanias-green-strategy-may-2023-2024/"
+        "url": "https://www.bankofalbania.org/rc/doc/Progres_raport_Insights_from_the_Bank_of_Albania_s_Green_Strategy_27767.pdf"
       }
     ],
     "fullDescription": [
@@ -7698,6 +7802,11 @@ window.TAXONOMY_DATA = {
     "source": "https://www.sbfnetwork.org/2026-esrm-guideline-and-taxonomy-standards-workshops-and-green-finance-summit-port-moresby",
     "officialDocuments": [
       {
+        "title": "Bank of Papua New Guinea — Standards for Green Loan Classification and Reporting (official PDF; companion document to the Taxonomy V2.0, whose own PDF is not yet at a stable public URL)",
+        "date": "Mar 2026",
+        "url": "https://www.bankpng.gov.pg/sites/default/files/2026-03/BPNG_Standards_for_Green_Loan_Classification_and_Reporting_March2026.pdf"
+      },
+      {
         "title": "Green Finance Centre PNG — Green Finance Summit 2026 summary",
         "date": "2026",
         "url": "https://www.gfcpng.com/green-finance-summit-2026-a-collaborative-success/"
@@ -7883,9 +7992,9 @@ window.TAXONOMY_DATA = {
     "regulator": "Central Bank of the Republic of Turkey",
     "officialDocuments": [
       {
-        "title": "Draft Regulation on the Türkiye Green Taxonomy — overview (Tevetoglu Legal)",
-        "date": "24 Sep 2024",
-        "url": "https://www.tevetoglu.av.tr/en/new-and-insight/turkeys-green-taxonomy-has-been-shared-with-the-public-by-the-climate-change-directorate-2024-09-24-090042"
+        "title": "İklim Değişikliği Başkanlığı — Türkiye Yeşil Taksonomisi Yönetmeliği Taslağı (official draft regulation, PDF)",
+        "date": "2024",
+        "url": "https://iklim.gov.tr/db/turkce/icerikler/files/Turkiye_Yesil_Taksonomi_Yonetmeligi_Taslagi.pdf"
       }
     ],
     "fullDescription": [
@@ -7939,6 +8048,11 @@ window.TAXONOMY_DATA = {
     "note": "Launched by the National Banking and Insurance Commission (CNBS) with technical assistance from IFC, establishing sustainability criteria, do-no-significant-harm (DNSH) requirements, social safeguards and verifiable indicators for renewable energy, agroindustry, efficient manufacturing and green infrastructure. Honduras is also part of a regional Central American green taxonomy presented via CCSBSO.",
     "source": "https://www.cnbs.gob.hn/taxonomia-verde/",
     "officialDocuments": [
+      {
+        "title": "Taxonomía Verde de Honduras — Primera versión (documento oficial, PDF)",
+        "date": "Nov 2025",
+        "url": "https://fundahrse.org/wp-content/uploads/2025/12/Taxonomia-Verde-de-Honduras.pdf"
+      },
       {
         "title": "Comisión Nacional de Bancos y Seguros (CNBS) — Taxonomía Verde (official page)",
         "date": "Ongoing",
@@ -8054,14 +8168,14 @@ window.TAXONOMY_DATA = {
     "regulator": "National Bank of Ukraine",
     "officialDocuments": [
       {
+        "title": "Ministry of Environmental Protection and Natural Resources of Ukraine — Draft Law \"On the Principles of Green Recovery of Ukraine\" (official draft text, DOCX)",
+        "date": "30 Jun 2025",
+        "url": "https://mepr.gov.ua/wp-content/uploads/2025/06/PROEKT-ZAKONU-pro-Zasady-zelenogo-vidnovlennya.docx"
+      },
+      {
         "title": "EU Delegation to Ukraine — Empowering Ukraine's Resilience: Sustainable Finance Platform launch",
         "date": "2023",
         "url": "https://www.eeas.europa.eu/delegations/ukraine/empowering-ukraine%E2%80%99s-resilience-official-launch-sustainable-finance-platform_en"
-      },
-      {
-        "title": "UNDP Ukraine — Draft Law ‘On the Foundations of Green Recovery in Ukraine’ (public presentation)",
-        "date": "30 Jun 2025",
-        "url": "https://ukraine.un.org/en/297337-sweden-and-undp-support-national-presentation-draft-law-foundations-green-recovery-ukraine"
       }
     ],
     "fullDescription": [
@@ -8447,9 +8561,14 @@ window.TAXONOMY_DATA = {
     "source": "https://www.lexismiddleeast.com/regulatory/Qatar/QatarCentralBank_2025_Sustainable_Finance_Framework/en",
     "officialDocuments": [
       {
-        "title": "Qatar Central Bank — Sustainable Finance Framework",
-        "date": "2025",
-        "url": "https://www.lexismiddleeast.com/regulatory/Qatar/QatarCentralBank_2025_Sustainable_Finance_Framework/en"
+        "title": "Qatar Central Bank — Sustainable Finance Framework (official circular, PDF)",
+        "date": "20 Apr 2025",
+        "url": "https://www.qcb.gov.qa/Documents/English%20circular.pdf"
+      },
+      {
+        "title": "Qatar Central Bank — ESG and Sustainability Strategy for the Financial Sector (official PDF)",
+        "date": "2024",
+        "url": "https://www.qcb.gov.qa/Documents/GreenFinance/ESG%20and%20sustainability%20strategy%20for%20the%20financial%20sector%20ENG.pdf"
       }
     ],
     "overlays": [],
@@ -8599,7 +8718,12 @@ window.TAXONOMY_DATA = {
     "source": "https://development.finance.go.ug/knowledge-centre-reports/national-green-taxonomy",
     "officialDocuments": [
       {
-        "title": "Ministry of Finance, Planning and Economic Development — National Green Taxonomy",
+        "title": "Ministry of Finance, Planning and Economic Development — Uganda National Green Taxonomy (official PDF)",
+        "date": "Sep 2025",
+        "url": "https://www.finance.go.ug/sites/default/files/reports/National%20Green%20Taxonomy%202025.pdf"
+      },
+      {
+        "title": "Ministry of Finance, Planning and Economic Development — National Green Taxonomy (knowledge centre page)",
         "date": "Sep 2025",
         "url": "https://development.finance.go.ug/knowledge-centre-reports/national-green-taxonomy"
       }
@@ -10072,7 +10196,13 @@ window.TAXONOMY_DATA = {
     "year": null,
     "note": "Signatory to the 2024 Natadola roadmap for inclusive green finance; GGGI is developing a dedicated inclusive green finance roadmap for Solomon Islands and Vanuatu. [1]",
     "source": "https://greencentralbanking.com/2024/06/21/pacific-islands-central-banks-sign-inclusive-green-finance-roadmap/",
-    "officialDocuments": [],
+    "officialDocuments": [
+      {
+        "title": "Natadola Roadmap to Inclusive Green Finance in the Pacific (official joint regional document, PDF; signed by the Central Bank of Solomon Islands and 6 other Pacific central banks — no separate national taxonomy exists yet)",
+        "date": "5 Jun 2024",
+        "url": "https://afi-global.org/wp-content/uploads/2024/10/Natadola-Roadmap-to-Inclusive-Green-Finance-in-the-Pacific.pdf"
+      }
+    ],
     "overlays": [],
     "regulator": "Central Bank of Solomon Islands",
     "fullDescription": [
@@ -10091,7 +10221,13 @@ window.TAXONOMY_DATA = {
     "year": null,
     "note": "Signatory to the 2024 Natadola roadmap for inclusive green finance; GGGI is developing a dedicated inclusive green finance roadmap for Solomon Islands and Vanuatu. [1]",
     "source": "https://greencentralbanking.com/2024/06/21/pacific-islands-central-banks-sign-inclusive-green-finance-roadmap/",
-    "officialDocuments": [],
+    "officialDocuments": [
+      {
+        "title": "Natadola Roadmap to Inclusive Green Finance in the Pacific (official joint regional document, PDF; signed by the Reserve Bank of Vanuatu and 6 other Pacific central banks — no separate national taxonomy exists yet)",
+        "date": "5 Jun 2024",
+        "url": "https://afi-global.org/wp-content/uploads/2024/10/Natadola-Roadmap-to-Inclusive-Green-Finance-in-the-Pacific.pdf"
+      }
+    ],
     "overlays": [],
     "regulator": "Reserve Bank of Vanuatu",
     "fullDescription": [
@@ -10110,7 +10246,13 @@ window.TAXONOMY_DATA = {
     "year": null,
     "note": "Signatory to the 2024 Natadola roadmap for inclusive green finance alongside Fiji, PNG, Seychelles, Solomon Islands, Tonga and Vanuatu. [1]",
     "source": "https://greencentralbanking.com/2024/06/21/pacific-islands-central-banks-sign-inclusive-green-finance-roadmap/",
-    "officialDocuments": [],
+    "officialDocuments": [
+      {
+        "title": "Natadola Roadmap to Inclusive Green Finance in the Pacific (official joint regional document, PDF; signed by the Central Bank of Samoa and 6 other Pacific central banks — no separate national taxonomy exists yet)",
+        "date": "5 Jun 2024",
+        "url": "https://afi-global.org/wp-content/uploads/2024/10/Natadola-Roadmap-to-Inclusive-Green-Finance-in-the-Pacific.pdf"
+      }
+    ],
     "overlays": [],
     "regulator": "Central Bank of Samoa",
     "fullDescription": [
@@ -10129,7 +10271,13 @@ window.TAXONOMY_DATA = {
     "year": null,
     "note": "Signatory to the 2024 Natadola roadmap for inclusive green finance alongside Fiji, PNG, Samoa, Seychelles, Solomon Islands and Vanuatu. [1]",
     "source": "https://greencentralbanking.com/2024/06/21/pacific-islands-central-banks-sign-inclusive-green-finance-roadmap/",
-    "officialDocuments": [],
+    "officialDocuments": [
+      {
+        "title": "Natadola Roadmap to Inclusive Green Finance in the Pacific (official joint regional document, PDF; signed by the National Reserve Bank of Tonga and 6 other Pacific central banks — no separate national taxonomy exists yet)",
+        "date": "5 Jun 2024",
+        "url": "https://afi-global.org/wp-content/uploads/2024/10/Natadola-Roadmap-to-Inclusive-Green-Finance-in-the-Pacific.pdf"
+      }
+    ],
     "overlays": [],
     "regulator": "National Reserve Bank of Tonga",
     "fullDescription": [
