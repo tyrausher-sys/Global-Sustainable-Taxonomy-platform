@@ -104,7 +104,14 @@ const GST_I18N = {
     "media.ctaHeading": "Get the Weekly Taxonomy Digest",
     "media.ctaText": "A weekly summary of taxonomy news, reports and trend insights — free.",
     "media.ctaBtn": "Subscribe Free",
-    "country.backToMap": "Back to map", "country.translatingContent": "Translating this page's content…"
+    "country.backToMap": "Back to map", "country.translatingContent": "Translating this page's content…",
+    "chat.toggleLabel": "Ask the AI Assistant", "chat.title": "AI Assistant",
+    "chat.subtitle": "Ask about taxonomy terms, compare countries, or find your way around the site.",
+    "chat.placeholder": "Type your question…", "chat.send": "Send",
+    "chat.greeting": "Hi! I can explain taxonomy terms, compare countries, or point you to the right page. What would you like to know?",
+    "chat.thinking": "Thinking…",
+    "chat.errorGeneric": "Couldn't reach the assistant right now — please try again.",
+    "chat.errorNotDeployed": "The assistant needs the live site backend, which isn't connected here — this only works once the site is deployed to Vercel with an API key (see DEPLOY_INSTRUCTIONS.md)."
   },
   sv: {
     "nav.map": "Interaktiv global karta", "nav.advisor": "AI-rådgivare", "nav.media": "Mediehubb",
@@ -187,7 +194,14 @@ const GST_I18N = {
     "media.ctaHeading": "Få veckans taxonomibrev",
     "media.ctaText": "En veckovis sammanfattning av taxonominyheter, rapporter och trendinsikter — gratis.",
     "media.ctaBtn": "Prenumerera gratis",
-    "country.backToMap": "Tillbaka till kartan", "country.translatingContent": "Översätter sidans innehåll…"
+    "country.backToMap": "Tillbaka till kartan", "country.translatingContent": "Översätter sidans innehåll…",
+    "chat.toggleLabel": "Fråga AI-assistenten", "chat.title": "AI-assistent",
+    "chat.subtitle": "Fråga om taxonomibegrepp, jämför länder, eller hitta rätt på sajten.",
+    "chat.placeholder": "Skriv din fråga…", "chat.send": "Skicka",
+    "chat.greeting": "Hej! Jag kan förklara taxonomibegrepp, jämföra länder, eller visa dig rätt sida. Vad vill du veta?",
+    "chat.thinking": "Tänker…",
+    "chat.errorGeneric": "Kunde inte nå assistenten just nu — försök igen.",
+    "chat.errorNotDeployed": "Assistenten kräver den live serverdelen, som inte är ansluten här — detta fungerar först när webbplatsen är driftsatt på Vercel med en API-nyckel (se DEPLOY_INSTRUCTIONS.md)."
   },
   ko: {
     "nav.map": "인터랙티브 글로벌 지도", "nav.advisor": "AI 어드바이저", "nav.media": "미디어 허브",
@@ -270,7 +284,14 @@ const GST_I18N = {
     "media.ctaHeading": "주간 택소노미 다이제스트 받기",
     "media.ctaText": "택소노미 뉴스, 보고서, 트렌드 인사이트를 담은 주간 요약 — 무료입니다.",
     "media.ctaBtn": "무료로 구독하기",
-    "country.backToMap": "지도로 돌아가기", "country.translatingContent": "이 페이지의 콘텐츠를 번역하는 중…"
+    "country.backToMap": "지도로 돌아가기", "country.translatingContent": "이 페이지의 콘텐츠를 번역하는 중…",
+    "chat.toggleLabel": "AI 어시스턴트에게 질문", "chat.title": "AI 어시스턴트",
+    "chat.subtitle": "택소노미 용어를 질문하거나, 국가를 비교하거나, 사이트 내 원하는 곳을 찾아보세요.",
+    "chat.placeholder": "질문을 입력하세요…", "chat.send": "전송",
+    "chat.greeting": "안녕하세요! 택소노미 용어 설명, 국가 비교, 또는 원하는 페이지 안내를 도와드릴 수 있습니다. 무엇이 궁금하신가요?",
+    "chat.thinking": "생각 중…",
+    "chat.errorGeneric": "지금은 어시스턴트에 연결할 수 없습니다 — 다시 시도해 주세요.",
+    "chat.errorNotDeployed": "어시스턴트는 실제 서버 백엔드가 필요하지만 현재 연결되어 있지 않습니다 — 이 기능은 사이트가 API 키와 함께 Vercel에 배포된 후에만 작동합니다(DEPLOY_INSTRUCTIONS.md 참고)."
   },
   es: {
     "nav.map": "Mapa Global Interactivo", "nav.advisor": "Asesor de IA", "nav.media": "Centro de Medios",
@@ -353,7 +374,14 @@ const GST_I18N = {
     "media.ctaHeading": "Reciba el boletín semanal de taxonomías",
     "media.ctaText": "Un resumen semanal de noticias, informes e ideas de tendencias sobre taxonomías — gratis.",
     "media.ctaBtn": "Suscribirse gratis",
-    "country.backToMap": "Volver al mapa", "country.translatingContent": "Traduciendo el contenido de esta página…"
+    "country.backToMap": "Volver al mapa", "country.translatingContent": "Traduciendo el contenido de esta página…",
+    "chat.toggleLabel": "Preguntar al asistente de IA", "chat.title": "Asistente de IA",
+    "chat.subtitle": "Pregunte sobre términos de taxonomías, compare países, o encuentre lo que busca en el sitio.",
+    "chat.placeholder": "Escriba su pregunta…", "chat.send": "Enviar",
+    "chat.greeting": "¡Hola! Puedo explicar términos de taxonomías, comparar países, o indicarle la página correcta. ¿Qué desea saber?",
+    "chat.thinking": "Pensando…",
+    "chat.errorGeneric": "No se pudo contactar al asistente en este momento — inténtelo de nuevo.",
+    "chat.errorNotDeployed": "El asistente requiere el backend en vivo del sitio, que no está conectado aquí — esto solo funciona una vez que el sitio esté desplegado en Vercel con una clave de API (consulte DEPLOY_INSTRUCTIONS.md)."
   },
   fr: {
     "nav.map": "Carte mondiale interactive", "nav.advisor": "Conseiller IA", "nav.media": "Centre de médias",
@@ -436,7 +464,14 @@ const GST_I18N = {
     "media.ctaHeading": "Recevez la newsletter hebdomadaire sur les taxonomies",
     "media.ctaText": "Un résumé hebdomadaire des actualités, rapports et analyses de tendances sur les taxonomies — gratuit.",
     "media.ctaBtn": "S'abonner gratuitement",
-    "country.backToMap": "Retour à la carte", "country.translatingContent": "Traduction du contenu de cette page…"
+    "country.backToMap": "Retour à la carte", "country.translatingContent": "Traduction du contenu de cette page…",
+    "chat.toggleLabel": "Demander à l'assistant IA", "chat.title": "Assistant IA",
+    "chat.subtitle": "Posez des questions sur les termes de taxonomie, comparez des pays, ou trouvez votre chemin sur le site.",
+    "chat.placeholder": "Tapez votre question…", "chat.send": "Envoyer",
+    "chat.greeting": "Bonjour ! Je peux expliquer des termes de taxonomie, comparer des pays, ou vous indiquer la bonne page. Que souhaitez-vous savoir ?",
+    "chat.thinking": "Réflexion en cours…",
+    "chat.errorGeneric": "Impossible de joindre l'assistant pour le moment — veuillez réessayer.",
+    "chat.errorNotDeployed": "L'assistant nécessite le backend en direct du site, qui n'est pas connecté ici — cela ne fonctionne qu'une fois le site déployé sur Vercel avec une clé API (voir DEPLOY_INSTRUCTIONS.md)."
   },
   de: {
     "nav.map": "Interaktive Weltkarte", "nav.advisor": "KI-Berater", "nav.media": "Medien-Hub",
@@ -519,7 +554,14 @@ const GST_I18N = {
     "media.ctaHeading": "Den wöchentlichen Taxonomie-Newsletter erhalten",
     "media.ctaText": "Eine wöchentliche Zusammenfassung von Taxonomie-Neuigkeiten, Berichten und Trendeinblicken — kostenlos.",
     "media.ctaBtn": "Kostenlos abonnieren",
-    "country.backToMap": "Zurück zur Karte", "country.translatingContent": "Inhalt dieser Seite wird übersetzt…"
+    "country.backToMap": "Zurück zur Karte", "country.translatingContent": "Inhalt dieser Seite wird übersetzt…",
+    "chat.toggleLabel": "KI-Assistent fragen", "chat.title": "KI-Assistent",
+    "chat.subtitle": "Fragen Sie nach Taxonomiebegriffen, vergleichen Sie Länder, oder finden Sie sich auf der Website zurecht.",
+    "chat.placeholder": "Ihre Frage eingeben…", "chat.send": "Senden",
+    "chat.greeting": "Hallo! Ich kann Taxonomiebegriffe erklären, Länder vergleichen oder Ihnen die richtige Seite zeigen. Was möchten Sie wissen?",
+    "chat.thinking": "Denke nach…",
+    "chat.errorGeneric": "Der Assistent konnte gerade nicht erreicht werden — bitte versuchen Sie es erneut.",
+    "chat.errorNotDeployed": "Der Assistent benötigt das Live-Backend der Website, das hier nicht verbunden ist — dies funktioniert erst, wenn die Website mit einem API-Schlüssel auf Vercel bereitgestellt wurde (siehe DEPLOY_INSTRUCTIONS.md)."
   },
   ja: {
     "nav.map": "インタラクティブ・グローバルマップ", "nav.advisor": "AIアドバイザー", "nav.media": "メディアハブ",
@@ -602,7 +644,14 @@ const GST_I18N = {
     "media.ctaHeading": "週刊タクソノミーダイジェストを受け取る",
     "media.ctaText": "タクソノミーニュース、レポート、トレンドインサイトの週刊まとめ — 無料。",
     "media.ctaBtn": "無料で登録する",
-    "country.backToMap": "地図に戻る", "country.translatingContent": "このページのコンテンツを翻訳中…"
+    "country.backToMap": "地図に戻る", "country.translatingContent": "このページのコンテンツを翻訳中…",
+    "chat.toggleLabel": "AIアシスタントに質問", "chat.title": "AIアシスタント",
+    "chat.subtitle": "タクソノミー用語について質問したり、国を比較したり、サイト内の目的のページを見つけたりできます。",
+    "chat.placeholder": "質問を入力…", "chat.send": "送信",
+    "chat.greeting": "こんにちは！タクソノミー用語の説明、国の比較、適切なページのご案内ができます。何をお知りになりたいですか？",
+    "chat.thinking": "考え中…",
+    "chat.errorGeneric": "現在アシスタントに接続できませんでした — もう一度お試しください。",
+    "chat.errorNotDeployed": "アシスタントにはライブのサイトバックエンドが必要ですが、ここでは接続されていません — この機能はサイトがAPIキー付きでVercelにデプロイされた後にのみ動作します（DEPLOY_INSTRUCTIONS.mdを参照）。"
   },
   zh: {
     "nav.map": "全球互动地图", "nav.advisor": "AI 顾问", "nav.media": "媒体中心",
@@ -685,7 +734,14 @@ const GST_I18N = {
     "media.ctaHeading": "获取每周分类标准简报",
     "media.ctaText": "分类标准新闻、报告和趋势洞察的每周摘要——免费。",
     "media.ctaBtn": "免费订阅",
-    "country.backToMap": "返回地图", "country.translatingContent": "正在翻译此页面的内容…"
+    "country.backToMap": "返回地图", "country.translatingContent": "正在翻译此页面的内容…",
+    "chat.toggleLabel": "咨询 AI 助手", "chat.title": "AI 助手",
+    "chat.subtitle": "询问分类标准术语、比较各国情况，或在网站中找到您需要的内容。",
+    "chat.placeholder": "输入您的问题…", "chat.send": "发送",
+    "chat.greeting": "您好！我可以解释分类标准术语、比较各国情况，或为您指引正确的页面。您想了解什么？",
+    "chat.thinking": "思考中…",
+    "chat.errorGeneric": "暂时无法连接助手——请重试。",
+    "chat.errorNotDeployed": "助手需要网站的实时后端支持，但此处尚未连接——只有在网站部署到 Vercel 并配置 API 密钥后才能使用（请参阅 DEPLOY_INSTRUCTIONS.md）。"
   },
   ar: {
     "nav.map": "الخريطة العالمية التفاعلية", "nav.advisor": "المستشار الذكي", "nav.media": "مركز الوسائط",
@@ -768,7 +824,14 @@ const GST_I18N = {
     "media.ctaHeading": "احصل على النشرة الأسبوعية للتصنيفات",
     "media.ctaText": "ملخص أسبوعي لأخبار التصنيفات والتقارير ورؤى الاتجاهات — مجانًا.",
     "media.ctaBtn": "اشترك مجانًا",
-    "country.backToMap": "العودة إلى الخريطة", "country.translatingContent": "جارٍ ترجمة محتوى هذه الصفحة…"
+    "country.backToMap": "العودة إلى الخريطة", "country.translatingContent": "جارٍ ترجمة محتوى هذه الصفحة…",
+    "chat.toggleLabel": "اسأل مساعد الذكاء الاصطناعي", "chat.title": "مساعد الذكاء الاصطناعي",
+    "chat.subtitle": "اسأل عن مصطلحات التصنيف، أو قارن بين الدول، أو ابحث عن طريقك في الموقع.",
+    "chat.placeholder": "اكتب سؤالك…", "chat.send": "إرسال",
+    "chat.greeting": "مرحبًا! يمكنني شرح مصطلحات التصنيف، ومقارنة الدول، وتوجيهك إلى الصفحة الصحيحة. بماذا تود أن تعرف؟",
+    "chat.thinking": "جارٍ التفكير…",
+    "chat.errorGeneric": "تعذّر الوصول إلى المساعد في الوقت الحالي — يرجى المحاولة مرة أخرى.",
+    "chat.errorNotDeployed": "يتطلب المساعد الخادم الفعلي للموقع، وهو غير متصل هنا — لن يعمل هذا إلا بعد نشر الموقع على Vercel بمفتاح API (راجع DEPLOY_INSTRUCTIONS.md)."
   },
   pt: {
     "nav.map": "Mapa Global Interativo", "nav.advisor": "Consultor de IA", "nav.media": "Central de Mídia",
@@ -851,7 +914,14 @@ const GST_I18N = {
     "media.ctaHeading": "Receba o Resumo Semanal de Taxonomias",
     "media.ctaText": "Um resumo semanal de notícias, relatórios e insights de tendências sobre taxonomias — gratuito.",
     "media.ctaBtn": "Inscrever-se Gratuitamente",
-    "country.backToMap": "Voltar ao mapa", "country.translatingContent": "Traduzindo o conteúdo desta página…"
+    "country.backToMap": "Voltar ao mapa", "country.translatingContent": "Traduzindo o conteúdo desta página…",
+    "chat.toggleLabel": "Perguntar ao assistente de IA", "chat.title": "Assistente de IA",
+    "chat.subtitle": "Pergunte sobre termos de taxonomia, compare países, ou encontre o que procura no site.",
+    "chat.placeholder": "Digite sua pergunta…", "chat.send": "Enviar",
+    "chat.greeting": "Olá! Posso explicar termos de taxonomia, comparar países, ou indicar a página certa. O que gostaria de saber?",
+    "chat.thinking": "Pensando…",
+    "chat.errorGeneric": "Não foi possível contatar o assistente agora — tente novamente.",
+    "chat.errorNotDeployed": "O assistente requer o backend do site em produção, que não está conectado aqui — isso só funciona quando o site está implantado no Vercel com uma chave de API (consulte DEPLOY_INSTRUCTIONS.md)."
   }
 };
 
@@ -951,12 +1021,147 @@ function gstSetupGlobalSearch() {
   document.getElementById("globalSearchInput").addEventListener("input", e => gstRunSearch(e.target.value));
 }
 
+/* ---------- Sitewide AI Assistant (persistent chat widget, on every page) ---------- */
+
+let gstChatHistory = [];
+let gstChatOpen = false;
+let gstChatBusy = false;
+
+function gstEscapeHtml(s) {
+  return String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+}
+
+function gstChatWidgetHtml() {
+  return `
+    <button type="button" id="gstChatToggle" class="gst-chat-toggle" data-i18n-title="chat.toggleLabel" title="Ask the AI Assistant" aria-label="Ask the AI Assistant">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+    </button>
+    <div id="gstChatPanel" class="gst-chat-panel" aria-hidden="true">
+      <div class="gst-chat-header">
+        <span data-i18n="chat.title">AI Assistant</span>
+        <button type="button" id="gstChatCloseBtn" class="icon-btn" data-i18n-title="translate.close" title="Close" aria-label="Close">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <p class="gst-chat-subtitle" data-i18n="chat.subtitle">Ask about taxonomy terms, compare countries, or find your way around the site.</p>
+      <div class="gst-chat-log" id="gstChatLog"></div>
+      <form class="gst-chat-input-row" id="gstChatForm">
+        <input type="text" id="gstChatInput" data-i18n-placeholder="chat.placeholder" placeholder="Type your question…" autocomplete="off" />
+        <button type="submit" id="gstChatSendBtn" data-i18n="chat.send">Send</button>
+      </form>
+    </div>
+  `;
+}
+
+function gstChatBubbleHtml(m) {
+  const cls = m.role === "user" ? "chat-msg-user" : "chat-msg-assistant";
+  const bubbleCls = "chat-bubble" + (m.pending ? " chat-bubble-pending" : "") + (m.error ? " chat-bubble-error" : "");
+  return `<div class="chat-msg ${cls}"><div class="${bubbleCls}">${gstEscapeHtml(m.content).replace(/\n/g, "<br>")}</div></div>`;
+}
+
+function gstRenderChatLog() {
+  const log = document.getElementById("gstChatLog");
+  if (!log) return;
+  if (!gstChatHistory.length) {
+    log.innerHTML = `<div class="chat-msg chat-msg-assistant"><div class="chat-bubble">${gstEscapeHtml(gstT("chat.greeting"))}</div></div>`;
+    return;
+  }
+  log.innerHTML = gstChatHistory.map(gstChatBubbleHtml).join("");
+  log.scrollTop = log.scrollHeight;
+}
+
+function gstOpenChat() {
+  const panel = document.getElementById("gstChatPanel");
+  const toggle = document.getElementById("gstChatToggle");
+  if (!panel) return;
+  panel.classList.add("open");
+  panel.setAttribute("aria-hidden", "false");
+  if (toggle) toggle.classList.add("open");
+  gstChatOpen = true;
+  gstRenderChatLog();
+  setTimeout(() => { const input = document.getElementById("gstChatInput"); if (input) input.focus(); }, 10);
+}
+
+function gstCloseChat() {
+  const panel = document.getElementById("gstChatPanel");
+  const toggle = document.getElementById("gstChatToggle");
+  if (panel) { panel.classList.remove("open"); panel.setAttribute("aria-hidden", "true"); }
+  if (toggle) toggle.classList.remove("open");
+  gstChatOpen = false;
+}
+
+async function gstSendChatMessage(question) {
+  if (gstChatBusy || !question) return;
+  gstChatBusy = true;
+  const sendBtn = document.getElementById("gstChatSendBtn");
+  if (sendBtn) sendBtn.disabled = true;
+
+  gstChatHistory.push({ role: "user", content: question });
+  gstChatHistory.push({ role: "assistant", content: gstT("chat.thinking"), pending: true });
+  gstRenderChatLog();
+
+  const historyForApi = gstChatHistory.slice(0, -2).map(m => ({ role: m.role, content: m.content }));
+
+  try {
+    const res = await fetch("/api/ask", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ question, history: historyForApi, lang: gstCurrentLang })
+    });
+    let data;
+    try { data = await res.json(); } catch (e) { data = {}; }
+
+    gstChatHistory.pop();
+    if (!res.ok) {
+      const upstreamMsg = (data && data.error) || "";
+      const msg = /ANTHROPIC_API_KEY|backend/i.test(upstreamMsg) ? gstT("chat.errorNotDeployed") : (upstreamMsg || gstT("chat.errorGeneric"));
+      gstChatHistory.push({ role: "assistant", content: msg, error: true });
+    } else {
+      gstChatHistory.push({ role: "assistant", content: data.answer || "(no response)" });
+    }
+  } catch (err) {
+    gstChatHistory.pop();
+    gstChatHistory.push({ role: "assistant", content: gstT("chat.errorNotDeployed"), error: true });
+  }
+
+  gstRenderChatLog();
+  gstChatBusy = false;
+  if (sendBtn) sendBtn.disabled = false;
+}
+
+function gstSetupChatWidget() {
+  if (document.getElementById("gstChatToggle")) return;
+  const wrap = document.createElement("div");
+  wrap.className = "gst-chat-wrap";
+  wrap.innerHTML = gstChatWidgetHtml();
+  document.body.appendChild(wrap);
+
+  document.getElementById("gstChatToggle").addEventListener("click", () => {
+    if (gstChatOpen) gstCloseChat(); else gstOpenChat();
+  });
+  document.getElementById("gstChatCloseBtn").addEventListener("click", gstCloseChat);
+  document.getElementById("gstChatForm").addEventListener("submit", e => {
+    e.preventDefault();
+    const input = document.getElementById("gstChatInput");
+    const question = input.value.trim();
+    if (!question) return;
+    input.value = "";
+    gstSendChatMessage(question);
+  });
+  document.addEventListener("keydown", e => {
+    if (e.key === "Escape" && gstChatOpen) gstCloseChat();
+  });
+  document.addEventListener("gst-lang-changed", () => { if (gstChatOpen) gstRenderChatLog(); });
+}
+
 function gstInit() {
   const saved = localStorage.getItem("gst-lang");
   if (saved && GST_I18N[saved]) gstCurrentLang = saved;
   gstSetupLangSelector();
   gstApplyI18n();
   gstSetupGlobalSearch();
+  gstSetupChatWidget();
+  gstApplyI18n();
 }
 
 document.addEventListener("DOMContentLoaded", gstInit);

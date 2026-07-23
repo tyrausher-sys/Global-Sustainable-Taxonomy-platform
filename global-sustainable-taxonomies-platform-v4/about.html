@@ -471,6 +471,53 @@ button.chip.active { background: var(--green); border-color: var(--green); color
 .leaflet-interactive { cursor: pointer; }
 .leaflet-popup-content-wrapper { border-radius: 12px; }
 
+/* ---------- Advanced Search & Filtering (collapsible, below the map) ---------- */
+.advanced-filter-section { margin-top: 18px; }
+.advanced-filter-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 10px 16px;
+  font-family: inherit;
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--text);
+  cursor: pointer;
+  width: 100%;
+  justify-content: space-between;
+}
+.advanced-filter-toggle:hover { background: var(--bg-soft); }
+.advanced-filter-toggle .chevron { transition: transform 0.15s ease; flex-shrink: 0; }
+.advanced-filter-toggle.open .chevron { transform: rotate(180deg); }
+.advanced-filter-panel {
+  display: none;
+  gap: 20px;
+  flex-wrap: wrap;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-top: none;
+  border-radius: 0 0 var(--radius-md) var(--radius-md);
+  padding: 16px;
+  margin-top: -1px;
+}
+.advanced-filter-panel.open { display: flex; }
+.advanced-filter-field { flex: 1; min-width: 220px; display: flex; flex-direction: column; gap: 6px; }
+.advanced-filter-field label { font-size: 0.78rem; font-weight: 600; color: var(--text-muted); }
+.advanced-filter-field select {
+  height: 38px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 0.86rem;
+  padding: 0 10px;
+  cursor: pointer;
+}
+
 /* ---------- Stats sidebar ---------- */
 .stats-sidebar {
   flex: 1;
@@ -524,6 +571,13 @@ button.chip.active { background: var(--green); border-color: var(--green); color
   font-size: 0.78rem;
   color: var(--text-muted);
 }
+
+.filtered-section { display: none; }
+.filtered-section.show { display: block; }
+.filtered-count { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 6px; }
+.filtered-list { max-height: 320px; overflow-y: auto; }
+.filtered-list .badge-sm { margin-top: 3px; }
+.filtered-note { font-size: 0.72rem; color: var(--text-muted); margin: 10px 0 0; line-height: 1.4; }
 .recent-sub span:first-child { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .recent-date { white-space: nowrap; flex-shrink: 0; }
 
@@ -1326,6 +1380,120 @@ button.chip.active { background: var(--green); border-color: var(--green); color
   .team-grid { grid-template-columns: 1fr; }
   .bnz-section { flex-direction: column; align-items: center; text-align: center; }
   .contact-cta-inner { flex-direction: column; text-align: center; }
+}
+
+/* ---------- Sitewide AI Assistant (persistent chat widget) ---------- */
+
+.gst-chat-toggle {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 900;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: none;
+  background: var(--navy);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.28);
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+.gst-chat-toggle:hover { transform: translateY(-2px); background: var(--green); }
+.gst-chat-toggle.open { background: var(--green); }
+[data-theme="dark"] .gst-chat-toggle { box-shadow: 0 4px 18px rgba(0, 0, 0, 0.5); }
+
+.gst-chat-panel {
+  position: fixed;
+  bottom: 92px;
+  right: 24px;
+  z-index: 900;
+  width: 340px;
+  max-width: calc(100vw - 32px);
+  height: 460px;
+  max-height: calc(100vh - 140px);
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow), 0 12px 32px rgba(15, 23, 42, 0.18);
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+}
+.gst-chat-panel.open { display: flex; }
+
+.gst-chat-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  background: var(--navy);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.92rem;
+  flex-shrink: 0;
+}
+.gst-chat-header .icon-btn { color: #fff; }
+
+.gst-chat-subtitle {
+  font-size: 0.76rem;
+  color: var(--text-muted);
+  padding: 10px 14px 0;
+  margin: 0;
+  line-height: 1.4;
+  flex-shrink: 0;
+}
+
+.gst-chat-log {
+  flex: 1;
+  overflow-y: auto;
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.gst-chat-input-row {
+  display: flex;
+  gap: 8px;
+  padding: 10px 12px;
+  border-top: 1px solid var(--border);
+  flex-shrink: 0;
+}
+.gst-chat-input-row input {
+  flex: 1;
+  height: 38px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 0.84rem;
+  padding: 0 10px;
+}
+.gst-chat-input-row input:focus { outline: none; border-color: var(--green); }
+.gst-chat-input-row button {
+  flex-shrink: 0;
+  height: 38px;
+  padding: 0 16px;
+  border-radius: 8px;
+  border: none;
+  background: var(--green);
+  color: #fff;
+  font-family: inherit;
+  font-size: 0.84rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.gst-chat-input-row button:hover { opacity: 0.9; }
+.gst-chat-input-row button:disabled { opacity: 0.6; cursor: default; }
+
+@media (max-width: 480px) {
+  .gst-chat-panel { right: 16px; bottom: 84px; width: calc(100vw - 32px); }
+  .gst-chat-toggle { right: 16px; bottom: 16px; }
 }
 
 </style>
@@ -11836,6 +12004,18 @@ const GST_I18N = {
     "home.chipUnderDevelopment": "Under Development", "home.chipNoTaxonomy": "No Taxonomy",
     "home.globalStats": "Global Stats", "home.totalCountriesTracked": "Total Countries Tracked",
     "home.recentlyUpdated": "Recently Updated", "home.askAi": "Ask AI",
+    "home.objectiveFilterHeading": "Filter by Environmental Objective", "home.sectorFilterHeading": "Filter by Sector",
+    "home.advancedFiltersToggle": "Advanced Search & Filtering",
+    "home.objAll": "All Objectives", "home.objClimateMitigation": "Climate Change Mitigation", "home.objClimateAdaptation": "Climate Change Adaptation",
+    "home.objBiodiversity": "Biodiversity & Ecosystems", "home.objWater": "Water & Marine Resources", "home.objCircular": "Circular Economy",
+    "home.objPollution": "Pollution Prevention", "home.objEnergy": "Energy", "home.objIndustry": "Industry & Transition",
+    "home.secAll": "All Sectors", "home.secAgriculture": "Agriculture", "home.secBuildings": "Buildings",
+    "home.secEcologicalRestoration": "Ecological Restoration", "home.secEnergy": "Energy", "home.secEnergyTransition": "Energy Transition",
+    "home.secEnvironmentalProtection": "Environmental Protection", "home.secGreenServicesTrade": "Green Services & Trade", "home.secICTDigital": "ICT & Digital",
+    "home.secInfrastructure": "Infrastructure", "home.secManufacturing": "Manufacturing", "home.secNuclearTransition": "Nuclear & Transition Industries",
+    "home.secResourceRecycling": "Resource Recycling", "home.secTransport": "Transport", "home.secWasteManagement": "Waste Management", "home.secWater": "Water",
+    "home.matchingCountriesHeading": "Matching Countries", "home.noMatchingCountries": "No countries match these filters yet.",
+    "home.partialDataNote": "Objective and sector filters currently match against the countries we've compiled this detail for so far — others may not appear here yet even if their taxonomy could cover it.",
     "about.missionHeading": "About the Platform",
     "about.missionText": "Sustainable finance taxonomies — the rulebooks that define which economic activities count as \"green\" or \"sustainable\" — are multiplying fast, but they're scattered across dozens of government websites, PDFs and languages. Anyone trying to compare the EU Taxonomy with Korea's K-Taxonomy, or check whether a given activity is covered anywhere, has to piece it together by hand. This platform brings that information into one interactive place: a map of where taxonomies stand today, side-by-side comparisons, direct links to the original official documents, and an AI advisor to answer specific questions — so regulators, investors and companies can navigate the landscape faster and with fewer blind spots.",
     "about.featurePill1": "Interactive Global Map", "about.featurePill2": "AI Taxonomy Advisor",
@@ -11881,7 +12061,14 @@ const GST_I18N = {
     "media.ctaHeading": "Get the Weekly Taxonomy Digest",
     "media.ctaText": "A weekly summary of taxonomy news, reports and trend insights — free.",
     "media.ctaBtn": "Subscribe Free",
-    "country.backToMap": "Back to map", "country.translatingContent": "Translating this page's content…"
+    "country.backToMap": "Back to map", "country.translatingContent": "Translating this page's content…",
+    "chat.toggleLabel": "Ask the AI Assistant", "chat.title": "AI Assistant",
+    "chat.subtitle": "Ask about taxonomy terms, compare countries, or find your way around the site.",
+    "chat.placeholder": "Type your question…", "chat.send": "Send",
+    "chat.greeting": "Hi! I can explain taxonomy terms, compare countries, or point you to the right page. What would you like to know?",
+    "chat.thinking": "Thinking…",
+    "chat.errorGeneric": "Couldn't reach the assistant right now — please try again.",
+    "chat.errorNotDeployed": "The assistant needs the live site backend, which isn't connected here — this only works once the site is deployed to Vercel with an API key (see DEPLOY_INSTRUCTIONS.md)."
   },
   sv: {
     "nav.map": "Interaktiv global karta", "nav.advisor": "AI-rådgivare", "nav.media": "Mediehubb",
@@ -11907,6 +12094,18 @@ const GST_I18N = {
     "home.chipUnderDevelopment": "Under utveckling", "home.chipNoTaxonomy": "Ingen taxonomi",
     "home.globalStats": "Global statistik", "home.totalCountriesTracked": "Totalt antal länder som bevakas",
     "home.recentlyUpdated": "Senast uppdaterat", "home.askAi": "Fråga AI",
+    "home.objectiveFilterHeading": "Filtrera på miljömål", "home.sectorFilterHeading": "Filtrera på sektor",
+    "home.advancedFiltersToggle": "Avancerad sökning & filtrering",
+    "home.objAll": "Alla miljömål", "home.objClimateMitigation": "Begränsning av klimatförändringar", "home.objClimateAdaptation": "Klimatanpassning",
+    "home.objBiodiversity": "Biologisk mångfald & ekosystem", "home.objWater": "Vatten- & marina resurser", "home.objCircular": "Cirkulär ekonomi",
+    "home.objPollution": "Förebyggande av föroreningar", "home.objEnergy": "Energi", "home.objIndustry": "Industri & omställning",
+    "home.secAll": "Alla sektorer", "home.secAgriculture": "Jordbruk", "home.secBuildings": "Byggnader",
+    "home.secEcologicalRestoration": "Ekologisk restaurering", "home.secEnergy": "Energi", "home.secEnergyTransition": "Energiomställning",
+    "home.secEnvironmentalProtection": "Miljöskydd", "home.secGreenServicesTrade": "Gröna tjänster & handel", "home.secICTDigital": "IKT & digitalt",
+    "home.secInfrastructure": "Infrastruktur", "home.secManufacturing": "Tillverkning", "home.secNuclearTransition": "Kärnkraft & omställningsindustrier",
+    "home.secResourceRecycling": "Materialåtervinning", "home.secTransport": "Transport", "home.secWasteManagement": "Avfallshantering", "home.secWater": "Vatten",
+    "home.matchingCountriesHeading": "Matchande länder", "home.noMatchingCountries": "Inga länder matchar dessa filter än.",
+    "home.partialDataNote": "Filter för miljömål och sektor matchar just nu bara mot de länder vi hittills sammanställt den detaljnivån för — andra kanske inte visas här än, även om deras taxonomi skulle kunna täcka det.",
     "about.missionHeading": "Om plattformen",
     "about.missionText": "Taxonomier för hållbar finansiering — regelverken som definierar vilka ekonomiska aktiviteter som räknas som \"gröna\" eller \"hållbara\" — växer snabbt i antal, men är utspridda över dussintals myndighetswebbplatser, PDF:er och språk. Den som vill jämföra EU-taxonomin med Koreas K-Taxonomy, eller kontrollera om en viss aktivitet omfattas någonstans, måste pussla ihop det för hand. Den här plattformen samlar informationen på ett interaktivt ställe: en karta över var taxonomier står idag, sida-vid-sida-jämförelser, direkta länkar till de officiella originaldokumenten, och en AI-rådgivare som svarar på specifika frågor — så att tillsynsmyndigheter, investerare och företag kan navigera snabbare och med färre blinda fläckar.",
     "about.featurePill1": "Interaktiv global karta", "about.featurePill2": "AI-taxonomirådgivare",
@@ -11952,7 +12151,14 @@ const GST_I18N = {
     "media.ctaHeading": "Få veckans taxonomibrev",
     "media.ctaText": "En veckovis sammanfattning av taxonominyheter, rapporter och trendinsikter — gratis.",
     "media.ctaBtn": "Prenumerera gratis",
-    "country.backToMap": "Tillbaka till kartan", "country.translatingContent": "Översätter sidans innehåll…"
+    "country.backToMap": "Tillbaka till kartan", "country.translatingContent": "Översätter sidans innehåll…",
+    "chat.toggleLabel": "Fråga AI-assistenten", "chat.title": "AI-assistent",
+    "chat.subtitle": "Fråga om taxonomibegrepp, jämför länder, eller hitta rätt på sajten.",
+    "chat.placeholder": "Skriv din fråga…", "chat.send": "Skicka",
+    "chat.greeting": "Hej! Jag kan förklara taxonomibegrepp, jämföra länder, eller visa dig rätt sida. Vad vill du veta?",
+    "chat.thinking": "Tänker…",
+    "chat.errorGeneric": "Kunde inte nå assistenten just nu — försök igen.",
+    "chat.errorNotDeployed": "Assistenten kräver den live serverdelen, som inte är ansluten här — detta fungerar först när webbplatsen är driftsatt på Vercel med en API-nyckel (se DEPLOY_INSTRUCTIONS.md)."
   },
   ko: {
     "nav.map": "인터랙티브 글로벌 지도", "nav.advisor": "AI 어드바이저", "nav.media": "미디어 허브",
@@ -11978,6 +12184,18 @@ const GST_I18N = {
     "home.chipUnderDevelopment": "개발 중", "home.chipNoTaxonomy": "택소노미 없음",
     "home.globalStats": "글로벌 통계", "home.totalCountriesTracked": "추적 중인 총 국가 수",
     "home.recentlyUpdated": "최근 업데이트", "home.askAi": "AI에게 질문",
+    "home.objectiveFilterHeading": "환경 목표별 필터", "home.sectorFilterHeading": "부문별 필터",
+    "home.advancedFiltersToggle": "고급 검색 및 필터링",
+    "home.objAll": "모든 환경 목표", "home.objClimateMitigation": "기후변화 완화", "home.objClimateAdaptation": "기후변화 적응",
+    "home.objBiodiversity": "생물다양성 및 생태계", "home.objWater": "수자원 및 해양자원", "home.objCircular": "순환 경제",
+    "home.objPollution": "오염 방지", "home.objEnergy": "에너지", "home.objIndustry": "산업 및 전환",
+    "home.secAll": "모든 부문", "home.secAgriculture": "농업", "home.secBuildings": "건물",
+    "home.secEcologicalRestoration": "생태 복원", "home.secEnergy": "에너지", "home.secEnergyTransition": "에너지 전환",
+    "home.secEnvironmentalProtection": "환경 보호", "home.secGreenServicesTrade": "녹색 서비스 및 무역", "home.secICTDigital": "ICT 및 디지털",
+    "home.secInfrastructure": "인프라", "home.secManufacturing": "제조업", "home.secNuclearTransition": "원자력 및 전환 산업",
+    "home.secResourceRecycling": "자원 재활용", "home.secTransport": "운송", "home.secWasteManagement": "폐기물 관리", "home.secWater": "수자원",
+    "home.matchingCountriesHeading": "일치하는 국가", "home.noMatchingCountries": "아직 이 필터와 일치하는 국가가 없습니다.",
+    "home.partialDataNote": "환경 목표 및 부문 필터는 현재까지 해당 세부 정보를 수집한 국가에 한해 적용됩니다 — 택소노미가 해당 분야를 다루더라도 아직 여기 표시되지 않을 수 있습니다.",
     "about.missionHeading": "플랫폼 소개",
     "about.missionText": "어떤 경제 활동이 \"녹색\" 또는 \"지속가능\"한지 정의하는 규칙집인 지속가능금융 택소노미는 빠르게 늘어나고 있지만, 수십 개의 정부 웹사이트와 PDF, 언어에 흩어져 있습니다. EU 택소노미와 한국의 K-택소노미를 비교하거나 특정 활동이 어딘가에서 다뤄지는지 확인하려는 사람은 이를 직접 손으로 짜맞춰야 합니다. 이 플랫폼은 그 정보를 하나의 인터랙티브한 공간으로 모읍니다: 오늘날 택소노미의 현황을 보여주는 지도, 나란히 비교, 공식 원문 문서로의 직접 링크, 그리고 구체적인 질문에 답하는 AI 어드바이저까지 — 규제 기관, 투자자, 기업이 더 빠르고 사각지대 없이 이 지형을 탐색할 수 있도록 돕습니다.",
     "about.featurePill1": "인터랙티브 글로벌 지도", "about.featurePill2": "AI 택소노미 어드바이저",
@@ -12023,7 +12241,14 @@ const GST_I18N = {
     "media.ctaHeading": "주간 택소노미 다이제스트 받기",
     "media.ctaText": "택소노미 뉴스, 보고서, 트렌드 인사이트를 담은 주간 요약 — 무료입니다.",
     "media.ctaBtn": "무료로 구독하기",
-    "country.backToMap": "지도로 돌아가기", "country.translatingContent": "이 페이지의 콘텐츠를 번역하는 중…"
+    "country.backToMap": "지도로 돌아가기", "country.translatingContent": "이 페이지의 콘텐츠를 번역하는 중…",
+    "chat.toggleLabel": "AI 어시스턴트에게 질문", "chat.title": "AI 어시스턴트",
+    "chat.subtitle": "택소노미 용어를 질문하거나, 국가를 비교하거나, 사이트 내 원하는 곳을 찾아보세요.",
+    "chat.placeholder": "질문을 입력하세요…", "chat.send": "전송",
+    "chat.greeting": "안녕하세요! 택소노미 용어 설명, 국가 비교, 또는 원하는 페이지 안내를 도와드릴 수 있습니다. 무엇이 궁금하신가요?",
+    "chat.thinking": "생각 중…",
+    "chat.errorGeneric": "지금은 어시스턴트에 연결할 수 없습니다 — 다시 시도해 주세요.",
+    "chat.errorNotDeployed": "어시스턴트는 실제 서버 백엔드가 필요하지만 현재 연결되어 있지 않습니다 — 이 기능은 사이트가 API 키와 함께 Vercel에 배포된 후에만 작동합니다(DEPLOY_INSTRUCTIONS.md 참고)."
   },
   es: {
     "nav.map": "Mapa Global Interactivo", "nav.advisor": "Asesor de IA", "nav.media": "Centro de Medios",
@@ -12049,6 +12274,18 @@ const GST_I18N = {
     "home.chipUnderDevelopment": "En desarrollo", "home.chipNoTaxonomy": "Sin taxonomía",
     "home.globalStats": "Estadísticas globales", "home.totalCountriesTracked": "Total de países monitoreados",
     "home.recentlyUpdated": "Actualizado recientemente", "home.askAi": "Preguntar a la IA",
+    "home.objectiveFilterHeading": "Filtrar por objetivo ambiental", "home.sectorFilterHeading": "Filtrar por sector",
+    "home.advancedFiltersToggle": "Búsqueda y filtrado avanzados",
+    "home.objAll": "Todos los objetivos", "home.objClimateMitigation": "Mitigación del cambio climático", "home.objClimateAdaptation": "Adaptación al cambio climático",
+    "home.objBiodiversity": "Biodiversidad y ecosistemas", "home.objWater": "Recursos hídricos y marinos", "home.objCircular": "Economía circular",
+    "home.objPollution": "Prevención de la contaminación", "home.objEnergy": "Energía", "home.objIndustry": "Industria y transición",
+    "home.secAll": "Todos los sectores", "home.secAgriculture": "Agricultura", "home.secBuildings": "Edificios",
+    "home.secEcologicalRestoration": "Restauración ecológica", "home.secEnergy": "Energía", "home.secEnergyTransition": "Transición energética",
+    "home.secEnvironmentalProtection": "Protección ambiental", "home.secGreenServicesTrade": "Servicios verdes y comercio", "home.secICTDigital": "TIC y digital",
+    "home.secInfrastructure": "Infraestructura", "home.secManufacturing": "Manufactura", "home.secNuclearTransition": "Nuclear e industrias de transición",
+    "home.secResourceRecycling": "Reciclaje de recursos", "home.secTransport": "Transporte", "home.secWasteManagement": "Gestión de residuos", "home.secWater": "Agua",
+    "home.matchingCountriesHeading": "Países coincidentes", "home.noMatchingCountries": "Ningún país coincide todavía con estos filtros.",
+    "home.partialDataNote": "Los filtros de objetivo y sector actualmente solo coinciden con los países para los que hemos compilado este nivel de detalle — otros pueden no aparecer aquí todavía aunque su taxonomía podría cubrirlo.",
     "about.missionHeading": "Sobre la plataforma",
     "about.missionText": "Las taxonomías de finanzas sostenibles — los reglamentos que definen qué actividades económicas cuentan como \"verdes\" o \"sostenibles\" — se multiplican rápidamente, pero están dispersas en docenas de sitios web gubernamentales, PDFs e idiomas. Cualquiera que intente comparar la Taxonomía de la UE con la K-Taxonomy de Corea, o verificar si una actividad determinada está cubierta en algún lugar, tiene que armarlo a mano. Esta plataforma reúne esa información en un solo lugar interactivo: un mapa de dónde se encuentran hoy las taxonomías, comparaciones lado a lado, enlaces directos a los documentos oficiales originales, y un asesor de IA para responder preguntas específicas — para que reguladores, inversores y empresas puedan navegar el panorama más rápido y con menos puntos ciegos.",
     "about.featurePill1": "Mapa Global Interactivo", "about.featurePill2": "Asesor de Taxonomías IA",
@@ -12094,7 +12331,14 @@ const GST_I18N = {
     "media.ctaHeading": "Reciba el boletín semanal de taxonomías",
     "media.ctaText": "Un resumen semanal de noticias, informes e ideas de tendencias sobre taxonomías — gratis.",
     "media.ctaBtn": "Suscribirse gratis",
-    "country.backToMap": "Volver al mapa", "country.translatingContent": "Traduciendo el contenido de esta página…"
+    "country.backToMap": "Volver al mapa", "country.translatingContent": "Traduciendo el contenido de esta página…",
+    "chat.toggleLabel": "Preguntar al asistente de IA", "chat.title": "Asistente de IA",
+    "chat.subtitle": "Pregunte sobre términos de taxonomías, compare países, o encuentre lo que busca en el sitio.",
+    "chat.placeholder": "Escriba su pregunta…", "chat.send": "Enviar",
+    "chat.greeting": "¡Hola! Puedo explicar términos de taxonomías, comparar países, o indicarle la página correcta. ¿Qué desea saber?",
+    "chat.thinking": "Pensando…",
+    "chat.errorGeneric": "No se pudo contactar al asistente en este momento — inténtelo de nuevo.",
+    "chat.errorNotDeployed": "El asistente requiere el backend en vivo del sitio, que no está conectado aquí — esto solo funciona una vez que el sitio esté desplegado en Vercel con una clave de API (consulte DEPLOY_INSTRUCTIONS.md)."
   },
   fr: {
     "nav.map": "Carte mondiale interactive", "nav.advisor": "Conseiller IA", "nav.media": "Centre de médias",
@@ -12120,6 +12364,18 @@ const GST_I18N = {
     "home.chipUnderDevelopment": "En développement", "home.chipNoTaxonomy": "Aucune taxonomie",
     "home.globalStats": "Statistiques globales", "home.totalCountriesTracked": "Total des pays suivis",
     "home.recentlyUpdated": "Récemment mis à jour", "home.askAi": "Demander à l'IA",
+    "home.objectiveFilterHeading": "Filtrer par objectif environnemental", "home.sectorFilterHeading": "Filtrer par secteur",
+    "home.advancedFiltersToggle": "Recherche et filtrage avancés",
+    "home.objAll": "Tous les objectifs", "home.objClimateMitigation": "Atténuation du changement climatique", "home.objClimateAdaptation": "Adaptation au changement climatique",
+    "home.objBiodiversity": "Biodiversité et écosystèmes", "home.objWater": "Ressources en eau et marines", "home.objCircular": "Économie circulaire",
+    "home.objPollution": "Prévention de la pollution", "home.objEnergy": "Énergie", "home.objIndustry": "Industrie et transition",
+    "home.secAll": "Tous les secteurs", "home.secAgriculture": "Agriculture", "home.secBuildings": "Bâtiments",
+    "home.secEcologicalRestoration": "Restauration écologique", "home.secEnergy": "Énergie", "home.secEnergyTransition": "Transition énergétique",
+    "home.secEnvironmentalProtection": "Protection de l'environnement", "home.secGreenServicesTrade": "Services verts et commerce", "home.secICTDigital": "TIC et numérique",
+    "home.secInfrastructure": "Infrastructure", "home.secManufacturing": "Fabrication", "home.secNuclearTransition": "Nucléaire et industries de transition",
+    "home.secResourceRecycling": "Recyclage des ressources", "home.secTransport": "Transport", "home.secWasteManagement": "Gestion des déchets", "home.secWater": "Eau",
+    "home.matchingCountriesHeading": "Pays correspondants", "home.noMatchingCountries": "Aucun pays ne correspond encore à ces filtres.",
+    "home.partialDataNote": "Les filtres d'objectif et de secteur ne correspondent actuellement qu'aux pays pour lesquels nous avons compilé ce niveau de détail — d'autres peuvent ne pas encore apparaître ici même si leur taxonomie pourrait le couvrir.",
     "about.missionHeading": "À propos de la plateforme",
     "about.missionText": "Les taxonomies de finance durable — les règlements qui définissent quelles activités économiques comptent comme \"vertes\" ou \"durables\" — se multiplient rapidement, mais sont dispersées sur des dizaines de sites web gouvernementaux, de PDF et de langues. Quiconque essaie de comparer la taxonomie de l'UE avec la K-Taxonomy coréenne, ou de vérifier si une activité donnée est couverte quelque part, doit reconstituer cela à la main. Cette plateforme rassemble ces informations en un seul endroit interactif : une carte de l'état actuel des taxonomies, des comparaisons côte à côte, des liens directs vers les documents officiels originaux, et un conseiller IA pour répondre à des questions précises — afin que les régulateurs, les investisseurs et les entreprises puissent naviguer plus rapidement dans ce paysage, avec moins d'angles morts.",
     "about.featurePill1": "Carte mondiale interactive", "about.featurePill2": "Conseiller en taxonomies IA",
@@ -12165,7 +12421,14 @@ const GST_I18N = {
     "media.ctaHeading": "Recevez la newsletter hebdomadaire sur les taxonomies",
     "media.ctaText": "Un résumé hebdomadaire des actualités, rapports et analyses de tendances sur les taxonomies — gratuit.",
     "media.ctaBtn": "S'abonner gratuitement",
-    "country.backToMap": "Retour à la carte", "country.translatingContent": "Traduction du contenu de cette page…"
+    "country.backToMap": "Retour à la carte", "country.translatingContent": "Traduction du contenu de cette page…",
+    "chat.toggleLabel": "Demander à l'assistant IA", "chat.title": "Assistant IA",
+    "chat.subtitle": "Posez des questions sur les termes de taxonomie, comparez des pays, ou trouvez votre chemin sur le site.",
+    "chat.placeholder": "Tapez votre question…", "chat.send": "Envoyer",
+    "chat.greeting": "Bonjour ! Je peux expliquer des termes de taxonomie, comparer des pays, ou vous indiquer la bonne page. Que souhaitez-vous savoir ?",
+    "chat.thinking": "Réflexion en cours…",
+    "chat.errorGeneric": "Impossible de joindre l'assistant pour le moment — veuillez réessayer.",
+    "chat.errorNotDeployed": "L'assistant nécessite le backend en direct du site, qui n'est pas connecté ici — cela ne fonctionne qu'une fois le site déployé sur Vercel avec une clé API (voir DEPLOY_INSTRUCTIONS.md)."
   },
   de: {
     "nav.map": "Interaktive Weltkarte", "nav.advisor": "KI-Berater", "nav.media": "Medien-Hub",
@@ -12191,6 +12454,18 @@ const GST_I18N = {
     "home.chipUnderDevelopment": "In Entwicklung", "home.chipNoTaxonomy": "Keine Taxonomie",
     "home.globalStats": "Globale Statistiken", "home.totalCountriesTracked": "Erfasste Länder insgesamt",
     "home.recentlyUpdated": "Kürzlich aktualisiert", "home.askAi": "KI fragen",
+    "home.objectiveFilterHeading": "Nach Umweltziel filtern", "home.sectorFilterHeading": "Nach Sektor filtern",
+    "home.advancedFiltersToggle": "Erweiterte Suche & Filterung",
+    "home.objAll": "Alle Umweltziele", "home.objClimateMitigation": "Klimaschutz", "home.objClimateAdaptation": "Anpassung an den Klimawandel",
+    "home.objBiodiversity": "Biodiversität & Ökosysteme", "home.objWater": "Wasser- & Meeresressourcen", "home.objCircular": "Kreislaufwirtschaft",
+    "home.objPollution": "Vermeidung von Umweltverschmutzung", "home.objEnergy": "Energie", "home.objIndustry": "Industrie & Transformation",
+    "home.secAll": "Alle Sektoren", "home.secAgriculture": "Landwirtschaft", "home.secBuildings": "Gebäude",
+    "home.secEcologicalRestoration": "Ökologische Wiederherstellung", "home.secEnergy": "Energie", "home.secEnergyTransition": "Energiewende",
+    "home.secEnvironmentalProtection": "Umweltschutz", "home.secGreenServicesTrade": "Grüne Dienstleistungen & Handel", "home.secICTDigital": "IKT & Digitales",
+    "home.secInfrastructure": "Infrastruktur", "home.secManufacturing": "Fertigung", "home.secNuclearTransition": "Kernenergie & Transformationsindustrien",
+    "home.secResourceRecycling": "Ressourcenrecycling", "home.secTransport": "Verkehr", "home.secWasteManagement": "Abfallwirtschaft", "home.secWater": "Wasser",
+    "home.matchingCountriesHeading": "Passende Länder", "home.noMatchingCountries": "Noch keine Länder entsprechen diesen Filtern.",
+    "home.partialDataNote": "Umweltziel- und Sektorfilter stimmen derzeit nur mit den Ländern überein, für die wir diese Detailtiefe bereits zusammengestellt haben — andere erscheinen hier möglicherweise noch nicht, auch wenn ihre Taxonomie dies abdecken könnte.",
     "about.missionHeading": "Über die Plattform",
     "about.missionText": "Taxonomien für nachhaltige Finanzen — die Regelwerke, die festlegen, welche Wirtschaftstätigkeiten als \"grün\" oder \"nachhaltig\" gelten — vermehren sich rasant, sind aber über Dutzende Regierungswebsites, PDFs und Sprachen verstreut. Wer die EU-Taxonomie mit Koreas K-Taxonomy vergleichen oder prüfen möchte, ob eine bestimmte Aktivität irgendwo abgedeckt ist, muss dies mühsam von Hand zusammensetzen. Diese Plattform bringt diese Informationen an einem interaktiven Ort zusammen: eine Karte des aktuellen Stands der Taxonomien, Vergleiche nebeneinander, direkte Links zu den offiziellen Originaldokumenten und einen KI-Berater für konkrete Fragen — damit Aufsichtsbehörden, Investoren und Unternehmen sich schneller und mit weniger blinden Flecken zurechtfinden.",
     "about.featurePill1": "Interaktive Weltkarte", "about.featurePill2": "KI-Taxonomie-Berater",
@@ -12236,7 +12511,14 @@ const GST_I18N = {
     "media.ctaHeading": "Den wöchentlichen Taxonomie-Newsletter erhalten",
     "media.ctaText": "Eine wöchentliche Zusammenfassung von Taxonomie-Neuigkeiten, Berichten und Trendeinblicken — kostenlos.",
     "media.ctaBtn": "Kostenlos abonnieren",
-    "country.backToMap": "Zurück zur Karte", "country.translatingContent": "Inhalt dieser Seite wird übersetzt…"
+    "country.backToMap": "Zurück zur Karte", "country.translatingContent": "Inhalt dieser Seite wird übersetzt…",
+    "chat.toggleLabel": "KI-Assistent fragen", "chat.title": "KI-Assistent",
+    "chat.subtitle": "Fragen Sie nach Taxonomiebegriffen, vergleichen Sie Länder, oder finden Sie sich auf der Website zurecht.",
+    "chat.placeholder": "Ihre Frage eingeben…", "chat.send": "Senden",
+    "chat.greeting": "Hallo! Ich kann Taxonomiebegriffe erklären, Länder vergleichen oder Ihnen die richtige Seite zeigen. Was möchten Sie wissen?",
+    "chat.thinking": "Denke nach…",
+    "chat.errorGeneric": "Der Assistent konnte gerade nicht erreicht werden — bitte versuchen Sie es erneut.",
+    "chat.errorNotDeployed": "Der Assistent benötigt das Live-Backend der Website, das hier nicht verbunden ist — dies funktioniert erst, wenn die Website mit einem API-Schlüssel auf Vercel bereitgestellt wurde (siehe DEPLOY_INSTRUCTIONS.md)."
   },
   ja: {
     "nav.map": "インタラクティブ・グローバルマップ", "nav.advisor": "AIアドバイザー", "nav.media": "メディアハブ",
@@ -12262,6 +12544,18 @@ const GST_I18N = {
     "home.chipUnderDevelopment": "開発中", "home.chipNoTaxonomy": "タクソノミーなし",
     "home.globalStats": "グローバル統計", "home.totalCountriesTracked": "追跡対象の総国数",
     "home.recentlyUpdated": "最近の更新", "home.askAi": "AIに質問",
+    "home.objectiveFilterHeading": "環境目標で絞り込み", "home.sectorFilterHeading": "分野で絞り込み",
+    "home.advancedFiltersToggle": "詳細検索・絞り込み",
+    "home.objAll": "すべての環境目標", "home.objClimateMitigation": "気候変動の緩和", "home.objClimateAdaptation": "気候変動への適応",
+    "home.objBiodiversity": "生物多様性と生態系", "home.objWater": "水資源・海洋資源", "home.objCircular": "循環経済",
+    "home.objPollution": "汚染防止", "home.objEnergy": "エネルギー", "home.objIndustry": "産業・移行",
+    "home.secAll": "すべての分野", "home.secAgriculture": "農業", "home.secBuildings": "建物",
+    "home.secEcologicalRestoration": "生態系の復元", "home.secEnergy": "エネルギー", "home.secEnergyTransition": "エネルギー転換",
+    "home.secEnvironmentalProtection": "環境保護", "home.secGreenServicesTrade": "グリーンサービス・貿易", "home.secICTDigital": "ICT・デジタル",
+    "home.secInfrastructure": "インフラ", "home.secManufacturing": "製造業", "home.secNuclearTransition": "原子力・移行産業",
+    "home.secResourceRecycling": "資源リサイクル", "home.secTransport": "運輸", "home.secWasteManagement": "廃棄物管理", "home.secWater": "水",
+    "home.matchingCountriesHeading": "該当する国", "home.noMatchingCountries": "この条件に該当する国はまだありません。",
+    "home.partialDataNote": "環境目標・分野フィルターは、現時点でこの詳細情報を収集済みの国のみに一致します — タクソノミーが対象としていても、まだここに表示されない国がある場合があります。",
     "about.missionHeading": "プラットフォームについて",
     "about.missionText": "どの経済活動が「グリーン」または「サステナブル」と見なされるかを定義するルールブックであるサステナブルファイナンス・タクソノミーは急速に増加していますが、数十もの政府ウェブサイト、PDF、言語に分散しています。EUタクソノミーと韓国のK-Taxonomyを比較したい人や、ある活動がどこかで対象となっているか確認したい人は、それを手作業でつなぎ合わせなければなりません。このプラットフォームは、その情報を一つのインタラクティブな場所に集約します。今日のタクソノミーの状況を示す地図、並列比較、公式原本文書への直接リンク、そして具体的な質問に答えるAIアドバイザーです。これにより、規制当局、投資家、企業がより速く、死角の少ない形でこの分野を進むことができます。",
     "about.featurePill1": "インタラクティブ・グローバルマップ", "about.featurePill2": "AIタクソノミー・アドバイザー",
@@ -12307,7 +12601,14 @@ const GST_I18N = {
     "media.ctaHeading": "週刊タクソノミーダイジェストを受け取る",
     "media.ctaText": "タクソノミーニュース、レポート、トレンドインサイトの週刊まとめ — 無料。",
     "media.ctaBtn": "無料で登録する",
-    "country.backToMap": "地図に戻る", "country.translatingContent": "このページのコンテンツを翻訳中…"
+    "country.backToMap": "地図に戻る", "country.translatingContent": "このページのコンテンツを翻訳中…",
+    "chat.toggleLabel": "AIアシスタントに質問", "chat.title": "AIアシスタント",
+    "chat.subtitle": "タクソノミー用語について質問したり、国を比較したり、サイト内の目的のページを見つけたりできます。",
+    "chat.placeholder": "質問を入力…", "chat.send": "送信",
+    "chat.greeting": "こんにちは！タクソノミー用語の説明、国の比較、適切なページのご案内ができます。何をお知りになりたいですか？",
+    "chat.thinking": "考え中…",
+    "chat.errorGeneric": "現在アシスタントに接続できませんでした — もう一度お試しください。",
+    "chat.errorNotDeployed": "アシスタントにはライブのサイトバックエンドが必要ですが、ここでは接続されていません — この機能はサイトがAPIキー付きでVercelにデプロイされた後にのみ動作します（DEPLOY_INSTRUCTIONS.mdを参照）。"
   },
   zh: {
     "nav.map": "全球互动地图", "nav.advisor": "AI 顾问", "nav.media": "媒体中心",
@@ -12333,6 +12634,18 @@ const GST_I18N = {
     "home.chipUnderDevelopment": "开发中", "home.chipNoTaxonomy": "无分类标准",
     "home.globalStats": "全球统计", "home.totalCountriesTracked": "追踪国家总数",
     "home.recentlyUpdated": "最近更新", "home.askAi": "咨询 AI",
+    "home.objectiveFilterHeading": "按环境目标筛选", "home.sectorFilterHeading": "按行业筛选",
+    "home.advancedFiltersToggle": "高级搜索与筛选",
+    "home.objAll": "所有环境目标", "home.objClimateMitigation": "气候变化减缓", "home.objClimateAdaptation": "气候变化适应",
+    "home.objBiodiversity": "生物多样性与生态系统", "home.objWater": "水资源与海洋资源", "home.objCircular": "循环经济",
+    "home.objPollution": "污染防治", "home.objEnergy": "能源", "home.objIndustry": "产业与转型",
+    "home.secAll": "所有行业", "home.secAgriculture": "农业", "home.secBuildings": "建筑",
+    "home.secEcologicalRestoration": "生态修复", "home.secEnergy": "能源", "home.secEnergyTransition": "能源转型",
+    "home.secEnvironmentalProtection": "环境保护", "home.secGreenServicesTrade": "绿色服务与贸易", "home.secICTDigital": "信息通信与数字化",
+    "home.secInfrastructure": "基础设施", "home.secManufacturing": "制造业", "home.secNuclearTransition": "核能与转型产业",
+    "home.secResourceRecycling": "资源回收", "home.secTransport": "交通运输", "home.secWasteManagement": "废物管理", "home.secWater": "水",
+    "home.matchingCountriesHeading": "匹配的国家", "home.noMatchingCountries": "目前没有国家符合这些筛选条件。",
+    "home.partialDataNote": "环境目标和行业筛选目前仅匹配我们已收集该详细信息的国家——即使某国分类标准可能涵盖该领域，也可能尚未在此显示。",
     "about.missionHeading": "关于本平台",
     "about.missionText": "可持续金融分类标准——定义哪些经济活动可被视为\"绿色\"或\"可持续\"的规则手册——正在迅速增加，但分散在数十个政府网站、PDF文件和不同语言中。任何想要比较欧盟分类标准与韩国K-Taxonomy，或想确认某项活动是否在任何地方被涵盖的人，都必须手动拼凑信息。本平台将这些信息汇集到一个互动空间中：一张展示当前各分类标准现状的地图、并排比较、指向官方原始文件的直接链接，以及一个可回答具体问题的AI顾问——让监管机构、投资者和企业能够更快、更少盲点地了解这一领域。",
     "about.featurePill1": "全球互动地图", "about.featurePill2": "AI 分类标准顾问",
@@ -12378,7 +12691,14 @@ const GST_I18N = {
     "media.ctaHeading": "获取每周分类标准简报",
     "media.ctaText": "分类标准新闻、报告和趋势洞察的每周摘要——免费。",
     "media.ctaBtn": "免费订阅",
-    "country.backToMap": "返回地图", "country.translatingContent": "正在翻译此页面的内容…"
+    "country.backToMap": "返回地图", "country.translatingContent": "正在翻译此页面的内容…",
+    "chat.toggleLabel": "咨询 AI 助手", "chat.title": "AI 助手",
+    "chat.subtitle": "询问分类标准术语、比较各国情况，或在网站中找到您需要的内容。",
+    "chat.placeholder": "输入您的问题…", "chat.send": "发送",
+    "chat.greeting": "您好！我可以解释分类标准术语、比较各国情况，或为您指引正确的页面。您想了解什么？",
+    "chat.thinking": "思考中…",
+    "chat.errorGeneric": "暂时无法连接助手——请重试。",
+    "chat.errorNotDeployed": "助手需要网站的实时后端支持，但此处尚未连接——只有在网站部署到 Vercel 并配置 API 密钥后才能使用（请参阅 DEPLOY_INSTRUCTIONS.md）。"
   },
   ar: {
     "nav.map": "الخريطة العالمية التفاعلية", "nav.advisor": "المستشار الذكي", "nav.media": "مركز الوسائط",
@@ -12404,6 +12724,18 @@ const GST_I18N = {
     "home.chipUnderDevelopment": "قيد التطوير", "home.chipNoTaxonomy": "لا يوجد تصنيف",
     "home.globalStats": "إحصاءات عالمية", "home.totalCountriesTracked": "إجمالي عدد البلدان المتابَعة",
     "home.recentlyUpdated": "آخر التحديثات", "home.askAi": "اسأل الذكاء الاصطناعي",
+    "home.objectiveFilterHeading": "تصفية حسب الهدف البيئي", "home.sectorFilterHeading": "تصفية حسب القطاع",
+    "home.advancedFiltersToggle": "بحث وتصفية متقدمة",
+    "home.objAll": "جميع الأهداف البيئية", "home.objClimateMitigation": "التخفيف من تغير المناخ", "home.objClimateAdaptation": "التكيف مع تغير المناخ",
+    "home.objBiodiversity": "التنوع البيولوجي والنظم البيئية", "home.objWater": "الموارد المائية والبحرية", "home.objCircular": "الاقتصاد الدائري",
+    "home.objPollution": "منع التلوث", "home.objEnergy": "الطاقة", "home.objIndustry": "الصناعة والتحول",
+    "home.secAll": "جميع القطاعات", "home.secAgriculture": "الزراعة", "home.secBuildings": "المباني",
+    "home.secEcologicalRestoration": "استعادة النظام البيئي", "home.secEnergy": "الطاقة", "home.secEnergyTransition": "التحول في الطاقة",
+    "home.secEnvironmentalProtection": "حماية البيئة", "home.secGreenServicesTrade": "الخدمات الخضراء والتجارة", "home.secICTDigital": "تقنية المعلومات والرقمنة",
+    "home.secInfrastructure": "البنية التحتية", "home.secManufacturing": "التصنيع", "home.secNuclearTransition": "الطاقة النووية وصناعات التحول",
+    "home.secResourceRecycling": "إعادة تدوير الموارد", "home.secTransport": "النقل", "home.secWasteManagement": "إدارة النفايات", "home.secWater": "المياه",
+    "home.matchingCountriesHeading": "الدول المطابقة", "home.noMatchingCountries": "لا توجد دول مطابقة لهذه الفلاتر بعد.",
+    "home.partialDataNote": "تطابق فلاتر الهدف البيئي والقطاع حاليًا فقط الدول التي جمعنا هذا المستوى من التفاصيل عنها حتى الآن — قد لا تظهر دول أخرى هنا بعد حتى لو كان تصنيفها يغطي ذلك.",
     "about.missionHeading": "عن المنصة",
     "about.missionText": "تتزايد تصنيفات التمويل المستدام - القواعد التي تحدد الأنشطة الاقتصادية التي تُعتبر \"خضراء\" أو \"مستدامة\" - بسرعة، لكنها متناثرة عبر عشرات المواقع الحكومية والملفات بصيغة PDF واللغات المختلفة. فأي شخص يحاول مقارنة تصنيف الاتحاد الأوروبي بتصنيف كوريا K-Taxonomy، أو التحقق مما إذا كان نشاط معين مشمولاً في أي مكان، يضطر إلى تجميع ذلك يدويًا. تجمع هذه المنصة تلك المعلومات في مكان تفاعلي واحد: خريطة توضح أين تقف التصنيفات اليوم، مقارنات جنبًا إلى جنب، روابط مباشرة إلى المستندات الرسمية الأصلية، ومستشار ذكاء اصطناعي للإجابة عن أسئلة محددة — ليتمكن المنظمون والمستثمرون والشركات من التنقل في هذا المشهد بشكل أسرع وبنقاط عمياء أقل.",
     "about.featurePill1": "الخريطة العالمية التفاعلية", "about.featurePill2": "مستشار التصنيف بالذكاء الاصطناعي",
@@ -12449,7 +12781,14 @@ const GST_I18N = {
     "media.ctaHeading": "احصل على النشرة الأسبوعية للتصنيفات",
     "media.ctaText": "ملخص أسبوعي لأخبار التصنيفات والتقارير ورؤى الاتجاهات — مجانًا.",
     "media.ctaBtn": "اشترك مجانًا",
-    "country.backToMap": "العودة إلى الخريطة", "country.translatingContent": "جارٍ ترجمة محتوى هذه الصفحة…"
+    "country.backToMap": "العودة إلى الخريطة", "country.translatingContent": "جارٍ ترجمة محتوى هذه الصفحة…",
+    "chat.toggleLabel": "اسأل مساعد الذكاء الاصطناعي", "chat.title": "مساعد الذكاء الاصطناعي",
+    "chat.subtitle": "اسأل عن مصطلحات التصنيف، أو قارن بين الدول، أو ابحث عن طريقك في الموقع.",
+    "chat.placeholder": "اكتب سؤالك…", "chat.send": "إرسال",
+    "chat.greeting": "مرحبًا! يمكنني شرح مصطلحات التصنيف، ومقارنة الدول، وتوجيهك إلى الصفحة الصحيحة. بماذا تود أن تعرف؟",
+    "chat.thinking": "جارٍ التفكير…",
+    "chat.errorGeneric": "تعذّر الوصول إلى المساعد في الوقت الحالي — يرجى المحاولة مرة أخرى.",
+    "chat.errorNotDeployed": "يتطلب المساعد الخادم الفعلي للموقع، وهو غير متصل هنا — لن يعمل هذا إلا بعد نشر الموقع على Vercel بمفتاح API (راجع DEPLOY_INSTRUCTIONS.md)."
   },
   pt: {
     "nav.map": "Mapa Global Interativo", "nav.advisor": "Consultor de IA", "nav.media": "Central de Mídia",
@@ -12475,6 +12814,18 @@ const GST_I18N = {
     "home.chipUnderDevelopment": "Em Desenvolvimento", "home.chipNoTaxonomy": "Sem Taxonomia",
     "home.globalStats": "Estatísticas Globais", "home.totalCountriesTracked": "Total de Países Monitorados",
     "home.recentlyUpdated": "Atualizado Recentemente", "home.askAi": "Perguntar à IA",
+    "home.objectiveFilterHeading": "Filtrar por objetivo ambiental", "home.sectorFilterHeading": "Filtrar por setor",
+    "home.advancedFiltersToggle": "Pesquisa e filtragem avançadas",
+    "home.objAll": "Todos os objetivos", "home.objClimateMitigation": "Mitigação das mudanças climáticas", "home.objClimateAdaptation": "Adaptação às mudanças climáticas",
+    "home.objBiodiversity": "Biodiversidade e ecossistemas", "home.objWater": "Recursos hídricos e marinhos", "home.objCircular": "Economia circular",
+    "home.objPollution": "Prevenção da poluição", "home.objEnergy": "Energia", "home.objIndustry": "Indústria e transição",
+    "home.secAll": "Todos os setores", "home.secAgriculture": "Agricultura", "home.secBuildings": "Edifícios",
+    "home.secEcologicalRestoration": "Restauração ecológica", "home.secEnergy": "Energia", "home.secEnergyTransition": "Transição energética",
+    "home.secEnvironmentalProtection": "Proteção ambiental", "home.secGreenServicesTrade": "Serviços verdes e comércio", "home.secICTDigital": "TIC e digital",
+    "home.secInfrastructure": "Infraestrutura", "home.secManufacturing": "Manufatura", "home.secNuclearTransition": "Nuclear e indústrias de transição",
+    "home.secResourceRecycling": "Reciclagem de recursos", "home.secTransport": "Transporte", "home.secWasteManagement": "Gestão de resíduos", "home.secWater": "Água",
+    "home.matchingCountriesHeading": "Países correspondentes", "home.noMatchingCountries": "Nenhum país corresponde a esses filtros ainda.",
+    "home.partialDataNote": "Os filtros de objetivo e setor atualmente correspondem apenas aos países para os quais compilamos esse nível de detalhe — outros podem não aparecer aqui ainda, mesmo que sua taxonomia possa cobrir isso.",
     "about.missionHeading": "Sobre a Plataforma",
     "about.missionText": "As taxonomias de finanças sustentáveis — os regulamentos que definem quais atividades econômicas contam como \"verdes\" ou \"sustentáveis\" — estão se multiplicando rapidamente, mas estão espalhadas por dezenas de sites governamentais, PDFs e idiomas. Qualquer pessoa que tente comparar a Taxonomia da UE com a K-Taxonomy da Coreia, ou verificar se uma determinada atividade está coberta em algum lugar, precisa reunir isso manualmente. Esta plataforma reúne essas informações em um só lugar interativo: um mapa de onde as taxonomias estão hoje, comparações lado a lado, links diretos para os documentos oficiais originais, e um consultor de IA para responder perguntas específicas — para que reguladores, investidores e empresas possam navegar pelo panorama mais rápido e com menos pontos cegos.",
     "about.featurePill1": "Mapa Global Interativo", "about.featurePill2": "Consultor de IA em Taxonomias",
@@ -12520,7 +12871,14 @@ const GST_I18N = {
     "media.ctaHeading": "Receba o Resumo Semanal de Taxonomias",
     "media.ctaText": "Um resumo semanal de notícias, relatórios e insights de tendências sobre taxonomias — gratuito.",
     "media.ctaBtn": "Inscrever-se Gratuitamente",
-    "country.backToMap": "Voltar ao mapa", "country.translatingContent": "Traduzindo o conteúdo desta página…"
+    "country.backToMap": "Voltar ao mapa", "country.translatingContent": "Traduzindo o conteúdo desta página…",
+    "chat.toggleLabel": "Perguntar ao assistente de IA", "chat.title": "Assistente de IA",
+    "chat.subtitle": "Pergunte sobre termos de taxonomia, compare países, ou encontre o que procura no site.",
+    "chat.placeholder": "Digite sua pergunta…", "chat.send": "Enviar",
+    "chat.greeting": "Olá! Posso explicar termos de taxonomia, comparar países, ou indicar a página certa. O que gostaria de saber?",
+    "chat.thinking": "Pensando…",
+    "chat.errorGeneric": "Não foi possível contatar o assistente agora — tente novamente.",
+    "chat.errorNotDeployed": "O assistente requer o backend do site em produção, que não está conectado aqui — isso só funciona quando o site está implantado no Vercel com uma chave de API (consulte DEPLOY_INSTRUCTIONS.md)."
   }
 };
 
@@ -12620,12 +12978,147 @@ function gstSetupGlobalSearch() {
   document.getElementById("globalSearchInput").addEventListener("input", e => gstRunSearch(e.target.value));
 }
 
+/* ---------- Sitewide AI Assistant (persistent chat widget, on every page) ---------- */
+
+let gstChatHistory = [];
+let gstChatOpen = false;
+let gstChatBusy = false;
+
+function gstEscapeHtml(s) {
+  return String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+}
+
+function gstChatWidgetHtml() {
+  return `
+    <button type="button" id="gstChatToggle" class="gst-chat-toggle" data-i18n-title="chat.toggleLabel" title="Ask the AI Assistant" aria-label="Ask the AI Assistant">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+    </button>
+    <div id="gstChatPanel" class="gst-chat-panel" aria-hidden="true">
+      <div class="gst-chat-header">
+        <span data-i18n="chat.title">AI Assistant</span>
+        <button type="button" id="gstChatCloseBtn" class="icon-btn" data-i18n-title="translate.close" title="Close" aria-label="Close">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <p class="gst-chat-subtitle" data-i18n="chat.subtitle">Ask about taxonomy terms, compare countries, or find your way around the site.</p>
+      <div class="gst-chat-log" id="gstChatLog"></div>
+      <form class="gst-chat-input-row" id="gstChatForm">
+        <input type="text" id="gstChatInput" data-i18n-placeholder="chat.placeholder" placeholder="Type your question…" autocomplete="off" />
+        <button type="submit" id="gstChatSendBtn" data-i18n="chat.send">Send</button>
+      </form>
+    </div>
+  `;
+}
+
+function gstChatBubbleHtml(m) {
+  const cls = m.role === "user" ? "chat-msg-user" : "chat-msg-assistant";
+  const bubbleCls = "chat-bubble" + (m.pending ? " chat-bubble-pending" : "") + (m.error ? " chat-bubble-error" : "");
+  return `<div class="chat-msg ${cls}"><div class="${bubbleCls}">${gstEscapeHtml(m.content).replace(/\n/g, "<br>")}</div></div>`;
+}
+
+function gstRenderChatLog() {
+  const log = document.getElementById("gstChatLog");
+  if (!log) return;
+  if (!gstChatHistory.length) {
+    log.innerHTML = `<div class="chat-msg chat-msg-assistant"><div class="chat-bubble">${gstEscapeHtml(gstT("chat.greeting"))}</div></div>`;
+    return;
+  }
+  log.innerHTML = gstChatHistory.map(gstChatBubbleHtml).join("");
+  log.scrollTop = log.scrollHeight;
+}
+
+function gstOpenChat() {
+  const panel = document.getElementById("gstChatPanel");
+  const toggle = document.getElementById("gstChatToggle");
+  if (!panel) return;
+  panel.classList.add("open");
+  panel.setAttribute("aria-hidden", "false");
+  if (toggle) toggle.classList.add("open");
+  gstChatOpen = true;
+  gstRenderChatLog();
+  setTimeout(() => { const input = document.getElementById("gstChatInput"); if (input) input.focus(); }, 10);
+}
+
+function gstCloseChat() {
+  const panel = document.getElementById("gstChatPanel");
+  const toggle = document.getElementById("gstChatToggle");
+  if (panel) { panel.classList.remove("open"); panel.setAttribute("aria-hidden", "true"); }
+  if (toggle) toggle.classList.remove("open");
+  gstChatOpen = false;
+}
+
+async function gstSendChatMessage(question) {
+  if (gstChatBusy || !question) return;
+  gstChatBusy = true;
+  const sendBtn = document.getElementById("gstChatSendBtn");
+  if (sendBtn) sendBtn.disabled = true;
+
+  gstChatHistory.push({ role: "user", content: question });
+  gstChatHistory.push({ role: "assistant", content: gstT("chat.thinking"), pending: true });
+  gstRenderChatLog();
+
+  const historyForApi = gstChatHistory.slice(0, -2).map(m => ({ role: m.role, content: m.content }));
+
+  try {
+    const res = await fetch("/api/ask", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ question, history: historyForApi, lang: gstCurrentLang })
+    });
+    let data;
+    try { data = await res.json(); } catch (e) { data = {}; }
+
+    gstChatHistory.pop();
+    if (!res.ok) {
+      const upstreamMsg = (data && data.error) || "";
+      const msg = /ANTHROPIC_API_KEY|backend/i.test(upstreamMsg) ? gstT("chat.errorNotDeployed") : (upstreamMsg || gstT("chat.errorGeneric"));
+      gstChatHistory.push({ role: "assistant", content: msg, error: true });
+    } else {
+      gstChatHistory.push({ role: "assistant", content: data.answer || "(no response)" });
+    }
+  } catch (err) {
+    gstChatHistory.pop();
+    gstChatHistory.push({ role: "assistant", content: gstT("chat.errorNotDeployed"), error: true });
+  }
+
+  gstRenderChatLog();
+  gstChatBusy = false;
+  if (sendBtn) sendBtn.disabled = false;
+}
+
+function gstSetupChatWidget() {
+  if (document.getElementById("gstChatToggle")) return;
+  const wrap = document.createElement("div");
+  wrap.className = "gst-chat-wrap";
+  wrap.innerHTML = gstChatWidgetHtml();
+  document.body.appendChild(wrap);
+
+  document.getElementById("gstChatToggle").addEventListener("click", () => {
+    if (gstChatOpen) gstCloseChat(); else gstOpenChat();
+  });
+  document.getElementById("gstChatCloseBtn").addEventListener("click", gstCloseChat);
+  document.getElementById("gstChatForm").addEventListener("submit", e => {
+    e.preventDefault();
+    const input = document.getElementById("gstChatInput");
+    const question = input.value.trim();
+    if (!question) return;
+    input.value = "";
+    gstSendChatMessage(question);
+  });
+  document.addEventListener("keydown", e => {
+    if (e.key === "Escape" && gstChatOpen) gstCloseChat();
+  });
+  document.addEventListener("gst-lang-changed", () => { if (gstChatOpen) gstRenderChatLog(); });
+}
+
 function gstInit() {
   const saved = localStorage.getItem("gst-lang");
   if (saved && GST_I18N[saved]) gstCurrentLang = saved;
   gstSetupLangSelector();
   gstApplyI18n();
   gstSetupGlobalSearch();
+  gstSetupChatWidget();
+  gstApplyI18n();
 }
 
 document.addEventListener("DOMContentLoaded", gstInit);
