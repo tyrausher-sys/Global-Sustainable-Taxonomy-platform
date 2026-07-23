@@ -5010,6 +5010,32 @@
       "Norway does not have its own national sustainable finance taxonomy. As an EEA/EFTA state, it applies the EU Taxonomy Regulation once it has been formally incorporated into the EEA Agreement — a step that, as of 2026, has been delayed pending clarifications between the EEA/EFTA states and the European Commission. [1]",
       "In the meantime, Norwegian financial institutions and listed companies with EU/EEA market exposure often apply the EU Taxonomy's criteria voluntarily or via group-level reporting obligations, but there is no separate Norwegian legal requirement to do so until EEA incorporation is complete."
     ],
+    "objectives": [
+      {
+        "icon": "climate",
+        "label": "Climate Change Mitigation"
+      },
+      {
+        "icon": "climate-adapt",
+        "label": "Climate Change Adaptation"
+      },
+      {
+        "icon": "water",
+        "label": "Sustainable Use of Water & Marine Resources"
+      },
+      {
+        "icon": "circular",
+        "label": "Transition to a Circular Economy"
+      },
+      {
+        "icon": "pollution",
+        "label": "Pollution Prevention & Control"
+      },
+      {
+        "icon": "biodiversity",
+        "label": "Protection of Biodiversity & Ecosystems"
+      }
+    ],
     "citations": [
       {
         "id": 1,
@@ -5038,6 +5064,32 @@
     "fullDescription": [
       "Iceland does not have its own national sustainable finance taxonomy. As an EEA/EFTA state, it applies the EU Taxonomy Regulation once it has been formally incorporated into the EEA Agreement — a step that, as of 2026, has been delayed pending clarifications between the EEA/EFTA states and the European Commission. [1]",
       "In the meantime, Icelandic financial institutions with EU/EEA market exposure may apply the EU Taxonomy's criteria voluntarily, but there is no separate Icelandic legal requirement to do so until EEA incorporation is complete."
+    ],
+    "objectives": [
+      {
+        "icon": "climate",
+        "label": "Climate Change Mitigation"
+      },
+      {
+        "icon": "climate-adapt",
+        "label": "Climate Change Adaptation"
+      },
+      {
+        "icon": "water",
+        "label": "Sustainable Use of Water & Marine Resources"
+      },
+      {
+        "icon": "circular",
+        "label": "Transition to a Circular Economy"
+      },
+      {
+        "icon": "pollution",
+        "label": "Pollution Prevention & Control"
+      },
+      {
+        "icon": "biodiversity",
+        "label": "Protection of Biodiversity & Ecosystems"
+      }
     ],
     "citations": [
       {
@@ -5072,6 +5124,32 @@
     "fullDescription": [
       "Liechtenstein does not have its own national sustainable finance taxonomy. As an EEA/EFTA state, it applies the EU Taxonomy Regulation once it has been formally incorporated into the EEA Agreement — a step that, as of 2026, has been delayed pending clarifications between the EEA/EFTA states and the European Commission. [1]",
       "The Financial Market Authority (FMA) Liechtenstein publishes explanatory notes on how EU/EEA sustainable-finance legislation, including the taxonomy, is expected to apply once incorporation is complete, giving the country's financial centre — which serves a large cross-border fund and banking industry — advance guidance on compliance. [2]"
+    ],
+    "objectives": [
+      {
+        "icon": "climate",
+        "label": "Climate Change Mitigation"
+      },
+      {
+        "icon": "climate-adapt",
+        "label": "Climate Change Adaptation"
+      },
+      {
+        "icon": "water",
+        "label": "Sustainable Use of Water & Marine Resources"
+      },
+      {
+        "icon": "circular",
+        "label": "Transition to a Circular Economy"
+      },
+      {
+        "icon": "pollution",
+        "label": "Pollution Prevention & Control"
+      },
+      {
+        "icon": "biodiversity",
+        "label": "Protection of Biodiversity & Ecosystems"
+      }
     ],
     "citations": [
       {
@@ -5604,6 +5682,24 @@
       "TKBI adopts four environmental objectives: climate change mitigation, climate change adaptation, protection of healthy ecosystems and biodiversity, and resource resilience and the transition to a circular economy. Version 3 adds Technical Screening Criteria (TSC) for three NDC-priority sectors — agriculture, forestry and fishing; manufacturing/industrial processes and product use; and water supply, sewerage and waste management — plus two enabling sectors, information and communication, and professional/scientific/technical activities. [1]",
       "Each activity assessed under TKBI is classified as 'Green', 'Transition', or 'Does Not Meet Classification'. Version 3 also updates criteria for waste-to-energy power generation and adjusts carbon capture and storage criteria in the energy sector. As an ASEAN member, Indonesia's national taxonomy sits alongside the regional ASEAN Taxonomy for Sustainable Finance."
     ],
+    "objectives": [
+      {
+        "icon": "climate",
+        "label": "Climate Change Mitigation"
+      },
+      {
+        "icon": "climate-adapt",
+        "label": "Climate Change Adaptation"
+      },
+      {
+        "icon": "biodiversity",
+        "label": "Protection of Healthy Ecosystems & Biodiversity"
+      },
+      {
+        "icon": "circular",
+        "label": "Resource Resilience & Transition to a Circular Economy"
+      }
+    ],
     "citations": [
       {
         "id": 1,
@@ -5990,6 +6086,16 @@
         "dnsh": "Applies via amber-category assessment"
       }
     ],
+    "objectives": [
+      {
+        "icon": "climate",
+        "label": "Climate Change Mitigation"
+      },
+      {
+        "icon": "climate-adapt",
+        "label": "Climate Change Adaptation"
+      }
+    ],
     "citations": [
       {
         "id": 1,
@@ -6039,6 +6145,28 @@
       "On 3 December 2023, the Monetary Authority of Singapore (MAS) launched the Singapore-Asia Taxonomy for Sustainable Finance (2023 Edition), described as the world's first multi-sector transition taxonomy — the first globally to pioneer a distinct 'transition' category alongside green activities. [1][2]",
       "The Taxonomy sets out detailed thresholds and criteria across eight focus sectors: energy, real estate, transportation, agriculture and forestry/land use, industrial, information and communication technology, waste/circular economy, and carbon capture and sequestration. It is built around five environmental objectives — climate change mitigation (its primary focus), climate change adaptation, protection of healthy ecosystems and biodiversity, resource resilience and circular economy, and pollution prevention and control. [1]",
       "It uses a traffic-light system of 'green' (environmentally sustainable), 'amber' (transition) and 'ineligible' to classify activities. As an ASEAN member state, Singapore's national taxonomy also sits alongside the regional ASEAN Taxonomy for Sustainable Finance."
+    ],
+    "objectives": [
+      {
+        "icon": "climate",
+        "label": "Climate Change Mitigation"
+      },
+      {
+        "icon": "climate-adapt",
+        "label": "Climate Change Adaptation"
+      },
+      {
+        "icon": "biodiversity",
+        "label": "Protection of Healthy Ecosystems & Biodiversity"
+      },
+      {
+        "icon": "circular",
+        "label": "Resource Resilience & Circular Economy"
+      },
+      {
+        "icon": "pollution",
+        "label": "Pollution Prevention & Control"
+      }
     ],
     "citations": [
       {
@@ -6139,6 +6267,32 @@
       "In June 2023, Thailand's Taxonomy Board — co-led by the Bank of Thailand and the Securities and Exchange Commission — issued Phase 1 of the Thailand Taxonomy: A Reference Tool for Sustainable Economy. [1][2]",
       "Phase 1 focuses solely on the climate change mitigation objective, covering only scope 1 and 2 emissions, and is limited to the energy and transport sectors — the two sectors contributing the highest proportion of Thailand's carbon emissions. [1]",
       "It uses a traffic-light system classifying activities as Green (substantially contributing to net-zero by 2050), Amber (transitional — relevant mainly for existing, retrofittable infrastructure rather than new activities), or Red (\"stranded\" activities incompatible with a net-zero trajectory that should be phased out). As an ASEAN member, Thailand's national taxonomy also sits alongside the regional ASEAN Taxonomy for Sustainable Finance."
+    ],
+    "objectives": [
+      {
+        "icon": "climate",
+        "label": "Climate Change Mitigation"
+      },
+      {
+        "icon": "climate-adapt",
+        "label": "Climate Change Adaptation"
+      },
+      {
+        "icon": "water",
+        "label": "Sustainable Use of Water & Marine Resources"
+      },
+      {
+        "icon": "circular",
+        "label": "Transition to a Circular Economy"
+      },
+      {
+        "icon": "pollution",
+        "label": "Pollution Prevention & Control"
+      },
+      {
+        "icon": "biodiversity",
+        "label": "Protection of Biodiversity & Ecosystems"
+      }
     ],
     "citations": [
       {
@@ -6582,6 +6736,36 @@
       "The TSB defines environmental objectives covering climate change mitigation and adaptation, biodiversity and water resource conservation, pollution prevention and control, and the transition to a circular economy; activities must also meet Do No Significant Harm (DNSH) criteria against the remaining objectives, alongside cross-cutting minimum social, environmental and governance safeguards that apply regardless of an activity's technical environmental performance. Distinctively, it also incorporates social goals such as reducing racial and gender inequalities, going beyond the environment-only scope of most other taxonomies. [1][3]",
       "The first edition is organised into eight sectoral notebooks: agriculture, livestock, forestry, fishing and aquaculture; extractive industries; manufacturing industry; electricity and gas; water, sewage, waste and decontamination; construction; transport, storage and postal services; and social services, tourism, urban planning and ICT. This followed a draft published for public consultation in December 2024 and technical reports approved by the Interinstitutional Committee (CITSB) in August 2025. [1][2]"
     ],
+    "objectives": [
+      {
+        "icon": "climate",
+        "label": "Climate Change Mitigation"
+      },
+      {
+        "icon": "climate-adapt",
+        "label": "Climate Change Adaptation"
+      },
+      {
+        "icon": "biodiversity",
+        "label": "Biodiversity Conservation"
+      },
+      {
+        "icon": "circular",
+        "label": "Transition to a Circular Economy"
+      },
+      {
+        "icon": "water",
+        "label": "Sustainable Use of Water & Marine Resources"
+      },
+      {
+        "icon": "pollution",
+        "label": "Pollution Prevention"
+      },
+      {
+        "icon": "industry",
+        "label": "Sustainable Land Use"
+      }
+    ],
     "citations": [
       {
         "id": 1,
@@ -6726,6 +6910,16 @@
         "dnsh": "Not formally required"
       }
     ],
+    "objectives": [
+      {
+        "icon": "climate",
+        "label": "Climate Change Mitigation (“green” projects)"
+      },
+      {
+        "icon": "climate-adapt",
+        "label": "Climate Change Adaptation (“adaptational” projects)"
+      }
+    ],
     "citations": [
       {
         "id": 1,
@@ -6771,6 +6965,32 @@
       "On 16 March 2023, Mexico's Secretariat of Finance and Public Credit (SHCP) issued the first edition of the Sustainable Taxonomy of Mexico, created to provide a reliable, legitimate, unified and science-based classification system for determining which economic activities can be considered sustainable. [1][2]",
       "The Taxonomy is distinctive worldwide for explicitly incorporating social objectives alongside environmental ones: it defines three overarching goals — climate change, gender equality, and access to basic services related to sustainable cities — alongside more specific environmental objectives covering climate change mitigation and adaptation, sustainable management of water and marine resources, biodiversity and ecosystem conservation, the transition to a circular economy, and pollution prevention and control. Social objectives include contributing to gender equality, access to basic services in sustainable cities, promotion of health and education, and financial inclusion. [1][2]",
       "The Taxonomy covers 124 specific activities distributed across six economic sectors: agriculture and forestry, energy and water, manufacturing, transport, construction, and waste management. It is considered the first taxonomy in the world to define gender equality as a priority objective in its design, reflecting an approach broader than the environment-only scope of most other national taxonomies. [1][2]"
+    ],
+    "objectives": [
+      {
+        "icon": "climate",
+        "label": "Climate Change Mitigation"
+      },
+      {
+        "icon": "climate-adapt",
+        "label": "Climate Change Adaptation"
+      },
+      {
+        "icon": "water",
+        "label": "Water & Marine Resources Management"
+      },
+      {
+        "icon": "biodiversity",
+        "label": "Conservation of Ecosystems & Biodiversity"
+      },
+      {
+        "icon": "circular",
+        "label": "Promotion of a Circular Economy"
+      },
+      {
+        "icon": "pollution",
+        "label": "Pollution Prevention & Control"
+      }
     ],
     "citations": [
       {
@@ -6971,6 +7191,12 @@
       "The Taxonomy is structured around six environmental objectives: climate change mitigation, climate change adaptation, water and water resources (a distinctive 'Blue' component, a pioneer in the region), ecosystems and biodiversity, pollution prevention, and circular economy. [1]",
       "In its first stage it classifies activities across seven economic sectors — energy, waste management and emissions capture, construction, transport, water supply and treatment, ICT, and industry — with a broader nine-sector concept also covering disaster management and environmental protection/restoration. Its explicit water-resources ('Blue') objective is a notable innovation: the first taxonomy in the Americas, and one without global precedent, to give water resources this prominence as a primary objective. [1][2]"
     ],
+    "objectives": [
+      {
+        "icon": "climate",
+        "label": "Climate Change Mitigation"
+      }
+    ],
     "citations": [
       {
         "id": 1,
@@ -7055,6 +7281,36 @@
       "On 11 April 2022, Colombia officially launched its Green Taxonomy, making it the first country in the Americas to publish one. [1][2] It is an inter-institutional effort led by the Ministry of Finance and Public Credit and the Financial Superintendence, working alongside the Ministry of Environment and Sustainable Development, the National Planning Department and the National Administrative Department of Statistics within a Green Taxonomy Working Group.",
       "The Taxonomy establishes a classification system for economic activities and assets that contribute to the country's environmental objectives — climate change mitigation and adaptation, conservation of ecosystems and biodiversity, water management, soil management, circular economy, and pollution prevention and control — with the purpose of promoting sustainable financing across the national territory. [1][3]",
       "The first phase addresses the climate change mitigation objective across seven economic sectors, with a particular emphasis on land use: forestry, agriculture and livestock activities alone are responsible for 59% of Colombia's greenhouse gas emissions, making them a priority focus of the framework. [1][2]"
+    ],
+    "objectives": [
+      {
+        "icon": "climate",
+        "label": "Climate Change Mitigation"
+      },
+      {
+        "icon": "climate-adapt",
+        "label": "Climate Change Adaptation"
+      },
+      {
+        "icon": "biodiversity",
+        "label": "Ecosystem & Biodiversity Conservation"
+      },
+      {
+        "icon": "water",
+        "label": "Water Management"
+      },
+      {
+        "icon": "industry",
+        "label": "Soil Management"
+      },
+      {
+        "icon": "circular",
+        "label": "Circular Economy"
+      },
+      {
+        "icon": "pollution",
+        "label": "Pollution Prevention & Control"
+      }
     ],
     "citations": [
       {
@@ -7164,6 +7420,32 @@
         "dnsh": "Applies"
       }
     ],
+    "objectives": [
+      {
+        "icon": "climate",
+        "label": "Climate Change Mitigation"
+      },
+      {
+        "icon": "climate-adapt",
+        "label": "Climate Change Adaptation"
+      },
+      {
+        "icon": "water",
+        "label": "Sustainable Use of Water & Marine Resources"
+      },
+      {
+        "icon": "circular",
+        "label": "Transition to a Circular Economy"
+      },
+      {
+        "icon": "pollution",
+        "label": "Pollution Prevention & Control"
+      },
+      {
+        "icon": "biodiversity",
+        "label": "Protection of Biodiversity & Ecosystems"
+      }
+    ],
     "citations": [
       {
         "id": 1,
@@ -7204,6 +7486,36 @@
       "Costa Rica launched its Sustainable Finance Taxonomy on 14 August 2024, following working tables involving more than 300 experts from over 180 public- and private-sector organisations, NGOs and academic institutions who evaluated economic activities and their technical criteria. [1][2]",
       "The first phase prioritises two environmental objectives — climate change mitigation and climate change adaptation — across eight economic sectors including electricity, gas, steam and air-conditioning supply, construction, transport and manufacturing. For each sector, the Taxonomy identifies specific economic activities, assets and investment-project categories that show a substantial contribution to the prioritised objectives according to scientific criteria. [1][2]",
       "Aligned activities must meet substantial-contribution criteria for at least one environmental objective without negatively affecting others, while complying with minimum human-rights and labour standards. The Taxonomy was designed to be interoperable with other jurisdictions' frameworks, including the EU Taxonomy. [2]"
+    ],
+    "objectives": [
+      {
+        "icon": "climate",
+        "label": "Climate Change Mitigation"
+      },
+      {
+        "icon": "climate-adapt",
+        "label": "Climate Change Adaptation"
+      },
+      {
+        "icon": "water",
+        "label": "Sustainable Use & Protection of Water & Marine Resources"
+      },
+      {
+        "icon": "biodiversity",
+        "label": "Protection of Biodiversity"
+      },
+      {
+        "icon": "industry",
+        "label": "Soil Management"
+      },
+      {
+        "icon": "circular",
+        "label": "Transition to a Circular Economy"
+      },
+      {
+        "icon": "pollution",
+        "label": "Pollution Prevention & Control"
+      }
     ],
     "citations": [
       {
@@ -7349,6 +7661,16 @@
       "Phase 2A expands the taxonomy from the four sectors covered in Phase 1 (power generation, transportation, construction and waste) to six sectors, adding manufacturing and information and communications technology — and increases the total number of covered economic activities from 12 to 25. [1]",
       "For the first time, the Taxonomy incorporates criteria for transition activities, addressing growing market demand for transition finance, and adds a new 'Climate Change Adaptation' category — making it one of the first taxonomies in the region to include adaptation alongside mitigation. [1]"
     ],
+    "objectives": [
+      {
+        "icon": "climate",
+        "label": "Climate Change Mitigation"
+      },
+      {
+        "icon": "climate-adapt",
+        "label": "Climate Change Adaptation (Water-Focused)"
+      }
+    ],
     "citations": [
       {
         "id": 1,
@@ -7427,6 +7749,32 @@
       "Chile's Ministry of Finance has led work since 2021, in collaboration with the Central Bank, the Financial Market Commission (CMF), the Pension Superintendency and the Ministry of the Environment, to develop a Taxonomy for Environmentally Sustainable Economic Activities, based on international best practices. [1][2]",
       "Through 2024 and 2025, work focused on developing Technical Selection Criteria (Criterios Técnicos de Selección) to determine whether an economic activity can be considered environmentally sustainable — a technical and participatory process carried out within the Public-Private Green Finance Table, involving public institutions, business groups, academic experts, multilateral organisations and civil society. A draft Taxonomy (Anteproyecto) was delivered at the end of 2024. [1][3]",
       "The Taxonomy covers nine economic sectors: agriculture, livestock, forestry and fishing; mining and quarrying; manufacturing industries; electricity, gas, steam and air conditioning supply; water supply, wastewater and waste management and remediation; construction; transport and storage; information and communications; and real estate activities. It aims to guide public and private investment decisions, improve transparency, and align the financial and productive sectors with the country's environmental objectives. [1][3]"
+    ],
+    "objectives": [
+      {
+        "icon": "climate",
+        "label": "Climate Change Mitigation"
+      },
+      {
+        "icon": "climate-adapt",
+        "label": "Climate Change Adaptation"
+      },
+      {
+        "icon": "water",
+        "label": "Sustainable Use of Water & Marine Resources"
+      },
+      {
+        "icon": "circular",
+        "label": "Transition to a Circular Economy"
+      },
+      {
+        "icon": "pollution",
+        "label": "Pollution Prevention & Control"
+      },
+      {
+        "icon": "biodiversity",
+        "label": "Protection of Biodiversity & Ecosystems"
+      }
     ],
     "citations": [
       {
@@ -7572,6 +7920,20 @@
         "dnsh": "Exclusionary criteria apply"
       }
     ],
+    "objectives": [
+      {
+        "icon": "climate",
+        "label": "Climate Change Mitigation"
+      },
+      {
+        "icon": "climate-adapt",
+        "label": "Climate Change Adaptation"
+      },
+      {
+        "icon": "circular",
+        "label": "Sustainable Use of Natural Resources"
+      }
+    ],
     "citations": [
       {
         "id": 1,
@@ -7645,6 +8007,24 @@
         "dnsh": "Not formally required"
       }
     ],
+    "objectives": [
+      {
+        "icon": "climate",
+        "label": "Climate Change Mitigation & Adaptation"
+      },
+      {
+        "icon": "pollution",
+        "label": "Pollution Prevention"
+      },
+      {
+        "icon": "circular",
+        "label": "Resource Conservation"
+      },
+      {
+        "icon": "biodiversity",
+        "label": "Livelihood Improvement"
+      }
+    ],
     "citations": [
       {
         "id": 1,
@@ -7710,6 +8090,16 @@
         "dnsh": "Covered under adaptation/resilience measures where relevant"
       }
     ],
+    "objectives": [
+      {
+        "icon": "climate",
+        "label": "Climate Change Mitigation"
+      },
+      {
+        "icon": "climate-adapt",
+        "label": "Climate Change Adaptation & Resilience"
+      }
+    ],
     "citations": [
       {
         "id": 1,
@@ -7749,6 +8139,16 @@
       "The Central Bank of Sri Lanka published the Sri Lanka Green Finance Taxonomy in May 2022, as one of the flagship actions under its Roadmap for Sustainable Finance in Sri Lanka. It applies to all financial and non-financial market participants, both domestic and foreign, operating in the country. [1][2]",
       "The taxonomy classifies economic activities against three areas: climate change mitigation, climate change adaptation, and other environmental objectives, using a green/amber/red-style eligibility approach similar to other emerging-market taxonomies in the region. [1]",
       "Covered sectors include forestry and logging, agriculture, manufacturing, electric power generation, transmission and distribution, gas/steam/air-conditioning supply, water supply/sewerage/waste management, construction, transportation and storage, financial services, and tourism and recreation — giving the taxonomy unusually broad sectoral coverage for a first edition. [1]"
+    ],
+    "objectives": [
+      {
+        "icon": "climate",
+        "label": "Climate Change Mitigation"
+      },
+      {
+        "icon": "climate-adapt",
+        "label": "Climate Change Adaptation"
+      }
     ],
     "citations": [
       {
@@ -7860,6 +8260,32 @@
         "dnsh": "Applies"
       }
     ],
+    "objectives": [
+      {
+        "icon": "climate",
+        "label": "Climate Change Mitigation"
+      },
+      {
+        "icon": "climate-adapt",
+        "label": "Climate Change Adaptation"
+      },
+      {
+        "icon": "water",
+        "label": "Sustainable Use of Water & Marine Resources"
+      },
+      {
+        "icon": "pollution",
+        "label": "Pollution Prevention"
+      },
+      {
+        "icon": "biodiversity",
+        "label": "Ecosystem Protection & Restoration"
+      },
+      {
+        "icon": "circular",
+        "label": "Sustainable Resource Use & Circularity"
+      }
+    ],
     "citations": [
       {
         "id": 1,
@@ -7920,6 +8346,12 @@
         "criteria": "Waste-management activities that reduce greenhouse gas emissions.",
         "threshold": "Israeli Taxonomy (Jul 2024)",
         "dnsh": "Climate-mitigation focus"
+      }
+    ],
+    "objectives": [
+      {
+        "icon": "climate",
+        "label": "Climate Change Mitigation"
       }
     ],
     "citations": [
@@ -7989,6 +8421,20 @@
         "dnsh": "DNSH mechanism applies"
       }
     ],
+    "objectives": [
+      {
+        "icon": "climate",
+        "label": "Climate Change Mitigation"
+      },
+      {
+        "icon": "climate-adapt",
+        "label": "Climate Change Adaptation"
+      },
+      {
+        "icon": "water",
+        "label": "Sustainable Use & Protection of Water Resources"
+      }
+    ],
     "citations": [
       {
         "id": 1,
@@ -8049,6 +8495,32 @@
         "criteria": "Sector coverage for classifying green, social and sustainable loans issued by banks and microfinance institutions.",
         "threshold": "NBG Sustainable Finance Taxonomy (2022)",
         "dnsh": "Not formally required"
+      }
+    ],
+    "objectives": [
+      {
+        "icon": "climate",
+        "label": "Climate Change Mitigation"
+      },
+      {
+        "icon": "climate-adapt",
+        "label": "Climate Change Adaptation"
+      },
+      {
+        "icon": "water",
+        "label": "Sustainable Use of Water & Marine Resources"
+      },
+      {
+        "icon": "circular",
+        "label": "Transition to a Circular Economy"
+      },
+      {
+        "icon": "pollution",
+        "label": "Pollution Prevention & Control"
+      },
+      {
+        "icon": "biodiversity",
+        "label": "Protection & Restoration of Biodiversity & Ecosystems"
       }
     ],
     "citations": [
@@ -8194,6 +8666,16 @@
         "criteria": "Seven green investment categories identified for the sector.",
         "threshold": "PGT 2025 Edition — draft",
         "dnsh": "Dual-track mitigation/adaptation criteria"
+      }
+    ],
+    "objectives": [
+      {
+        "icon": "climate",
+        "label": "Climate Change Mitigation"
+      },
+      {
+        "icon": "climate-adapt",
+        "label": "Climate Change Adaptation"
       }
     ],
     "citations": [
@@ -8385,6 +8867,24 @@
         "dnsh": "Not formally required"
       }
     ],
+    "objectives": [
+      {
+        "icon": "climate-adapt",
+        "label": "Climate Change Adaptation"
+      },
+      {
+        "icon": "climate",
+        "label": "Climate Change Mitigation"
+      },
+      {
+        "icon": "circular",
+        "label": "Natural Resource Conservation"
+      },
+      {
+        "icon": "pollution",
+        "label": "Pollution Prevention"
+      }
+    ],
     "citations": [
       {
         "id": 1,
@@ -8502,6 +9002,12 @@
         "criteria": "Low-emission transport activities, the second of two priority sectors in Version 1.0.",
         "threshold": "FGFT Version 1.0",
         "dnsh": "Not yet applied"
+      }
+    ],
+    "objectives": [
+      {
+        "icon": "climate",
+        "label": "Climate Change Mitigation"
       }
     ],
     "citations": [
@@ -9767,6 +10273,16 @@
         "dnsh": "Transition-category criteria still being defined"
       }
     ],
+    "objectives": [
+      {
+        "icon": "climate",
+        "label": "Climate Change Mitigation (1.5°C-aligned)"
+      },
+      {
+        "icon": "industry",
+        "label": "Transition (Decarbonisation Pathways)"
+      }
+    ],
     "citations": [
       {
         "id": 1,
@@ -9903,6 +10419,28 @@
         "dnsh": "Not yet quantified"
       }
     ],
+    "objectives": [
+      {
+        "icon": "climate",
+        "label": "Climate Change Mitigation"
+      },
+      {
+        "icon": "climate-adapt",
+        "label": "Climate Change Adaptation"
+      },
+      {
+        "icon": "biodiversity",
+        "label": "Environmental Protection"
+      },
+      {
+        "icon": "circular",
+        "label": "Resource Efficiency"
+      },
+      {
+        "icon": "pollution",
+        "label": "Pollution Prevention"
+      }
+    ],
     "citations": [
       {
         "id": 1,
@@ -9970,6 +10508,20 @@
         "dnsh": "Not yet specified"
       }
     ],
+    "objectives": [
+      {
+        "icon": "climate",
+        "label": "Climate Change Mitigation"
+      },
+      {
+        "icon": "climate-adapt",
+        "label": "Climate Change Adaptation"
+      },
+      {
+        "icon": "industry",
+        "label": "Transition Support for Hard-to-Abate Sectors"
+      }
+    ],
     "citations": [
       {
         "id": 1,
@@ -10003,6 +10555,24 @@
     "fullDescription": [
       "Following Morocco's Climate Finance Strategy published in September 2024, the Ministry of Finance, the central bank Bank Al-Maghrib, the securities regulator AMMC and the insurance/social-welfare supervisor ACAPS are jointly developing a Green Finance Taxonomy with technical support from the World Bank; a tender for the work was issued with a deadline of March 2025. [1]",
       "The taxonomy is expected to prioritise climate adaptation and mitigation, water and marine-resource protection, and biodiversity — reflecting Morocco's particular exposure to water scarcity and its status as a leading renewable-energy investor in North Africa. Bank Al-Maghrib separately issued climate-disclosure directives to banks in 2025, ahead of the taxonomy's completion."
+    ],
+    "objectives": [
+      {
+        "icon": "climate-adapt",
+        "label": "Climate Change Adaptation"
+      },
+      {
+        "icon": "climate",
+        "label": "Climate Change Mitigation (Renewable Energy & Sustainable Mobility)"
+      },
+      {
+        "icon": "water",
+        "label": "Sustainable Water & Marine Resource Management"
+      },
+      {
+        "icon": "biodiversity",
+        "label": "Biodiversity Protection & Restoration"
+      }
     ],
     "citations": [
       {
@@ -10069,6 +10639,20 @@
         "criteria": "Low- and zero-emission transport activities.",
         "threshold": "NZ Taxonomy — draft, consultation ongoing",
         "dnsh": "Not yet finalised"
+      }
+    ],
+    "objectives": [
+      {
+        "icon": "climate",
+        "label": "Climate Change Mitigation"
+      },
+      {
+        "icon": "climate-adapt",
+        "label": "Climate Change Adaptation"
+      },
+      {
+        "icon": "biodiversity",
+        "label": "Climate Resilience"
       }
     ],
     "citations": [
@@ -10331,6 +10915,28 @@
     "fullDescription": [
       "Turkey's Climate Change Presidency, under the Ministry of Environment, Urbanisation and Climate Change, published a Draft Green Taxonomy Regulation in 2024, closely modelled on the EU Taxonomy's structure and classification logic. [1]",
       "Under the current plan, mandatory taxonomy-aligned reporting would apply to investment firms, funds and insurers from 1 January 2027, with a voluntary transition period running through 31 December 2026 to give market participants time to prepare. As of the most recent public information, the regulation remains in draft form and has not been formally finalised."
+    ],
+    "objectives": [
+      {
+        "icon": "climate",
+        "label": "Reduction of Greenhouse Gas Emissions"
+      },
+      {
+        "icon": "climate-adapt",
+        "label": "Climate Change Adaptation"
+      },
+      {
+        "icon": "water",
+        "label": "Sustainable Use & Protection of Water & Marine Resources"
+      },
+      {
+        "icon": "circular",
+        "label": "Transition to a Circular Economy"
+      },
+      {
+        "icon": "pollution",
+        "label": "Pollution Prevention & Control"
+      }
     ],
     "citations": [
       {
@@ -10707,6 +11313,32 @@
         "criteria": "Circular-economy and waste-reduction activities.",
         "threshold": "ZGFT (2025)",
         "dnsh": "Applies"
+      }
+    ],
+    "objectives": [
+      {
+        "icon": "climate",
+        "label": "Climate Change Mitigation"
+      },
+      {
+        "icon": "climate-adapt",
+        "label": "Climate Change Adaptation"
+      },
+      {
+        "icon": "biodiversity",
+        "label": "Biodiversity & Ecosystems Protection and Restoration"
+      },
+      {
+        "icon": "pollution",
+        "label": "Pollution Prevention"
+      },
+      {
+        "icon": "circular",
+        "label": "Sustainable Use of Resources & Circularity"
+      },
+      {
+        "icon": "water",
+        "label": "Sustainable Use of Water & Water Security"
       }
     ],
     "citations": [
