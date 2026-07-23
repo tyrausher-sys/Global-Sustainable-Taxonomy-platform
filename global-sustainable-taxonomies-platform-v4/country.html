@@ -271,6 +271,18 @@ a { color: inherit; }
 }
 @keyframes translate-spin { to { transform: rotate(360deg); } }
 .translate-modal-error { color: var(--amber); padding: 16px 0; }
+.content-translating-banner {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 0.85rem; color: var(--text-muted);
+  background: var(--bg-soft); border: 1px solid var(--border); border-radius: 8px;
+  padding: 10px 14px; margin-bottom: 16px;
+}
+.content-translating-banner::before {
+  content: ""; display: block; flex-shrink: 0;
+  width: 14px; height: 14px;
+  border: 2px solid var(--border); border-top-color: var(--green);
+  border-radius: 50%; animation: translate-spin 0.8s linear infinite;
+}
 .translate-modal-truncated-note {
   font-size: 0.78rem;
   color: var(--text-muted);
@@ -9826,7 +9838,7 @@ const GST_I18N = {
     "media.ctaHeading": "Get the Weekly Taxonomy Digest",
     "media.ctaText": "A weekly summary of taxonomy news, reports and trend insights — free.",
     "media.ctaBtn": "Subscribe Free",
-    "country.backToMap": "Back to map"
+    "country.backToMap": "Back to map", "country.translatingContent": "Translating this page's content…"
   },
   sv: {
     "nav.map": "Interaktiv global karta", "nav.advisor": "AI-rådgivare", "nav.media": "Mediehubb",
@@ -9897,7 +9909,7 @@ const GST_I18N = {
     "media.ctaHeading": "Få veckans taxonomibrev",
     "media.ctaText": "En veckovis sammanfattning av taxonominyheter, rapporter och trendinsikter — gratis.",
     "media.ctaBtn": "Prenumerera gratis",
-    "country.backToMap": "Tillbaka till kartan"
+    "country.backToMap": "Tillbaka till kartan", "country.translatingContent": "Översätter sidans innehåll…"
   },
   ko: {
     "nav.map": "인터랙티브 글로벌 지도", "nav.advisor": "AI 어드바이저", "nav.media": "미디어 허브",
@@ -9968,7 +9980,7 @@ const GST_I18N = {
     "media.ctaHeading": "주간 택소노미 다이제스트 받기",
     "media.ctaText": "택소노미 뉴스, 보고서, 트렌드 인사이트를 담은 주간 요약 — 무료입니다.",
     "media.ctaBtn": "무료로 구독하기",
-    "country.backToMap": "지도로 돌아가기"
+    "country.backToMap": "지도로 돌아가기", "country.translatingContent": "이 페이지의 콘텐츠를 번역하는 중…"
   },
   es: {
     "nav.map": "Mapa Global Interactivo", "nav.advisor": "Asesor de IA", "nav.media": "Centro de Medios",
@@ -10039,7 +10051,7 @@ const GST_I18N = {
     "media.ctaHeading": "Reciba el boletín semanal de taxonomías",
     "media.ctaText": "Un resumen semanal de noticias, informes e ideas de tendencias sobre taxonomías — gratis.",
     "media.ctaBtn": "Suscribirse gratis",
-    "country.backToMap": "Volver al mapa"
+    "country.backToMap": "Volver al mapa", "country.translatingContent": "Traduciendo el contenido de esta página…"
   },
   fr: {
     "nav.map": "Carte mondiale interactive", "nav.advisor": "Conseiller IA", "nav.media": "Centre de médias",
@@ -10110,7 +10122,7 @@ const GST_I18N = {
     "media.ctaHeading": "Recevez la newsletter hebdomadaire sur les taxonomies",
     "media.ctaText": "Un résumé hebdomadaire des actualités, rapports et analyses de tendances sur les taxonomies — gratuit.",
     "media.ctaBtn": "S'abonner gratuitement",
-    "country.backToMap": "Retour à la carte"
+    "country.backToMap": "Retour à la carte", "country.translatingContent": "Traduction du contenu de cette page…"
   },
   de: {
     "nav.map": "Interaktive Weltkarte", "nav.advisor": "KI-Berater", "nav.media": "Medien-Hub",
@@ -10181,7 +10193,7 @@ const GST_I18N = {
     "media.ctaHeading": "Den wöchentlichen Taxonomie-Newsletter erhalten",
     "media.ctaText": "Eine wöchentliche Zusammenfassung von Taxonomie-Neuigkeiten, Berichten und Trendeinblicken — kostenlos.",
     "media.ctaBtn": "Kostenlos abonnieren",
-    "country.backToMap": "Zurück zur Karte"
+    "country.backToMap": "Zurück zur Karte", "country.translatingContent": "Inhalt dieser Seite wird übersetzt…"
   },
   ja: {
     "nav.map": "インタラクティブ・グローバルマップ", "nav.advisor": "AIアドバイザー", "nav.media": "メディアハブ",
@@ -10252,7 +10264,7 @@ const GST_I18N = {
     "media.ctaHeading": "週刊タクソノミーダイジェストを受け取る",
     "media.ctaText": "タクソノミーニュース、レポート、トレンドインサイトの週刊まとめ — 無料。",
     "media.ctaBtn": "無料で登録する",
-    "country.backToMap": "地図に戻る"
+    "country.backToMap": "地図に戻る", "country.translatingContent": "このページのコンテンツを翻訳中…"
   },
   zh: {
     "nav.map": "全球互动地图", "nav.advisor": "AI 顾问", "nav.media": "媒体中心",
@@ -10323,7 +10335,7 @@ const GST_I18N = {
     "media.ctaHeading": "获取每周分类标准简报",
     "media.ctaText": "分类标准新闻、报告和趋势洞察的每周摘要——免费。",
     "media.ctaBtn": "免费订阅",
-    "country.backToMap": "返回地图"
+    "country.backToMap": "返回地图", "country.translatingContent": "正在翻译此页面的内容…"
   },
   ar: {
     "nav.map": "الخريطة العالمية التفاعلية", "nav.advisor": "المستشار الذكي", "nav.media": "مركز الوسائط",
@@ -10394,7 +10406,7 @@ const GST_I18N = {
     "media.ctaHeading": "احصل على النشرة الأسبوعية للتصنيفات",
     "media.ctaText": "ملخص أسبوعي لأخبار التصنيفات والتقارير ورؤى الاتجاهات — مجانًا.",
     "media.ctaBtn": "اشترك مجانًا",
-    "country.backToMap": "العودة إلى الخريطة"
+    "country.backToMap": "العودة إلى الخريطة", "country.translatingContent": "جارٍ ترجمة محتوى هذه الصفحة…"
   },
   pt: {
     "nav.map": "Mapa Global Interativo", "nav.advisor": "Consultor de IA", "nav.media": "Central de Mídia",
@@ -10465,7 +10477,7 @@ const GST_I18N = {
     "media.ctaHeading": "Receba o Resumo Semanal de Taxonomias",
     "media.ctaText": "Um resumo semanal de notícias, relatórios e insights de tendências sobre taxonomias — gratuito.",
     "media.ctaBtn": "Inscrever-se Gratuitamente",
-    "country.backToMap": "Voltar ao mapa"
+    "country.backToMap": "Voltar ao mapa", "country.translatingContent": "Traduzindo o conteúdo desta página…"
   }
 };
 
@@ -10500,6 +10512,7 @@ function gstSetupLangSelector() {
     gstCurrentLang = sel.value;
     localStorage.setItem("gst-lang", gstCurrentLang);
     gstApplyI18n();
+    document.dispatchEvent(new CustomEvent("gst-lang-changed", { detail: { lang: gstCurrentLang } }));
   });
 }
 
@@ -10995,12 +11008,111 @@ function setupCompare(iso, name) {
   update();
 }
 
-function renderCountry() {
+/* ---------- Live content translation ----------
+   The global nav language selector (global.js) only translates static UI
+   chrome (nav labels, headings, buttons). The actual researched content for
+   each country — description paragraphs, environmental objective labels,
+   activity-table cells, overlay text — is still English in data.js, since
+   hand-translating that for 107 countries × every language isn't something
+   that can be done reliably at this scale. Instead, when a non-English
+   language is selected, we translate that content live via the same AI
+   backend that powers "Ask AI" and the document Translate button, cache the
+   result per country+language for the rest of the session, and fall back to
+   English (silently) if the request fails — the page never breaks, it just
+   stays in English if translation isn't available. Proper nouns and
+   anything that must stay verifiable against the original — country names,
+   taxonomy titles, regulator names, official document titles, citation
+   labels, and all URLs — are deliberately NOT sent through this pipeline. */
+
+const gstCountryTranslationCache = {};
+
+function extractTranslatable(entry) {
+  const items = [];
+  const manifest = [];
+  if (entry.note) { manifest.push({ type: "note" }); items.push(entry.note); }
+  (entry.fullDescription || []).forEach((p, i) => { manifest.push({ type: "fullDescription", i }); items.push(p); });
+  (entry.objectives || []).forEach((o, i) => { manifest.push({ type: "objective", i }); items.push(o.label || ""); });
+  (entry.activityList || []).forEach((a, i) => {
+    ["activity", "criteria", "threshold", "dnsh"].forEach(f => {
+      manifest.push({ type: "activity", i, f });
+      items.push(a[f] || "");
+    });
+  });
+  (entry.overlays || []).forEach((o, oi) => {
+    manifest.push({ type: "overlayScope", oi });
+    items.push(o.scope || "");
+    (o.features || []).forEach((feat, fi) => {
+      manifest.push({ type: "overlayFeature", oi, fi });
+      items.push(feat);
+    });
+  });
+  return { items, manifest };
+}
+
+function applyTranslated(entry, manifest, translated) {
+  const clone = JSON.parse(JSON.stringify(entry));
+  manifest.forEach((m, idx) => {
+    const val = translated[idx];
+    if (val === undefined || val === null) return;
+    if (m.type === "note") clone.note = val;
+    else if (m.type === "fullDescription") clone.fullDescription[m.i] = val;
+    else if (m.type === "objective") clone.objectives[m.i].label = val;
+    else if (m.type === "activity") clone.activityList[m.i][m.f] = val;
+    else if (m.type === "overlayScope") clone.overlays[m.oi].scope = val;
+    else if (m.type === "overlayFeature") clone.overlays[m.oi].features[m.fi] = val;
+  });
+  return clone;
+}
+
+async function maybeTranslateAndRender() {
+  const params = new URLSearchParams(window.location.search);
+  const iso = (params.get("iso") || "").toUpperCase();
+  const entry = window.TAXONOMY_DATA ? window.TAXONOMY_DATA[iso] : null;
+  const lang = (typeof gstCurrentLang !== "undefined" && gstCurrentLang) ? gstCurrentLang : "en";
+
+  if (!entry || lang === "en") { renderCountry(entry); return; }
+
+  const cacheKey = iso + "::" + lang;
+  if (gstCountryTranslationCache[cacheKey]) { renderCountry(gstCountryTranslationCache[cacheKey]); return; }
+
+  renderCountry(entry); // show English immediately, don't block on the network
+  const el = document.getElementById("countryContent");
+  const t = (typeof gstT === "function") ? gstT : (k => k);
+  const banner = document.createElement("div");
+  banner.className = "content-translating-banner";
+  banner.textContent = t("country.translatingContent");
+  if (el.firstChild) el.insertBefore(banner, el.firstChild); else el.appendChild(banner);
+
+  try {
+    const { items, manifest } = extractTranslatable(entry);
+    if (!items.length) return;
+    const res = await fetch("/api/translate-content", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ items, lang })
+    });
+    const data = await res.json();
+    if (!res.ok || !Array.isArray(data.translated)) throw new Error((data && data.error) || "Translation failed");
+
+    const translatedEntry = applyTranslated(entry, manifest, data.translated);
+    gstCountryTranslationCache[cacheKey] = translatedEntry;
+
+    // Only redraw if the user hasn't since navigated away or switched language again
+    const stillSameIso = (new URLSearchParams(window.location.search).get("iso") || "").toUpperCase() === iso;
+    const stillSameLang = (typeof gstCurrentLang !== "undefined" ? gstCurrentLang : "en") === lang;
+    if (stillSameIso && stillSameLang) renderCountry(translatedEntry);
+  } catch (err) {
+    console.warn("Country content translation failed, showing English content:", err);
+    // Already rendered English above — nothing more to do.
+  }
+}
+
+function renderCountry(entryOverride) {
   const params = new URLSearchParams(window.location.search);
   const iso = (params.get("iso") || "").toUpperCase();
   const headerEl = document.getElementById("countryHeader");
   const el = document.getElementById("countryContent");
-  const entry = window.TAXONOMY_DATA[iso];
+  const entry = entryOverride !== undefined ? entryOverride : window.TAXONOMY_DATA[iso];
 
   if (!iso) {
     headerEl.innerHTML = "";
@@ -11191,8 +11303,12 @@ function setupTranslateModal() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  renderCountry();
+  maybeTranslateAndRender();
   setupTranslateModal();
+});
+
+document.addEventListener("gst-lang-changed", () => {
+  maybeTranslateAndRender();
 });
 
 </script>
