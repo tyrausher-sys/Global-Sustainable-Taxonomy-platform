@@ -209,7 +209,16 @@ function onFiltersChanged() {
 function renderFilteredList() {
   const listEl = document.getElementById("filteredList");
   const countEl = document.getElementById("filteredCount");
+  const sectionEl = document.getElementById("filteredSection");
   if (!listEl || !countEl) return;
+
+  // Only show this panel once a filter is actually narrowing things down —
+  // with everything left on "All" it would just repeat the full country
+  // list, which isn't useful and clutters the default view.
+  const anyFilterActive = currentRegion !== "All" || currentStatus !== "All" ||
+    currentObjective !== "All" || currentSector !== "All";
+  if (sectionEl) sectionEl.classList.toggle("show", anyFilterActive);
+  if (!anyFilterActive) return;
 
   const matches = Object.keys(window.TAXONOMY_DATA)
     .filter(matchesFilters)

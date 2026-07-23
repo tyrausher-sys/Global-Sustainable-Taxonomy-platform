@@ -556,6 +556,8 @@ button.chip.active { background: var(--green); border-color: var(--green); color
   color: var(--text-muted);
 }
 
+.filtered-section { display: none; }
+.filtered-section.show { display: block; }
 .filtered-count { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 6px; }
 .filtered-list { max-height: 320px; overflow-y: auto; }
 .filtered-list .badge-sm { margin-top: 3px; }

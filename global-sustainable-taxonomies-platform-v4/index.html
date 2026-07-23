@@ -573,6 +573,8 @@ button.chip.active { background: var(--green); border-color: var(--green); color
   color: var(--text-muted);
 }
 
+.filtered-section { display: none; }
+.filtered-section.show { display: block; }
 .filtered-count { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 6px; }
 .filtered-list { max-height: 320px; overflow-y: auto; }
 .filtered-list .badge-sm { margin-top: 3px; }
@@ -1468,9 +1470,11 @@ button.chip.active { background: var(--green); border-color: var(--green); color
       <div class="stat-row"><span class="stat-row-num accent-developing" id="statDeveloping">–</span><span class="stat-row-label" data-i18n="home.chipUnderDevelopment">Under Development</span></div>
       <div class="stat-row"><span class="stat-row-num accent-none" id="statNone">–</span><span class="stat-row-label" data-i18n="home.chipNoTaxonomy">No Taxonomy</span></div>
 
-      <div class="stat-row"><span class="stat-row-num" id="filteredCount">–</span><span class="stat-row-label" data-i18n="home.matchingCountriesHeading">Matching Countries</span></div>
-      <ul class="recent-list filtered-list" id="filteredList"></ul>
-      <p class="filtered-note" data-i18n="home.partialDataNote">Objective and sector filters currently match against the countries we've compiled this detail for so far — others may not appear here yet even if their taxonomy could cover it.</p>
+      <div id="filteredSection" class="filtered-section">
+        <div class="stat-row"><span class="stat-row-num" id="filteredCount">–</span><span class="stat-row-label" data-i18n="home.matchingCountriesHeading">Matching Countries</span></div>
+        <ul class="recent-list filtered-list" id="filteredList"></ul>
+        <p class="filtered-note" data-i18n="home.partialDataNote">Objective and sector filters currently match against the countries we've compiled this detail for so far — others may not appear here yet even if their taxonomy could cover it.</p>
+      </div>
 
       <h2 data-i18n="home.recentlyUpdated">Recently Updated</h2>
       <ul class="recent-list" id="recentList"></ul>
@@ -13005,7 +13009,16 @@ function onFiltersChanged() {
 function renderFilteredList() {
   const listEl = document.getElementById("filteredList");
   const countEl = document.getElementById("filteredCount");
+  const sectionEl = document.getElementById("filteredSection");
   if (!listEl || !countEl) return;
+
+  // Only show this panel once a filter is actually narrowing things down —
+  // with everything left on "All" it would just repeat the full country
+  // list, which isn't useful and clutters the default view.
+  const anyFilterActive = currentRegion !== "All" || currentStatus !== "All" ||
+    currentObjective !== "All" || currentSector !== "All";
+  if (sectionEl) sectionEl.classList.toggle("show", anyFilterActive);
+  if (!anyFilterActive) return;
 
   const matches = Object.keys(window.TAXONOMY_DATA)
     .filter(matchesFilters)
