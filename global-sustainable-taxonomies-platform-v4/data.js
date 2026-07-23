@@ -4576,6 +4576,13 @@ window.TAXONOMY_DATA = {
         "date": "Updated periodically",
         "url": "https://www.finanstilsynet.no/en/topics/finanstilsynet-and-eea-legislation/"
       }
+    ],
+    "fullDescription": [
+      "Norway does not have its own national sustainable finance taxonomy. As an EEA/EFTA state, it applies the EU Taxonomy Regulation once it has been formally incorporated into the EEA Agreement — a step that, as of 2026, has been delayed pending clarifications between the EEA/EFTA states and the European Commission. [1]",
+      "In the meantime, Norwegian financial institutions and listed companies with EU/EEA market exposure often apply the EU Taxonomy's criteria voluntarily or via group-level reporting obligations, but there is no separate Norwegian legal requirement to do so until EEA incorporation is complete."
+    ],
+    "citations": [
+      { "id": 1, "label": "Finanstilsynet, \"Finanstilsynet and EEA legislation\" (regulatory status tracker)", "url": "https://www.finanstilsynet.no/en/topics/finanstilsynet-and-eea-legislation/" }
     ]
   },
   "ISL": {
@@ -4594,6 +4601,13 @@ window.TAXONOMY_DATA = {
         "date": "Updated periodically",
         "url": "https://finance.ec.europa.eu/sustainable-finance/tools-and-standards/eu-taxonomy-sustainable-activities_en"
       }
+    ],
+    "fullDescription": [
+      "Iceland does not have its own national sustainable finance taxonomy. As an EEA/EFTA state, it applies the EU Taxonomy Regulation once it has been formally incorporated into the EEA Agreement — a step that, as of 2026, has been delayed pending clarifications between the EEA/EFTA states and the European Commission. [1]",
+      "In the meantime, Icelandic financial institutions with EU/EEA market exposure may apply the EU Taxonomy's criteria voluntarily, but there is no separate Icelandic legal requirement to do so until EEA incorporation is complete."
+    ],
+    "citations": [
+      { "id": 1, "label": "European Commission, \"EU Taxonomy for Sustainable Activities\" (official page)", "url": "https://finance.ec.europa.eu/sustainable-finance/tools-and-standards/eu-taxonomy-sustainable-activities_en" }
     ]
   },
   "LIE": {
@@ -4617,6 +4631,14 @@ window.TAXONOMY_DATA = {
         "date": "Updated periodically",
         "url": "https://www.fma-li.li/en/financial-centre/sustainability-in-the-financial-sector/national-legislation-and-fma-explanatory-note"
       }
+    ],
+    "fullDescription": [
+      "Liechtenstein does not have its own national sustainable finance taxonomy. As an EEA/EFTA state, it applies the EU Taxonomy Regulation once it has been formally incorporated into the EEA Agreement — a step that, as of 2026, has been delayed pending clarifications between the EEA/EFTA states and the European Commission. [1]",
+      "The Financial Market Authority (FMA) Liechtenstein publishes explanatory notes on how EU/EEA sustainable-finance legislation, including the taxonomy, is expected to apply once incorporation is complete, giving the country's financial centre — which serves a large cross-border fund and banking industry — advance guidance on compliance. [2]"
+    ],
+    "citations": [
+      { "id": 1, "label": "FMA Liechtenstein, \"Bases of sustainable finance (EU/EEA)\"", "url": "https://www.fma-li.li/en/financial-centre/sustainability-in-the-financial-sector/bases-of-sustainable-finance-eu-eea" },
+      { "id": 2, "label": "FMA Liechtenstein, \"National legislation and FMA explanatory note\"", "url": "https://www.fma-li.li/en/financial-centre/sustainability-in-the-financial-sector/national-legislation-and-fma-explanatory-note" }
     ]
   },
   "GBR": {
@@ -4640,6 +4662,15 @@ window.TAXONOMY_DATA = {
         "date": "15 Jul 2025",
         "url": "https://assets.publishing.service.gov.uk/media/687659e6a8d0255f9fe28edd/UK_Taxonomy_consultation_response.pdf"
       }
+    ],
+    "fullDescription": [
+      "HM Treasury consulted on a proposed UK Green Taxonomy between November 2024 and February 2025, setting out a possible framework for classifying environmentally sustainable economic activities modelled in part on the EU Taxonomy. [1]",
+      "On 15 July 2025, the government confirmed that it will not proceed with a standalone UK Green Taxonomy. Its consultation response concluded that other tools — including mandatory transition-plan requirements for large companies and financial institutions, and existing sustainability-disclosure requirements — were judged a more effective near-term priority for UK sustainable finance policy than building a full activity-classification taxonomy. [2]",
+      "As a result, the UK currently has no national green taxonomy in force or in development; market participants operating in the UK instead rely on transition-plan disclosure frameworks and, where relevant, the EU Taxonomy for activities with EU exposure."
+    ],
+    "citations": [
+      { "id": 1, "label": "HM Treasury, \"UK Green Taxonomy Consultation\" (13 Nov 2024)", "url": "https://assets.publishing.service.gov.uk/media/6734cf6a54652d03d51610c5/UK_Green_Taxonomy_Consultation.pdf" },
+      { "id": 2, "label": "HM Treasury, \"UK Green Taxonomy Consultation Response\" (15 Jul 2025)", "url": "https://assets.publishing.service.gov.uk/media/687659e6a8d0255f9fe28edd/UK_Taxonomy_consultation_response.pdf" }
     ]
   },
   "CHE": {
@@ -4663,6 +4694,15 @@ window.TAXONOMY_DATA = {
         "date": "Nov 2024",
         "url": "https://www.swissfinancecouncil.org/images/issue-notes/Issue%20Note%20The%20Swiss%20Approach%20to%20Sustainable%20Finance%20-%20Nov%202024.pdf"
       }
+    ],
+    "fullDescription": [
+      "Switzerland has deliberately chosen not to adopt a single, legally binding national green taxonomy. Policy responsibility sits with the Federal Department of Finance's State Secretariat for International Finance (SIF), which coordinates the country's sustainable finance strategy. [1]",
+      "Instead of a mandatory classification system, Switzerland prioritises interoperability with the EU Taxonomy for cross-border market participants, while relying primarily on industry-led self-regulation, voluntary disclosure standards and transparency guidelines, and net-zero alignment commitments to steer capital toward sustainable activities. [1][2]",
+      "This approach reflects the Swiss financial sector's international orientation — Swiss banks and asset managers with EU-facing business often apply the EU Taxonomy voluntarily — while domestic policy avoids imposing a separate, potentially duplicative mandatory framework. [2]"
+    ],
+    "citations": [
+      { "id": 1, "label": "Federal Department of Finance, \"Sustainable Finance (SIF)\"", "url": "https://www.sif.admin.ch/en/sustainable-finance" },
+      { "id": 2, "label": "Swiss Finance Council, \"The Swiss Approach to Sustainable Finance\" (Nov 2024)", "url": "https://www.swissfinancecouncil.org/images/issue-notes/Issue%20Note%20The%20Swiss%20Approach%20to%20Sustainable%20Finance%20-%20Nov%202024.pdf" }
     ]
   },
   "KOR": {
@@ -4956,8 +4996,8 @@ window.TAXONOMY_DATA = {
     "status": "established",
     "region": "Asia-Pacific",
     "taxonomy": "Sustainable Finance Taxonomy for the Cambodian Banking Sector",
-    "year": 2024,
-    "note": "National taxonomy for the banking sector (2024).",
+    "year": 2026,
+    "note": "National taxonomy for the banking sector, officially launched 27 April 2026 with IFC support.",
     "source": "https://www.nbc.gov.kh/download_files/publication/blueprints_eng/Sustainable%20Finance%20Taxonomy%20for%20Cambodian%20Banking%20Sector.pdf",
     "officialDocuments": [
       {
@@ -4987,7 +5027,21 @@ window.TAXONOMY_DATA = {
         ]
       }
     ],
-    "regulator": "National Bank of Cambodia"
+    "regulator": "National Bank of Cambodia",
+    "fullDescription": [
+      "The National Bank of Cambodia (NBC) launched the Sustainable Finance Taxonomy for the Cambodian Banking Sector, Version 1, on 27 April 2026 — a national classification framework aimed at the country's banking sector specifically, rather than the whole financial system. [1][2]",
+      "As an ASEAN member state, Cambodia's national taxonomy sits alongside the regional ASEAN Taxonomy for Sustainable Finance, which uses a Foundation Framework and Plus Standard to classify activities as Green, Amber or Red across climate mitigation, climate adaptation, biodiversity/ecosystems and circular-economy objectives. [3]"
+    ],
+    "activityList": [
+      { "activity": "Energy", "criteria": "Renewable energy and energy-efficiency projects, one of three priority sectors in Version 1.", "threshold": "Sustainable Finance Taxonomy for the Cambodian Banking Sector, Version 1 (Apr 2026)", "dnsh": "Not yet formally incorporated — future phases will deepen adaptation criteria" },
+      { "activity": "Transport", "criteria": "Low-emission transport infrastructure and vehicles.", "threshold": "Version 1 (Apr 2026)", "dnsh": "Not yet formally incorporated" },
+      { "activity": "Construction", "criteria": "Green and energy-efficient building construction.", "threshold": "Version 1 (Apr 2026)", "dnsh": "Not yet formally incorporated" }
+    ],
+    "citations": [
+      { "id": 1, "label": "National Bank of Cambodia, \"Sustainable Finance Taxonomy for the Cambodian Banking Sector, Version 1\" (27 Apr 2026)", "url": "https://www.nbc.gov.kh/download_files/publication/blueprints_eng/Sustainable%20Finance%20Taxonomy%20for%20Cambodian%20Banking%20Sector.pdf" },
+      { "id": 2, "label": "National Bank of Cambodia — official launch announcement", "url": "https://www.nbc.gov.kh/english/news_and_events/news_info.php?id=897" },
+      { "id": 3, "label": "ASEAN Taxonomy Board, \"ASEAN Taxonomy for Sustainable Finance, Version 3\" (20 Dec 2024)", "url": "https://asean.org/wp-content/uploads/2024/12/ASEAN-Taxonomy-Finalised-Version-3-4.pdf" }
+    ]
   },
   "IDN": {
     "name": "Indonesia",
@@ -5020,7 +5074,22 @@ window.TAXONOMY_DATA = {
         ]
       }
     ],
-    "regulator": "Financial Services Authority (OJK)"
+    "regulator": "Financial Services Authority (OJK)",
+    "fullDescription": [
+      "Indonesia's Financial Services Authority (OJK) issued Version 3 of the Taxonomy for Sustainable Finance (TKBI) at the Annual Meeting of the Financial Services Industry on 5 February 2026, the latest edition of its national classification system for sustainable economic activities. [1]",
+      "TKBI adopts four environmental objectives: climate change mitigation, climate change adaptation, protection of healthy ecosystems and biodiversity, and resource resilience and the transition to a circular economy. Version 3 adds Technical Screening Criteria (TSC) for three NDC-priority sectors — agriculture, forestry and fishing; manufacturing/industrial processes and product use; and water supply, sewerage and waste management — plus two enabling sectors, information and communication, and professional/scientific/technical activities. [1]",
+      "Each activity assessed under TKBI is classified as 'Green', 'Transition', or 'Does Not Meet Classification'. Version 3 also updates criteria for waste-to-energy power generation and adjusts carbon capture and storage criteria in the energy sector. As an ASEAN member, Indonesia's national taxonomy sits alongside the regional ASEAN Taxonomy for Sustainable Finance."
+    ],
+    "citations": [
+      { "id": 1, "label": "Otoritas Jasa Keuangan (OJK), \"Indonesia Taxonomy for Sustainable Finance (TKBI) Version 3\" (5 Feb 2026)", "url": "https://keuanganberkelanjutan.ojk.go.id/keuanganberkelanjutan/en/ArticleList/View/2045/taksonomi-untuk-keuangan-berkelanjutan-indonesia-tkbi-versi-3" }
+    ],
+    "activityList": [
+      { "activity": "Agriculture, Forestry & Fishing", "criteria": "Sustainable land-use and marine-resource activities meeting NDC-aligned TSC.", "threshold": "TKBI v3 Technical Screening Criteria", "dnsh": "Applies against other environmental objectives" },
+      { "activity": "Manufacturing / Industrial Processes", "criteria": "Industrial activities assessed against sector-specific TSC (issued in two batches).", "threshold": "TKBI v3 Technical Screening Criteria", "dnsh": "Applies" },
+      { "activity": "Water Supply, Sewerage & Waste Management", "criteria": "Water and waste infrastructure activities, including updated waste-to-energy criteria.", "threshold": "TKBI v3 Technical Screening Criteria", "dnsh": "Applies" },
+      { "activity": "Energy", "criteria": "Renewable generation; carbon capture and storage assessed under adjusted v3 criteria.", "threshold": "TKBI v3 Technical Screening Criteria", "dnsh": "Applies" },
+      { "activity": "ICT & Professional/Scientific/Technical Activities", "criteria": "Enabling-sector activities supporting the transition of priority sectors.", "threshold": "TKBI v3 Technical Screening Criteria", "dnsh": "Applies" }
+    ]
   },
   "LAO": {
     "name": "Laos",
@@ -5058,7 +5127,15 @@ window.TAXONOMY_DATA = {
         ]
       }
     ],
-    "regulator": "Bank of the Lao PDR (framework in development)"
+    "regulator": "Bank of the Lao PDR (framework in development)",
+    "fullDescription": [
+      "The Bank of Lao PDR has been developing a national Green Taxonomy Framework since entering a partnership with the International Finance Corporation (IFC) in December 2023, alongside complementary green-lending guidelines and ESG risk-management standards for the banking sector. [1][2]",
+      "The framework is being designed for alignment with the ASEAN Taxonomy for Sustainable Finance and other international classification systems, reflecting Laos' position as an ASEAN member state; as of the latest available reporting, the national taxonomy has not yet been finalised or published."
+    ],
+    "citations": [
+      { "id": 1, "label": "IFC, \"A New Partnership with Bank of Lao PDR to Boost Green Finance\"", "url": "https://www.ifc.org/en/pressroom/2022/a-new-partnership-with-bank-of-lao-pdr-to-boost-green-finance-su" },
+      { "id": 2, "label": "Asian Development Bank, \"Strengthening Foundations to Unlock Green Finance in the Lao PDR\"", "url": "https://www.adb.org/publications/strengthening-foundations-unlock-green-finance-lao-pdr" }
+    ]
   },
   "MYS": {
     "name": "Malaysia",
@@ -5096,7 +5173,21 @@ window.TAXONOMY_DATA = {
         ]
       }
     ],
-    "regulator": "Securities Commission Malaysia"
+    "regulator": "Securities Commission Malaysia",
+    "fullDescription": [
+      "On 30 April 2021, Bank Negara Malaysia (BNM) published the Climate Change and Principle-based Taxonomy (CCPT), Malaysia's national climate-focused sustainability taxonomy for the financial sector, following a Discussion Paper issued for consultation on 27 December 2019. [1][2]",
+      "The CCPT sets out five Guiding Principles intended to help financial institutions assess and classify economic activities according to how far they meet climate objectives and support the transition to a low-carbon economy. Rather than a binary green/non-green test, it uses a traffic-light-style approach, classifying activities as climate supporting, transitioning, or watchlist. [2]",
+      "The CCPT sits alongside the Securities Commission Malaysia's Principles-Based Sustainable and Responsible Investment Taxonomy for capital markets, and — as Malaysia is an ASEAN member — alongside the regional ASEAN Taxonomy for Sustainable Finance."
+    ],
+    "citations": [
+      { "id": 1, "label": "Bank Negara Malaysia, \"Climate Change and Principle-based Taxonomy\" (30 Apr 2021)", "url": "https://www.bnm.gov.my/-/climate-change-principle-based-taxonomy" },
+      { "id": 2, "label": "Regulation Asia, \"BNM Finalises 'Climate Change and Principle-based Taxonomy'\"", "url": "https://www.regulationasia.com/bnm-finalises-climate-change-and-principle-based-taxonomy/" }
+    ],
+    "activityList": [
+      { "activity": "Energy", "criteria": "Renewable generation classified as climate supporting; fossil-fuel activities with a transition plan may be classified as transitioning.", "threshold": "CCPT Guiding Principles", "dnsh": "Assessed via Guiding Principles" },
+      { "activity": "Manufacturing & Industry", "criteria": "Industrial processes assessed for climate mitigation/adaptation contribution.", "threshold": "CCPT Guiding Principles", "dnsh": "Assessed via Guiding Principles" },
+      { "activity": "Transport", "criteria": "Low- and zero-emission transport activities.", "threshold": "CCPT Guiding Principles", "dnsh": "Assessed via Guiding Principles" }
+    ]
   },
   "MMR": {
     "name": "Myanmar",
@@ -5250,7 +5341,23 @@ window.TAXONOMY_DATA = {
         ]
       }
     ],
-    "regulator": "Bangko Sentral ng Pilipinas (BSP)"
+    "regulator": "Bangko Sentral ng Pilipinas (BSP)",
+    "fullDescription": [
+      "The Bangko Sentral ng Pilipinas (BSP) issued the Philippine Sustainable Finance Taxonomy Guidelines through Circular No. 1187 on 21 February 2024, establishing a national framework for classifying and reporting sustainable economic activities across the Philippine banking system. [1]",
+      "The Guidelines adopt a traffic-light classification for economic activities and are designed to give banks a common reference point for measuring their exposure to green, transitioning and non-aligned activities as they build out their own sustainable finance frameworks. As an ASEAN member, the Philippines' national taxonomy also sits alongside the regional ASEAN Taxonomy for Sustainable Finance."
+    ],
+    "activityList": [
+      { "activity": "Energy Supply", "criteria": "Renewable and low-emission energy generation, assessed under the traffic-light system (green/amber/red).", "threshold": "Philippine Sustainable Finance Taxonomy Guidelines (Circular No. 1187, 2024)", "dnsh": "Aligned but not identical to EU-style DNSH; assessed via the amber (transitional) category" },
+      { "activity": "Construction & Real Estate", "criteria": "Green building and energy-efficient construction activities.", "threshold": "SFTG traffic-light system", "dnsh": "Applies via amber-category assessment" },
+      { "activity": "Agriculture & Fishing", "criteria": "Climate-resilient and low-emission farming and fishing practices.", "threshold": "SFTG traffic-light system", "dnsh": "Applies via amber-category assessment" },
+      { "activity": "Manufacturing & Extractives", "criteria": "Industrial and extractive activities assessed for climate alignment.", "threshold": "SFTG traffic-light system", "dnsh": "Applies via amber-category assessment" },
+      { "activity": "Transportation & Logistics", "criteria": "Low-emission transport and logistics infrastructure.", "threshold": "SFTG traffic-light system", "dnsh": "Applies via amber-category assessment" },
+      { "activity": "Water & Environmental Management", "criteria": "Water-management and environmental-protection activities.", "threshold": "SFTG traffic-light system", "dnsh": "Applies via amber-category assessment" },
+      { "activity": "Other covered sectors", "criteria": "ICT, forestry, trade, hospitality, education and the public sector are also within scope of the first version, which currently focuses on climate mitigation and adaptation only.", "threshold": "SFTG traffic-light system", "dnsh": "Applies via amber-category assessment" }
+    ],
+    "citations": [
+      { "id": 1, "label": "Bangko Sentral ng Pilipinas, Circular No. 1187 — \"Philippine Sustainable Finance Taxonomy Guidelines\" (21 Feb 2024)", "url": "https://www.bsp.gov.ph/Regulations/Issuances/2024/1187.pdf" }
+    ]
   },
   "SGP": {
     "name": "Singapore",
@@ -5288,7 +5395,26 @@ window.TAXONOMY_DATA = {
         ]
       }
     ],
-    "regulator": "Monetary Authority of Singapore (MAS)"
+    "regulator": "Monetary Authority of Singapore (MAS)",
+    "fullDescription": [
+      "On 3 December 2023, the Monetary Authority of Singapore (MAS) launched the Singapore-Asia Taxonomy for Sustainable Finance (2023 Edition), described as the world's first multi-sector transition taxonomy — the first globally to pioneer a distinct 'transition' category alongside green activities. [1][2]",
+      "The Taxonomy sets out detailed thresholds and criteria across eight focus sectors: energy, real estate, transportation, agriculture and forestry/land use, industrial, information and communication technology, waste/circular economy, and carbon capture and sequestration. It is built around five environmental objectives — climate change mitigation (its primary focus), climate change adaptation, protection of healthy ecosystems and biodiversity, resource resilience and circular economy, and pollution prevention and control. [1]",
+      "It uses a traffic-light system of 'green' (environmentally sustainable), 'amber' (transition) and 'ineligible' to classify activities. As an ASEAN member state, Singapore's national taxonomy also sits alongside the regional ASEAN Taxonomy for Sustainable Finance."
+    ],
+    "citations": [
+      { "id": 1, "label": "Monetary Authority of Singapore, \"Singapore-Asia Taxonomy for Sustainable Finance, 2023 Edition\" (Dec 2023)", "url": "https://www.mas.gov.sg/-/media/mas-media-library/development/sustainable-finance/singaporeasia-taxonomy-updated.pdf" },
+      { "id": 2, "label": "Monetary Authority of Singapore, \"MAS Launches World's First Multi-Sector Transition Taxonomy\" (3 Dec 2023)", "url": "https://www.mas.gov.sg/news/media-releases/2023/mas-launches-worlds-first-multi-sector-transition-taxonomy" }
+    ],
+    "activityList": [
+      { "activity": "Energy", "criteria": "Renewable generation classified Green; fossil-fuel activities with credible transition plans may qualify Amber.", "threshold": "Sector-specific thresholds (2023 Edition)", "dnsh": "Applies against other environmental objectives" },
+      { "activity": "Real Estate", "criteria": "Energy-efficient buildings and deep retrofits.", "threshold": "Sector-specific thresholds", "dnsh": "Applies" },
+      { "activity": "Transportation", "criteria": "Zero- and low-emission transport and infrastructure.", "threshold": "Sector-specific thresholds", "dnsh": "Applies" },
+      { "activity": "Agriculture & Forestry/Land Use", "criteria": "Sustainable land-use practices.", "threshold": "Sector-specific thresholds", "dnsh": "Applies" },
+      { "activity": "Industrial", "criteria": "Decarbonisation of industrial processes.", "threshold": "Sector-specific thresholds", "dnsh": "Applies" },
+      { "activity": "ICT", "criteria": "Digital infrastructure supporting resource efficiency.", "threshold": "Sector-specific thresholds", "dnsh": "Applies" },
+      { "activity": "Waste / Circular Economy", "criteria": "Recycling and resource-recovery activities.", "threshold": "Sector-specific thresholds", "dnsh": "Applies" },
+      { "activity": "Carbon Capture & Sequestration", "criteria": "CCS deployed in carbon-intensive processes.", "threshold": "Sector-specific thresholds", "dnsh": "Applies" }
+    ]
   },
   "THA": {
     "name": "Thailand",
@@ -5321,7 +5447,20 @@ window.TAXONOMY_DATA = {
         ]
       }
     ],
-    "regulator": "Bank of Thailand"
+    "regulator": "Bank of Thailand",
+    "fullDescription": [
+      "In June 2023, Thailand's Taxonomy Board — co-led by the Bank of Thailand and the Securities and Exchange Commission — issued Phase 1 of the Thailand Taxonomy: A Reference Tool for Sustainable Economy. [1][2]",
+      "Phase 1 focuses solely on the climate change mitigation objective, covering only scope 1 and 2 emissions, and is limited to the energy and transport sectors — the two sectors contributing the highest proportion of Thailand's carbon emissions. [1]",
+      "It uses a traffic-light system classifying activities as Green (substantially contributing to net-zero by 2050), Amber (transitional — relevant mainly for existing, retrofittable infrastructure rather than new activities), or Red (\"stranded\" activities incompatible with a net-zero trajectory that should be phased out). As an ASEAN member, Thailand's national taxonomy also sits alongside the regional ASEAN Taxonomy for Sustainable Finance."
+    ],
+    "citations": [
+      { "id": 1, "label": "Bank of Thailand, \"Thailand Taxonomy: A Reference Tool for Sustainable Economy\"", "url": "https://www.bot.or.th/en/financial-innovation/sustainable-finance/green/Thailand-Taxonomy.html" },
+      { "id": 2, "label": "Bank of Thailand / SEC, \"Publication of Thailand Taxonomy Phase I\" (joint press release, 5 Jul 2023)", "url": "https://www.bot.or.th/en/news-and-media/news/news-20230630-2.html" }
+    ],
+    "activityList": [
+      { "activity": "Energy", "criteria": "Renewable generation classified Green; retrofittable existing infrastructure may qualify Amber; incompatible fossil generation classified Red.", "threshold": "Scope 1/2 emissions thresholds aligned with net-zero 2050", "dnsh": "Not yet extended beyond climate mitigation in Phase 1" },
+      { "activity": "Transport", "criteria": "Zero-emission transport and shipping classified Green; transitional retrofits classified Amber.", "threshold": "Scope 1/2 emissions thresholds", "dnsh": "Not yet extended beyond climate mitigation in Phase 1" }
+    ]
   },
   "VNM": {
     "name": "Vietnam",
@@ -5354,7 +5493,24 @@ window.TAXONOMY_DATA = {
         ]
       }
     ],
-    "regulator": "State Bank of Vietnam"
+    "regulator": "State Bank of Vietnam",
+    "fullDescription": [
+      "Decision No. 21/2025/QD-TTg, \"Regulation on Environmental Criteria and Verification of Investment Projects under the Green Taxonomy\", was issued on 4 July 2025 and took effect on 22 August 2025 — Vietnam's first legally binding green taxonomy, giving statutory authority and procedural guidance for determining whether a project qualifies as 'green' and is eligible for green credit and green bond financing. [1][2]",
+      "The Decision defines 45 eligible project types across seven industry groups: energy, transportation, construction, water resources, agriculture, forestry and fishery/biodiversity conservation, and processing and manufacturing. [2]",
+      "To be certified under the taxonomy, a project must (1) hold an approved environmental impact assessment, an environmental permit, or an environmental registration under Vietnamese environmental-protection law (unless legally exempt), and (2) fall within the environmental-protection sector or bring environmental benefits while meeting the specific requirements in Appendix I of the Decision. This lays the legal groundwork for Vietnam's broader Green Taxonomy programme through 2030."
+    ],
+    "citations": [
+      { "id": 1, "label": "Watson Farley & Williams, \"Vietnam's Green Taxonomy: A New Legal Framework for Green Credit and Green Bonds\"", "url": "https://www.wfw.com/articles/vietnams-green-taxonomy-new-legal-framework-green-credit-green-bonds/" },
+      { "id": 2, "label": "LuatVietnam, \"Decision 21/2025/QD-TTg environmental criteria and the confirmation of projects in the green taxonomy\"", "url": "https://english.luatvietnam.vn/dau-tu/decision-21-2025-qd-ttg-environmental-criteria-and-the-confirmation-of-projects-in-the-green-taxonomy-404821-d1.html" }
+    ],
+    "activityList": [
+      { "activity": "Energy", "criteria": "Renewable and low-carbon energy projects meeting Appendix I requirements.", "threshold": "Decision 21/2025/QD-TTg, Appendix I", "dnsh": "Requires approved EIA/environmental permit" },
+      { "activity": "Transportation", "criteria": "Low-emission transport infrastructure projects.", "threshold": "Decision 21/2025/QD-TTg, Appendix I", "dnsh": "Requires approved EIA/environmental permit" },
+      { "activity": "Construction", "criteria": "Sustainable building projects.", "threshold": "Decision 21/2025/QD-TTg, Appendix I", "dnsh": "Requires approved EIA/environmental permit" },
+      { "activity": "Water Resources", "criteria": "Water management and treatment projects.", "threshold": "Decision 21/2025/QD-TTg, Appendix I", "dnsh": "Requires approved EIA/environmental permit" },
+      { "activity": "Agriculture, Forestry & Fishery / Biodiversity", "criteria": "Sustainable land-use and biodiversity-conservation projects.", "threshold": "Decision 21/2025/QD-TTg, Appendix I", "dnsh": "Requires approved EIA/environmental permit" },
+      { "activity": "Processing & Manufacturing", "criteria": "Industrial processes meeting environmental-benefit requirements.", "threshold": "Decision 21/2025/QD-TTg, Appendix I", "dnsh": "Requires approved EIA/environmental permit" }
+    ]
   },
   "CHN": {
     "name": "China",
@@ -5692,6 +5848,24 @@ window.TAXONOMY_DATA = {
         "date": "2021",
         "url": "https://www.greenfinanceplatform.org/policies-and-regulations/russian-green-taxonomy"
       }
+    ],
+    "fullDescription": [
+      "Russia's government approved criteria for green and adaptation (transition) projects — commonly referred to as the Russian Green Taxonomy — via a resolution published on the official government legal-acts portal on 24 September 2021. [1]",
+      "The taxonomy sets out project-level eligibility criteria across sectors including energy, transport, industry, and waste and water management, and is overseen by the Bank of Russia and relevant government ministries as part of the country's broader sustainable-finance and green-bond framework. [1][2]"
+    ],
+    "activityList": [
+      { "activity": "Energy", "criteria": "Includes renewable generation as well as nuclear power plant construction and reconstruction, which the Russian taxonomy classifies as green.", "threshold": "Russian Green Taxonomy (VEB.RF, Nov 2021); Government Decree of Sep 2021", "dnsh": "No formal DNSH mechanism; two project types (\"green\" and \"adaptation\") are used instead" },
+      { "activity": "Waste Management & Recycling", "criteria": "Waste-processing and recycling infrastructure.", "threshold": "Russian Green Taxonomy", "dnsh": "Not formally required" },
+      { "activity": "Construction", "criteria": "Energy-efficient and green building construction.", "threshold": "Russian Green Taxonomy", "dnsh": "Not formally required" },
+      { "activity": "Industrial Production", "criteria": "Manufacturing process improvements that reduce environmental impact.", "threshold": "Russian Green Taxonomy", "dnsh": "Not formally required" },
+      { "activity": "Transport", "criteria": "Includes hydrogen and gas-engine transport alongside conventional low-emission transport.", "threshold": "Russian Green Taxonomy", "dnsh": "Not formally required" },
+      { "activity": "Water Supply & Wastewater", "criteria": "Water-supply and wastewater-disposal infrastructure.", "threshold": "Russian Green Taxonomy", "dnsh": "Not formally required" },
+      { "activity": "Forestry & Biodiversity", "criteria": "Forestry projects and conservation of natural landscapes and biodiversity.", "threshold": "Russian Green Taxonomy", "dnsh": "Not formally required" },
+      { "activity": "ICT", "criteria": "Information and communication technology activities supporting the other categories.", "threshold": "Russian Green Taxonomy", "dnsh": "Not formally required" }
+    ],
+    "citations": [
+      { "id": 1, "label": "Government of Russia, official text of the green project taxonomy (24 Sep 2021)", "url": "http://publication.pravo.gov.ru/Document/View/0001202109240043" },
+      { "id": 2, "label": "Green Finance Platform, \"Russian Green Taxonomy\" (summary)", "url": "https://www.greenfinanceplatform.org/policies-and-regulations/russian-green-taxonomy" }
     ]
   },
   "MEX": {
@@ -5915,7 +6089,24 @@ window.TAXONOMY_DATA = {
       }
     ],
     "overlays": [],
-    "regulator": "National Treasury (South Africa)"
+    "regulator": "National Treasury (South Africa)",
+    "fullDescription": [
+      "South Africa's National Treasury launched the country's first Green Finance Taxonomy, 1st Edition, on 1 April 2022, making it one of the earliest national sustainable-finance taxonomies on the African continent. [1][2]",
+      "The taxonomy provides a science-based classification system to help identify economic activities that substantially contribute to climate mitigation and adaptation, and other environmental objectives, aligned in structure with international peer taxonomies including the EU Taxonomy. It has since served as a reference point for other emerging Southern and East African taxonomies, including Zambia's, which were explicitly designed for interoperability with it."
+    ],
+    "activityList": [
+      { "activity": "Agriculture, Forestry & Fisheries", "criteria": "Sustainable land, forestry and fisheries management practices that reduce emissions and build climate resilience.", "threshold": "Technical Screening Criteria (TSC) under the SA Green Finance Taxonomy, 1st Edition", "dnsh": "Applies (Minimum Social Safeguards also apply)" },
+      { "activity": "Energy", "criteria": "Renewable generation and energy-efficiency measures aligned with substantial-contribution criteria for climate mitigation.", "threshold": "TSC under the SA Green Finance Taxonomy", "dnsh": "Applies" },
+      { "activity": "Industry", "criteria": "Manufacturing and industrial processes that cut emissions intensity or resource use.", "threshold": "TSC under the SA Green Finance Taxonomy", "dnsh": "Applies" },
+      { "activity": "Water & Waste", "criteria": "Water efficiency, wastewater treatment and waste-management activities.", "threshold": "TSC under the SA Green Finance Taxonomy", "dnsh": "Applies" },
+      { "activity": "Transportation", "criteria": "Low- and zero-emission transport modes and supporting infrastructure.", "threshold": "TSC under the SA Green Finance Taxonomy", "dnsh": "Applies" },
+      { "activity": "ICT", "criteria": "Information and communication technology activities that enable emissions reductions elsewhere in the economy.", "threshold": "TSC under the SA Green Finance Taxonomy", "dnsh": "Applies" },
+      { "activity": "Construction", "criteria": "Green building construction and retrofits meeting national or referenced energy-performance benchmarks.", "threshold": "TSC under the SA Green Finance Taxonomy", "dnsh": "Applies" }
+    ],
+    "citations": [
+      { "id": 1, "label": "National Treasury (South Africa), \"South African Green Finance Taxonomy, 1st Edition\" (Mar 2022)", "url": "https://www.treasury.gov.za/comm_media/press/2022/SA%20Green%20Finance%20Taxonomy%20-%201st%20Edition.pdf" },
+      { "id": 2, "label": "National Treasury, media statement on the launch of South Africa's first national Green Finance Taxonomy (1 Apr 2022)", "url": "https://www.gov.za/news/media-statements/treasury-launch-south-africa%E2%80%99s-first-national-green-finance-taxonomy-01-apr" }
+    ]
   },
   "CRI": {
     "name": "Costa Rica",
@@ -6022,7 +6213,24 @@ window.TAXONOMY_DATA = {
       }
     ],
     "overlays": [],
-    "regulator": "Hong Kong Monetary Authority (HKMA)"
+    "regulator": "Hong Kong Monetary Authority (HKMA)",
+    "fullDescription": [
+      "The Hong Kong Monetary Authority (HKMA) launched a public consultation on the Phase 2A prototype of the Hong Kong Taxonomy for Sustainable Finance on 8 September 2025, and formally published Phase 2A on 22 January 2026. [1][2]",
+      "Phase 2A expands the taxonomy from the four sectors covered in Phase 1 (power generation, transportation, construction and waste) to six sectors, adding manufacturing and information and communications technology — and increases the total number of covered economic activities from 12 to 25. [1]",
+      "For the first time, the Taxonomy incorporates criteria for transition activities, addressing growing market demand for transition finance, and adds a new 'Climate Change Adaptation' category — making it one of the first taxonomies in the region to include adaptation alongside mitigation. [1]"
+    ],
+    "citations": [
+      { "id": 1, "label": "Linklaters Sustainable Futures, \"Hong Kong Monetary Authority publishes 'Phase 2A prototype' of its sustainable finance taxonomy for public consultation\"", "url": "https://sustainablefutures.linklaters.com/post/102l68j/hong-kong-monetary-authority-publishes-phase-2a-prototype-of-its-sustainable-fi" },
+      { "id": 2, "label": "Hong Kong Monetary Authority, \"HKMA publishes Hong Kong Taxonomy for Sustainable Finance Phase 2A\" (22 Jan 2026)", "url": "https://www.hkma.gov.hk/eng/news-and-media/press-releases/2026/01/20260122-3/" }
+    ],
+    "activityList": [
+      { "activity": "Power Generation", "criteria": "Renewable and low-carbon generation; transition criteria for existing fossil-fuel assets.", "threshold": "Phase 2A Technical Screening Criteria", "dnsh": "Applies" },
+      { "activity": "Transportation", "criteria": "Zero- and low-emission transport activities.", "threshold": "Phase 2A Technical Screening Criteria", "dnsh": "Applies" },
+      { "activity": "Construction", "criteria": "Sustainable building activities.", "threshold": "Phase 2A Technical Screening Criteria", "dnsh": "Applies" },
+      { "activity": "Waste", "criteria": "Waste treatment and circular-economy activities.", "threshold": "Phase 2A Technical Screening Criteria", "dnsh": "Applies" },
+      { "activity": "Manufacturing", "criteria": "Industrial processes assessed for climate mitigation and adaptation contribution (new in Phase 2A).", "threshold": "Phase 2A Technical Screening Criteria", "dnsh": "Applies" },
+      { "activity": "ICT", "criteria": "Digital infrastructure supporting resource efficiency (new in Phase 2A).", "threshold": "Phase 2A Technical Screening Criteria", "dnsh": "Applies" }
+    ]
   },
   "CHL": {
     "name": "Chile",
@@ -6090,6 +6298,23 @@ window.TAXONOMY_DATA = {
         "date": "2021",
         "url": "https://www.greenfinanceplatform.org/sites/default/files/2022-05/Green%20Taxonomy%20Kazakhstan.pdf"
       }
+    ],
+    "fullDescription": [
+      "The Government of Kazakhstan approved the Kazakhstan Green Taxonomy via Government Order No. 996 on 31 December 2021, establishing criteria for classifying green projects eligible for green financing instruments. [1]",
+      "The taxonomy is overseen by the National Bank of Kazakhstan and covers project-level criteria across sectors such as renewable energy, energy efficiency, clean transport, and sustainable water and waste management, supporting the country's green-bond market and broader environmental modernisation goals. [1][2]"
+    ],
+    "activityList": [
+      { "activity": "Renewable Energy", "criteria": "Wind, solar, geothermal, hydro and bioenergy generation, plus supply-chain and hydrogen-production infrastructure.", "threshold": "Government Order No. 996 (31 Dec 2021), Kazakhstan Green Taxonomy", "dnsh": "Not an EU-style formal DNSH test, but exclusionary criteria apply" },
+      { "activity": "Energy Efficiency", "criteria": "Efficiency improvements at existing and new industrial, agro-industrial, budget and municipal facilities.", "threshold": "Government Order No. 996", "dnsh": "Exclusionary criteria apply" },
+      { "activity": "Green Buildings", "criteria": "Green buildings, associated systems, construction materials and green infrastructure.", "threshold": "Government Order No. 996", "dnsh": "Exclusionary criteria apply" },
+      { "activity": "Pollution Prevention & Control", "criteria": "Air- and soil-quality protection measures.", "threshold": "Government Order No. 996", "dnsh": "Exclusionary criteria apply" },
+      { "activity": "Sustainable Water & Waste", "criteria": "Water conservation, waste and sewage management, and resource recovery.", "threshold": "Government Order No. 996", "dnsh": "Exclusionary criteria apply" },
+      { "activity": "Agriculture & Transport", "criteria": "Sustainable agricultural practices and low-emission transport.", "threshold": "Government Order No. 996", "dnsh": "Exclusionary criteria apply" },
+      { "activity": "Transitional Energy", "criteria": "Transitional energy activities recognised as a bridge category pending full decarbonisation.", "threshold": "Government Order No. 996", "dnsh": "Exclusionary criteria apply" }
+    ],
+    "citations": [
+      { "id": 1, "label": "Government of Kazakhstan, Order No. 996 — Green Project Taxonomy (31 Dec 2021)", "url": "https://adilet.zan.kz/rus/docs/P2100000996" },
+      { "id": 2, "label": "Green Finance Platform, \"Green Taxonomy Kazakhstan\" (English summary)", "url": "https://www.greenfinanceplatform.org/sites/default/files/2022-05/Green%20Taxonomy%20Kazakhstan.pdf" }
     ]
   },
   "MNG": {
@@ -6108,7 +6333,24 @@ window.TAXONOMY_DATA = {
       }
     ],
     "overlays": [],
-    "regulator": "Financial Regulatory Commission of Mongolia"
+    "regulator": "Financial Regulatory Commission of Mongolia",
+    "fullDescription": [
+      "Mongolia's Green Taxonomy grew out of a Green Taxonomy Committee established in February 2019, chaired by the Mongolian Sustainable Finance Association (MSFA) in partnership with the Bank of Mongolia (the central bank) and the Ministry of Environment and Tourism, with technical working groups covering energy, green building, environmental pollution, water and waste, and sustainable agriculture. [1][2]",
+      "The taxonomy classifies eligible activities against four environmental objectives — climate change mitigation, climate change adaptation, pollution prevention and control, and resource conservation together with livelihood improvement — reflecting Mongolia's dual focus on environmental and social development outcomes. [1]",
+      "Initially covering five priority sectors, the taxonomy has since been expanded to 13 sectors and 57 subsectors, and was approved for national use in 2019; the Bank of Mongolia has compiled green loan statistics under the framework since 2020. [1][2]"
+    ],
+    "activityList": [
+      { "activity": "Renewable Energy", "criteria": "Solar, wind and other renewable generation.", "threshold": "Mongolia Green Taxonomy (2019), now expanding to 13 sectors / 57 subsectors", "dnsh": "Not an EU-style formal test" },
+      { "activity": "Energy Efficiency", "criteria": "Efficiency improvements across sectors.", "threshold": "Mongolia Green Taxonomy", "dnsh": "Not formally required" },
+      { "activity": "Green Buildings", "criteria": "Energy-efficient construction and retrofits.", "threshold": "Mongolia Green Taxonomy", "dnsh": "Not formally required" },
+      { "activity": "Sustainable Agriculture", "criteria": "Climate-resilient farming practices.", "threshold": "Mongolia Green Taxonomy", "dnsh": "Not formally required" },
+      { "activity": "Sustainable Water & Waste Use", "criteria": "Water conservation and waste-management activities.", "threshold": "Mongolia Green Taxonomy", "dnsh": "Not formally required" },
+      { "activity": "Pollution Prevention & Control", "criteria": "Reduction of air, water and soil pollution.", "threshold": "Mongolia Green Taxonomy", "dnsh": "Not formally required" }
+    ],
+    "citations": [
+      { "id": 1, "label": "IFC / Mongolian Sustainable Finance Association, \"Mongolian Green Taxonomy\" (official publication)", "url": "https://www.ifc.org/content/dam/ifc/doc/mgrt/mongolia-green-taxanomy-eng-pdf-for-publishing.pdf" },
+      { "id": 2, "label": "Mongolian Sustainable Finance Association — Mongol Ulsyn Nogoon Taksonomi (official page)", "url": "https://www.toc.mn/en/publication/mongol-ulsyn-nogoon-taksonomi" }
+    ]
   },
   "RWA": {
     "name": "Rwanda",
@@ -6131,7 +6373,21 @@ window.TAXONOMY_DATA = {
       }
     ],
     "overlays": [],
-    "regulator": "Ministry of Environment (Rwanda)"
+    "regulator": "Ministry of Environment (Rwanda)",
+    "fullDescription": [
+      "Rwanda's Ministry of Environment (MINECOFIN) published the Rwanda Green Taxonomy in 2024, an Introduction and User Guide setting out how to classify economic activities according to their environmental and climate contribution. [1]",
+      "A distinctive feature is the accompanying Interactive Green Taxonomy Compass, an official online tool that lets users navigate the taxonomy's criteria and check activity eligibility directly, rather than relying solely on a static PDF document — a more user-facing approach than most peer taxonomies in the region. [2] Rwanda's taxonomy has also served as a reference point for other emerging African frameworks, including Senegal's, which is being designed for interoperability with it."
+    ],
+    "activityList": [
+      { "activity": "Agriculture", "criteria": "Climate-resilient and low-emission agricultural activities, one of four Phase I priority sectors.", "threshold": "Rwanda Green Taxonomy (2024) — 60 mitigation activities identified across priority sectors", "dnsh": "Adaptation and resilience measures (400+) covered separately" },
+      { "activity": "Construction", "criteria": "Green and energy-efficient building activities.", "threshold": "Rwanda Green Taxonomy (2024)", "dnsh": "Covered under adaptation/resilience measures where relevant" },
+      { "activity": "Transport", "criteria": "Low-emission transport activities.", "threshold": "Rwanda Green Taxonomy (2024)", "dnsh": "Covered under adaptation/resilience measures where relevant" },
+      { "activity": "Energy", "criteria": "Renewable energy and energy-efficiency projects.", "threshold": "Rwanda Green Taxonomy (2024)", "dnsh": "Covered under adaptation/resilience measures where relevant" }
+    ],
+    "citations": [
+      { "id": 1, "label": "MINECOFIN, \"2024 Rwanda Green Taxonomy: Introduction and User Guide\"", "url": "https://cdn.climatepolicyradar.org/navigator/RWA/2024/rwanda-green-taxonomy_9e369a61a6deca61fefd8b00ef67aaa9.pdf" },
+      { "id": 2, "label": "MINECOFIN, \"Interactive Green Taxonomy Compass\" (official page)", "url": "https://www.minecofin.gov.rw/rwandagreentaxonomy/the-interactive-green-taxonomy-compass" }
+    ]
   },
   "LKA": {
     "name": "Sri Lanka",
@@ -6154,7 +6410,23 @@ window.TAXONOMY_DATA = {
       }
     ],
     "overlays": [],
-    "regulator": "Central Bank of Sri Lanka"
+    "regulator": "Central Bank of Sri Lanka",
+    "fullDescription": [
+      "The Central Bank of Sri Lanka published the Sri Lanka Green Finance Taxonomy in May 2022, as one of the flagship actions under its Roadmap for Sustainable Finance in Sri Lanka. It applies to all financial and non-financial market participants, both domestic and foreign, operating in the country. [1][2]",
+      "The taxonomy classifies economic activities against three areas: climate change mitigation, climate change adaptation, and other environmental objectives, using a green/amber/red-style eligibility approach similar to other emerging-market taxonomies in the region. [1]",
+      "Covered sectors include forestry and logging, agriculture, manufacturing, electric power generation, transmission and distribution, gas/steam/air-conditioning supply, water supply/sewerage/waste management, construction, transportation and storage, financial services, and tourism and recreation — giving the taxonomy unusually broad sectoral coverage for a first edition. [1]"
+    ],
+    "citations": [
+      { "id": 1, "label": "Central Bank of Sri Lanka, \"Sri Lanka Green Finance Taxonomy\" (May 2022)", "url": "https://www.cbsl.gov.lk/sites/default/files/cbslweb_documents/sl_green_finance_taxonomy.pdf" },
+      { "id": 2, "label": "Central Bank of Sri Lanka — Sri Lanka Green Finance Taxonomy Background Report", "url": "https://www.cbsl.gov.lk/sites/default/files/cbslweb_documents/sri_lanka_green_finance_taxonomy_background_report_2022.pdf" }
+    ],
+    "activityList": [
+      { "activity": "Forestry and Logging", "criteria": "Sustainable forest management activities.", "threshold": "Taxonomy screening criteria", "dnsh": "Applies" },
+      { "activity": "Agriculture", "criteria": "Climate-resilient, low-emission agricultural practices.", "threshold": "Taxonomy screening criteria", "dnsh": "Applies" },
+      { "activity": "Electric Power Generation", "criteria": "Renewable and low-carbon generation.", "threshold": "Taxonomy screening criteria", "dnsh": "Applies" },
+      { "activity": "Water Supply / Waste Management", "criteria": "Sustainable water and waste-management infrastructure.", "threshold": "Taxonomy screening criteria", "dnsh": "Applies" },
+      { "activity": "Transportation and Storage", "criteria": "Low-emission transport and logistics.", "threshold": "Taxonomy screening criteria", "dnsh": "Applies" }
+    ]
   },
   "KEN": {
     "name": "Kenya",
@@ -6172,15 +6444,31 @@ window.TAXONOMY_DATA = {
       }
     ],
     "overlays": [],
-    "regulator": "Central Bank of Kenya"
+    "regulator": "Central Bank of Kenya",
+    "fullDescription": [
+      "The Central Bank of Kenya published the Kenya Green Finance Taxonomy, 1st Edition, on 4 April 2025 alongside a Climate Risk Disclosure Framework, giving Kenyan banks a combined classification and disclosure toolkit for green finance. [1]",
+      "The taxonomy was designed with interoperability in mind relative to other regional frameworks, including South Africa's Green Finance Taxonomy, supporting East African efforts to build a more consistent sustainable-finance landscape across the continent."
+    ],
+    "activityList": [
+      { "activity": "Manufacturing", "criteria": "Industrial processes that reduce emissions or resource intensity.", "threshold": "Kenya Green Finance Taxonomy, 1st Edition (Central Bank of Kenya, 4 Apr 2025)", "dnsh": "Assessed against six environmental objectives, modelled on international best practice" },
+      { "activity": "Agriculture, Forestry & Fishing", "criteria": "Sustainable and climate-resilient farming, forestry and fishing practices.", "threshold": "KGFT 1st Edition", "dnsh": "Applies" },
+      { "activity": "Electricity, Gas, Steam & AC Supply", "criteria": "Renewable and low-emission energy supply.", "threshold": "KGFT 1st Edition", "dnsh": "Applies" },
+      { "activity": "Water Supply, Sewerage & Waste Management", "criteria": "Water and waste infrastructure that reduces environmental impact.", "threshold": "KGFT 1st Edition", "dnsh": "Applies" },
+      { "activity": "Transportation & Storage", "criteria": "Low-emission transport and storage infrastructure.", "threshold": "KGFT 1st Edition", "dnsh": "Applies" },
+      { "activity": "Construction & Real Estate", "criteria": "Green building construction and energy-efficient real estate.", "threshold": "KGFT 1st Edition", "dnsh": "Applies" },
+      { "activity": "Financial & Insurance Activities", "criteria": "Sector coverage for banks and mortgage finance companies applying the taxonomy.", "threshold": "KGFT 1st Edition (voluntary for 18 months, then mandatory)", "dnsh": "Applies" }
+    ],
+    "citations": [
+      { "id": 1, "label": "Central Bank of Kenya, \"Kenya Green Finance Taxonomy, 1st Edition\" (4 Apr 2025)", "url": "https://data.sbfnetwork.org/sites/default/files/survey-attachments/2025-05/CBK%20-%20Kenya%20Green%20Finance%20Taxonomy%20-%20Final%20-%20April%202025.pdf" }
+    ]
   },
   "ISR": {
     "name": "Israel",
     "status": "established",
     "region": "Middle East",
     "taxonomy": "Israeli Sustainability Economy Taxonomy",
-    "year": null,
-    "note": null,
+    "year": 2024,
+    "note": "Published Jul 2024 by the Ministry of Environmental Protection; voluntary framework closely modelled on the EU Taxonomy.",
     "source": "https://www.gov.il/BlobFolder/reports/israeli-taxonomy/en/sustainability_economy_taxonomy.pdf",
     "officialDocuments": [
       {
@@ -6190,7 +6478,22 @@ window.TAXONOMY_DATA = {
       }
     ],
     "overlays": [],
-    "regulator": "Israel Securities Authority"
+    "regulator": "Israel Securities Authority",
+    "fullDescription": [
+      "Israel's Ministry of Environmental Protection (MOEP) published the Israeli Taxonomy for Classifying Sustainable Economic Activities in July 2024, a framework for classifying economic activities by environmental impact that closely mirrors the EU Taxonomy's structure. [1]",
+      "The taxonomy assesses activities against six environmental and climate objectives, applying technical screening criteria for substantial contribution to climate mitigation specifically, alongside 'Do No Harm' criteria for the five remaining objectives — an approach broadly parallel to the EU Taxonomy's Substantial Contribution and DNSH tests, though with climate mitigation given particular technical depth. [1]",
+      "Adherence to the Israeli Taxonomy remains voluntary rather than legally mandatory, but financial institutions can use it to report the proportion of their balance-sheet exposures and fee income aligned with taxonomy-defined sustainable activities, giving investors a standardised basis for comparing environmental performance across the Israeli market."
+    ],
+    "activityList": [
+      { "activity": "Energy", "criteria": "Activities that substantially reduce greenhouse gas emissions in power generation.", "threshold": "Israeli Taxonomy for Classifying Sustainable Economic Activities (MOEP, Jul 2024)", "dnsh": "Focus is on climate mitigation only in this first version" },
+      { "activity": "Transportation", "criteria": "Low- and zero-emission transport activities.", "threshold": "Israeli Taxonomy (Jul 2024)", "dnsh": "Climate-mitigation focus" },
+      { "activity": "Construction", "criteria": "Energy-efficient building construction and renovation.", "threshold": "Israeli Taxonomy (Jul 2024)", "dnsh": "Climate-mitigation focus" },
+      { "activity": "Industry", "criteria": "Industrial process improvements that cut emissions intensity.", "threshold": "Israeli Taxonomy (Jul 2024)", "dnsh": "Climate-mitigation focus" },
+      { "activity": "Waste", "criteria": "Waste-management activities that reduce greenhouse gas emissions.", "threshold": "Israeli Taxonomy (Jul 2024)", "dnsh": "Climate-mitigation focus" }
+    ],
+    "citations": [
+      { "id": 1, "label": "Ministry of Environmental Protection (Israel), \"Israeli Taxonomy for Classifying Sustainable Economic Activities\" (Jul 2024)", "url": "https://www.gov.il/BlobFolder/reports/israeli-taxonomy/en/sustainability_economy_taxonomy.pdf" }
+    ]
   },
   "JOR": {
     "name": "Jordan",
@@ -6208,15 +6511,30 @@ window.TAXONOMY_DATA = {
       }
     ],
     "overlays": [],
-    "regulator": "Central Bank of Jordan / Ministry of Environment"
+    "regulator": "Central Bank of Jordan / Ministry of Environment",
+    "fullDescription": [
+      "The Central Bank of Jordan and the Ministry of Environment, working with a technical consortium led by Ricardo and Climate & Company, published the first draft of the Jordan National Green Taxonomy (JNGT) for public consultation. [1]",
+      "A dedicated Green Taxonomy Working Group oversees the process, coordinating input from financial regulators and environmental authorities as the draft moves toward finalisation. As of the most recent public documents, the taxonomy remains a draft and has not yet been formally adopted."
+    ],
+    "activityList": [
+      { "activity": "Agriculture, Reforestation & Sustainability", "criteria": "Sustainable farming and reforestation activities, part of roughly 50 draft activity definitions across all sectors.", "threshold": "Jordan National Green Taxonomy, First Draft for Public Consultation (Central Bank of Jordan, Ministry of Environment, World Bank)", "dnsh": "Addressed via the taxonomy's DNSH mechanism for circular economy, pollution prevention and biodiversity objectives" },
+      { "activity": "Energy", "criteria": "Renewable and low-emission energy generation.", "threshold": "JNGT First Draft", "dnsh": "DNSH mechanism applies" },
+      { "activity": "Water Supply, Sewerage & Waste Management", "criteria": "Water-security and waste-management activities — reflecting one of the taxonomy's three prioritised objectives (sustainable use and protection of water resources).", "threshold": "JNGT First Draft", "dnsh": "DNSH mechanism applies" },
+      { "activity": "Transportation", "criteria": "Low-emission transport activities.", "threshold": "JNGT First Draft", "dnsh": "DNSH mechanism applies" },
+      { "activity": "Construction", "criteria": "Energy-efficient building activities.", "threshold": "JNGT First Draft", "dnsh": "DNSH mechanism applies" },
+      { "activity": "Manufacturing, Tourism, ICT & Mining", "criteria": "The remaining four of the taxonomy's nine draft sectors, each with dedicated activity definitions and criteria still under public consultation.", "threshold": "JNGT First Draft", "dnsh": "DNSH mechanism applies" }
+    ],
+    "citations": [
+      { "id": 1, "label": "Jordan Securities Commission, \"The Jordan National Green Taxonomy\" — First Draft for Public Consultation (2025)", "url": "https://www.jsc.gov.jo/Uploads/Files/The%20Jordan%20National%20Green%20Taxonomy.pdf" }
+    ]
   },
   "GEO": {
     "name": "Georgia",
     "status": "established",
     "region": "Europe",
     "taxonomy": "Georgia Sustainable Finance Taxonomy",
-    "year": null,
-    "note": null,
+    "year": 2022,
+    "note": "Published Aug 2022; enacted via Taxonomy Regulation in force since Jan 2023.",
     "source": "https://nbg.gov.ge/en/page/sustainable-finance-taxonomy",
     "overlays": [],
     "regulator": "National Bank of Georgia",
@@ -6226,6 +6544,21 @@ window.TAXONOMY_DATA = {
         "date": "Published Aug 2022",
         "url": "https://nbg.gov.ge/en/page/sustainable-finance-taxonomy"
       }
+    ],
+    "fullDescription": [
+      "The National Bank of Georgia (NBG) published the Sustainable Finance Taxonomy for Georgia in August 2022, developed with local and international experts. Unlike some peer taxonomies, it deliberately takes a broad view of 'sustainable finance', covering both green and social objectives rather than climate activities alone. [1]",
+      "Environmental objectives include climate change mitigation and adaptation, biodiversity conservation, natural-resource conservation, pollution prevention and control, sustainable use and protection of water and marine resources, and transition to a circular economy including waste prevention and recycling. Social objectives cover poverty reduction, food security, education, healthcare and financial inclusion. [1]",
+      "The NBG enacted a Taxonomy Regulation in January 2023 that formally defines green, social and sustainable loans and imposes reporting obligations on commercial banks, which have been required to submit monthly reports on green lending since that date."
+    ],
+    "activityList": [
+      { "activity": "Energy Supply", "criteria": "Renewable and low-emission energy generation eligible for green-loan classification.", "threshold": "Sustainable Finance Taxonomy for Georgia (National Bank of Georgia, Aug 2022)", "dnsh": "Not an EU-style formal DNSH test; green/social/sustainable loan categories are used instead" },
+      { "activity": "Construction", "criteria": "Green and energy-efficient building activities.", "threshold": "NBG Sustainable Finance Taxonomy (2022)", "dnsh": "Not formally required" },
+      { "activity": "Transportation & Logistics", "criteria": "Low-emission transport and logistics infrastructure.", "threshold": "NBG Sustainable Finance Taxonomy (2022)", "dnsh": "Not formally required" },
+      { "activity": "Education (social)", "criteria": "Access to education, covered under the taxonomy's separate social category.", "threshold": "NBG Sustainable Finance Taxonomy — social taxonomy", "dnsh": "Not applicable (social category)" },
+      { "activity": "Finance & Insurance", "criteria": "Sector coverage for classifying green, social and sustainable loans issued by banks and microfinance institutions.", "threshold": "NBG Sustainable Finance Taxonomy (2022)", "dnsh": "Not formally required" }
+    ],
+    "citations": [
+      { "id": 1, "label": "National Bank of Georgia, \"Sustainable Finance Taxonomy\" (official page, published Aug 2022)", "url": "https://nbg.gov.ge/en/page/sustainable-finance-taxonomy" }
     ]
   },
   "AZE": {
@@ -6244,6 +6577,22 @@ window.TAXONOMY_DATA = {
         "date": "Nov 2024",
         "url": "https://data.sbfnetwork.org/sites/default/files/2024-11/The%20Green%20Taxonomy.pdf"
       }
+    ],
+    "fullDescription": [
+      "The Central Bank of Azerbaijan (CBA) released the Green Taxonomy of Azerbaijan in November 2024, unveiled at the COP29 climate summit hosted in Baku, alongside a broader 'global green taxonomy' roadmap the CBA developed together with the IFC, the Sustainable Banking and Finance Network and around 110 other countries to help harmonise national taxonomies worldwide. [1][2]",
+      "To qualify as green under the taxonomy, an activity must contribute to one of Azerbaijan's defined environmental objectives while also satisfying Do No Significant Harm (DNSH) and Minimum Social Safeguards (MSS) requirements — a structure closely mirroring the EU Taxonomy's approach. Azerbaijani banks have begun financing projects under the framework in renewable energy, energy efficiency, sustainable agriculture and water-resource management. [2]"
+    ],
+    "activityList": [
+      { "activity": "Renewable Energy", "criteria": "Wind, solar and other renewable generation projects.", "threshold": "Green Taxonomy approved by the Central Bank of Azerbaijan (7 Nov 2024)", "dnsh": "Applies, alongside minimum social standards" },
+      { "activity": "Energy Efficiency", "criteria": "Efficiency improvements across industry and buildings.", "threshold": "CBA Green Taxonomy (2024)", "dnsh": "Applies" },
+      { "activity": "Water Management", "criteria": "Sustainable water use and wastewater treatment.", "threshold": "CBA Green Taxonomy (2024)", "dnsh": "Applies" },
+      { "activity": "Pollution Prevention", "criteria": "Activities that reduce air, water or soil pollution.", "threshold": "CBA Green Taxonomy (2024)", "dnsh": "Applies" },
+      { "activity": "Circular Economy", "criteria": "Recycling and resource-efficiency activities.", "threshold": "CBA Green Taxonomy (2024)", "dnsh": "Applies" },
+      { "activity": "Sustainable Agriculture", "criteria": "Climate-resilient and low-emission farming practices.", "threshold": "CBA Green Taxonomy (2024)", "dnsh": "Applies" }
+    ],
+    "citations": [
+      { "id": 1, "label": "Green Central Banking, \"Central Bank of Azerbaijan releases global green taxonomy roadmap at Cop29\"", "url": "https://greencentralbanking.com/2024/11/19/central-bank-of-azerbaijan-green-taxonomy-cop29/" },
+      { "id": 2, "label": "Central Bank of Azerbaijan, \"The Green Taxonomy\" (Nov 2024, via Sustainable Banking and Finance Network)", "url": "https://data.sbfnetwork.org/sites/default/files/2024-11/The%20Green%20Taxonomy.pdf" }
     ]
   },
   "PAK": {
@@ -6267,7 +6616,24 @@ window.TAXONOMY_DATA = {
       }
     ],
     "overlays": [],
-    "regulator": "Ministry of Climate Change (draft stage)"
+    "regulator": "Ministry of Climate Change (draft stage)",
+    "fullDescription": [
+      "The State Bank of Pakistan (SBP) initiated the National Green Taxonomy project in January 2024, working with the Ministry of Climate Change and Environmental Coordination and with technical assistance from the World Bank, to develop a common classification system for green economic activities. [1][2]",
+      "A first draft was released for public consultation in February 2025, with a further consultation window running from 4 to 18 February 2025; a later version was published in August 2025. As of the most recent public documents, the taxonomy remains in draft form and has not yet been formally finalised or adopted. [1][2]",
+      "The draft covers eight sectors: agriculture, forestry and fisheries; manufacturing; transport; energy; construction; water and waste management; information and communication technology; and tourism — reflecting Pakistan's priority sectors for climate mitigation and adaptation investment. [1]"
+    ],
+    "activityList": [
+      { "activity": "Energy", "criteria": "Renewable generation and energy-efficiency activities, a priority sector for both mitigation and adaptation.", "threshold": "Pakistan Green Taxonomy, 2025 Edition (State Bank of Pakistan / MoCC&EC, with World Bank support) — draft", "dnsh": "Assessed via mitigation and adaptation dual-track criteria" },
+      { "activity": "Transport", "criteria": "Low-emission transport activities and supporting infrastructure.", "threshold": "PGT 2025 Edition — draft", "dnsh": "Dual-track mitigation/adaptation criteria" },
+      { "activity": "Manufacturing & Construction", "criteria": "Resource- and energy-efficient industrial and building activities.", "threshold": "PGT 2025 Edition — draft", "dnsh": "Dual-track mitigation/adaptation criteria" },
+      { "activity": "Water & Waste Management", "criteria": "Water-security and waste-reduction activities, also central to the adaptation track given Pakistan's climate-vulnerability profile.", "threshold": "PGT 2025 Edition — draft", "dnsh": "Dual-track mitigation/adaptation criteria" },
+      { "activity": "Agriculture, Livestock, Forestry, Fishing & Aquaculture", "criteria": "101 specific practices identified across this sector, reflecting its dual role in mitigation, adaptation, water protection and biodiversity.", "threshold": "PGT 2025 Edition — draft", "dnsh": "Additional criteria for water protection and ecosystem health" },
+      { "activity": "Tourism", "criteria": "Seven green investment categories identified for the sector.", "threshold": "PGT 2025 Edition — draft", "dnsh": "Dual-track mitigation/adaptation criteria" }
+    ],
+    "citations": [
+      { "id": 1, "label": "Ministry of Climate Change & Environmental Coordination, \"Draft Pakistan Green Taxonomy\" (Feb 2025)", "url": "https://mocc.gov.pk/SiteImage/Misc/files/Draft_Pakistan_Green_Taxonomy_Feb2025.pdf" },
+      { "id": 2, "label": "Ministry of Climate Change & Environmental Coordination, \"Pakistan Green Taxonomy — 2025 Edition\" (Aug 2025)", "url": "https://www.mocc.gov.pk/SiteImage/Misc/files/2025%20Pakistan%20Green%20Taxonomy_Aug%2014.pdf" }
+    ]
   },
   "UZB": {
     "name": "Uzbekistan",
@@ -6285,7 +6651,22 @@ window.TAXONOMY_DATA = {
       }
     ],
     "overlays": [],
-    "regulator": "Ministry of Economy and Finance"
+    "regulator": "Ministry of Economy and Finance",
+    "fullDescription": [
+      "Uzbekistan's Cabinet of Ministers issued Resolution No. PKM-561 on 25 October 2023, establishing the country's first Green Taxonomy as a cornerstone instrument for its transition to a green economy by 2030. [1]",
+      "A Green Taxonomy Working Group, led by the Ministry of Economy and Finance with technical support from the World Bank, prepared the model taxonomy, which aims to scale up climate change adaptation and mitigation investment, strengthen control of air pollution and emissions, and attract green finance into the domestic economy. [1]",
+      "The government has stated its intention to further develop the initial framework into a fuller 'operational taxonomy' more closely aligned with international best practice, indicating the current version is an early, evolving stage of Uzbekistan's green finance regulatory framework. [1]"
+    ],
+    "activityList": [
+      { "activity": "Renewable Energy", "criteria": "Expansion of renewable generation capacity as a core strategic direction.", "threshold": "Uzbekistan National Green Economy Taxonomy (Ministry of Economy and Finance, resolution PKM-561)", "dnsh": "Compliance criteria and classification examples provided per activity" },
+      { "activity": "Industry", "criteria": "Ecological modernisation of industrial production processes.", "threshold": "National Green Economy Taxonomy", "dnsh": "Compliance criteria apply" },
+      { "activity": "Agriculture", "criteria": "Green, water-efficient farming, climate-resilient and sustainable agro-ecosystem practices.", "threshold": "National Green Economy Taxonomy", "dnsh": "Compliance criteria apply" },
+      { "activity": "Water Resources", "criteria": "Water-efficiency, wastewater treatment and circular water-use activities.", "threshold": "National Green Economy Taxonomy", "dnsh": "Compliance criteria apply" },
+      { "activity": "Urban & Transport Systems", "criteria": "Green urban development, transport systems and urban green areas.", "threshold": "National Green Economy Taxonomy", "dnsh": "Compliance criteria apply" }
+    ],
+    "citations": [
+      { "id": 1, "label": "Cabinet of Ministers of the Republic of Uzbekistan, Resolution No. PKM-561 (25 Oct 2023) — National Green Taxonomy", "url": "https://lex.uz/ru/docs/6644013" }
+    ]
   },
   "KGZ": {
     "name": "Kyrgyz Republic",
@@ -6303,7 +6684,21 @@ window.TAXONOMY_DATA = {
       }
     ],
     "overlays": [],
-    "regulator": "Ministry of Economy and Commerce"
+    "regulator": "Ministry of Economy and Commerce",
+    "fullDescription": [
+      "The Kyrgyz Republic's Green Taxonomy was developed by the Ministry of Economy and Commerce and formally approved for a pilot phase running until June 2028, giving financial institutions and companies a multi-year runway to test and adapt to the classification system before it becomes fully binding. [1]",
+      "The taxonomy provides a national reference framework for identifying green economic activities eligible for sustainable finance, supporting the country's broader efforts to attract climate-aligned investment during the pilot period."
+    ],
+    "activityList": [
+      { "activity": "Green Energy", "criteria": "Renewable generation and low-carbon energy activities — a priority area informing the taxonomy's scope.", "threshold": "Kyrgyz Republic Green Taxonomy (approved by Cabinet of Ministers; pilot mode until end-2028)", "dnsh": "Not yet formally specified in public summaries" },
+      { "activity": "Green Agriculture", "criteria": "Sustainable and climate-resilient farming practices.", "threshold": "Kyrgyz Republic Green Taxonomy", "dnsh": "Not yet formally specified" },
+      { "activity": "Low-Carbon Transport", "criteria": "Low- and zero-emission transportation.", "threshold": "Kyrgyz Republic Green Taxonomy", "dnsh": "Not yet formally specified" },
+      { "activity": "Waste Management", "criteria": "Waste-reduction and recycling activities.", "threshold": "Kyrgyz Republic Green Taxonomy", "dnsh": "Not yet formally specified" },
+      { "activity": "Sustainable Tourism & Green Cities", "criteria": "Sustainable tourism development and green urban planning.", "threshold": "Kyrgyz Republic Green Taxonomy", "dnsh": "Not yet formally specified" }
+    ],
+    "citations": [
+      { "id": 1, "label": "Ministry of Economy and Commerce of the Kyrgyz Republic, \"Green Taxonomy of the Kyrgyz Republic\" (official PDF)", "url": "https://mineconom.gov.kg/froala/uploads/file/8f3849028e81dcb2de6c72dd29527eed9ee97e43.pdf" }
+    ]
   },
   "NPL": {
     "name": "Nepal",
@@ -6321,7 +6716,21 @@ window.TAXONOMY_DATA = {
       }
     ],
     "overlays": [],
-    "regulator": "Nepal Rastra Bank"
+    "regulator": "Nepal Rastra Bank",
+    "fullDescription": [
+      "Nepal Rastra Bank (NRB), the country's central bank, published the Nepal Green Finance Taxonomy on 20 October 2024, establishing a national classification system for green economic activities to guide bank lending and financial-sector disclosure. [1]",
+      "The taxonomy forms part of Nepal's broader push to channel bank credit toward climate-aligned sectors and is intended to give financial institutions a consistent basis for identifying, measuring and reporting green lending activity."
+    ],
+    "activityList": [
+      { "activity": "Renewable Energy", "criteria": "Hydropower, solar and other renewable generation projects.", "threshold": "Nepal Green Finance Taxonomy 2024 (Nepal Rastra Bank, Oct 2024)", "dnsh": "Not an EU-style formal test in this first version" },
+      { "activity": "Smart Agriculture", "criteria": "Climate-smart and resource-efficient farming practices.", "threshold": "NGFT 2024", "dnsh": "Not formally required" },
+      { "activity": "Sustainable Forestry", "criteria": "Forest management and conservation activities.", "threshold": "NGFT 2024", "dnsh": "Not formally required" },
+      { "activity": "Low-Emission Transportation", "criteria": "Low- and zero-emission vehicles and transport infrastructure.", "threshold": "NGFT 2024", "dnsh": "Not formally required" },
+      { "activity": "Green Technologies", "criteria": "Broader green-technology deployment expected to benefit from the taxonomy's classification system.", "threshold": "NGFT 2024", "dnsh": "Not formally required" }
+    ],
+    "citations": [
+      { "id": 1, "label": "Nepal Rastra Bank, \"Nepal Green Finance Taxonomy 2024\" (20 Oct 2024)", "url": "https://www.nrb.org.np/contents/uploads/2024/10/Nepal-Green-Finance-Taxonomy-2024-V1.pdf" }
+    ]
   },
   "BGD": {
     "name": "Bangladesh",
@@ -6344,7 +6753,22 @@ window.TAXONOMY_DATA = {
       }
     ],
     "overlays": [],
-    "regulator": "Bangladesh Bank"
+    "regulator": "Bangladesh Bank",
+    "fullDescription": [
+      "Bangladesh Bank, the country's central bank, issued the Sustainable Finance Policy for Banks and Financial Institutions on 31 December 2020, building on its earlier Green Banking framework to require banks to allocate a minimum share of financing toward green and sustainable activities. [1]",
+      "The framework was updated in December 2023 through a Guideline on Sustainability and Climate-related Financial Disclosures, extending it toward climate-risk disclosure alongside the existing green-lending classification approach. [2]"
+    ],
+    "activityList": [
+      { "activity": "Renewable Energy & Green Financing", "criteria": "Green financing products for renewable energy and energy-efficiency projects under the Sustainable Finance Policy.", "threshold": "Bangladesh Bank Sustainable Finance Policy (Dec 2020), 8-sector taxonomy structure", "dnsh": "Environmental Due Diligence Checklists apply for sensitive sectors" },
+      { "activity": "Agro-business (poultry & dairy)", "criteria": "One of ten environmentally sensitive sectors requiring a sector-specific Environmental Due Diligence Checklist.", "threshold": "Bangladesh Bank Sustainable Finance Policy", "dnsh": "Sector-specific EDD checklist applies" },
+      { "activity": "Textile & Apparel, Tannery", "criteria": "Environmentally sensitive manufacturing sectors subject to specific environmental risk checklists.", "threshold": "Bangladesh Bank Sustainable Finance Policy", "dnsh": "Sector-specific EDD checklist applies" },
+      { "activity": "Cement, Chemicals & Engineering", "criteria": "Heavy-industry sectors covered by dedicated environmental due-diligence requirements.", "threshold": "Bangladesh Bank Sustainable Finance Policy", "dnsh": "Sector-specific EDD checklist applies" },
+      { "activity": "Housing & Construction", "criteria": "Green and energy-efficient housing finance.", "threshold": "Bangladesh Bank Sustainable Finance Policy", "dnsh": "Sector-specific EDD checklist applies" }
+    ],
+    "citations": [
+      { "id": 1, "label": "Bangladesh Bank, \"Sustainable Finance Policy for Banks and FIs\" (31 Dec 2020)", "url": "https://www.bb.org.bd/mediaroom/circulars/gbcrd/dec312020sfd05.pdf" },
+      { "id": 2, "label": "Bangladesh Bank, \"Guideline on Sustainability and Climate-related Financial Disclosures\" (26 Dec 2023)", "url": "https://www.bb.org.bd/mediaroom/circulars/gbcrd/dec262023sfd06e.pdf" }
+    ]
   },
   "FJI": {
     "name": "Fiji",
@@ -6367,7 +6791,19 @@ window.TAXONOMY_DATA = {
       }
     ],
     "overlays": [],
-    "regulator": "Reserve Bank of Fiji"
+    "regulator": "Reserve Bank of Fiji",
+    "fullDescription": [
+      "The Reserve Bank of Fiji (RBF) launched the Fiji Green Finance Taxonomy in December 2025, following a partnership formed with the International Finance Corporation (IFC) in 2023 to develop the framework. [1][2]",
+      "The taxonomy is intended to help Fiji's banks and financial institutions identify, classify and channel financing toward climate-resilient and environmentally sustainable investments, supporting the country's broader climate-adaptation priorities as a small island state."
+    ],
+    "activityList": [
+      { "activity": "Energy", "criteria": "Renewable generation and energy-efficiency activities supporting Fiji's 100% renewable-electricity-by-2035 goal.", "threshold": "Fiji Green Finance Taxonomy, Version 1.0 (Reserve Bank of Fiji, IFC, Climate Bonds Initiative)", "dnsh": "Science-based classification; formal EU-style DNSH not yet applied in Version 1.0" },
+      { "activity": "Transport", "criteria": "Low-emission transport activities, the second of two priority sectors in Version 1.0.", "threshold": "FGFT Version 1.0", "dnsh": "Not yet applied" }
+    ],
+    "citations": [
+      { "id": 1, "label": "Reserve Bank of Fiji, \"Fiji Launches Green Finance Taxonomy to Drive Climate-Resilient Investments\" (press release no. 30, Dec 2025)", "url": "https://www.rbf.gov.fj/press-release-no-30-fiji-launches-green-finance-taxonomy-to-drive-climate-resilient-investments/" },
+      { "id": 2, "label": "IFC, \"IFC and Reserve Bank of Fiji Partner to Develop Green Finance Taxonomy\" (2023)", "url": "https://www.ifc.org/en/pressroom/2023/ifc-and-reserve-bank-of-fiji-partner-to-develop-green-finance-taxonomy-boost-climate-friendly-investments-and-sustainable-growth" }
+    ]
   },
   "MDA": {
     "name": "Moldova",
@@ -6390,6 +6826,15 @@ window.TAXONOMY_DATA = {
         "date": "2024",
         "url": "https://data.sbfnetwork.org/sites/default/files/survey-attachments/2025-05/2024%20%E2%80%93%202028%20MOLDOVA%20sustainable%20finance%20roadmap.pdf"
       }
+    ],
+    "fullDescription": [
+      "Moldova's path toward a national sustainable finance taxonomy began with a Sustainable Finance Roadmap 2024–2028, developed with support from the Sustainable Banking and Finance Network, setting out the sequence of reforms needed to build a classification framework aligned with EU standards as part of the country's EU-accession process. [1]",
+      "The National Bank of Moldova formally approved the Taxonomy for Sustainable Finance in April 2026, giving the country one of the more recently finalised national taxonomies in the Europe/Eurasia region and reflecting Moldova's broader effort to align its financial regulation with the EU acquis ahead of eventual membership. [2]",
+      "The approval sets out the taxonomy's general classification framework, but the Government's own announcement states that competent authorities will still need to draft and approve secondary regulatory acts establishing the concrete application, reporting and monitoring requirements — meaning detailed sector-by-sector eligible-activity criteria are not yet public. The taxonomy itself only enters into force on 9 April 2027, giving market participants a one-year transition period. [2] No sector-level activity table is shown here until that detail is published, to avoid presenting placeholder criteria as official."
+    ],
+    "citations": [
+      { "id": 1, "label": "Sustainable Banking and Finance Network, \"Moldova Sustainable Finance Roadmap 2024–2028\"", "url": "https://data.sbfnetwork.org/sites/default/files/survey-attachments/2025-05/2024%20%E2%80%93%202028%20MOLDOVA%20sustainable%20finance%20roadmap.pdf" },
+      { "id": 2, "label": "National Bank of Moldova, \"Approval of the Taxonomy for Sustainable Finance\" (Apr 2026)", "url": "https://www.bnm.md/en/content/aprobarea-taxonomiei-pentru-finantare-durabila" }
     ]
   },
   "BEN": {
@@ -6408,7 +6853,38 @@ window.TAXONOMY_DATA = {
       }
     ],
     "overlays": [],
-    "regulator": "AMF-UMOA (West African Financial Markets Authority)"
+    "regulator": "AMF-UMOA (West African Financial Markets Authority)",
+    "fullDescription": [
+      "Benin is one of the eight member states of the West African Economic and Monetary Union (UMOA/WAEMU) covered by the regional Green, Social and Sustainable Bond Taxonomy, introduced via AMF-UMOA Circular No. 001-AMF-UMOA/2024 on 28 February 2024. [1]",
+      "Rather than a national economy-wide classification system, the UMOA taxonomy is a project-eligibility framework specifically for bond issuances: it sets out the criteria projects must meet to be labelled and issued as green, social or sustainable bonds on the regional BRVM securities exchange, which serves all UMOA member states including Benin. [1] No separate national taxonomy specific to Benin has been identified.",
+      "Benin was an early reference point for the taxonomy's own rationale: its 2021 SDG-linked Eurobond carried a documented pricing advantage (\"greenium\") versus a conventional issuance, cited by regional policymakers as evidence that sustainability-labelled instruments could attract favourable terms. [2] As a coastal member state, Benin also falls within scope of the taxonomy's five blue-economy sub-categories (ocean pollution, coastal erosion, sustainable fisheries, marine-resource management, and blue-economy ecosystems)."
+    ],
+    "activityList": [
+      { "activity": "Renewable Energy & Energy Efficiency", "criteria": "Solar, wind, hydro and biomass power generation; energy-efficiency retrofits in buildings, industry and electricity grids.", "threshold": "No quantitative threshold — AMF-UMOA uses a category-listing approach rather than the EU's technical-criteria model", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Clean Transport", "criteria": "Electric vehicles, rail transport, low-emission urban public transport, multimodal transport and supporting infrastructure.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Sustainable Water Management", "criteria": "Potable water supply, sanitation, integrated water-resource management, and reduction of network losses.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Green Buildings", "criteria": "Construction certified to recognised green-building standards (IFC EDGE, LEED, BREEAM, HQE) or exceeding national energy-performance benchmarks.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Sustainable Land Use & Living Natural Resources", "criteria": "Sustainable agriculture, agroforestry, sustainable fisheries and sustainable livestock farming.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Biodiversity Conservation & Restoration", "criteria": "Protected-area management, ecosystem restoration, land-degradation control, and protection of wildlife and flora.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Pollution Prevention & Control", "criteria": "Soil and water remediation, industrial and urban pollutant management, and reduction of atmospheric emissions.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Circular Economy & Waste Management", "criteria": "Recycling, waste valorisation, repair and reuse, and eco-design.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Affordable Basic Infrastructure", "criteria": "Access to electricity, water, sanitation, transport and telecommunications in underserved areas.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Essential Services (Health & Education)", "criteria": "Hospitals, health centres, schools and vocational training centres.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Affordable Housing", "criteria": "Housing finance targeted at low- and moderate-income households.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Employment Generation", "criteria": "Programmes targeting durable job creation, particularly for youth and women, including microfinance and vocational training.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Food Security", "criteria": "Sustainable agriculture, post-harvest storage, local processing and irrigation.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Socioeconomic Advancement & Empowerment", "criteria": "Financial inclusion, conditional transfers, and empowerment of women, youth, rural and Indigenous populations.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Equitable Market & Social Participation", "criteria": "Inclusion of vulnerable groups: persons with disabilities, displaced populations, unskilled rural youth, and female heads of household.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Ocean Pollution Control (blue)", "criteria": "Reduction of chemical and plastic waste in marine and coastal environments.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Coastal Erosion Protection (blue)", "criteria": "Coastline defence and rehabilitation infrastructure.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Sustainable Fisheries & Aquaculture (blue)", "criteria": "Sustainable marine and aquaculture fishing practices.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Sustainable Marine Resource Management (blue)", "criteria": "Management of marine resources beyond fisheries, including sustainable extraction and coastal-zone planning.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Blue Economy & Marine Ecosystems (blue)", "criteria": "Mangroves, lagoons, reefs and artisanal fisheries.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" }
+    ],
+    "citations": [
+      { "id": 1, "label": "Autorité des Marchés Financiers de l'UMOA (AMF-UMOA), Circulaire N\u00b0001-AMF-UMOA/2024 (28 F\u00e9v 2024)", "url": "https://www.brvm.org/sites/default/files/circulaire_ndeg001-amf-umoa-2024_-_mise_en_place_dune_taxonomie_des_projets_faisant_lobjet_demissions_dobligations_vertes_sociales_et_durable.pdf" },
+      { "id": 2, "label": "Cabinet Akwaba ESG, \u201cD\u00e9cryptage\u00a0: la taxonomie AMF-UMOA sur la finance durable\u201d, L\u2019\u00c9conomiste du Togo (18 May 2026)", "url": "https://leconomistedutogo.tg/decryptage-la-taxonomie-amf-umoa-sur-la-finance-durable/" }
+    ]
   },
   "BFA": {
     "name": "Burkina Faso",
@@ -6426,7 +6902,38 @@ window.TAXONOMY_DATA = {
       }
     ],
     "overlays": [],
-    "regulator": "AMF-UMOA (West African Financial Markets Authority)"
+    "regulator": "AMF-UMOA (West African Financial Markets Authority)",
+    "fullDescription": [
+      "Burkina Faso is one of the eight member states of the West African Economic and Monetary Union (UMOA/WAEMU) covered by the regional Green, Social and Sustainable Bond Taxonomy, introduced via AMF-UMOA Circular No. 001-AMF-UMOA/2024 on 28 February 2024. [1]",
+      "Rather than a national economy-wide classification system, the UMOA taxonomy is a project-eligibility framework specifically for bond issuances: it sets out the criteria projects must meet to be labelled and issued as green, social or sustainable bonds on the regional BRVM securities exchange, which serves all UMOA member states including Burkina Faso. [1] No separate national taxonomy specific to Burkina Faso has been identified.",
+      "As a landlocked member state, Burkina Faso falls outside the taxonomy's five blue-economy sub-categories, which apply only to the Union's coastal states. Given the country's Sahelian climate profile, its eligible project pipeline is expected to draw most heavily on the taxonomy's renewable-energy, sustainable land-use and biodiversity-restoration sub-categories, which align with Burkina Faso's Nationally Determined Contribution priorities under the Paris Agreement. [2]"
+    ],
+    "activityList": [
+      { "activity": "Renewable Energy & Energy Efficiency", "criteria": "Solar, wind, hydro and biomass power generation; energy-efficiency retrofits in buildings, industry and electricity grids.", "threshold": "No quantitative threshold — AMF-UMOA uses a category-listing approach rather than the EU's technical-criteria model", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Clean Transport", "criteria": "Electric vehicles, rail transport, low-emission urban public transport, multimodal transport and supporting infrastructure.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Sustainable Water Management", "criteria": "Potable water supply, sanitation, integrated water-resource management, and reduction of network losses.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Green Buildings", "criteria": "Construction certified to recognised green-building standards (IFC EDGE, LEED, BREEAM, HQE) or exceeding national energy-performance benchmarks.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Sustainable Land Use & Living Natural Resources", "criteria": "Sustainable agriculture, agroforestry, sustainable fisheries and sustainable livestock farming.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Biodiversity Conservation & Restoration", "criteria": "Protected-area management, ecosystem restoration, land-degradation control, and protection of wildlife and flora.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Pollution Prevention & Control", "criteria": "Soil and water remediation, industrial and urban pollutant management, and reduction of atmospheric emissions.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Circular Economy & Waste Management", "criteria": "Recycling, waste valorisation, repair and reuse, and eco-design.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Affordable Basic Infrastructure", "criteria": "Access to electricity, water, sanitation, transport and telecommunications in underserved areas.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Essential Services (Health & Education)", "criteria": "Hospitals, health centres, schools and vocational training centres.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Affordable Housing", "criteria": "Housing finance targeted at low- and moderate-income households.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Employment Generation", "criteria": "Programmes targeting durable job creation, particularly for youth and women, including microfinance and vocational training.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Food Security", "criteria": "Sustainable agriculture, post-harvest storage, local processing and irrigation.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Socioeconomic Advancement & Empowerment", "criteria": "Financial inclusion, conditional transfers, and empowerment of women, youth, rural and Indigenous populations.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Equitable Market & Social Participation", "criteria": "Inclusion of vulnerable groups: persons with disabilities, displaced populations, unskilled rural youth, and female heads of household.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Ocean Pollution Control (blue)", "criteria": "Reduction of chemical and plastic waste in marine and coastal environments.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Coastal Erosion Protection (blue)", "criteria": "Coastline defence and rehabilitation infrastructure.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Sustainable Fisheries & Aquaculture (blue)", "criteria": "Sustainable marine and aquaculture fishing practices.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Sustainable Marine Resource Management (blue)", "criteria": "Management of marine resources beyond fisheries, including sustainable extraction and coastal-zone planning.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Blue Economy & Marine Ecosystems (blue)", "criteria": "Mangroves, lagoons, reefs and artisanal fisheries.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" }
+    ],
+    "citations": [
+      { "id": 1, "label": "Autorité des Marchés Financiers de l'UMOA (AMF-UMOA), Circulaire N\u00b0001-AMF-UMOA/2024 (28 F\u00e9v 2024)", "url": "https://www.brvm.org/sites/default/files/circulaire_ndeg001-amf-umoa-2024_-_mise_en_place_dune_taxonomie_des_projets_faisant_lobjet_demissions_dobligations_vertes_sociales_et_durable.pdf" },
+      { "id": 2, "label": "Cabinet Akwaba ESG, \u201cD\u00e9cryptage\u00a0: la taxonomie AMF-UMOA sur la finance durable\u201d, L\u2019\u00c9conomiste du Togo (18 May 2026)", "url": "https://leconomistedutogo.tg/decryptage-la-taxonomie-amf-umoa-sur-la-finance-durable/" }
+    ]
   },
   "GNB": {
     "name": "Guinea-Bissau",
@@ -6444,7 +6951,38 @@ window.TAXONOMY_DATA = {
       }
     ],
     "overlays": [],
-    "regulator": "AMF-UMOA (West African Financial Markets Authority)"
+    "regulator": "AMF-UMOA (West African Financial Markets Authority)",
+    "fullDescription": [
+      "Guinea-Bissau is one of the eight member states of the West African Economic and Monetary Union (UMOA/WAEMU) covered by the regional Green, Social and Sustainable Bond Taxonomy, introduced via AMF-UMOA Circular No. 001-AMF-UMOA/2024 on 28 February 2024. [1]",
+      "Rather than a national economy-wide classification system, the UMOA taxonomy is a project-eligibility framework specifically for bond issuances: it sets out the criteria projects must meet to be labelled and issued as green, social or sustainable bonds on the regional BRVM securities exchange, which serves all UMOA member states including Guinea-Bissau. [1] No separate national taxonomy specific to Guinea-Bissau has been identified.",
+      "As a coastal member state, Guinea-Bissau falls within scope of the taxonomy's five blue-economy sub-categories, covering ocean pollution control, coastal erosion protection, sustainable fisheries and aquaculture, marine-resource management, and blue-economy ecosystems such as mangroves \u2014 areas of particular relevance to Guinea-Bissau's Bijag\u00f3s archipelago and coastal geography. [2] No blue bond has yet been issued under the taxonomy by any UMOA member state."
+    ],
+    "activityList": [
+      { "activity": "Renewable Energy & Energy Efficiency", "criteria": "Solar, wind, hydro and biomass power generation; energy-efficiency retrofits in buildings, industry and electricity grids.", "threshold": "No quantitative threshold — AMF-UMOA uses a category-listing approach rather than the EU's technical-criteria model", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Clean Transport", "criteria": "Electric vehicles, rail transport, low-emission urban public transport, multimodal transport and supporting infrastructure.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Sustainable Water Management", "criteria": "Potable water supply, sanitation, integrated water-resource management, and reduction of network losses.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Green Buildings", "criteria": "Construction certified to recognised green-building standards (IFC EDGE, LEED, BREEAM, HQE) or exceeding national energy-performance benchmarks.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Sustainable Land Use & Living Natural Resources", "criteria": "Sustainable agriculture, agroforestry, sustainable fisheries and sustainable livestock farming.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Biodiversity Conservation & Restoration", "criteria": "Protected-area management, ecosystem restoration, land-degradation control, and protection of wildlife and flora.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Pollution Prevention & Control", "criteria": "Soil and water remediation, industrial and urban pollutant management, and reduction of atmospheric emissions.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Circular Economy & Waste Management", "criteria": "Recycling, waste valorisation, repair and reuse, and eco-design.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Affordable Basic Infrastructure", "criteria": "Access to electricity, water, sanitation, transport and telecommunications in underserved areas.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Essential Services (Health & Education)", "criteria": "Hospitals, health centres, schools and vocational training centres.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Affordable Housing", "criteria": "Housing finance targeted at low- and moderate-income households.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Employment Generation", "criteria": "Programmes targeting durable job creation, particularly for youth and women, including microfinance and vocational training.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Food Security", "criteria": "Sustainable agriculture, post-harvest storage, local processing and irrigation.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Socioeconomic Advancement & Empowerment", "criteria": "Financial inclusion, conditional transfers, and empowerment of women, youth, rural and Indigenous populations.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Equitable Market & Social Participation", "criteria": "Inclusion of vulnerable groups: persons with disabilities, displaced populations, unskilled rural youth, and female heads of household.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Ocean Pollution Control (blue)", "criteria": "Reduction of chemical and plastic waste in marine and coastal environments.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Coastal Erosion Protection (blue)", "criteria": "Coastline defence and rehabilitation infrastructure.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Sustainable Fisheries & Aquaculture (blue)", "criteria": "Sustainable marine and aquaculture fishing practices.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Sustainable Marine Resource Management (blue)", "criteria": "Management of marine resources beyond fisheries, including sustainable extraction and coastal-zone planning.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Blue Economy & Marine Ecosystems (blue)", "criteria": "Mangroves, lagoons, reefs and artisanal fisheries.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" }
+    ],
+    "citations": [
+      { "id": 1, "label": "Autorité des Marchés Financiers de l'UMOA (AMF-UMOA), Circulaire N\u00b0001-AMF-UMOA/2024 (28 F\u00e9v 2024)", "url": "https://www.brvm.org/sites/default/files/circulaire_ndeg001-amf-umoa-2024_-_mise_en_place_dune_taxonomie_des_projets_faisant_lobjet_demissions_dobligations_vertes_sociales_et_durable.pdf" },
+      { "id": 2, "label": "Cabinet Akwaba ESG, \u201cD\u00e9cryptage\u00a0: la taxonomie AMF-UMOA sur la finance durable\u201d, L\u2019\u00c9conomiste du Togo (18 May 2026)", "url": "https://leconomistedutogo.tg/decryptage-la-taxonomie-amf-umoa-sur-la-finance-durable/" }
+    ]
   },
   "CIV": {
     "name": "Ivory Coast",
@@ -6462,7 +7000,38 @@ window.TAXONOMY_DATA = {
       }
     ],
     "overlays": [],
-    "regulator": "AMF-UMOA (West African Financial Markets Authority)"
+    "regulator": "AMF-UMOA (West African Financial Markets Authority)",
+    "fullDescription": [
+      "Ivory Coast is one of the eight member states of the West African Economic and Monetary Union (UMOA/WAEMU) covered by the regional Green, Social and Sustainable Bond Taxonomy, introduced via AMF-UMOA Circular No. 001-AMF-UMOA/2024 on 28 February 2024. [1]",
+      "Rather than a national economy-wide classification system, the UMOA taxonomy is a project-eligibility framework specifically for bond issuances: it sets out the criteria projects must meet to be labelled and issued as green, social or sustainable bonds on the regional BRVM securities exchange, which serves all UMOA member states including Ivory Coast. [1] No separate national taxonomy specific to Ivory Coast has been identified.",
+      "Ivory Coast, the UEMOA's largest economy, is expected to be a leading source of green bond-eligible projects: the country has set a target of 45% renewable energy in its electricity mix by 2030, and infrastructure projects such as the planned Abidjan tramway illustrate the kind of clean-transport project the taxonomy's green sub-categories are designed to finance. [2] Its major export sectors \u2014 cocoa, rubber, coffee and palm oil \u2014 also intersect with the taxonomy's sustainable land-use sub-category, where eligibility typically depends on recognised certification schemes. As a coastal state, Ivory Coast additionally falls within scope of the taxonomy's blue-economy sub-categories, including coastal erosion protection, a documented challenge along parts of its Atlantic shoreline."
+    ],
+    "activityList": [
+      { "activity": "Renewable Energy & Energy Efficiency", "criteria": "Solar, wind, hydro and biomass power generation; energy-efficiency retrofits in buildings, industry and electricity grids.", "threshold": "No quantitative threshold — AMF-UMOA uses a category-listing approach rather than the EU's technical-criteria model", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Clean Transport", "criteria": "Electric vehicles, rail transport, low-emission urban public transport, multimodal transport and supporting infrastructure.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Sustainable Water Management", "criteria": "Potable water supply, sanitation, integrated water-resource management, and reduction of network losses.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Green Buildings", "criteria": "Construction certified to recognised green-building standards (IFC EDGE, LEED, BREEAM, HQE) or exceeding national energy-performance benchmarks.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Sustainable Land Use & Living Natural Resources", "criteria": "Sustainable agriculture, agroforestry, sustainable fisheries and sustainable livestock farming.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Biodiversity Conservation & Restoration", "criteria": "Protected-area management, ecosystem restoration, land-degradation control, and protection of wildlife and flora.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Pollution Prevention & Control", "criteria": "Soil and water remediation, industrial and urban pollutant management, and reduction of atmospheric emissions.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Circular Economy & Waste Management", "criteria": "Recycling, waste valorisation, repair and reuse, and eco-design.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Affordable Basic Infrastructure", "criteria": "Access to electricity, water, sanitation, transport and telecommunications in underserved areas.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Essential Services (Health & Education)", "criteria": "Hospitals, health centres, schools and vocational training centres.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Affordable Housing", "criteria": "Housing finance targeted at low- and moderate-income households.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Employment Generation", "criteria": "Programmes targeting durable job creation, particularly for youth and women, including microfinance and vocational training.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Food Security", "criteria": "Sustainable agriculture, post-harvest storage, local processing and irrigation.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Socioeconomic Advancement & Empowerment", "criteria": "Financial inclusion, conditional transfers, and empowerment of women, youth, rural and Indigenous populations.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Equitable Market & Social Participation", "criteria": "Inclusion of vulnerable groups: persons with disabilities, displaced populations, unskilled rural youth, and female heads of household.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Ocean Pollution Control (blue)", "criteria": "Reduction of chemical and plastic waste in marine and coastal environments.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Coastal Erosion Protection (blue)", "criteria": "Coastline defence and rehabilitation infrastructure.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Sustainable Fisheries & Aquaculture (blue)", "criteria": "Sustainable marine and aquaculture fishing practices.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Sustainable Marine Resource Management (blue)", "criteria": "Management of marine resources beyond fisheries, including sustainable extraction and coastal-zone planning.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Blue Economy & Marine Ecosystems (blue)", "criteria": "Mangroves, lagoons, reefs and artisanal fisheries.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" }
+    ],
+    "citations": [
+      { "id": 1, "label": "Autorité des Marchés Financiers de l'UMOA (AMF-UMOA), Circulaire N\u00b0001-AMF-UMOA/2024 (28 F\u00e9v 2024)", "url": "https://www.brvm.org/sites/default/files/circulaire_ndeg001-amf-umoa-2024_-_mise_en_place_dune_taxonomie_des_projets_faisant_lobjet_demissions_dobligations_vertes_sociales_et_durable.pdf" },
+      { "id": 2, "label": "Cabinet Akwaba ESG, \u201cD\u00e9cryptage\u00a0: la taxonomie AMF-UMOA sur la finance durable\u201d, L\u2019\u00c9conomiste du Togo (18 May 2026)", "url": "https://leconomistedutogo.tg/decryptage-la-taxonomie-amf-umoa-sur-la-finance-durable/" }
+    ]
   },
   "MLI": {
     "name": "Mali",
@@ -6480,7 +7049,38 @@ window.TAXONOMY_DATA = {
       }
     ],
     "overlays": [],
-    "regulator": "AMF-UMOA (West African Financial Markets Authority)"
+    "regulator": "AMF-UMOA (West African Financial Markets Authority)",
+    "fullDescription": [
+      "Mali is one of the eight member states of the West African Economic and Monetary Union (UMOA/WAEMU) covered by the regional Green, Social and Sustainable Bond Taxonomy, introduced via AMF-UMOA Circular No. 001-AMF-UMOA/2024 on 28 February 2024. [1]",
+      "Rather than a national economy-wide classification system, the UMOA taxonomy is a project-eligibility framework specifically for bond issuances: it sets out the criteria projects must meet to be labelled and issued as green, social or sustainable bonds on the regional BRVM securities exchange, which serves all UMOA member states including Mali. [1] No separate national taxonomy specific to Mali has been identified.",
+      "As a landlocked member state, Mali falls outside the taxonomy's five blue-economy sub-categories. Mali's eligible project pipeline is expected to concentrate on the green sub-categories most relevant to a Sahelian economy \u2014 renewable energy, sustainable land use and biodiversity restoration \u2014 and on the social sub-categories covering food security and affordable basic infrastructure, reflecting priorities set out in Mali's Nationally Determined Contribution. [2]"
+    ],
+    "activityList": [
+      { "activity": "Renewable Energy & Energy Efficiency", "criteria": "Solar, wind, hydro and biomass power generation; energy-efficiency retrofits in buildings, industry and electricity grids.", "threshold": "No quantitative threshold — AMF-UMOA uses a category-listing approach rather than the EU's technical-criteria model", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Clean Transport", "criteria": "Electric vehicles, rail transport, low-emission urban public transport, multimodal transport and supporting infrastructure.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Sustainable Water Management", "criteria": "Potable water supply, sanitation, integrated water-resource management, and reduction of network losses.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Green Buildings", "criteria": "Construction certified to recognised green-building standards (IFC EDGE, LEED, BREEAM, HQE) or exceeding national energy-performance benchmarks.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Sustainable Land Use & Living Natural Resources", "criteria": "Sustainable agriculture, agroforestry, sustainable fisheries and sustainable livestock farming.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Biodiversity Conservation & Restoration", "criteria": "Protected-area management, ecosystem restoration, land-degradation control, and protection of wildlife and flora.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Pollution Prevention & Control", "criteria": "Soil and water remediation, industrial and urban pollutant management, and reduction of atmospheric emissions.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Circular Economy & Waste Management", "criteria": "Recycling, waste valorisation, repair and reuse, and eco-design.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Affordable Basic Infrastructure", "criteria": "Access to electricity, water, sanitation, transport and telecommunications in underserved areas.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Essential Services (Health & Education)", "criteria": "Hospitals, health centres, schools and vocational training centres.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Affordable Housing", "criteria": "Housing finance targeted at low- and moderate-income households.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Employment Generation", "criteria": "Programmes targeting durable job creation, particularly for youth and women, including microfinance and vocational training.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Food Security", "criteria": "Sustainable agriculture, post-harvest storage, local processing and irrigation.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Socioeconomic Advancement & Empowerment", "criteria": "Financial inclusion, conditional transfers, and empowerment of women, youth, rural and Indigenous populations.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Equitable Market & Social Participation", "criteria": "Inclusion of vulnerable groups: persons with disabilities, displaced populations, unskilled rural youth, and female heads of household.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Ocean Pollution Control (blue)", "criteria": "Reduction of chemical and plastic waste in marine and coastal environments.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Coastal Erosion Protection (blue)", "criteria": "Coastline defence and rehabilitation infrastructure.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Sustainable Fisheries & Aquaculture (blue)", "criteria": "Sustainable marine and aquaculture fishing practices.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Sustainable Marine Resource Management (blue)", "criteria": "Management of marine resources beyond fisheries, including sustainable extraction and coastal-zone planning.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Blue Economy & Marine Ecosystems (blue)", "criteria": "Mangroves, lagoons, reefs and artisanal fisheries.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" }
+    ],
+    "citations": [
+      { "id": 1, "label": "Autorité des Marchés Financiers de l'UMOA (AMF-UMOA), Circulaire N\u00b0001-AMF-UMOA/2024 (28 F\u00e9v 2024)", "url": "https://www.brvm.org/sites/default/files/circulaire_ndeg001-amf-umoa-2024_-_mise_en_place_dune_taxonomie_des_projets_faisant_lobjet_demissions_dobligations_vertes_sociales_et_durable.pdf" },
+      { "id": 2, "label": "Cabinet Akwaba ESG, \u201cD\u00e9cryptage\u00a0: la taxonomie AMF-UMOA sur la finance durable\u201d, L\u2019\u00c9conomiste du Togo (18 May 2026)", "url": "https://leconomistedutogo.tg/decryptage-la-taxonomie-amf-umoa-sur-la-finance-durable/" }
+    ]
   },
   "NER": {
     "name": "Niger",
@@ -6498,7 +7098,38 @@ window.TAXONOMY_DATA = {
       }
     ],
     "overlays": [],
-    "regulator": "AMF-UMOA (West African Financial Markets Authority)"
+    "regulator": "AMF-UMOA (West African Financial Markets Authority)",
+    "fullDescription": [
+      "Niger is one of the eight member states of the West African Economic and Monetary Union (UMOA/WAEMU) covered by the regional Green, Social and Sustainable Bond Taxonomy, introduced via AMF-UMOA Circular No. 001-AMF-UMOA/2024 on 28 February 2024. [1]",
+      "Rather than a national economy-wide classification system, the UMOA taxonomy is a project-eligibility framework specifically for bond issuances: it sets out the criteria projects must meet to be labelled and issued as green, social or sustainable bonds on the regional BRVM securities exchange, which serves all UMOA member states including Niger. [1] No separate national taxonomy specific to Niger has been identified.",
+      "As a landlocked member state, Niger falls outside the taxonomy's five blue-economy sub-categories. Niger's Nationally Determined Contribution \u2014 one of the three foundations the AMF-UMOA taxonomy was built on, alongside international climate-fund priorities and ICMA principles \u2014 points toward renewable energy, sustainable land management and food-security projects as the sub-categories most likely to anchor any future Nigerien bond issuance under the framework. [2]"
+    ],
+    "activityList": [
+      { "activity": "Renewable Energy & Energy Efficiency", "criteria": "Solar, wind, hydro and biomass power generation; energy-efficiency retrofits in buildings, industry and electricity grids.", "threshold": "No quantitative threshold — AMF-UMOA uses a category-listing approach rather than the EU's technical-criteria model", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Clean Transport", "criteria": "Electric vehicles, rail transport, low-emission urban public transport, multimodal transport and supporting infrastructure.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Sustainable Water Management", "criteria": "Potable water supply, sanitation, integrated water-resource management, and reduction of network losses.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Green Buildings", "criteria": "Construction certified to recognised green-building standards (IFC EDGE, LEED, BREEAM, HQE) or exceeding national energy-performance benchmarks.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Sustainable Land Use & Living Natural Resources", "criteria": "Sustainable agriculture, agroforestry, sustainable fisheries and sustainable livestock farming.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Biodiversity Conservation & Restoration", "criteria": "Protected-area management, ecosystem restoration, land-degradation control, and protection of wildlife and flora.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Pollution Prevention & Control", "criteria": "Soil and water remediation, industrial and urban pollutant management, and reduction of atmospheric emissions.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Circular Economy & Waste Management", "criteria": "Recycling, waste valorisation, repair and reuse, and eco-design.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Affordable Basic Infrastructure", "criteria": "Access to electricity, water, sanitation, transport and telecommunications in underserved areas.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Essential Services (Health & Education)", "criteria": "Hospitals, health centres, schools and vocational training centres.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Affordable Housing", "criteria": "Housing finance targeted at low- and moderate-income households.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Employment Generation", "criteria": "Programmes targeting durable job creation, particularly for youth and women, including microfinance and vocational training.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Food Security", "criteria": "Sustainable agriculture, post-harvest storage, local processing and irrigation.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Socioeconomic Advancement & Empowerment", "criteria": "Financial inclusion, conditional transfers, and empowerment of women, youth, rural and Indigenous populations.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Equitable Market & Social Participation", "criteria": "Inclusion of vulnerable groups: persons with disabilities, displaced populations, unskilled rural youth, and female heads of household.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Ocean Pollution Control (blue)", "criteria": "Reduction of chemical and plastic waste in marine and coastal environments.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Coastal Erosion Protection (blue)", "criteria": "Coastline defence and rehabilitation infrastructure.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Sustainable Fisheries & Aquaculture (blue)", "criteria": "Sustainable marine and aquaculture fishing practices.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Sustainable Marine Resource Management (blue)", "criteria": "Management of marine resources beyond fisheries, including sustainable extraction and coastal-zone planning.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Blue Economy & Marine Ecosystems (blue)", "criteria": "Mangroves, lagoons, reefs and artisanal fisheries.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" }
+    ],
+    "citations": [
+      { "id": 1, "label": "Autorité des Marchés Financiers de l'UMOA (AMF-UMOA), Circulaire N\u00b0001-AMF-UMOA/2024 (28 F\u00e9v 2024)", "url": "https://www.brvm.org/sites/default/files/circulaire_ndeg001-amf-umoa-2024_-_mise_en_place_dune_taxonomie_des_projets_faisant_lobjet_demissions_dobligations_vertes_sociales_et_durable.pdf" },
+      { "id": 2, "label": "Cabinet Akwaba ESG, \u201cD\u00e9cryptage\u00a0: la taxonomie AMF-UMOA sur la finance durable\u201d, L\u2019\u00c9conomiste du Togo (18 May 2026)", "url": "https://leconomistedutogo.tg/decryptage-la-taxonomie-amf-umoa-sur-la-finance-durable/" }
+    ]
   },
   "TGO": {
     "name": "Togo",
@@ -6516,7 +7147,38 @@ window.TAXONOMY_DATA = {
       }
     ],
     "overlays": [],
-    "regulator": "AMF-UMOA (West African Financial Markets Authority)"
+    "regulator": "AMF-UMOA (West African Financial Markets Authority)",
+    "fullDescription": [
+      "Togo is one of the eight member states of the West African Economic and Monetary Union (UMOA/WAEMU) covered by the regional Green, Social and Sustainable Bond Taxonomy, introduced via AMF-UMOA Circular No. 001-AMF-UMOA/2024 on 28 February 2024. [1]",
+      "Rather than a national economy-wide classification system, the UMOA taxonomy is a project-eligibility framework specifically for bond issuances: it sets out the criteria projects must meet to be labelled and issued as green, social or sustainable bonds on the regional BRVM securities exchange, which serves all UMOA member states including Togo. [1] No separate national taxonomy specific to Togo has been identified.",
+      "Togo has a direct institutional link to the taxonomy's early track record: the Lom\u00e9-headquartered ECOWAS Bank for Investment and Development (BIDC/EBID) issued the UEMOA's first-ever bond under the taxonomy in July 2024 \u2014 a 70 billion FCFA Green, Social and Sustainability bond \u2014 with its BRVM listing ceremony held at BIDC's Lom\u00e9 headquarters on 31 October 2024. [2] As a coastal state, Togo also falls within scope of the taxonomy's five blue-economy sub-categories."
+    ],
+    "activityList": [
+      { "activity": "Renewable Energy & Energy Efficiency", "criteria": "Solar, wind, hydro and biomass power generation; energy-efficiency retrofits in buildings, industry and electricity grids.", "threshold": "No quantitative threshold — AMF-UMOA uses a category-listing approach rather than the EU's technical-criteria model", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Clean Transport", "criteria": "Electric vehicles, rail transport, low-emission urban public transport, multimodal transport and supporting infrastructure.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Sustainable Water Management", "criteria": "Potable water supply, sanitation, integrated water-resource management, and reduction of network losses.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Green Buildings", "criteria": "Construction certified to recognised green-building standards (IFC EDGE, LEED, BREEAM, HQE) or exceeding national energy-performance benchmarks.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Sustainable Land Use & Living Natural Resources", "criteria": "Sustainable agriculture, agroforestry, sustainable fisheries and sustainable livestock farming.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Biodiversity Conservation & Restoration", "criteria": "Protected-area management, ecosystem restoration, land-degradation control, and protection of wildlife and flora.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Pollution Prevention & Control", "criteria": "Soil and water remediation, industrial and urban pollutant management, and reduction of atmospheric emissions.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Circular Economy & Waste Management", "criteria": "Recycling, waste valorisation, repair and reuse, and eco-design.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Affordable Basic Infrastructure", "criteria": "Access to electricity, water, sanitation, transport and telecommunications in underserved areas.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Essential Services (Health & Education)", "criteria": "Hospitals, health centres, schools and vocational training centres.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Affordable Housing", "criteria": "Housing finance targeted at low- and moderate-income households.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Employment Generation", "criteria": "Programmes targeting durable job creation, particularly for youth and women, including microfinance and vocational training.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Food Security", "criteria": "Sustainable agriculture, post-harvest storage, local processing and irrigation.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Socioeconomic Advancement & Empowerment", "criteria": "Financial inclusion, conditional transfers, and empowerment of women, youth, rural and Indigenous populations.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Equitable Market & Social Participation", "criteria": "Inclusion of vulnerable groups: persons with disabilities, displaced populations, unskilled rural youth, and female heads of household.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Ocean Pollution Control (blue)", "criteria": "Reduction of chemical and plastic waste in marine and coastal environments.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Coastal Erosion Protection (blue)", "criteria": "Coastline defence and rehabilitation infrastructure.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Sustainable Fisheries & Aquaculture (blue)", "criteria": "Sustainable marine and aquaculture fishing practices.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Sustainable Marine Resource Management (blue)", "criteria": "Management of marine resources beyond fisheries, including sustainable extraction and coastal-zone planning.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" },
+      { "activity": "Blue Economy & Marine Ecosystems (blue)", "criteria": "Mangroves, lagoons, reefs and artisanal fisheries.", "threshold": "No quantitative threshold — category-listing approach", "dnsh": "Not formally required in the 2024 version" }
+    ],
+    "citations": [
+      { "id": 1, "label": "Autorité des Marchés Financiers de l'UMOA (AMF-UMOA), Circulaire N\u00b0001-AMF-UMOA/2024 (28 F\u00e9v 2024)", "url": "https://www.brvm.org/sites/default/files/circulaire_ndeg001-amf-umoa-2024_-_mise_en_place_dune_taxonomie_des_projets_faisant_lobjet_demissions_dobligations_vertes_sociales_et_durable.pdf" },
+      { "id": 2, "label": "Cabinet Akwaba ESG, \u201cD\u00e9cryptage\u00a0: la taxonomie AMF-UMOA sur la finance durable\u201d, L\u2019\u00c9conomiste du Togo (18 May 2026)", "url": "https://leconomistedutogo.tg/decryptage-la-taxonomie-amf-umoa-sur-la-finance-durable/" }
+    ]
   },
   "SEN": {
     "name": "Senegal",
@@ -6545,7 +7207,16 @@ window.TAXONOMY_DATA = {
         "source": "https://www.brvm.org/sites/default/files/circulaire_ndeg001-amf-umoa-2024_-_mise_en_place_dune_taxonomie_des_projets_faisant_lobjet_demissions_dobligations_vertes_sociales_et_durable.pdf"
       }
     ],
-    "regulator": "AMF-UMOA / Ministry of Finance (Senegal)"
+    "regulator": "AMF-UMOA / Ministry of Finance (Senegal)",
+    "fullDescription": [
+      "Senegal's Ministry of Environment and Ecological Transition, together with the Ministry of Finance and Budget, has been developing a national Green Taxonomy with technical and financial support from German development cooperation (GIZ), through the 2025-2028 'Finance Durable' project. A first phase launched in March 2024, followed by a second phase in October 2024. [1][2]",
+      "A restitution and validation workshop on the first draft was held in September 2025. Some news reporting in early 2025 described the taxonomy as 'adopted', but GIZ's own project factsheet from February 2025 describes it as still 'en cours d'élaboration' (in development) — as of the most recent public information found, the taxonomy has not been formally finalised. [1]",
+      "Once complete, it would be the first national green taxonomy in francophone Africa, and is being designed for interoperability with both the EU Taxonomy and Rwanda's Green Taxonomy. Separately, as a UMOA/WAEMU member state, Senegal is also covered by the regional Green, Social and Sustainable Bond Taxonomy for bond-project eligibility."
+    ],
+    "citations": [
+      { "id": 1, "label": "GIZ, \"Renforcer la finance durable au Sénégal\" project factsheet (Fév 2025)", "url": "https://energypedia.info/images/c/c0/Factcheet_Renforer_de_la_finance_durable_au_S%C3%A9n%C3%A9gal_GIZ_2025.pdf" },
+      { "id": 2, "label": "VivAfrik, \"Le Sénégal lance la deuxième phase de la taxonomie verte\" (26 Oct 2024)", "url": "https://www.vivafrik.com/2024/10/26/le-senegal-lance-la-deuxieme-phase-de-la-taxonomie-verte-et-evoque-limplication-du-secteur-prive-a57361.html" }
+    ]
   },
   "CAN": {
     "name": "Canada",
@@ -6574,6 +7245,14 @@ window.TAXONOMY_DATA = {
       "In December 2025 the federal government announced two years of seed funding and selected the Canadian Climate Institute, working with Business Future Pathways, to lead development through a new governing Taxonomy Council. The guidelines are intended to be science-based and technology-neutral, screening out investments that could cause significant harm, and will include a distinct 'transition' category to identify and boost funding for scientifically credible pathways to rapidly decarbonise Canada's emissions-intensive sectors — going beyond a simple green/non-green binary. [2][3]",
       "Development is initially focused on six priority sectors: electricity, transportation, buildings, agriculture and forestry, manufacturing, and extractives (including mineral extraction/processing and natural gas). The Taxonomy Council is expected to finalise guidelines for three priority sectors by the end of 2026 and three more by autumn 2027, with the framework designed to be broadly compatible with other major international science-based taxonomies. [2][3]"
     ],
+    "activityList": [
+      { "activity": "Electricity", "criteria": "Clean and renewable electricity generation — a priority sector for the taxonomy under development.", "threshold": "Made-in-Canada Sustainable Investment Taxonomy (Canadian Climate Institute mandate, targeted for release by end of 2026) — not yet finalised", "dnsh": "Scientifically determined eligibility criteria are still being developed" },
+      { "activity": "Transportation", "criteria": "Low- and zero-emission transport activities.", "threshold": "Sustainable Investment Taxonomy — in development", "dnsh": "Not yet specified" },
+      { "activity": "Buildings", "criteria": "Energy-efficient construction and retrofits.", "threshold": "Sustainable Investment Taxonomy — in development", "dnsh": "Not yet specified" },
+      { "activity": "Agriculture & Forestry", "criteria": "Sustainable land-management and forestry activities.", "threshold": "Sustainable Investment Taxonomy — in development", "dnsh": "Not yet specified" },
+      { "activity": "Manufacturing", "criteria": "Emissions-reducing industrial processes.", "threshold": "Sustainable Investment Taxonomy — in development", "dnsh": "Not yet specified" },
+      { "activity": "Extractives (mineral extraction & processing, natural gas)", "criteria": "A dedicated \"transition\" category is planned to identify credible decarbonisation pathways for this emissions-intensive sector, rather than excluding it outright.", "threshold": "Sustainable Investment Taxonomy — in development", "dnsh": "Transition-category criteria still being defined" }
+    ],
     "citations": [
       { "id": 1, "label": "Government of Canada, \"Taxonomy Roadmap Report\" (Sustainable Finance Action Council, 2022)", "url": "https://www.canada.ca/en/department-finance/programs/financial-sector-policy/sustainable-finance/sustainable-finance-action-council/taxonomy-roadmap-report.html" },
       { "id": 2, "label": "Government of Canada (Department of Finance), \"Government announces next steps toward made-in-Canada sustainable investment guidelines\" (Dec 2025)", "url": "https://www.canada.ca/en/department-finance/news/2025/12/government-announces-next-steps-toward-made-in-canada-sustainable-investment-guidelines.html" },
@@ -6596,6 +7275,13 @@ window.TAXONOMY_DATA = {
         "date": "2024",
         "url": "https://www.lse.ac.uk/granthaminstitute/publication/insights-and-progress-from-the-bank-of-albanias-green-strategy-may-2023-2024/"
       }
+    ],
+    "fullDescription": [
+      "The Bank of Albania is developing a national Green Taxonomy with support from the European Investment Bank, as part of its wider green strategy and Albania's EU-accession commitments under Chapter 9 (Financial Services). [1]",
+      "The taxonomy work sits alongside a Climate Risk Management Guide for financial institutions and a sustainability-monitoring 'Green Dashboard', reflecting a broader effort to align Albania's financial-sector regulation with EU standards ahead of eventual membership. As of the latest progress updates, the taxonomy itself has not yet been finalised."
+    ],
+    "citations": [
+      { "id": 1, "label": "LSE Grantham Research Institute, \"Insights and progress from the Bank of Albania's green strategy, May 2023–2024\"", "url": "https://www.lse.ac.uk/granthaminstitute/publication/insights-and-progress-from-the-bank-of-albanias-green-strategy-may-2023-2024/" }
     ]
   },
   "ETH": {
@@ -6614,7 +7300,14 @@ window.TAXONOMY_DATA = {
       }
     ],
     "overlays": [],
-    "regulator": "National Bank of Ethiopia (framework in development)"
+    "regulator": "National Bank of Ethiopia (framework in development)",
+    "fullDescription": [
+      "The National Bank of Ethiopia is developing a National Green Taxonomy under the Greening the Financial Systems Programme, following a technical agreement signed in May 2025 with funding from Germany and Luxembourg and support from the European Investment Bank. [1]",
+      "The programme aims to give Ethiopian financial institutions and investors a common reference framework for identifying environmentally sustainable economic activities, supporting the country's broader climate-finance mobilisation efforts. As of the latest available information, the taxonomy has not yet been finalised."
+    ],
+    "citations": [
+      { "id": 1, "label": "European Investment Bank, \"Ethiopia Unveils Strategic Initiative to Green Its Financial System and Drive Sustainable Investment\" (2025)", "url": "https://www.eib.org/en/press/all/2025-211-ethiopia-unveils-strategic-initiative-to-green-its-financial-system-and-drive-sustainable-investment" }
+    ]
   },
   "GHA": {
     "name": "Ghana",
@@ -6632,7 +7325,23 @@ window.TAXONOMY_DATA = {
       }
     ],
     "overlays": [],
-    "regulator": "Ministry of Finance / Bank of Ghana"
+    "regulator": "Ministry of Finance / Bank of Ghana",
+    "fullDescription": [
+      "Ghana's Ministry of Finance launched Phase 1 of the Ghana Green Finance Taxonomy on 9 October 2024 at the SDGs Investment Fair, establishing a classification system to help financial institutions, investors and policymakers identify environmentally sustainable economic activities. [1]",
+      "Phase 1 focuses on establishing the qualitative screening criteria and sectoral scope of the taxonomy. Two further phases are planned: Phase 2 will introduce quantitative technical thresholds and tax incentives, while Phase 3 will add a transitional taxonomy for carbon-intensive sectors moving toward decarbonisation.",
+      "Separately, the Bank of Ghana issued a Climate-Related Financial Risk Directive in May 2024, requiring banks to assess and disclose climate-related financial risks — a complementary but distinct regulatory track from the Ministry of Finance's taxonomy work."
+    ],
+    "activityList": [
+      { "activity": "Energy", "criteria": "Renewable power generation and energy-efficiency measures identified as priority under Phase 1.", "threshold": "Qualitative screening criteria (Ghana Green Finance Taxonomy, Phase 1)", "dnsh": "Not yet quantified — Phase 2 will introduce quantitative thresholds" },
+      { "activity": "Agriculture, Forestry & Aquaculture", "criteria": "Sustainable farming, forestry and aquaculture practices that build climate resilience.", "threshold": "Qualitative screening criteria (Phase 1)", "dnsh": "Not yet quantified" },
+      { "activity": "Water & Waste Management", "criteria": "Water-resource management and waste-handling activities that reduce environmental impact.", "threshold": "Qualitative screening criteria (Phase 1)", "dnsh": "Not yet quantified" },
+      { "activity": "Building & Construction", "criteria": "Green urban development and energy-efficient building activities.", "threshold": "Qualitative screening criteria (Phase 1)", "dnsh": "Not yet quantified" },
+      { "activity": "Transportation", "criteria": "Low-emission transport and supporting infrastructure.", "threshold": "Qualitative screening criteria (Phase 1)", "dnsh": "Not yet quantified" },
+      { "activity": "Biodiversity Conservation & Ecotourism", "criteria": "Conservation and ecotourism activities identified as priority areas alongside the core sectors.", "threshold": "Qualitative screening criteria (Phase 1)", "dnsh": "Not yet quantified" }
+    ],
+    "citations": [
+      { "id": 1, "label": "Ministry of Finance (Ghana), \"Ghana Green Finance Taxonomy\" (9 Oct 2024)", "url": "https://www.mofep.gov.gh/sites/default/files/reports/economic/Green-Taxonomy-Framework-for-Ghana_V3.pdf" }
+    ]
   },
   "IND": {
     "name": "India",
@@ -6655,7 +7364,23 @@ window.TAXONOMY_DATA = {
       }
     ],
     "overlays": [],
-    "regulator": "Ministry of Finance (Dept. of Economic Affairs) / SEBI"
+    "regulator": "Ministry of Finance (Dept. of Economic Affairs) / SEBI",
+    "fullDescription": [
+      "India's Union Budget for FY2024-25 announced the development of a Climate Finance Taxonomy, and in May 2025 the Ministry of Finance's Department of Economic Affairs published a Draft Framework for public consultation, which closed on 25 June 2025. The framework draws on the International Platform on Sustainable Finance's Common Ground Taxonomy for cross-jurisdictional comparability. [1][2]",
+      "The draft covers power, mobility, buildings, agriculture, food security, water security and hard-to-abate industrial sectors. A related sector-specific Green Steel Taxonomy was released separately in December 2024, ahead of the broader economy-wide framework.",
+      "Rollout of the full taxonomy is expected in phases between 2025 and 2027; as of the most recent public documents, the economy-wide taxonomy remains in draft form and has not been finalised."
+    ],
+    "activityList": [
+      { "activity": "Power", "criteria": "Renewable and low-emission electricity generation — one of the initial priority sectors named in the draft framework.", "threshold": "Draft Framework of India's Climate Finance Taxonomy (Ministry of Finance, 7 May 2025) — sectoral annexures not yet finalised", "dnsh": "Not yet specified — sectoral technical annexures are pending" },
+      { "activity": "Mobility", "criteria": "Low- and zero-emission transport activities.", "threshold": "Draft Framework (2025) — annexures pending", "dnsh": "Not yet specified" },
+      { "activity": "Buildings", "criteria": "Energy-efficient construction and retrofits.", "threshold": "Draft Framework (2025) — annexures pending", "dnsh": "Not yet specified" },
+      { "activity": "Agriculture, Food & Water Security", "criteria": "Climate-resilient farming and water-security activities.", "threshold": "Draft Framework (2025) — annexures pending", "dnsh": "Not yet specified" },
+      { "activity": "Hard-to-Abate Industries", "criteria": "Transition activities for emissions-intensive industry, reflecting the taxonomy's explicit support for transition pathways alongside pure-green activities.", "threshold": "Draft Framework (2025) — annexures pending", "dnsh": "Not yet specified" }
+    ],
+    "citations": [
+      { "id": 1, "label": "Ministry of Finance / Press Information Bureau, \"Draft Framework of India's Climate Finance Taxonomy\" (May 2025)", "url": "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2025/may/doc202557551101.pdf" },
+      { "id": 2, "label": "Press Information Bureau, public consultation notice on the draft taxonomy", "url": "https://www.pib.gov.in/PressReleaseIframePage.aspx?PRID=2127562" }
+    ]
   },
   "MAR": {
     "name": "Morocco",
@@ -6673,7 +7398,14 @@ window.TAXONOMY_DATA = {
       }
     ],
     "overlays": [],
-    "regulator": "Bank Al-Maghrib / Ministry of Finance (framework in development)"
+    "regulator": "Bank Al-Maghrib / Ministry of Finance (framework in development)",
+    "fullDescription": [
+      "Following Morocco's Climate Finance Strategy published in September 2024, the Ministry of Finance, the central bank Bank Al-Maghrib, the securities regulator AMMC and the insurance/social-welfare supervisor ACAPS are jointly developing a Green Finance Taxonomy with technical support from the World Bank; a tender for the work was issued with a deadline of March 2025. [1]",
+      "The taxonomy is expected to prioritise climate adaptation and mitigation, water and marine-resource protection, and biodiversity — reflecting Morocco's particular exposure to water scarcity and its status as a leading renewable-energy investor in North Africa. Bank Al-Maghrib separately issued climate-disclosure directives to banks in 2025, ahead of the taxonomy's completion."
+    ],
+    "citations": [
+      { "id": 1, "label": "World Bank, \"Development of a Green Finance Taxonomy for Morocco\" (project documentation, 2025)", "url": "https://documents1.worldbank.org/curated/en/099110625123410776/pdf/P178763-35ba393a-397d-4f88-805a-1e2e6e6c4ff6.pdf" }
+    ]
   },
   "NZL": {
     "name": "New Zealand",
@@ -6696,7 +7428,23 @@ window.TAXONOMY_DATA = {
       }
     ],
     "overlays": [],
-    "regulator": "Reserve Bank of New Zealand / Centre for Sustainable Finance"
+    "regulator": "Reserve Bank of New Zealand / Centre for Sustainable Finance",
+    "fullDescription": [
+      "The Aotearoa New Zealand Sustainable Finance Taxonomy is being developed by the Centre for Sustainable Finance in partnership with the New Zealand Government, with a Full Recommendations Report published in November 2024 setting out the framework's design and phased rollout plan. [1]",
+      "Rather than launching an economy-wide taxonomy in one step, New Zealand has adopted a sector-by-sector approach: the first completed sector taxonomy, NZ Taxonomy for Agriculture and Forestry Version 1, has been published for voluntary use, with further sectors — Construction and Buildings, Energy, Industrial Manufacturing, and Transport — still in progress. [1][2]",
+      "The framework is explicitly designed to be interoperable with the EU, Australian and ASEAN taxonomies, reflecting New Zealand's trade and investment links across those regions; as of the latest available information it remains a voluntary, sector-by-sector framework rather than a complete, mandatory national system."
+    ],
+    "activityList": [
+      { "activity": "Agriculture & Forestry", "criteria": "Version 1 of this sector's criteria has been published to support voluntary use — the most advanced sector in the NZ Taxonomy so far.", "threshold": "Aotearoa New Zealand Sustainable Finance Taxonomy (Centre for Sustainable Finance) — Agriculture & Forestry V1 published, other sectors still in consultation", "dnsh": "Applies, prioritising climate mitigation, adaptation and resilience" },
+      { "activity": "Energy", "criteria": "Renewable and low-emission energy activities; public consultation on this sector's draft criteria opens in 2026.", "threshold": "NZ Taxonomy — draft, consultation ongoing", "dnsh": "Not yet finalised" },
+      { "activity": "Construction & Buildings", "criteria": "Energy-efficient construction and retrofits.", "threshold": "NZ Taxonomy — draft, consultation ongoing", "dnsh": "Not yet finalised" },
+      { "activity": "Industrial Manufacturing", "criteria": "Emissions-reducing industrial processes.", "threshold": "NZ Taxonomy — draft, consultation ongoing", "dnsh": "Not yet finalised" },
+      { "activity": "Transport", "criteria": "Low- and zero-emission transport activities.", "threshold": "NZ Taxonomy — draft, consultation ongoing", "dnsh": "Not yet finalised" }
+    ],
+    "citations": [
+      { "id": 1, "label": "Centre for Sustainable Finance, \"Developing a Sustainable Finance Taxonomy for Aotearoa New Zealand\" — Full Recommendations Report (Nov 2024)", "url": "https://sustainablefinance.nz/wp-content/uploads/2024/11/ITAG-Taxonomy-Full-Recommendations-Report-FINAL.pdf" },
+      { "id": 2, "label": "Centre for Sustainable Finance, \"NZ Taxonomy\" (official page)", "url": "https://sustainablefinance.nz/nz-taxonomy/" }
+    ]
   },
   "PNG": {
     "name": "Papua New Guinea",
@@ -6719,7 +7467,20 @@ window.TAXONOMY_DATA = {
       }
     ],
     "overlays": [],
-    "regulator": "Bank of Papua New Guinea (BPNG)"
+    "regulator": "Bank of Papua New Guinea (BPNG)",
+    "fullDescription": [
+      "The Bank of Papua New Guinea (BPNG) officially launched the Inclusive Green Finance Taxonomy Version 2.0 at the 2026 Green Finance Summit in Port Moresby, held 27-28 May 2026, alongside a companion set of Standards for Green Loan Classification and Reporting and an Environmental and Social Risk Management Guideline. [1][2]",
+      "Several commercial banks — including BSP, MiBank, Mama Bank and TISA — are piloting the taxonomy, giving PNG one of the more advanced sustainable-finance classification frameworks among Pacific Island states, developed with support from the Sustainable Banking and Finance Network."
+    ],
+    "activityList": [
+      { "activity": "Renewable Energy", "criteria": "Renewable power generation, a priority sector under Version 2.0.", "threshold": "Inclusive Green Finance Taxonomy Version 2.0 (Bank of Papua New Guinea, 27-28 May 2026)", "dnsh": "Aligned with international good practice" },
+      { "activity": "Energy Efficiency", "criteria": "Efficiency improvements across sectors.", "threshold": "IGFT Version 2.0 (2026)", "dnsh": "Aligned with international good practice" },
+      { "activity": "Clean Transport", "criteria": "Low- and zero-emission transport activities.", "threshold": "IGFT Version 2.0 (2026)", "dnsh": "Aligned with international good practice" }
+    ],
+    "citations": [
+      { "id": 1, "label": "Green Finance Centre PNG, \"Green Finance Summit 2026: A Collaborative Success\"", "url": "https://www.gfcpng.com/green-finance-summit-2026-a-collaborative-success/" },
+      { "id": 2, "label": "Sustainable Banking and Finance Network, \"2026 ESRM Guideline and Taxonomy Standards Workshops and Green Finance Summit, Port Moresby\"", "url": "https://www.sbfnetwork.org/2026-esrm-guideline-and-taxonomy-standards-workshops-and-green-finance-summit-port-moresby" }
+    ]
   },
   "PER": {
     "name": "Peru",
@@ -6806,7 +7567,14 @@ window.TAXONOMY_DATA = {
       }
     ],
     "overlays": [],
-    "regulator": "Reserve Bank of Malawi (framework in development)"
+    "regulator": "Reserve Bank of Malawi (framework in development)",
+    "fullDescription": [
+      "The Reserve Bank of Malawi, supported by the UNEP Copenhagen Climate Centre, has completed a feasibility study and internal roadmap on greening the country's financial sector, marking the early institutional groundwork for an eventual national green finance taxonomy. [1]",
+      "As a first concrete institutional step, Malawi announced a dedicated Climate Change Centre; a green finance taxonomy itself has not yet been published, and the country remains at an earlier stage of the process than several regional peers."
+    ],
+    "citations": [
+      { "id": 1, "label": "UNEP Copenhagen Climate Centre, \"Malawi Charts a Greener Financial Future\"", "url": "https://unepccc.org/malawi-charts-a-greener-financial-future/" }
+    ]
   },
   "SWZ": {
     "name": "Eswatini",
@@ -6824,7 +7592,14 @@ window.TAXONOMY_DATA = {
       }
     ],
     "overlays": [],
-    "regulator": "Central Bank of Eswatini (framework in development)"
+    "regulator": "Central Bank of Eswatini (framework in development)",
+    "fullDescription": [
+      "The Central Bank of Eswatini held a Stakeholder Validation Workshop for the Eswatini Green Finance Taxonomy in May 2026, developed by a Technical Working Group including the Ministry of Tourism and Environmental Affairs, the Ministry of Finance, and the Eswatini Bankers Association. [1]",
+      "The taxonomy work runs alongside a separate internal 'Greening of the Central Bank of Eswatini' project addressing the central bank's own operational sustainability. As of the most recent public information, the taxonomy has not yet been finalised."
+    ],
+    "citations": [
+      { "id": 1, "label": "Bank for International Settlements, remarks at the \"Stakeholder Validation Workshop for the Eswatini Green Finance Taxonomy\" (May 2026)", "url": "https://www.bis.org/review/r260518a.htm" }
+    ]
   },
   "MDG": {
     "name": "Madagascar",
@@ -6842,7 +7617,14 @@ window.TAXONOMY_DATA = {
       }
     ],
     "overlays": [],
-    "regulator": "Central Bank of Madagascar (framework in development)"
+    "regulator": "Central Bank of Madagascar (framework in development)",
+    "fullDescription": [
+      "Madagascar participates in continental initiatives such as the African Development Bank's African Green Banks Initiative and broader regional work toward a Continental Sustainable Finance Taxonomy for Africa, but no dedicated national green finance taxonomy document specific to Madagascar was identified as of this review. [1]",
+      "This places Madagascar at an earlier stage than several regional peers that have published or are actively drafting national frameworks; its sustainable-finance engagement currently runs primarily through continental and multilateral channels rather than a domestic taxonomy process."
+    ],
+    "citations": [
+      { "id": 1, "label": "African Development Bank, \"African Green Banks Initiative\" (official page)", "url": "https://www.afdb.org/en/topics-and-sectors/initiatives-and-partnerships/african-green-banks-initiative" }
+    ]
   },
   "TUR": {
     "name": "Turkey",
@@ -6860,6 +7642,13 @@ window.TAXONOMY_DATA = {
         "date": "24 Sep 2024",
         "url": "https://www.tevetoglu.av.tr/en/new-and-insight/turkeys-green-taxonomy-has-been-shared-with-the-public-by-the-climate-change-directorate-2024-09-24-090042"
       }
+    ],
+    "fullDescription": [
+      "Turkey's Climate Change Presidency, under the Ministry of Environment, Urbanisation and Climate Change, published a Draft Green Taxonomy Regulation in 2024, closely modelled on the EU Taxonomy's structure and classification logic. [1]",
+      "Under the current plan, mandatory taxonomy-aligned reporting would apply to investment firms, funds and insurers from 1 January 2027, with a voluntary transition period running through 31 December 2026 to give market participants time to prepare. As of the most recent public information, the regulation remains in draft form and has not been formally finalised."
+    ],
+    "citations": [
+      { "id": 1, "label": "Tevetoglu Legal, \"Türkiye's Green Taxonomy has been shared with the public by the Climate Change Directorate\" (24 Sep 2024)", "url": "https://www.tevetoglu.av.tr/en/new-and-insight/turkeys-green-taxonomy-has-been-shared-with-the-public-by-the-climate-change-directorate-2024-09-24-090042" }
     ]
   },
   "ARM": {
@@ -6878,6 +7667,13 @@ window.TAXONOMY_DATA = {
         "date": "Oct 2023",
         "url": "https://www.cba.am/file_manager/Financial%20stability/Sustainable%20Finance/National_Sustainable_Finance_Roadmap_eng.pdf"
       }
+    ],
+    "fullDescription": [
+      "The Central Bank of Armenia published a National Sustainable Finance Roadmap in October 2023, setting out the strategic steps needed to build a sustainable-finance ecosystem in the country, including the eventual development of a green taxonomy. [1]",
+      "A dedicated 'Developing Green Taxonomy in Armenia' project, run jointly by the World Bank Group, the Ministry of Economy of Armenia and the American University of Armenia, is building the underlying policy and legal framework for a national taxonomy. As of the latest available information, the taxonomy itself has not yet been finalised."
+    ],
+    "citations": [
+      { "id": 1, "label": "Central Bank of Armenia, \"National Sustainable Finance Roadmap of Armenia\" (Oct 2023)", "url": "https://www.cba.am/file_manager/Financial%20stability/Sustainable%20Finance/National_Sustainable_Finance_Roadmap_eng.pdf" }
     ]
   },
   "HND": {
@@ -6911,6 +7707,12 @@ window.TAXONOMY_DATA = {
     "fullDescription": [
       "Honduras' National Banking and Insurance Commission (CNBS) launched a Green Taxonomy with technical assistance from the International Finance Corporation (IFC), establishing sustainability criteria, Do No Significant Harm (DNSH) requirements, social safeguards and verifiable indicators for sectors including renewable energy, agroindustry, efficient manufacturing and green infrastructure. [1]",
       "Honduras is also part of a broader regional effort: on 5 December 2024, the Central American Council of Banking, Insurance and Other Financial Institutions Superintendents (CCSBSO), with IFC support, presented the first regional Green Finance Taxonomy for Latin America and the Caribbean — a shared tool intended to let the whole region 'speak the same language' on green investment classification and interoperability. [2]"
+    ],
+    "activityList": [
+      { "activity": "Renewable Energy", "criteria": "Renewable power generation projects meeting the taxonomy's sustainability criteria.", "threshold": "Honduras Green Taxonomy (CNBS, with IFC technical assistance)", "dnsh": "DNSH requirements and social safeguards apply" },
+      { "activity": "Agroindustry", "criteria": "Sustainable agro-industrial processing activities.", "threshold": "Honduras Green Taxonomy", "dnsh": "DNSH requirements apply" },
+      { "activity": "Efficient Manufacturing", "criteria": "Manufacturing processes that improve resource and energy efficiency.", "threshold": "Honduras Green Taxonomy", "dnsh": "DNSH requirements apply" },
+      { "activity": "Green Infrastructure", "criteria": "Infrastructure projects meeting green-building or environmental-resilience criteria.", "threshold": "Honduras Green Taxonomy", "dnsh": "DNSH requirements apply" }
     ],
     "citations": [
       { "id": 1, "label": "Comisión Nacional de Bancos y Seguros (CNBS), \"Taxonomía Verde\" (official page)", "url": "https://www.cnbs.gob.hn/taxonomia-verde/" },
@@ -7006,6 +7808,14 @@ window.TAXONOMY_DATA = {
         "date": "30 Jun 2025",
         "url": "https://ukraine.un.org/en/297337-sweden-and-undp-support-national-presentation-draft-law-foundations-green-recovery-ukraine"
       }
+    ],
+    "fullDescription": [
+      "Ukraine launched a Sustainable Finance Platform, supported by the EU Delegation to Ukraine, as part of its post-war recovery strategy and EU-accession process, with the explicit goal of implementing the principles of the EU Taxonomy Regulation (2020/852) domestically. [1]",
+      "With support from Sweden and UNDP, Ukraine publicly presented a draft law, 'On the Foundations of Green Recovery in Ukraine', on 30 June 2025 — a legislative step toward embedding taxonomy-aligned green-finance criteria into national law as reconstruction financing scales up. [2] As of the latest available information, a legally binding national taxonomy is not yet in force."
+    ],
+    "citations": [
+      { "id": 1, "label": "EU Delegation to Ukraine, \"Empowering Ukraine's Resilience: Sustainable Finance Platform launch\"", "url": "https://www.eeas.europa.eu/delegations/ukraine/empowering-ukraine%E2%80%99s-resilience-official-launch-sustainable-finance-platform_en" },
+      { "id": 2, "label": "UNDP Ukraine, \"Sweden and UNDP support national presentation of draft law 'On the Foundations of Green Recovery in Ukraine'\" (30 Jun 2025)", "url": "https://ukraine.un.org/en/297337-sweden-and-undp-support-national-presentation-draft-law-foundations-green-recovery-ukraine" }
     ]
   },
   "GTM": {
@@ -7067,6 +7877,13 @@ window.TAXONOMY_DATA = {
         "date": "Aug 2024",
         "url": "https://www.sbfnetwork.org/central-bank-of-bosnia-and-herzegovina-joins-sbfn-to-advance-sustainable-finance"
       }
+    ],
+    "fullDescription": [
+      "The Central Bank of Bosnia and Herzegovina joined the Sustainable Banking and Finance Network in August 2024, a step that formally connected the country to the international peer network supporting the design of national green taxonomies and sustainable-finance frameworks. [1]",
+      "Building on that membership, the central bank issued a Green Taxonomy in 2025 as part of a broader ESG strategy spanning 2025-2027, developed with support from EIB Global on green financing and climate-risk supervision. As of the latest available information, the taxonomy is not yet in binding force."
+    ],
+    "citations": [
+      { "id": 1, "label": "Sustainable Banking and Finance Network, \"Central Bank of Bosnia and Herzegovina joins SBFN to advance sustainable finance\" (Aug 2024)", "url": "https://www.sbfnetwork.org/central-bank-of-bosnia-and-herzegovina-joins-sbfn-to-advance-sustainable-finance" }
     ]
   },
   "ZMB": {
@@ -7090,7 +7907,24 @@ window.TAXONOMY_DATA = {
       }
     ],
     "overlays": [],
-    "regulator": "Bank of Zambia"
+    "regulator": "Bank of Zambia",
+    "fullDescription": [
+      "Zambia launched its first Green Finance Taxonomy (ZGFT) in December 2025, becoming the latest Southern African country to establish a national classification framework for environmentally sustainable economic activities. [1][2]",
+      "The taxonomy was designed for interoperability with the EU Taxonomy as well as the South African and Kenyan green finance taxonomies, positioning Zambia within the growing cluster of Sub-Saharan African taxonomies that reference one another's structures to support regional comparability and cross-border green investment."
+    ],
+    "activityList": [
+      { "activity": "Energy", "criteria": "Renewable generation and energy-efficiency activities.", "threshold": "Zambia Green Finance Taxonomy (ZGFT), launched 2 Dec 2025", "dnsh": "Assessed against 8 environmental objectives aligned with EU priorities" },
+      { "activity": "Agriculture & Forestry", "criteria": "Sustainable farming and forest management, including biodiversity-protection criteria.", "threshold": "ZGFT (2025)", "dnsh": "Applies" },
+      { "activity": "Mining", "criteria": "Environmental-impact reduction in mining operations.", "threshold": "ZGFT (2025)", "dnsh": "Applies" },
+      { "activity": "Water", "criteria": "Sustainable water use and water security.", "threshold": "ZGFT (2025)", "dnsh": "Applies" },
+      { "activity": "Transport", "criteria": "Low-emission transport activities.", "threshold": "ZGFT (2025)", "dnsh": "Applies" },
+      { "activity": "Tourism", "criteria": "Sustainable tourism development.", "threshold": "ZGFT (2025)", "dnsh": "Applies" },
+      { "activity": "Waste Management", "criteria": "Circular-economy and waste-reduction activities.", "threshold": "ZGFT (2025)", "dnsh": "Applies" }
+    ],
+    "citations": [
+      { "id": 1, "label": "UNDP, \"Zambia Launches First-Ever Green Finance Taxonomy, Marking Historic Milestone for Sustainable Investment in Africa\" (2 Dec 2025)", "url": "https://www.undp.org/zambia/press-releases/zambia-launches-first-ever-green-finance-taxonomy-marking-historic-milestone-sustainable-investment-africa" },
+      { "id": 2, "label": "Ministry of Green Economy and Environment (Zambia), \"Zambia Green Taxonomy\" (official page)", "url": "https://www.mgee.gov.zm/?page_id=7004" }
+    ]
   },
   "USA": {
     "name": "United States",
