@@ -38,7 +38,9 @@ const LANGUAGE_NAMES = {
   fr: "French (Français)",
   de: "German (Deutsch)",
   ja: "Japanese (日本語)",
-  zh: "Chinese (中文)"
+  zh: "Chinese (中文)",
+  ar: "Arabic (العربية)",
+  pt: "Portuguese (Português)"
 };
 
 function stripHtml(html) {
