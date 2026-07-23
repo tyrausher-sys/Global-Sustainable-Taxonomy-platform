@@ -4590,7 +4590,8 @@ window.TAXONOMY_DATA = {
       { "icon": "biodiversity", "label": "Protection of Biodiversity & Ecosystems" }
     ],
     "citations": [
-      { "id": 1, "label": "Finanstilsynet, \"Finanstilsynet and EEA legislation\" (regulatory status tracker)", "url": "https://www.finanstilsynet.no/en/topics/finanstilsynet-and-eea-legislation/" }
+      { "id": 1, "label": "Finanstilsynet, \"Finanstilsynet and EEA legislation\" (regulatory status tracker)", "url": "https://www.finanstilsynet.no/en/topics/finanstilsynet-and-eea-legislation/" },
+      { "id": 2, "label": "DLA Piper, \"Entry into force of the EU Taxonomy in Norway delayed\"", "url": "https://norway.dlapiper.com/en/news/entry-force-eu-taxonomy-norway-delayed-disadvantage-competitiveness-sustainable-finance-and" }
     ]
   },
   "ISL": {
@@ -4623,7 +4624,8 @@ window.TAXONOMY_DATA = {
       { "icon": "biodiversity", "label": "Protection of Biodiversity & Ecosystems" }
     ],
     "citations": [
-      { "id": 1, "label": "European Commission, \"EU Taxonomy for Sustainable Activities\" (official page)", "url": "https://finance.ec.europa.eu/sustainable-finance/tools-and-standards/eu-taxonomy-sustainable-activities_en" }
+      { "id": 1, "label": "European Commission, \"EU Taxonomy for Sustainable Activities\" (official page)", "url": "https://finance.ec.europa.eu/sustainable-finance/tools-and-standards/eu-taxonomy-sustainable-activities_en" },
+      { "id": 2, "label": "Government of Iceland, \"Iceland's Sovereign Sustainable Financing Framework\" (Apr 2023)", "url": "https://www.government.is/library/Files/2023-04-28%20Icelands%20Sovereign%20Sustainable%20Financing%20Frameworkvefurpdf.pdf" }
     ]
   },
   "LIE": {
@@ -6032,7 +6034,8 @@ window.TAXONOMY_DATA = {
       "The Taxonomy covers seven economic sectors: energy, transport, construction, waste management and emissions capture, manufacturing, information and communication technologies, and water supply and treatment. [1]"
     ],
     "citations": [
-      { "id": 1, "label": "Superintendencia del Sistema Financiero (SSF), \"El Salvador presenta la Taxonomía Verde para impulsar el financiamiento climático y la sostenibilidad nacional\" (Dic 2025)", "url": "https://ssf.gob.sv/2025/12/02/el-salvador-presenta-la-taxonomia-verde-para-impulsar-el-financiamiento-climatico-y-la-sostenibilidad-nacional/" }
+      { "id": 1, "label": "Superintendencia del Sistema Financiero (SSF), \"El Salvador presenta la Taxonomía Verde para impulsar el financiamiento climático y la sostenibilidad nacional\" (Dic 2025)", "url": "https://ssf.gob.sv/2025/12/02/el-salvador-presenta-la-taxonomia-verde-para-impulsar-el-financiamiento-climatico-y-la-sostenibilidad-nacional/" },
+      { "id": 2, "label": "IFC, \"Con apoyo de IFC, el CCSBSO presenta la primera taxonomía verde regional de América Latina y el Caribe\"", "url": "https://www.ifc.org/es/pressroom/2024/con-apoyo-de-ifc-el-ccsbso-presenta-la-primera-taxonom-a-verde-regional-de-am-rica-latina-y-el-caribe" }
     ],
     "activityList": [
       { "activity": "Energy", "criteria": "Renewable generation and low-carbon energy infrastructure.", "threshold": "Sector-specific criteria", "dnsh": "Not formally specified in available summaries" },
@@ -6616,7 +6619,8 @@ window.TAXONOMY_DATA = {
       { "icon": "circular", "label": "Sustainable Resource Use & Circularity" }
     ],
     "citations": [
-      { "id": 1, "label": "Central Bank of Kenya, \"Kenya Green Finance Taxonomy, 1st Edition\" (4 Apr 2025)", "url": "https://data.sbfnetwork.org/sites/default/files/survey-attachments/2025-05/CBK%20-%20Kenya%20Green%20Finance%20Taxonomy%20-%20Final%20-%20April%202025.pdf" }
+      { "id": 1, "label": "Central Bank of Kenya, \"Kenya Green Finance Taxonomy, 1st Edition\" (4 Apr 2025)", "url": "https://data.sbfnetwork.org/sites/default/files/survey-attachments/2025-05/CBK%20-%20Kenya%20Green%20Finance%20Taxonomy%20-%20Final%20-%20April%202025.pdf" },
+      { "id": 2, "label": "Bowmans, \"Kenya: Green Finance Taxonomy — Legal Developments and Strategic Considerations\"", "url": "https://bowmanslaw.com/insights/kenya-green-finance-taxonomy-legal-developments-and-strategic-considerations/" }
     ]
   },
   "ISR": {
@@ -6652,7 +6656,8 @@ window.TAXONOMY_DATA = {
       { "icon": "climate", "label": "Climate Change Mitigation" }
     ],
     "citations": [
-      { "id": 1, "label": "Ministry of Environmental Protection (Israel), \"Israeli Taxonomy for Classifying Sustainable Economic Activities\" (Jul 2024)", "url": "https://www.gov.il/BlobFolder/reports/israeli-taxonomy/en/sustainability_economy_taxonomy.pdf" }
+      { "id": 1, "label": "Ministry of Environmental Protection (Israel), \"Israeli Taxonomy for Classifying Sustainable Economic Activities\" (Jul 2024)", "url": "https://www.gov.il/BlobFolder/reports/israeli-taxonomy/en/sustainability_economy_taxonomy.pdf" },
+      { "id": 2, "label": "ICLG, \"Israel Environmental, Social & Governance Law 2026\"", "url": "https://iclg.com/practice-areas/environmental-social-and-governance-law/israel" }
     ]
   },
   "JOR": {
@@ -6690,7 +6695,8 @@ window.TAXONOMY_DATA = {
       { "icon": "water", "label": "Sustainable Use & Protection of Water Resources" }
     ],
     "citations": [
-      { "id": 1, "label": "Jordan Securities Commission, \"The Jordan National Green Taxonomy\" — First Draft for Public Consultation (2025)", "url": "https://www.jsc.gov.jo/Uploads/Files/The%20Jordan%20National%20Green%20Taxonomy.pdf" }
+      { "id": 1, "label": "Jordan Securities Commission, \"The Jordan National Green Taxonomy\" — First Draft for Public Consultation (2025)", "url": "https://www.jsc.gov.jo/Uploads/Files/The%20Jordan%20National%20Green%20Taxonomy.pdf" },
+      { "id": 2, "label": "Climate & Company, \"Developing a Green Taxonomy in Jordan\"", "url": "https://climateandcompany.org/projects/green-taxonomy-jordan/" }
     ]
   },
   "GEO": {
@@ -6731,7 +6737,8 @@ window.TAXONOMY_DATA = {
       { "icon": "biodiversity", "label": "Protection & Restoration of Biodiversity & Ecosystems" }
     ],
     "citations": [
-      { "id": 1, "label": "National Bank of Georgia, \"Sustainable Finance Taxonomy\" (official page, published Aug 2022)", "url": "https://nbg.gov.ge/en/page/sustainable-finance-taxonomy" }
+      { "id": 1, "label": "National Bank of Georgia, \"Sustainable Finance Taxonomy\" (official page, published Aug 2022)", "url": "https://nbg.gov.ge/en/page/sustainable-finance-taxonomy" },
+      { "id": 2, "label": "CUE, \"Comparative Analysis of Sustainable Finance Taxonomies: Georgia and the European Union\"", "url": "https://cue.edu.ge/en/articles/comparative-analysis-of-sustainable-finance-taxonomies-georgia-and-the-european-union/" }
     ]
   },
   "AZE": {
@@ -6842,7 +6849,8 @@ window.TAXONOMY_DATA = {
       { "activity": "Urban & Transport Systems", "criteria": "Green urban development, transport systems and urban green areas.", "threshold": "National Green Economy Taxonomy", "dnsh": "Compliance criteria apply" }
     ],
     "citations": [
-      { "id": 1, "label": "Cabinet of Ministers of the Republic of Uzbekistan, Resolution No. PKM-561 (25 Oct 2023) — National Green Taxonomy", "url": "https://lex.uz/ru/docs/6644013" }
+      { "id": 1, "label": "Cabinet of Ministers of the Republic of Uzbekistan, Resolution No. PKM-561 (25 Oct 2023) — National Green Taxonomy", "url": "https://lex.uz/ru/docs/6644013" },
+      { "id": 2, "label": "World Bank, \"Guidance Note on Uzbekistan Green Taxonomy\"", "url": "https://documents1.worldbank.org/curated/en/099021424113038230/pdf/P1771081039a350761b44917c20eef8174d.pdf" }
     ]
   },
   "KGZ": {
@@ -6874,7 +6882,8 @@ window.TAXONOMY_DATA = {
       { "activity": "Sustainable Tourism & Green Cities", "criteria": "Sustainable tourism development and green urban planning.", "threshold": "Kyrgyz Republic Green Taxonomy", "dnsh": "Not yet formally specified" }
     ],
     "citations": [
-      { "id": 1, "label": "Ministry of Economy and Commerce of the Kyrgyz Republic, \"Green Taxonomy of the Kyrgyz Republic\" (official PDF)", "url": "https://mineconom.gov.kg/froala/uploads/file/8f3849028e81dcb2de6c72dd29527eed9ee97e43.pdf" }
+      { "id": 1, "label": "Ministry of Economy and Commerce of the Kyrgyz Republic, \"Green Taxonomy of the Kyrgyz Republic\" (official PDF)", "url": "https://mineconom.gov.kg/froala/uploads/file/8f3849028e81dcb2de6c72dd29527eed9ee97e43.pdf" },
+      { "id": 2, "label": "24.kg, \"Kyrgyzstan approves green taxonomy\"", "url": "https://24.kg/english/328977_Kyrgyzstan_approves_green_taxonomy_/" }
     ]
   },
   "NPL": {
@@ -6912,7 +6921,8 @@ window.TAXONOMY_DATA = {
       { "icon": "pollution", "label": "Pollution Prevention" }
     ],
     "citations": [
-      { "id": 1, "label": "Nepal Rastra Bank, \"Nepal Green Finance Taxonomy 2024\" (20 Oct 2024)", "url": "https://www.nrb.org.np/contents/uploads/2024/10/Nepal-Green-Finance-Taxonomy-2024-V1.pdf" }
+      { "id": 1, "label": "Nepal Rastra Bank, \"Nepal Green Finance Taxonomy 2024\" (20 Oct 2024)", "url": "https://www.nrb.org.np/contents/uploads/2024/10/Nepal-Green-Finance-Taxonomy-2024-V1.pdf" },
+      { "id": 2, "label": "Alliance for Financial Inclusion, \"Nepal Rastra Bank Issues a Comprehensive Green Finance Taxonomy\"", "url": "https://afi-global.org/news/nepal-rastra-bank-issues-a-comprehensive-green-finance-taxonomy/" }
     ]
   },
   "BGD": {
@@ -7471,7 +7481,8 @@ window.TAXONOMY_DATA = {
       "The taxonomy work sits alongside a Climate Risk Management Guide for financial institutions and a sustainability-monitoring 'Green Dashboard', reflecting a broader effort to align Albania's financial-sector regulation with EU standards ahead of eventual membership. As of the latest progress updates, the taxonomy itself has not yet been finalised."
     ],
     "citations": [
-      { "id": 1, "label": "LSE Grantham Research Institute, \"Insights and progress from the Bank of Albania's green strategy, May 2023–2024\"", "url": "https://www.lse.ac.uk/granthaminstitute/publication/insights-and-progress-from-the-bank-of-albanias-green-strategy-may-2023-2024/" }
+      { "id": 1, "label": "LSE Grantham Research Institute, \"Insights and progress from the Bank of Albania's green strategy, May 2023–2024\"", "url": "https://www.lse.ac.uk/granthaminstitute/publication/insights-and-progress-from-the-bank-of-albanias-green-strategy-may-2023-2024/" },
+      { "id": 2, "label": "Bank of Albania, \"Bank of Albania and the European Investment Bank strengthen their Cooperation in regard to Green Finance\" (Jan 2025)", "url": "https://www.bankofalbania.org/Press/Press_Releases/Bank_of_Albania_and_the_European_Investment_Bank_strengthen_their_Cooperation_in_regard_to_Green_Finance.html" }
     ]
   },
   "ETH": {
@@ -7496,7 +7507,8 @@ window.TAXONOMY_DATA = {
       "The programme aims to give Ethiopian financial institutions and investors a common reference framework for identifying environmentally sustainable economic activities, supporting the country's broader climate-finance mobilisation efforts. As of the latest available information, the taxonomy has not yet been finalised."
     ],
     "citations": [
-      { "id": 1, "label": "European Investment Bank, \"Ethiopia Unveils Strategic Initiative to Green Its Financial System and Drive Sustainable Investment\" (2025)", "url": "https://www.eib.org/en/press/all/2025-211-ethiopia-unveils-strategic-initiative-to-green-its-financial-system-and-drive-sustainable-investment" }
+      { "id": 1, "label": "European Investment Bank, \"Ethiopia Unveils Strategic Initiative to Green Its Financial System and Drive Sustainable Investment\" (2025)", "url": "https://www.eib.org/en/press/all/2025-211-ethiopia-unveils-strategic-initiative-to-green-its-financial-system-and-drive-sustainable-investment" },
+      { "id": 2, "label": "Haymanot & Advocates, \"Integrating ESG in Ethiopia's Financial Sector\"", "url": "https://www.haymanotbelay.com/integrating-esg-in-ethiopias-financial-sector/" }
     ]
   },
   "GHA": {
@@ -7537,7 +7549,8 @@ window.TAXONOMY_DATA = {
       { "icon": "pollution", "label": "Pollution Prevention" }
     ],
     "citations": [
-      { "id": 1, "label": "Ministry of Finance (Ghana), \"Ghana Green Finance Taxonomy\" (9 Oct 2024)", "url": "https://www.mofep.gov.gh/sites/default/files/reports/economic/Green-Taxonomy-Framework-for-Ghana_V3.pdf" }
+      { "id": 1, "label": "Ministry of Finance (Ghana), \"Ghana Green Finance Taxonomy\" (9 Oct 2024)", "url": "https://www.mofep.gov.gh/sites/default/files/reports/economic/Green-Taxonomy-Framework-for-Ghana_V3.pdf" },
+      { "id": 2, "label": "Bentsi-Enchill, Letsa & Ankomah, \"Ghana Launches Phase One of the Ghana Green Finance Taxonomy\"", "url": "https://bentsienchill.com/ghana-launches-phase-one-of-the-ghana-green-finance-taxonomy/" }
     ]
   },
   "IND": {
@@ -7612,7 +7625,8 @@ window.TAXONOMY_DATA = {
       { "icon": "biodiversity", "label": "Biodiversity Protection & Restoration" }
     ],
     "citations": [
-      { "id": 1, "label": "World Bank, \"Development of a Green Finance Taxonomy for Morocco\" (project documentation, 2025)", "url": "https://documents1.worldbank.org/curated/en/099110625123410776/pdf/P178763-35ba393a-397d-4f88-805a-1e2e6e6c4ff6.pdf" }
+      { "id": 1, "label": "World Bank, \"Development of a Green Finance Taxonomy for Morocco\" (project documentation, 2025)", "url": "https://documents1.worldbank.org/curated/en/099110625123410776/pdf/P178763-35ba393a-397d-4f88-805a-1e2e6e6c4ff6.pdf" },
+      { "id": 2, "label": "Sustainable Banking and Finance Network, \"Bank Al-Maghrib Establishes Dedicated Green Finance Unit\"", "url": "https://data.sbfnetwork.org/case-study/bank-al-maghrib-establishes-dedicated-green-finance-unit" }
     ]
   },
   "NZL": {
@@ -7723,7 +7737,8 @@ window.TAXONOMY_DATA = {
       "On 26 July 2025, the government formally created a Multisectoral Commission on Green Finance Taxonomy via Supreme Decree No. 154-2025-EF, chaired by the Ministry of Economy and Finance with ten public entities, including the Central Reserve Bank of Peru (BCRP) and the SBS. The commission has a 360-day mandate to diagnose the state of green finance in Peru and produce a technical taxonomy proposal, expected around mid-2026. [1]"
     ],
     "citations": [
-      { "id": 1, "label": "Ministerio de Economía y Finanzas (Peru), informe sobre finanzas verdes y mercado de capitales", "url": "https://www.mef.gob.pe/contenidos/transparencia/transp_gestion/2024/Direccion_Gestion_Inversiones_Financieras_Mercados_Capitales.pdf" }
+      { "id": 1, "label": "Ministerio de Economía y Finanzas (Peru), informe sobre finanzas verdes y mercado de capitales", "url": "https://www.mef.gob.pe/contenidos/transparencia/transp_gestion/2024/Direccion_Gestion_Inversiones_Financieras_Mercados_Capitales.pdf" },
+      { "id": 2, "label": "Garrigues, \"Perú crea una comisión para promover instrumentos financieros sostenibles e inversiones responsables\"", "url": "https://www.garrigues.com/es_ES/noticia/peru-crea-comision-promover-instrumentos-financieros-sostenibles-e-inversiones-responsables" }
     ]
   },
   "ECU": {
@@ -7786,7 +7801,8 @@ window.TAXONOMY_DATA = {
       "As a first concrete institutional step, Malawi announced a dedicated Climate Change Centre; a green finance taxonomy itself has not yet been published, and the country remains at an earlier stage of the process than several regional peers."
     ],
     "citations": [
-      { "id": 1, "label": "UNEP Copenhagen Climate Centre, \"Malawi Charts a Greener Financial Future\"", "url": "https://unepccc.org/malawi-charts-a-greener-financial-future/" }
+      { "id": 1, "label": "UNEP Copenhagen Climate Centre, \"Malawi Charts a Greener Financial Future\"", "url": "https://unepccc.org/malawi-charts-a-greener-financial-future/" },
+      { "id": 2, "label": "NDC Partnership, \"Malawi 'Greens' its Financial System\"", "url": "https://ndcpartnership.org/news/malawi-greens-its-financial-system" }
     ]
   },
   "SWZ": {
@@ -7811,7 +7827,8 @@ window.TAXONOMY_DATA = {
       "The taxonomy work runs alongside a separate internal 'Greening of the Central Bank of Eswatini' project addressing the central bank's own operational sustainability. As of the most recent public information, the taxonomy has not yet been finalised."
     ],
     "citations": [
-      { "id": 1, "label": "Bank for International Settlements, remarks at the \"Stakeholder Validation Workshop for the Eswatini Green Finance Taxonomy\" (May 2026)", "url": "https://www.bis.org/review/r260518a.htm" }
+      { "id": 1, "label": "Bank for International Settlements, remarks at the \"Stakeholder Validation Workshop for the Eswatini Green Finance Taxonomy\" (May 2026)", "url": "https://www.bis.org/review/r260518a.htm" },
+      { "id": 2, "label": "Tech Review Africa, \"Eswatini Advances Green Finance Framework through Stakeholder Validation Workshop\"", "url": "https://techreviewafrica.com/news/5473/eswatini-advances-green-finance-framework-through-stakeholder-validation-workshop" }
     ]
   },
   "MDG": {
@@ -7868,7 +7885,8 @@ window.TAXONOMY_DATA = {
       { "icon": "pollution", "label": "Pollution Prevention & Control" }
     ],
     "citations": [
-      { "id": 1, "label": "Tevetoglu Legal, \"Türkiye's Green Taxonomy has been shared with the public by the Climate Change Directorate\" (24 Sep 2024)", "url": "https://www.tevetoglu.av.tr/en/new-and-insight/turkeys-green-taxonomy-has-been-shared-with-the-public-by-the-climate-change-directorate-2024-09-24-090042" }
+      { "id": 1, "label": "Tevetoglu Legal, \"Türkiye's Green Taxonomy has been shared with the public by the Climate Change Directorate\" (24 Sep 2024)", "url": "https://www.tevetoglu.av.tr/en/new-and-insight/turkeys-green-taxonomy-has-been-shared-with-the-public-by-the-climate-change-directorate-2024-09-24-090042" },
+      { "id": 2, "label": "Turkish Law Blog, \"Draft Regulation on Türkiye's Green Taxonomy\"", "url": "https://turkishlawblog.com/insights/detail/draft-regulation-on-turkiyes-green-taxonomy" }
     ]
   },
   "ARM": {
@@ -7893,7 +7911,8 @@ window.TAXONOMY_DATA = {
       "A dedicated 'Developing Green Taxonomy in Armenia' project, run jointly by the World Bank Group, the Ministry of Economy of Armenia and the American University of Armenia, is building the underlying policy and legal framework for a national taxonomy. As of the latest available information, the taxonomy itself has not yet been finalised."
     ],
     "citations": [
-      { "id": 1, "label": "Central Bank of Armenia, \"National Sustainable Finance Roadmap of Armenia\" (Oct 2023)", "url": "https://www.cba.am/file_manager/Financial%20stability/Sustainable%20Finance/National_Sustainable_Finance_Roadmap_eng.pdf" }
+      { "id": 1, "label": "Central Bank of Armenia, \"National Sustainable Finance Roadmap of Armenia\" (Oct 2023)", "url": "https://www.cba.am/file_manager/Financial%20stability/Sustainable%20Finance/National_Sustainable_Finance_Roadmap_eng.pdf" },
+      { "id": 2, "label": "EBRD GEFF, \"National Sustainable Finance Roadmap of Armenia Unveiled\"", "url": "https://ebrdgeff.com/armenia/national-sustainable-finance-roadmap-of-armenia-unveiled/" }
     ]
   },
   "HND": {
@@ -8004,7 +8023,8 @@ window.TAXONOMY_DATA = {
       "Rather than an activity-based taxonomy, Uruguay's most prominent sustainable-finance instrument to date is its Sovereign Sustainability-Linked Bond (SSLB) — first issued in October 2022 — which directly links the country's cost of sovereign borrowing to outcome-based national targets under the Paris Agreement, including greenhouse-gas emissions intensity and native forest area, rather than classifying individual economic activities as green or not."
     ],
     "citations": [
-      { "id": 1, "label": "Banco Central del Uruguay, \"Hoja de Ruta: el Banco Central y la dimensión sostenibilidad\"", "url": "https://www.bcu.gub.uy/Comunicaciones/SiteAssets/Lists/Noticias/NewForm/Hoja%20de%20Ruta%20Sostenibilidad.pdf" }
+      { "id": 1, "label": "Banco Central del Uruguay, \"Hoja de Ruta: el Banco Central y la dimensión sostenibilidad\"", "url": "https://www.bcu.gub.uy/Comunicaciones/SiteAssets/Lists/Noticias/NewForm/Hoja%20de%20Ruta%20Sostenibilidad.pdf" },
+      { "id": 2, "label": "Ferrere, \"Banco Central del Uruguay publica su hoja de ruta de sostenibilidad\"", "url": "https://ferrere.com/en/news/banco-central-del-uruguay-publica-su-hoja-de-ruta-de-sostenibilidad/" }
     ]
   },
   "UKR": {
@@ -8103,7 +8123,8 @@ window.TAXONOMY_DATA = {
       "Building on that membership, the central bank issued a Green Taxonomy in 2025 as part of a broader ESG strategy spanning 2025-2027, developed with support from EIB Global on green financing and climate-risk supervision. As of the latest available information, the taxonomy is not yet in binding force."
     ],
     "citations": [
-      { "id": 1, "label": "Sustainable Banking and Finance Network, \"Central Bank of Bosnia and Herzegovina joins SBFN to advance sustainable finance\" (Aug 2024)", "url": "https://www.sbfnetwork.org/central-bank-of-bosnia-and-herzegovina-joins-sbfn-to-advance-sustainable-finance" }
+      { "id": 1, "label": "Sustainable Banking and Finance Network, \"Central Bank of Bosnia and Herzegovina joins SBFN to advance sustainable finance\" (Aug 2024)", "url": "https://www.sbfnetwork.org/central-bank-of-bosnia-and-herzegovina-joins-sbfn-to-advance-sustainable-finance" },
+      { "id": 2, "label": "European Investment Bank, \"Bosnia and Herzegovina to get EIB Global support on green and social impact financing\"", "url": "https://www.eib.org/en/press/all/2025-544-bosnia-and-herzegovina-to-get-eib-global-support-on-green-and-social-impact-financing" }
     ]
   },
   "ZMB": {
