@@ -9,6 +9,15 @@
  * BREVO_LIST_ID is set, to that specific list) via Brevo's Contacts API:
  * https://developers.brevo.com/reference/create-contact
  *
+ * Resilient attribute handling: Brevo rejects the ENTIRE contact-create call
+ * if you send a custom attribute (like INTERESTS or LANGUAGE) that hasn't
+ * been created in that Brevo account's Contact Attributes settings — the
+ * whole signup would silently fail even though the person's email is
+ * perfectly valid. To avoid losing real signups over an optional field, this
+ * function detects that specific "attribute is unknown" error, drops just
+ * that attribute, and retries — so the email/name always gets captured even
+ * if the optional INTERESTS/LANGUAGE attributes were never set up.
+ *
  * IMPORTANT: this only captures the signup itself. It does not send any
  * digest content — that still has to be written and sent by a human from
  * the Brevo dashboard (Campaigns), since nothing here can invent real
@@ -16,6 +25,27 @@
  */
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const MAX_ATTEMPTS = 5; // 1 initial try + up to 4 attribute drops (FIRSTNAME, INTERESTS, LANGUAGE, +1 spare)
+
+async function callBrevo(apiKey, payload) {
+  const upstream = await fetch("https://api.brevo.com/v3/contacts", {
+    method: "POST",
+    headers: {
+      "content-type": "application/json",
+      "accept": "application/json",
+      "api-key": apiKey
+    },
+    body: JSON.stringify(payload)
+  });
+
+  if (upstream.status === 204 || upstream.ok) {
+    return { ok: true };
+  }
+
+  let data = {};
+  try { data = await upstream.json(); } catch (e) { /* ignore */ }
+  return { ok: false, status: upstream.status, message: (data && data.message) || "", code: data && data.code };
+}
 
 module.exports = async function handler(req, res) {
   if (req.method !== "POST") {
@@ -64,25 +94,30 @@ module.exports = async function handler(req, res) {
   }
 
   try {
-    const upstream = await fetch("https://api.brevo.com/v3/contacts", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-        "accept": "application/json",
-        "api-key": apiKey
-      },
-      body: JSON.stringify(payload)
-    });
+    let result;
+    let attempts = 0;
+    while (attempts < MAX_ATTEMPTS) {
+      attempts++;
+      result = await callBrevo(apiKey, payload);
+      if (result.ok) {
+        res.status(200).json({ ok: true });
+        return;
+      }
 
-    if (upstream.status === 204 || upstream.ok) {
-      res.status(200).json({ ok: true });
-      return;
+      // Brevo's "unknown attribute" error names the offending key, e.g.
+      // "Attribute INTERESTS is unknown. Please check the api documentation"
+      const m = /attribute[s]?\s+([A-Z0-9_]+)\s+(?:is|are)\s+unknown/i.exec(result.message || "");
+      if (m && payload.attributes && Object.prototype.hasOwnProperty.call(payload.attributes, m[1])) {
+        delete payload.attributes[m[1]];
+        continue; // retry without that one attribute
+      }
+
+      // Not an attribute-naming issue (or nothing left to drop) — stop retrying.
+      break;
     }
 
-    let data = {};
-    try { data = await upstream.json(); } catch (e) { /* ignore */ }
-    const msg = (data && data.message) || `Brevo API error (HTTP ${upstream.status})`;
-    res.status(upstream.status).json({ error: msg });
+    const msg = (result && result.message) || `Brevo API error (HTTP ${result && result.status})`;
+    res.status((result && result.status) || 500).json({ error: msg });
   } catch (err) {
     res.status(500).json({ error: "Failed to reach Brevo: " + err.message });
   }
