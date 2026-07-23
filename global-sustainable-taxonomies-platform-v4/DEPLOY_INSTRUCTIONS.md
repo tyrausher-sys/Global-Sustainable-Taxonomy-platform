@@ -10,7 +10,7 @@ There are several backend-powered features, each needing a tiny serverless funct
 - The **Subscribe page** — adds real subscribers to a Brevo mailing list. Backend: `api/subscribe.js`.
 - The **Media Hub**'s News/Reports/Papers tabs — live headlines via Google News' public RSS feed. Backend: `api/news.js` (+ shared helper `api/_lib/rss.js`). **No API key needed.**
 - The **Media Hub**'s AI Trend Insights cards and thematic chart — real AI analysis of the live News headlines above. Backend: `api/trends.js`. Uses the same `ANTHROPIC_API_KEY` as "Ask AI" — no separate key needed.
-- **Automated weekly digest email** — a real RSS feed of the site's live News/Reports/Papers headlines, published at `/api/digest-rss`, meant to be connected to Brevo's built-in "RSS Campaign" feature so a digest email goes out on a schedule without anyone needing to write or send it by hand each week. **No API key needed** beyond the `BREVO_API_KEY` already set up for Subscribe. See "Setting up the automated weekly digest" below.
+- **Automated weekly digest email** — `/api/create-digest-draft` builds this week's real News/Reports/Papers headlines into an email and creates it as a **draft campaign directly inside Brevo** via Brevo's Campaigns API, ready for review and sending from the Brevo dashboard. (Brevo's own "RSS Campaign" feature is documented in their help center but isn't reachable in this account's UI — this achieves the same "auto-prepared draft" outcome by calling Brevo's API directly instead.) Triggered on a schedule by a Cowork scheduled task, not by anything running inside Vercel. There's also `/api/digest-rss`, a plain RSS 2.0 feed of the same headlines, kept in case Brevo's RSS feature turns out to be reachable later or for use elsewhere. See "Setting up the automated weekly digest" below.
 
 All of these are built for [Vercel](https://vercel.com). Until you deploy them, each feature shows a friendly, honest "not connected yet" message instead of fake content — everything else keeps working.
 
@@ -53,16 +53,23 @@ vercel --prod
 
 ## Setting up the automated weekly digest
 
-Once the site is deployed, `https://<your-domain>/api/digest-rss` is a live RSS feed of real, current taxonomy news/reports/papers headlines. Connect it to Brevo so a digest email is prepared automatically every week, with no one needing to write or trigger it by hand:
+Brevo's own "RSS Campaign" feature (documented at help.brevo.com) could not be found anywhere in this Brevo account's UI — not under Campaigns → Create an email campaign (only "Regular"/"A/B Test" are offered), and not under Automations → Create an automation → Pre-built automation type (checked both "Most popular" and the full "All" list — 12 templates, none RSS-related). It may have been renamed, moved, or restricted to a different plan tier since Brevo's help articles were written.
 
-1. In Brevo, go to **Campaigns → Email** and look for **"RSS Campaign"** (on some plans this lives under **Automations** instead — search "RSS" in the Brevo help/search bar if you don't see it under Campaigns).
-2. Paste in the feed URL: `https://<your-domain>/api/digest-rss`
-3. Set the recurrence to **weekly** (pick whatever day/time you'd like it prepared).
-4. Set the sending mode to **"Create a draft for review"** — this was the setting chosen for this project, so nothing ever goes out to real subscribers without you reviewing and clicking send first. (Brevo also offers a fully automatic "send without review" mode if you'd rather skip that step later.)
-5. Choose the mailing list this should go to (the same list `BREVO_LIST_ID` points at).
-6. Design the email template once in Brevo's editor — Brevo will keep reusing it, swapping in that week's headlines from the feed automatically.
+So instead of depending on that UI feature, `/api/create-digest-draft` calls Brevo's **Campaigns API** directly to create the same kind of ready-to-review draft, every week, without it ever needing to appear in Brevo's UI at all.
 
-What this digest includes: real, live headlines from Google News matching taxonomy/green-finance topics (the same source powering the Media Hub's News/Reports/Papers tabs). It deliberately does **not** include an AI-written trend summary (to avoid an AI API call every time Brevo checks the feed) or "BNZ Partners company updates" (there's no live feed of real company news to pull from — adding a placeholder for this would mean inventing content, which this project avoids). If a real source for company updates exists later (e.g. a company blog with its own RSS feed), it can be merged into this feed.
+**One-time setup:**
+
+1. In Brevo, go to **Settings → Senders & IP → Senders** and verify a sender email address (e.g. your own address, or a company address you control) if you haven't already — Brevo requires this before it will create any campaign.
+2. In Vercel, add two more environment variables (alongside the ones from step 4 above):
+   - `BREVO_SENDER_EMAIL` = that verified sender address
+   - `BREVO_SENDER_NAME` = the display name subscribers should see (e.g. "Global Sustainable Taxonomies")
+   - (optional but recommended) `DIGEST_TRIGGER_SECRET` = any random string you choose — this stops a stranger who finds the URL from spamming draft campaigns into your account. Tell me this value once you've set it and I'll make sure the scheduled trigger sends it.
+3. Redeploy so the new environment variables take effect.
+4. Ask me to set up (or I'll already have set up) a weekly Cowork scheduled task that fetches `https://<your-domain>/api/create-digest-draft` — that single fetch is what creates the week's draft. Nothing sends automatically: the draft appears under **Campaigns → Email** in your Brevo dashboard, in draft status, waiting for you to open it, review the headlines, and click Send.
+
+What this digest includes: real, live headlines from Google News matching taxonomy/green-finance topics (the same source powering the Media Hub's News/Reports/Papers tabs). It deliberately does **not** include an AI-written trend summary (to avoid an AI API call on every run) or "BNZ Partners company updates" (there's no live feed of real company news to pull from — adding a placeholder for this would mean inventing content, which this project avoids). If a real source for company updates exists later (e.g. a company blog with its own RSS feed), it can be merged in.
+
+The plain RSS feed at `/api/digest-rss` still exists too, in case Brevo's RSS Campaign feature turns out to be reachable after all (e.g. on a different plan tier) or you want to use the feed elsewhere.
 
 ## Notes
 
