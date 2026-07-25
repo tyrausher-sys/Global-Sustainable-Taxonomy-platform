@@ -69,7 +69,7 @@ function stripHtml(html) {
     .trim();
 }
 
-async function extractText(url) {
+async function fetchDirect(url) {
   // Some official sources (e.g. Korean government file-download endpoints)
   // reject requests that don't look like they came from a real browser
   // navigating from their own site — no browser-like User-Agent, no Accept
@@ -86,7 +86,7 @@ async function extractText(url) {
     }
   });
   if (!upstream.ok) {
-    throw new Error(`Could not fetch the document (HTTP ${upstream.status}). The source site may be blocking automated requests.`);
+    throw new Error(`HTTP ${upstream.status}`);
   }
   const contentType = upstream.headers.get("content-type") || "";
   const buffer = Buffer.from(await upstream.arrayBuffer());
@@ -105,6 +105,37 @@ async function extractText(url) {
   }
 
   return { text: stripHtml(buffer.toString("utf8")), kind: "html", pages: null };
+}
+
+// Fallback for sources that block direct server-to-server fetches outright
+// (some government sites appear to allow well-known crawlers like Google's
+// but reject generic cloud/datacenter IPs regardless of headers sent — this
+// was confirmed for at least one Korean ministry download endpoint). Routes
+// the fetch through r.jina.ai, a public "reader" proxy that fetches a URL
+// itself and returns clean extracted text (including from PDFs), often from
+// IP ranges that aren't blocked the same way. Best-effort: if this also
+// fails, we fall through to the original, more informative error.
+async function fetchViaReaderProxy(url) {
+  const proxied = await fetch("https://r.jina.ai/" + url, {
+    headers: { "Accept": "text/plain" }
+  });
+  if (!proxied.ok) {
+    throw new Error(`reader proxy HTTP ${proxied.status}`);
+  }
+  const text = (await proxied.text() || "").trim();
+  return { text, kind: "html", pages: null };
+}
+
+async function extractText(url) {
+  try {
+    return await fetchDirect(url);
+  } catch (directErr) {
+    try {
+      return await fetchViaReaderProxy(url);
+    } catch (proxyErr) {
+      throw new Error(`Could not fetch the document (${directErr.message}); fallback fetch also failed (${proxyErr.message}). The source site may be blocking automated requests.`);
+    }
+  }
 }
 
 // Safety net: if extraction produced text that's mostly unprintable/control
