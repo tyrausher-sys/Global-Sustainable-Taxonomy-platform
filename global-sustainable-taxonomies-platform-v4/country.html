@@ -13801,7 +13801,15 @@ function populateTranslateLangSelect() {
 // embed the original document (see openTranslateModal below). Mirrors the
 // pattern already used elsewhere in the project for the same purpose.
 function looksLikePdf(url) {
-  return /\.pdf(\?|$)/i.test(url) || /\/pdf\//i.test(url) || /[?&](format|type)=pdf/i.test(url);
+  return /\.pdf(\?|$)/i.test(url) ||
+    /\/pdf\//i.test(url) ||
+    /[?&](format|type)=pdf/i.test(url) ||
+    // Many government file-serving endpoints (e.g. Korean ministry sites)
+    // stream a PDF from a generic "download" action with no .pdf in the
+    // URL at all — route these through the same PDF-viewer path too.
+    /download\.?do\b/i.test(url) ||
+    /readdownloadfile/i.test(url) ||
+    /[?&]fileid=/i.test(url);
 }
 
 // Translates the WHOLE document, not just its first few pages: the backend
