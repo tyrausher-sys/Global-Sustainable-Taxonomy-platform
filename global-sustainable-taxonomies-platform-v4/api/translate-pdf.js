@@ -106,7 +106,7 @@ async function fetchDirect(url) {
       "Accept-Language": "en-US,en;q=0.9",
       ...(origin ? { Referer: origin } : {})
     }
-  }, 12000);
+  }, 8000);
   if (!upstream.ok) {
     throw new Error(`HTTP ${upstream.status}`);
   }
@@ -140,7 +140,7 @@ async function fetchDirect(url) {
 async function fetchViaReaderProxy(url) {
   const proxied = await fetchWithTimeout("https://r.jina.ai/" + url, {
     headers: { "Accept": "text/plain" }
-  }, 15000);
+  }, 10000);
   if (!proxied.ok) {
     throw new Error(`reader proxy HTTP ${proxied.status}`);
   }
@@ -148,16 +148,43 @@ async function fetchViaReaderProxy(url) {
   return { text, kind: "html", pages: null };
 }
 
+// Every chunk of a document is a separate serverless request, and each one
+// used to re-fetch and re-parse the WHOLE document from scratch just to
+// slice out a different piece of already-known text — expensive, and for
+// documents that need the slow reader-proxy fallback (see above), slow
+// enough on its own to risk the function running out of time before it
+// even gets to the translation step. Vercel often reuses the same "warm"
+// function instance for requests that arrive close together (e.g. a user
+// stepping through chunk 0, 1, 2... of the same document), so a simple
+// in-memory cache at module scope — which survives between invocations on
+// the same warm instance, though not guaranteed and not shared across
+// instances — avoids redoing that work for every chunk of the same
+// document in the common case. Not a substitute for real caching, just a
+// best-effort speed-up; a cold start or a different instance still means
+// a fresh fetch, which is fine (it just means that one request is slower).
+const extractionCache = new Map();
+const EXTRACTION_CACHE_MAX_AGE_MS = 10 * 60 * 1000;
+
 async function extractText(url) {
+  const cached = extractionCache.get(url);
+  if (cached && Date.now() - cached.at < EXTRACTION_CACHE_MAX_AGE_MS) {
+    return cached.result;
+  }
+
+  let result;
   try {
-    return await fetchDirect(url);
+    result = await fetchDirect(url);
   } catch (directErr) {
     try {
-      return await fetchViaReaderProxy(url);
+      result = await fetchViaReaderProxy(url);
     } catch (proxyErr) {
+      console.error(`[translate-pdf] extraction failed for ${url}: direct=${directErr.message} proxy=${proxyErr.message}`);
       throw new Error(`Could not fetch the document (${directErr.message}); fallback fetch also failed (${proxyErr.message}). The source site may be blocking automated requests.`);
     }
   }
+
+  extractionCache.set(url, { result, at: Date.now() });
+  return result;
 }
 
 // Safety net: if extraction produced text that's mostly unprintable/control
@@ -284,7 +311,7 @@ async function handleTranslateRequest(req, res) {
   ].filter(Boolean).join("\n");
 
   try {
-    const upstream = await fetch("https://api.anthropic.com/v1/messages", {
+    const upstream = await fetchWithTimeout("https://api.anthropic.com/v1/messages", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -297,12 +324,13 @@ async function handleTranslateRequest(req, res) {
         system: systemPrompt,
         messages: [{ role: "user", content: sourceText }]
       })
-    });
+    }, 35000);
 
     const data = await upstream.json();
 
     if (!upstream.ok) {
       const msg = (data && data.error && data.error.message) || `Upstream API error (HTTP ${upstream.status})`;
+      console.error(`[translate-pdf] Anthropic API error for chunk ${safeChunkIndex}: ${msg}`);
       res.status(upstream.status).json({ error: msg });
       return;
     }
