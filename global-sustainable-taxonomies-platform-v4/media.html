@@ -214,8 +214,8 @@ a { color: inherit; }
 .translate-modal-overlay.open { display: flex; }
 .translate-modal-panel {
   width: 100%;
-  max-width: 720px;
-  max-height: 88vh;
+  max-width: 1140px;
+  max-height: 92vh;
   background: var(--bg);
   border-radius: 14px;
   border: 1px solid var(--border);
@@ -234,6 +234,25 @@ a { color: inherit; }
 }
 .translate-modal-header h3 { margin: 0 0 4px; font-size: 1.05rem; }
 .translate-modal-header .translate-doc-title { font-size: 0.82rem; color: var(--text-muted); }
+.translate-modal-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+.translate-lang-label {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+.translate-lang-select {
+  font-size: 0.82rem;
+  padding: 5px 8px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+}
 .translate-modal-disclaimer {
   margin: 0;
   padding: 10px 18px;
@@ -242,7 +261,40 @@ a { color: inherit; }
   background: var(--bg-soft);
   border-bottom: 1px solid var(--border);
 }
+.translate-modal-split {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+}
+.translate-modal-pane {
+  flex: 1 1 50%;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+.translate-modal-pane-original {
+  border-right: 1px solid var(--border);
+  background: var(--bg-soft);
+}
+.translate-pane-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  padding: 8px 14px;
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+.translate-original-frame {
+  flex: 1;
+  width: 100%;
+  border: none;
+  background: #fff;
+}
 .translate-modal-body {
+  flex: 1;
+  min-height: 0;
   padding: 18px;
   overflow-y: auto;
   font-size: 0.92rem;
@@ -262,6 +314,13 @@ a { color: inherit; }
   padding: 30px 0;
   justify-content: center;
 }
+.translate-modal-progress {
+  padding: 14px 0 4px;
+  border-top: 1px solid var(--border);
+  margin-top: 10px;
+  justify-content: flex-start;
+  font-size: 0.85rem;
+}
 .translate-spinner {
   width: 18px; height: 18px;
   border: 2px solid var(--border);
@@ -271,6 +330,19 @@ a { color: inherit; }
 }
 @keyframes translate-spin { to { transform: rotate(360deg); } }
 .translate-modal-error { color: var(--amber); padding: 16px 0; }
+@media (max-width: 900px) {
+  .translate-modal-panel { max-width: 96vw; }
+  .translate-modal-split { flex-direction: column; overflow-y: auto; }
+  .translate-modal-pane-original {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+    flex: 0 0 auto;
+  }
+  .translate-original-frame { min-height: 280px; }
+  .translate-modal-pane-translated { flex: 1 1 auto; }
+  .translate-modal-header { flex-wrap: wrap; }
+  .translate-modal-header-actions { flex-wrap: wrap; }
+}
 .content-translating-banner {
   display: flex; align-items: center; gap: 10px;
   font-size: 0.85rem; color: var(--text-muted);
@@ -1436,7 +1508,8 @@ button.chip.active { background: var(--green); border-color: var(--green); color
   font-size: 0.92rem;
   flex-shrink: 0;
 }
-.gst-chat-header .icon-btn { color: #fff; }
+.gst-chat-header .icon-btn { color: #fff; background: transparent; border-color: rgba(255, 255, 255, 0.3); }
+.gst-chat-header .icon-btn:hover { background: rgba(255, 255, 255, 0.12); color: #fff; }
 
 .gst-chat-subtitle {
   font-size: 0.76rem;
@@ -1717,7 +1790,7 @@ window.TAXONOMY_DATA = {
       "Large companies operating in Austria, as elsewhere in the EU, must disclose under Article 8 of the Regulation what share of their turnover, capital expenditure and operating expenditure is 'taxonomy-eligible' (covered by the taxonomy at all) versus 'taxonomy-aligned' (actually meeting all four conditions) — this sits alongside broader sustainability reporting obligations under the Corporate Sustainability Reporting Directive (CSRD). The Commission has been actively simplifying the framework: a Delegated Act reducing reporting burden was adopted in 2025 as part of the 'Omnibus' simplification package, [3] and in March 2026 the Commission proposed further revisions to the Climate and Environmental Delegated Acts' technical screening criteria, with the revised criteria expected to apply from January 2027. [4]"
     ],
     "citations": [
-      { "id": 1, "label": "EUR-Lex, Regulation (EU) 2020/852 of 18 June 2020 (Taxonomy Regulation), official consolidated text", "url": "https://eur-lex.europa.eu/eli/reg/2020/852/oj/eng" },
+      { "id": 1, "label": "EUR-Lex, Regulation (EU) 2020/852 of 18 June 2020 (Taxonomy Regulation), official consolidated text", "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32020R0852" },
       { "id": 2, "label": "European Commission, \"Implementing and delegated acts \u2014 Taxonomy Regulation\" (Climate, Complementary Climate and Environmental Delegated Acts)", "url": "https://finance.ec.europa.eu/regulation-and-supervision/financial-services-legislation/implementing-and-delegated-acts/taxonomy-regulation_en" },
       { "id": 3, "label": "European Commission, \"Commission to cut EU taxonomy red tape for companies\" (Omnibus simplification Delegated Act, adopted 4 Jul 2025)", "url": "https://finance.ec.europa.eu/publications/commission-cut-eu-taxonomy-red-tape-companies_en" },
       { "id": 4, "label": "European Commission, \"Commission seeks feedback on revision of criteria for sustainable economic activities\" (17 Mar 2026 draft revisions)", "url": "https://finance.ec.europa.eu/news/commission-seeks-feedback-revision-criteria-sustainable-economic-activities-2026-03-17_en" }
@@ -1770,27 +1843,22 @@ window.TAXONOMY_DATA = {
       {
         "title": "Taxonomy Regulation (EU) 2020/852 — full legal text",
         "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32020R0852"
-      },
-      {
-        "title": "Taxonomy Regulation (EU) 2020/852 — official German-language text (PDF)",
-        "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/DE/TXT/PDF/?uri=CELEX:32020R0852"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32020R0852"
       },
       {
         "title": "Climate Delegated Act (EU) 2021/2139 — technical screening criteria for climate mitigation & adaptation",
         "date": "4 Jun 2021",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32021R2139"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32021R2139"
       },
       {
         "title": "Complementary Climate Delegated Act (EU) 2022/1214 — nuclear & gas activities",
         "date": "9 Mar 2022",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R1214"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32022R1214"
       },
       {
         "title": "Environmental Delegated Act (EU) 2023/2486 — criteria for the 4 remaining objectives (water, circular economy, pollution, biodiversity)",
         "date": "27 Jun 2023",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R2486"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32023R2486"
       },
       {
         "title": "European Commission — EU taxonomy for sustainable activities (official overview & delegated acts hub)",
@@ -1886,7 +1954,7 @@ window.TAXONOMY_DATA = {
       "Large companies operating in Belgium, as elsewhere in the EU, must disclose under Article 8 of the Regulation what share of their turnover, capital expenditure and operating expenditure is 'taxonomy-eligible' (covered by the taxonomy at all) versus 'taxonomy-aligned' (actually meeting all four conditions) — this sits alongside broader sustainability reporting obligations under the Corporate Sustainability Reporting Directive (CSRD). The Commission has been actively simplifying the framework: a Delegated Act reducing reporting burden was adopted in 2025 as part of the 'Omnibus' simplification package, [3] and in March 2026 the Commission proposed further revisions to the Climate and Environmental Delegated Acts' technical screening criteria, with the revised criteria expected to apply from January 2027. [4]"
     ],
     "citations": [
-      { "id": 1, "label": "EUR-Lex, Regulation (EU) 2020/852 of 18 June 2020 (Taxonomy Regulation), official consolidated text", "url": "https://eur-lex.europa.eu/eli/reg/2020/852/oj/eng" },
+      { "id": 1, "label": "EUR-Lex, Regulation (EU) 2020/852 of 18 June 2020 (Taxonomy Regulation), official consolidated text", "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32020R0852" },
       { "id": 2, "label": "European Commission, \"Implementing and delegated acts \u2014 Taxonomy Regulation\" (Climate, Complementary Climate and Environmental Delegated Acts)", "url": "https://finance.ec.europa.eu/regulation-and-supervision/financial-services-legislation/implementing-and-delegated-acts/taxonomy-regulation_en" },
       { "id": 3, "label": "European Commission, \"Commission to cut EU taxonomy red tape for companies\" (Omnibus simplification Delegated Act, adopted 4 Jul 2025)", "url": "https://finance.ec.europa.eu/publications/commission-cut-eu-taxonomy-red-tape-companies_en" },
       { "id": 4, "label": "European Commission, \"Commission seeks feedback on revision of criteria for sustainable economic activities\" (17 Mar 2026 draft revisions)", "url": "https://finance.ec.europa.eu/news/commission-seeks-feedback-revision-criteria-sustainable-economic-activities-2026-03-17_en" }
@@ -1939,27 +2007,22 @@ window.TAXONOMY_DATA = {
       {
         "title": "Taxonomy Regulation (EU) 2020/852 — full legal text",
         "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32020R0852"
-      },
-      {
-        "title": "Taxonomy Regulation (EU) 2020/852 — official Dutch-language text (PDF)",
-        "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/NL/TXT/PDF/?uri=CELEX:32020R0852"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32020R0852"
       },
       {
         "title": "Climate Delegated Act (EU) 2021/2139 — technical screening criteria for climate mitigation & adaptation",
         "date": "4 Jun 2021",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32021R2139"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32021R2139"
       },
       {
         "title": "Complementary Climate Delegated Act (EU) 2022/1214 — nuclear & gas activities",
         "date": "9 Mar 2022",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R1214"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32022R1214"
       },
       {
         "title": "Environmental Delegated Act (EU) 2023/2486 — criteria for the 4 remaining objectives (water, circular economy, pollution, biodiversity)",
         "date": "27 Jun 2023",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R2486"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32023R2486"
       },
       {
         "title": "European Commission — EU taxonomy for sustainable activities (official overview & delegated acts hub)",
@@ -2055,7 +2118,7 @@ window.TAXONOMY_DATA = {
       "Large companies operating in Bulgaria, as elsewhere in the EU, must disclose under Article 8 of the Regulation what share of their turnover, capital expenditure and operating expenditure is 'taxonomy-eligible' (covered by the taxonomy at all) versus 'taxonomy-aligned' (actually meeting all four conditions) — this sits alongside broader sustainability reporting obligations under the Corporate Sustainability Reporting Directive (CSRD). The Commission has been actively simplifying the framework: a Delegated Act reducing reporting burden was adopted in 2025 as part of the 'Omnibus' simplification package, [3] and in March 2026 the Commission proposed further revisions to the Climate and Environmental Delegated Acts' technical screening criteria, with the revised criteria expected to apply from January 2027. [4]"
     ],
     "citations": [
-      { "id": 1, "label": "EUR-Lex, Regulation (EU) 2020/852 of 18 June 2020 (Taxonomy Regulation), official consolidated text", "url": "https://eur-lex.europa.eu/eli/reg/2020/852/oj/eng" },
+      { "id": 1, "label": "EUR-Lex, Regulation (EU) 2020/852 of 18 June 2020 (Taxonomy Regulation), official consolidated text", "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32020R0852" },
       { "id": 2, "label": "European Commission, \"Implementing and delegated acts \u2014 Taxonomy Regulation\" (Climate, Complementary Climate and Environmental Delegated Acts)", "url": "https://finance.ec.europa.eu/regulation-and-supervision/financial-services-legislation/implementing-and-delegated-acts/taxonomy-regulation_en" },
       { "id": 3, "label": "European Commission, \"Commission to cut EU taxonomy red tape for companies\" (Omnibus simplification Delegated Act, adopted 4 Jul 2025)", "url": "https://finance.ec.europa.eu/publications/commission-cut-eu-taxonomy-red-tape-companies_en" },
       { "id": 4, "label": "European Commission, \"Commission seeks feedback on revision of criteria for sustainable economic activities\" (17 Mar 2026 draft revisions)", "url": "https://finance.ec.europa.eu/news/commission-seeks-feedback-revision-criteria-sustainable-economic-activities-2026-03-17_en" }
@@ -2108,27 +2171,22 @@ window.TAXONOMY_DATA = {
       {
         "title": "Taxonomy Regulation (EU) 2020/852 — full legal text",
         "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32020R0852"
-      },
-      {
-        "title": "Taxonomy Regulation (EU) 2020/852 — official Bulgarian-language text (PDF)",
-        "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/BG/TXT/PDF/?uri=CELEX:32020R0852"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32020R0852"
       },
       {
         "title": "Climate Delegated Act (EU) 2021/2139 — technical screening criteria for climate mitigation & adaptation",
         "date": "4 Jun 2021",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32021R2139"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32021R2139"
       },
       {
         "title": "Complementary Climate Delegated Act (EU) 2022/1214 — nuclear & gas activities",
         "date": "9 Mar 2022",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R1214"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32022R1214"
       },
       {
         "title": "Environmental Delegated Act (EU) 2023/2486 — criteria for the 4 remaining objectives (water, circular economy, pollution, biodiversity)",
         "date": "27 Jun 2023",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R2486"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32023R2486"
       },
       {
         "title": "European Commission — EU taxonomy for sustainable activities (official overview & delegated acts hub)",
@@ -2224,7 +2282,7 @@ window.TAXONOMY_DATA = {
       "Large companies operating in Croatia, as elsewhere in the EU, must disclose under Article 8 of the Regulation what share of their turnover, capital expenditure and operating expenditure is 'taxonomy-eligible' (covered by the taxonomy at all) versus 'taxonomy-aligned' (actually meeting all four conditions) — this sits alongside broader sustainability reporting obligations under the Corporate Sustainability Reporting Directive (CSRD). The Commission has been actively simplifying the framework: a Delegated Act reducing reporting burden was adopted in 2025 as part of the 'Omnibus' simplification package, [3] and in March 2026 the Commission proposed further revisions to the Climate and Environmental Delegated Acts' technical screening criteria, with the revised criteria expected to apply from January 2027. [4]"
     ],
     "citations": [
-      { "id": 1, "label": "EUR-Lex, Regulation (EU) 2020/852 of 18 June 2020 (Taxonomy Regulation), official consolidated text", "url": "https://eur-lex.europa.eu/eli/reg/2020/852/oj/eng" },
+      { "id": 1, "label": "EUR-Lex, Regulation (EU) 2020/852 of 18 June 2020 (Taxonomy Regulation), official consolidated text", "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32020R0852" },
       { "id": 2, "label": "European Commission, \"Implementing and delegated acts \u2014 Taxonomy Regulation\" (Climate, Complementary Climate and Environmental Delegated Acts)", "url": "https://finance.ec.europa.eu/regulation-and-supervision/financial-services-legislation/implementing-and-delegated-acts/taxonomy-regulation_en" },
       { "id": 3, "label": "European Commission, \"Commission to cut EU taxonomy red tape for companies\" (Omnibus simplification Delegated Act, adopted 4 Jul 2025)", "url": "https://finance.ec.europa.eu/publications/commission-cut-eu-taxonomy-red-tape-companies_en" },
       { "id": 4, "label": "European Commission, \"Commission seeks feedback on revision of criteria for sustainable economic activities\" (17 Mar 2026 draft revisions)", "url": "https://finance.ec.europa.eu/news/commission-seeks-feedback-revision-criteria-sustainable-economic-activities-2026-03-17_en" }
@@ -2277,27 +2335,22 @@ window.TAXONOMY_DATA = {
       {
         "title": "Taxonomy Regulation (EU) 2020/852 — full legal text",
         "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32020R0852"
-      },
-      {
-        "title": "Taxonomy Regulation (EU) 2020/852 — official Croatian-language text (PDF)",
-        "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/HR/TXT/PDF/?uri=CELEX:32020R0852"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32020R0852"
       },
       {
         "title": "Climate Delegated Act (EU) 2021/2139 — technical screening criteria for climate mitigation & adaptation",
         "date": "4 Jun 2021",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32021R2139"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32021R2139"
       },
       {
         "title": "Complementary Climate Delegated Act (EU) 2022/1214 — nuclear & gas activities",
         "date": "9 Mar 2022",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R1214"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32022R1214"
       },
       {
         "title": "Environmental Delegated Act (EU) 2023/2486 — criteria for the 4 remaining objectives (water, circular economy, pollution, biodiversity)",
         "date": "27 Jun 2023",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R2486"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32023R2486"
       },
       {
         "title": "European Commission — EU taxonomy for sustainable activities (official overview & delegated acts hub)",
@@ -2393,7 +2446,7 @@ window.TAXONOMY_DATA = {
       "Large companies operating in Cyprus, as elsewhere in the EU, must disclose under Article 8 of the Regulation what share of their turnover, capital expenditure and operating expenditure is 'taxonomy-eligible' (covered by the taxonomy at all) versus 'taxonomy-aligned' (actually meeting all four conditions) — this sits alongside broader sustainability reporting obligations under the Corporate Sustainability Reporting Directive (CSRD). The Commission has been actively simplifying the framework: a Delegated Act reducing reporting burden was adopted in 2025 as part of the 'Omnibus' simplification package, [3] and in March 2026 the Commission proposed further revisions to the Climate and Environmental Delegated Acts' technical screening criteria, with the revised criteria expected to apply from January 2027. [4]"
     ],
     "citations": [
-      { "id": 1, "label": "EUR-Lex, Regulation (EU) 2020/852 of 18 June 2020 (Taxonomy Regulation), official consolidated text", "url": "https://eur-lex.europa.eu/eli/reg/2020/852/oj/eng" },
+      { "id": 1, "label": "EUR-Lex, Regulation (EU) 2020/852 of 18 June 2020 (Taxonomy Regulation), official consolidated text", "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32020R0852" },
       { "id": 2, "label": "European Commission, \"Implementing and delegated acts \u2014 Taxonomy Regulation\" (Climate, Complementary Climate and Environmental Delegated Acts)", "url": "https://finance.ec.europa.eu/regulation-and-supervision/financial-services-legislation/implementing-and-delegated-acts/taxonomy-regulation_en" },
       { "id": 3, "label": "European Commission, \"Commission to cut EU taxonomy red tape for companies\" (Omnibus simplification Delegated Act, adopted 4 Jul 2025)", "url": "https://finance.ec.europa.eu/publications/commission-cut-eu-taxonomy-red-tape-companies_en" },
       { "id": 4, "label": "European Commission, \"Commission seeks feedback on revision of criteria for sustainable economic activities\" (17 Mar 2026 draft revisions)", "url": "https://finance.ec.europa.eu/news/commission-seeks-feedback-revision-criteria-sustainable-economic-activities-2026-03-17_en" }
@@ -2446,27 +2499,22 @@ window.TAXONOMY_DATA = {
       {
         "title": "Taxonomy Regulation (EU) 2020/852 — full legal text",
         "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32020R0852"
-      },
-      {
-        "title": "Taxonomy Regulation (EU) 2020/852 — official Greek-language text (PDF)",
-        "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/EL/TXT/PDF/?uri=CELEX:32020R0852"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32020R0852"
       },
       {
         "title": "Climate Delegated Act (EU) 2021/2139 — technical screening criteria for climate mitigation & adaptation",
         "date": "4 Jun 2021",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32021R2139"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32021R2139"
       },
       {
         "title": "Complementary Climate Delegated Act (EU) 2022/1214 — nuclear & gas activities",
         "date": "9 Mar 2022",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R1214"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32022R1214"
       },
       {
         "title": "Environmental Delegated Act (EU) 2023/2486 — criteria for the 4 remaining objectives (water, circular economy, pollution, biodiversity)",
         "date": "27 Jun 2023",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R2486"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32023R2486"
       },
       {
         "title": "European Commission — EU taxonomy for sustainable activities (official overview & delegated acts hub)",
@@ -2562,7 +2610,7 @@ window.TAXONOMY_DATA = {
       "Large companies operating in Czechia, as elsewhere in the EU, must disclose under Article 8 of the Regulation what share of their turnover, capital expenditure and operating expenditure is 'taxonomy-eligible' (covered by the taxonomy at all) versus 'taxonomy-aligned' (actually meeting all four conditions) — this sits alongside broader sustainability reporting obligations under the Corporate Sustainability Reporting Directive (CSRD). The Commission has been actively simplifying the framework: a Delegated Act reducing reporting burden was adopted in 2025 as part of the 'Omnibus' simplification package, [3] and in March 2026 the Commission proposed further revisions to the Climate and Environmental Delegated Acts' technical screening criteria, with the revised criteria expected to apply from January 2027. [4]"
     ],
     "citations": [
-      { "id": 1, "label": "EUR-Lex, Regulation (EU) 2020/852 of 18 June 2020 (Taxonomy Regulation), official consolidated text", "url": "https://eur-lex.europa.eu/eli/reg/2020/852/oj/eng" },
+      { "id": 1, "label": "EUR-Lex, Regulation (EU) 2020/852 of 18 June 2020 (Taxonomy Regulation), official consolidated text", "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32020R0852" },
       { "id": 2, "label": "European Commission, \"Implementing and delegated acts \u2014 Taxonomy Regulation\" (Climate, Complementary Climate and Environmental Delegated Acts)", "url": "https://finance.ec.europa.eu/regulation-and-supervision/financial-services-legislation/implementing-and-delegated-acts/taxonomy-regulation_en" },
       { "id": 3, "label": "European Commission, \"Commission to cut EU taxonomy red tape for companies\" (Omnibus simplification Delegated Act, adopted 4 Jul 2025)", "url": "https://finance.ec.europa.eu/publications/commission-cut-eu-taxonomy-red-tape-companies_en" },
       { "id": 4, "label": "European Commission, \"Commission seeks feedback on revision of criteria for sustainable economic activities\" (17 Mar 2026 draft revisions)", "url": "https://finance.ec.europa.eu/news/commission-seeks-feedback-revision-criteria-sustainable-economic-activities-2026-03-17_en" }
@@ -2615,27 +2663,22 @@ window.TAXONOMY_DATA = {
       {
         "title": "Taxonomy Regulation (EU) 2020/852 — full legal text",
         "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32020R0852"
-      },
-      {
-        "title": "Taxonomy Regulation (EU) 2020/852 — official Czech-language text (PDF)",
-        "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/CS/TXT/PDF/?uri=CELEX:32020R0852"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32020R0852"
       },
       {
         "title": "Climate Delegated Act (EU) 2021/2139 — technical screening criteria for climate mitigation & adaptation",
         "date": "4 Jun 2021",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32021R2139"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32021R2139"
       },
       {
         "title": "Complementary Climate Delegated Act (EU) 2022/1214 — nuclear & gas activities",
         "date": "9 Mar 2022",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R1214"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32022R1214"
       },
       {
         "title": "Environmental Delegated Act (EU) 2023/2486 — criteria for the 4 remaining objectives (water, circular economy, pollution, biodiversity)",
         "date": "27 Jun 2023",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R2486"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32023R2486"
       },
       {
         "title": "European Commission — EU taxonomy for sustainable activities (official overview & delegated acts hub)",
@@ -2731,7 +2774,7 @@ window.TAXONOMY_DATA = {
       "Large companies operating in Denmark, as elsewhere in the EU, must disclose under Article 8 of the Regulation what share of their turnover, capital expenditure and operating expenditure is 'taxonomy-eligible' (covered by the taxonomy at all) versus 'taxonomy-aligned' (actually meeting all four conditions) — this sits alongside broader sustainability reporting obligations under the Corporate Sustainability Reporting Directive (CSRD). The Commission has been actively simplifying the framework: a Delegated Act reducing reporting burden was adopted in 2025 as part of the 'Omnibus' simplification package, [3] and in March 2026 the Commission proposed further revisions to the Climate and Environmental Delegated Acts' technical screening criteria, with the revised criteria expected to apply from January 2027. [4]"
     ],
     "citations": [
-      { "id": 1, "label": "EUR-Lex, Regulation (EU) 2020/852 of 18 June 2020 (Taxonomy Regulation), official consolidated text", "url": "https://eur-lex.europa.eu/eli/reg/2020/852/oj/eng" },
+      { "id": 1, "label": "EUR-Lex, Regulation (EU) 2020/852 of 18 June 2020 (Taxonomy Regulation), official consolidated text", "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32020R0852" },
       { "id": 2, "label": "European Commission, \"Implementing and delegated acts \u2014 Taxonomy Regulation\" (Climate, Complementary Climate and Environmental Delegated Acts)", "url": "https://finance.ec.europa.eu/regulation-and-supervision/financial-services-legislation/implementing-and-delegated-acts/taxonomy-regulation_en" },
       { "id": 3, "label": "European Commission, \"Commission to cut EU taxonomy red tape for companies\" (Omnibus simplification Delegated Act, adopted 4 Jul 2025)", "url": "https://finance.ec.europa.eu/publications/commission-cut-eu-taxonomy-red-tape-companies_en" },
       { "id": 4, "label": "European Commission, \"Commission seeks feedback on revision of criteria for sustainable economic activities\" (17 Mar 2026 draft revisions)", "url": "https://finance.ec.europa.eu/news/commission-seeks-feedback-revision-criteria-sustainable-economic-activities-2026-03-17_en" }
@@ -2784,27 +2827,22 @@ window.TAXONOMY_DATA = {
       {
         "title": "Taxonomy Regulation (EU) 2020/852 — full legal text",
         "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32020R0852"
-      },
-      {
-        "title": "Taxonomy Regulation (EU) 2020/852 — official Danish-language text (PDF)",
-        "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/DA/TXT/PDF/?uri=CELEX:32020R0852"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32020R0852"
       },
       {
         "title": "Climate Delegated Act (EU) 2021/2139 — technical screening criteria for climate mitigation & adaptation",
         "date": "4 Jun 2021",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32021R2139"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32021R2139"
       },
       {
         "title": "Complementary Climate Delegated Act (EU) 2022/1214 — nuclear & gas activities",
         "date": "9 Mar 2022",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R1214"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32022R1214"
       },
       {
         "title": "Environmental Delegated Act (EU) 2023/2486 — criteria for the 4 remaining objectives (water, circular economy, pollution, biodiversity)",
         "date": "27 Jun 2023",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R2486"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32023R2486"
       },
       {
         "title": "European Commission — EU taxonomy for sustainable activities (official overview & delegated acts hub)",
@@ -2900,7 +2938,7 @@ window.TAXONOMY_DATA = {
       "Large companies operating in Estonia, as elsewhere in the EU, must disclose under Article 8 of the Regulation what share of their turnover, capital expenditure and operating expenditure is 'taxonomy-eligible' (covered by the taxonomy at all) versus 'taxonomy-aligned' (actually meeting all four conditions) — this sits alongside broader sustainability reporting obligations under the Corporate Sustainability Reporting Directive (CSRD). The Commission has been actively simplifying the framework: a Delegated Act reducing reporting burden was adopted in 2025 as part of the 'Omnibus' simplification package, [3] and in March 2026 the Commission proposed further revisions to the Climate and Environmental Delegated Acts' technical screening criteria, with the revised criteria expected to apply from January 2027. [4]"
     ],
     "citations": [
-      { "id": 1, "label": "EUR-Lex, Regulation (EU) 2020/852 of 18 June 2020 (Taxonomy Regulation), official consolidated text", "url": "https://eur-lex.europa.eu/eli/reg/2020/852/oj/eng" },
+      { "id": 1, "label": "EUR-Lex, Regulation (EU) 2020/852 of 18 June 2020 (Taxonomy Regulation), official consolidated text", "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32020R0852" },
       { "id": 2, "label": "European Commission, \"Implementing and delegated acts \u2014 Taxonomy Regulation\" (Climate, Complementary Climate and Environmental Delegated Acts)", "url": "https://finance.ec.europa.eu/regulation-and-supervision/financial-services-legislation/implementing-and-delegated-acts/taxonomy-regulation_en" },
       { "id": 3, "label": "European Commission, \"Commission to cut EU taxonomy red tape for companies\" (Omnibus simplification Delegated Act, adopted 4 Jul 2025)", "url": "https://finance.ec.europa.eu/publications/commission-cut-eu-taxonomy-red-tape-companies_en" },
       { "id": 4, "label": "European Commission, \"Commission seeks feedback on revision of criteria for sustainable economic activities\" (17 Mar 2026 draft revisions)", "url": "https://finance.ec.europa.eu/news/commission-seeks-feedback-revision-criteria-sustainable-economic-activities-2026-03-17_en" }
@@ -2953,27 +2991,22 @@ window.TAXONOMY_DATA = {
       {
         "title": "Taxonomy Regulation (EU) 2020/852 — full legal text",
         "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32020R0852"
-      },
-      {
-        "title": "Taxonomy Regulation (EU) 2020/852 — official Estonian-language text (PDF)",
-        "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/ET/TXT/PDF/?uri=CELEX:32020R0852"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32020R0852"
       },
       {
         "title": "Climate Delegated Act (EU) 2021/2139 — technical screening criteria for climate mitigation & adaptation",
         "date": "4 Jun 2021",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32021R2139"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32021R2139"
       },
       {
         "title": "Complementary Climate Delegated Act (EU) 2022/1214 — nuclear & gas activities",
         "date": "9 Mar 2022",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R1214"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32022R1214"
       },
       {
         "title": "Environmental Delegated Act (EU) 2023/2486 — criteria for the 4 remaining objectives (water, circular economy, pollution, biodiversity)",
         "date": "27 Jun 2023",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R2486"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32023R2486"
       },
       {
         "title": "European Commission — EU taxonomy for sustainable activities (official overview & delegated acts hub)",
@@ -3069,7 +3102,7 @@ window.TAXONOMY_DATA = {
       "Large companies operating in Finland, as elsewhere in the EU, must disclose under Article 8 of the Regulation what share of their turnover, capital expenditure and operating expenditure is 'taxonomy-eligible' (covered by the taxonomy at all) versus 'taxonomy-aligned' (actually meeting all four conditions) — this sits alongside broader sustainability reporting obligations under the Corporate Sustainability Reporting Directive (CSRD). The Commission has been actively simplifying the framework: a Delegated Act reducing reporting burden was adopted in 2025 as part of the 'Omnibus' simplification package, [3] and in March 2026 the Commission proposed further revisions to the Climate and Environmental Delegated Acts' technical screening criteria, with the revised criteria expected to apply from January 2027. [4]"
     ],
     "citations": [
-      { "id": 1, "label": "EUR-Lex, Regulation (EU) 2020/852 of 18 June 2020 (Taxonomy Regulation), official consolidated text", "url": "https://eur-lex.europa.eu/eli/reg/2020/852/oj/eng" },
+      { "id": 1, "label": "EUR-Lex, Regulation (EU) 2020/852 of 18 June 2020 (Taxonomy Regulation), official consolidated text", "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32020R0852" },
       { "id": 2, "label": "European Commission, \"Implementing and delegated acts \u2014 Taxonomy Regulation\" (Climate, Complementary Climate and Environmental Delegated Acts)", "url": "https://finance.ec.europa.eu/regulation-and-supervision/financial-services-legislation/implementing-and-delegated-acts/taxonomy-regulation_en" },
       { "id": 3, "label": "European Commission, \"Commission to cut EU taxonomy red tape for companies\" (Omnibus simplification Delegated Act, adopted 4 Jul 2025)", "url": "https://finance.ec.europa.eu/publications/commission-cut-eu-taxonomy-red-tape-companies_en" },
       { "id": 4, "label": "European Commission, \"Commission seeks feedback on revision of criteria for sustainable economic activities\" (17 Mar 2026 draft revisions)", "url": "https://finance.ec.europa.eu/news/commission-seeks-feedback-revision-criteria-sustainable-economic-activities-2026-03-17_en" }
@@ -3122,27 +3155,22 @@ window.TAXONOMY_DATA = {
       {
         "title": "Taxonomy Regulation (EU) 2020/852 — full legal text",
         "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32020R0852"
-      },
-      {
-        "title": "Taxonomy Regulation (EU) 2020/852 — official Finnish-language text (PDF)",
-        "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/FI/TXT/PDF/?uri=CELEX:32020R0852"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32020R0852"
       },
       {
         "title": "Climate Delegated Act (EU) 2021/2139 — technical screening criteria for climate mitigation & adaptation",
         "date": "4 Jun 2021",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32021R2139"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32021R2139"
       },
       {
         "title": "Complementary Climate Delegated Act (EU) 2022/1214 — nuclear & gas activities",
         "date": "9 Mar 2022",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R1214"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32022R1214"
       },
       {
         "title": "Environmental Delegated Act (EU) 2023/2486 — criteria for the 4 remaining objectives (water, circular economy, pollution, biodiversity)",
         "date": "27 Jun 2023",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R2486"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32023R2486"
       },
       {
         "title": "European Commission — EU taxonomy for sustainable activities (official overview & delegated acts hub)",
@@ -3238,7 +3266,7 @@ window.TAXONOMY_DATA = {
       "Large companies operating in France, as elsewhere in the EU, must disclose under Article 8 of the Regulation what share of their turnover, capital expenditure and operating expenditure is 'taxonomy-eligible' (covered by the taxonomy at all) versus 'taxonomy-aligned' (actually meeting all four conditions) — this sits alongside broader sustainability reporting obligations under the Corporate Sustainability Reporting Directive (CSRD). The Commission has been actively simplifying the framework: a Delegated Act reducing reporting burden was adopted in 2025 as part of the 'Omnibus' simplification package, [3] and in March 2026 the Commission proposed further revisions to the Climate and Environmental Delegated Acts' technical screening criteria, with the revised criteria expected to apply from January 2027. [4]"
     ],
     "citations": [
-      { "id": 1, "label": "EUR-Lex, Regulation (EU) 2020/852 of 18 June 2020 (Taxonomy Regulation), official consolidated text", "url": "https://eur-lex.europa.eu/eli/reg/2020/852/oj/eng" },
+      { "id": 1, "label": "EUR-Lex, Regulation (EU) 2020/852 of 18 June 2020 (Taxonomy Regulation), official consolidated text", "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32020R0852" },
       { "id": 2, "label": "European Commission, \"Implementing and delegated acts \u2014 Taxonomy Regulation\" (Climate, Complementary Climate and Environmental Delegated Acts)", "url": "https://finance.ec.europa.eu/regulation-and-supervision/financial-services-legislation/implementing-and-delegated-acts/taxonomy-regulation_en" },
       { "id": 3, "label": "European Commission, \"Commission to cut EU taxonomy red tape for companies\" (Omnibus simplification Delegated Act, adopted 4 Jul 2025)", "url": "https://finance.ec.europa.eu/publications/commission-cut-eu-taxonomy-red-tape-companies_en" },
       { "id": 4, "label": "European Commission, \"Commission seeks feedback on revision of criteria for sustainable economic activities\" (17 Mar 2026 draft revisions)", "url": "https://finance.ec.europa.eu/news/commission-seeks-feedback-revision-criteria-sustainable-economic-activities-2026-03-17_en" }
@@ -3291,27 +3319,22 @@ window.TAXONOMY_DATA = {
       {
         "title": "Taxonomy Regulation (EU) 2020/852 — full legal text",
         "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32020R0852"
-      },
-      {
-        "title": "Taxonomy Regulation (EU) 2020/852 — official French-language text (PDF)",
-        "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/FR/TXT/PDF/?uri=CELEX:32020R0852"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32020R0852"
       },
       {
         "title": "Climate Delegated Act (EU) 2021/2139 — technical screening criteria for climate mitigation & adaptation",
         "date": "4 Jun 2021",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32021R2139"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32021R2139"
       },
       {
         "title": "Complementary Climate Delegated Act (EU) 2022/1214 — nuclear & gas activities",
         "date": "9 Mar 2022",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R1214"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32022R1214"
       },
       {
         "title": "Environmental Delegated Act (EU) 2023/2486 — criteria for the 4 remaining objectives (water, circular economy, pollution, biodiversity)",
         "date": "27 Jun 2023",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R2486"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32023R2486"
       },
       {
         "title": "European Commission — EU taxonomy for sustainable activities (official overview & delegated acts hub)",
@@ -3407,7 +3430,7 @@ window.TAXONOMY_DATA = {
       "Large companies operating in Germany, as elsewhere in the EU, must disclose under Article 8 of the Regulation what share of their turnover, capital expenditure and operating expenditure is 'taxonomy-eligible' (covered by the taxonomy at all) versus 'taxonomy-aligned' (actually meeting all four conditions) — this sits alongside broader sustainability reporting obligations under the Corporate Sustainability Reporting Directive (CSRD). The Commission has been actively simplifying the framework: a Delegated Act reducing reporting burden was adopted in 2025 as part of the 'Omnibus' simplification package, [3] and in March 2026 the Commission proposed further revisions to the Climate and Environmental Delegated Acts' technical screening criteria, with the revised criteria expected to apply from January 2027. [4]"
     ],
     "citations": [
-      { "id": 1, "label": "EUR-Lex, Regulation (EU) 2020/852 of 18 June 2020 (Taxonomy Regulation), official consolidated text", "url": "https://eur-lex.europa.eu/eli/reg/2020/852/oj/eng" },
+      { "id": 1, "label": "EUR-Lex, Regulation (EU) 2020/852 of 18 June 2020 (Taxonomy Regulation), official consolidated text", "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32020R0852" },
       { "id": 2, "label": "European Commission, \"Implementing and delegated acts \u2014 Taxonomy Regulation\" (Climate, Complementary Climate and Environmental Delegated Acts)", "url": "https://finance.ec.europa.eu/regulation-and-supervision/financial-services-legislation/implementing-and-delegated-acts/taxonomy-regulation_en" },
       { "id": 3, "label": "European Commission, \"Commission to cut EU taxonomy red tape for companies\" (Omnibus simplification Delegated Act, adopted 4 Jul 2025)", "url": "https://finance.ec.europa.eu/publications/commission-cut-eu-taxonomy-red-tape-companies_en" },
       { "id": 4, "label": "European Commission, \"Commission seeks feedback on revision of criteria for sustainable economic activities\" (17 Mar 2026 draft revisions)", "url": "https://finance.ec.europa.eu/news/commission-seeks-feedback-revision-criteria-sustainable-economic-activities-2026-03-17_en" }
@@ -3460,27 +3483,22 @@ window.TAXONOMY_DATA = {
       {
         "title": "Taxonomy Regulation (EU) 2020/852 — full legal text",
         "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32020R0852"
-      },
-      {
-        "title": "Taxonomy Regulation (EU) 2020/852 — official German-language text (PDF)",
-        "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/DE/TXT/PDF/?uri=CELEX:32020R0852"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32020R0852"
       },
       {
         "title": "Climate Delegated Act (EU) 2021/2139 — technical screening criteria for climate mitigation & adaptation",
         "date": "4 Jun 2021",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32021R2139"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32021R2139"
       },
       {
         "title": "Complementary Climate Delegated Act (EU) 2022/1214 — nuclear & gas activities",
         "date": "9 Mar 2022",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R1214"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32022R1214"
       },
       {
         "title": "Environmental Delegated Act (EU) 2023/2486 — criteria for the 4 remaining objectives (water, circular economy, pollution, biodiversity)",
         "date": "27 Jun 2023",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R2486"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32023R2486"
       },
       {
         "title": "European Commission — EU taxonomy for sustainable activities (official overview & delegated acts hub)",
@@ -3576,7 +3594,7 @@ window.TAXONOMY_DATA = {
       "Large companies operating in Greece, as elsewhere in the EU, must disclose under Article 8 of the Regulation what share of their turnover, capital expenditure and operating expenditure is 'taxonomy-eligible' (covered by the taxonomy at all) versus 'taxonomy-aligned' (actually meeting all four conditions) — this sits alongside broader sustainability reporting obligations under the Corporate Sustainability Reporting Directive (CSRD). The Commission has been actively simplifying the framework: a Delegated Act reducing reporting burden was adopted in 2025 as part of the 'Omnibus' simplification package, [3] and in March 2026 the Commission proposed further revisions to the Climate and Environmental Delegated Acts' technical screening criteria, with the revised criteria expected to apply from January 2027. [4]"
     ],
     "citations": [
-      { "id": 1, "label": "EUR-Lex, Regulation (EU) 2020/852 of 18 June 2020 (Taxonomy Regulation), official consolidated text", "url": "https://eur-lex.europa.eu/eli/reg/2020/852/oj/eng" },
+      { "id": 1, "label": "EUR-Lex, Regulation (EU) 2020/852 of 18 June 2020 (Taxonomy Regulation), official consolidated text", "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32020R0852" },
       { "id": 2, "label": "European Commission, \"Implementing and delegated acts \u2014 Taxonomy Regulation\" (Climate, Complementary Climate and Environmental Delegated Acts)", "url": "https://finance.ec.europa.eu/regulation-and-supervision/financial-services-legislation/implementing-and-delegated-acts/taxonomy-regulation_en" },
       { "id": 3, "label": "European Commission, \"Commission to cut EU taxonomy red tape for companies\" (Omnibus simplification Delegated Act, adopted 4 Jul 2025)", "url": "https://finance.ec.europa.eu/publications/commission-cut-eu-taxonomy-red-tape-companies_en" },
       { "id": 4, "label": "European Commission, \"Commission seeks feedback on revision of criteria for sustainable economic activities\" (17 Mar 2026 draft revisions)", "url": "https://finance.ec.europa.eu/news/commission-seeks-feedback-revision-criteria-sustainable-economic-activities-2026-03-17_en" }
@@ -3629,27 +3647,22 @@ window.TAXONOMY_DATA = {
       {
         "title": "Taxonomy Regulation (EU) 2020/852 — full legal text",
         "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32020R0852"
-      },
-      {
-        "title": "Taxonomy Regulation (EU) 2020/852 — official Greek-language text (PDF)",
-        "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/EL/TXT/PDF/?uri=CELEX:32020R0852"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32020R0852"
       },
       {
         "title": "Climate Delegated Act (EU) 2021/2139 — technical screening criteria for climate mitigation & adaptation",
         "date": "4 Jun 2021",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32021R2139"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32021R2139"
       },
       {
         "title": "Complementary Climate Delegated Act (EU) 2022/1214 — nuclear & gas activities",
         "date": "9 Mar 2022",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R1214"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32022R1214"
       },
       {
         "title": "Environmental Delegated Act (EU) 2023/2486 — criteria for the 4 remaining objectives (water, circular economy, pollution, biodiversity)",
         "date": "27 Jun 2023",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R2486"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32023R2486"
       },
       {
         "title": "European Commission — EU taxonomy for sustainable activities (official overview & delegated acts hub)",
@@ -3745,7 +3758,7 @@ window.TAXONOMY_DATA = {
       "Large companies operating in Hungary, as elsewhere in the EU, must disclose under Article 8 of the Regulation what share of their turnover, capital expenditure and operating expenditure is 'taxonomy-eligible' (covered by the taxonomy at all) versus 'taxonomy-aligned' (actually meeting all four conditions) — this sits alongside broader sustainability reporting obligations under the Corporate Sustainability Reporting Directive (CSRD). The Commission has been actively simplifying the framework: a Delegated Act reducing reporting burden was adopted in 2025 as part of the 'Omnibus' simplification package, [3] and in March 2026 the Commission proposed further revisions to the Climate and Environmental Delegated Acts' technical screening criteria, with the revised criteria expected to apply from January 2027. [4]"
     ],
     "citations": [
-      { "id": 1, "label": "EUR-Lex, Regulation (EU) 2020/852 of 18 June 2020 (Taxonomy Regulation), official consolidated text", "url": "https://eur-lex.europa.eu/eli/reg/2020/852/oj/eng" },
+      { "id": 1, "label": "EUR-Lex, Regulation (EU) 2020/852 of 18 June 2020 (Taxonomy Regulation), official consolidated text", "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32020R0852" },
       { "id": 2, "label": "European Commission, \"Implementing and delegated acts \u2014 Taxonomy Regulation\" (Climate, Complementary Climate and Environmental Delegated Acts)", "url": "https://finance.ec.europa.eu/regulation-and-supervision/financial-services-legislation/implementing-and-delegated-acts/taxonomy-regulation_en" },
       { "id": 3, "label": "European Commission, \"Commission to cut EU taxonomy red tape for companies\" (Omnibus simplification Delegated Act, adopted 4 Jul 2025)", "url": "https://finance.ec.europa.eu/publications/commission-cut-eu-taxonomy-red-tape-companies_en" },
       { "id": 4, "label": "European Commission, \"Commission seeks feedback on revision of criteria for sustainable economic activities\" (17 Mar 2026 draft revisions)", "url": "https://finance.ec.europa.eu/news/commission-seeks-feedback-revision-criteria-sustainable-economic-activities-2026-03-17_en" }
@@ -3798,27 +3811,22 @@ window.TAXONOMY_DATA = {
       {
         "title": "Taxonomy Regulation (EU) 2020/852 — full legal text",
         "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32020R0852"
-      },
-      {
-        "title": "Taxonomy Regulation (EU) 2020/852 — official Hungarian-language text (PDF)",
-        "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/HU/TXT/PDF/?uri=CELEX:32020R0852"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32020R0852"
       },
       {
         "title": "Climate Delegated Act (EU) 2021/2139 — technical screening criteria for climate mitigation & adaptation",
         "date": "4 Jun 2021",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32021R2139"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32021R2139"
       },
       {
         "title": "Complementary Climate Delegated Act (EU) 2022/1214 — nuclear & gas activities",
         "date": "9 Mar 2022",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R1214"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32022R1214"
       },
       {
         "title": "Environmental Delegated Act (EU) 2023/2486 — criteria for the 4 remaining objectives (water, circular economy, pollution, biodiversity)",
         "date": "27 Jun 2023",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R2486"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32023R2486"
       },
       {
         "title": "European Commission — EU taxonomy for sustainable activities (official overview & delegated acts hub)",
@@ -3835,6 +3843,13 @@ window.TAXONOMY_DATA = {
     "year": 2020,
     "note": "EU member state; EU Taxonomy Regulation (EU 2020/852) applies directly.",
     "source": "https://finance.ec.europa.eu/sustainable-finance/tools-and-standards/eu-taxonomy-sustainable-activities_en",
+    "officialDocuments": [
+      {
+        "title": "Taxonomy Regulation (EU) 2020/852 — full legal text (EUR-Lex)",
+        "date": "2020",
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32020R0852"
+      }
+    ],
     "overlays": [],
     "features": [
       "Defines which economic activities count as environmentally sustainable, under the EU Taxonomy Regulation (EU 2020/852).",
@@ -3914,7 +3929,7 @@ window.TAXONOMY_DATA = {
       "Large companies operating in Ireland, as elsewhere in the EU, must disclose under Article 8 of the Regulation what share of their turnover, capital expenditure and operating expenditure is 'taxonomy-eligible' (covered by the taxonomy at all) versus 'taxonomy-aligned' (actually meeting all four conditions) — this sits alongside broader sustainability reporting obligations under the Corporate Sustainability Reporting Directive (CSRD). The Commission has been actively simplifying the framework: a Delegated Act reducing reporting burden was adopted in 2025 as part of the 'Omnibus' simplification package, [3] and in March 2026 the Commission proposed further revisions to the Climate and Environmental Delegated Acts' technical screening criteria, with the revised criteria expected to apply from January 2027. [4]"
     ],
     "citations": [
-      { "id": 1, "label": "EUR-Lex, Regulation (EU) 2020/852 of 18 June 2020 (Taxonomy Regulation), official consolidated text", "url": "https://eur-lex.europa.eu/eli/reg/2020/852/oj/eng" },
+      { "id": 1, "label": "EUR-Lex, Regulation (EU) 2020/852 of 18 June 2020 (Taxonomy Regulation), official consolidated text", "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32020R0852" },
       { "id": 2, "label": "European Commission, \"Implementing and delegated acts \u2014 Taxonomy Regulation\" (Climate, Complementary Climate and Environmental Delegated Acts)", "url": "https://finance.ec.europa.eu/regulation-and-supervision/financial-services-legislation/implementing-and-delegated-acts/taxonomy-regulation_en" },
       { "id": 3, "label": "European Commission, \"Commission to cut EU taxonomy red tape for companies\" (Omnibus simplification Delegated Act, adopted 4 Jul 2025)", "url": "https://finance.ec.europa.eu/publications/commission-cut-eu-taxonomy-red-tape-companies_en" },
       { "id": 4, "label": "European Commission, \"Commission seeks feedback on revision of criteria for sustainable economic activities\" (17 Mar 2026 draft revisions)", "url": "https://finance.ec.europa.eu/news/commission-seeks-feedback-revision-criteria-sustainable-economic-activities-2026-03-17_en" }
@@ -3967,22 +3982,22 @@ window.TAXONOMY_DATA = {
       {
         "title": "Taxonomy Regulation (EU) 2020/852 — full legal text",
         "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32020R0852"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32020R0852"
       },
       {
         "title": "Climate Delegated Act (EU) 2021/2139 — technical screening criteria for climate mitigation & adaptation",
         "date": "4 Jun 2021",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32021R2139"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32021R2139"
       },
       {
         "title": "Complementary Climate Delegated Act (EU) 2022/1214 — nuclear & gas activities",
         "date": "9 Mar 2022",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R1214"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32022R1214"
       },
       {
         "title": "Environmental Delegated Act (EU) 2023/2486 — criteria for the 4 remaining objectives (water, circular economy, pollution, biodiversity)",
         "date": "27 Jun 2023",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R2486"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32023R2486"
       },
       {
         "title": "European Commission — EU taxonomy for sustainable activities (official overview & delegated acts hub)",
@@ -4078,7 +4093,7 @@ window.TAXONOMY_DATA = {
       "Large companies operating in Italy, as elsewhere in the EU, must disclose under Article 8 of the Regulation what share of their turnover, capital expenditure and operating expenditure is 'taxonomy-eligible' (covered by the taxonomy at all) versus 'taxonomy-aligned' (actually meeting all four conditions) — this sits alongside broader sustainability reporting obligations under the Corporate Sustainability Reporting Directive (CSRD). The Commission has been actively simplifying the framework: a Delegated Act reducing reporting burden was adopted in 2025 as part of the 'Omnibus' simplification package, [3] and in March 2026 the Commission proposed further revisions to the Climate and Environmental Delegated Acts' technical screening criteria, with the revised criteria expected to apply from January 2027. [4]"
     ],
     "citations": [
-      { "id": 1, "label": "EUR-Lex, Regulation (EU) 2020/852 of 18 June 2020 (Taxonomy Regulation), official consolidated text", "url": "https://eur-lex.europa.eu/eli/reg/2020/852/oj/eng" },
+      { "id": 1, "label": "EUR-Lex, Regulation (EU) 2020/852 of 18 June 2020 (Taxonomy Regulation), official consolidated text", "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32020R0852" },
       { "id": 2, "label": "European Commission, \"Implementing and delegated acts \u2014 Taxonomy Regulation\" (Climate, Complementary Climate and Environmental Delegated Acts)", "url": "https://finance.ec.europa.eu/regulation-and-supervision/financial-services-legislation/implementing-and-delegated-acts/taxonomy-regulation_en" },
       { "id": 3, "label": "European Commission, \"Commission to cut EU taxonomy red tape for companies\" (Omnibus simplification Delegated Act, adopted 4 Jul 2025)", "url": "https://finance.ec.europa.eu/publications/commission-cut-eu-taxonomy-red-tape-companies_en" },
       { "id": 4, "label": "European Commission, \"Commission seeks feedback on revision of criteria for sustainable economic activities\" (17 Mar 2026 draft revisions)", "url": "https://finance.ec.europa.eu/news/commission-seeks-feedback-revision-criteria-sustainable-economic-activities-2026-03-17_en" }
@@ -4131,27 +4146,22 @@ window.TAXONOMY_DATA = {
       {
         "title": "Taxonomy Regulation (EU) 2020/852 — full legal text",
         "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32020R0852"
-      },
-      {
-        "title": "Taxonomy Regulation (EU) 2020/852 — official Italian-language text (PDF)",
-        "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/IT/TXT/PDF/?uri=CELEX:32020R0852"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32020R0852"
       },
       {
         "title": "Climate Delegated Act (EU) 2021/2139 — technical screening criteria for climate mitigation & adaptation",
         "date": "4 Jun 2021",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32021R2139"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32021R2139"
       },
       {
         "title": "Complementary Climate Delegated Act (EU) 2022/1214 — nuclear & gas activities",
         "date": "9 Mar 2022",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R1214"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32022R1214"
       },
       {
         "title": "Environmental Delegated Act (EU) 2023/2486 — criteria for the 4 remaining objectives (water, circular economy, pollution, biodiversity)",
         "date": "27 Jun 2023",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R2486"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32023R2486"
       },
       {
         "title": "European Commission — EU taxonomy for sustainable activities (official overview & delegated acts hub)",
@@ -4247,7 +4257,7 @@ window.TAXONOMY_DATA = {
       "Large companies operating in Latvia, as elsewhere in the EU, must disclose under Article 8 of the Regulation what share of their turnover, capital expenditure and operating expenditure is 'taxonomy-eligible' (covered by the taxonomy at all) versus 'taxonomy-aligned' (actually meeting all four conditions) — this sits alongside broader sustainability reporting obligations under the Corporate Sustainability Reporting Directive (CSRD). The Commission has been actively simplifying the framework: a Delegated Act reducing reporting burden was adopted in 2025 as part of the 'Omnibus' simplification package, [3] and in March 2026 the Commission proposed further revisions to the Climate and Environmental Delegated Acts' technical screening criteria, with the revised criteria expected to apply from January 2027. [4]"
     ],
     "citations": [
-      { "id": 1, "label": "EUR-Lex, Regulation (EU) 2020/852 of 18 June 2020 (Taxonomy Regulation), official consolidated text", "url": "https://eur-lex.europa.eu/eli/reg/2020/852/oj/eng" },
+      { "id": 1, "label": "EUR-Lex, Regulation (EU) 2020/852 of 18 June 2020 (Taxonomy Regulation), official consolidated text", "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32020R0852" },
       { "id": 2, "label": "European Commission, \"Implementing and delegated acts \u2014 Taxonomy Regulation\" (Climate, Complementary Climate and Environmental Delegated Acts)", "url": "https://finance.ec.europa.eu/regulation-and-supervision/financial-services-legislation/implementing-and-delegated-acts/taxonomy-regulation_en" },
       { "id": 3, "label": "European Commission, \"Commission to cut EU taxonomy red tape for companies\" (Omnibus simplification Delegated Act, adopted 4 Jul 2025)", "url": "https://finance.ec.europa.eu/publications/commission-cut-eu-taxonomy-red-tape-companies_en" },
       { "id": 4, "label": "European Commission, \"Commission seeks feedback on revision of criteria for sustainable economic activities\" (17 Mar 2026 draft revisions)", "url": "https://finance.ec.europa.eu/news/commission-seeks-feedback-revision-criteria-sustainable-economic-activities-2026-03-17_en" }
@@ -4300,27 +4310,22 @@ window.TAXONOMY_DATA = {
       {
         "title": "Taxonomy Regulation (EU) 2020/852 — full legal text",
         "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32020R0852"
-      },
-      {
-        "title": "Taxonomy Regulation (EU) 2020/852 — official Latvian-language text (PDF)",
-        "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/LV/TXT/PDF/?uri=CELEX:32020R0852"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32020R0852"
       },
       {
         "title": "Climate Delegated Act (EU) 2021/2139 — technical screening criteria for climate mitigation & adaptation",
         "date": "4 Jun 2021",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32021R2139"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32021R2139"
       },
       {
         "title": "Complementary Climate Delegated Act (EU) 2022/1214 — nuclear & gas activities",
         "date": "9 Mar 2022",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R1214"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32022R1214"
       },
       {
         "title": "Environmental Delegated Act (EU) 2023/2486 — criteria for the 4 remaining objectives (water, circular economy, pollution, biodiversity)",
         "date": "27 Jun 2023",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R2486"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32023R2486"
       },
       {
         "title": "European Commission — EU taxonomy for sustainable activities (official overview & delegated acts hub)",
@@ -4416,7 +4421,7 @@ window.TAXONOMY_DATA = {
       "Large companies operating in Lithuania, as elsewhere in the EU, must disclose under Article 8 of the Regulation what share of their turnover, capital expenditure and operating expenditure is 'taxonomy-eligible' (covered by the taxonomy at all) versus 'taxonomy-aligned' (actually meeting all four conditions) — this sits alongside broader sustainability reporting obligations under the Corporate Sustainability Reporting Directive (CSRD). The Commission has been actively simplifying the framework: a Delegated Act reducing reporting burden was adopted in 2025 as part of the 'Omnibus' simplification package, [3] and in March 2026 the Commission proposed further revisions to the Climate and Environmental Delegated Acts' technical screening criteria, with the revised criteria expected to apply from January 2027. [4]"
     ],
     "citations": [
-      { "id": 1, "label": "EUR-Lex, Regulation (EU) 2020/852 of 18 June 2020 (Taxonomy Regulation), official consolidated text", "url": "https://eur-lex.europa.eu/eli/reg/2020/852/oj/eng" },
+      { "id": 1, "label": "EUR-Lex, Regulation (EU) 2020/852 of 18 June 2020 (Taxonomy Regulation), official consolidated text", "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32020R0852" },
       { "id": 2, "label": "European Commission, \"Implementing and delegated acts \u2014 Taxonomy Regulation\" (Climate, Complementary Climate and Environmental Delegated Acts)", "url": "https://finance.ec.europa.eu/regulation-and-supervision/financial-services-legislation/implementing-and-delegated-acts/taxonomy-regulation_en" },
       { "id": 3, "label": "European Commission, \"Commission to cut EU taxonomy red tape for companies\" (Omnibus simplification Delegated Act, adopted 4 Jul 2025)", "url": "https://finance.ec.europa.eu/publications/commission-cut-eu-taxonomy-red-tape-companies_en" },
       { "id": 4, "label": "European Commission, \"Commission seeks feedback on revision of criteria for sustainable economic activities\" (17 Mar 2026 draft revisions)", "url": "https://finance.ec.europa.eu/news/commission-seeks-feedback-revision-criteria-sustainable-economic-activities-2026-03-17_en" }
@@ -4469,27 +4474,22 @@ window.TAXONOMY_DATA = {
       {
         "title": "Taxonomy Regulation (EU) 2020/852 — full legal text",
         "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32020R0852"
-      },
-      {
-        "title": "Taxonomy Regulation (EU) 2020/852 — official Lithuanian-language text (PDF)",
-        "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/LT/TXT/PDF/?uri=CELEX:32020R0852"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32020R0852"
       },
       {
         "title": "Climate Delegated Act (EU) 2021/2139 — technical screening criteria for climate mitigation & adaptation",
         "date": "4 Jun 2021",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32021R2139"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32021R2139"
       },
       {
         "title": "Complementary Climate Delegated Act (EU) 2022/1214 — nuclear & gas activities",
         "date": "9 Mar 2022",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R1214"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32022R1214"
       },
       {
         "title": "Environmental Delegated Act (EU) 2023/2486 — criteria for the 4 remaining objectives (water, circular economy, pollution, biodiversity)",
         "date": "27 Jun 2023",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R2486"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32023R2486"
       },
       {
         "title": "European Commission — EU taxonomy for sustainable activities (official overview & delegated acts hub)",
@@ -4585,7 +4585,7 @@ window.TAXONOMY_DATA = {
       "Large companies operating in Luxembourg, as elsewhere in the EU, must disclose under Article 8 of the Regulation what share of their turnover, capital expenditure and operating expenditure is 'taxonomy-eligible' (covered by the taxonomy at all) versus 'taxonomy-aligned' (actually meeting all four conditions) — this sits alongside broader sustainability reporting obligations under the Corporate Sustainability Reporting Directive (CSRD). The Commission has been actively simplifying the framework: a Delegated Act reducing reporting burden was adopted in 2025 as part of the 'Omnibus' simplification package, [3] and in March 2026 the Commission proposed further revisions to the Climate and Environmental Delegated Acts' technical screening criteria, with the revised criteria expected to apply from January 2027. [4]"
     ],
     "citations": [
-      { "id": 1, "label": "EUR-Lex, Regulation (EU) 2020/852 of 18 June 2020 (Taxonomy Regulation), official consolidated text", "url": "https://eur-lex.europa.eu/eli/reg/2020/852/oj/eng" },
+      { "id": 1, "label": "EUR-Lex, Regulation (EU) 2020/852 of 18 June 2020 (Taxonomy Regulation), official consolidated text", "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32020R0852" },
       { "id": 2, "label": "European Commission, \"Implementing and delegated acts \u2014 Taxonomy Regulation\" (Climate, Complementary Climate and Environmental Delegated Acts)", "url": "https://finance.ec.europa.eu/regulation-and-supervision/financial-services-legislation/implementing-and-delegated-acts/taxonomy-regulation_en" },
       { "id": 3, "label": "European Commission, \"Commission to cut EU taxonomy red tape for companies\" (Omnibus simplification Delegated Act, adopted 4 Jul 2025)", "url": "https://finance.ec.europa.eu/publications/commission-cut-eu-taxonomy-red-tape-companies_en" },
       { "id": 4, "label": "European Commission, \"Commission seeks feedback on revision of criteria for sustainable economic activities\" (17 Mar 2026 draft revisions)", "url": "https://finance.ec.europa.eu/news/commission-seeks-feedback-revision-criteria-sustainable-economic-activities-2026-03-17_en" }
@@ -4638,27 +4638,22 @@ window.TAXONOMY_DATA = {
       {
         "title": "Taxonomy Regulation (EU) 2020/852 — full legal text",
         "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32020R0852"
-      },
-      {
-        "title": "Taxonomy Regulation (EU) 2020/852 — official French-language text (PDF)",
-        "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/FR/TXT/PDF/?uri=CELEX:32020R0852"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32020R0852"
       },
       {
         "title": "Climate Delegated Act (EU) 2021/2139 — technical screening criteria for climate mitigation & adaptation",
         "date": "4 Jun 2021",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32021R2139"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32021R2139"
       },
       {
         "title": "Complementary Climate Delegated Act (EU) 2022/1214 — nuclear & gas activities",
         "date": "9 Mar 2022",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R1214"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32022R1214"
       },
       {
         "title": "Environmental Delegated Act (EU) 2023/2486 — criteria for the 4 remaining objectives (water, circular economy, pollution, biodiversity)",
         "date": "27 Jun 2023",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R2486"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32023R2486"
       },
       {
         "title": "European Commission — EU taxonomy for sustainable activities (official overview & delegated acts hub)",
@@ -4754,7 +4749,7 @@ window.TAXONOMY_DATA = {
       "Large companies operating in Malta, as elsewhere in the EU, must disclose under Article 8 of the Regulation what share of their turnover, capital expenditure and operating expenditure is 'taxonomy-eligible' (covered by the taxonomy at all) versus 'taxonomy-aligned' (actually meeting all four conditions) — this sits alongside broader sustainability reporting obligations under the Corporate Sustainability Reporting Directive (CSRD). The Commission has been actively simplifying the framework: a Delegated Act reducing reporting burden was adopted in 2025 as part of the 'Omnibus' simplification package, [3] and in March 2026 the Commission proposed further revisions to the Climate and Environmental Delegated Acts' technical screening criteria, with the revised criteria expected to apply from January 2027. [4]"
     ],
     "citations": [
-      { "id": 1, "label": "EUR-Lex, Regulation (EU) 2020/852 of 18 June 2020 (Taxonomy Regulation), official consolidated text", "url": "https://eur-lex.europa.eu/eli/reg/2020/852/oj/eng" },
+      { "id": 1, "label": "EUR-Lex, Regulation (EU) 2020/852 of 18 June 2020 (Taxonomy Regulation), official consolidated text", "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32020R0852" },
       { "id": 2, "label": "European Commission, \"Implementing and delegated acts \u2014 Taxonomy Regulation\" (Climate, Complementary Climate and Environmental Delegated Acts)", "url": "https://finance.ec.europa.eu/regulation-and-supervision/financial-services-legislation/implementing-and-delegated-acts/taxonomy-regulation_en" },
       { "id": 3, "label": "European Commission, \"Commission to cut EU taxonomy red tape for companies\" (Omnibus simplification Delegated Act, adopted 4 Jul 2025)", "url": "https://finance.ec.europa.eu/publications/commission-cut-eu-taxonomy-red-tape-companies_en" },
       { "id": 4, "label": "European Commission, \"Commission seeks feedback on revision of criteria for sustainable economic activities\" (17 Mar 2026 draft revisions)", "url": "https://finance.ec.europa.eu/news/commission-seeks-feedback-revision-criteria-sustainable-economic-activities-2026-03-17_en" }
@@ -4807,27 +4802,22 @@ window.TAXONOMY_DATA = {
       {
         "title": "Taxonomy Regulation (EU) 2020/852 — full legal text",
         "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32020R0852"
-      },
-      {
-        "title": "Taxonomy Regulation (EU) 2020/852 — official Maltese-language text (PDF)",
-        "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/MT/TXT/PDF/?uri=CELEX:32020R0852"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32020R0852"
       },
       {
         "title": "Climate Delegated Act (EU) 2021/2139 — technical screening criteria for climate mitigation & adaptation",
         "date": "4 Jun 2021",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32021R2139"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32021R2139"
       },
       {
         "title": "Complementary Climate Delegated Act (EU) 2022/1214 — nuclear & gas activities",
         "date": "9 Mar 2022",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R1214"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32022R1214"
       },
       {
         "title": "Environmental Delegated Act (EU) 2023/2486 — criteria for the 4 remaining objectives (water, circular economy, pollution, biodiversity)",
         "date": "27 Jun 2023",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R2486"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32023R2486"
       },
       {
         "title": "European Commission — EU taxonomy for sustainable activities (official overview & delegated acts hub)",
@@ -4923,7 +4913,7 @@ window.TAXONOMY_DATA = {
       "Large companies operating in Netherlands, as elsewhere in the EU, must disclose under Article 8 of the Regulation what share of their turnover, capital expenditure and operating expenditure is 'taxonomy-eligible' (covered by the taxonomy at all) versus 'taxonomy-aligned' (actually meeting all four conditions) — this sits alongside broader sustainability reporting obligations under the Corporate Sustainability Reporting Directive (CSRD). The Commission has been actively simplifying the framework: a Delegated Act reducing reporting burden was adopted in 2025 as part of the 'Omnibus' simplification package, [3] and in March 2026 the Commission proposed further revisions to the Climate and Environmental Delegated Acts' technical screening criteria, with the revised criteria expected to apply from January 2027. [4]"
     ],
     "citations": [
-      { "id": 1, "label": "EUR-Lex, Regulation (EU) 2020/852 of 18 June 2020 (Taxonomy Regulation), official consolidated text", "url": "https://eur-lex.europa.eu/eli/reg/2020/852/oj/eng" },
+      { "id": 1, "label": "EUR-Lex, Regulation (EU) 2020/852 of 18 June 2020 (Taxonomy Regulation), official consolidated text", "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32020R0852" },
       { "id": 2, "label": "European Commission, \"Implementing and delegated acts \u2014 Taxonomy Regulation\" (Climate, Complementary Climate and Environmental Delegated Acts)", "url": "https://finance.ec.europa.eu/regulation-and-supervision/financial-services-legislation/implementing-and-delegated-acts/taxonomy-regulation_en" },
       { "id": 3, "label": "European Commission, \"Commission to cut EU taxonomy red tape for companies\" (Omnibus simplification Delegated Act, adopted 4 Jul 2025)", "url": "https://finance.ec.europa.eu/publications/commission-cut-eu-taxonomy-red-tape-companies_en" },
       { "id": 4, "label": "European Commission, \"Commission seeks feedback on revision of criteria for sustainable economic activities\" (17 Mar 2026 draft revisions)", "url": "https://finance.ec.europa.eu/news/commission-seeks-feedback-revision-criteria-sustainable-economic-activities-2026-03-17_en" }
@@ -4976,27 +4966,22 @@ window.TAXONOMY_DATA = {
       {
         "title": "Taxonomy Regulation (EU) 2020/852 — full legal text",
         "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32020R0852"
-      },
-      {
-        "title": "Taxonomy Regulation (EU) 2020/852 — official Dutch-language text (PDF)",
-        "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/NL/TXT/PDF/?uri=CELEX:32020R0852"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32020R0852"
       },
       {
         "title": "Climate Delegated Act (EU) 2021/2139 — technical screening criteria for climate mitigation & adaptation",
         "date": "4 Jun 2021",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32021R2139"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32021R2139"
       },
       {
         "title": "Complementary Climate Delegated Act (EU) 2022/1214 — nuclear & gas activities",
         "date": "9 Mar 2022",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R1214"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32022R1214"
       },
       {
         "title": "Environmental Delegated Act (EU) 2023/2486 — criteria for the 4 remaining objectives (water, circular economy, pollution, biodiversity)",
         "date": "27 Jun 2023",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R2486"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32023R2486"
       },
       {
         "title": "European Commission — EU taxonomy for sustainable activities (official overview & delegated acts hub)",
@@ -5092,7 +5077,7 @@ window.TAXONOMY_DATA = {
       "Large companies operating in Poland, as elsewhere in the EU, must disclose under Article 8 of the Regulation what share of their turnover, capital expenditure and operating expenditure is 'taxonomy-eligible' (covered by the taxonomy at all) versus 'taxonomy-aligned' (actually meeting all four conditions) — this sits alongside broader sustainability reporting obligations under the Corporate Sustainability Reporting Directive (CSRD). The Commission has been actively simplifying the framework: a Delegated Act reducing reporting burden was adopted in 2025 as part of the 'Omnibus' simplification package, [3] and in March 2026 the Commission proposed further revisions to the Climate and Environmental Delegated Acts' technical screening criteria, with the revised criteria expected to apply from January 2027. [4]"
     ],
     "citations": [
-      { "id": 1, "label": "EUR-Lex, Regulation (EU) 2020/852 of 18 June 2020 (Taxonomy Regulation), official consolidated text", "url": "https://eur-lex.europa.eu/eli/reg/2020/852/oj/eng" },
+      { "id": 1, "label": "EUR-Lex, Regulation (EU) 2020/852 of 18 June 2020 (Taxonomy Regulation), official consolidated text", "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32020R0852" },
       { "id": 2, "label": "European Commission, \"Implementing and delegated acts \u2014 Taxonomy Regulation\" (Climate, Complementary Climate and Environmental Delegated Acts)", "url": "https://finance.ec.europa.eu/regulation-and-supervision/financial-services-legislation/implementing-and-delegated-acts/taxonomy-regulation_en" },
       { "id": 3, "label": "European Commission, \"Commission to cut EU taxonomy red tape for companies\" (Omnibus simplification Delegated Act, adopted 4 Jul 2025)", "url": "https://finance.ec.europa.eu/publications/commission-cut-eu-taxonomy-red-tape-companies_en" },
       { "id": 4, "label": "European Commission, \"Commission seeks feedback on revision of criteria for sustainable economic activities\" (17 Mar 2026 draft revisions)", "url": "https://finance.ec.europa.eu/news/commission-seeks-feedback-revision-criteria-sustainable-economic-activities-2026-03-17_en" }
@@ -5145,27 +5130,22 @@ window.TAXONOMY_DATA = {
       {
         "title": "Taxonomy Regulation (EU) 2020/852 — full legal text",
         "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32020R0852"
-      },
-      {
-        "title": "Taxonomy Regulation (EU) 2020/852 — official Polish-language text (PDF)",
-        "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/PL/TXT/PDF/?uri=CELEX:32020R0852"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32020R0852"
       },
       {
         "title": "Climate Delegated Act (EU) 2021/2139 — technical screening criteria for climate mitigation & adaptation",
         "date": "4 Jun 2021",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32021R2139"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32021R2139"
       },
       {
         "title": "Complementary Climate Delegated Act (EU) 2022/1214 — nuclear & gas activities",
         "date": "9 Mar 2022",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R1214"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32022R1214"
       },
       {
         "title": "Environmental Delegated Act (EU) 2023/2486 — criteria for the 4 remaining objectives (water, circular economy, pollution, biodiversity)",
         "date": "27 Jun 2023",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R2486"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32023R2486"
       },
       {
         "title": "European Commission — EU taxonomy for sustainable activities (official overview & delegated acts hub)",
@@ -5261,7 +5241,7 @@ window.TAXONOMY_DATA = {
       "Large companies operating in Portugal, as elsewhere in the EU, must disclose under Article 8 of the Regulation what share of their turnover, capital expenditure and operating expenditure is 'taxonomy-eligible' (covered by the taxonomy at all) versus 'taxonomy-aligned' (actually meeting all four conditions) — this sits alongside broader sustainability reporting obligations under the Corporate Sustainability Reporting Directive (CSRD). The Commission has been actively simplifying the framework: a Delegated Act reducing reporting burden was adopted in 2025 as part of the 'Omnibus' simplification package, [3] and in March 2026 the Commission proposed further revisions to the Climate and Environmental Delegated Acts' technical screening criteria, with the revised criteria expected to apply from January 2027. [4]"
     ],
     "citations": [
-      { "id": 1, "label": "EUR-Lex, Regulation (EU) 2020/852 of 18 June 2020 (Taxonomy Regulation), official consolidated text", "url": "https://eur-lex.europa.eu/eli/reg/2020/852/oj/eng" },
+      { "id": 1, "label": "EUR-Lex, Regulation (EU) 2020/852 of 18 June 2020 (Taxonomy Regulation), official consolidated text", "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32020R0852" },
       { "id": 2, "label": "European Commission, \"Implementing and delegated acts \u2014 Taxonomy Regulation\" (Climate, Complementary Climate and Environmental Delegated Acts)", "url": "https://finance.ec.europa.eu/regulation-and-supervision/financial-services-legislation/implementing-and-delegated-acts/taxonomy-regulation_en" },
       { "id": 3, "label": "European Commission, \"Commission to cut EU taxonomy red tape for companies\" (Omnibus simplification Delegated Act, adopted 4 Jul 2025)", "url": "https://finance.ec.europa.eu/publications/commission-cut-eu-taxonomy-red-tape-companies_en" },
       { "id": 4, "label": "European Commission, \"Commission seeks feedback on revision of criteria for sustainable economic activities\" (17 Mar 2026 draft revisions)", "url": "https://finance.ec.europa.eu/news/commission-seeks-feedback-revision-criteria-sustainable-economic-activities-2026-03-17_en" }
@@ -5314,27 +5294,22 @@ window.TAXONOMY_DATA = {
       {
         "title": "Taxonomy Regulation (EU) 2020/852 — full legal text",
         "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32020R0852"
-      },
-      {
-        "title": "Taxonomy Regulation (EU) 2020/852 — official Portuguese-language text (PDF)",
-        "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/PT/TXT/PDF/?uri=CELEX:32020R0852"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32020R0852"
       },
       {
         "title": "Climate Delegated Act (EU) 2021/2139 — technical screening criteria for climate mitigation & adaptation",
         "date": "4 Jun 2021",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32021R2139"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32021R2139"
       },
       {
         "title": "Complementary Climate Delegated Act (EU) 2022/1214 — nuclear & gas activities",
         "date": "9 Mar 2022",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R1214"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32022R1214"
       },
       {
         "title": "Environmental Delegated Act (EU) 2023/2486 — criteria for the 4 remaining objectives (water, circular economy, pollution, biodiversity)",
         "date": "27 Jun 2023",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R2486"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32023R2486"
       },
       {
         "title": "European Commission — EU taxonomy for sustainable activities (official overview & delegated acts hub)",
@@ -5430,7 +5405,7 @@ window.TAXONOMY_DATA = {
       "Large companies operating in Romania, as elsewhere in the EU, must disclose under Article 8 of the Regulation what share of their turnover, capital expenditure and operating expenditure is 'taxonomy-eligible' (covered by the taxonomy at all) versus 'taxonomy-aligned' (actually meeting all four conditions) — this sits alongside broader sustainability reporting obligations under the Corporate Sustainability Reporting Directive (CSRD). The Commission has been actively simplifying the framework: a Delegated Act reducing reporting burden was adopted in 2025 as part of the 'Omnibus' simplification package, [3] and in March 2026 the Commission proposed further revisions to the Climate and Environmental Delegated Acts' technical screening criteria, with the revised criteria expected to apply from January 2027. [4]"
     ],
     "citations": [
-      { "id": 1, "label": "EUR-Lex, Regulation (EU) 2020/852 of 18 June 2020 (Taxonomy Regulation), official consolidated text", "url": "https://eur-lex.europa.eu/eli/reg/2020/852/oj/eng" },
+      { "id": 1, "label": "EUR-Lex, Regulation (EU) 2020/852 of 18 June 2020 (Taxonomy Regulation), official consolidated text", "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32020R0852" },
       { "id": 2, "label": "European Commission, \"Implementing and delegated acts \u2014 Taxonomy Regulation\" (Climate, Complementary Climate and Environmental Delegated Acts)", "url": "https://finance.ec.europa.eu/regulation-and-supervision/financial-services-legislation/implementing-and-delegated-acts/taxonomy-regulation_en" },
       { "id": 3, "label": "European Commission, \"Commission to cut EU taxonomy red tape for companies\" (Omnibus simplification Delegated Act, adopted 4 Jul 2025)", "url": "https://finance.ec.europa.eu/publications/commission-cut-eu-taxonomy-red-tape-companies_en" },
       { "id": 4, "label": "European Commission, \"Commission seeks feedback on revision of criteria for sustainable economic activities\" (17 Mar 2026 draft revisions)", "url": "https://finance.ec.europa.eu/news/commission-seeks-feedback-revision-criteria-sustainable-economic-activities-2026-03-17_en" }
@@ -5483,27 +5458,22 @@ window.TAXONOMY_DATA = {
       {
         "title": "Taxonomy Regulation (EU) 2020/852 — full legal text",
         "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32020R0852"
-      },
-      {
-        "title": "Taxonomy Regulation (EU) 2020/852 — official Romanian-language text (PDF)",
-        "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/RO/TXT/PDF/?uri=CELEX:32020R0852"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32020R0852"
       },
       {
         "title": "Climate Delegated Act (EU) 2021/2139 — technical screening criteria for climate mitigation & adaptation",
         "date": "4 Jun 2021",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32021R2139"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32021R2139"
       },
       {
         "title": "Complementary Climate Delegated Act (EU) 2022/1214 — nuclear & gas activities",
         "date": "9 Mar 2022",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R1214"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32022R1214"
       },
       {
         "title": "Environmental Delegated Act (EU) 2023/2486 — criteria for the 4 remaining objectives (water, circular economy, pollution, biodiversity)",
         "date": "27 Jun 2023",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R2486"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32023R2486"
       },
       {
         "title": "European Commission — EU taxonomy for sustainable activities (official overview & delegated acts hub)",
@@ -5599,7 +5569,7 @@ window.TAXONOMY_DATA = {
       "Large companies operating in Slovakia, as elsewhere in the EU, must disclose under Article 8 of the Regulation what share of their turnover, capital expenditure and operating expenditure is 'taxonomy-eligible' (covered by the taxonomy at all) versus 'taxonomy-aligned' (actually meeting all four conditions) — this sits alongside broader sustainability reporting obligations under the Corporate Sustainability Reporting Directive (CSRD). The Commission has been actively simplifying the framework: a Delegated Act reducing reporting burden was adopted in 2025 as part of the 'Omnibus' simplification package, [3] and in March 2026 the Commission proposed further revisions to the Climate and Environmental Delegated Acts' technical screening criteria, with the revised criteria expected to apply from January 2027. [4]"
     ],
     "citations": [
-      { "id": 1, "label": "EUR-Lex, Regulation (EU) 2020/852 of 18 June 2020 (Taxonomy Regulation), official consolidated text", "url": "https://eur-lex.europa.eu/eli/reg/2020/852/oj/eng" },
+      { "id": 1, "label": "EUR-Lex, Regulation (EU) 2020/852 of 18 June 2020 (Taxonomy Regulation), official consolidated text", "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32020R0852" },
       { "id": 2, "label": "European Commission, \"Implementing and delegated acts \u2014 Taxonomy Regulation\" (Climate, Complementary Climate and Environmental Delegated Acts)", "url": "https://finance.ec.europa.eu/regulation-and-supervision/financial-services-legislation/implementing-and-delegated-acts/taxonomy-regulation_en" },
       { "id": 3, "label": "European Commission, \"Commission to cut EU taxonomy red tape for companies\" (Omnibus simplification Delegated Act, adopted 4 Jul 2025)", "url": "https://finance.ec.europa.eu/publications/commission-cut-eu-taxonomy-red-tape-companies_en" },
       { "id": 4, "label": "European Commission, \"Commission seeks feedback on revision of criteria for sustainable economic activities\" (17 Mar 2026 draft revisions)", "url": "https://finance.ec.europa.eu/news/commission-seeks-feedback-revision-criteria-sustainable-economic-activities-2026-03-17_en" }
@@ -5652,27 +5622,22 @@ window.TAXONOMY_DATA = {
       {
         "title": "Taxonomy Regulation (EU) 2020/852 — full legal text",
         "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32020R0852"
-      },
-      {
-        "title": "Taxonomy Regulation (EU) 2020/852 — official Slovak-language text (PDF)",
-        "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/SK/TXT/PDF/?uri=CELEX:32020R0852"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32020R0852"
       },
       {
         "title": "Climate Delegated Act (EU) 2021/2139 — technical screening criteria for climate mitigation & adaptation",
         "date": "4 Jun 2021",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32021R2139"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32021R2139"
       },
       {
         "title": "Complementary Climate Delegated Act (EU) 2022/1214 — nuclear & gas activities",
         "date": "9 Mar 2022",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R1214"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32022R1214"
       },
       {
         "title": "Environmental Delegated Act (EU) 2023/2486 — criteria for the 4 remaining objectives (water, circular economy, pollution, biodiversity)",
         "date": "27 Jun 2023",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R2486"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32023R2486"
       },
       {
         "title": "European Commission — EU taxonomy for sustainable activities (official overview & delegated acts hub)",
@@ -5768,7 +5733,7 @@ window.TAXONOMY_DATA = {
       "Large companies operating in Slovenia, as elsewhere in the EU, must disclose under Article 8 of the Regulation what share of their turnover, capital expenditure and operating expenditure is 'taxonomy-eligible' (covered by the taxonomy at all) versus 'taxonomy-aligned' (actually meeting all four conditions) — this sits alongside broader sustainability reporting obligations under the Corporate Sustainability Reporting Directive (CSRD). The Commission has been actively simplifying the framework: a Delegated Act reducing reporting burden was adopted in 2025 as part of the 'Omnibus' simplification package, [3] and in March 2026 the Commission proposed further revisions to the Climate and Environmental Delegated Acts' technical screening criteria, with the revised criteria expected to apply from January 2027. [4]"
     ],
     "citations": [
-      { "id": 1, "label": "EUR-Lex, Regulation (EU) 2020/852 of 18 June 2020 (Taxonomy Regulation), official consolidated text", "url": "https://eur-lex.europa.eu/eli/reg/2020/852/oj/eng" },
+      { "id": 1, "label": "EUR-Lex, Regulation (EU) 2020/852 of 18 June 2020 (Taxonomy Regulation), official consolidated text", "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32020R0852" },
       { "id": 2, "label": "European Commission, \"Implementing and delegated acts \u2014 Taxonomy Regulation\" (Climate, Complementary Climate and Environmental Delegated Acts)", "url": "https://finance.ec.europa.eu/regulation-and-supervision/financial-services-legislation/implementing-and-delegated-acts/taxonomy-regulation_en" },
       { "id": 3, "label": "European Commission, \"Commission to cut EU taxonomy red tape for companies\" (Omnibus simplification Delegated Act, adopted 4 Jul 2025)", "url": "https://finance.ec.europa.eu/publications/commission-cut-eu-taxonomy-red-tape-companies_en" },
       { "id": 4, "label": "European Commission, \"Commission seeks feedback on revision of criteria for sustainable economic activities\" (17 Mar 2026 draft revisions)", "url": "https://finance.ec.europa.eu/news/commission-seeks-feedback-revision-criteria-sustainable-economic-activities-2026-03-17_en" }
@@ -5821,27 +5786,22 @@ window.TAXONOMY_DATA = {
       {
         "title": "Taxonomy Regulation (EU) 2020/852 — full legal text",
         "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32020R0852"
-      },
-      {
-        "title": "Taxonomy Regulation (EU) 2020/852 — official Slovenian-language text (PDF)",
-        "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/SL/TXT/PDF/?uri=CELEX:32020R0852"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32020R0852"
       },
       {
         "title": "Climate Delegated Act (EU) 2021/2139 — technical screening criteria for climate mitigation & adaptation",
         "date": "4 Jun 2021",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32021R2139"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32021R2139"
       },
       {
         "title": "Complementary Climate Delegated Act (EU) 2022/1214 — nuclear & gas activities",
         "date": "9 Mar 2022",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R1214"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32022R1214"
       },
       {
         "title": "Environmental Delegated Act (EU) 2023/2486 — criteria for the 4 remaining objectives (water, circular economy, pollution, biodiversity)",
         "date": "27 Jun 2023",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R2486"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32023R2486"
       },
       {
         "title": "European Commission — EU taxonomy for sustainable activities (official overview & delegated acts hub)",
@@ -5937,7 +5897,7 @@ window.TAXONOMY_DATA = {
       "Large companies operating in Spain, as elsewhere in the EU, must disclose under Article 8 of the Regulation what share of their turnover, capital expenditure and operating expenditure is 'taxonomy-eligible' (covered by the taxonomy at all) versus 'taxonomy-aligned' (actually meeting all four conditions) — this sits alongside broader sustainability reporting obligations under the Corporate Sustainability Reporting Directive (CSRD). The Commission has been actively simplifying the framework: a Delegated Act reducing reporting burden was adopted in 2025 as part of the 'Omnibus' simplification package, [3] and in March 2026 the Commission proposed further revisions to the Climate and Environmental Delegated Acts' technical screening criteria, with the revised criteria expected to apply from January 2027. [4]"
     ],
     "citations": [
-      { "id": 1, "label": "EUR-Lex, Regulation (EU) 2020/852 of 18 June 2020 (Taxonomy Regulation), official consolidated text", "url": "https://eur-lex.europa.eu/eli/reg/2020/852/oj/eng" },
+      { "id": 1, "label": "EUR-Lex, Regulation (EU) 2020/852 of 18 June 2020 (Taxonomy Regulation), official consolidated text", "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32020R0852" },
       { "id": 2, "label": "European Commission, \"Implementing and delegated acts \u2014 Taxonomy Regulation\" (Climate, Complementary Climate and Environmental Delegated Acts)", "url": "https://finance.ec.europa.eu/regulation-and-supervision/financial-services-legislation/implementing-and-delegated-acts/taxonomy-regulation_en" },
       { "id": 3, "label": "European Commission, \"Commission to cut EU taxonomy red tape for companies\" (Omnibus simplification Delegated Act, adopted 4 Jul 2025)", "url": "https://finance.ec.europa.eu/publications/commission-cut-eu-taxonomy-red-tape-companies_en" },
       { "id": 4, "label": "European Commission, \"Commission seeks feedback on revision of criteria for sustainable economic activities\" (17 Mar 2026 draft revisions)", "url": "https://finance.ec.europa.eu/news/commission-seeks-feedback-revision-criteria-sustainable-economic-activities-2026-03-17_en" }
@@ -5990,27 +5950,22 @@ window.TAXONOMY_DATA = {
       {
         "title": "Taxonomy Regulation (EU) 2020/852 — full legal text",
         "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32020R0852"
-      },
-      {
-        "title": "Taxonomy Regulation (EU) 2020/852 — official Spanish-language text (PDF)",
-        "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/ES/TXT/PDF/?uri=CELEX:32020R0852"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32020R0852"
       },
       {
         "title": "Climate Delegated Act (EU) 2021/2139 — technical screening criteria for climate mitigation & adaptation",
         "date": "4 Jun 2021",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32021R2139"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32021R2139"
       },
       {
         "title": "Complementary Climate Delegated Act (EU) 2022/1214 — nuclear & gas activities",
         "date": "9 Mar 2022",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R1214"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32022R1214"
       },
       {
         "title": "Environmental Delegated Act (EU) 2023/2486 — criteria for the 4 remaining objectives (water, circular economy, pollution, biodiversity)",
         "date": "27 Jun 2023",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R2486"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32023R2486"
       },
       {
         "title": "European Commission — EU taxonomy for sustainable activities (official overview & delegated acts hub)",
@@ -6106,7 +6061,7 @@ window.TAXONOMY_DATA = {
       "Large companies operating in Sweden, as elsewhere in the EU, must disclose under Article 8 of the Regulation what share of their turnover, capital expenditure and operating expenditure is 'taxonomy-eligible' (covered by the taxonomy at all) versus 'taxonomy-aligned' (actually meeting all four conditions) — this sits alongside broader sustainability reporting obligations under the Corporate Sustainability Reporting Directive (CSRD). The Commission has been actively simplifying the framework: a Delegated Act reducing reporting burden was adopted in 2025 as part of the 'Omnibus' simplification package, [3] and in March 2026 the Commission proposed further revisions to the Climate and Environmental Delegated Acts' technical screening criteria, with the revised criteria expected to apply from January 2027. [4]"
     ],
     "citations": [
-      { "id": 1, "label": "EUR-Lex, Regulation (EU) 2020/852 of 18 June 2020 (Taxonomy Regulation), official consolidated text", "url": "https://eur-lex.europa.eu/eli/reg/2020/852/oj/eng" },
+      { "id": 1, "label": "EUR-Lex, Regulation (EU) 2020/852 of 18 June 2020 (Taxonomy Regulation), official consolidated text", "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32020R0852" },
       { "id": 2, "label": "European Commission, \"Implementing and delegated acts \u2014 Taxonomy Regulation\" (Climate, Complementary Climate and Environmental Delegated Acts)", "url": "https://finance.ec.europa.eu/regulation-and-supervision/financial-services-legislation/implementing-and-delegated-acts/taxonomy-regulation_en" },
       { "id": 3, "label": "European Commission, \"Commission to cut EU taxonomy red tape for companies\" (Omnibus simplification Delegated Act, adopted 4 Jul 2025)", "url": "https://finance.ec.europa.eu/publications/commission-cut-eu-taxonomy-red-tape-companies_en" },
       { "id": 4, "label": "European Commission, \"Commission seeks feedback on revision of criteria for sustainable economic activities\" (17 Mar 2026 draft revisions)", "url": "https://finance.ec.europa.eu/news/commission-seeks-feedback-revision-criteria-sustainable-economic-activities-2026-03-17_en" }
@@ -6159,27 +6114,22 @@ window.TAXONOMY_DATA = {
       {
         "title": "Taxonomy Regulation (EU) 2020/852 — full legal text",
         "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32020R0852"
-      },
-      {
-        "title": "Taxonomy Regulation (EU) 2020/852 — official Swedish-language text (PDF)",
-        "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/SV/TXT/PDF/?uri=CELEX:32020R0852"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32020R0852"
       },
       {
         "title": "Climate Delegated Act (EU) 2021/2139 — technical screening criteria for climate mitigation & adaptation",
         "date": "4 Jun 2021",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32021R2139"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32021R2139"
       },
       {
         "title": "Complementary Climate Delegated Act (EU) 2022/1214 — nuclear & gas activities",
         "date": "9 Mar 2022",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R1214"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32022R1214"
       },
       {
         "title": "Environmental Delegated Act (EU) 2023/2486 — criteria for the 4 remaining objectives (water, circular economy, pollution, biodiversity)",
         "date": "27 Jun 2023",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R2486"
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32023R2486"
       },
       {
         "title": "European Commission — EU taxonomy for sustainable activities (official overview & delegated acts hub)",
@@ -6234,6 +6184,11 @@ window.TAXONOMY_DATA = {
     "regulator": "Central Bank of Iceland — pending EEA incorporation",
     "officialDocuments": [
       {
+        "title": "Lög nr. 25/2023 um upplýsingagjöf um sjálfbærni á sviði fjármálaþjónustu og flokkunarkerfi fyrir sjálfbærar fjárfestingar (Icelandic implementing law, official Stjórnartíðindi text)",
+        "date": "In force 1 Jun 2023",
+        "url": "https://www.althingi.is/altext/stjt/2023.025.html"
+      },
+      {
         "title": "European Commission — EU Taxonomy for Sustainable Activities (applies in Iceland once EEA incorporation completes)",
         "date": "Updated periodically",
         "url": "https://finance.ec.europa.eu/sustainable-finance/tools-and-standards/eu-taxonomy-sustainable-activities_en"
@@ -6267,6 +6222,11 @@ window.TAXONOMY_DATA = {
     "overlays": [],
     "regulator": "FMA Liechtenstein — pending EEA incorporation",
     "officialDocuments": [
+      {
+        "title": "EWR-FNDG (Gesetz vom 11. März 2022 zur Durchführung der Verordnungen (EU) 2019/2088 und (EU) 2020/852) — official Liechtenstein law text (PDF)",
+        "date": "In force 1 May 2022",
+        "url": "https://www.gesetze.li/konso/pdf/2022120000?version=2"
+      },
       {
         "title": "FMA Liechtenstein — Bases of sustainable finance (EU/EEA)",
         "date": "Updated periodically",
@@ -6367,6 +6327,13 @@ window.TAXONOMY_DATA = {
     "year": 2021,
     "note": "Established by the Ministry of Environment (now Ministry of Climate, Energy and Environment) in December 2021. Based on Substantial Contribution, DNSH and Minimum Safeguards; originally 69 activities (64 Green, 5 Transitional), expanded by a December 2024 amendment.",
     "source": "https://www.me.go.kr/eng/web/main.do",
+    "officialDocuments": [
+      {
+        "title": "Ministry of Environment — K-Taxonomy Guideline (한국형 녹색분류체계 가이드라인), original guideline (official PDF)",
+        "date": "30 Dec 2021",
+        "url": "https://www.korea.kr/common/download.do?tblKey=EDN&fileId=196851182"
+      }
+    ],
     "overlays": [],
     "features": [
       "Established by the Ministry of Environment (renamed Ministry of Climate, Energy and Environment in October 2025) in December 2021 to support South Korea's 2050 carbon-neutrality goal. [1][5]",
@@ -6712,6 +6679,16 @@ window.TAXONOMY_DATA = {
     "source": "https://www.ojk.go.id/id/Publikasi/Roadmap-dan-Pedoman/Sektor-Jasa-Keuangan/Keuangan-Berkelanjutan/Pages/TKBI-Versi-3-2026.aspx",
     "officialDocuments": [
       {
+        "title": "OJK — TKBI Versi 3, FAQ document (official PDF)",
+        "date": "2026",
+        "url": "https://ojk.go.id/id/Publikasi/Roadmap-dan-Pedoman/Sektor-Jasa-Keuangan/Keuangan-Berkelanjutan/Documents/FAQ%20Taksonomi%20untuk%20Keuangan%20Berkelanjutan%20Indonesia%20(TKBI)%20Versi%203.pdf"
+      },
+      {
+        "title": "OJK — TKBI Versi 2, FAQ document (official PDF)",
+        "date": "Feb 2025",
+        "url": "https://ojk.go.id/id/Publikasi/Roadmap-dan-Pedoman/Sektor-Jasa-Keuangan/Keuangan-Berkelanjutan/Documents/FAQ%20Taksonomi%20untuk%20Keuangan%20Berkelanjutan%20Indonesia%20(TKBI)%20Versi%202.pdf"
+      },
+      {
         "title": "OJK — Indonesia Taxonomy for Sustainable Finance (TKBI) Version 3 (official page)",
         "date": "5 Feb 2026",
         "url": "https://keuanganberkelanjutan.ojk.go.id/keuanganberkelanjutan/en/ArticleList/View/2045/taksonomi-untuk-keuangan-berkelanjutan-indonesia-tkbi-versi-3"
@@ -6822,7 +6799,12 @@ window.TAXONOMY_DATA = {
     "source": "https://repoemc.ukm.my/server/api/core/bitstreams/91f1c401-3ccd-4134-90e0-32b9c4979e01/content",
     "officialDocuments": [
       {
-        "title": "Bank Negara Malaysia — Climate Change and Principle-based Taxonomy (CCPT)",
+        "title": "Bank Negara Malaysia — Climate Change and Principle-based Taxonomy (CCPT), full document (official PDF)",
+        "date": "30 Apr 2021",
+        "url": "https://www.bnm.gov.my/documents/20124/938039/Climate+Change+and+Principle-based+Taxonomy.pdf"
+      },
+      {
+        "title": "Bank Negara Malaysia — Climate Change and Principle-based Taxonomy (CCPT), overview page",
         "date": "30 Apr 2021",
         "url": "https://www.bnm.gov.my/climatechange"
       },
@@ -7114,6 +7096,11 @@ window.TAXONOMY_DATA = {
     "source": "https://www.bot.or.th/content/dam/bot/financial-innovation/sustainable-finance/green/taxonomy/01_EN_Thailand_Taxonomy-Introduction.pdf",
     "officialDocuments": [
       {
+        "title": "Bank of Thailand — Thailand Taxonomy Phase I: A Reference Tool for Sustainable Economy (official PDF)",
+        "date": "Jun 2023",
+        "url": "https://www.bot.or.th/content/dam/bot/financial-innovation/sustainable-finance/green/taxonomy/01_EN_Thailand_Taxonomy-Introduction.pdf"
+      },
+      {
         "title": "Bank of Thailand / SEC — Thailand Taxonomy Phase I (joint press release)",
         "date": "5 Jul 2023",
         "url": "https://www.bot.or.th/en/news-and-media/news/news-20230630-2.html"
@@ -7167,6 +7154,11 @@ window.TAXONOMY_DATA = {
     "note": "Established via Decision No. 21/2025/QD-TTg.",
     "source": "https://congbao.chinhphu.vn/van-ban/quyet-dinh-so-21-2025-qd-ttg-45465.htm",
     "officialDocuments": [
+      {
+        "title": "Decision No. 21/2025/QD-TTg — Vietnam Green Taxonomy, full text (Government Document Portal)",
+        "date": "4 Jul 2025 (effective 22 Aug 2025)",
+        "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=214447"
+      },
       {
         "title": "Decision No. 21/2025/QD-TTg — Vietnam Green Taxonomy (official gazette)",
         "date": "4 Jul 2025 (effective 22 Aug 2025)",
@@ -7375,8 +7367,13 @@ window.TAXONOMY_DATA = {
     "source": "https://www.asfi.org.au/australian-taxonomy",
     "officialDocuments": [
       {
+        "title": "Australian Sustainable Finance Institute — Australian Sustainable Finance Taxonomy, Version 1 (official PDF)",
+        "date": "17 Jun 2025",
+        "url": "https://www.asfi.org.au/s/Australian-Sustainable-Finance-Taxonomy.pdf"
+      },
+      {
         "title": "Australian Sustainable Finance Institute — Australian Sustainable Finance Taxonomy (official page)",
-        "date": "Ongoing", 
+        "date": "Ongoing",
         "url": "https://www.asfi.org.au/australian-taxonomy"
       }
     ],
@@ -7546,6 +7543,11 @@ window.TAXONOMY_DATA = {
     "regulator": "Bank of Russia",
     "officialDocuments": [
       {
+        "title": "Official text of Russia's green project taxonomy, direct PDF (Government of Russia publication portal)",
+        "date": "24 Sep 2021",
+        "url": "http://publication.pravo.gov.ru/file/pdf?eoNumber=0001202109240043"
+      },
+      {
         "title": "Official text of Russia's green project taxonomy (Government of Russia publication portal)",
         "date": "24 Sep 2021",
         "url": "http://publication.pravo.gov.ru/Document/View/0001202109240043"
@@ -7589,14 +7591,9 @@ window.TAXONOMY_DATA = {
     "source": "https://www.gob.mx/shcp/documentos/taxonomia-sostenible-de-mexico?state=published",
     "officialDocuments": [
       {
-        "title": "SHCP — Taxonomía Sostenible de México (documento oficial)",
+        "title": "SHCP — Taxonomía Sostenible de México (documento oficial, mirrored PDF)",
         "date": "16 Mar 2023",
-        "url": "https://www.finanzassostenibles.hacienda.gob.mx/work/models/finanzassostenibles/recursos/documentos/TaxonomyEV_2024_V1.pdf"
-      },
-      {
-        "title": "Portal de Finanzas Sostenibles — SHCP",
-        "date": "Ongoing",
-        "url": "https://www.finanzassostenibles.hacienda.gob.mx/es/finanzassostenibles/taxonomia"
+        "url": "https://wfdfi.org/wp-content/uploads/2023/08/79.-Taxonomia_Sostenible_de_Mexico_Secretaria_de_Hacienda.pdf"
       }
     ],
     "overlays": [
@@ -7643,6 +7640,11 @@ window.TAXONOMY_DATA = {
     "source": "https://ssf.gob.sv/taxonomiaverdeelsalvador/",
     "officialDocuments": [
       {
+        "title": "SSF El Salvador — Taxonomía Verde de El Salvador (documento oficial, PDF)",
+        "date": "Dic 2025",
+        "url": "https://ssf.gob.sv/download/taxonomia-verde-el-salvador/"
+      },
+      {
         "title": "SSF El Salvador — presentación de la Taxonomía Verde",
         "date": "Dic 2025",
         "url": "https://ssf.gob.sv/2025/12/02/el-salvador-presenta-la-taxonomia-verde-para-impulsar-el-financiamiento-climatico-y-la-sostenibilidad-nacional/"
@@ -7685,6 +7687,11 @@ window.TAXONOMY_DATA = {
     "source": "https://www.mef.gov.py/es/dependencias/viceministerio-de-capital-humano-y-gestion-organizacional",
     "officialDocuments": [
       {
+        "title": "Ministerio de Economía y Finanzas — Taxonomía Verde de Paraguay (documento borrador, PDF)",
+        "date": "Ago 2025",
+        "url": "https://www.mef.gov.py/sites/default/files/2025-08/Taxonomia_Verde_de_Paraguay.pdf"
+      },
+      {
         "title": "Ministerio de Economía y Finanzas — Taxonomía Verde de Paraguay (página oficial)",
         "date": "Consulta pública oct-nov 2024",
         "url": "https://www.mef.gov.py/es/dependencias/viceministerio-de-economia-y-planificacion/taxonomia-verde-de-paraguay"
@@ -7717,7 +7724,12 @@ window.TAXONOMY_DATA = {
     "source": "https://ambiente.gob.do/app/uploads/2024/06/Taxonomia-Verde_RD_V2-OK.pdf",
     "officialDocuments": [
       {
-        "title": "Ministerio de Medio Ambiente — publicación oficial de la Taxonomía Verde RD",
+        "title": "Ministerio de Medio Ambiente — Taxonomía Verde RD, V2 (official PDF)",
+        "date": "Jun 2024",
+        "url": "https://ambiente.gob.do/app/uploads/2024/06/Taxonomia-Verde_RD_V2-OK.pdf"
+      },
+      {
+        "title": "Ministerio de Medio Ambiente — publicación oficial de la Taxonomía Verde RD (announcement)",
         "date": "Jun 2024",
         "url": "https://ambiente.gob.do/el-gobierno-publica-la-taxonomia-verde-de-la-republica-dominicana/"
       }
@@ -7761,6 +7773,11 @@ window.TAXONOMY_DATA = {
     "note": null,
     "source": "https://www.taxonomiaverde.gov.co/",
     "officialDocuments": [
+      {
+        "title": "Taxonomía Verde de Colombia — documento completo (PDF oficial)",
+        "date": "Abr 2022",
+        "url": "https://www.taxonomiaverde.gov.co/documents/316219/336660/Taxonom%C3%ADa+Verde+de+Colombia.pdf/f25c7843-9a15-17da-90f9-5d63763b85b6?t=1649352720000"
+      },
       {
         "title": "Superintendencia Financiera de Colombia — Circular Externa 005 de 2022",
         "date": "Abr 2022",
@@ -8339,7 +8356,12 @@ window.TAXONOMY_DATA = {
     "regulator": "National Bank of Georgia",
     "officialDocuments": [
       {
-        "title": "National Bank of Georgia — Sustainable Finance Taxonomy (official page)",
+        "title": "National Bank of Georgia — Sustainable Finance Taxonomy (official Georgian-language PDF)",
+        "date": "Published Aug 2022",
+        "url": "https://nbg.gov.ge/fm/%E1%83%A4%E1%83%98%E1%83%9C%E1%83%90%E1%83%9C%E1%83%A1%E1%83%A3%E1%83%A0%E1%83%98_%E1%83%A1%E1%83%A2%E1%83%90%E1%83%91%E1%83%98%E1%83%9A%E1%83%A3%E1%83%A0%E1%83%9D%E1%83%91%E1%83%90/%E1%83%9B%E1%83%93%E1%83%92%E1%83%A0%E1%83%90%E1%83%93%E1%83%98_%E1%83%93%E1%83%90%E1%83%A4%E1%83%98%E1%83%9C%E1%83%90%E1%83%9C%E1%83%A1%E1%83%94%E1%83%91%E1%83%90/%E1%83%9B%E1%83%93%E1%83%92%E1%83%A0%E1%83%90%E1%83%93%E1%83%98_%E1%83%93%E1%83%90%E1%83%A4%E1%83%98%E1%83%9C%E1%83%90%E1%83%9C%E1%83%A1%E1%83%94%E1%83%91%E1%83%98%E1%83%A1_%E1%83%A2%E1%83%90%E1%83%A5%E1%83%A1%E1%83%9D%E1%83%9C%E1%83%9D%E1%83%9B%E1%83%98%E1%83%90/sustainable-finance-taxonomy.pdf?v=anq4o"
+      },
+      {
+        "title": "National Bank of Georgia — Sustainable Finance Taxonomy (official page, English)",
         "date": "Published Aug 2022",
         "url": "https://nbg.gov.ge/en/page/sustainable-finance-taxonomy"
       }
@@ -8381,7 +8403,12 @@ window.TAXONOMY_DATA = {
     "regulator": "Central Bank of Azerbaijan",
     "officialDocuments": [
       {
-        "title": "The Green Taxonomy of Azerbaijan — Central Bank of Azerbaijan (via Sustainable Banking & Finance Network)",
+        "title": "Central Bank of Azerbaijan — Yaşıl Taksonomiya (official Azerbaijani-language PDF, approved by CBA Board decision)",
+        "date": "Approved 7 Nov 2024",
+        "url": "https://uploads.cbar.az/assets/b073a89546937b2bf4826c080.pdf"
+      },
+      {
+        "title": "The Green Taxonomy of Azerbaijan (English, via Sustainable Banking & Finance Network)",
         "date": "Nov 2024",
         "url": "https://data.sbfnetwork.org/sites/default/files/2024-11/The%20Green%20Taxonomy.pdf"
       }
@@ -8601,6 +8628,11 @@ window.TAXONOMY_DATA = {
     "source": "https://www.rbf.gov.fj/wp-content/uploads/2025/12/Fiji-Green-Finance-Taxonomy-FA-V5-Digital-Copy.pdf",
     "officialDocuments": [
       {
+        "title": "Reserve Bank of Fiji — Fiji Green Finance Taxonomy, V5 (official PDF)",
+        "date": "Dec 2025",
+        "url": "https://www.rbf.gov.fj/wp-content/uploads/2025/12/Fiji-Green-Finance-Taxonomy-FA-V5-Digital-Copy.pdf"
+      },
+      {
         "title": "Reserve Bank of Fiji — press release on Green Finance Taxonomy launch",
         "date": "Dec 2025",
         "url": "https://www.rbf.gov.fj/press-release-no-30-fiji-launches-green-finance-taxonomy-to-drive-climate-resilient-investments/"
@@ -8641,7 +8673,12 @@ window.TAXONOMY_DATA = {
     "regulator": "National Bank of Moldova",
     "officialDocuments": [
       {
-        "title": "National Bank of Moldova — Approval of the Taxonomy for Sustainable Finance",
+        "title": "Banca Națională a Moldovei — Aprobarea taxonomiei pentru finanțare durabilă (official Romanian-language page)",
+        "date": "Apr 2026",
+        "url": "https://www.bnm.md/ro/content/aprobarea-taxonomiei-pentru-finantare-durabila"
+      },
+      {
+        "title": "National Bank of Moldova — Approval of the Taxonomy for Sustainable Finance (English)",
         "date": "Apr 2026",
         "url": "https://www.bnm.md/en/content/aprobarea-taxonomiei-pentru-finantare-durabila"
       },
@@ -9052,7 +9089,12 @@ window.TAXONOMY_DATA = {
     "source": "https://www.canada.ca/en/department-finance/programs/financial-sector-policy/sustainable-finance/sustainable-finance-action-council/taxonomy-roadmap-report.html",
     "officialDocuments": [
       {
-        "title": "Government of Canada — Taxonomy Roadmap Report",
+        "title": "Government of Canada — Taxonomy Roadmap Report (official PDF, Cat. No. F2-295/2023E-PDF)",
+        "date": "2 Mar 2023",
+        "url": "https://publications.gc.ca/site/eng/9.919362/publication.html"
+      },
+      {
+        "title": "Government of Canada — Taxonomy Roadmap Report (announcement page)",
         "date": "2022",
         "url": "https://www.canada.ca/en/department-finance/programs/financial-sector-policy/sustainable-finance/sustainable-finance-action-council/taxonomy-roadmap-report.html"
       },
@@ -9099,9 +9141,9 @@ window.TAXONOMY_DATA = {
     "regulator": "Bank of Albania (framework in development)",
     "officialDocuments": [
       {
-        "title": "Bank of Albania — green strategy progress update (May 2023–2024)",
+        "title": "Bank of Albania — green strategy progress report, May 2023–2024 (official PDF; the taxonomy itself is still in development and not yet published)",
         "date": "2024",
-        "url": "https://www.lse.ac.uk/granthaminstitute/publication/insights-and-progress-from-the-bank-of-albanias-green-strategy-may-2023-2024/"
+        "url": "https://www.bankofalbania.org/rc/doc/Progres_raport_Insights_from_the_Bank_of_Albania_s_Green_Strategy_27767.pdf"
       }
     ],
     "fullDescription": [
@@ -9311,6 +9353,11 @@ window.TAXONOMY_DATA = {
     "source": "https://www.sbfnetwork.org/2026-esrm-guideline-and-taxonomy-standards-workshops-and-green-finance-summit-port-moresby",
     "officialDocuments": [
       {
+        "title": "Bank of Papua New Guinea — Standards for Green Loan Classification and Reporting (official PDF; companion document to the Taxonomy V2.0, whose own PDF is not yet at a stable public URL)",
+        "date": "Mar 2026",
+        "url": "https://www.bankpng.gov.pg/sites/default/files/2026-03/BPNG_Standards_for_Green_Loan_Classification_and_Reporting_March2026.pdf"
+      },
+      {
         "title": "Green Finance Centre PNG — Green Finance Summit 2026 summary",
         "date": "2026",
         "url": "https://www.gfcpng.com/green-finance-summit-2026-a-collaborative-success/"
@@ -9496,9 +9543,9 @@ window.TAXONOMY_DATA = {
     "regulator": "Central Bank of the Republic of Turkey",
     "officialDocuments": [
       {
-        "title": "Draft Regulation on the Türkiye Green Taxonomy — overview (Tevetoglu Legal)",
-        "date": "24 Sep 2024",
-        "url": "https://www.tevetoglu.av.tr/en/new-and-insight/turkeys-green-taxonomy-has-been-shared-with-the-public-by-the-climate-change-directorate-2024-09-24-090042"
+        "title": "İklim Değişikliği Başkanlığı — Türkiye Yeşil Taksonomisi Yönetmeliği Taslağı (official draft regulation, PDF)",
+        "date": "2024",
+        "url": "https://iklim.gov.tr/db/turkce/icerikler/files/Turkiye_Yesil_Taksonomi_Yonetmeligi_Taslagi.pdf"
       }
     ],
     "fullDescription": [
@@ -9552,6 +9599,11 @@ window.TAXONOMY_DATA = {
     "note": "Launched by the National Banking and Insurance Commission (CNBS) with technical assistance from IFC, establishing sustainability criteria, do-no-significant-harm (DNSH) requirements, social safeguards and verifiable indicators for renewable energy, agroindustry, efficient manufacturing and green infrastructure. Honduras is also part of a regional Central American green taxonomy presented via CCSBSO.",
     "source": "https://www.cnbs.gob.hn/taxonomia-verde/",
     "officialDocuments": [
+      {
+        "title": "Taxonomía Verde de Honduras — Primera versión (documento oficial, PDF)",
+        "date": "Nov 2025",
+        "url": "https://fundahrse.org/wp-content/uploads/2025/12/Taxonomia-Verde-de-Honduras.pdf"
+      },
       {
         "title": "Comisión Nacional de Bancos y Seguros (CNBS) — Taxonomía Verde (official page)",
         "date": "Ongoing",
@@ -9667,14 +9719,14 @@ window.TAXONOMY_DATA = {
     "regulator": "National Bank of Ukraine",
     "officialDocuments": [
       {
+        "title": "Ministry of Environmental Protection and Natural Resources of Ukraine — Draft Law \"On the Principles of Green Recovery of Ukraine\" (official draft text, DOCX)",
+        "date": "30 Jun 2025",
+        "url": "https://mepr.gov.ua/wp-content/uploads/2025/06/PROEKT-ZAKONU-pro-Zasady-zelenogo-vidnovlennya.docx"
+      },
+      {
         "title": "EU Delegation to Ukraine — Empowering Ukraine's Resilience: Sustainable Finance Platform launch",
         "date": "2023",
         "url": "https://www.eeas.europa.eu/delegations/ukraine/empowering-ukraine%E2%80%99s-resilience-official-launch-sustainable-finance-platform_en"
-      },
-      {
-        "title": "UNDP Ukraine — Draft Law ‘On the Foundations of Green Recovery in Ukraine’ (public presentation)",
-        "date": "30 Jun 2025",
-        "url": "https://ukraine.un.org/en/297337-sweden-and-undp-support-national-presentation-draft-law-foundations-green-recovery-ukraine"
       }
     ],
     "fullDescription": [
@@ -10060,9 +10112,14 @@ window.TAXONOMY_DATA = {
     "source": "https://www.lexismiddleeast.com/regulatory/Qatar/QatarCentralBank_2025_Sustainable_Finance_Framework/en",
     "officialDocuments": [
       {
-        "title": "Qatar Central Bank — Sustainable Finance Framework",
-        "date": "2025",
-        "url": "https://www.lexismiddleeast.com/regulatory/Qatar/QatarCentralBank_2025_Sustainable_Finance_Framework/en"
+        "title": "Qatar Central Bank — Sustainable Finance Framework (official circular, PDF)",
+        "date": "20 Apr 2025",
+        "url": "https://www.qcb.gov.qa/Documents/English%20circular.pdf"
+      },
+      {
+        "title": "Qatar Central Bank — ESG and Sustainability Strategy for the Financial Sector (official PDF)",
+        "date": "2024",
+        "url": "https://www.qcb.gov.qa/Documents/GreenFinance/ESG%20and%20sustainability%20strategy%20for%20the%20financial%20sector%20ENG.pdf"
       }
     ],
     "overlays": [],
@@ -10212,7 +10269,12 @@ window.TAXONOMY_DATA = {
     "source": "https://development.finance.go.ug/knowledge-centre-reports/national-green-taxonomy",
     "officialDocuments": [
       {
-        "title": "Ministry of Finance, Planning and Economic Development — National Green Taxonomy",
+        "title": "Ministry of Finance, Planning and Economic Development — Uganda National Green Taxonomy (official PDF)",
+        "date": "Sep 2025",
+        "url": "https://www.finance.go.ug/sites/default/files/reports/National%20Green%20Taxonomy%202025.pdf"
+      },
+      {
+        "title": "Ministry of Finance, Planning and Economic Development — National Green Taxonomy (knowledge centre page)",
         "date": "Sep 2025",
         "url": "https://development.finance.go.ug/knowledge-centre-reports/national-green-taxonomy"
       }
@@ -11685,7 +11747,13 @@ window.TAXONOMY_DATA = {
     "year": null,
     "note": "Signatory to the 2024 Natadola roadmap for inclusive green finance; GGGI is developing a dedicated inclusive green finance roadmap for Solomon Islands and Vanuatu. [1]",
     "source": "https://greencentralbanking.com/2024/06/21/pacific-islands-central-banks-sign-inclusive-green-finance-roadmap/",
-    "officialDocuments": [],
+    "officialDocuments": [
+      {
+        "title": "Natadola Roadmap to Inclusive Green Finance in the Pacific (official joint regional document, PDF; signed by the Central Bank of Solomon Islands and 6 other Pacific central banks — no separate national taxonomy exists yet)",
+        "date": "5 Jun 2024",
+        "url": "https://afi-global.org/wp-content/uploads/2024/10/Natadola-Roadmap-to-Inclusive-Green-Finance-in-the-Pacific.pdf"
+      }
+    ],
     "overlays": [],
     "regulator": "Central Bank of Solomon Islands",
     "fullDescription": [
@@ -11704,7 +11772,13 @@ window.TAXONOMY_DATA = {
     "year": null,
     "note": "Signatory to the 2024 Natadola roadmap for inclusive green finance; GGGI is developing a dedicated inclusive green finance roadmap for Solomon Islands and Vanuatu. [1]",
     "source": "https://greencentralbanking.com/2024/06/21/pacific-islands-central-banks-sign-inclusive-green-finance-roadmap/",
-    "officialDocuments": [],
+    "officialDocuments": [
+      {
+        "title": "Natadola Roadmap to Inclusive Green Finance in the Pacific (official joint regional document, PDF; signed by the Reserve Bank of Vanuatu and 6 other Pacific central banks — no separate national taxonomy exists yet)",
+        "date": "5 Jun 2024",
+        "url": "https://afi-global.org/wp-content/uploads/2024/10/Natadola-Roadmap-to-Inclusive-Green-Finance-in-the-Pacific.pdf"
+      }
+    ],
     "overlays": [],
     "regulator": "Reserve Bank of Vanuatu",
     "fullDescription": [
@@ -11723,7 +11797,13 @@ window.TAXONOMY_DATA = {
     "year": null,
     "note": "Signatory to the 2024 Natadola roadmap for inclusive green finance alongside Fiji, PNG, Seychelles, Solomon Islands, Tonga and Vanuatu. [1]",
     "source": "https://greencentralbanking.com/2024/06/21/pacific-islands-central-banks-sign-inclusive-green-finance-roadmap/",
-    "officialDocuments": [],
+    "officialDocuments": [
+      {
+        "title": "Natadola Roadmap to Inclusive Green Finance in the Pacific (official joint regional document, PDF; signed by the Central Bank of Samoa and 6 other Pacific central banks — no separate national taxonomy exists yet)",
+        "date": "5 Jun 2024",
+        "url": "https://afi-global.org/wp-content/uploads/2024/10/Natadola-Roadmap-to-Inclusive-Green-Finance-in-the-Pacific.pdf"
+      }
+    ],
     "overlays": [],
     "regulator": "Central Bank of Samoa",
     "fullDescription": [
@@ -11742,7 +11822,13 @@ window.TAXONOMY_DATA = {
     "year": null,
     "note": "Signatory to the 2024 Natadola roadmap for inclusive green finance alongside Fiji, PNG, Samoa, Seychelles, Solomon Islands and Vanuatu. [1]",
     "source": "https://greencentralbanking.com/2024/06/21/pacific-islands-central-banks-sign-inclusive-green-finance-roadmap/",
-    "officialDocuments": [],
+    "officialDocuments": [
+      {
+        "title": "Natadola Roadmap to Inclusive Green Finance in the Pacific (official joint regional document, PDF; signed by the National Reserve Bank of Tonga and 6 other Pacific central banks — no separate national taxonomy exists yet)",
+        "date": "5 Jun 2024",
+        "url": "https://afi-global.org/wp-content/uploads/2024/10/Natadola-Roadmap-to-Inclusive-Green-Finance-in-the-Pacific.pdf"
+      }
+    ],
     "overlays": [],
     "regulator": "National Reserve Bank of Tonga",
     "fullDescription": [
@@ -11925,10 +12011,12 @@ const GST_I18N = {
     "search.title": "Search", "search.close": "Close",
     "translate.button": "Translate", "translate.modalTitle": "Translated Document",
     "translate.loading": "Translating this document\u2026",
+    "translate.loadingPart": "Translating part {n} of {total}…",
     "translate.disclaimer": "Machine translation of an official document, for reference only \u2014 always refer to the original for legal or compliance purposes.",
     "sources.note": "This overview is compiled from the official documents and regulatory sources listed above.",
     "sources.lastReviewed": "Content last compiled/reviewed:", "about.resourcesHeading": "Key Reference Resources", "about.resourcesIntro": "Every country page links directly to its official government/regulator documents and, where the page includes a detailed description, numbered citations for each specific claim. Alongside those primary sources, these cross-cutting resources are useful for understanding and comparing taxonomies globally.", "about.resourcesColResource": "Resource", "about.resourcesColDescription": "Description", "about.resourcesColLink": "Link", "footer.references": "References", "country.generalResources": "General Reference Resources",
     "translate.viewOriginal": "View Original PDF \u2197", "translate.close": "Close",
+    "translate.language": "Translate to", "translate.originalPane": "Original", "translate.translatedPane": "Translation",
     "translate.errorGeneric": "Couldn't translate this document right now.",
     "translate.errorNotDeployed": "Translate needs the live site backend, which isn't connected here — this only works once the site is deployed to Vercel with an API key (see DEPLOY_INSTRUCTIONS.md). You can still open the original PDF below.",
     "translate.truncatedNote": "This document is long \u2014 showing a translation of the first portion only.",
@@ -12015,10 +12103,12 @@ const GST_I18N = {
     "search.title": "Sök", "search.close": "Stäng",
     "translate.button": "Översätt", "translate.modalTitle": "Översatt dokument",
     "translate.loading": "Översätter dokumentet\u2026",
+    "translate.loadingPart": "Översätter del {n} av {total}…",
     "translate.disclaimer": "Maskinöversättning av ett officiellt dokument, endast som referens \u2014 se alltid originalet för juridiska eller regelefterlevnadssyften.",
     "sources.note": "Den här översikten är sammanställd från de officiella dokument och regulatoriska källor som listas ovan.",
     "sources.lastReviewed": "Innehållet senast sammanställt/granskat:", "about.resourcesHeading": "Viktiga referensresurser", "about.resourcesIntro": "Varje landssida länkar direkt till sina officiella myndighets-/regulatorsdokument och, där sidan innehåller en detaljerad beskrivning, numrerade källhänvisningar för varje specifikt påstående. Utöver dessa primärkällor är dessa övergripande resurser användbara för att förstå och jämföra taxonomier globalt.", "about.resourcesColResource": "Resurs", "about.resourcesColDescription": "Beskrivning", "about.resourcesColLink": "Länk", "footer.references": "Källor", "country.generalResources": "Allmänna referensresurser",
     "translate.viewOriginal": "Visa original-PDF \u2197", "translate.close": "Stäng",
+    "translate.language": "Översätt till", "translate.originalPane": "Original", "translate.translatedPane": "Översättning",
     "translate.errorGeneric": "Det gick inte att översätta dokumentet just nu.",
     "translate.errorNotDeployed": "Översätt kräver den live serverdelen, som inte är ansluten här — detta fungerar först när webbplatsen är driftsatt på Vercel med en API-nyckel (se DEPLOY_INSTRUCTIONS.md). Du kan fortfarande öppna original-PDF:en nedan.",
     "translate.truncatedNote": "Dokumentet är långt \u2014 endast en översättning av den första delen visas.",
@@ -12105,10 +12195,12 @@ const GST_I18N = {
     "search.title": "검색", "search.close": "닫기",
     "translate.button": "번역", "translate.modalTitle": "번역된 문서",
     "translate.loading": "문서를 번역하는 중\u2026",
+    "translate.loadingPart": "{total}부분 중 {n}번째 부분 번역 중…",
     "translate.disclaimer": "공식 문서의 기계 번역이며 참고용입니다 \u2014 법적 또는 규정 준수 목적으로는 항상 원본을 참조하십시오.",
     "sources.note": "이 개요는 위에 나열된 공식 문서 및 규제 출처를 바탕으로 작성되었습니다.",
     "sources.lastReviewed": "콘텐츠 최종 작성/검토일:", "about.resourcesHeading": "주요 참고 자료", "about.resourcesIntro": "각 국가 페이지는 공식 정부/규제 기관 문서로 직접 연결되며, 상세 설명이 포함된 페이지에는 각 구체적 주장에 대한 번호가 매겨진 출처 표시가 있습니다. 이러한 1차 자료와 더불어, 아래의 포괄적인 자료들은 전 세계 택소노미를 이해하고 비교하는 데 유용합니다.", "about.resourcesColResource": "자료", "about.resourcesColDescription": "설명", "about.resourcesColLink": "링크", "footer.references": "출처", "country.generalResources": "일반 참고 자료",
     "translate.viewOriginal": "원본 PDF 보기 \u2197", "translate.close": "닫기",
+    "translate.language": "번역 언어", "translate.originalPane": "원본", "translate.translatedPane": "번역",
     "translate.errorGeneric": "지금은 이 문서를 번역할 수 없습니다.",
     "translate.errorNotDeployed": "번역 기능은 실제 서버 백엔드가 필요하지만 현재 연결되어 있지 않습니다 — 이 기능은 사이트가 API 키와 함께 Vercel에 배포된 후에만 작동합니다(DEPLOY_INSTRUCTIONS.md 참고). 아래에서 원본 PDF는 계속 열어볼 수 있습니다.",
     "translate.truncatedNote": "문서가 길어서 처음 일부만 번역하여 표시합니다.",
@@ -12195,10 +12287,12 @@ const GST_I18N = {
     "search.title": "Buscar", "search.close": "Cerrar",
     "translate.button": "Traducir", "translate.modalTitle": "Documento traducido",
     "translate.loading": "Traduciendo este documento\u2026",
+    "translate.loadingPart": "Traduciendo la parte {n} de {total}…",
     "translate.disclaimer": "Traducción automática de un documento oficial, solo como referencia \u2014 consulte siempre el original para fines legales o de cumplimiento.",
     "sources.note": "Este resumen se ha elaborado a partir de los documentos oficiales y las fuentes regulatorias enumeradas arriba.",
     "sources.lastReviewed": "Contenido compilado/revisado por última vez:", "about.resourcesHeading": "Recursos de Referencia Clave", "about.resourcesIntro": "Cada página de país enlaza directamente con sus documentos oficiales del gobierno/regulador y, cuando la página incluye una descripción detallada, citas numeradas para cada afirmación específica. Junto con esas fuentes primarias, estos recursos transversales son útiles para entender y comparar taxonomías a nivel mundial.", "about.resourcesColResource": "Recurso", "about.resourcesColDescription": "Descripción", "about.resourcesColLink": "Enlace", "footer.references": "Fuentes", "country.generalResources": "Recursos Generales de Referencia",
     "translate.viewOriginal": "Ver PDF original \u2197", "translate.close": "Cerrar",
+    "translate.language": "Traducir a", "translate.originalPane": "Original", "translate.translatedPane": "Traducci\u00f3n",
     "translate.errorGeneric": "No se pudo traducir este documento en este momento.",
     "translate.errorNotDeployed": "Traducir requiere el backend en vivo del sitio, que no está conectado aquí — esto solo funciona una vez que el sitio esté desplegado en Vercel con una clave de API (consulte DEPLOY_INSTRUCTIONS.md). Aún puede abrir el PDF original a continuación.",
     "translate.truncatedNote": "Este documento es extenso \u2014 se muestra la traducción solo de la primera parte.",
@@ -12285,10 +12379,12 @@ const GST_I18N = {
     "search.title": "Rechercher", "search.close": "Fermer",
     "translate.button": "Traduire", "translate.modalTitle": "Document traduit",
     "translate.loading": "Traduction du document en cours\u2026",
+    "translate.loadingPart": "Traduction de la partie {n} sur {total}…",
     "translate.disclaimer": "Traduction automatique d'un document officiel, à titre indicatif uniquement \u2014 consultez toujours l'original à des fins juridiques ou de conformité.",
     "sources.note": "Ce résumé a été compilé à partir des documents officiels et des sources réglementaires indiqués ci-dessus.",
     "sources.lastReviewed": "Contenu compilé/révisé pour la dernière fois le :", "about.resourcesHeading": "Ressources de Référence Clés", "about.resourcesIntro": "Chaque page pays renvoie directement à ses documents officiels du gouvernement/régulateur et, lorsque la page comprend une description détaillée, à des citations numérotées pour chaque affirmation spécifique. Outre ces sources primaires, ces ressources transversales sont utiles pour comprendre et comparer les taxonomies à l'échelle mondiale.", "about.resourcesColResource": "Ressource", "about.resourcesColDescription": "Description", "about.resourcesColLink": "Lien", "footer.references": "Sources", "country.generalResources": "Ressources Générales de Référence",
     "translate.viewOriginal": "Voir le PDF original \u2197", "translate.close": "Fermer",
+    "translate.language": "Traduire vers", "translate.originalPane": "Original", "translate.translatedPane": "Traduction",
     "translate.errorGeneric": "Impossible de traduire ce document pour le moment.",
     "translate.errorNotDeployed": "La traduction nécessite le backend en direct du site, qui n'est pas connecté ici — cela ne fonctionne qu'une fois le site déployé sur Vercel avec une clé API (voir DEPLOY_INSTRUCTIONS.md). Vous pouvez toujours ouvrir le PDF original ci-dessous.",
     "translate.truncatedNote": "Ce document est long \u2014 seule la traduction de la première partie est affichée.",
@@ -12375,10 +12471,12 @@ const GST_I18N = {
     "search.title": "Suche", "search.close": "Schließen",
     "translate.button": "Übersetzen", "translate.modalTitle": "Übersetztes Dokument",
     "translate.loading": "Dokument wird übersetzt\u2026",
+    "translate.loadingPart": "Übersetze Teil {n} von {total}…",
     "translate.disclaimer": "Maschinelle Übersetzung eines offiziellen Dokuments, nur zur Information \u2014 für rechtliche oder Compliance-Zwecke stets das Original heranziehen.",
     "sources.note": "Dieser Überblick wurde anhand der oben aufgeführten offiziellen Dokumente und behördlichen Quellen erstellt.",
     "sources.lastReviewed": "Inhalt zuletzt zusammengestellt/überprüft am:", "about.resourcesHeading": "Wichtige Referenzressourcen", "about.resourcesIntro": "Jede Länderseite verlinkt direkt zu ihren offiziellen Regierungs-/Regulierungsdokumenten und, wo die Seite eine detaillierte Beschreibung enthält, zu nummerierten Quellenangaben für jede einzelne Aussage. Neben diesen Primärquellen sind diese übergreifenden Ressourcen nützlich, um Taxonomien weltweit zu verstehen und zu vergleichen.", "about.resourcesColResource": "Ressource", "about.resourcesColDescription": "Beschreibung", "about.resourcesColLink": "Link", "footer.references": "Quellen", "country.generalResources": "Allgemeine Referenzressourcen",
     "translate.viewOriginal": "Original-PDF ansehen \u2197", "translate.close": "Schließen",
+    "translate.language": "Übersetzen in", "translate.originalPane": "Original", "translate.translatedPane": "Übersetzung",
     "translate.errorGeneric": "Dieses Dokument konnte gerade nicht übersetzt werden.",
     "translate.errorNotDeployed": "Übersetzen benötigt das Live-Backend der Website, das hier nicht verbunden ist — dies funktioniert erst, wenn die Website mit einem API-Schlüssel auf Vercel bereitgestellt wurde (siehe DEPLOY_INSTRUCTIONS.md). Sie können unten weiterhin das Original-PDF öffnen.",
     "translate.truncatedNote": "Dieses Dokument ist lang \u2014 es wird nur eine Übersetzung des ersten Abschnitts angezeigt.",
@@ -12465,10 +12563,12 @@ const GST_I18N = {
     "search.title": "検索", "search.close": "閉じる",
     "translate.button": "翻訳", "translate.modalTitle": "翻訳された文書",
     "translate.loading": "文書を翻訳中\u2026",
+    "translate.loadingPart": "部分 {n}/{total} を翻訳中…",
     "translate.disclaimer": "公式文書の機械翻訳であり、参考情報です \u2014 法的または規制遵守の目的では常に原文をご確認ください。",
     "sources.note": "この概要は、上記に記載された公式文書および規制当局の情報源をもとに作成されています。",
     "sources.lastReviewed": "コンテンツの最終作成・確認日:", "about.resourcesHeading": "主要参考資料", "about.resourcesIntro": "各国のページは、その国の政府・規制当局の公式文書に直接リンクしており、詳細な説明があるページでは、個々の主張ごとに番号付きの出典が示されています。これらの一次資料に加えて、以下の横断的なリソースは、世界各国のタクソノミーを理解し比較する際に役立ちます。", "about.resourcesColResource": "リソース", "about.resourcesColDescription": "説明", "about.resourcesColLink": "リンク", "footer.references": "出典", "country.generalResources": "一般参考資料",
     "translate.viewOriginal": "元のPDFを見る \u2197", "translate.close": "閉じる",
+    "translate.language": "翻訳先", "translate.originalPane": "原文", "translate.translatedPane": "翻訳",
     "translate.errorGeneric": "現在この文書を翻訳できませんでした。",
     "translate.errorNotDeployed": "翻訳機能にはライブのサイトバックエンドが必要ですが、ここでは接続されていません — この機能はサイトがAPIキー付きでVercelにデプロイされた後にのみ動作します（DEPLOY_INSTRUCTIONS.mdを参照）。下の元のPDFは引き続き開くことができます。",
     "translate.truncatedNote": "この文書は長いため、最初の部分のみの翻訳を表示しています。",
@@ -12555,10 +12655,12 @@ const GST_I18N = {
     "search.title": "搜索", "search.close": "关闭",
     "translate.button": "翻译", "translate.modalTitle": "翻译文档",
     "translate.loading": "正在翻译此文档\u2026",
+    "translate.loadingPart": "正在翻译第 {n} 部分，共 {total} 部分…",
     "translate.disclaimer": "官方文档的机器翻译，仅供参考——法律或合规目的请始终参阅原文。",
     "sources.note": "本概述基于上文列出的官方文件和监管来源编写。",
     "sources.lastReviewed": "内容最后编制/审核时间：", "about.resourcesHeading": "主要参考资源", "about.resourcesIntro": "每个国家页面都直接链接到其官方政府/监管机构文件，如果页面包含详细说明，还会为每项具体陈述提供带编号的引用来源。除了这些主要来源外，以下这些跨领域资源有助于理解和比较全球各地的分类标准。", "about.resourcesColResource": "资源", "about.resourcesColDescription": "说明", "about.resourcesColLink": "链接", "footer.references": "来源", "country.generalResources": "通用参考资源",
     "translate.viewOriginal": "查看原始PDF \u2197", "translate.close": "关闭",
+    "translate.language": "翻译为", "translate.originalPane": "原文", "translate.translatedPane": "翻译",
     "translate.errorGeneric": "目前无法翻译此文档。",
     "translate.errorNotDeployed": "翻译功能需要网站的实时后端支持，但此处尚未连接——只有在网站部署到 Vercel 并配置 API 密钥后才能使用（请参阅 DEPLOY_INSTRUCTIONS.md）。您仍然可以打开下方的原始 PDF。",
     "translate.truncatedNote": "此文档较长——仅显示前半部分的翻译。",
@@ -12645,10 +12747,12 @@ const GST_I18N = {
     "search.title": "بحث", "search.close": "إغلاق",
     "translate.button": "ترجمة", "translate.modalTitle": "المستند المترجم",
     "translate.loading": "جارٍ ترجمة هذا المستند…",
+    "translate.loadingPart": "جارٍ ترجمة الجزء {n} من {total}…",
     "translate.disclaimer": "ترجمة آلية لمستند رسمي، للاطلاع فقط — يُرجى دائمًا الرجوع إلى النص الأصلي للأغراض القانونية أو التنظيمية.",
     "sources.note": "تم تجميع هذا الملخص من المستندات الرسمية والمصادر التنظيمية المدرجة أعلاه.",
     "sources.lastReviewed": "آخر تجميع/مراجعة للمحتوى:", "about.resourcesHeading": "أهم الموارد المرجعية", "about.resourcesIntro": "ترتبط كل صفحة بلد مباشرة بمستنداتها الرسمية الحكومية أو التنظيمية، وحيثما تتضمن الصفحة وصفًا تفصيليًا، تظهر إحالات مرقّمة لكل ادعاء محدد. إلى جانب هذه المصادر الأساسية، تُعد هذه الموارد الشاملة مفيدة لفهم التصنيفات ومقارنتها عالميًا.", "about.resourcesColResource": "المورد", "about.resourcesColDescription": "الوصف", "about.resourcesColLink": "الرابط", "footer.references": "المراجع", "country.generalResources": "موارد مرجعية عامة",
     "translate.viewOriginal": "عرض ملف PDF الأصلي ↗", "translate.close": "إغلاق",
+    "translate.language": "الترجمة إلى", "translate.originalPane": "الأصل", "translate.translatedPane": "الترجمة",
     "translate.errorGeneric": "تعذّرت ترجمة هذا المستند في الوقت الحالي.",
     "translate.errorNotDeployed": "تتطلب الترجمة الخادم الفعلي للموقع، وهو غير متصل هنا — لن يعمل هذا إلا بعد نشر الموقع على Vercel بمفتاح API (راجع DEPLOY_INSTRUCTIONS.md). لا يزال بإمكانك فتح ملف PDF الأصلي أدناه.",
     "translate.truncatedNote": "هذا المستند طويل — يتم عرض ترجمة الجزء الأول منه فقط.",
@@ -12735,10 +12839,12 @@ const GST_I18N = {
     "search.title": "Pesquisar", "search.close": "Fechar",
     "translate.button": "Traduzir", "translate.modalTitle": "Documento Traduzido",
     "translate.loading": "Traduzindo este documento…",
+    "translate.loadingPart": "Traduzindo a parte {n} de {total}…",
     "translate.disclaimer": "Tradução automática de um documento oficial, apenas para referência — consulte sempre o original para fins legais ou de conformidade.",
     "sources.note": "Este resumo foi compilado a partir dos documentos oficiais e fontes regulatórias listadas acima.",
     "sources.lastReviewed": "Conteúdo compilado/revisado pela última vez em:", "about.resourcesHeading": "Principais Recursos de Referência", "about.resourcesIntro": "Cada página de país tem links diretos para os seus documentos oficiais do governo/regulador e, quando a página inclui uma descrição detalhada, citações numeradas para cada afirmação específica. Além dessas fontes primárias, estes recursos transversais são úteis para entender e comparar taxonomias globalmente.", "about.resourcesColResource": "Recurso", "about.resourcesColDescription": "Descrição", "about.resourcesColLink": "Link", "footer.references": "Referências", "country.generalResources": "Recursos Gerais de Referência",
     "translate.viewOriginal": "Ver PDF Original ↗", "translate.close": "Fechar",
+    "translate.language": "Traduzir para", "translate.originalPane": "Original", "translate.translatedPane": "Tradução",
     "translate.errorGeneric": "Não foi possível traduzir este documento agora.",
     "translate.errorNotDeployed": "A tradução requer o backend do site em produção, que não está conectado aqui — isso só funciona quando o site está implantado no Vercel com uma chave de API (consulte DEPLOY_INSTRUCTIONS.md). Você ainda pode abrir o PDF original abaixo.",
     "translate.truncatedNote": "Este documento é extenso — mostrando a tradução apenas da primeira parte.",
