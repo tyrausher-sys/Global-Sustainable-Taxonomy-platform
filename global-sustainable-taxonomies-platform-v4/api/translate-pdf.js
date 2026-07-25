@@ -39,7 +39,7 @@
  */
 
 const MAX_TOTAL_CHARS = 150000; // overall sanity cap (~40-50 pages) against pathologically huge documents
-const CHUNK_CHARS = 10000; // per-request chunk size, kept small so each individual Claude call finishes well within Vercel's function timeout
+const CHUNK_CHARS = 6000; // per-request chunk size — kept smaller than it might need to be, since some source languages (e.g. dense Korean legal text) translate into a long enough English/target output that a 10k-char chunk risked exceeding the function's real time budget
 
 const LANGUAGE_NAMES = {
   en: "English",
@@ -106,7 +106,7 @@ async function fetchDirect(url) {
       "Accept-Language": "en-US,en;q=0.9",
       ...(origin ? { Referer: origin } : {})
     }
-  }, 8000);
+  }, 6000);
   if (!upstream.ok) {
     throw new Error(`HTTP ${upstream.status}`);
   }
@@ -140,7 +140,7 @@ async function fetchDirect(url) {
 async function fetchViaReaderProxy(url) {
   const proxied = await fetchWithTimeout("https://r.jina.ai/" + url, {
     headers: { "Accept": "text/plain" }
-  }, 10000);
+  }, 8000);
   if (!proxied.ok) {
     throw new Error(`reader proxy HTTP ${proxied.status}`);
   }
@@ -324,7 +324,7 @@ async function handleTranslateRequest(req, res) {
         system: systemPrompt,
         messages: [{ role: "user", content: sourceText }]
       })
-    }, 35000);
+    }, 44000);
 
     const data = await upstream.json();
 
