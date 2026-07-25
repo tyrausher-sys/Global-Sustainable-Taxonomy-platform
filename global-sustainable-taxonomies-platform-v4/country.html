@@ -9078,7 +9078,7 @@ window.TAXONOMY_DATA = {
       {
         "title": "Government of Canada — Taxonomy Roadmap Report (official PDF, Cat. No. F2-295/2023E-PDF)",
         "date": "2 Mar 2023",
-        "url": "https://publications.gc.ca/site/eng/9.919362/publication.html"
+        "url": "https://publications.gc.ca/collections/collection_2023/fin/F2-295-2023-eng.pdf"
       },
       {
         "title": "Government of Canada — Taxonomy Roadmap Report (announcement page)",
@@ -9854,7 +9854,7 @@ window.TAXONOMY_DATA = {
       {
         "title": "U.S. Securities and Exchange Commission — climate-related disclosure rule (adopted 2024)",
         "date": "6 Mar 2024",
-        "url": "https://www.sec.gov/rules-regulations/2024/03/s7-10-22"
+        "url": "https://www.sec.gov/files/rules/final/2024/33-11275.pdf"
       }
     ],
     "overlays": [],
@@ -13801,13 +13801,16 @@ function populateTranslateLangSelect() {
 // embed the original document (see openTranslateModal below). Mirrors the
 // pattern already used elsewhere in the project for the same purpose.
 function looksLikePdf(url) {
-  return /\.pdf(\?|$)/i.test(url) ||
-    /\/pdf\//i.test(url) ||
+  return /\.pdf(\?|$|\/)/i.test(url) ||
+    /\/pdf(\?|\/|$)/i.test(url) ||
     /[?&](format|type)=pdf/i.test(url) ||
-    // Many government file-serving endpoints (e.g. Korean ministry sites)
-    // stream a PDF from a generic "download" action with no .pdf in the
-    // URL at all — route these through the same PDF-viewer path too.
+    // Many government file-serving endpoints (e.g. Korean ministry sites,
+    // Russia's official legal-publication portal) stream a PDF from a
+    // generic "download"/"file" action with no ".pdf" in the URL at all —
+    // route these through the same PDF-viewer path too.
     /download\.?do\b/i.test(url) ||
+    /download\.aspx/i.test(url) ||
+    /\/download\//i.test(url) ||
     /readdownloadfile/i.test(url) ||
     /[?&]fileid=/i.test(url);
 }
