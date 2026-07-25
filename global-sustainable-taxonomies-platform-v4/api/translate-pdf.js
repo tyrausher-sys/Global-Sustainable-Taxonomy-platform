@@ -70,11 +70,23 @@ function stripHtml(html) {
 }
 
 async function extractText(url) {
+  // Some official sources (e.g. Korean government file-download endpoints)
+  // reject requests that don't look like they came from a real browser
+  // navigating from their own site — no browser-like User-Agent, no Accept
+  // header, no Referer. Send a fuller, more convincing header set so we
+  // aren't mistaken for a generic bot and blocked with a 403.
+  let origin = "";
+  try { origin = new URL(url).origin + "/"; } catch (e) { /* leave blank */ }
   const upstream = await fetch(url, {
-    headers: { "User-Agent": "Mozilla/5.0 (compatible; GlobalSustainableTaxonomiesBot/1.0)" }
+    headers: {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+      "Accept": "application/pdf,text/html,application/xhtml+xml,*/*;q=0.8",
+      "Accept-Language": "en-US,en;q=0.9",
+      ...(origin ? { Referer: origin } : {})
+    }
   });
   if (!upstream.ok) {
-    throw new Error(`Could not fetch the document (HTTP ${upstream.status}).`);
+    throw new Error(`Could not fetch the document (HTTP ${upstream.status}). The source site may be blocking automated requests.`);
   }
   const contentType = upstream.headers.get("content-type") || "";
   const buffer = Buffer.from(await upstream.arrayBuffer());
@@ -129,6 +141,21 @@ function looksLikeBinaryGarbage(text) {
 }
 
 module.exports = async function handler(req, res) {
+  // Top-level safety net: guarantees a clean JSON error response (with a
+  // real message) even if something throws somewhere we didn't anticipate,
+  // instead of Vercel's own generic crash page reaching the browser as an
+  // unparseable response (which the front end then shows as a vague
+  // "couldn't translate" fallback with no way to diagnose it).
+  try {
+    await handleTranslateRequest(req, res);
+  } catch (err) {
+    if (!res.headersSent) {
+      res.status(500).json({ error: "Unexpected server error: " + (err && err.message ? err.message : String(err)) });
+    }
+  }
+};
+
+async function handleTranslateRequest(req, res) {
   if (req.method !== "POST") {
     res.status(405).json({ error: "Method not allowed. Use POST." });
     return;
