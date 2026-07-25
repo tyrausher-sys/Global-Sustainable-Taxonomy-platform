@@ -622,6 +622,11 @@ function renderTranslatedMarkdown(text) {
 // picker can re-request a translation without needing the button's dataset.
 let gstTranslateActiveUrl = null;
 let gstTranslateActiveTitle = null;
+// Bumped every time a new translation run starts (open, or language change).
+// A running chunk loop checks this before applying each chunk, so an old,
+// still-in-flight run can't overwrite a newer one's output if the reader
+// switches language mid-translation.
+let gstTranslateRequestId = 0;
 
 // Populates the modal's own language <select> from the same GST_LANGUAGES
 // list the sitewide language switcher uses (defined in global.js, loaded
@@ -636,41 +641,86 @@ function populateTranslateLangSelect() {
   sel.dataset.populated = "1";
 }
 
-function fetchTranslation(url, lang) {
+// Rough heuristic for "does this URL point at a PDF" — used to decide how to
+// embed the original document (see openTranslateModal below). Mirrors the
+// pattern already used elsewhere in the project for the same purpose.
+function looksLikePdf(url) {
+  return /\.pdf(\?|$)/i.test(url) || /\/pdf\//i.test(url) || /[?&](format|type)=pdf/i.test(url);
+}
+
+// Translates the WHOLE document, not just its first few pages: the backend
+// splits long documents into chunks server-side and this walks chunkIndex
+// 0, 1, 2, ... until totalChunks is reached, appending each chunk's
+// translation to the reader as it arrives and showing a "translating part X
+// of Y" note in between (each chunk is its own request, so nothing appears
+// until the first one finishes, then it grows chunk by chunk).
+async function fetchTranslation(url, lang) {
   const body = document.getElementById("translateModalBody");
   const t = (typeof gstT === "function") ? gstT : (k => k);
+  const myRequestId = ++gstTranslateRequestId;
+
   body.innerHTML = `<div class="translate-modal-loading"><span class="translate-spinner"></span><span>${t("translate.loading")}</span></div>`;
 
-  fetch("/api/translate-pdf", {
-    method: "POST",
-    headers: { "content-type": "application/json" },
-    body: JSON.stringify({ url, lang })
-  })
-    .then(res => res.json().catch(() => ({})).then(data => ({ ok: res.ok, data })))
-    .then(({ ok, data }) => {
-      if (!ok || !data || data.error) {
-        const debugLine = data && data.debugKind
-          ? `<p class="translate-modal-truncated-note">Debug: detected as "${data.debugKind}", sample: ${escapeAttr((data.debugSample || "").slice(0, 150))}</p>`
-          : "";
-        body.innerHTML = `<p class="translate-modal-error">${(data && data.error) || t("translate.errorGeneric")}</p>${debugLine}`;
-        return;
-      }
-      let html = renderTranslatedMarkdown(data.translatedText);
-      if (data.truncated) {
-        html += `<p class="translate-modal-truncated-note">${t("translate.truncatedNote")}</p>`;
-      }
-      body.innerHTML = html;
-    })
-    .catch(err => {
+  let accumulatedHtml = "";
+  let chunkIndex = 0;
+  let totalChunks = 1;
+
+  while (chunkIndex < totalChunks) {
+    if (myRequestId !== gstTranslateRequestId) return; // superseded by a newer run
+
+    if (chunkIndex > 0) {
+      const progressLabel = t("translate.loadingPart")
+        .replace("{n}", String(chunkIndex + 1))
+        .replace("{total}", String(totalChunks));
+      body.innerHTML = accumulatedHtml +
+        `<div class="translate-modal-loading translate-modal-progress"><span class="translate-spinner"></span><span>${progressLabel}</span></div>`;
+    }
+
+    let ok, data, fetchErr = null;
+    try {
+      const res = await fetch("/api/translate-pdf", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ url, lang, chunkIndex })
+      });
+      ok = res.ok;
+      data = await res.json().catch(() => ({}));
+    } catch (err) {
+      fetchErr = err;
+    }
+
+    if (myRequestId !== gstTranslateRequestId) return;
+
+    if (fetchErr) {
       // "Failed to fetch" means the request never reached a server at all —
       // typically because the site is being viewed as a local file (file://)
       // or a static host without the /api serverless functions, rather than
       // an actual Vercel deployment with ANTHROPIC_API_KEY set.
-      const looksUndeployed = /failed to fetch|networkerror|load failed/i.test(err.message || "");
-      body.innerHTML = looksUndeployed
-        ? `<p class="translate-modal-error">${t("translate.errorNotDeployed")}</p>`
-        : `<p class="translate-modal-error">${t("translate.errorGeneric")} (${err.message})</p>`;
-    });
+      const looksUndeployed = /failed to fetch|networkerror|load failed/i.test(fetchErr.message || "");
+      body.innerHTML = accumulatedHtml + `<p class="translate-modal-error">${
+        looksUndeployed ? t("translate.errorNotDeployed") : `${t("translate.errorGeneric")} (${fetchErr.message})`
+      }</p>`;
+      return;
+    }
+
+    if (!ok || !data || data.error) {
+      const debugLine = data && data.debugKind
+        ? `<p class="translate-modal-truncated-note">Debug: detected as "${data.debugKind}", sample: ${escapeAttr((data.debugSample || "").slice(0, 150))}</p>`
+        : "";
+      body.innerHTML = accumulatedHtml + `<p class="translate-modal-error">${(data && data.error) || t("translate.errorGeneric")}</p>${debugLine}`;
+      return;
+    }
+
+    accumulatedHtml += renderTranslatedMarkdown(data.translatedText);
+    totalChunks = data.totalChunks || 1;
+
+    if (data.isLastChunk && data.truncatedOverall) {
+      accumulatedHtml += `<p class="translate-modal-truncated-note">${t("translate.truncatedNote")}</p>`;
+    }
+
+    body.innerHTML = accumulatedHtml;
+    chunkIndex++;
+  }
 }
 
 function openTranslateModal(url, title) {
@@ -687,9 +737,17 @@ function openTranslateModal(url, title) {
   originalLink.href = url;
   // Embeds the original PDF/page alongside the translation so the reader can
   // check layout, tables and figures against the plain-text translation.
-  // Some sources block iframe embedding (X-Frame-Options) — the "View
-  // Original PDF" link in the footer remains as a fallback in that case.
-  if (frame) frame.src = url;
+  // Many official PDF hosts send an X-Frame-Options header that silently
+  // blocks direct iframe embedding (no visible error — it just stays blank),
+  // so PDFs are routed through Google's own viewer, which fetches and
+  // renders the file itself and isn't subject to the source's framing
+  // restriction. Non-PDF pages are embedded directly. The "View Original
+  // PDF" link in the footer remains as a fallback either way.
+  if (frame) {
+    frame.src = looksLikePdf(url)
+      ? "https://docs.google.com/gview?url=" + encodeURIComponent(url) + "&embedded=true"
+      : url;
+  }
   overlay.classList.add("open");
   document.body.style.overflow = "hidden";
 
@@ -707,6 +765,7 @@ function closeTranslateModal() {
   if (frame) frame.src = "about:blank";
   gstTranslateActiveUrl = null;
   gstTranslateActiveTitle = null;
+  gstTranslateRequestId++; // stops any still-running chunk loop from continuing to fetch after close
 }
 
 // Google's own translator reliably renders and translates PDFs (including

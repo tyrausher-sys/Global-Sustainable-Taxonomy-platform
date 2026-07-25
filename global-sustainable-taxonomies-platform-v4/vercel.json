@@ -1,0 +1,10 @@
+{
+  "functions": {
+    "api/ask.js": {
+      "maxDuration": 30
+    },
+    "api/translate-pdf.js": {
+      "maxDuration": 60
+    }
+  }
+}

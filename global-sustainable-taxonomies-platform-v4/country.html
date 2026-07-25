@@ -314,6 +314,13 @@ a { color: inherit; }
   padding: 30px 0;
   justify-content: center;
 }
+.translate-modal-progress {
+  padding: 14px 0 4px;
+  border-top: 1px solid var(--border);
+  margin-top: 10px;
+  justify-content: flex-start;
+  font-size: 0.85rem;
+}
 .translate-spinner {
   width: 18px; height: 18px;
   border: 2px solid var(--border);
@@ -11991,6 +11998,7 @@ const GST_I18N = {
     "search.title": "Search", "search.close": "Close",
     "translate.button": "Translate", "translate.modalTitle": "Translated Document",
     "translate.loading": "Translating this document\u2026",
+    "translate.loadingPart": "Translating part {n} of {total}…",
     "translate.disclaimer": "Machine translation of an official document, for reference only \u2014 always refer to the original for legal or compliance purposes.",
     "sources.note": "This overview is compiled from the official documents and regulatory sources listed above.",
     "sources.lastReviewed": "Content last compiled/reviewed:", "about.resourcesHeading": "Key Reference Resources", "about.resourcesIntro": "Every country page links directly to its official government/regulator documents and, where the page includes a detailed description, numbered citations for each specific claim. Alongside those primary sources, these cross-cutting resources are useful for understanding and comparing taxonomies globally.", "about.resourcesColResource": "Resource", "about.resourcesColDescription": "Description", "about.resourcesColLink": "Link", "footer.references": "References", "country.generalResources": "General Reference Resources",
@@ -12082,6 +12090,7 @@ const GST_I18N = {
     "search.title": "Sök", "search.close": "Stäng",
     "translate.button": "Översätt", "translate.modalTitle": "Översatt dokument",
     "translate.loading": "Översätter dokumentet\u2026",
+    "translate.loadingPart": "Översätter del {n} av {total}…",
     "translate.disclaimer": "Maskinöversättning av ett officiellt dokument, endast som referens \u2014 se alltid originalet för juridiska eller regelefterlevnadssyften.",
     "sources.note": "Den här översikten är sammanställd från de officiella dokument och regulatoriska källor som listas ovan.",
     "sources.lastReviewed": "Innehållet senast sammanställt/granskat:", "about.resourcesHeading": "Viktiga referensresurser", "about.resourcesIntro": "Varje landssida länkar direkt till sina officiella myndighets-/regulatorsdokument och, där sidan innehåller en detaljerad beskrivning, numrerade källhänvisningar för varje specifikt påstående. Utöver dessa primärkällor är dessa övergripande resurser användbara för att förstå och jämföra taxonomier globalt.", "about.resourcesColResource": "Resurs", "about.resourcesColDescription": "Beskrivning", "about.resourcesColLink": "Länk", "footer.references": "Källor", "country.generalResources": "Allmänna referensresurser",
@@ -12173,6 +12182,7 @@ const GST_I18N = {
     "search.title": "검색", "search.close": "닫기",
     "translate.button": "번역", "translate.modalTitle": "번역된 문서",
     "translate.loading": "문서를 번역하는 중\u2026",
+    "translate.loadingPart": "{total}부분 중 {n}번째 부분 번역 중…",
     "translate.disclaimer": "공식 문서의 기계 번역이며 참고용입니다 \u2014 법적 또는 규정 준수 목적으로는 항상 원본을 참조하십시오.",
     "sources.note": "이 개요는 위에 나열된 공식 문서 및 규제 출처를 바탕으로 작성되었습니다.",
     "sources.lastReviewed": "콘텐츠 최종 작성/검토일:", "about.resourcesHeading": "주요 참고 자료", "about.resourcesIntro": "각 국가 페이지는 공식 정부/규제 기관 문서로 직접 연결되며, 상세 설명이 포함된 페이지에는 각 구체적 주장에 대한 번호가 매겨진 출처 표시가 있습니다. 이러한 1차 자료와 더불어, 아래의 포괄적인 자료들은 전 세계 택소노미를 이해하고 비교하는 데 유용합니다.", "about.resourcesColResource": "자료", "about.resourcesColDescription": "설명", "about.resourcesColLink": "링크", "footer.references": "출처", "country.generalResources": "일반 참고 자료",
@@ -12264,6 +12274,7 @@ const GST_I18N = {
     "search.title": "Buscar", "search.close": "Cerrar",
     "translate.button": "Traducir", "translate.modalTitle": "Documento traducido",
     "translate.loading": "Traduciendo este documento\u2026",
+    "translate.loadingPart": "Traduciendo la parte {n} de {total}…",
     "translate.disclaimer": "Traducción automática de un documento oficial, solo como referencia \u2014 consulte siempre el original para fines legales o de cumplimiento.",
     "sources.note": "Este resumen se ha elaborado a partir de los documentos oficiales y las fuentes regulatorias enumeradas arriba.",
     "sources.lastReviewed": "Contenido compilado/revisado por última vez:", "about.resourcesHeading": "Recursos de Referencia Clave", "about.resourcesIntro": "Cada página de país enlaza directamente con sus documentos oficiales del gobierno/regulador y, cuando la página incluye una descripción detallada, citas numeradas para cada afirmación específica. Junto con esas fuentes primarias, estos recursos transversales son útiles para entender y comparar taxonomías a nivel mundial.", "about.resourcesColResource": "Recurso", "about.resourcesColDescription": "Descripción", "about.resourcesColLink": "Enlace", "footer.references": "Fuentes", "country.generalResources": "Recursos Generales de Referencia",
@@ -12355,6 +12366,7 @@ const GST_I18N = {
     "search.title": "Rechercher", "search.close": "Fermer",
     "translate.button": "Traduire", "translate.modalTitle": "Document traduit",
     "translate.loading": "Traduction du document en cours\u2026",
+    "translate.loadingPart": "Traduction de la partie {n} sur {total}…",
     "translate.disclaimer": "Traduction automatique d'un document officiel, à titre indicatif uniquement \u2014 consultez toujours l'original à des fins juridiques ou de conformité.",
     "sources.note": "Ce résumé a été compilé à partir des documents officiels et des sources réglementaires indiqués ci-dessus.",
     "sources.lastReviewed": "Contenu compilé/révisé pour la dernière fois le :", "about.resourcesHeading": "Ressources de Référence Clés", "about.resourcesIntro": "Chaque page pays renvoie directement à ses documents officiels du gouvernement/régulateur et, lorsque la page comprend une description détaillée, à des citations numérotées pour chaque affirmation spécifique. Outre ces sources primaires, ces ressources transversales sont utiles pour comprendre et comparer les taxonomies à l'échelle mondiale.", "about.resourcesColResource": "Ressource", "about.resourcesColDescription": "Description", "about.resourcesColLink": "Lien", "footer.references": "Sources", "country.generalResources": "Ressources Générales de Référence",
@@ -12446,6 +12458,7 @@ const GST_I18N = {
     "search.title": "Suche", "search.close": "Schließen",
     "translate.button": "Übersetzen", "translate.modalTitle": "Übersetztes Dokument",
     "translate.loading": "Dokument wird übersetzt\u2026",
+    "translate.loadingPart": "Übersetze Teil {n} von {total}…",
     "translate.disclaimer": "Maschinelle Übersetzung eines offiziellen Dokuments, nur zur Information \u2014 für rechtliche oder Compliance-Zwecke stets das Original heranziehen.",
     "sources.note": "Dieser Überblick wurde anhand der oben aufgeführten offiziellen Dokumente und behördlichen Quellen erstellt.",
     "sources.lastReviewed": "Inhalt zuletzt zusammengestellt/überprüft am:", "about.resourcesHeading": "Wichtige Referenzressourcen", "about.resourcesIntro": "Jede Länderseite verlinkt direkt zu ihren offiziellen Regierungs-/Regulierungsdokumenten und, wo die Seite eine detaillierte Beschreibung enthält, zu nummerierten Quellenangaben für jede einzelne Aussage. Neben diesen Primärquellen sind diese übergreifenden Ressourcen nützlich, um Taxonomien weltweit zu verstehen und zu vergleichen.", "about.resourcesColResource": "Ressource", "about.resourcesColDescription": "Beschreibung", "about.resourcesColLink": "Link", "footer.references": "Quellen", "country.generalResources": "Allgemeine Referenzressourcen",
@@ -12537,6 +12550,7 @@ const GST_I18N = {
     "search.title": "検索", "search.close": "閉じる",
     "translate.button": "翻訳", "translate.modalTitle": "翻訳された文書",
     "translate.loading": "文書を翻訳中\u2026",
+    "translate.loadingPart": "部分 {n}/{total} を翻訳中…",
     "translate.disclaimer": "公式文書の機械翻訳であり、参考情報です \u2014 法的または規制遵守の目的では常に原文をご確認ください。",
     "sources.note": "この概要は、上記に記載された公式文書および規制当局の情報源をもとに作成されています。",
     "sources.lastReviewed": "コンテンツの最終作成・確認日:", "about.resourcesHeading": "主要参考資料", "about.resourcesIntro": "各国のページは、その国の政府・規制当局の公式文書に直接リンクしており、詳細な説明があるページでは、個々の主張ごとに番号付きの出典が示されています。これらの一次資料に加えて、以下の横断的なリソースは、世界各国のタクソノミーを理解し比較する際に役立ちます。", "about.resourcesColResource": "リソース", "about.resourcesColDescription": "説明", "about.resourcesColLink": "リンク", "footer.references": "出典", "country.generalResources": "一般参考資料",
@@ -12628,6 +12642,7 @@ const GST_I18N = {
     "search.title": "搜索", "search.close": "关闭",
     "translate.button": "翻译", "translate.modalTitle": "翻译文档",
     "translate.loading": "正在翻译此文档\u2026",
+    "translate.loadingPart": "正在翻译第 {n} 部分，共 {total} 部分…",
     "translate.disclaimer": "官方文档的机器翻译，仅供参考——法律或合规目的请始终参阅原文。",
     "sources.note": "本概述基于上文列出的官方文件和监管来源编写。",
     "sources.lastReviewed": "内容最后编制/审核时间：", "about.resourcesHeading": "主要参考资源", "about.resourcesIntro": "每个国家页面都直接链接到其官方政府/监管机构文件，如果页面包含详细说明，还会为每项具体陈述提供带编号的引用来源。除了这些主要来源外，以下这些跨领域资源有助于理解和比较全球各地的分类标准。", "about.resourcesColResource": "资源", "about.resourcesColDescription": "说明", "about.resourcesColLink": "链接", "footer.references": "来源", "country.generalResources": "通用参考资源",
@@ -12719,6 +12734,7 @@ const GST_I18N = {
     "search.title": "بحث", "search.close": "إغلاق",
     "translate.button": "ترجمة", "translate.modalTitle": "المستند المترجم",
     "translate.loading": "جارٍ ترجمة هذا المستند…",
+    "translate.loadingPart": "جارٍ ترجمة الجزء {n} من {total}…",
     "translate.disclaimer": "ترجمة آلية لمستند رسمي، للاطلاع فقط — يُرجى دائمًا الرجوع إلى النص الأصلي للأغراض القانونية أو التنظيمية.",
     "sources.note": "تم تجميع هذا الملخص من المستندات الرسمية والمصادر التنظيمية المدرجة أعلاه.",
     "sources.lastReviewed": "آخر تجميع/مراجعة للمحتوى:", "about.resourcesHeading": "أهم الموارد المرجعية", "about.resourcesIntro": "ترتبط كل صفحة بلد مباشرة بمستنداتها الرسمية الحكومية أو التنظيمية، وحيثما تتضمن الصفحة وصفًا تفصيليًا، تظهر إحالات مرقّمة لكل ادعاء محدد. إلى جانب هذه المصادر الأساسية، تُعد هذه الموارد الشاملة مفيدة لفهم التصنيفات ومقارنتها عالميًا.", "about.resourcesColResource": "المورد", "about.resourcesColDescription": "الوصف", "about.resourcesColLink": "الرابط", "footer.references": "المراجع", "country.generalResources": "موارد مرجعية عامة",
@@ -12810,6 +12826,7 @@ const GST_I18N = {
     "search.title": "Pesquisar", "search.close": "Fechar",
     "translate.button": "Traduzir", "translate.modalTitle": "Documento Traduzido",
     "translate.loading": "Traduzindo este documento…",
+    "translate.loadingPart": "Traduzindo a parte {n} de {total}…",
     "translate.disclaimer": "Tradução automática de um documento oficial, apenas para referência — consulte sempre o original para fins legais ou de conformidade.",
     "sources.note": "Este resumo foi compilado a partir dos documentos oficiais e fontes regulatórias listadas acima.",
     "sources.lastReviewed": "Conteúdo compilado/revisado pela última vez em:", "about.resourcesHeading": "Principais Recursos de Referência", "about.resourcesIntro": "Cada página de país tem links diretos para os seus documentos oficiais do governo/regulador e, quando a página inclui uma descrição detalhada, citações numeradas para cada afirmação específica. Além dessas fontes primárias, estes recursos transversais são úteis para entender e comparar taxonomias globalmente.", "about.resourcesColResource": "Recurso", "about.resourcesColDescription": "Descrição", "about.resourcesColLink": "Link", "footer.references": "Referências", "country.generalResources": "Recursos Gerais de Referência",
@@ -13761,6 +13778,11 @@ function renderTranslatedMarkdown(text) {
 // picker can re-request a translation without needing the button's dataset.
 let gstTranslateActiveUrl = null;
 let gstTranslateActiveTitle = null;
+// Bumped every time a new translation run starts (open, or language change).
+// A running chunk loop checks this before applying each chunk, so an old,
+// still-in-flight run can't overwrite a newer one's output if the reader
+// switches language mid-translation.
+let gstTranslateRequestId = 0;
 
 // Populates the modal's own language <select> from the same GST_LANGUAGES
 // list the sitewide language switcher uses (defined in global.js, loaded
@@ -13775,41 +13797,86 @@ function populateTranslateLangSelect() {
   sel.dataset.populated = "1";
 }
 
-function fetchTranslation(url, lang) {
+// Rough heuristic for "does this URL point at a PDF" — used to decide how to
+// embed the original document (see openTranslateModal below). Mirrors the
+// pattern already used elsewhere in the project for the same purpose.
+function looksLikePdf(url) {
+  return /\.pdf(\?|$)/i.test(url) || /\/pdf\//i.test(url) || /[?&](format|type)=pdf/i.test(url);
+}
+
+// Translates the WHOLE document, not just its first few pages: the backend
+// splits long documents into chunks server-side and this walks chunkIndex
+// 0, 1, 2, ... until totalChunks is reached, appending each chunk's
+// translation to the reader as it arrives and showing a "translating part X
+// of Y" note in between (each chunk is its own request, so nothing appears
+// until the first one finishes, then it grows chunk by chunk).
+async function fetchTranslation(url, lang) {
   const body = document.getElementById("translateModalBody");
   const t = (typeof gstT === "function") ? gstT : (k => k);
+  const myRequestId = ++gstTranslateRequestId;
+
   body.innerHTML = `<div class="translate-modal-loading"><span class="translate-spinner"></span><span>${t("translate.loading")}</span></div>`;
 
-  fetch("/api/translate-pdf", {
-    method: "POST",
-    headers: { "content-type": "application/json" },
-    body: JSON.stringify({ url, lang })
-  })
-    .then(res => res.json().catch(() => ({})).then(data => ({ ok: res.ok, data })))
-    .then(({ ok, data }) => {
-      if (!ok || !data || data.error) {
-        const debugLine = data && data.debugKind
-          ? `<p class="translate-modal-truncated-note">Debug: detected as "${data.debugKind}", sample: ${escapeAttr((data.debugSample || "").slice(0, 150))}</p>`
-          : "";
-        body.innerHTML = `<p class="translate-modal-error">${(data && data.error) || t("translate.errorGeneric")}</p>${debugLine}`;
-        return;
-      }
-      let html = renderTranslatedMarkdown(data.translatedText);
-      if (data.truncated) {
-        html += `<p class="translate-modal-truncated-note">${t("translate.truncatedNote")}</p>`;
-      }
-      body.innerHTML = html;
-    })
-    .catch(err => {
+  let accumulatedHtml = "";
+  let chunkIndex = 0;
+  let totalChunks = 1;
+
+  while (chunkIndex < totalChunks) {
+    if (myRequestId !== gstTranslateRequestId) return; // superseded by a newer run
+
+    if (chunkIndex > 0) {
+      const progressLabel = t("translate.loadingPart")
+        .replace("{n}", String(chunkIndex + 1))
+        .replace("{total}", String(totalChunks));
+      body.innerHTML = accumulatedHtml +
+        `<div class="translate-modal-loading translate-modal-progress"><span class="translate-spinner"></span><span>${progressLabel}</span></div>`;
+    }
+
+    let ok, data, fetchErr = null;
+    try {
+      const res = await fetch("/api/translate-pdf", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ url, lang, chunkIndex })
+      });
+      ok = res.ok;
+      data = await res.json().catch(() => ({}));
+    } catch (err) {
+      fetchErr = err;
+    }
+
+    if (myRequestId !== gstTranslateRequestId) return;
+
+    if (fetchErr) {
       // "Failed to fetch" means the request never reached a server at all —
       // typically because the site is being viewed as a local file (file://)
       // or a static host without the /api serverless functions, rather than
       // an actual Vercel deployment with ANTHROPIC_API_KEY set.
-      const looksUndeployed = /failed to fetch|networkerror|load failed/i.test(err.message || "");
-      body.innerHTML = looksUndeployed
-        ? `<p class="translate-modal-error">${t("translate.errorNotDeployed")}</p>`
-        : `<p class="translate-modal-error">${t("translate.errorGeneric")} (${err.message})</p>`;
-    });
+      const looksUndeployed = /failed to fetch|networkerror|load failed/i.test(fetchErr.message || "");
+      body.innerHTML = accumulatedHtml + `<p class="translate-modal-error">${
+        looksUndeployed ? t("translate.errorNotDeployed") : `${t("translate.errorGeneric")} (${fetchErr.message})`
+      }</p>`;
+      return;
+    }
+
+    if (!ok || !data || data.error) {
+      const debugLine = data && data.debugKind
+        ? `<p class="translate-modal-truncated-note">Debug: detected as "${data.debugKind}", sample: ${escapeAttr((data.debugSample || "").slice(0, 150))}</p>`
+        : "";
+      body.innerHTML = accumulatedHtml + `<p class="translate-modal-error">${(data && data.error) || t("translate.errorGeneric")}</p>${debugLine}`;
+      return;
+    }
+
+    accumulatedHtml += renderTranslatedMarkdown(data.translatedText);
+    totalChunks = data.totalChunks || 1;
+
+    if (data.isLastChunk && data.truncatedOverall) {
+      accumulatedHtml += `<p class="translate-modal-truncated-note">${t("translate.truncatedNote")}</p>`;
+    }
+
+    body.innerHTML = accumulatedHtml;
+    chunkIndex++;
+  }
 }
 
 function openTranslateModal(url, title) {
@@ -13826,9 +13893,17 @@ function openTranslateModal(url, title) {
   originalLink.href = url;
   // Embeds the original PDF/page alongside the translation so the reader can
   // check layout, tables and figures against the plain-text translation.
-  // Some sources block iframe embedding (X-Frame-Options) — the "View
-  // Original PDF" link in the footer remains as a fallback in that case.
-  if (frame) frame.src = url;
+  // Many official PDF hosts send an X-Frame-Options header that silently
+  // blocks direct iframe embedding (no visible error — it just stays blank),
+  // so PDFs are routed through Google's own viewer, which fetches and
+  // renders the file itself and isn't subject to the source's framing
+  // restriction. Non-PDF pages are embedded directly. The "View Original
+  // PDF" link in the footer remains as a fallback either way.
+  if (frame) {
+    frame.src = looksLikePdf(url)
+      ? "https://docs.google.com/gview?url=" + encodeURIComponent(url) + "&embedded=true"
+      : url;
+  }
   overlay.classList.add("open");
   document.body.style.overflow = "hidden";
 
@@ -13846,6 +13921,7 @@ function closeTranslateModal() {
   if (frame) frame.src = "about:blank";
   gstTranslateActiveUrl = null;
   gstTranslateActiveTitle = null;
+  gstTranslateRequestId++; // stops any still-running chunk loop from continuing to fetch after close
 }
 
 // Google's own translator reliably renders and translates PDFs (including
