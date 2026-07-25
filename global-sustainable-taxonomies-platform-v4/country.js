@@ -22,19 +22,22 @@ function icon(name) {
   return `<svg class="icon-svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${ICONS[name] || ""}</svg>`;
 }
 
-const DEFAULT_OBJECTIVES = [
-  { icon: "climate", label: "Climate Change Mitigation" },
-  { icon: "climate-adapt", label: "Climate Change Adaptation" },
-  { icon: "water", label: "Sustainable Use of Water & Marine Resources" },
-  { icon: "circular", label: "Transition to a Circular Economy" },
-  { icon: "pollution", label: "Pollution Prevention & Control" },
-  { icon: "biodiversity", label: "Protection of Biodiversity & Ecosystems" }
-];
-
-const GENERIC_ACTIVITIES = ["Renewable energy generation", "Low-carbon transport", "Sustainable buildings"];
+// When a country has its own national taxonomy *and* is also covered by a
+// regional overlay framework (ASEAN, UMOA, LAC Common Framework, etc.), make
+// that dual coverage visible right in the header — not just buried in the
+// "Also Applies" section further down the page.
+function overlayHeaderTags(entry) {
+  if (!entry || !entry.taxonomy || !entry.overlays || !entry.overlays.length) return "";
+  const names = entry.overlays
+    .map(o => o && o.name)
+    .filter(n => n && !entry.taxonomy.includes(n));
+  if (!names.length) return "";
+  return names.map(n => `<span class="header-overlay-tag">+ ${escapeHtml(n)}</span>`).join("");
+}
 
 function renderHeader(entry, status, label, name) {
   const taxonomyName = entry && entry.taxonomy ? entry.taxonomy : "No taxonomy established";
+  const overlayTags = overlayHeaderTags(entry);
   return `
     <section class="country-header-dark">
       <div class="country-header-inner">
@@ -42,14 +45,7 @@ function renderHeader(entry, status, label, name) {
           <div class="country-header-titles">
             <span class="badge badge-${status}">${label}</span>
             <h1>${name}</h1>
-            <p class="country-header-sub">${taxonomyName}${entry && entry.year ? " · Published " + entry.year : ""}</p>
-          </div>
-          <div class="lang-select-wrap">
-            <label for="langSelect">Language</label>
-            <select id="langSelect">
-              <option value="en">English</option>
-              <option value="native" disabled>Original language (coming soon)</option>
-            </select>
+            <p class="country-header-sub">${taxonomyName}${entry && entry.year ? " · Published " + entry.year : ""}${overlayTags}</p>
           </div>
         </div>
       </div>
@@ -74,15 +70,14 @@ function overviewTable(entry, name, label) {
 
 function objectivesSection(entry) {
   const objs = (entry && entry.objectives && entry.objectives.length) ? entry.objectives : null;
-  const list = objs || DEFAULT_OBJECTIVES;
-  let html = `<ol class="objective-pills${objs ? "" : " objective-pills-generic"}">`;
-  list.forEach((o, i) => {
+  if (!objs) {
+    return `<p class="data-not-available">Not yet documented for this taxonomy.</p>`;
+  }
+  let html = `<ol class="objective-pills">`;
+  objs.forEach((o, i) => {
     html += `<li><span class="pill-num">${i + 1}</span>${icon(o.icon)}<span>${o.label}</span></li>`;
   });
   html += `</ol>`;
-  if (!objs) {
-    html += `<p class="sample-note">Illustrative reference set — this taxonomy's specific objective structure has not yet been documented.</p>`;
-  }
   return html;
 }
 
@@ -97,13 +92,7 @@ function criteriaTable(entry) {
     });
     html += `</tbody></table>`;
   } else {
-    const activities = (entry && entry.sectors && entry.sectors.length) ? entry.sectors.slice(0, 3) : GENERIC_ACTIVITIES;
-    html += `<p class="sample-note">Illustrative example criteria — refer to the official documentation below for authoritative thresholds.</p>`;
-    html += `<table class="criteria-table"><thead><tr><th>Activity</th><th>Screening Criteria</th><th>Threshold</th><th>DNSH</th></tr></thead><tbody>`;
-    activities.forEach(a => {
-      html += `<tr><td>${a}</td><td>Meets sector emissions / technology pathway</td><td>See official guidance</td><td>Applies</td></tr>`;
-    });
-    html += `</tbody></table>`;
+    html += `<p class="data-not-available">Not yet documented for this taxonomy.</p>`;
   }
 
   if (entry && entry.source) {
@@ -116,6 +105,62 @@ function escapeAttr(s) {
   return String(s || "")
     .replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/'/g, "&#39;")
     .replace(/</g, "&lt;").replace(/>/g, "&gt;");
+}
+
+// Honest, site-wide date reflecting when the underlying dataset (data.js)
+// was last substantively compiled/reviewed — not a per-country claim we
+// can't verify, just a factual statement about this data file.
+const DATA_LAST_REVIEWED = "2026-07-20";
+
+// Turns inline "[1]", "[2]" markers written in fullDescription/features text into
+// small superscript links pointing at the matching entry in that country's
+// "citations" array (rendered via citationsListHtml). If the country has no
+// citations array, markers are left as plain text (shouldn't normally happen).
+function linkifyCitations(text) {
+  return String(text).replace(/\[(\d+)\]/g, (m, n) => `<sup class="citation-mark"><a href="#cite-${n}">[${n}]</a></sup>`);
+}
+
+function citationsListHtml(entry) {
+  if (!entry || !entry.citations || !entry.citations.length) return "";
+  const items = entry.citations.map(c =>
+    `<li id="cite-${c.id}">${c.id}. ${escapeHtml(c.label)}${c.url ? ` — <a href="${c.url}" target="_blank" rel="noopener">source ↗</a>` : ""}</li>`
+  ).join("");
+  return `<div class="citations-block"><h3>References</h3><ol class="citations-list">${items}</ol></div>`;
+}
+
+function sourcesNote() {
+  const t = (typeof gstT === "function") ? gstT : (k => k);
+  return `<p class="sources-note">${t("sources.note")} <span class="sources-reviewed">${t("sources.lastReviewed")} ${DATA_LAST_REVIEWED}</span></p>`;
+}
+
+// Cross-cutting reference resources — each one only actually documents a specific
+// taxonomy family, so it's only relevant on the country page(s) for that family,
+// not every country page. The full list (with descriptions) is always available
+// on the About page (about.html#key-resources) via the footer "References" link.
+const EU_TAXONOMY_COUNTRY_CODES = [
+  "AUT","BEL","BGR","HRV","CYP","CZE","DNK","EST","FIN","FRA","DEU","GRC",
+  "HUN","IRL","ITA","LVA","LTU","LUX","MLT","NLD","POL","PRT","ROU","SVK","SVN","ESP","SWE"
+];
+
+function relevantGeneralResources(iso, entry) {
+  const resources = [];
+  if (EU_TAXONOMY_COUNTRY_CODES.includes(iso)) {
+    resources.push({ name: "EU Taxonomy", url: "https://finance.ec.europa.eu/sustainable-finance/tools-and-standards/eu-taxonomy-sustainable-activities_en" });
+  }
+  if (iso === "KOR") {
+    resources.push({ name: "K-Taxonomy", url: "https://www.investkorea.org/upload/kotraexpress/2022/03/images/Special_Report.pdf" });
+  }
+  return resources;
+}
+
+function generalResourcesHtml(iso, entry) {
+  const resources = relevantGeneralResources(iso, entry);
+  if (!resources.length) return "";
+  const t = (typeof gstT === "function") ? gstT : (k => k);
+  const items = resources.map(r =>
+    `<li><a href="${r.url}" target="_blank" rel="noopener">${escapeHtml(r.name)} ↗</a></li>`
+  ).join("");
+  return `<div class="country-general-resources"><h3>${t("country.generalResources")}</h3><ul>${items}</ul></div>`;
 }
 
 function officialDocumentsSection(entry) {
@@ -365,12 +410,111 @@ function setupCompare(iso, name) {
   update();
 }
 
-function renderCountry() {
+/* ---------- Live content translation ----------
+   The global nav language selector (global.js) only translates static UI
+   chrome (nav labels, headings, buttons). The actual researched content for
+   each country — description paragraphs, environmental objective labels,
+   activity-table cells, overlay text — is still English in data.js, since
+   hand-translating that for 107 countries × every language isn't something
+   that can be done reliably at this scale. Instead, when a non-English
+   language is selected, we translate that content live via the same AI
+   backend that powers "Ask AI" and the document Translate button, cache the
+   result per country+language for the rest of the session, and fall back to
+   English (silently) if the request fails — the page never breaks, it just
+   stays in English if translation isn't available. Proper nouns and
+   anything that must stay verifiable against the original — country names,
+   taxonomy titles, regulator names, official document titles, citation
+   labels, and all URLs — are deliberately NOT sent through this pipeline. */
+
+const gstCountryTranslationCache = {};
+
+function extractTranslatable(entry) {
+  const items = [];
+  const manifest = [];
+  if (entry.note) { manifest.push({ type: "note" }); items.push(entry.note); }
+  (entry.fullDescription || []).forEach((p, i) => { manifest.push({ type: "fullDescription", i }); items.push(p); });
+  (entry.objectives || []).forEach((o, i) => { manifest.push({ type: "objective", i }); items.push(o.label || ""); });
+  (entry.activityList || []).forEach((a, i) => {
+    ["activity", "criteria", "threshold", "dnsh"].forEach(f => {
+      manifest.push({ type: "activity", i, f });
+      items.push(a[f] || "");
+    });
+  });
+  (entry.overlays || []).forEach((o, oi) => {
+    manifest.push({ type: "overlayScope", oi });
+    items.push(o.scope || "");
+    (o.features || []).forEach((feat, fi) => {
+      manifest.push({ type: "overlayFeature", oi, fi });
+      items.push(feat);
+    });
+  });
+  return { items, manifest };
+}
+
+function applyTranslated(entry, manifest, translated) {
+  const clone = JSON.parse(JSON.stringify(entry));
+  manifest.forEach((m, idx) => {
+    const val = translated[idx];
+    if (val === undefined || val === null) return;
+    if (m.type === "note") clone.note = val;
+    else if (m.type === "fullDescription") clone.fullDescription[m.i] = val;
+    else if (m.type === "objective") clone.objectives[m.i].label = val;
+    else if (m.type === "activity") clone.activityList[m.i][m.f] = val;
+    else if (m.type === "overlayScope") clone.overlays[m.oi].scope = val;
+    else if (m.type === "overlayFeature") clone.overlays[m.oi].features[m.fi] = val;
+  });
+  return clone;
+}
+
+async function maybeTranslateAndRender() {
+  const params = new URLSearchParams(window.location.search);
+  const iso = (params.get("iso") || "").toUpperCase();
+  const entry = window.TAXONOMY_DATA ? window.TAXONOMY_DATA[iso] : null;
+  const lang = (typeof gstCurrentLang !== "undefined" && gstCurrentLang) ? gstCurrentLang : "en";
+
+  if (!entry || lang === "en") { renderCountry(entry); return; }
+
+  const cacheKey = iso + "::" + lang;
+  if (gstCountryTranslationCache[cacheKey]) { renderCountry(gstCountryTranslationCache[cacheKey]); return; }
+
+  renderCountry(entry); // show English immediately, don't block on the network
+  const el = document.getElementById("countryContent");
+  const t = (typeof gstT === "function") ? gstT : (k => k);
+  const banner = document.createElement("div");
+  banner.className = "content-translating-banner";
+  banner.textContent = t("country.translatingContent");
+  if (el.firstChild) el.insertBefore(banner, el.firstChild); else el.appendChild(banner);
+
+  try {
+    const { items, manifest } = extractTranslatable(entry);
+    if (!items.length) return;
+    const res = await fetch("/api/translate-content", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ items, lang })
+    });
+    const data = await res.json();
+    if (!res.ok || !Array.isArray(data.translated)) throw new Error((data && data.error) || "Translation failed");
+
+    const translatedEntry = applyTranslated(entry, manifest, data.translated);
+    gstCountryTranslationCache[cacheKey] = translatedEntry;
+
+    // Only redraw if the user hasn't since navigated away or switched language again
+    const stillSameIso = (new URLSearchParams(window.location.search).get("iso") || "").toUpperCase() === iso;
+    const stillSameLang = (typeof gstCurrentLang !== "undefined" ? gstCurrentLang : "en") === lang;
+    if (stillSameIso && stillSameLang) renderCountry(translatedEntry);
+  } catch (err) {
+    console.warn("Country content translation failed, showing English content:", err);
+    // Already rendered English above — nothing more to do.
+  }
+}
+
+function renderCountry(entryOverride) {
   const params = new URLSearchParams(window.location.search);
   const iso = (params.get("iso") || "").toUpperCase();
   const headerEl = document.getElementById("countryHeader");
   const el = document.getElementById("countryContent");
-  const entry = window.TAXONOMY_DATA[iso];
+  const entry = entryOverride !== undefined ? entryOverride : window.TAXONOMY_DATA[iso];
 
   if (!iso) {
     headerEl.innerHTML = "";
@@ -390,14 +534,15 @@ function renderCountry() {
 
   if (entry && entry.fullDescription && entry.fullDescription.length) {
     left += `<div class="card-block"><h2>About the Taxonomy</h2>` +
-      entry.fullDescription.map(p => `<p class="section-text">${p}</p>`).join("") + `</div>`;
+      entry.fullDescription.map(p => `<p class="section-text">${linkifyCitations(p)}</p>`).join("") +
+      citationsListHtml(entry) + `</div>`;
   } else if (entry && entry.note) {
     left += `<div class="card-block"><h2>About the Taxonomy</h2><p class="section-text">${entry.note}</p><p class="sample-note">Limited public information compiled so far — this summary may be expanded as more sources are reviewed.</p></div>`;
   } else if (!entry) {
     left += `<div class="card-block"><p class="section-text">No taxonomy data has been compiled for this country yet.</p></div>`;
   }
 
-  left += `<div class="card-block"><h2>Official Documents</h2>${officialDocumentsSection(entry)}</div>`;
+  left += `<div class="card-block"><h2>Official Documents</h2>${officialDocumentsSection(entry)}${sourcesNote()}${generalResourcesHtml(iso, entry)}</div>`;
   left += `<div class="card-block"><h2>Environmental Objectives</h2>${objectivesSection(entry)}</div>`;
   left += `<div class="card-block"><h2>Technical Screening Criteria</h2>${criteriaTable(entry)}</div>`;
 
@@ -473,21 +618,28 @@ function renderTranslatedMarkdown(text) {
   return html || `<p>${escapeHtml(text)}</p>`;
 }
 
-function openTranslateModal(url, title) {
-  const overlay = document.getElementById("translateModalOverlay");
+// Tracks which document is currently open in the modal, so the language
+// picker can re-request a translation without needing the button's dataset.
+let gstTranslateActiveUrl = null;
+let gstTranslateActiveTitle = null;
+
+// Populates the modal's own language <select> from the same GST_LANGUAGES
+// list the sitewide language switcher uses (defined in global.js, loaded
+// before this file in every built page), so a document can be translated
+// into any language the site supports — independent of the site's current
+// display language. Only needs to run once per page load.
+function populateTranslateLangSelect() {
+  const sel = document.getElementById("translateLangSelect");
+  if (!sel || sel.dataset.populated) return;
+  if (typeof GST_LANGUAGES === "undefined") return;
+  sel.innerHTML = GST_LANGUAGES.map(l => `<option value="${l.code}">${l.label}</option>`).join("");
+  sel.dataset.populated = "1";
+}
+
+function fetchTranslation(url, lang) {
   const body = document.getElementById("translateModalBody");
-  const docTitleEl = document.getElementById("translateDocTitle");
-  const originalLink = document.getElementById("translateOriginalLink");
-
-  docTitleEl.textContent = title || "";
-  originalLink.href = url;
-  overlay.classList.add("open");
-  document.body.style.overflow = "hidden";
-
   const t = (typeof gstT === "function") ? gstT : (k => k);
   body.innerHTML = `<div class="translate-modal-loading"><span class="translate-spinner"></span><span>${t("translate.loading")}</span></div>`;
-
-  const lang = (typeof gstCurrentLang !== "undefined" && gstCurrentLang) ? gstCurrentLang : "en";
 
   fetch("/api/translate-pdf", {
     method: "POST",
@@ -507,9 +659,6 @@ function openTranslateModal(url, title) {
       if (data.truncated) {
         html += `<p class="translate-modal-truncated-note">${t("translate.truncatedNote")}</p>`;
       }
-      if (data.debugKind) {
-        html += `<p class="translate-modal-truncated-note">Debug: detected as "${data.debugKind}" (${data.sourceChars} chars), sample: ${escapeAttr((data.debugSample || "").slice(0, 200))}</p>`;
-      }
       body.innerHTML = html;
     })
     .catch(err => {
@@ -524,9 +673,40 @@ function openTranslateModal(url, title) {
     });
 }
 
+function openTranslateModal(url, title) {
+  const overlay = document.getElementById("translateModalOverlay");
+  const docTitleEl = document.getElementById("translateDocTitle");
+  const originalLink = document.getElementById("translateOriginalLink");
+  const frame = document.getElementById("translateOriginalFrame");
+  const langSelect = document.getElementById("translateLangSelect");
+
+  gstTranslateActiveUrl = url;
+  gstTranslateActiveTitle = title;
+
+  docTitleEl.textContent = title || "";
+  originalLink.href = url;
+  // Embeds the original PDF/page alongside the translation so the reader can
+  // check layout, tables and figures against the plain-text translation.
+  // Some sources block iframe embedding (X-Frame-Options) — the "View
+  // Original PDF" link in the footer remains as a fallback in that case.
+  if (frame) frame.src = url;
+  overlay.classList.add("open");
+  document.body.style.overflow = "hidden";
+
+  populateTranslateLangSelect();
+  const lang = (typeof gstCurrentLang !== "undefined" && gstCurrentLang) ? gstCurrentLang : "en";
+  if (langSelect) langSelect.value = lang;
+
+  fetchTranslation(url, lang);
+}
+
 function closeTranslateModal() {
   document.getElementById("translateModalOverlay").classList.remove("open");
   document.body.style.overflow = "";
+  const frame = document.getElementById("translateOriginalFrame");
+  if (frame) frame.src = "about:blank";
+  gstTranslateActiveUrl = null;
+  gstTranslateActiveTitle = null;
 }
 
 // Google's own translator reliably renders and translates PDFs (including
@@ -545,7 +725,7 @@ function setupTranslateModal() {
   document.addEventListener("click", e => {
     const btn = e.target.closest(".doc-translate-btn");
     if (btn) {
-      openInGoogleTranslate(btn.dataset.docUrl);
+      openTranslateModal(btn.dataset.docUrl, btn.dataset.docTitle);
       return;
     }
     if (e.target.id === "translateModalCloseBtn" || e.target.closest("#translateModalCloseBtn") ||
@@ -557,12 +737,21 @@ function setupTranslateModal() {
       closeTranslateModal();
     }
   });
+  document.addEventListener("change", e => {
+    if (e.target.id === "translateLangSelect" && gstTranslateActiveUrl) {
+      fetchTranslation(gstTranslateActiveUrl, e.target.value);
+    }
+  });
   document.addEventListener("keydown", e => {
     if (e.key === "Escape") closeTranslateModal();
   });
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  renderCountry();
+  maybeTranslateAndRender();
   setupTranslateModal();
+});
+
+document.addEventListener("gst-lang-changed", () => {
+  maybeTranslateAndRender();
 });
