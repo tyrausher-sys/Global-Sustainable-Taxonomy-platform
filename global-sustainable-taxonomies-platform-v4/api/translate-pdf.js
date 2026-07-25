@@ -69,6 +69,28 @@ function stripHtml(html) {
     .trim();
 }
 
+// Wraps fetch() with a hard timeout via AbortController. Without this, a
+// slow/hanging upstream request (or a slow fallback proxy) can run long
+// enough that Vercel kills the whole function before our own try/catch
+// ever gets to run — which produces a platform-level crash response that
+// isn't valid JSON, and the front end has no error text to show at all
+// (this is suspected to be exactly what was happening: two slow/blocked
+// fetch attempts in sequence eating the entire function time budget).
+async function fetchWithTimeout(url, options, timeoutMs) {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), timeoutMs);
+  try {
+    return await fetch(url, { ...options, signal: controller.signal });
+  } catch (err) {
+    if (err.name === "AbortError") {
+      throw new Error(`timed out after ${timeoutMs / 1000}s`);
+    }
+    throw err;
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
 async function fetchDirect(url) {
   // Some official sources (e.g. Korean government file-download endpoints)
   // reject requests that don't look like they came from a real browser
@@ -77,14 +99,14 @@ async function fetchDirect(url) {
   // aren't mistaken for a generic bot and blocked with a 403.
   let origin = "";
   try { origin = new URL(url).origin + "/"; } catch (e) { /* leave blank */ }
-  const upstream = await fetch(url, {
+  const upstream = await fetchWithTimeout(url, {
     headers: {
       "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
       "Accept": "application/pdf,text/html,application/xhtml+xml,*/*;q=0.8",
       "Accept-Language": "en-US,en;q=0.9",
       ...(origin ? { Referer: origin } : {})
     }
-  });
+  }, 12000);
   if (!upstream.ok) {
     throw new Error(`HTTP ${upstream.status}`);
   }
@@ -116,9 +138,9 @@ async function fetchDirect(url) {
 // IP ranges that aren't blocked the same way. Best-effort: if this also
 // fails, we fall through to the original, more informative error.
 async function fetchViaReaderProxy(url) {
-  const proxied = await fetch("https://r.jina.ai/" + url, {
+  const proxied = await fetchWithTimeout("https://r.jina.ai/" + url, {
     headers: { "Accept": "text/plain" }
-  });
+  }, 15000);
   if (!proxied.ok) {
     throw new Error(`reader proxy HTTP ${proxied.status}`);
   }
