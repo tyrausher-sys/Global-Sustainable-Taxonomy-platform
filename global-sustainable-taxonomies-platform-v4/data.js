@@ -142,27 +142,22 @@ window.TAXONOMY_DATA = {
       {
         "title": "Taxonomy Regulation (EU) 2020/852 — full legal text",
         "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32020R0852"
-      },
-      {
-        "title": "Taxonomy Regulation (EU) 2020/852 — official German-language text (PDF)",
-        "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/DE/TXT/PDF/?uri=CELEX:32020R0852"
+        "url": "https://eur-lex.europa.eu/eli/reg/2020/852/oj/eng"
       },
       {
         "title": "Climate Delegated Act (EU) 2021/2139 — technical screening criteria for climate mitigation & adaptation",
         "date": "4 Jun 2021",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32021R2139"
+        "url": "https://eur-lex.europa.eu/eli/reg_del/2021/2139/oj/eng"
       },
       {
         "title": "Complementary Climate Delegated Act (EU) 2022/1214 — nuclear & gas activities",
         "date": "9 Mar 2022",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R1214"
+        "url": "https://eur-lex.europa.eu/eli/reg_del/2022/1214/oj/eng"
       },
       {
         "title": "Environmental Delegated Act (EU) 2023/2486 — criteria for the 4 remaining objectives (water, circular economy, pollution, biodiversity)",
         "date": "27 Jun 2023",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R2486"
+        "url": "https://eur-lex.europa.eu/eli/reg_del/2023/2486/oj/eng"
       },
       {
         "title": "European Commission — EU taxonomy for sustainable activities (official overview & delegated acts hub)",
@@ -311,27 +306,22 @@ window.TAXONOMY_DATA = {
       {
         "title": "Taxonomy Regulation (EU) 2020/852 — full legal text",
         "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32020R0852"
-      },
-      {
-        "title": "Taxonomy Regulation (EU) 2020/852 — official Dutch-language text (PDF)",
-        "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/NL/TXT/PDF/?uri=CELEX:32020R0852"
+        "url": "https://eur-lex.europa.eu/eli/reg/2020/852/oj/eng"
       },
       {
         "title": "Climate Delegated Act (EU) 2021/2139 — technical screening criteria for climate mitigation & adaptation",
         "date": "4 Jun 2021",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32021R2139"
+        "url": "https://eur-lex.europa.eu/eli/reg_del/2021/2139/oj/eng"
       },
       {
         "title": "Complementary Climate Delegated Act (EU) 2022/1214 — nuclear & gas activities",
         "date": "9 Mar 2022",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R1214"
+        "url": "https://eur-lex.europa.eu/eli/reg_del/2022/1214/oj/eng"
       },
       {
         "title": "Environmental Delegated Act (EU) 2023/2486 — criteria for the 4 remaining objectives (water, circular economy, pollution, biodiversity)",
         "date": "27 Jun 2023",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R2486"
+        "url": "https://eur-lex.europa.eu/eli/reg_del/2023/2486/oj/eng"
       },
       {
         "title": "European Commission — EU taxonomy for sustainable activities (official overview & delegated acts hub)",
@@ -480,27 +470,22 @@ window.TAXONOMY_DATA = {
       {
         "title": "Taxonomy Regulation (EU) 2020/852 — full legal text",
         "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32020R0852"
-      },
-      {
-        "title": "Taxonomy Regulation (EU) 2020/852 — official Bulgarian-language text (PDF)",
-        "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/BG/TXT/PDF/?uri=CELEX:32020R0852"
+        "url": "https://eur-lex.europa.eu/eli/reg/2020/852/oj/eng"
       },
       {
         "title": "Climate Delegated Act (EU) 2021/2139 — technical screening criteria for climate mitigation & adaptation",
         "date": "4 Jun 2021",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32021R2139"
+        "url": "https://eur-lex.europa.eu/eli/reg_del/2021/2139/oj/eng"
       },
       {
         "title": "Complementary Climate Delegated Act (EU) 2022/1214 — nuclear & gas activities",
         "date": "9 Mar 2022",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R1214"
+        "url": "https://eur-lex.europa.eu/eli/reg_del/2022/1214/oj/eng"
       },
       {
         "title": "Environmental Delegated Act (EU) 2023/2486 — criteria for the 4 remaining objectives (water, circular economy, pollution, biodiversity)",
         "date": "27 Jun 2023",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R2486"
+        "url": "https://eur-lex.europa.eu/eli/reg_del/2023/2486/oj/eng"
       },
       {
         "title": "European Commission — EU taxonomy for sustainable activities (official overview & delegated acts hub)",
@@ -649,27 +634,22 @@ window.TAXONOMY_DATA = {
       {
         "title": "Taxonomy Regulation (EU) 2020/852 — full legal text",
         "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32020R0852"
-      },
-      {
-        "title": "Taxonomy Regulation (EU) 2020/852 — official Croatian-language text (PDF)",
-        "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/HR/TXT/PDF/?uri=CELEX:32020R0852"
+        "url": "https://eur-lex.europa.eu/eli/reg/2020/852/oj/eng"
       },
       {
         "title": "Climate Delegated Act (EU) 2021/2139 — technical screening criteria for climate mitigation & adaptation",
         "date": "4 Jun 2021",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32021R2139"
+        "url": "https://eur-lex.europa.eu/eli/reg_del/2021/2139/oj/eng"
       },
       {
         "title": "Complementary Climate Delegated Act (EU) 2022/1214 — nuclear & gas activities",
         "date": "9 Mar 2022",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R1214"
+        "url": "https://eur-lex.europa.eu/eli/reg_del/2022/1214/oj/eng"
       },
       {
         "title": "Environmental Delegated Act (EU) 2023/2486 — criteria for the 4 remaining objectives (water, circular economy, pollution, biodiversity)",
         "date": "27 Jun 2023",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R2486"
+        "url": "https://eur-lex.europa.eu/eli/reg_del/2023/2486/oj/eng"
       },
       {
         "title": "European Commission — EU taxonomy for sustainable activities (official overview & delegated acts hub)",
@@ -818,27 +798,22 @@ window.TAXONOMY_DATA = {
       {
         "title": "Taxonomy Regulation (EU) 2020/852 — full legal text",
         "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32020R0852"
-      },
-      {
-        "title": "Taxonomy Regulation (EU) 2020/852 — official Greek-language text (PDF)",
-        "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/EL/TXT/PDF/?uri=CELEX:32020R0852"
+        "url": "https://eur-lex.europa.eu/eli/reg/2020/852/oj/eng"
       },
       {
         "title": "Climate Delegated Act (EU) 2021/2139 — technical screening criteria for climate mitigation & adaptation",
         "date": "4 Jun 2021",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32021R2139"
+        "url": "https://eur-lex.europa.eu/eli/reg_del/2021/2139/oj/eng"
       },
       {
         "title": "Complementary Climate Delegated Act (EU) 2022/1214 — nuclear & gas activities",
         "date": "9 Mar 2022",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R1214"
+        "url": "https://eur-lex.europa.eu/eli/reg_del/2022/1214/oj/eng"
       },
       {
         "title": "Environmental Delegated Act (EU) 2023/2486 — criteria for the 4 remaining objectives (water, circular economy, pollution, biodiversity)",
         "date": "27 Jun 2023",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R2486"
+        "url": "https://eur-lex.europa.eu/eli/reg_del/2023/2486/oj/eng"
       },
       {
         "title": "European Commission — EU taxonomy for sustainable activities (official overview & delegated acts hub)",
@@ -987,27 +962,22 @@ window.TAXONOMY_DATA = {
       {
         "title": "Taxonomy Regulation (EU) 2020/852 — full legal text",
         "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32020R0852"
-      },
-      {
-        "title": "Taxonomy Regulation (EU) 2020/852 — official Czech-language text (PDF)",
-        "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/CS/TXT/PDF/?uri=CELEX:32020R0852"
+        "url": "https://eur-lex.europa.eu/eli/reg/2020/852/oj/eng"
       },
       {
         "title": "Climate Delegated Act (EU) 2021/2139 — technical screening criteria for climate mitigation & adaptation",
         "date": "4 Jun 2021",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32021R2139"
+        "url": "https://eur-lex.europa.eu/eli/reg_del/2021/2139/oj/eng"
       },
       {
         "title": "Complementary Climate Delegated Act (EU) 2022/1214 — nuclear & gas activities",
         "date": "9 Mar 2022",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R1214"
+        "url": "https://eur-lex.europa.eu/eli/reg_del/2022/1214/oj/eng"
       },
       {
         "title": "Environmental Delegated Act (EU) 2023/2486 — criteria for the 4 remaining objectives (water, circular economy, pollution, biodiversity)",
         "date": "27 Jun 2023",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R2486"
+        "url": "https://eur-lex.europa.eu/eli/reg_del/2023/2486/oj/eng"
       },
       {
         "title": "European Commission — EU taxonomy for sustainable activities (official overview & delegated acts hub)",
@@ -1156,27 +1126,22 @@ window.TAXONOMY_DATA = {
       {
         "title": "Taxonomy Regulation (EU) 2020/852 — full legal text",
         "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32020R0852"
-      },
-      {
-        "title": "Taxonomy Regulation (EU) 2020/852 — official Danish-language text (PDF)",
-        "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/DA/TXT/PDF/?uri=CELEX:32020R0852"
+        "url": "https://eur-lex.europa.eu/eli/reg/2020/852/oj/eng"
       },
       {
         "title": "Climate Delegated Act (EU) 2021/2139 — technical screening criteria for climate mitigation & adaptation",
         "date": "4 Jun 2021",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32021R2139"
+        "url": "https://eur-lex.europa.eu/eli/reg_del/2021/2139/oj/eng"
       },
       {
         "title": "Complementary Climate Delegated Act (EU) 2022/1214 — nuclear & gas activities",
         "date": "9 Mar 2022",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R1214"
+        "url": "https://eur-lex.europa.eu/eli/reg_del/2022/1214/oj/eng"
       },
       {
         "title": "Environmental Delegated Act (EU) 2023/2486 — criteria for the 4 remaining objectives (water, circular economy, pollution, biodiversity)",
         "date": "27 Jun 2023",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R2486"
+        "url": "https://eur-lex.europa.eu/eli/reg_del/2023/2486/oj/eng"
       },
       {
         "title": "European Commission — EU taxonomy for sustainable activities (official overview & delegated acts hub)",
@@ -1325,27 +1290,22 @@ window.TAXONOMY_DATA = {
       {
         "title": "Taxonomy Regulation (EU) 2020/852 — full legal text",
         "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32020R0852"
-      },
-      {
-        "title": "Taxonomy Regulation (EU) 2020/852 — official Estonian-language text (PDF)",
-        "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/ET/TXT/PDF/?uri=CELEX:32020R0852"
+        "url": "https://eur-lex.europa.eu/eli/reg/2020/852/oj/eng"
       },
       {
         "title": "Climate Delegated Act (EU) 2021/2139 — technical screening criteria for climate mitigation & adaptation",
         "date": "4 Jun 2021",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32021R2139"
+        "url": "https://eur-lex.europa.eu/eli/reg_del/2021/2139/oj/eng"
       },
       {
         "title": "Complementary Climate Delegated Act (EU) 2022/1214 — nuclear & gas activities",
         "date": "9 Mar 2022",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R1214"
+        "url": "https://eur-lex.europa.eu/eli/reg_del/2022/1214/oj/eng"
       },
       {
         "title": "Environmental Delegated Act (EU) 2023/2486 — criteria for the 4 remaining objectives (water, circular economy, pollution, biodiversity)",
         "date": "27 Jun 2023",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R2486"
+        "url": "https://eur-lex.europa.eu/eli/reg_del/2023/2486/oj/eng"
       },
       {
         "title": "European Commission — EU taxonomy for sustainable activities (official overview & delegated acts hub)",
@@ -1494,27 +1454,22 @@ window.TAXONOMY_DATA = {
       {
         "title": "Taxonomy Regulation (EU) 2020/852 — full legal text",
         "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32020R0852"
-      },
-      {
-        "title": "Taxonomy Regulation (EU) 2020/852 — official Finnish-language text (PDF)",
-        "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/FI/TXT/PDF/?uri=CELEX:32020R0852"
+        "url": "https://eur-lex.europa.eu/eli/reg/2020/852/oj/eng"
       },
       {
         "title": "Climate Delegated Act (EU) 2021/2139 — technical screening criteria for climate mitigation & adaptation",
         "date": "4 Jun 2021",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32021R2139"
+        "url": "https://eur-lex.europa.eu/eli/reg_del/2021/2139/oj/eng"
       },
       {
         "title": "Complementary Climate Delegated Act (EU) 2022/1214 — nuclear & gas activities",
         "date": "9 Mar 2022",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R1214"
+        "url": "https://eur-lex.europa.eu/eli/reg_del/2022/1214/oj/eng"
       },
       {
         "title": "Environmental Delegated Act (EU) 2023/2486 — criteria for the 4 remaining objectives (water, circular economy, pollution, biodiversity)",
         "date": "27 Jun 2023",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R2486"
+        "url": "https://eur-lex.europa.eu/eli/reg_del/2023/2486/oj/eng"
       },
       {
         "title": "European Commission — EU taxonomy for sustainable activities (official overview & delegated acts hub)",
@@ -1663,27 +1618,22 @@ window.TAXONOMY_DATA = {
       {
         "title": "Taxonomy Regulation (EU) 2020/852 — full legal text",
         "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32020R0852"
-      },
-      {
-        "title": "Taxonomy Regulation (EU) 2020/852 — official French-language text (PDF)",
-        "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/FR/TXT/PDF/?uri=CELEX:32020R0852"
+        "url": "https://eur-lex.europa.eu/eli/reg/2020/852/oj/eng"
       },
       {
         "title": "Climate Delegated Act (EU) 2021/2139 — technical screening criteria for climate mitigation & adaptation",
         "date": "4 Jun 2021",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32021R2139"
+        "url": "https://eur-lex.europa.eu/eli/reg_del/2021/2139/oj/eng"
       },
       {
         "title": "Complementary Climate Delegated Act (EU) 2022/1214 — nuclear & gas activities",
         "date": "9 Mar 2022",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R1214"
+        "url": "https://eur-lex.europa.eu/eli/reg_del/2022/1214/oj/eng"
       },
       {
         "title": "Environmental Delegated Act (EU) 2023/2486 — criteria for the 4 remaining objectives (water, circular economy, pollution, biodiversity)",
         "date": "27 Jun 2023",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R2486"
+        "url": "https://eur-lex.europa.eu/eli/reg_del/2023/2486/oj/eng"
       },
       {
         "title": "European Commission — EU taxonomy for sustainable activities (official overview & delegated acts hub)",
@@ -1832,27 +1782,22 @@ window.TAXONOMY_DATA = {
       {
         "title": "Taxonomy Regulation (EU) 2020/852 — full legal text",
         "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32020R0852"
-      },
-      {
-        "title": "Taxonomy Regulation (EU) 2020/852 — official German-language text (PDF)",
-        "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/DE/TXT/PDF/?uri=CELEX:32020R0852"
+        "url": "https://eur-lex.europa.eu/eli/reg/2020/852/oj/eng"
       },
       {
         "title": "Climate Delegated Act (EU) 2021/2139 — technical screening criteria for climate mitigation & adaptation",
         "date": "4 Jun 2021",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32021R2139"
+        "url": "https://eur-lex.europa.eu/eli/reg_del/2021/2139/oj/eng"
       },
       {
         "title": "Complementary Climate Delegated Act (EU) 2022/1214 — nuclear & gas activities",
         "date": "9 Mar 2022",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R1214"
+        "url": "https://eur-lex.europa.eu/eli/reg_del/2022/1214/oj/eng"
       },
       {
         "title": "Environmental Delegated Act (EU) 2023/2486 — criteria for the 4 remaining objectives (water, circular economy, pollution, biodiversity)",
         "date": "27 Jun 2023",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R2486"
+        "url": "https://eur-lex.europa.eu/eli/reg_del/2023/2486/oj/eng"
       },
       {
         "title": "European Commission — EU taxonomy for sustainable activities (official overview & delegated acts hub)",
@@ -2001,27 +1946,22 @@ window.TAXONOMY_DATA = {
       {
         "title": "Taxonomy Regulation (EU) 2020/852 — full legal text",
         "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32020R0852"
-      },
-      {
-        "title": "Taxonomy Regulation (EU) 2020/852 — official Greek-language text (PDF)",
-        "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/EL/TXT/PDF/?uri=CELEX:32020R0852"
+        "url": "https://eur-lex.europa.eu/eli/reg/2020/852/oj/eng"
       },
       {
         "title": "Climate Delegated Act (EU) 2021/2139 — technical screening criteria for climate mitigation & adaptation",
         "date": "4 Jun 2021",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32021R2139"
+        "url": "https://eur-lex.europa.eu/eli/reg_del/2021/2139/oj/eng"
       },
       {
         "title": "Complementary Climate Delegated Act (EU) 2022/1214 — nuclear & gas activities",
         "date": "9 Mar 2022",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R1214"
+        "url": "https://eur-lex.europa.eu/eli/reg_del/2022/1214/oj/eng"
       },
       {
         "title": "Environmental Delegated Act (EU) 2023/2486 — criteria for the 4 remaining objectives (water, circular economy, pollution, biodiversity)",
         "date": "27 Jun 2023",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R2486"
+        "url": "https://eur-lex.europa.eu/eli/reg_del/2023/2486/oj/eng"
       },
       {
         "title": "European Commission — EU taxonomy for sustainable activities (official overview & delegated acts hub)",
@@ -2170,27 +2110,22 @@ window.TAXONOMY_DATA = {
       {
         "title": "Taxonomy Regulation (EU) 2020/852 — full legal text",
         "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32020R0852"
-      },
-      {
-        "title": "Taxonomy Regulation (EU) 2020/852 — official Hungarian-language text (PDF)",
-        "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/HU/TXT/PDF/?uri=CELEX:32020R0852"
+        "url": "https://eur-lex.europa.eu/eli/reg/2020/852/oj/eng"
       },
       {
         "title": "Climate Delegated Act (EU) 2021/2139 — technical screening criteria for climate mitigation & adaptation",
         "date": "4 Jun 2021",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32021R2139"
+        "url": "https://eur-lex.europa.eu/eli/reg_del/2021/2139/oj/eng"
       },
       {
         "title": "Complementary Climate Delegated Act (EU) 2022/1214 — nuclear & gas activities",
         "date": "9 Mar 2022",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R1214"
+        "url": "https://eur-lex.europa.eu/eli/reg_del/2022/1214/oj/eng"
       },
       {
         "title": "Environmental Delegated Act (EU) 2023/2486 — criteria for the 4 remaining objectives (water, circular economy, pollution, biodiversity)",
         "date": "27 Jun 2023",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R2486"
+        "url": "https://eur-lex.europa.eu/eli/reg_del/2023/2486/oj/eng"
       },
       {
         "title": "European Commission — EU taxonomy for sustainable activities (official overview & delegated acts hub)",
@@ -2209,14 +2144,9 @@ window.TAXONOMY_DATA = {
     "source": "https://finance.ec.europa.eu/sustainable-finance/tools-and-standards/eu-taxonomy-sustainable-activities_en",
     "officialDocuments": [
       {
-        "title": "Taxonomy Regulation (EU) 2020/852 — full legal text",
+        "title": "Taxonomy Regulation (EU) 2020/852 — full legal text (EUR-Lex)",
         "date": "2020",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32020R0852&from=EN"
-      },
-      {
-        "title": "Taxonomy Regulation (EU) 2020/852 — official Irish-language text (PDF)",
-        "date": "2020",
-        "url": "https://eur-lex.europa.eu/legal-content/GA/TXT/PDF/?uri=CELEX:32020R0852"
+        "url": "https://eur-lex.europa.eu/eli/reg/2020/852/oj/eng"
       }
     ],
     "overlays": [],
@@ -2351,22 +2281,22 @@ window.TAXONOMY_DATA = {
       {
         "title": "Taxonomy Regulation (EU) 2020/852 — full legal text",
         "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32020R0852"
+        "url": "https://eur-lex.europa.eu/eli/reg/2020/852/oj/eng"
       },
       {
         "title": "Climate Delegated Act (EU) 2021/2139 — technical screening criteria for climate mitigation & adaptation",
         "date": "4 Jun 2021",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32021R2139"
+        "url": "https://eur-lex.europa.eu/eli/reg_del/2021/2139/oj/eng"
       },
       {
         "title": "Complementary Climate Delegated Act (EU) 2022/1214 — nuclear & gas activities",
         "date": "9 Mar 2022",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R1214"
+        "url": "https://eur-lex.europa.eu/eli/reg_del/2022/1214/oj/eng"
       },
       {
         "title": "Environmental Delegated Act (EU) 2023/2486 — criteria for the 4 remaining objectives (water, circular economy, pollution, biodiversity)",
         "date": "27 Jun 2023",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R2486"
+        "url": "https://eur-lex.europa.eu/eli/reg_del/2023/2486/oj/eng"
       },
       {
         "title": "European Commission — EU taxonomy for sustainable activities (official overview & delegated acts hub)",
@@ -2515,27 +2445,22 @@ window.TAXONOMY_DATA = {
       {
         "title": "Taxonomy Regulation (EU) 2020/852 — full legal text",
         "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32020R0852"
-      },
-      {
-        "title": "Taxonomy Regulation (EU) 2020/852 — official Italian-language text (PDF)",
-        "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/IT/TXT/PDF/?uri=CELEX:32020R0852"
+        "url": "https://eur-lex.europa.eu/eli/reg/2020/852/oj/eng"
       },
       {
         "title": "Climate Delegated Act (EU) 2021/2139 — technical screening criteria for climate mitigation & adaptation",
         "date": "4 Jun 2021",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32021R2139"
+        "url": "https://eur-lex.europa.eu/eli/reg_del/2021/2139/oj/eng"
       },
       {
         "title": "Complementary Climate Delegated Act (EU) 2022/1214 — nuclear & gas activities",
         "date": "9 Mar 2022",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R1214"
+        "url": "https://eur-lex.europa.eu/eli/reg_del/2022/1214/oj/eng"
       },
       {
         "title": "Environmental Delegated Act (EU) 2023/2486 — criteria for the 4 remaining objectives (water, circular economy, pollution, biodiversity)",
         "date": "27 Jun 2023",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R2486"
+        "url": "https://eur-lex.europa.eu/eli/reg_del/2023/2486/oj/eng"
       },
       {
         "title": "European Commission — EU taxonomy for sustainable activities (official overview & delegated acts hub)",
@@ -2684,27 +2609,22 @@ window.TAXONOMY_DATA = {
       {
         "title": "Taxonomy Regulation (EU) 2020/852 — full legal text",
         "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32020R0852"
-      },
-      {
-        "title": "Taxonomy Regulation (EU) 2020/852 — official Latvian-language text (PDF)",
-        "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/LV/TXT/PDF/?uri=CELEX:32020R0852"
+        "url": "https://eur-lex.europa.eu/eli/reg/2020/852/oj/eng"
       },
       {
         "title": "Climate Delegated Act (EU) 2021/2139 — technical screening criteria for climate mitigation & adaptation",
         "date": "4 Jun 2021",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32021R2139"
+        "url": "https://eur-lex.europa.eu/eli/reg_del/2021/2139/oj/eng"
       },
       {
         "title": "Complementary Climate Delegated Act (EU) 2022/1214 — nuclear & gas activities",
         "date": "9 Mar 2022",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R1214"
+        "url": "https://eur-lex.europa.eu/eli/reg_del/2022/1214/oj/eng"
       },
       {
         "title": "Environmental Delegated Act (EU) 2023/2486 — criteria for the 4 remaining objectives (water, circular economy, pollution, biodiversity)",
         "date": "27 Jun 2023",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R2486"
+        "url": "https://eur-lex.europa.eu/eli/reg_del/2023/2486/oj/eng"
       },
       {
         "title": "European Commission — EU taxonomy for sustainable activities (official overview & delegated acts hub)",
@@ -2853,27 +2773,22 @@ window.TAXONOMY_DATA = {
       {
         "title": "Taxonomy Regulation (EU) 2020/852 — full legal text",
         "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32020R0852"
-      },
-      {
-        "title": "Taxonomy Regulation (EU) 2020/852 — official Lithuanian-language text (PDF)",
-        "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/LT/TXT/PDF/?uri=CELEX:32020R0852"
+        "url": "https://eur-lex.europa.eu/eli/reg/2020/852/oj/eng"
       },
       {
         "title": "Climate Delegated Act (EU) 2021/2139 — technical screening criteria for climate mitigation & adaptation",
         "date": "4 Jun 2021",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32021R2139"
+        "url": "https://eur-lex.europa.eu/eli/reg_del/2021/2139/oj/eng"
       },
       {
         "title": "Complementary Climate Delegated Act (EU) 2022/1214 — nuclear & gas activities",
         "date": "9 Mar 2022",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R1214"
+        "url": "https://eur-lex.europa.eu/eli/reg_del/2022/1214/oj/eng"
       },
       {
         "title": "Environmental Delegated Act (EU) 2023/2486 — criteria for the 4 remaining objectives (water, circular economy, pollution, biodiversity)",
         "date": "27 Jun 2023",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R2486"
+        "url": "https://eur-lex.europa.eu/eli/reg_del/2023/2486/oj/eng"
       },
       {
         "title": "European Commission — EU taxonomy for sustainable activities (official overview & delegated acts hub)",
@@ -3022,27 +2937,22 @@ window.TAXONOMY_DATA = {
       {
         "title": "Taxonomy Regulation (EU) 2020/852 — full legal text",
         "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32020R0852"
-      },
-      {
-        "title": "Taxonomy Regulation (EU) 2020/852 — official French-language text (PDF)",
-        "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/FR/TXT/PDF/?uri=CELEX:32020R0852"
+        "url": "https://eur-lex.europa.eu/eli/reg/2020/852/oj/eng"
       },
       {
         "title": "Climate Delegated Act (EU) 2021/2139 — technical screening criteria for climate mitigation & adaptation",
         "date": "4 Jun 2021",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32021R2139"
+        "url": "https://eur-lex.europa.eu/eli/reg_del/2021/2139/oj/eng"
       },
       {
         "title": "Complementary Climate Delegated Act (EU) 2022/1214 — nuclear & gas activities",
         "date": "9 Mar 2022",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R1214"
+        "url": "https://eur-lex.europa.eu/eli/reg_del/2022/1214/oj/eng"
       },
       {
         "title": "Environmental Delegated Act (EU) 2023/2486 — criteria for the 4 remaining objectives (water, circular economy, pollution, biodiversity)",
         "date": "27 Jun 2023",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R2486"
+        "url": "https://eur-lex.europa.eu/eli/reg_del/2023/2486/oj/eng"
       },
       {
         "title": "European Commission — EU taxonomy for sustainable activities (official overview & delegated acts hub)",
@@ -3191,27 +3101,22 @@ window.TAXONOMY_DATA = {
       {
         "title": "Taxonomy Regulation (EU) 2020/852 — full legal text",
         "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32020R0852"
-      },
-      {
-        "title": "Taxonomy Regulation (EU) 2020/852 — official Maltese-language text (PDF)",
-        "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/MT/TXT/PDF/?uri=CELEX:32020R0852"
+        "url": "https://eur-lex.europa.eu/eli/reg/2020/852/oj/eng"
       },
       {
         "title": "Climate Delegated Act (EU) 2021/2139 — technical screening criteria for climate mitigation & adaptation",
         "date": "4 Jun 2021",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32021R2139"
+        "url": "https://eur-lex.europa.eu/eli/reg_del/2021/2139/oj/eng"
       },
       {
         "title": "Complementary Climate Delegated Act (EU) 2022/1214 — nuclear & gas activities",
         "date": "9 Mar 2022",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R1214"
+        "url": "https://eur-lex.europa.eu/eli/reg_del/2022/1214/oj/eng"
       },
       {
         "title": "Environmental Delegated Act (EU) 2023/2486 — criteria for the 4 remaining objectives (water, circular economy, pollution, biodiversity)",
         "date": "27 Jun 2023",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R2486"
+        "url": "https://eur-lex.europa.eu/eli/reg_del/2023/2486/oj/eng"
       },
       {
         "title": "European Commission — EU taxonomy for sustainable activities (official overview & delegated acts hub)",
@@ -3360,27 +3265,22 @@ window.TAXONOMY_DATA = {
       {
         "title": "Taxonomy Regulation (EU) 2020/852 — full legal text",
         "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32020R0852"
-      },
-      {
-        "title": "Taxonomy Regulation (EU) 2020/852 — official Dutch-language text (PDF)",
-        "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/NL/TXT/PDF/?uri=CELEX:32020R0852"
+        "url": "https://eur-lex.europa.eu/eli/reg/2020/852/oj/eng"
       },
       {
         "title": "Climate Delegated Act (EU) 2021/2139 — technical screening criteria for climate mitigation & adaptation",
         "date": "4 Jun 2021",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32021R2139"
+        "url": "https://eur-lex.europa.eu/eli/reg_del/2021/2139/oj/eng"
       },
       {
         "title": "Complementary Climate Delegated Act (EU) 2022/1214 — nuclear & gas activities",
         "date": "9 Mar 2022",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R1214"
+        "url": "https://eur-lex.europa.eu/eli/reg_del/2022/1214/oj/eng"
       },
       {
         "title": "Environmental Delegated Act (EU) 2023/2486 — criteria for the 4 remaining objectives (water, circular economy, pollution, biodiversity)",
         "date": "27 Jun 2023",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R2486"
+        "url": "https://eur-lex.europa.eu/eli/reg_del/2023/2486/oj/eng"
       },
       {
         "title": "European Commission — EU taxonomy for sustainable activities (official overview & delegated acts hub)",
@@ -3529,27 +3429,22 @@ window.TAXONOMY_DATA = {
       {
         "title": "Taxonomy Regulation (EU) 2020/852 — full legal text",
         "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32020R0852"
-      },
-      {
-        "title": "Taxonomy Regulation (EU) 2020/852 — official Polish-language text (PDF)",
-        "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/PL/TXT/PDF/?uri=CELEX:32020R0852"
+        "url": "https://eur-lex.europa.eu/eli/reg/2020/852/oj/eng"
       },
       {
         "title": "Climate Delegated Act (EU) 2021/2139 — technical screening criteria for climate mitigation & adaptation",
         "date": "4 Jun 2021",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32021R2139"
+        "url": "https://eur-lex.europa.eu/eli/reg_del/2021/2139/oj/eng"
       },
       {
         "title": "Complementary Climate Delegated Act (EU) 2022/1214 — nuclear & gas activities",
         "date": "9 Mar 2022",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R1214"
+        "url": "https://eur-lex.europa.eu/eli/reg_del/2022/1214/oj/eng"
       },
       {
         "title": "Environmental Delegated Act (EU) 2023/2486 — criteria for the 4 remaining objectives (water, circular economy, pollution, biodiversity)",
         "date": "27 Jun 2023",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R2486"
+        "url": "https://eur-lex.europa.eu/eli/reg_del/2023/2486/oj/eng"
       },
       {
         "title": "European Commission — EU taxonomy for sustainable activities (official overview & delegated acts hub)",
@@ -3698,27 +3593,22 @@ window.TAXONOMY_DATA = {
       {
         "title": "Taxonomy Regulation (EU) 2020/852 — full legal text",
         "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32020R0852"
-      },
-      {
-        "title": "Taxonomy Regulation (EU) 2020/852 — official Portuguese-language text (PDF)",
-        "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/PT/TXT/PDF/?uri=CELEX:32020R0852"
+        "url": "https://eur-lex.europa.eu/eli/reg/2020/852/oj/eng"
       },
       {
         "title": "Climate Delegated Act (EU) 2021/2139 — technical screening criteria for climate mitigation & adaptation",
         "date": "4 Jun 2021",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32021R2139"
+        "url": "https://eur-lex.europa.eu/eli/reg_del/2021/2139/oj/eng"
       },
       {
         "title": "Complementary Climate Delegated Act (EU) 2022/1214 — nuclear & gas activities",
         "date": "9 Mar 2022",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R1214"
+        "url": "https://eur-lex.europa.eu/eli/reg_del/2022/1214/oj/eng"
       },
       {
         "title": "Environmental Delegated Act (EU) 2023/2486 — criteria for the 4 remaining objectives (water, circular economy, pollution, biodiversity)",
         "date": "27 Jun 2023",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R2486"
+        "url": "https://eur-lex.europa.eu/eli/reg_del/2023/2486/oj/eng"
       },
       {
         "title": "European Commission — EU taxonomy for sustainable activities (official overview & delegated acts hub)",
@@ -3867,27 +3757,22 @@ window.TAXONOMY_DATA = {
       {
         "title": "Taxonomy Regulation (EU) 2020/852 — full legal text",
         "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32020R0852"
-      },
-      {
-        "title": "Taxonomy Regulation (EU) 2020/852 — official Romanian-language text (PDF)",
-        "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/RO/TXT/PDF/?uri=CELEX:32020R0852"
+        "url": "https://eur-lex.europa.eu/eli/reg/2020/852/oj/eng"
       },
       {
         "title": "Climate Delegated Act (EU) 2021/2139 — technical screening criteria for climate mitigation & adaptation",
         "date": "4 Jun 2021",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32021R2139"
+        "url": "https://eur-lex.europa.eu/eli/reg_del/2021/2139/oj/eng"
       },
       {
         "title": "Complementary Climate Delegated Act (EU) 2022/1214 — nuclear & gas activities",
         "date": "9 Mar 2022",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R1214"
+        "url": "https://eur-lex.europa.eu/eli/reg_del/2022/1214/oj/eng"
       },
       {
         "title": "Environmental Delegated Act (EU) 2023/2486 — criteria for the 4 remaining objectives (water, circular economy, pollution, biodiversity)",
         "date": "27 Jun 2023",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R2486"
+        "url": "https://eur-lex.europa.eu/eli/reg_del/2023/2486/oj/eng"
       },
       {
         "title": "European Commission — EU taxonomy for sustainable activities (official overview & delegated acts hub)",
@@ -4036,27 +3921,22 @@ window.TAXONOMY_DATA = {
       {
         "title": "Taxonomy Regulation (EU) 2020/852 — full legal text",
         "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32020R0852"
-      },
-      {
-        "title": "Taxonomy Regulation (EU) 2020/852 — official Slovak-language text (PDF)",
-        "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/SK/TXT/PDF/?uri=CELEX:32020R0852"
+        "url": "https://eur-lex.europa.eu/eli/reg/2020/852/oj/eng"
       },
       {
         "title": "Climate Delegated Act (EU) 2021/2139 — technical screening criteria for climate mitigation & adaptation",
         "date": "4 Jun 2021",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32021R2139"
+        "url": "https://eur-lex.europa.eu/eli/reg_del/2021/2139/oj/eng"
       },
       {
         "title": "Complementary Climate Delegated Act (EU) 2022/1214 — nuclear & gas activities",
         "date": "9 Mar 2022",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R1214"
+        "url": "https://eur-lex.europa.eu/eli/reg_del/2022/1214/oj/eng"
       },
       {
         "title": "Environmental Delegated Act (EU) 2023/2486 — criteria for the 4 remaining objectives (water, circular economy, pollution, biodiversity)",
         "date": "27 Jun 2023",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R2486"
+        "url": "https://eur-lex.europa.eu/eli/reg_del/2023/2486/oj/eng"
       },
       {
         "title": "European Commission — EU taxonomy for sustainable activities (official overview & delegated acts hub)",
@@ -4205,27 +4085,22 @@ window.TAXONOMY_DATA = {
       {
         "title": "Taxonomy Regulation (EU) 2020/852 — full legal text",
         "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32020R0852"
-      },
-      {
-        "title": "Taxonomy Regulation (EU) 2020/852 — official Slovenian-language text (PDF)",
-        "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/SL/TXT/PDF/?uri=CELEX:32020R0852"
+        "url": "https://eur-lex.europa.eu/eli/reg/2020/852/oj/eng"
       },
       {
         "title": "Climate Delegated Act (EU) 2021/2139 — technical screening criteria for climate mitigation & adaptation",
         "date": "4 Jun 2021",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32021R2139"
+        "url": "https://eur-lex.europa.eu/eli/reg_del/2021/2139/oj/eng"
       },
       {
         "title": "Complementary Climate Delegated Act (EU) 2022/1214 — nuclear & gas activities",
         "date": "9 Mar 2022",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R1214"
+        "url": "https://eur-lex.europa.eu/eli/reg_del/2022/1214/oj/eng"
       },
       {
         "title": "Environmental Delegated Act (EU) 2023/2486 — criteria for the 4 remaining objectives (water, circular economy, pollution, biodiversity)",
         "date": "27 Jun 2023",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R2486"
+        "url": "https://eur-lex.europa.eu/eli/reg_del/2023/2486/oj/eng"
       },
       {
         "title": "European Commission — EU taxonomy for sustainable activities (official overview & delegated acts hub)",
@@ -4374,27 +4249,22 @@ window.TAXONOMY_DATA = {
       {
         "title": "Taxonomy Regulation (EU) 2020/852 — full legal text",
         "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32020R0852"
-      },
-      {
-        "title": "Taxonomy Regulation (EU) 2020/852 — official Spanish-language text (PDF)",
-        "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/ES/TXT/PDF/?uri=CELEX:32020R0852"
+        "url": "https://eur-lex.europa.eu/eli/reg/2020/852/oj/eng"
       },
       {
         "title": "Climate Delegated Act (EU) 2021/2139 — technical screening criteria for climate mitigation & adaptation",
         "date": "4 Jun 2021",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32021R2139"
+        "url": "https://eur-lex.europa.eu/eli/reg_del/2021/2139/oj/eng"
       },
       {
         "title": "Complementary Climate Delegated Act (EU) 2022/1214 — nuclear & gas activities",
         "date": "9 Mar 2022",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R1214"
+        "url": "https://eur-lex.europa.eu/eli/reg_del/2022/1214/oj/eng"
       },
       {
         "title": "Environmental Delegated Act (EU) 2023/2486 — criteria for the 4 remaining objectives (water, circular economy, pollution, biodiversity)",
         "date": "27 Jun 2023",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R2486"
+        "url": "https://eur-lex.europa.eu/eli/reg_del/2023/2486/oj/eng"
       },
       {
         "title": "European Commission — EU taxonomy for sustainable activities (official overview & delegated acts hub)",
@@ -4543,27 +4413,22 @@ window.TAXONOMY_DATA = {
       {
         "title": "Taxonomy Regulation (EU) 2020/852 — full legal text",
         "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32020R0852"
-      },
-      {
-        "title": "Taxonomy Regulation (EU) 2020/852 — official Swedish-language text (PDF)",
-        "date": "22 Jun 2020",
-        "url": "https://eur-lex.europa.eu/legal-content/SV/TXT/PDF/?uri=CELEX:32020R0852"
+        "url": "https://eur-lex.europa.eu/eli/reg/2020/852/oj/eng"
       },
       {
         "title": "Climate Delegated Act (EU) 2021/2139 — technical screening criteria for climate mitigation & adaptation",
         "date": "4 Jun 2021",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32021R2139"
+        "url": "https://eur-lex.europa.eu/eli/reg_del/2021/2139/oj/eng"
       },
       {
         "title": "Complementary Climate Delegated Act (EU) 2022/1214 — nuclear & gas activities",
         "date": "9 Mar 2022",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R1214"
+        "url": "https://eur-lex.europa.eu/eli/reg_del/2022/1214/oj/eng"
       },
       {
         "title": "Environmental Delegated Act (EU) 2023/2486 — criteria for the 4 remaining objectives (water, circular economy, pollution, biodiversity)",
         "date": "27 Jun 2023",
-        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R2486"
+        "url": "https://eur-lex.europa.eu/eli/reg_del/2023/2486/oj/eng"
       },
       {
         "title": "European Commission — EU taxonomy for sustainable activities (official overview & delegated acts hub)",
@@ -4583,11 +4448,6 @@ window.TAXONOMY_DATA = {
     "overlays": [],
     "regulator": "Finanstilsynet (Norway) — pending EEA incorporation",
     "officialDocuments": [
-      {
-        "title": "Lov om offentliggjøring av bærekraftsinformasjon i finanssektoren og et rammeverk for bærekraftige investeringer (Norwegian implementing act, official Lovdata text)",
-        "date": "Enacted 22 Dec 2021, in force 1 Jan 2023",
-        "url": "https://lovdata.no/lov/2021-12-22-161"
-      },
       {
         "title": "Finanstilsynet — Finanstilsynet and EEA legislation (regulatory status tracker)",
         "date": "Updated periodically",
@@ -5126,11 +4986,6 @@ window.TAXONOMY_DATA = {
         "title": "OJK — TKBI Versi 2, FAQ document (official PDF)",
         "date": "Feb 2025",
         "url": "https://ojk.go.id/id/Publikasi/Roadmap-dan-Pedoman/Sektor-Jasa-Keuangan/Keuangan-Berkelanjutan/Documents/FAQ%20Taksonomi%20untuk%20Keuangan%20Berkelanjutan%20Indonesia%20(TKBI)%20Versi%202.pdf"
-      },
-      {
-        "title": "OJK — TKBI Versi 1, main document (official PDF)",
-        "date": "2024",
-        "url": "https://keuanganberkelanjutan.ojk.go.id/keuanganberkelanjutan/BE/uploads/berita/files/file_d657b2c9-b944-4b6d-9012-1f07ffa59157-24082024092133.pdf"
       },
       {
         "title": "OJK — Indonesia Taxonomy for Sustainable Finance (TKBI) Version 3 (official page)",
@@ -6035,14 +5890,9 @@ window.TAXONOMY_DATA = {
     "source": "https://www.gob.mx/shcp/documentos/taxonomia-sostenible-de-mexico?state=published",
     "officialDocuments": [
       {
-        "title": "SHCP — Taxonomía Sostenible de México (documento oficial)",
+        "title": "SHCP — Taxonomía Sostenible de México (documento oficial, mirrored PDF)",
         "date": "16 Mar 2023",
-        "url": "https://www.finanzassostenibles.hacienda.gob.mx/work/models/finanzassostenibles/recursos/documentos/TaxonomyEV_2024_V1.pdf"
-      },
-      {
-        "title": "Portal de Finanzas Sostenibles — SHCP",
-        "date": "Ongoing",
-        "url": "https://www.finanzassostenibles.hacienda.gob.mx/es/finanzassostenibles/taxonomia"
+        "url": "https://wfdfi.org/wp-content/uploads/2023/08/79.-Taxonomia_Sostenible_de_Mexico_Secretaria_de_Hacienda.pdf"
       }
     ],
     "overlays": [
@@ -6852,9 +6702,9 @@ window.TAXONOMY_DATA = {
     "regulator": "Central Bank of Azerbaijan",
     "officialDocuments": [
       {
-        "title": "Central Bank of Azerbaijan — Yaşıl Taksonomiya (official Azerbaijani-language page)",
+        "title": "Central Bank of Azerbaijan — Yaşıl Taksonomiya (official Azerbaijani-language PDF, approved by CBA Board decision)",
         "date": "Approved 7 Nov 2024",
-        "url": "https://www.cbar.az/page-866/the-green-taxonomy"
+        "url": "https://uploads.cbar.az/assets/b073a89546937b2bf4826c080.pdf"
       },
       {
         "title": "The Green Taxonomy of Azerbaijan (English, via Sustainable Banking & Finance Network)",
