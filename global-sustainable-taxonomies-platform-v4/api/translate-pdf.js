@@ -4,9 +4,19 @@
  * into their selected site language, using the same Claude backend that
  * powers "Ask AI" (reads ANTHROPIC_API_KEY — no separate key needed).
  *
- * The front end (country.js, "Translate" button next to each official
- * document) POSTs { url, lang } here and gets back
- * { translatedText, truncated, sourceChars, lang }.
+ * Long official documents (many run 20-50+ pages) are translated in full,
+ * not just the first few pages. Because a single serverless request/response
+ * can't safely hold "translate the whole 50-page PDF" in one AI call, the
+ * front end (country.js) instead calls this endpoint once per chunk:
+ *   POST { url, lang, chunkIndex } -> { translatedText, chunkIndex,
+ *   totalChunks, sourceChars, pages, lang, truncatedOverall }
+ * and walks chunkIndex 0, 1, 2, ... up to totalChunks - 1, appending each
+ * chunk's translation to the reader as it arrives (with a "translating part
+ * X of Y" progress note in between). Each request independently re-fetches
+ * and re-parses the source document (extraction is fast; there's no
+ * server-side session storage between calls in a stateless serverless
+ * function) and then slices out just the requested chunk of text to
+ * translate, keeping each individual request small and quick.
  *
  * How it works:
  *   1. Fetch the document from `url` server-side (browsers can't reliably
@@ -16,10 +26,10 @@
  *      strip tags down to plain text. If the PDF is a scanned image with no
  *      embedded text layer, pdf-parse returns little/nothing — we surface
  *      that honestly rather than pretending to translate empty content.
- *   3. Truncate to a safe length (long legal PDFs can run 50+ pages — well
- *      beyond what's useful or affordable to translate in one request) and
- *      say so plainly in the response.
- *   4. Ask Claude to translate the extracted text into the requested
+ *   3. Cap the *overall* document at MAX_TOTAL_CHARS (a generous ~40-50
+ *      pages) purely as a sanity limit against pathologically huge files,
+ *      and split whatever's within that cap into CHUNK_CHARS-sized pieces.
+ *   4. Ask Claude to translate just the requested chunk into the requested
  *      language, preserving headings/structure/numbering where present and
  *      keeping a formal, legal-document register.
  *
@@ -28,7 +38,8 @@
  * translation and says so in the UI.
  */
 
-const MAX_SOURCE_CHARS = 14000; // keeps request + response comfortably inside Vercel's serverless limits
+const MAX_TOTAL_CHARS = 150000; // overall sanity cap (~40-50 pages) against pathologically huge documents
+const CHUNK_CHARS = 10000; // per-request chunk size, kept small so each individual Claude call finishes well within Vercel's function timeout
 
 const LANGUAGE_NAMES = {
   en: "English",
@@ -139,6 +150,8 @@ module.exports = async function handler(req, res) {
 
   const url = String(body.url || "").trim();
   const langCode = LANGUAGE_NAMES[body.lang] ? body.lang : "en";
+  const requestedChunkIndex = Number.isInteger(body.chunkIndex) ? body.chunkIndex : parseInt(body.chunkIndex, 10);
+  const chunkIndex = Number.isFinite(requestedChunkIndex) && requestedChunkIndex >= 0 ? requestedChunkIndex : 0;
 
   if (!url || !/^https?:\/\//i.test(url)) {
     res.status(400).json({ error: "Missing or invalid 'url' in request body." });
@@ -166,15 +179,27 @@ module.exports = async function handler(req, res) {
     return;
   }
 
-  const truncated = extracted.text.length > MAX_SOURCE_CHARS;
-  const sourceText = extracted.text.slice(0, MAX_SOURCE_CHARS);
+  const truncatedOverall = extracted.text.length > MAX_TOTAL_CHARS;
+  const totalChars = Math.min(extracted.text.length, MAX_TOTAL_CHARS);
+  const totalChunks = Math.max(1, Math.ceil(totalChars / CHUNK_CHARS));
+  const safeChunkIndex = Math.min(chunkIndex, totalChunks - 1);
+  const chunkStart = safeChunkIndex * CHUNK_CHARS;
+  const chunkEnd = Math.min(chunkStart + CHUNK_CHARS, totalChars);
+  const sourceText = extracted.text.slice(chunkStart, chunkEnd);
+  const isFirstChunk = safeChunkIndex === 0;
+  const isLastChunk = safeChunkIndex === totalChunks - 1;
   const languageName = LANGUAGE_NAMES[langCode];
 
   const systemPrompt = [
     `You are translating an official government/regulatory document about a sustainable finance taxonomy into ${languageName}.`,
-    "Produce an accurate, complete translation of the text provided. Preserve headings, numbering, and paragraph structure where present, using Markdown formatting (## for headings, numbered/bulleted lists) so it reads clearly.",
-    "Keep a formal, precise register appropriate to a legal/regulatory document. Do not summarize, omit, or add commentary — translate what is given.",
-    truncated ? `The source text was truncated to the first ${MAX_SOURCE_CHARS} characters of the document (out of ${extracted.text.length}); translate only what is provided and do not invent an ending.` : "",
+    totalChunks > 1
+      ? `This is part ${safeChunkIndex + 1} of ${totalChunks} of a longer document, being translated section by section and reassembled by the reader's app. Translate only the text given below — do not summarize, and do not add any introduction, recap, or conclusion of your own.`
+      : "Produce an accurate, complete translation of the text provided.",
+    "Preserve headings, numbering, and paragraph structure where present, using Markdown formatting (## for headings, numbered/bulleted lists) so it reads clearly.",
+    "Keep a formal, precise register appropriate to a legal/regulatory document. Do not omit or add commentary — translate what is given, faithfully and completely.",
+    !isFirstChunk ? "This text continues directly from a previous part with no gap — if it begins mid-sentence or mid-paragraph, translate it as a continuation rather than starting a new heading or introduction." : "",
+    !isLastChunk ? "This text continues into a further part after this one — if it ends mid-sentence or mid-paragraph, translate up to that exact cutoff point rather than inventing an ending." : "",
+    isLastChunk && truncatedOverall ? `The source document was capped at ${MAX_TOTAL_CHARS} characters (out of ${extracted.text.length} total) as a sanity limit; translate only what is provided and do not invent an ending.` : "",
     "If the source text is fragmented or contains OCR artifacts, translate as faithfully as possible and don't try to silently 'fix' apparent errors beyond normal translation judgment."
   ].filter(Boolean).join("\n");
 
@@ -208,7 +233,10 @@ module.exports = async function handler(req, res) {
 
     res.status(200).json({
       translatedText: translatedText || "(The model returned an empty response.)",
-      truncated,
+      chunkIndex: safeChunkIndex,
+      totalChunks,
+      isLastChunk,
+      truncatedOverall,
       sourceChars: extracted.text.length,
       pages: extracted.pages,
       lang: langCode
