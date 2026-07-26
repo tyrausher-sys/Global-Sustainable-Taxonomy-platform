@@ -1,6 +1,10 @@
 /* Global Sustainable Taxonomy Website — Country Page */
 
-const STATUS_LABEL = { established: "Developed", developing: "Under Development", none: "No Taxonomy" };
+function getStatusLabel(status) {
+  const t = (typeof gstT === "function") ? gstT : (k => k);
+  const keys = { established: "home.chipDeveloped", developing: "home.chipUnderDevelopment", none: "home.chipNoTaxonomy" };
+  return t(keys[status] || keys.none);
+}
 
 function bucketStatus(raw) {
   return (raw === "established" || raw === "developing") ? raw : "none";
@@ -36,7 +40,8 @@ function overlayHeaderTags(entry) {
 }
 
 function renderHeader(entry, status, label, name) {
-  const taxonomyName = entry && entry.taxonomy ? entry.taxonomy : "No taxonomy established";
+  const t = (typeof gstT === "function") ? gstT : (k => k);
+  const taxonomyName = entry && entry.taxonomy ? entry.taxonomy : t("country.noTaxonomyEstablished");
   const overlayTags = overlayHeaderTags(entry);
   return `
     <section class="country-header-dark">
@@ -45,7 +50,7 @@ function renderHeader(entry, status, label, name) {
           <div class="country-header-titles">
             <span class="badge badge-${status}">${label}</span>
             <h1>${name}</h1>
-            <p class="country-header-sub">${taxonomyName}${entry && entry.year ? " · Published " + entry.year : ""}${overlayTags}</p>
+            <p class="country-header-sub">${taxonomyName}${entry && entry.year ? " · " + t("country.publishedPrefix") + " " + entry.year : ""}${overlayTags}</p>
           </div>
         </div>
       </div>
@@ -54,13 +59,14 @@ function renderHeader(entry, status, label, name) {
 }
 
 function overviewTable(entry, name, label) {
+  const t = (typeof gstT === "function") ? gstT : (k => k);
   const rows = [
-    ["Country", name],
-    ["Taxonomy Name", entry && entry.taxonomy ? entry.taxonomy : "Not established"],
-    ["Status", label],
-    ["Regulator", entry && entry.regulator ? entry.regulator : "Not publicly specified"],
-    ["Year Published", entry && entry.year ? entry.year : "Not specified"],
-    ["Region", entry && entry.region ? entry.region : "Not specified"]
+    [t("country.tableCountry"), name],
+    [t("country.tableTaxonomyName"), entry && entry.taxonomy ? entry.taxonomy : t("country.notEstablished")],
+    [t("country.tableStatus"), label],
+    [t("country.tableRegulator"), entry && entry.regulator ? entry.regulator : t("country.notPubliclySpecified")],
+    [t("country.tableYearPublished"), entry && entry.year ? entry.year : t("country.notSpecified")],
+    [t("country.tableRegion"), entry && entry.region ? entry.region : t("country.notSpecified")]
   ];
   let html = `<table class="overview-table"><tbody>`;
   rows.forEach(([k, v]) => { html += `<tr><th>${k}</th><td>${v}</td></tr>`; });
@@ -69,9 +75,10 @@ function overviewTable(entry, name, label) {
 }
 
 function objectivesSection(entry) {
+  const t = (typeof gstT === "function") ? gstT : (k => k);
   const objs = (entry && entry.objectives && entry.objectives.length) ? entry.objectives : null;
   if (!objs) {
-    return `<p class="data-not-available">Not yet documented for this taxonomy.</p>`;
+    return `<p class="data-not-available">${t("country.notYetDocumented")}</p>`;
   }
   let html = `<ol class="objective-pills">`;
   objs.forEach((o, i) => {
@@ -82,21 +89,22 @@ function objectivesSection(entry) {
 }
 
 function criteriaTable(entry) {
+  const t = (typeof gstT === "function") ? gstT : (k => k);
   const real = entry && entry.activityList && entry.activityList.length;
   let html = "";
 
   if (real) {
-    html += `<table class="criteria-table"><thead><tr><th>Activity</th><th>Screening Criteria</th><th>Threshold</th><th>DNSH</th></tr></thead><tbody>`;
+    html += `<table class="criteria-table"><thead><tr><th>${t("country.colActivity")}</th><th>${t("country.colScreeningCriteria")}</th><th>${t("country.colThreshold")}</th><th>${t("country.colDnsh")}</th></tr></thead><tbody>`;
     entry.activityList.forEach(a => {
-      html += `<tr><td>${a.activity}</td><td>${a.criteria || "See official documentation"}</td><td>${a.threshold || "See official documentation"}</td><td>${a.dnsh || "Applies"}</td></tr>`;
+      html += `<tr><td>${a.activity}</td><td>${a.criteria || t("country.seeOfficialDocumentation")}</td><td>${a.threshold || t("country.seeOfficialDocumentation")}</td><td>${a.dnsh || t("country.dnshAppliesDefault")}</td></tr>`;
     });
     html += `</tbody></table>`;
   } else {
-    html += `<p class="data-not-available">Not yet documented for this taxonomy.</p>`;
+    html += `<p class="data-not-available">${t("country.notYetDocumented")}</p>`;
   }
 
   if (entry && entry.source) {
-    html += `<a class="btn-download" href="${entry.source}" target="_blank" rel="noopener">View All Criteria (Official Source) ↗</a>`;
+    html += `<a class="btn-download" href="${entry.source}" target="_blank" rel="noopener">${t("country.viewAllCriteria")} ↗</a>`;
   }
   return html;
 }
@@ -122,10 +130,11 @@ function linkifyCitations(text) {
 
 function citationsListHtml(entry) {
   if (!entry || !entry.citations || !entry.citations.length) return "";
+  const t = (typeof gstT === "function") ? gstT : (k => k);
   const items = entry.citations.map(c =>
-    `<li id="cite-${c.id}">${c.id}. ${escapeHtml(c.label)}${c.url ? ` — <a href="${c.url}" target="_blank" rel="noopener">source ↗</a>` : ""}</li>`
+    `<li id="cite-${c.id}">${c.id}. ${escapeHtml(c.label)}${c.url ? ` — <a href="${c.url}" target="_blank" rel="noopener">${t("country.sourceLinkLabel")} ↗</a>` : ""}</li>`
   ).join("");
-  return `<div class="citations-block"><h3>References</h3><ol class="citations-list">${items}</ol></div>`;
+  return `<div class="citations-block"><h3>${t("footer.references")}</h3><ol class="citations-list">${items}</ol></div>`;
 }
 
 function sourcesNote() {
@@ -164,10 +173,11 @@ function generalResourcesHtml(iso, entry) {
 }
 
 function officialDocumentsSection(entry) {
+  const t = (typeof gstT === "function") ? gstT : (k => k);
   if (entry && entry.officialDocuments && entry.officialDocuments.length) {
     let html = `<ul class="docs-list">`;
     entry.officialDocuments.forEach(d => {
-      html += `<li><a href="${d.url}" target="_blank" rel="noopener">${d.title}</a>${d.date ? `<span class="docs-date">${d.date}</span>` : ""} <button class="doc-translate-btn" type="button" data-doc-url="${escapeAttr(d.url)}" data-doc-title="${escapeAttr(d.title)}" data-i18n="translate.button">Translate</button></li>`;
+      html += `<li><a href="${d.url}" target="_blank" rel="noopener">${d.title}</a>${d.date ? `<span class="docs-date">${d.date}</span>` : ""} <button class="doc-translate-btn" type="button" data-doc-url="${escapeAttr(d.url)}" data-doc-title="${escapeAttr(d.title)}" data-i18n="translate.button">${t("translate.button")}</button></li>`;
     });
     html += `</ul>`;
     return html;
@@ -176,48 +186,50 @@ function officialDocumentsSection(entry) {
     return `
       <a class="source-card" href="${entry.source}" target="_blank" rel="noopener">
         <span class="dot established"></span>
-        <span><strong>Official source:</strong> ${entry.regulator ? entry.regulator + " — " : ""}${entry.taxonomy || entry.name}</span>
+        <span><strong>${t("country.officialSourceLabel")}</strong> ${entry.regulator ? entry.regulator + " — " : ""}${entry.taxonomy || entry.name}</span>
         <svg class="arrow-out" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M7 7h10v10"/></svg>
       </a>
-      <button class="doc-translate-btn" type="button" style="margin-left:0; margin-top:6px;" data-doc-url="${escapeAttr(entry.source)}" data-doc-title="${escapeAttr(entry.taxonomy || entry.name)}" data-i18n="translate.button">Translate</button>
-      <p class="sample-note">Only a single general source link has been compiled for this country so far — a fuller list of official documents may be added later.</p>
+      <button class="doc-translate-btn" type="button" style="margin-left:0; margin-top:6px;" data-doc-url="${escapeAttr(entry.source)}" data-doc-title="${escapeAttr(entry.taxonomy || entry.name)}" data-i18n="translate.button">${t("translate.button")}</button>
+      <p class="sample-note">${t("country.singleSourceNote")}</p>
     `;
   }
-  return `<p class="sample-note">No official source link has been compiled for this country yet.</p>`;
+  return `<p class="sample-note">${t("country.noSourceYet")}</p>`;
 }
 
 function mediaFeed(entry) {
+  const t = (typeof gstT === "function") ? gstT : (k => k);
   let html = `<ul class="media-feed">`;
   if (entry && entry.source) {
-    html += `<li><span class="media-tag">Document</span><a href="${entry.source}" target="_blank" rel="noopener">${entry.regulator ? entry.regulator + " — " : ""}Official Taxonomy Documentation</a>${entry.year ? `<span class="media-date">${entry.year}</span>` : ""}</li>`;
+    html += `<li><span class="media-tag">${t("country.mediaTagDocument")}</span><a href="${entry.source}" target="_blank" rel="noopener">${entry.regulator ? entry.regulator + " — " : ""}${t("country.officialTaxonomyDocumentation")}</a>${entry.year ? `<span class="media-date">${entry.year}</span>` : ""}</li>`;
   }
   if (entry && entry.overlays && entry.overlays.length) {
     entry.overlays.forEach(o => {
       if (o.source) {
-        html += `<li><span class="media-tag">Regional</span><a href="${o.source}" target="_blank" rel="noopener">${o.name}</a></li>`;
+        html += `<li><span class="media-tag">${t("country.mediaTagRegional")}</span><a href="${o.source}" target="_blank" rel="noopener">${o.name}</a></li>`;
       }
     });
   }
-  html += `<li class="media-placeholder">More updates coming soon</li>`;
+  html += `<li class="media-placeholder">${t("country.moreUpdatesComingSoon")}</li>`;
   html += `</ul>`;
   return html;
 }
 
 function aiChatBoxHtml() {
+  const t = (typeof gstT === "function") ? gstT : (k => k);
   return `
     <div class="chat-log chat-log-compact" id="countryChatLog"></div>
     <div class="chat-examples" id="countryChatExamples"></div>
     <form class="chat-input-row" id="countryChatForm">
-      <textarea id="countryChatInput" rows="2" placeholder="Ask a question…"></textarea>
-      <button class="btn-primary" type="submit" id="countryChatSendBtn">Send</button>
+      <textarea id="countryChatInput" rows="2" placeholder="${escapeAttr(t("country.chatPlaceholder"))}"></textarea>
+      <button class="btn-primary" type="submit" id="countryChatSendBtn">${t("chat.send")}</button>
     </form>
-    <p class="sample-note">Calls a real AI model through a secure backend. If it doesn't respond, this site may not be deployed with an API key yet — see DEPLOY_INSTRUCTIONS.md.</p>
+    <p class="sample-note">${t("country.chatDisclaimer")}</p>
   `;
 }
 
 let countryChatHistory = [];
 let countryChatBusy = false;
-let countryChatWelcome = "Ask anything about this taxonomy.";
+let countryChatWelcome = (typeof gstT === "function") ? gstT("country.chatWelcomeDefault") : "Ask anything about this taxonomy.";
 
 function escapeHtml(s) {
   return String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -284,15 +296,16 @@ async function sendCountryChatMessage(question) {
 function setupCountryChat(name, taxonomy) {
   const form = document.getElementById("countryChatForm");
   if (!form) return;
+  const t = (typeof gstT === "function") ? gstT : (k => k);
 
-  countryChatWelcome = `Ask anything about ${name}'s taxonomy — including how it compares to others, like the EU taxonomy or South Korea's K-Taxonomy.`;
+  countryChatWelcome = t("country.chatWelcomeWithName").replace("{name}", name);
   renderCountryChatLog();
 
   const examples = [
-    `Compare ${name}'s taxonomy to the EU taxonomy`,
-    `What are the key screening criteria under ${taxonomy || name + "'s taxonomy"}?`,
-    `What documentation would I need to demonstrate compliance here?`,
-    `Which other countries have similar taxonomies to ${name}?`
+    t("country.chatExampleCompare").replace("{name}", name),
+    t("country.chatExampleCriteria").replace("{taxonomy}", taxonomy || (name + "'s taxonomy")),
+    t("country.chatExampleDocumentation"),
+    t("country.chatExampleSimilar").replace("{name}", name)
   ];
   const examplesWrap = document.getElementById("countryChatExamples");
   examplesWrap.innerHTML = examples.map(q => `<button class="example-card" type="button">${q}</button>`).join("");
@@ -322,7 +335,8 @@ function setupCountryChat(name, taxonomy) {
 /* ---------- Compare With Another Taxonomy (data-driven, no AI needed) ---------- */
 
 function yn(v) {
-  return v === true ? "Yes" : v === false ? "No" : "Not specified";
+  const t = (typeof gstT === "function") ? gstT : (k => k);
+  return v === true ? t("country.yes") : v === false ? t("country.no") : t("country.notSpecified");
 }
 
 function compareRow(label, a, b) {
@@ -330,35 +344,37 @@ function compareRow(label, a, b) {
 }
 
 function compareValues(entry) {
+  const t = (typeof gstT === "function") ? gstT : (k => k);
   const f = (entry && entry.facts) || {};
   return {
-    taxonomy: entry && entry.taxonomy ? entry.taxonomy : "No taxonomy established",
-    status: STATUS_LABEL[bucketStatus(entry ? entry.status : "none")],
-    year: entry && entry.year ? entry.year : "Not specified",
-    regulator: entry && entry.regulator ? entry.regulator : "Not publicly specified",
-    region: entry && entry.region ? entry.region : "Not specified",
-    mandatory: f.mandatory || "Not specified",
+    taxonomy: entry && entry.taxonomy ? entry.taxonomy : t("country.noTaxonomyEstablished"),
+    status: getStatusLabel(bucketStatus(entry ? entry.status : "none")),
+    year: entry && entry.year ? entry.year : t("country.notSpecified"),
+    regulator: entry && entry.regulator ? entry.regulator : t("country.notPubliclySpecified"),
+    region: entry && entry.region ? entry.region : t("country.notSpecified"),
+    mandatory: f.mandatory || t("country.notSpecified"),
     dnsh: yn(f.dnsh),
     safeguards: yn(f.minimumSafeguards),
-    objectives: (entry && entry.objectives && entry.objectives.length) ? entry.objectives.map(o => o.label).join(", ") : "Not documented",
-    sectors: (entry && entry.sectors && entry.sectors.length) ? entry.sectors.join(", ") : "Not documented"
+    objectives: (entry && entry.objectives && entry.objectives.length) ? entry.objectives.map(o => o.label).join(", ") : t("country.notDocumented"),
+    sectors: (entry && entry.sectors && entry.sectors.length) ? entry.sectors.join(", ") : t("country.notDocumented")
   };
 }
 
 function renderCompareTable(nameA, entryA, nameB, entryB) {
+  const t = (typeof gstT === "function") ? gstT : (k => k);
   const a = compareValues(entryA);
   const b = compareValues(entryB);
   let html = `<table class="compare-table"><thead><tr><th></th><th>${nameA}</th><th>${nameB}</th></tr></thead><tbody>`;
-  html += compareRow("Taxonomy Name", a.taxonomy, b.taxonomy);
-  html += compareRow("Status", a.status, b.status);
-  html += compareRow("Year Published", a.year, b.year);
-  html += compareRow("Regulator", a.regulator, b.regulator);
-  html += compareRow("Region", a.region, b.region);
-  html += compareRow("Mandatory / Voluntary", a.mandatory, b.mandatory);
-  html += compareRow("Requires DNSH", a.dnsh, b.dnsh);
-  html += compareRow("Requires Minimum Safeguards", a.safeguards, b.safeguards);
-  html += compareRow("Environmental Objectives", a.objectives, b.objectives);
-  html += compareRow("Sectors Covered", a.sectors, b.sectors);
+  html += compareRow(t("country.tableTaxonomyName"), a.taxonomy, b.taxonomy);
+  html += compareRow(t("country.tableStatus"), a.status, b.status);
+  html += compareRow(t("country.tableYearPublished"), a.year, b.year);
+  html += compareRow(t("country.tableRegulator"), a.regulator, b.regulator);
+  html += compareRow(t("country.tableRegion"), a.region, b.region);
+  html += compareRow(t("country.rowMandatoryVoluntary"), a.mandatory, b.mandatory);
+  html += compareRow(t("country.rowRequiresDnsh"), a.dnsh, b.dnsh);
+  html += compareRow(t("country.rowRequiresSafeguards"), a.safeguards, b.safeguards);
+  html += compareRow(t("country.headingEnvironmentalObjectives"), a.objectives, b.objectives);
+  html += compareRow(t("country.rowSectorsCovered"), a.sectors, b.sectors);
   html += `</tbody></table>`;
   return html;
 }
@@ -371,9 +387,11 @@ function pickDefaultCompareIso(currentIso) {
 }
 
 function compareBlockHtml(iso, name) {
+  const t = (typeof gstT === "function") ? gstT : (k => k);
+  const label = t("country.compareWithLabel").replace("{name}", name);
   return `
     <div class="compare-controls">
-      <label for="compareSelect">Compare ${name}'s taxonomy with:</label>
+      <label for="compareSelect">${label}</label>
       <select id="compareSelect"></select>
     </div>
     <div id="compareResult"></div>
@@ -510,6 +528,7 @@ async function maybeTranslateAndRender() {
 }
 
 function renderCountry(entryOverride) {
+  const t = (typeof gstT === "function") ? gstT : (k => k);
   const params = new URLSearchParams(window.location.search);
   const iso = (params.get("iso") || "").toUpperCase();
   const headerEl = document.getElementById("countryHeader");
@@ -518,43 +537,43 @@ function renderCountry(entryOverride) {
 
   if (!iso) {
     headerEl.innerHTML = "";
-    el.innerHTML = `<h1 class="report-title">No country selected</h1><p class="lede">Go back to the map and click on a country to view its taxonomy profile.</p>`;
+    el.innerHTML = `<h1 class="report-title">${t("country.noCountrySelected")}</h1><p class="lede">${t("country.goBackToMap")}</p>`;
     return;
   }
 
   const name = entry ? entry.name : iso;
   const status = bucketStatus(entry ? entry.status : "none");
-  const label = STATUS_LABEL[status];
+  const label = getStatusLabel(status);
 
   headerEl.innerHTML = renderHeader(entry, status, label, name);
 
   let left = "";
 
-  left += `<div class="card-block"><h2>Taxonomy Overview</h2>${overviewTable(entry, name, label)}</div>`;
+  left += `<div class="card-block"><h2>${t("country.headingOverview")}</h2>${overviewTable(entry, name, label)}</div>`;
 
   if (entry && entry.fullDescription && entry.fullDescription.length) {
-    left += `<div class="card-block"><h2>About the Taxonomy</h2>` +
+    left += `<div class="card-block"><h2>${t("country.headingAboutTaxonomy")}</h2>` +
       entry.fullDescription.map(p => `<p class="section-text">${linkifyCitations(p)}</p>`).join("") +
       citationsListHtml(entry) + `</div>`;
   } else if (entry && entry.note) {
-    left += `<div class="card-block"><h2>About the Taxonomy</h2><p class="section-text">${entry.note}</p><p class="sample-note">Limited public information compiled so far — this summary may be expanded as more sources are reviewed.</p></div>`;
+    left += `<div class="card-block"><h2>${t("country.headingAboutTaxonomy")}</h2><p class="section-text">${entry.note}</p><p class="sample-note">${t("country.limitedInfoNote")}</p></div>`;
   } else if (!entry) {
-    left += `<div class="card-block"><p class="section-text">No taxonomy data has been compiled for this country yet.</p></div>`;
+    left += `<div class="card-block"><p class="section-text">${t("country.noDataCompiledYet")}</p></div>`;
   }
 
-  left += `<div class="card-block"><h2>Official Documents</h2>${officialDocumentsSection(entry)}${sourcesNote()}${generalResourcesHtml(iso, entry)}</div>`;
-  left += `<div class="card-block"><h2>Environmental Objectives</h2>${objectivesSection(entry)}</div>`;
-  left += `<div class="card-block"><h2>Technical Screening Criteria</h2>${criteriaTable(entry)}</div>`;
+  left += `<div class="card-block"><h2>${t("country.headingOfficialDocuments")}</h2>${officialDocumentsSection(entry)}${sourcesNote()}${generalResourcesHtml(iso, entry)}</div>`;
+  left += `<div class="card-block"><h2>${t("country.headingEnvironmentalObjectives")}</h2>${objectivesSection(entry)}</div>`;
+  left += `<div class="card-block"><h2>${t("country.headingTechnicalCriteria")}</h2>${criteriaTable(entry)}</div>`;
 
   if (entry && entry.overlays && entry.overlays.length) {
-    left += `<div class="card-block"><h2>Also Applies</h2>` + entry.overlays.map(o =>
-      `<div class="overlay-item"><strong>${o.name}</strong><br/>${o.scope}${o.source ? ` — <a href="${o.source}" target="_blank" rel="noopener">source</a>` : ""}</div>`
+    left += `<div class="card-block"><h2>${t("country.headingAlsoApplies")}</h2>` + entry.overlays.map(o =>
+      `<div class="overlay-item"><strong>${o.name}</strong><br/>${o.scope}${o.source ? ` — <a href="${o.source}" target="_blank" rel="noopener">${t("country.sourceLinkLabel")}</a>` : ""}</div>`
     ).join("") + `</div>`;
   }
 
   let right = "";
-  right += `<div class="card-block"><h2>Related Media &amp; Updates</h2>${mediaFeed(entry)}</div>`;
-  right += `<div class="card-block"><h2>AI Compliance Chat</h2>${aiChatBoxHtml()}</div>`;
+  right += `<div class="card-block"><h2>${t("country.headingRelatedMedia")}</h2>${mediaFeed(entry)}</div>`;
+  right += `<div class="card-block"><h2>${t("country.headingAiChat")}</h2>${aiChatBoxHtml()}</div>`;
 
   el.innerHTML = `
     <div class="country-columns">
@@ -563,12 +582,12 @@ function renderCountry(entryOverride) {
     </div>
 
     <div class="card-block compare-block">
-      <h2>Compare With Another Taxonomy</h2>
+      <h2>${t("country.headingCompare")}</h2>
       ${compareBlockHtml(iso, name)}
     </div>
 
     <div class="country-footer-actions">
-      <a class="btn-secondary" href="advisor.html?mode=compare">Compare All Countries</a>
+      <a class="btn-secondary" href="advisor.html?mode=compare">${t("country.compareAllCountriesBtn")}</a>
     </div>
   `;
 
