@@ -62,6 +62,21 @@ const CHUNK_CHARS = 6000; // per-request chunk size — kept smaller than it mig
 // with a literal path at the top of the file guarantees it's included.
 const idnTkbiV3Faq = require("./_lib/known-documents/idn-tkbi-v3-faq.js");
 
+// Some official document-viewer pages (confirmed: Russia's pravo.gov.ru
+// "Document/View" pages) render the actual legal text as scanned page
+// images, not as real HTML text — the page's HTML only contains site
+// navigation chrome (menu labels, dates, a page-title line) with no trace
+// of the document's substance. A naive HTML fetch+strip would "succeed" in
+// the sense of returning >20 characters of real text, and the AI would
+// translate that leftover nav chrome as if it were the document itself —
+// worse than an honest failure, since it looks like a real (but wrong)
+// translation. For these known cases, skip the fetch entirely and report
+// the same honest "no extractable text" outcome used for scanned PDFs.
+const KNOWN_NO_TEXT_URLS = new Set([
+  "http://publication.pravo.gov.ru/Document/View/0001202109240043",
+  "https://publication.pravo.gov.ru/Document/View/0001202109240043"
+]);
+
 const KNOWN_DOCUMENT_TEXTS = {
   "https://ojk.go.id/id/Publikasi/Roadmap-dan-Pedoman/Sektor-Jasa-Keuangan/Keuangan-Berkelanjutan/Documents/FAQ%20Taksonomi%20untuk%20Keuangan%20Berkelanjutan%20Indonesia%20(TKBI)%20Versi%203.pdf":
     idnTkbiV3Faq,
@@ -222,6 +237,12 @@ async function extractText(url) {
   const knownText = KNOWN_DOCUMENT_TEXTS[url];
   if (knownText) {
     const result = { text: knownText.trim(), kind: "pdf", pages: null };
+    extractionCache.set(url, { result, at: Date.now() });
+    return result;
+  }
+
+  if (KNOWN_NO_TEXT_URLS.has(url)) {
+    const result = { text: "", kind: "pdf", pages: null };
     extractionCache.set(url, { result, at: Date.now() });
     return result;
   }
