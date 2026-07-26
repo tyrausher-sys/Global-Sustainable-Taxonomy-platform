@@ -165,6 +165,22 @@ async function fetchViaReaderProxy(url) {
 const extractionCache = new Map();
 const EXTRACTION_CACHE_MAX_AGE_MS = 10 * 60 * 1000;
 
+// The AbortController timeout on fetch() only bounds the network request
+// itself — downloading a large response body (upstream.arrayBuffer()) and
+// then parsing it (pdf-parse, which is synchronous CPU work with no timeout
+// hook of its own) happen afterwards, uncovered. For an unusually large or
+// complex PDF (some official documents run 100+ pages), that uncovered time
+// can add up enough to risk the whole function running out of time before
+// it even reaches the translation step, with no clean error to show for it.
+// This wraps any promise with a hard deadline so every stage — including
+// body download and parsing, not just the initial connection — is bounded.
+function withTimeout(promise, timeoutMs, label) {
+  return Promise.race([
+    promise,
+    new Promise((_, reject) => setTimeout(() => reject(new Error(`${label} timed out after ${timeoutMs / 1000}s`)), timeoutMs))
+  ]);
+}
+
 async function extractText(url) {
   const cached = extractionCache.get(url);
   if (cached && Date.now() - cached.at < EXTRACTION_CACHE_MAX_AGE_MS) {
@@ -173,10 +189,10 @@ async function extractText(url) {
 
   let result;
   try {
-    result = await fetchDirect(url);
+    result = await withTimeout(fetchDirect(url), 18000, "Direct fetch + parse");
   } catch (directErr) {
     try {
-      result = await fetchViaReaderProxy(url);
+      result = await withTimeout(fetchViaReaderProxy(url), 18000, "Reader-proxy fetch");
     } catch (proxyErr) {
       console.error(`[translate-pdf] extraction failed for ${url}: direct=${directErr.message} proxy=${proxyErr.message}`);
       throw new Error(`Could not fetch the document (${directErr.message}); fallback fetch also failed (${proxyErr.message}). The source site may be blocking automated requests.`);
@@ -324,7 +340,7 @@ async function handleTranslateRequest(req, res) {
         system: systemPrompt,
         messages: [{ role: "user", content: sourceText }]
       })
-    }, 44000);
+    }, 65000);
 
     const data = await upstream.json();
 
