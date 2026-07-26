@@ -786,9 +786,16 @@ async function fetchTranslation(url, lang) {
 // iframe entirely and show a clear explanation with a link to open the real
 // document directly (which works fine, since that's a normal browser request
 // from the reader's own machine, not a server-to-server fetch).
+// Note: this same list also covers non-PDF pages that send an
+// X-Frame-Options/CSP frame-ancestors header blocking iframe embedding
+// outright (confirmed: greenfinanceplatform.org) — the browser refuses the
+// embed itself ("site refused to connect"), the same dead-end as a blocked
+// automated fetch, just for a different technical reason. New cases should
+// be added here as they're found.
 const KNOWN_PREVIEW_BLOCKED_URLS = new Set([
   "https://ojk.go.id/id/Publikasi/Roadmap-dan-Pedoman/Sektor-Jasa-Keuangan/Keuangan-Berkelanjutan/Documents/FAQ%20Taksonomi%20untuk%20Keuangan%20Berkelanjutan%20Indonesia%20(TKBI)%20Versi%203.pdf",
-  "https://www.ojk.go.id/id/Publikasi/Roadmap-dan-Pedoman/Sektor-Jasa-Keuangan/Keuangan-Berkelanjutan/Documents/FAQ%20Taksonomi%20untuk%20Keuangan%20Berkelanjutan%20Indonesia%20(TKBI)%20Versi%203.pdf"
+  "https://www.ojk.go.id/id/Publikasi/Roadmap-dan-Pedoman/Sektor-Jasa-Keuangan/Keuangan-Berkelanjutan/Documents/FAQ%20Taksonomi%20untuk%20Keuangan%20Berkelanjutan%20Indonesia%20(TKBI)%20Versi%203.pdf",
+  "https://www.greenfinanceplatform.org/policies-and-regulations/russian-green-taxonomy"
 ]);
 
 function openTranslateModal(url, title) {
