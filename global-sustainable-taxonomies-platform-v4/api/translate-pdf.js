@@ -41,6 +41,22 @@
 const MAX_TOTAL_CHARS = 150000; // overall sanity cap (~40-50 pages) against pathologically huge documents
 const CHUNK_CHARS = 6000; // per-request chunk size — kept smaller than it might need to be, since some source languages (e.g. dense Korean legal text) translate into a long enough English/target output that a 10k-char chunk risked exceeding the function's real time budget
 
+// A handful of official sources (confirmed: Indonesia's OJK) block automated
+// fetches at the network/IP level — even with realistic browser headers and
+// a fallback proxy, requests from this server (and likely from most cloud
+// hosting, not just this one) never get through, no matter how generous the
+// timeout. For those specific, confirmed-blocked URLs, a pre-saved plain-text
+// copy (fetched independently, ahead of time) is bundled with this function
+// and used directly instead of trying — and re-failing — a live fetch every
+// time. This is a manual, one-off workaround for sources that are otherwise
+// impossible to fetch automatically, not a general caching mechanism.
+const KNOWN_DOCUMENT_TEXT_FILES = {
+  "https://ojk.go.id/id/Publikasi/Roadmap-dan-Pedoman/Sektor-Jasa-Keuangan/Keuangan-Berkelanjutan/Documents/FAQ%20Taksonomi%20untuk%20Keuangan%20Berkelanjutan%20Indonesia%20(TKBI)%20Versi%203.pdf":
+    "_lib/known-documents/idn-tkbi-v3-faq.txt",
+  "https://www.ojk.go.id/id/Publikasi/Roadmap-dan-Pedoman/Sektor-Jasa-Keuangan/Keuangan-Berkelanjutan/Documents/FAQ%20Taksonomi%20untuk%20Keuangan%20Berkelanjutan%20Indonesia%20(TKBI)%20Versi%203.pdf":
+    "_lib/known-documents/idn-tkbi-v3-faq.txt"
+};
+
 const LANGUAGE_NAMES = {
   en: "English",
   sv: "Swedish (Svenska)",
@@ -189,6 +205,16 @@ async function extractText(url) {
   const cached = extractionCache.get(url);
   if (cached && Date.now() - cached.at < EXTRACTION_CACHE_MAX_AGE_MS) {
     return cached.result;
+  }
+
+  const knownFile = KNOWN_DOCUMENT_TEXT_FILES[url];
+  if (knownFile) {
+    const fs = require("fs");
+    const path = require("path");
+    const text = fs.readFileSync(path.join(__dirname, knownFile), "utf8").trim();
+    const result = { text, kind: "pdf", pages: null };
+    extractionCache.set(url, { result, at: Date.now() });
+    return result;
   }
 
   let result;
