@@ -50,11 +50,23 @@ const CHUNK_CHARS = 6000; // per-request chunk size — kept smaller than it mig
 // and used directly instead of trying — and re-failing — a live fetch every
 // time. This is a manual, one-off workaround for sources that are otherwise
 // impossible to fetch automatically, not a general caching mechanism.
-const KNOWN_DOCUMENT_TEXT_FILES = {
+//
+// IMPORTANT: this text is require()'d as a JS module (a plain string), NOT
+// read from a .txt file via fs at request time. Vercel's serverless bundler
+// only bundles files it can statically detect are needed by tracing require()
+// calls with literal string paths — a runtime fs.readFileSync() with a path
+// built from a variable is invisible to that tracing, so the .txt file was
+// silently left out of the deployed bundle and every request failed with
+// "ENOENT: no such file or directory" in production (while working fine
+// locally, where the file is just sitting on disk). Requiring a .js module
+// with a literal path at the top of the file guarantees it's included.
+const idnTkbiV3Faq = require("./_lib/known-documents/idn-tkbi-v3-faq.js");
+
+const KNOWN_DOCUMENT_TEXTS = {
   "https://ojk.go.id/id/Publikasi/Roadmap-dan-Pedoman/Sektor-Jasa-Keuangan/Keuangan-Berkelanjutan/Documents/FAQ%20Taksonomi%20untuk%20Keuangan%20Berkelanjutan%20Indonesia%20(TKBI)%20Versi%203.pdf":
-    "_lib/known-documents/idn-tkbi-v3-faq.txt",
+    idnTkbiV3Faq,
   "https://www.ojk.go.id/id/Publikasi/Roadmap-dan-Pedoman/Sektor-Jasa-Keuangan/Keuangan-Berkelanjutan/Documents/FAQ%20Taksonomi%20untuk%20Keuangan%20Berkelanjutan%20Indonesia%20(TKBI)%20Versi%203.pdf":
-    "_lib/known-documents/idn-tkbi-v3-faq.txt"
+    idnTkbiV3Faq
 };
 
 const LANGUAGE_NAMES = {
@@ -207,12 +219,9 @@ async function extractText(url) {
     return cached.result;
   }
 
-  const knownFile = KNOWN_DOCUMENT_TEXT_FILES[url];
-  if (knownFile) {
-    const fs = require("fs");
-    const path = require("path");
-    const text = fs.readFileSync(path.join(__dirname, knownFile), "utf8").trim();
-    const result = { text, kind: "pdf", pages: null };
+  const knownText = KNOWN_DOCUMENT_TEXTS[url];
+  if (knownText) {
+    const result = { text: knownText.trim(), kind: "pdf", pages: null };
     extractionCache.set(url, { result, at: Date.now() });
     return result;
   }
