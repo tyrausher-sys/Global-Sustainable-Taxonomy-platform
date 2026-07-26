@@ -28,7 +28,6 @@
       <a href="advisor.html" class="active" data-i18n="nav.advisor">AI Advisor</a>
       <a href="media.html" data-i18n="nav.media">Media Hub</a>
       <a href="subscribe.html" data-i18n="nav.subscribe">Subscribe</a>
-      <a href="#" class="disabled" title="Coming soon" data-i18n="nav.resources" data-i18n-title="nav.comingSoon">Resources</a>
       <a href="about.html" data-i18n="nav.about">About</a>
     </nav>
     <div class="topnav-actions">
@@ -57,8 +56,8 @@
 
 <main class="page advisor-page">
   <div class="advisor-header">
-    <h1>AI Taxonomy Advisor</h1>
-    <p class="lede">Describe an economic activity to see how it may align with sustainable finance taxonomies worldwide. Simulated, illustrative analysis — not a substitute for professional or legal compliance advice.</p>
+    <h1 id="advisorPageHeading">AI Taxonomy Advisor</h1>
+    <p class="lede" id="advisorPageLede">Describe an economic activity to see how it may align with sustainable finance taxonomies worldwide. Simulated, illustrative analysis — not a substitute for professional or legal compliance advice.</p>
   </div>
 
   <div class="advisor-tabs" id="advisorTabs">
@@ -71,15 +70,15 @@
   <div class="advisor-layout">
     <section class="advisor-panel advisor-input">
       <div id="modeCompareInputs">
-        <label class="field-label" for="activityInput">Activity Description</label>
+        <label class="field-label" for="activityInput" id="activityDescLabelCompare">Activity Description</label>
         <textarea id="activityInput" rows="5" placeholder="e.g. Construction of a new solar photovoltaic power plant"></textarea>
 
-        <label class="field-label" for="sectorSelect">Sector Classification</label>
+        <label class="field-label" for="sectorSelect" id="sectorClassLabelId">Sector Classification</label>
         <select id="sectorSelect">
           <option value="">Auto-detect from description</option>
         </select>
 
-        <label class="field-label">Region Filter</label>
+        <label class="field-label" id="regionFilterLabelCompare">Region Filter</label>
         <div class="chip-row" id="advisorRegionChips">
           <button class="chip active" data-region="All" type="button">All Regions</button>
           <button class="chip" data-region="Europe" type="button">Europe</button>
@@ -91,10 +90,10 @@
       </div>
 
       <div id="modeCountryInputs" style="display:none;">
-        <label class="field-label" for="activityInputCountry">Activity Description</label>
+        <label class="field-label" for="activityInputCountry" id="activityDescLabelCountry">Activity Description</label>
         <textarea id="activityInputCountry" rows="5" placeholder="e.g. Manufacturing of batteries for electric vehicles"></textarea>
 
-        <label class="field-label" for="countrySelect">Jurisdiction</label>
+        <label class="field-label" for="countrySelect" id="jurisdictionLabelId">Jurisdiction</label>
         <select id="countrySelect"></select>
       </div>
 
@@ -102,7 +101,7 @@
         <label class="field-label" id="portfolioActivitiesLabel">Select the economic activities you invest in</label>
         <div class="activity-checklist" id="activityChecklist"></div>
 
-        <label class="field-label">Region Filter</label>
+        <label class="field-label" id="regionFilterLabelPortfolio">Region Filter</label>
         <div class="chip-row" id="portfolioRegionChips">
           <button class="chip active" data-region="All" type="button">All Regions</button>
           <button class="chip" data-region="Europe" type="button">Europe</button>
@@ -113,11 +112,11 @@
         </div>
       </div>
 
-      <label class="field-label" for="langSelectAdvisor">Response Language</label>
+      <label class="field-label" for="langSelectAdvisor" id="responseLanguageLabelId">Response Language</label>
       <select id="langSelectAdvisor"></select>
 
       <div id="exampleQueriesBlock">
-        <label class="field-label">Example Queries</label>
+        <label class="field-label" id="exampleQueriesLabelId">Example Queries</label>
         <div class="example-cards" id="exampleCards"></div>
       </div>
 
@@ -141,14 +140,19 @@
       <textarea id="chatInput" rows="2" placeholder="Ask about any taxonomy… e.g. Compare the EU and South Korea taxonomies"></textarea>
       <button class="btn-primary" type="submit" id="chatSendBtn">Send</button>
     </form>
-    <p class="sample-note">This tab calls a real AI model through a secure backend (your API key is never in this webpage). If it doesn't respond, this site may not be deployed to Vercel with an API key yet.</p>
+    <p class="sample-note" id="askDisclaimerNoteId">This tab calls a real AI model through a secure backend (your API key is never in this webpage). If it doesn't respond, this site may not be deployed to Vercel with an API key yet.</p>
   </section>
 </main>
 
 <footer class="site-footer">
   <span>© 2026 BNZ PARTNERS</span>
-  <span><span data-i18n="footer.developedBy">Developed by</span> Tyra Usher | <span data-i18n="footer.supervisedBy">Supervised by</span> Yoo, So Young, <span data-i18n="footer.headOfAI">Head of AI Centre</span></span>
-  <a href="http://bnzpartners.co.kr/en/" target="_blank" rel="noopener">bnzpartners.co.kr</a>
+  <span><span data-i18n="footer.developedBy">Developed by</span> BNZ PARTNERS — <span data-i18n="about.coreDeveloper">Core Developer</span>: Tyra Usher, <span data-i18n="footer.supervisorLabel">Supervisor</span>: Yoo, So Young</span>
+  <span class="footer-contact">
+    <a href="http://bnzpartners.co.kr/en/" target="_blank" rel="noopener">bnzpartners.co.kr</a> ·
+    <a href="mailto:bnz@bnzpartners.co.kr">bnz@bnzpartners.co.kr</a> ·
+    <a href="tel:+82227841822">+82 2-784-1822</a>
+  </span>
+  <span class="footer-references"><a href="about.html#key-resources" data-i18n="footer.references">References</a></span>
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>

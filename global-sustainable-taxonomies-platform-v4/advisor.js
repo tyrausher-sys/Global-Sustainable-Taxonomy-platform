@@ -88,7 +88,9 @@ const LANGUAGES = [
   { code: "fr", label: "Français" },
   { code: "de", label: "Deutsch" },
   { code: "ja", label: "日本語" },
-  { code: "zh", label: "中文" }
+  { code: "zh", label: "中文" },
+  { code: "ar", label: "العربية" },
+  { code: "pt", label: "Português" }
 ];
 
 const I18N = {
@@ -122,7 +124,23 @@ const I18N = {
     portfolioSummaryTemplate: "Across {total} reviewed jurisdictions, {meets} have documented criteria matching at least one of your {n} selected activities, {partial} show sector-level or partial coverage only, and {none} currently have no taxonomy in place.",
     selectActivitiesPrompt: "Select at least one activity before analyzing.", pdfTitlePortfolio: "AI Taxonomy Advisor — Portfolio Comparison",
     pdfActivities: "Selected Activities", activityMatchCount: "{n} of {total} activities",
-    sectors: { "Energy": "Energy", "Transport": "Transport", "Buildings & Construction": "Buildings & Construction", "Manufacturing & Industry": "Manufacturing & Industry", "Agriculture & Forestry": "Agriculture & Forestry", "Water & Waste Management": "Water & Waste Management", "ICT & Digital Infrastructure": "ICT & Digital Infrastructure" }
+    sectors: { "Energy": "Energy", "Transport": "Transport", "Buildings & Construction": "Buildings & Construction", "Manufacturing & Industry": "Manufacturing & Industry", "Agriculture & Forestry": "Agriculture & Forestry", "Water & Waste Management": "Water & Waste Management", "ICT & Digital Infrastructure": "ICT & Digital Infrastructure" },
+    pageHeading: "AI Taxonomy Advisor",
+    pageLede: "Describe an economic activity to see how it may align with sustainable finance taxonomies worldwide. Simulated, illustrative analysis — not a substitute for professional or legal compliance advice.",
+    compareTabLabel: "Multi-Country Comparison",
+    countryTabLabel: "Country-Specific Advisor",
+    askTabLabel: "Ask AI",
+    activityDescLabel: "Activity Description",
+    sectorClassLabel: "Sector Classification",
+    regionFilterLabel: "Region Filter",
+    responseLanguageLabel: "Response Language",
+    exampleQueriesLabel: "Example Queries",
+    autoDetectOption: "Auto-detect from description",
+    regions: {"All": "All Regions", "Europe": "Europe", "Asia-Pacific": "Asia-Pacific", "Americas": "Americas", "Africa": "Africa", "Middle East": "Middle East"},
+    chatWelcomeAdvisor: "Ask anything about the taxonomies in our dataset — compare countries, ask what a term means, or ask which jurisdictions cover a given sector. Powered by a live AI model once this site is deployed with an API key.",
+    askDisclaimerNote: "This tab calls a real AI model through a secure backend (your API key is never in this webpage). If it doesn't respond, this site may not be deployed to Vercel with an API key yet.",
+    sendBtn: "Send",
+    chatInputPlaceholder: "Ask about any taxonomy… e.g. Compare the EU and South Korea taxonomies"
   },
   sv: {
     meets: "Uppfyller", partial: "Delvis", doesNotMeet: "Uppfyller inte",
@@ -154,7 +172,23 @@ const I18N = {
     portfolioSummaryTemplate: "Av {total} granskade jurisdiktioner har {meets} dokumenterade kriterier som matchar minst en av dina {n} valda verksamheter, {partial} visar endast sektornivå- eller partiell täckning, och {none} saknar för närvarande en taxonomi.",
     selectActivitiesPrompt: "Välj minst en verksamhet innan du analyserar.", pdfTitlePortfolio: "AI Taxonomy Advisor — Portföljjämförelse",
     pdfActivities: "Valda verksamheter", activityMatchCount: "{n} av {total} verksamheter",
-    sectors: { "Energy": "Energi", "Transport": "Transport", "Buildings & Construction": "Byggnader & konstruktion", "Manufacturing & Industry": "Tillverkning & industri", "Agriculture & Forestry": "Jord- & skogsbruk", "Water & Waste Management": "Vatten- & avfallshantering", "ICT & Digital Infrastructure": "IKT & digital infrastruktur" }
+    sectors: { "Energy": "Energi", "Transport": "Transport", "Buildings & Construction": "Byggnader & konstruktion", "Manufacturing & Industry": "Tillverkning & industri", "Agriculture & Forestry": "Jord- & skogsbruk", "Water & Waste Management": "Vatten- & avfallshantering", "ICT & Digital Infrastructure": "IKT & digital infrastruktur" },
+    pageHeading: "AI Taxonomy Advisor",
+    pageLede: "Beskriv en ekonomisk aktivitet för att se hur den kan överensstämma med taxonomier för hållbar finansiering världen över. Simulerad, illustrativ analys — inte en ersättning för professionell eller juridisk rådgivning om regelefterlevnad.",
+    compareTabLabel: "Jämförelse mellan flera länder",
+    countryTabLabel: "Landsspecifik rådgivare",
+    askTabLabel: "Fråga AI",
+    activityDescLabel: "Aktivitetsbeskrivning",
+    sectorClassLabel: "Sektorklassificering",
+    regionFilterLabel: "Regionfilter",
+    responseLanguageLabel: "Svarsspråk",
+    exampleQueriesLabel: "Exempelfrågor",
+    autoDetectOption: "Identifiera automatiskt från beskrivning",
+    regions: {"All": "Alla regioner", "Europe": "Europa", "Asia-Pacific": "Asien-Stillahavsregionen", "Americas": "Amerika", "Africa": "Afrika", "Middle East": "Mellanöstern"},
+    chatWelcomeAdvisor: "Fråga vad som helst om taxonomierna i vårt dataset — jämför länder, fråga vad en term betyder, eller vilka jurisdiktioner som täcker en viss sektor. Drivs av en riktig AI-modell när denna sajt är driftsatt med en API-nyckel.",
+    askDisclaimerNote: "Denna flik anropar en riktig AI-modell via en säker backend (din API-nyckel finns aldrig på denna webbsida). Om den inte svarar kan det bero på att sajten ännu inte är driftsatt på Vercel med en API-nyckel.",
+    sendBtn: "Skicka",
+    chatInputPlaceholder: "Fråga om vilken taxonomi som helst … t.ex. Jämför EU:s och Sydkoreas taxonomier"
   },
   ko: {
     meets: "충족", partial: "부분 충족", doesNotMeet: "미충족",
@@ -186,7 +220,23 @@ const I18N = {
     portfolioSummaryTemplate: "검토된 {total}개 관할권 중 {meets}개는 선택하신 {n}개 활동 중 하나 이상과 일치하는 문서화된 기준을 보유하고 있으며, {partial}개는 부문 수준 또는 부분적 적용 범위만 나타내고, {none}개는 현재 택소노미가 없습니다.",
     selectActivitiesPrompt: "분석하기 전에 하나 이상의 활동을 선택하세요.", pdfTitlePortfolio: "AI 택소노미 어드바이저 — 포트폴리오 비교",
     pdfActivities: "선택한 활동", activityMatchCount: "{total}개 중 {n}개 활동",
-    sectors: { "Energy": "에너지", "Transport": "교통", "Buildings & Construction": "건물 및 건설", "Manufacturing & Industry": "제조 및 산업", "Agriculture & Forestry": "농업 및 임업", "Water & Waste Management": "수자원 및 폐기물 관리", "ICT & Digital Infrastructure": "ICT 및 디지털 인프라" }
+    sectors: { "Energy": "에너지", "Transport": "교통", "Buildings & Construction": "건물 및 건설", "Manufacturing & Industry": "제조 및 산업", "Agriculture & Forestry": "농업 및 임업", "Water & Waste Management": "수자원 및 폐기물 관리", "ICT & Digital Infrastructure": "ICT 및 디지털 인프라" },
+    pageHeading: "AI 택소노미 어드바이저",
+    pageLede: "경제 활동을 설명하여 전 세계 지속가능금융 택소노미와의 부합 여부를 확인하세요. 시뮬레이션된 예시 분석이며 — 전문적이거나 법적인 컴플라이언스 자문을 대체하지 않습니다.",
+    compareTabLabel: "다국가 비교",
+    countryTabLabel: "국가별 어드바이저",
+    askTabLabel: "AI에게 질문",
+    activityDescLabel: "활동 설명",
+    sectorClassLabel: "부문 분류",
+    regionFilterLabel: "지역 필터",
+    responseLanguageLabel: "응답 언어",
+    exampleQueriesLabel: "예시 질문",
+    autoDetectOption: "설명에서 자동 감지",
+    regions: {"All": "전체 지역", "Europe": "유럽", "Asia-Pacific": "아시아·태평양", "Americas": "아메리카", "Africa": "아프리카", "Middle East": "중동"},
+    chatWelcomeAdvisor: "데이터셋에 포함된 택소노미에 대해 무엇이든 물어보세요 — 국가 비교, 용어의 의미, 특정 부문을 다루는 관할권 등을 질문할 수 있습니다. 이 사이트가 API 키와 함께 배포되면 실제 AI 모델이 작동합니다.",
+    askDisclaimerNote: "이 탭은 안전한 백엔드를 통해 실제 AI 모델을 호출합니다(API 키는 이 웹페이지에 절대 노출되지 않습니다). 응답이 없다면 이 사이트가 아직 API 키와 함께 Vercel에 배포되지 않았을 수 있습니다.",
+    sendBtn: "보내기",
+    chatInputPlaceholder: "어떤 택소노미에 대해서든 질문하세요… 예: EU와 한국의 택소노미를 비교해줘"
   },
   es: {
     meets: "Cumple", partial: "Parcial", doesNotMeet: "No cumple",
@@ -218,7 +268,23 @@ const I18N = {
     portfolioSummaryTemplate: "De {total} jurisdicciones revisadas, {meets} cuentan con criterios documentados que coinciden con al menos una de sus {n} actividades seleccionadas, {partial} muestran cobertura solo a nivel sectorial o parcial, y {none} actualmente no tienen taxonomía.",
     selectActivitiesPrompt: "Seleccione al menos una actividad antes de analizar.", pdfTitlePortfolio: "Asesor de Taxonomías IA — Comparación de cartera",
     pdfActivities: "Actividades seleccionadas", activityMatchCount: "{n} de {total} actividades",
-    sectors: { "Energy": "Energía", "Transport": "Transporte", "Buildings & Construction": "Edificios y construcción", "Manufacturing & Industry": "Manufactura e industria", "Agriculture & Forestry": "Agricultura y silvicultura", "Water & Waste Management": "Gestión del agua y residuos", "ICT & Digital Infrastructure": "TIC e infraestructura digital" }
+    sectors: { "Energy": "Energía", "Transport": "Transporte", "Buildings & Construction": "Edificios y construcción", "Manufacturing & Industry": "Manufactura e industria", "Agriculture & Forestry": "Agricultura y silvicultura", "Water & Waste Management": "Gestión del agua y residuos", "ICT & Digital Infrastructure": "TIC e infraestructura digital" },
+    pageHeading: "Asesor de Taxonomías IA",
+    pageLede: "Describa una actividad económica para ver cómo puede alinearse con las taxonomías de finanzas sostenibles en todo el mundo. Análisis simulado e ilustrativo — no sustituye el asesoramiento profesional o legal sobre cumplimiento.",
+    compareTabLabel: "Comparación multinacional",
+    countryTabLabel: "Asesor específico por país",
+    askTabLabel: "Preguntar a la IA",
+    activityDescLabel: "Descripción de la Actividad",
+    sectorClassLabel: "Clasificación Sectorial",
+    regionFilterLabel: "Filtro de región",
+    responseLanguageLabel: "Idioma de Respuesta",
+    exampleQueriesLabel: "Consultas de Ejemplo",
+    autoDetectOption: "Detectar automáticamente según la descripción",
+    regions: {"All": "Todas las regiones", "Europe": "Europa", "Asia-Pacific": "Asia-Pacífico", "Americas": "América", "Africa": "África", "Middle East": "Oriente Medio"},
+    chatWelcomeAdvisor: "Pregunte lo que quiera sobre las taxonomías de nuestro conjunto de datos — compare países, pregunte qué significa un término o qué jurisdicciones cubren un sector determinado. Impulsado por un modelo de IA real una vez que este sitio esté implementado con una clave de API.",
+    askDisclaimerNote: "Esta pestaña llama a un modelo de IA real a través de un backend seguro (su clave de API nunca está en esta página web). Si no responde, es posible que este sitio aún no esté implementado en Vercel con una clave de API.",
+    sendBtn: "Enviar",
+    chatInputPlaceholder: "Pregunte sobre cualquier taxonomía… p. ej., Compare las taxonomías de la UE y Corea del Sur"
   },
   fr: {
     meets: "Conforme", partial: "Partiel", doesNotMeet: "Non conforme",
@@ -250,7 +316,23 @@ const I18N = {
     portfolioSummaryTemplate: "Sur {total} juridictions examinées, {meets} disposent de critères documentés correspondant à au moins une de vos {n} activités sélectionnées, {partial} présentent une couverture uniquement sectorielle ou partielle, et {none} n'ont actuellement aucune taxonomie.",
     selectActivitiesPrompt: "Sélectionnez au moins une activité avant d'analyser.", pdfTitlePortfolio: "Conseiller IA en Taxonomies — Comparaison de portefeuille",
     pdfActivities: "Activités sélectionnées", activityMatchCount: "{n} sur {total} activités",
-    sectors: { "Energy": "Énergie", "Transport": "Transport", "Buildings & Construction": "Bâtiments et construction", "Manufacturing & Industry": "Fabrication et industrie", "Agriculture & Forestry": "Agriculture et foresterie", "Water & Waste Management": "Gestion de l'eau et des déchets", "ICT & Digital Infrastructure": "TIC et infrastructure numérique" }
+    sectors: { "Energy": "Énergie", "Transport": "Transport", "Buildings & Construction": "Bâtiments et construction", "Manufacturing & Industry": "Fabrication et industrie", "Agriculture & Forestry": "Agriculture et foresterie", "Water & Waste Management": "Gestion de l'eau et des déchets", "ICT & Digital Infrastructure": "TIC et infrastructure numérique" },
+    pageHeading: "Conseiller IA en Taxonomies",
+    pageLede: "Décrivez une activité économique pour voir comment elle peut s'aligner avec les taxonomies de finance durable dans le monde. Analyse simulée et illustrative — ne remplace pas un conseil professionnel ou juridique en matière de conformité.",
+    compareTabLabel: "Comparaison multi-pays",
+    countryTabLabel: "Conseiller par pays",
+    askTabLabel: "Demander à l'IA",
+    activityDescLabel: "Description de l'Activité",
+    sectorClassLabel: "Classification Sectorielle",
+    regionFilterLabel: "Filtre régional",
+    responseLanguageLabel: "Langue de Réponse",
+    exampleQueriesLabel: "Exemples de Requêtes",
+    autoDetectOption: "Détection automatique à partir de la description",
+    regions: {"All": "Toutes les régions", "Europe": "Europe", "Asia-Pacific": "Asie-Pacifique", "Americas": "Amériques", "Africa": "Afrique", "Middle East": "Moyen-Orient"},
+    chatWelcomeAdvisor: "Posez toute question sur les taxonomies de notre ensemble de données — comparez des pays, demandez la signification d'un terme, ou quelles juridictions couvrent un secteur donné. Alimenté par un véritable modèle d'IA une fois ce site déployé avec une clé API.",
+    askDisclaimerNote: "Cet onglet fait appel à un véritable modèle d'IA via un backend sécurisé (votre clé API n'est jamais présente sur cette page web). S'il ne répond pas, ce site n'est peut-être pas encore déployé sur Vercel avec une clé API.",
+    sendBtn: "Envoyer",
+    chatInputPlaceholder: "Posez une question sur n'importe quelle taxonomie… par ex. Comparez les taxonomies de l'UE et de la Corée du Sud"
   },
   de: {
     meets: "Erfüllt", partial: "Teilweise", doesNotMeet: "Nicht erfüllt",
@@ -282,7 +364,23 @@ const I18N = {
     portfolioSummaryTemplate: "Von {total} geprüften Jurisdiktionen verfügen {meets} über dokumentierte Kriterien, die mit mindestens einer Ihrer {n} ausgewählten Aktivitäten übereinstimmen, {partial} zeigen nur eine Abdeckung auf Sektorebene oder teilweise, und {none} haben derzeit keine Taxonomie.",
     selectActivitiesPrompt: "Wählen Sie mindestens eine Aktivität aus, bevor Sie analysieren.", pdfTitlePortfolio: "KI-Taxonomie-Berater — Portfoliovergleich",
     pdfActivities: "Ausgewählte Aktivitäten", activityMatchCount: "{n} von {total} Aktivitäten",
-    sectors: { "Energy": "Energie", "Transport": "Verkehr", "Buildings & Construction": "Gebäude & Bauwesen", "Manufacturing & Industry": "Fertigung & Industrie", "Agriculture & Forestry": "Land- & Forstwirtschaft", "Water & Waste Management": "Wasser- & Abfallwirtschaft", "ICT & Digital Infrastructure": "IKT & digitale Infrastruktur" }
+    sectors: { "Energy": "Energie", "Transport": "Verkehr", "Buildings & Construction": "Gebäude & Bauwesen", "Manufacturing & Industry": "Fertigung & Industrie", "Agriculture & Forestry": "Land- & Forstwirtschaft", "Water & Waste Management": "Wasser- & Abfallwirtschaft", "ICT & Digital Infrastructure": "IKT & digitale Infrastruktur" },
+    pageHeading: "KI-Taxonomie-Berater",
+    pageLede: "Beschreiben Sie eine wirtschaftliche Tätigkeit, um zu sehen, wie sie mit Taxonomien für nachhaltige Finanzen weltweit übereinstimmen könnte. Simulierte, illustrative Analyse — kein Ersatz für professionelle oder rechtliche Compliance-Beratung.",
+    compareTabLabel: "Ländervergleich",
+    countryTabLabel: "Länderspezifischer Berater",
+    askTabLabel: "KI fragen",
+    activityDescLabel: "Tätigkeitsbeschreibung",
+    sectorClassLabel: "Sektorklassifizierung",
+    regionFilterLabel: "Regionsfilter",
+    responseLanguageLabel: "Antwortsprache",
+    exampleQueriesLabel: "Beispielanfragen",
+    autoDetectOption: "Automatisch aus Beschreibung erkennen",
+    regions: {"All": "Alle Regionen", "Europe": "Europa", "Asia-Pacific": "Asien-Pazifik", "Americas": "Amerika", "Africa": "Afrika", "Middle East": "Naher Osten"},
+    chatWelcomeAdvisor: "Stellen Sie beliebige Fragen zu den Taxonomien in unserem Datensatz — vergleichen Sie Länder, fragen Sie nach der Bedeutung eines Begriffs oder welche Jurisdiktionen einen bestimmten Sektor abdecken. Wird von einem echten KI-Modell unterstützt, sobald diese Website mit einem API-Schlüssel bereitgestellt ist.",
+    askDisclaimerNote: "Dieser Tab ruft über ein sicheres Backend ein echtes KI-Modell auf (Ihr API-Schlüssel befindet sich niemals auf dieser Webseite). Wenn keine Antwort erfolgt, ist diese Website möglicherweise noch nicht mit einem API-Schlüssel auf Vercel bereitgestellt.",
+    sendBtn: "Senden",
+    chatInputPlaceholder: "Fragen Sie zu einer beliebigen Taxonomie… z. B. Vergleichen Sie die Taxonomien der EU und Südkoreas"
   },
   ja: {
     meets: "適合", partial: "部分的適合", doesNotMeet: "不適合",
@@ -314,7 +412,23 @@ const I18N = {
     portfolioSummaryTemplate: "検討対象の{total}法域のうち、{meets}法域は選択された{n}件の活動の少なくとも1つと一致する文書化された基準を有しており、{partial}法域は分野レベルまたは部分的な適用範囲のみを示し、{none}法域には現在タクソノミーがありません。",
     selectActivitiesPrompt: "分析する前に少なくとも1つの活動を選択してください。", pdfTitlePortfolio: "AIタクソノミー・アドバイザー — ポートフォリオ比較",
     pdfActivities: "選択した活動", activityMatchCount: "{total}件中{n}件の活動",
-    sectors: { "Energy": "エネルギー", "Transport": "運輸", "Buildings & Construction": "建築・建設", "Manufacturing & Industry": "製造業・産業", "Agriculture & Forestry": "農業・林業", "Water & Waste Management": "水・廃棄物管理", "ICT & Digital Infrastructure": "ICT・デジタルインフラ" }
+    sectors: { "Energy": "エネルギー", "Transport": "運輸", "Buildings & Construction": "建築・建設", "Manufacturing & Industry": "製造業・産業", "Agriculture & Forestry": "農業・林業", "Water & Waste Management": "水・廃棄物管理", "ICT & Digital Infrastructure": "ICT・デジタルインフラ" },
+    pageHeading: "AIタクソノミー・アドバイザー",
+    pageLede: "経済活動を説明して、世界各国のサステナブルファイナンス・タクソノミーとの整合性を確認してください。シミュレーションによる例示的な分析であり — 専門的または法的なコンプライアンス助言に代わるものではありません。",
+    compareTabLabel: "多国間比較",
+    countryTabLabel: "国別アドバイザー",
+    askTabLabel: "AIに質問",
+    activityDescLabel: "活動内容",
+    sectorClassLabel: "分野分類",
+    regionFilterLabel: "地域フィルター",
+    responseLanguageLabel: "回答言語",
+    exampleQueriesLabel: "質問例",
+    autoDetectOption: "説明から自動検出",
+    regions: {"All": "すべての地域", "Europe": "ヨーロッパ", "Asia-Pacific": "アジア太平洋", "Americas": "南北アメリカ", "Africa": "アフリカ", "Middle East": "中東"},
+    chatWelcomeAdvisor: "当データセットのタクソノミーについて何でもご質問ください — 国同士の比較、用語の意味、特定分野を対象とする法域などについてお尋ねいただけます。このサイトがAPIキー付きでデプロイされると、実際のAIモデルが動作します。",
+    askDisclaimerNote: "このタブは安全なバックエンドを通じて実際のAIモデルを呼び出します（APIキーがこのウェブページに含まれることはありません）。応答がない場合、このサイトはまだAPIキー付きでVercelにデプロイされていない可能性があります。",
+    sendBtn: "送信",
+    chatInputPlaceholder: "任意のタクソノミーについて質問してください…例：EUと韓国のタクソノミーを比較して"
   },
   zh: {
     meets: "符合", partial: "部分符合", doesNotMeet: "不符合",
@@ -346,7 +460,119 @@ const I18N = {
     portfolioSummaryTemplate: "在审查的{total}个司法辖区中，{meets}个拥有与您所选{n}项活动中至少一项相匹配的书面标准，{partial}个仅显示行业层面或部分覆盖，{none}个目前尚无分类标准。",
     selectActivitiesPrompt: "请至少选择一项活动后再进行分析。", pdfTitlePortfolio: "AI 分类标准顾问 — 投资组合比较",
     pdfActivities: "已选活动", activityMatchCount: "{total}项活动中的{n}项",
-    sectors: { "Energy": "能源", "Transport": "交通运输", "Buildings & Construction": "建筑与施工", "Manufacturing & Industry": "制造业与工业", "Agriculture & Forestry": "农业与林业", "Water & Waste Management": "水与废物管理", "ICT & Digital Infrastructure": "信息通信技术与数字基础设施" }
+    sectors: { "Energy": "能源", "Transport": "交通运输", "Buildings & Construction": "建筑与施工", "Manufacturing & Industry": "制造业与工业", "Agriculture & Forestry": "农业与林业", "Water & Waste Management": "水与废物管理", "ICT & Digital Infrastructure": "信息通信技术与数字基础设施" },
+    pageHeading: "AI 分类标准顾问",
+    pageLede: "描述一项经济活动，以了解其可能如何符合全球可持续金融分类标准。这是模拟性示例分析 — 不能替代专业或法律合规建议。",
+    compareTabLabel: "多国比较",
+    countryTabLabel: "国别顾问",
+    askTabLabel: "询问 AI",
+    activityDescLabel: "活动描述",
+    sectorClassLabel: "行业分类",
+    regionFilterLabel: "地区筛选",
+    responseLanguageLabel: "回复语言",
+    exampleQueriesLabel: "示例查询",
+    autoDetectOption: "根据描述自动检测",
+    regions: {"All": "所有地区", "Europe": "欧洲", "Asia-Pacific": "亚太地区", "Americas": "美洲", "Africa": "非洲", "Middle East": "中东"},
+    chatWelcomeAdvisor: "可以询问关于我们数据集中分类标准的任何问题 — 比较国家、询问某个术语的含义，或询问哪些司法辖区涵盖特定行业。一旦本网站使用 API 密钥部署，将由真实的 AI 模型提供支持。",
+    askDisclaimerNote: "此标签页通过安全的后端调用真实的 AI 模型（您的 API 密钥绝不会出现在此网页中）。如果没有响应，可能是此网站尚未使用 API 密钥部署到 Vercel。",
+    sendBtn: "发送",
+    chatInputPlaceholder: "询问任何分类标准…例如：比较欧盟和韩国的分类标准"
+  },
+  ar: {
+    meets: "مستوفٍ", partial: "جزئي", doesNotMeet: "غير مستوفٍ",
+    colJurisdiction: "الولاية القضائية", colStatus: "الحالة", colKeyCriterion: "المعيار الرئيسي", viewLink: "عرض >",
+    aiSummaryHeading: "ملخص تحليل الذكاء الاصطناعي", exportBtn: "تصدير", shareBtn: "مشاركة",
+    compareDisclaimer: "تحليل توضيحي محاكى يعتمد على مطابقة كلمات مفتاحية بسيطة مقابل التغطية القطاعية الموثقة علنًا — وليس قرارًا قانونيًا أو تنظيميًا. يُرجى دائمًا التأكيد من خلال وثائق التصنيف الرسمية.",
+    countryDisclaimer: "تحليل توضيحي محاكى يعتمد على مطابقة كلمات مفتاحية بسيطة — وليس قرارًا قانونيًا أو تنظيميًا. يُرجى دائمًا التأكيد من خلال وثائق التصنيف الرسمية.",
+    substantialContribution: "مساهمة جوهرية", dnshLabel: "عدم الإضرار الجسيم (DNSH)", minimumSafeguardsLabel: "الضمانات الدنيا",
+    requiredDocumented: "مطلوب وموثّق لهذا التصنيف.", notConfirmed: "غير مؤكَّد في مجموعة بياناتنا — يُرجى مراجعة المعايير الرسمية.",
+    additionalDocsHeading: "وثائق إضافية قد تكون مطلوبة", viewFullProfile: "عرض الملف الكامل للبلد",
+    illustrativeNote: "هذا عرض توضيحي، وليس بديلاً عن الاستشارة المهنية أو القانونية بشأن الامتثال.",
+    promptBeforeAnalyze: "يُرجى وصف نشاط قبل التحليل.",
+    emptyPromptCompare: "أدخل وصف النشاط وانقر على تحليل الامتثال لعرض النتائج.",
+    analyzeBtn: "تحليل الامتثال",
+    docs: ["تقرير التقييم الفني", "إقرار الامتثال لمبدأ عدم الإضرار الجسيم (DNSH)", "إقرار الضمانات الدنيا / العناية الواجبة بحقوق الإنسان", "تحقق مستقل من طرف ثالث (عند طلب الجهة الرقابية ذلك)"],
+    coversTemplate: 'يغطي "{sector}" بموجب {taxonomy}{year}.',
+    resemblesTemplate: 'يشبه هذا النشاط فئة "{category}" التي تغطيها التصنيفات عادةً، لكن التغطية القطاعية الصريحة غير مؤكدة في مجموعة بياناتنا لـ {taxonomy}.',
+    uncertainTemplate: "لم يتطابق الوصف بوضوح مع فئة نشاط أخضر معترف بها — التصنيف غير مؤكد.",
+    noneTemplate: "لا يوجد حاليًا تصنيف تمويل مستدام ساري في هذه الولاية القضائية.",
+    summaryTemplate: 'استنادًا إلى تحليل محاكى للكلمات المفتاحية لـ "{activity}"{sectorPart}، فإن {meets} من أصل {total} ولاية قضائية تمت مراجعتها لديها تصنيفات منشورة تغطي صراحةً هذا النوع من النشاط، بينما تُظهر {partial} توافقًا جزئيًا أو غير مؤكد، ولا تملك {none} حاليًا أي تصنيف.{strongestPart} هذا الملخص توضيحي فقط ولا ينبغي الاعتماد عليه في قرارات الامتثال.',
+    sectorPart: " (مصنَّف كـ {sector})", strongestPart: " أقوى التطابقات: {names}.",
+    pdfTitleCompare: "مستشار التصنيف بالذكاء الاصطناعي — مقارنة بين عدة دول", pdfTitleCountry: "مستشار التصنيف بالذكاء الاصطناعي — تقييم خاص بالبلد",
+    pdfActivity: "النشاط", pdfSector: "القطاع", pdfRegionFilter: "تصفية حسب المنطقة", pdfCountry: "البلد", pdfResult: "النتيجة",
+    pdfCriteria: "المعايير", pdfMet: "مستوفٍ", pdfNotConfirmedShort: "غير مؤكد",
+    deepMatchTemplate: "يطابق نشاطًا محددًا مدرجًا — \"{activity}\" بموجب {taxonomy}: {criteria}",
+    portfolioTabLabel: "مقارنة المحفظة", selectActivitiesHeading: "اختر الأنشطة الاقتصادية التي تستثمر فيها",
+    analyzeBtnPortfolio: "تحليل المحفظة", deepMatchBadge: "تطابق صريح للنشاط", sectorOnlyBadge: "تطابق على مستوى القطاع فقط", noDataBadge: "لا توجد بيانات تفصيلية بعد",
+    noDetailedDataTemplate: "لا تتوفر بيانات تفصيلية على مستوى النشاط لـ {taxonomy} في مجموعة بياناتنا بعد — يُرجى مراجعة المصدر الرسمي لمعرفة نطاق التغطية بدقة.",
+    portfolioSummaryTemplate: "من بين {total} ولاية قضائية تمت مراجعتها، لدى {meets} معايير موثقة تطابق واحدًا على الأقل من أنشطتك المختارة البالغ عددها {n}، بينما تُظهر {partial} تغطية على مستوى القطاع أو جزئية فقط، ولا تملك {none} حاليًا أي تصنيف.",
+    selectActivitiesPrompt: "اختر نشاطًا واحدًا على الأقل قبل التحليل.", pdfTitlePortfolio: "مستشار التصنيف بالذكاء الاصطناعي — مقارنة المحفظة",
+    pdfActivities: "الأنشطة المختارة", activityMatchCount: "{n} من أصل {total} نشاطًا",
+    sectors: { "Energy": "الطاقة", "Transport": "النقل", "Buildings & Construction": "المباني والتشييد", "Manufacturing & Industry": "التصنيع والصناعة", "Agriculture & Forestry": "الزراعة والحراجة", "Water & Waste Management": "إدارة المياه والنفايات", "ICT & Digital Infrastructure": "تقنية المعلومات والاتصالات والبنية التحتية الرقمية" },
+    pageHeading: "مستشار التصنيف بالذكاء الاصطناعي",
+    pageLede: "صف نشاطًا اقتصاديًا لمعرفة مدى توافقه مع تصنيفات التمويل المستدام حول العالم. تحليل توضيحي محاكى — وليس بديلاً عن الاستشارة المهنية أو القانونية بشأن الامتثال.",
+    compareTabLabel: "مقارنة بين عدة دول",
+    countryTabLabel: "مستشار خاص بالبلد",
+    askTabLabel: "اسأل الذكاء الاصطناعي",
+    activityDescLabel: "وصف النشاط",
+    sectorClassLabel: "التصنيف القطاعي",
+    regionFilterLabel: "تصفية حسب المنطقة",
+    responseLanguageLabel: "لغة الرد",
+    exampleQueriesLabel: "أمثلة على الاستفسارات",
+    autoDetectOption: "الاكتشاف التلقائي من الوصف",
+    regions: {"All": "جميع المناطق", "Europe": "أوروبا", "Asia-Pacific": "آسيا والمحيط الهادئ", "Americas": "الأمريكتان", "Africa": "أفريقيا", "Middle East": "الشرق الأوسط"},
+    chatWelcomeAdvisor: "اسأل أي شيء عن التصنيفات الموجودة في مجموعة بياناتنا — قارن بين الدول، اسأل عن معنى مصطلح ما، أو استفسر عن الولايات القضائية التي تغطي قطاعًا معينًا. يعمل بواسطة نموذج ذكاء اصطناعي حقيقي بمجرد نشر هذا الموقع بمفتاح API.",
+    askDisclaimerNote: "تستدعي هذه العلامة نموذج ذكاء اصطناعي حقيقيًا عبر خلفية آمنة (مفتاح API الخاص بك لا يوجد أبدًا في هذه الصفحة). إذا لم يستجب، فقد يكون هذا الموقع لم يُنشر بعد على Vercel بمفتاح API.",
+    sendBtn: "إرسال",
+    chatInputPlaceholder: "اسأل عن أي تصنيف… على سبيل المثال، قارن بين تصنيفي الاتحاد الأوروبي وكوريا الجنوبية"
+  },
+  pt: {
+    meets: "Atende", partial: "Parcial", doesNotMeet: "Não Atende",
+    colJurisdiction: "Jurisdição", colStatus: "Status", colKeyCriterion: "Critério Principal", viewLink: "Ver >",
+    aiSummaryHeading: "Resumo da Análise de IA", exportBtn: "Exportar", shareBtn: "Compartilhar",
+    compareDisclaimer: "Análise simulada e ilustrativa baseada em correspondência simples de palavras-chave com a cobertura setorial documentada publicamente — não constitui uma determinação legal ou regulatória. Sempre confirme com a documentação oficial da taxonomia.",
+    countryDisclaimer: "Análise simulada e ilustrativa baseada em correspondência simples de palavras-chave — não constitui uma determinação legal ou regulatória. Sempre confirme com a documentação oficial da taxonomia.",
+    substantialContribution: "Contribuição Substancial", dnshLabel: "Não Causar Dano Significativo (DNSH)", minimumSafeguardsLabel: "Salvaguardas Mínimas",
+    requiredDocumented: "Exigido e documentado para esta taxonomia.", notConfirmed: "Não confirmado em nosso conjunto de dados — verifique os critérios oficiais.",
+    additionalDocsHeading: "Documentação Adicional Provavelmente Necessária", viewFullProfile: "Ver Perfil Completo do País",
+    illustrativeNote: "Esta é uma demonstração ilustrativa, não um substituto para aconselhamento profissional ou jurídico sobre conformidade.",
+    promptBeforeAnalyze: "Descreva uma atividade antes de analisar.",
+    emptyPromptCompare: "Insira uma descrição da atividade e clique em Analisar Conformidade para ver os resultados.",
+    analyzeBtn: "Analisar Conformidade",
+    docs: ["Relatório de avaliação técnica", "Declaração de conformidade DNSH", "Declaração de salvaguardas mínimas / diligência em direitos humanos", "Verificação independente por terceiros (quando exigido pelo regulador)"],
+    coversTemplate: 'Cobre "{sector}" sob {taxonomy}{year}.',
+    resemblesTemplate: 'A atividade se assemelha a uma categoria "{category}" comumente coberta por taxonomias, mas a cobertura setorial explícita não está confirmada em nosso conjunto de dados para {taxonomy}.',
+    uncertainTemplate: "A descrição não correspondeu claramente a uma categoria de atividade verde reconhecida — a classificação é incerta.",
+    noneTemplate: "Nenhuma taxonomia de finanças sustentáveis está atualmente em vigor nesta jurisdição.",
+    summaryTemplate: 'Com base em uma análise simulada de palavras-chave de "{activity}"{sectorPart}, {meets} de {total} jurisdições revisadas têm taxonomias publicadas que cobrem explicitamente esse tipo de atividade, {partial} mostram alinhamento parcial ou não confirmado, e {none} atualmente não têm taxonomia.{strongestPart} Este resumo é apenas ilustrativo e não deve ser utilizado como base para decisões de conformidade.',
+    sectorPart: " (classificada como {sector})", strongestPart: " Correspondências mais fortes: {names}.",
+    pdfTitleCompare: "Consultor de IA em Taxonomias — Comparação Multinacional", pdfTitleCountry: "Consultor de IA em Taxonomias — Avaliação por País",
+    pdfActivity: "Atividade", pdfSector: "Setor", pdfRegionFilter: "Filtro de Região", pdfCountry: "País", pdfResult: "Resultado",
+    pdfCriteria: "Critérios", pdfMet: "Atendido", pdfNotConfirmedShort: "Não confirmado",
+    deepMatchTemplate: "Corresponde a uma atividade específica listada — \"{activity}\" sob {taxonomy}: {criteria}",
+    portfolioTabLabel: "Comparação de Portfólio", selectActivitiesHeading: "Selecione as atividades econômicas em que você investe",
+    analyzeBtnPortfolio: "Analisar Portfólio", deepMatchBadge: "Correspondência explícita de atividade", sectorOnlyBadge: "Correspondência apenas no nível setorial", noDataBadge: "Ainda sem dados detalhados",
+    noDetailedDataTemplate: "Dados detalhados em nível de atividade ainda não estão disponíveis para {taxonomy} em nosso conjunto de dados — verifique a fonte oficial para o escopo exato da cobertura.",
+    portfolioSummaryTemplate: "Entre {total} jurisdições revisadas, {meets} têm critérios documentados que correspondem a pelo menos uma de suas {n} atividades selecionadas, {partial} mostram apenas cobertura setorial ou parcial, e {none} atualmente não têm taxonomia.",
+    selectActivitiesPrompt: "Selecione pelo menos uma atividade antes de analisar.", pdfTitlePortfolio: "Consultor de IA em Taxonomias — Comparação de Portfólio",
+    pdfActivities: "Atividades Selecionadas", activityMatchCount: "{n} de {total} atividades",
+    sectors: { "Energy": "Energia", "Transport": "Transporte", "Buildings & Construction": "Edifícios e Construção", "Manufacturing & Industry": "Manufatura e Indústria", "Agriculture & Forestry": "Agricultura e Silvicultura", "Water & Waste Management": "Gestão de Água e Resíduos", "ICT & Digital Infrastructure": "TIC e Infraestrutura Digital" },
+    pageHeading: "Consultor de IA em Taxonomias",
+    pageLede: "Descreva uma atividade econômica para ver como ela pode se alinhar com as taxonomias de finanças sustentáveis em todo o mundo. Análise simulada e ilustrativa — não substitui o aconselhamento profissional ou jurídico sobre conformidade.",
+    compareTabLabel: "Comparação Multinacional",
+    countryTabLabel: "Consultor Específico por País",
+    askTabLabel: "Perguntar à IA",
+    activityDescLabel: "Descrição da Atividade",
+    sectorClassLabel: "Classificação Setorial",
+    regionFilterLabel: "Filtro de Região",
+    responseLanguageLabel: "Idioma de Resposta",
+    exampleQueriesLabel: "Consultas de Exemplo",
+    autoDetectOption: "Detectar automaticamente a partir da descrição",
+    regions: {"All": "Todas as regiões", "Europe": "Europa", "Asia-Pacific": "Ásia-Pacífico", "Americas": "Américas", "Africa": "África", "Middle East": "Oriente Médio"},
+    chatWelcomeAdvisor: "Pergunte qualquer coisa sobre as taxonomias em nosso conjunto de dados — compare países, pergunte o que um termo significa ou quais jurisdições cobrem um determinado setor. Alimentado por um modelo de IA real assim que este site for implantado com uma chave de API.",
+    askDisclaimerNote: "Esta aba chama um modelo de IA real por meio de um backend seguro (sua chave de API nunca está nesta página). Se não responder, este site pode ainda não estar implantado no Vercel com uma chave de API.",
+    sendBtn: "Enviar",
+    chatInputPlaceholder: "Pergunte sobre qualquer taxonomia… ex.: Compare as taxonomias da UE e da Coreia do Sul"
   }
 };
 
@@ -368,6 +594,76 @@ function sectorLabel(sectorKey) {
   if (!sectorKey) return "";
   const dict = I18N[currentLang] && I18N[currentLang].sectors;
   return (dict && dict[sectorKey]) || sectorKey;
+}
+
+function regionLabel(regionKey) {
+  if (!regionKey) return "";
+  const dict = I18N[currentLang] && I18N[currentLang].regions;
+  return (dict && dict[regionKey]) || regionKey;
+}
+
+/* Applies every static piece of page chrome (heading, lede, tab labels, field
+   labels, region-chip labels, chat strings) that isn't already re-rendered as
+   part of runCompareAnalysis/runCountryAnalysis/runPortfolioAnalysis/setMode.
+   Called on init and whenever the response language changes, from either this
+   page's own "Response Language" selector or the site-wide nav language
+   selector (see syncLanguageFromGlobal / the gst-lang-changed listener below). */
+function applyStaticI18n() {
+  const byId = id => document.getElementById(id);
+  if (byId("advisorPageHeading")) byId("advisorPageHeading").textContent = t("pageHeading");
+  if (byId("advisorPageLede")) byId("advisorPageLede").textContent = t("pageLede");
+
+  const tabKeys = { compare: "compareTabLabel", country: "countryTabLabel", portfolio: "portfolioTabLabel", ask: "askTabLabel" };
+  document.querySelectorAll(".advisor-tab").forEach(btn => {
+    const key = tabKeys[btn.dataset.mode];
+    if (key) btn.textContent = t(key);
+  });
+
+  if (byId("activityDescLabelCompare")) byId("activityDescLabelCompare").textContent = t("activityDescLabel");
+  if (byId("activityDescLabelCountry")) byId("activityDescLabelCountry").textContent = t("activityDescLabel");
+  if (byId("sectorClassLabelId")) byId("sectorClassLabelId").textContent = t("sectorClassLabel");
+  if (byId("regionFilterLabelCompare")) byId("regionFilterLabelCompare").textContent = t("regionFilterLabel");
+  if (byId("regionFilterLabelPortfolio")) byId("regionFilterLabelPortfolio").textContent = t("regionFilterLabel");
+  if (byId("jurisdictionLabelId")) byId("jurisdictionLabelId").textContent = t("colJurisdiction");
+  if (byId("portfolioActivitiesLabel")) byId("portfolioActivitiesLabel").textContent = t("selectActivitiesHeading");
+  if (byId("responseLanguageLabelId")) byId("responseLanguageLabelId").textContent = t("responseLanguageLabel");
+  if (byId("exampleQueriesLabelId")) byId("exampleQueriesLabelId").textContent = t("exampleQueriesLabel");
+  if (byId("askDisclaimerNoteId")) byId("askDisclaimerNoteId").textContent = t("askDisclaimerNote");
+
+  document.querySelectorAll(".chip-row .chip").forEach(btn => {
+    const region = btn.dataset.region;
+    if (region) btn.textContent = regionLabel(region);
+  });
+
+  const chatInput = byId("chatInput");
+  if (chatInput) chatInput.placeholder = t("chatInputPlaceholder");
+  const chatSendBtn = byId("chatSendBtn");
+  if (chatSendBtn) chatSendBtn.textContent = t("sendBtn");
+
+  document.getElementById("analyzeBtn").textContent = currentMode === "portfolio" ? t("analyzeBtnPortfolio") : t("analyzeBtn");
+}
+
+/* Shared side effects whenever the response language actually changes,
+   regardless of whether it was triggered by this page's own "Response
+   Language" dropdown or by the site-wide nav language selector. */
+function onLanguageChanged() {
+  applyStaticI18n();
+  setupSectorSelect();
+  if (currentMode === "portfolio") {
+    const wrap = document.getElementById("activityChecklist");
+    wrap.dataset.built = ""; // force rebuild so sector/activity labels re-render in the new language
+    renderPortfolioChecklist();
+  }
+  renderExampleCards();
+  renderChatLog();
+  if (document.getElementById("resultsContent").style.display !== "none") {
+    // results are showing — re-run so they reflect the new language
+    if (currentMode === "compare") runCompareAnalysis();
+    else if (currentMode === "country") runCountryAnalysis();
+    else if (currentMode === "portfolio") runPortfolioAnalysis();
+  } else {
+    resetResults();
+  }
 }
 
 let currentMode = "compare";
@@ -737,15 +1033,7 @@ function setupSectorSelect() {
   sel.innerHTML = "";
   const autoOpt = document.createElement("option");
   autoOpt.value = "";
-  autoOpt.textContent = currentLang === "en" ? "Auto-detect from description"
-    : currentLang === "sv" ? "Detektera automatiskt från beskrivningen"
-    : currentLang === "ko" ? "설명에서 자동 감지"
-    : currentLang === "es" ? "Detectar automáticamente de la descripción"
-    : currentLang === "fr" ? "Détection automatique à partir de la description"
-    : currentLang === "de" ? "Automatisch aus Beschreibung erkennen"
-    : currentLang === "ja" ? "説明から自動検出"
-    : currentLang === "zh" ? "从描述中自动检测"
-    : "Auto-detect from description";
+  autoOpt.textContent = t("autoDetectOption");
   sel.appendChild(autoOpt);
   SECTOR_OPTIONS.forEach(s => {
     const opt = document.createElement("option");
@@ -756,27 +1044,33 @@ function setupSectorSelect() {
   if (prev) sel.value = prev;
 }
 
+/* Pulls the page's language from the site-wide nav selector (global.js's
+   gstCurrentLang) if one has been set — so arriving on this page (or
+   switching language in the nav on any page) starts Advisor in the same
+   language as the rest of the site, rather than always defaulting to English. */
+function syncLanguageFromGlobal() {
+  if (typeof gstCurrentLang !== "undefined" && I18N[gstCurrentLang]) {
+    currentLang = gstCurrentLang;
+  }
+}
+
 function setupLanguageSelect() {
+  syncLanguageFromGlobal();
   const sel = document.getElementById("langSelectAdvisor");
   sel.innerHTML = LANGUAGES.map(l => `<option value="${l.code}">${l.label}</option>`).join("");
   sel.value = currentLang;
   sel.addEventListener("change", () => {
     currentLang = sel.value;
-    setupSectorSelect();
-    document.getElementById("analyzeBtn").textContent = currentMode === "portfolio" ? t("analyzeBtnPortfolio") : t("analyzeBtn");
-    if (currentMode === "portfolio") {
-      const wrap = document.getElementById("activityChecklist");
-      wrap.dataset.built = ""; // force rebuild so sector/activity labels re-render in the new language
-      renderPortfolioChecklist();
+    // Keep the site-wide nav language selector (and every other page) in sync
+    // with this page's own "Response Language" control, in both directions.
+    if (typeof gstCurrentLang !== "undefined") {
+      gstCurrentLang = currentLang;
+      if (typeof localStorage !== "undefined") localStorage.setItem("gst-lang", gstCurrentLang);
+      if (typeof gstApplyI18n === "function") gstApplyI18n();
+      const globalSel = document.getElementById("globalLangSelect");
+      if (globalSel) globalSel.value = gstCurrentLang;
     }
-    if (document.getElementById("resultsContent").style.display !== "none") {
-      // results are showing — re-run so they reflect the new language
-      if (currentMode === "compare") runCompareAnalysis();
-      else if (currentMode === "country") runCountryAnalysis();
-      else if (currentMode === "portfolio") runPortfolioAnalysis();
-    } else {
-      resetResults();
-    }
+    onLanguageChanged();
   });
 }
 
@@ -1123,7 +1417,7 @@ function escapeHtml(s) {
 
 function renderChatLog() {
   const log = document.getElementById("chatLog");
-  const welcome = `<div class="chat-welcome">Ask anything about the taxonomies in our dataset — compare countries, ask what a term means, or ask which jurisdictions cover a given sector.</div>`;
+  const welcome = `<div class="chat-welcome">${escapeHtml(t("chatWelcomeAdvisor"))}</div>`;
   const msgs = chatHistory.map(m => `
     <div class="chat-msg chat-msg-${m.role}">
       <div class="chat-bubble${m.pending ? " chat-bubble-pending" : ""}${m.error ? " chat-bubble-error" : ""}">${escapeHtml(m.content).replace(/\n/g, "<br>")}</div>
@@ -1256,7 +1550,19 @@ function init() {
   // language may have come from the URL — refresh language-dependent chrome
   document.getElementById("langSelectAdvisor").value = currentLang;
   setupSectorSelect();
-  document.getElementById("analyzeBtn").textContent = currentMode === "portfolio" ? t("analyzeBtnPortfolio") : t("analyzeBtn");
+  applyStaticI18n();
+
+  // Keep this page in sync when the site-wide nav language selector changes
+  // (on this page or navigated in from another page with a saved language).
+  document.addEventListener("gst-lang-changed", e => {
+    const lang = e && e.detail && e.detail.lang;
+    if (lang && I18N[lang] && lang !== currentLang) {
+      currentLang = lang;
+      const sel = document.getElementById("langSelectAdvisor");
+      if (sel) sel.value = lang;
+      onLanguageChanged();
+    }
+  });
 }
 
 document.addEventListener("DOMContentLoaded", init);
