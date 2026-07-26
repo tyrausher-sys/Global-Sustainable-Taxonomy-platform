@@ -276,6 +276,17 @@ a { color: inherit; }
   border: none;
   background: #fff;
 }
+.translate-original-unavailable {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  text-align: center;
+  color: var(--text-muted, #7a7a7a);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
 .translate-modal-body {
   flex: 1;
   min-height: 0;

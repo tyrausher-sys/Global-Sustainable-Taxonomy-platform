@@ -28,7 +28,6 @@
       <a href="advisor.html" data-i18n="nav.advisor">AI Advisor</a>
       <a href="media.html" data-i18n="nav.media">Media Hub</a>
       <a href="subscribe.html" data-i18n="nav.subscribe">Subscribe</a>
-      <a href="#" class="disabled" title="Coming soon" data-i18n="nav.resources" data-i18n-title="nav.comingSoon">Resources</a>
       <a href="about.html" data-i18n="nav.about">About</a>
     </nav>
     <div class="topnav-actions">
@@ -62,12 +61,28 @@
         <h3 data-i18n="translate.modalTitle">Translated Document</h3>
         <div class="translate-doc-title" id="translateDocTitle"></div>
       </div>
-      <button class="icon-btn" id="translateModalCloseBtn" title="Close" aria-label="Close" data-i18n-title="translate.close" type="button">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-      </button>
+      <div class="translate-modal-header-actions">
+        <label class="translate-lang-label" for="translateLangSelect" data-i18n="translate.language">Translate to</label>
+        <select class="translate-lang-select" id="translateLangSelect"></select>
+        <button class="icon-btn" id="translateModalCloseBtn" title="Close" aria-label="Close" data-i18n-title="translate.close" type="button">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
     </div>
     <p class="translate-modal-disclaimer" data-i18n="translate.disclaimer">Machine translation of an official document, for reference only — always refer to the original for legal or compliance purposes.</p>
-    <div class="translate-modal-body" id="translateModalBody"></div>
+    <div class="translate-modal-split">
+      <div class="translate-modal-pane translate-modal-pane-original">
+        <div class="translate-pane-label" data-i18n="translate.originalPane">Original</div>
+        <iframe id="translateOriginalFrame" class="translate-original-frame" title="Original document" loading="lazy"></iframe>
+        <div class="translate-original-unavailable" id="translateOriginalUnavailable" style="display:none;">
+          <p data-i18n="translate.previewUnavailable">Preview isn't available for this source — it blocks automated preview loading. Use "View Original PDF" below to open it directly in your browser.</p>
+        </div>
+      </div>
+      <div class="translate-modal-pane translate-modal-pane-translated">
+        <div class="translate-pane-label" data-i18n="translate.translatedPane">Translation</div>
+        <div class="translate-modal-body" id="translateModalBody"></div>
+      </div>
+    </div>
     <div class="translate-modal-footer">
       <a id="translateOriginalLink" href="#" target="_blank" rel="noopener" data-i18n="translate.viewOriginal">View Original PDF ↗</a>
       <button class="btn-secondary" id="translateModalCloseBtn2" type="button" data-i18n="translate.close">Close</button>
@@ -84,8 +99,13 @@
 
 <footer class="site-footer">
   <span>© 2026 BNZ PARTNERS</span>
-  <span><span data-i18n="footer.developedBy">Developed by</span> Tyra Usher | <span data-i18n="footer.supervisedBy">Supervised by</span> Yoo, So Young, <span data-i18n="footer.headOfAI">Head of AI Centre</span></span>
-  <a href="http://bnzpartners.co.kr/en/" target="_blank" rel="noopener">bnzpartners.co.kr</a>
+  <span><span data-i18n="footer.developedBy">Developed by</span> BNZ PARTNERS — <span data-i18n="about.coreDeveloper">Core Developer</span>: Tyra Usher, <span data-i18n="footer.supervisorLabel">Supervisor</span>: Yoo, So Young</span>
+  <span class="footer-contact">
+    <a href="http://bnzpartners.co.kr/en/" target="_blank" rel="noopener">bnzpartners.co.kr</a> ·
+    <a href="mailto:bnz@bnzpartners.co.kr">bnz@bnzpartners.co.kr</a> ·
+    <a href="tel:+82227841822">+82 2-784-1822</a>
+  </span>
+  <span class="footer-references"><a href="about.html#key-resources" data-i18n="footer.references">References</a></span>
 </footer>
 
 <script src="theme.js"></script>

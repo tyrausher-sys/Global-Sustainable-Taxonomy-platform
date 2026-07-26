@@ -777,11 +777,26 @@ async function fetchTranslation(url, lang) {
   }
 }
 
+// Sources confirmed to block automated fetches at the network/IP level (see
+// KNOWN_DOCUMENT_TEXT_FILES in api/translate-pdf.js) can't be previewed via
+// Google's viewer either — gview does its own server-side fetch of the URL,
+// which is blocked the exact same way ours was, and just renders its own
+// "preview not available" message inside the iframe. Rather than show that
+// confusing, unstyled, wrong-language message, these known cases skip the
+// iframe entirely and show a clear explanation with a link to open the real
+// document directly (which works fine, since that's a normal browser request
+// from the reader's own machine, not a server-to-server fetch).
+const KNOWN_PREVIEW_BLOCKED_URLS = new Set([
+  "https://ojk.go.id/id/Publikasi/Roadmap-dan-Pedoman/Sektor-Jasa-Keuangan/Keuangan-Berkelanjutan/Documents/FAQ%20Taksonomi%20untuk%20Keuangan%20Berkelanjutan%20Indonesia%20(TKBI)%20Versi%203.pdf",
+  "https://www.ojk.go.id/id/Publikasi/Roadmap-dan-Pedoman/Sektor-Jasa-Keuangan/Keuangan-Berkelanjutan/Documents/FAQ%20Taksonomi%20untuk%20Keuangan%20Berkelanjutan%20Indonesia%20(TKBI)%20Versi%203.pdf"
+]);
+
 function openTranslateModal(url, title) {
   const overlay = document.getElementById("translateModalOverlay");
   const docTitleEl = document.getElementById("translateDocTitle");
   const originalLink = document.getElementById("translateOriginalLink");
   const frame = document.getElementById("translateOriginalFrame");
+  const unavailableNote = document.getElementById("translateOriginalUnavailable");
   const langSelect = document.getElementById("translateLangSelect");
 
   gstTranslateActiveUrl = url;
@@ -798,9 +813,17 @@ function openTranslateModal(url, title) {
   // restriction. Non-PDF pages are embedded directly. The "View Original
   // PDF" link in the footer remains as a fallback either way.
   if (frame) {
-    frame.src = looksLikePdf(url)
-      ? "https://docs.google.com/gview?url=" + encodeURIComponent(url) + "&embedded=true"
-      : url;
+    if (KNOWN_PREVIEW_BLOCKED_URLS.has(url)) {
+      frame.style.display = "none";
+      frame.src = "about:blank";
+      if (unavailableNote) unavailableNote.style.display = "";
+    } else {
+      frame.style.display = "";
+      if (unavailableNote) unavailableNote.style.display = "none";
+      frame.src = looksLikePdf(url)
+        ? "https://docs.google.com/gview?url=" + encodeURIComponent(url) + "&embedded=true"
+        : url;
+    }
   }
   overlay.classList.add("open");
   document.body.style.overflow = "hidden";
