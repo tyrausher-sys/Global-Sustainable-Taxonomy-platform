@@ -292,6 +292,17 @@ a { color: inherit; }
   border: none;
   background: #fff;
 }
+.translate-original-unavailable {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  text-align: center;
+  color: var(--text-muted, #7a7a7a);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
 .translate-modal-body {
   flex: 1;
   min-height: 0;
@@ -1621,7 +1632,6 @@ button.chip.active { background: var(--green); border-color: var(--green); color
       <button class="chip active" data-type="All" type="button" data-i18n="media.filterAll">All</button>
       <button class="chip" data-type="News" type="button" data-i18n="media.filterNews">News</button>
       <button class="chip" data-type="Reports" type="button" data-i18n="media.filterReports">Reports</button>
-      <button class="chip" data-type="Papers" type="button" data-i18n="media.filterPapers">Papers</button>
     </div>
     <div class="media-search">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
@@ -7543,19 +7553,14 @@ window.TAXONOMY_DATA = {
     "regulator": "Bank of Russia",
     "officialDocuments": [
       {
-        "title": "Official text of Russia's green project taxonomy, direct PDF (Government of Russia publication portal)",
-        "date": "24 Sep 2021",
-        "url": "http://publication.pravo.gov.ru/file/pdf?eoNumber=0001202109240043"
+        "title": "Russian Green Taxonomy — summary (Green Finance Platform)",
+        "date": "2021",
+        "url": "https://www.greenfinanceplatform.org/policies-and-regulations/russian-green-taxonomy"
       },
       {
         "title": "Official text of Russia's green project taxonomy (Government of Russia publication portal)",
         "date": "24 Sep 2021",
         "url": "http://publication.pravo.gov.ru/Document/View/0001202109240043"
-      },
-      {
-        "title": "Russian Green Taxonomy — summary (Green Finance Platform)",
-        "date": "2021",
-        "url": "https://www.greenfinanceplatform.org/policies-and-regulations/russian-green-taxonomy"
       }
     ],
     "fullDescription": [
@@ -12020,6 +12025,7 @@ const GST_I18N = {
     "translate.errorGeneric": "Couldn't translate this document right now.",
     "translate.errorNotDeployed": "Translate needs the live site backend, which isn't connected here — this only works once the site is deployed to Vercel with an API key (see DEPLOY_INSTRUCTIONS.md). You can still open the original PDF below.",
     "translate.truncatedNote": "This document is long \u2014 showing a translation of the first portion only.",
+    "translate.previewUnavailable": "Preview isn't available for this source — it blocks automated preview loading. Use \"View Original PDF\" below to open it directly in your browser.",
     "home.heroTitle": "Explore Sustainable Finance Taxonomies Worldwide",
     "home.heroSub": "Select a country on the map, or use the search bar below.",
     "home.chipAllRegions": "All Regions", "home.chipEurope": "Europe", "home.chipAsiaPacific": "Asia-Pacific",
@@ -12112,6 +12118,7 @@ const GST_I18N = {
     "translate.errorGeneric": "Det gick inte att översätta dokumentet just nu.",
     "translate.errorNotDeployed": "Översätt kräver den live serverdelen, som inte är ansluten här — detta fungerar först när webbplatsen är driftsatt på Vercel med en API-nyckel (se DEPLOY_INSTRUCTIONS.md). Du kan fortfarande öppna original-PDF:en nedan.",
     "translate.truncatedNote": "Dokumentet är långt \u2014 endast en översättning av den första delen visas.",
+    "translate.previewUnavailable": "Förhandsgranskning är inte tillgänglig för denna källa — källan blockerar automatisk förhandsgranskning. Använd \"Visa original-PDF\" nedan för att öppna den direkt i din webbläsare.",
     "home.heroTitle": "Utforska hållbara finanstaxonomier världen över",
     "home.heroSub": "Välj ett land på kartan, eller använd sökfältet nedan.",
     "home.chipAllRegions": "Alla regioner", "home.chipEurope": "Europa", "home.chipAsiaPacific": "Asien-Stillahavsregionen",
@@ -12204,6 +12211,7 @@ const GST_I18N = {
     "translate.errorGeneric": "지금은 이 문서를 번역할 수 없습니다.",
     "translate.errorNotDeployed": "번역 기능은 실제 서버 백엔드가 필요하지만 현재 연결되어 있지 않습니다 — 이 기능은 사이트가 API 키와 함께 Vercel에 배포된 후에만 작동합니다(DEPLOY_INSTRUCTIONS.md 참고). 아래에서 원본 PDF는 계속 열어볼 수 있습니다.",
     "translate.truncatedNote": "문서가 길어서 처음 일부만 번역하여 표시합니다.",
+    "translate.previewUnavailable": "이 소스는 자동 미리보기 로딩을 차단하여 미리보기를 사용할 수 없습니다. 아래의 \"원본 PDF 보기\"를 사용해 브라우저에서 직접 여세요.",
     "home.heroTitle": "전 세계 지속가능금융 택소노미 살펴보기",
     "home.heroSub": "지도에서 국가를 선택하거나 아래 검색창을 이용하세요.",
     "home.chipAllRegions": "전체 지역", "home.chipEurope": "유럽", "home.chipAsiaPacific": "아시아·태평양",
@@ -12296,6 +12304,7 @@ const GST_I18N = {
     "translate.errorGeneric": "No se pudo traducir este documento en este momento.",
     "translate.errorNotDeployed": "Traducir requiere el backend en vivo del sitio, que no está conectado aquí — esto solo funciona una vez que el sitio esté desplegado en Vercel con una clave de API (consulte DEPLOY_INSTRUCTIONS.md). Aún puede abrir el PDF original a continuación.",
     "translate.truncatedNote": "Este documento es extenso \u2014 se muestra la traducción solo de la primera parte.",
+    "translate.previewUnavailable": "La vista previa no está disponible para esta fuente — la fuente bloquea la carga automática de vistas previas. Use \"Ver PDF original\" abajo para abrirlo directamente en su navegador.",
     "home.heroTitle": "Explore las taxonomías de finanzas sostenibles en todo el mundo",
     "home.heroSub": "Seleccione un país en el mapa, o use la barra de búsqueda a continuación.",
     "home.chipAllRegions": "Todas las regiones", "home.chipEurope": "Europa", "home.chipAsiaPacific": "Asia-Pacífico",
@@ -12388,6 +12397,7 @@ const GST_I18N = {
     "translate.errorGeneric": "Impossible de traduire ce document pour le moment.",
     "translate.errorNotDeployed": "La traduction nécessite le backend en direct du site, qui n'est pas connecté ici — cela ne fonctionne qu'une fois le site déployé sur Vercel avec une clé API (voir DEPLOY_INSTRUCTIONS.md). Vous pouvez toujours ouvrir le PDF original ci-dessous.",
     "translate.truncatedNote": "Ce document est long \u2014 seule la traduction de la première partie est affichée.",
+    "translate.previewUnavailable": "L’aperçu n’est pas disponible pour cette source — la source bloque le chargement automatique de l’aperçu. Utilisez « Voir le PDF original » ci-dessous pour l’ouvrir directement dans votre navigateur.",
     "home.heroTitle": "Explorez les taxonomies de la finance durable dans le monde",
     "home.heroSub": "Sélectionnez un pays sur la carte, ou utilisez la barre de recherche ci-dessous.",
     "home.chipAllRegions": "Toutes les régions", "home.chipEurope": "Europe", "home.chipAsiaPacific": "Asie-Pacifique",
@@ -12480,6 +12490,7 @@ const GST_I18N = {
     "translate.errorGeneric": "Dieses Dokument konnte gerade nicht übersetzt werden.",
     "translate.errorNotDeployed": "Übersetzen benötigt das Live-Backend der Website, das hier nicht verbunden ist — dies funktioniert erst, wenn die Website mit einem API-Schlüssel auf Vercel bereitgestellt wurde (siehe DEPLOY_INSTRUCTIONS.md). Sie können unten weiterhin das Original-PDF öffnen.",
     "translate.truncatedNote": "Dieses Dokument ist lang \u2014 es wird nur eine Übersetzung des ersten Abschnitts angezeigt.",
+    "translate.previewUnavailable": "Die Vorschau ist für diese Quelle nicht verfügbar — die Quelle blockiert das automatische Laden der Vorschau. Verwenden Sie unten „Original-PDF ansehen“, um es direkt in Ihrem Browser zu öffnen.",
     "home.heroTitle": "Nachhaltige Finanztaxonomien weltweit entdecken",
     "home.heroSub": "Wählen Sie ein Land auf der Karte, oder nutzen Sie die Suchleiste unten.",
     "home.chipAllRegions": "Alle Regionen", "home.chipEurope": "Europa", "home.chipAsiaPacific": "Asien-Pazifik",
@@ -12572,6 +12583,7 @@ const GST_I18N = {
     "translate.errorGeneric": "現在この文書を翻訳できませんでした。",
     "translate.errorNotDeployed": "翻訳機能にはライブのサイトバックエンドが必要ですが、ここでは接続されていません — この機能はサイトがAPIキー付きでVercelにデプロイされた後にのみ動作します（DEPLOY_INSTRUCTIONS.mdを参照）。下の元のPDFは引き続き開くことができます。",
     "translate.truncatedNote": "この文書は長いため、最初の部分のみの翻訳を表示しています。",
+    "translate.previewUnavailable": "このソースはプレビューの自動読み込みをブロックしているため、プレビューは利用できません。下の「元のPDFを表示」からブラウザで直接開いてください。",
     "home.heroTitle": "世界のサステナブルファイナンス・タクソノミーを探る",
     "home.heroSub": "地図から国を選択するか、下の検索バーをご利用ください。",
     "home.chipAllRegions": "すべての地域", "home.chipEurope": "ヨーロッパ", "home.chipAsiaPacific": "アジア太平洋",
@@ -12664,6 +12676,7 @@ const GST_I18N = {
     "translate.errorGeneric": "目前无法翻译此文档。",
     "translate.errorNotDeployed": "翻译功能需要网站的实时后端支持，但此处尚未连接——只有在网站部署到 Vercel 并配置 API 密钥后才能使用（请参阅 DEPLOY_INSTRUCTIONS.md）。您仍然可以打开下方的原始 PDF。",
     "translate.truncatedNote": "此文档较长——仅显示前半部分的翻译。",
+    "translate.previewUnavailable": "此来源不支持自动加载预览——该来源阻止了自动预览加载。请使用下方的“查看原始PDF”直接在浏览器中打开。",
     "home.heroTitle": "探索全球可持续金融分类标准",
     "home.heroSub": "在地图上选择一个国家，或使用下方的搜索栏。",
     "home.chipAllRegions": "所有地区", "home.chipEurope": "欧洲", "home.chipAsiaPacific": "亚太地区",
@@ -12756,6 +12769,7 @@ const GST_I18N = {
     "translate.errorGeneric": "تعذّرت ترجمة هذا المستند في الوقت الحالي.",
     "translate.errorNotDeployed": "تتطلب الترجمة الخادم الفعلي للموقع، وهو غير متصل هنا — لن يعمل هذا إلا بعد نشر الموقع على Vercel بمفتاح API (راجع DEPLOY_INSTRUCTIONS.md). لا يزال بإمكانك فتح ملف PDF الأصلي أدناه.",
     "translate.truncatedNote": "هذا المستند طويل — يتم عرض ترجمة الجزء الأول منه فقط.",
+    "translate.previewUnavailable": "المعاينة غير متاحة لهذا المصدر — يحظر المصدر التحميل التلقائي للمعاينة. استخدم \"عرض ملف PDF الأصلي\" أدناه لفتحه مباشرة في متصفحك.",
     "home.heroTitle": "استكشف تصنيفات التمويل المستدام حول العالم",
     "home.heroSub": "اختر بلدًا على الخريطة، أو استخدم شريط البحث أدناه.",
     "home.chipAllRegions": "جميع المناطق", "home.chipEurope": "أوروبا", "home.chipAsiaPacific": "آسيا والمحيط الهادئ",
@@ -12848,6 +12862,7 @@ const GST_I18N = {
     "translate.errorGeneric": "Não foi possível traduzir este documento agora.",
     "translate.errorNotDeployed": "A tradução requer o backend do site em produção, que não está conectado aqui — isso só funciona quando o site está implantado no Vercel com uma chave de API (consulte DEPLOY_INSTRUCTIONS.md). Você ainda pode abrir o PDF original abaixo.",
     "translate.truncatedNote": "Este documento é extenso — mostrando a tradução apenas da primeira parte.",
+    "translate.previewUnavailable": "A pré-visualização não está disponível para esta fonte — a fonte bloqueia o carregamento automático da pré-visualização. Use \"Ver PDF original\" abaixo para abri-lo diretamente no navegador.",
     "home.heroTitle": "Explore as Taxonomias de Finanças Sustentáveis em Todo o Mundo",
     "home.heroSub": "Selecione um país no mapa, ou use a barra de pesquisa abaixo.",
     "home.chipAllRegions": "Todas as Regiões", "home.chipEurope": "Europa", "home.chipAsiaPacific": "Ásia-Pacífico",
@@ -13172,9 +13187,11 @@ document.addEventListener("DOMContentLoaded", gstInit);
    Every section below is wired to a real, live source rather than sample
    content:
 
-   - News / Reports / Papers  -> /api/news (Google News RSS; Reports/Papers
-     are the same live feed narrowed with report/paper-related keywords,
-     since Google News has no separate curated reports/papers database).
+   - News / Reports -> /api/news (Google News RSS; Reports is the same live
+     feed narrowed with report-related keywords, since Google News has no
+     separate curated reports database).
+     (Papers was removed 2026-07-26 — Google News rarely surfaces genuine
+     academic papers, so the feed was consistently empty/erroring for readers.)
    - AI Trend Insights + the thematic policy chart -> /api/trends, which
      analyses the live News headlines with the same Anthropic model already
      used for the AI Advisor's "Ask AI" tab (reusing ANTHROPIC_API_KEY
@@ -13186,13 +13203,12 @@ document.addEventListener("DOMContentLoaded", gstInit);
    Podcasts and Videos were intentionally removed (2026-07-21) — they added
    noise without clear value for this audience. */
 
-const TYPES = ["News", "Reports", "Papers"];
+const TYPES = ["News", "Reports"];
 
-const itemsByType = { News: [], Reports: [], Papers: [] };
+const itemsByType = { News: [], Reports: [] };
 const typeState = {
   News: { status: "loading" },
-  Reports: { status: "loading" },
-  Papers: { status: "loading" }
+  Reports: { status: "loading" }
 };
 
 let currentType = "All";
@@ -13509,7 +13525,6 @@ function init() {
 
   loadNewsLike("News");
   loadNewsLike("Reports", "Reports");
-  loadNewsLike("Papers", "Papers");
   loadTrends();
 }
 

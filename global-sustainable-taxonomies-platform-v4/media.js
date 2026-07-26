@@ -1,84 +1,118 @@
 /* Global Sustainable Taxonomies — Media & Trend Hub (Screen 4)
-   NOTE: There is no live media feed behind this page. All items, trend cards
-   and the thematic chart are generic sample/placeholder content clearly
-   labelled as such. The taxonomy-development timeline chart is the one
-   exception — it is built from the real "year" field in data.js. */
 
-const CONTENT_TYPES = ["News", "Reports", "Videos", "Papers", "Podcasts"];
+   Every section below is wired to a real, live source rather than sample
+   content:
 
-const TREND_CARDS = [
-  {
-    title: "Interoperability Momentum",
-    teaser: "Regulators are increasingly referencing each other's taxonomies to reduce duplication for cross-border issuers.",
-    detail: "Sample AI analysis: mentions of \"mutual recognition\", \"common ground taxonomy\" and \"interoperability\" appear across a growing share of sample content in this illustrative demo, suggesting a thematic cluster around aligning definitions between jurisdictions rather than each market building in isolation."
-  },
-  {
-    title: "Asia-Pacific Expansion",
-    teaser: "A wave of new and updated taxonomies across Asia-Pacific markets continues to reshape the regional landscape.",
-    detail: "Sample AI analysis: this illustrative demo groups content referencing ASEAN Taxonomy updates, and national frameworks in the Asia-Pacific region into a single expanding-activity theme."
-  },
-  {
-    title: "Transition Finance Gains Ground",
-    teaser: "More frameworks are carving out explicit categories for transition activities, not just pure-green ones.",
-    detail: "Sample AI analysis: sample content in this demo increasingly separates \"transition\" activities (e.g. gas-to-coal switching, industrial decarbonisation pathways) from strictly green ones, mirroring real-world debate over transition taxonomies."
-  },
-  {
-    title: "Disclosure & Assurance Tightening",
-    teaser: "Regulators are raising the bar on third-party verification and assurance of taxonomy-aligned disclosures.",
-    detail: "Sample AI analysis: this illustrative theme reflects a broader pattern of taxonomies pairing screening criteria with stronger assurance and reporting requirements over time."
-  }
-];
+   - News / Reports -> /api/news (Google News RSS; Reports is the same live
+     feed narrowed with report-related keywords, since Google News has no
+     separate curated reports database).
+     (Papers was removed 2026-07-26 — Google News rarely surfaces genuine
+     academic papers, so the feed was consistently empty/erroring for readers.)
+   - AI Trend Insights + the thematic policy chart -> /api/trends, which
+     analyses the live News headlines with the same Anthropic model already
+     used for the AI Advisor's "Ask AI" tab (reusing ANTHROPIC_API_KEY
+     rather than requiring a second AI provider/key, per the spec's intent
+     of "AI-generated" trend analysis of freshly ingested content).
+   - The taxonomy-development timeline chart is real — built from the
+     "year" field in data.js.
 
-const SOURCE_TAGS = ["Sample Source", "Sample Wire", "Sample Bulletin", "Sample Review"];
+   Podcasts and Videos were intentionally removed (2026-07-21) — they added
+   noise without clear value for this audience. */
 
-function buildSampleItems() {
-  const countries = Object.values(window.TAXONOMY_DATA || {});
-  const names = countries.map(c => c.name);
-  const pick = (arr, i) => arr[i % arr.length];
+const TYPES = ["News", "Reports"];
 
-  const templates = [
-    { type: "News", title: "{c} regulator signals review of taxonomy screening criteria" },
-    { type: "News", title: "Draft guidance published on aligning {c}'s taxonomy with international standards" },
-    { type: "Reports", title: "Annual review of sustainable finance taxonomies — {c} spotlight" },
-    { type: "Reports", title: "Comparative study: DNSH implementation across {c} and regional peers" },
-    { type: "Videos", title: "Explainer: how {c}'s taxonomy classifies eligible activities" },
-    { type: "Videos", title: "Panel discussion — taxonomy interoperability and {c}'s approach" },
-    { type: "Papers", title: "Working paper on transition activities within {c}'s framework" },
-    { type: "Papers", title: "Academic review of minimum safeguards provisions, referencing {c}" },
-    { type: "Podcasts", title: "Podcast: what {c}'s taxonomy means for green bond issuers" },
-    { type: "Podcasts", title: "Weekly roundup — taxonomy developments including {c}" },
-    { type: "News", title: "Consultation opens on proposed updates to {c}'s sector coverage" },
-    { type: "Reports", title: "Investor briefing on taxonomy-aligned capital flows into {c}" },
-    { type: "Videos", title: "Webinar recording: technical screening criteria in {c}" },
-    { type: "Papers", title: "Policy brief: lessons from {c} for emerging-market taxonomies" },
-    { type: "News", title: "{c} taxonomy secretariat outlines 2026–2027 workplan" }
-  ];
+const itemsByType = { News: [], Reports: [] };
+const typeState = {
+  News: { status: "loading" },
+  Reports: { status: "loading" }
+};
 
-  const dates = ["Jul 2026", "Jun 2026", "Jun 2026", "May 2026", "May 2026", "Apr 2026", "Apr 2026", "Mar 2026", "Mar 2026", "Feb 2026", "Feb 2026", "Jan 2026", "Jan 2026", "Dec 2025", "Dec 2025"];
-
-  return templates.map((t, i) => ({
-    type: t.type,
-    title: t.title.replace("{c}", names.length ? pick(names, i * 7 + 3) : "a national"),
-    source: pick(SOURCE_TAGS, i),
-    date: dates[i % dates.length]
-  }));
-}
-
-let ITEMS = [];
 let currentType = "All";
 
-function typeTagHtml(type) {
-  return `<span class="type-tag">${type}</span>`;
+function escapeHtml(s) {
+  return String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 }
 
-function renderTrendCards() {
+function formatDate(raw) {
+  if (!raw) return "Recent";
+  const d = new Date(raw);
+  if (isNaN(d.getTime())) return "Recent";
+  return d.toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" });
+}
+
+function typeTagHtml(type) {
+  return `<span class="type-tag">${escapeHtml(type)}</span>`;
+}
+
+/* ---------- Fetching each content type ---------- */
+
+async function loadNewsLike(type, queryParam) {
+  try {
+    const url = queryParam ? `/api/news?type=${encodeURIComponent(queryParam)}` : "/api/news";
+    const res = await fetch(url);
+    const data = await res.json();
+    if (!res.ok || !Array.isArray(data.items)) throw new Error((data && data.error) || `HTTP ${res.status}`);
+    itemsByType[type] = data.items.map(item => ({
+      type,
+      title: item.title,
+      source: item.source,
+      rawDate: item.publishedAt,
+      date: formatDate(item.publishedAt),
+      link: item.link
+    }));
+    typeState[type] = itemsByType[type].length
+      ? { status: "ready" }
+      : { status: "empty", message: `No live ${type.toLowerCase()} results found right now.` };
+  } catch (err) {
+    console.error(`Failed to load ${type}:`, err);
+    itemsByType[type] = [];
+    typeState[type] = { status: "error", message: `Couldn't load live ${type.toLowerCase()} right now — please try again later.` };
+  }
+  renderFeatured();
+  renderGrid();
+}
+
+/* ---------- AI Trend Insights + thematic chart (real, via /api/trends) ---------- */
+
+async function loadTrends() {
+  const trendGrid = document.getElementById("trendGrid");
+  const thematicEl = document.getElementById("thematicChart");
+  trendGrid.innerHTML = `<p class="section-text">Loading live AI trend analysis…</p>`;
+  thematicEl.innerHTML = `<p class="section-text">Loading…</p>`;
+
+  try {
+    const res = await fetch("/api/trends");
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error || `HTTP ${res.status}`);
+
+    if ((!data.trends || !data.trends.length) && data.note) {
+      trendGrid.innerHTML = `<p class="section-text" style="grid-column:1/-1;color:var(--text-muted);">${escapeHtml(data.note)}</p>`;
+      thematicEl.innerHTML = `<p class="section-text">${escapeHtml(data.note)}</p>`;
+      return;
+    }
+
+    renderTrendCards(data.trends || []);
+    renderThematicChart(data.thematic || []);
+  } catch (err) {
+    console.error("Failed to load AI trend analysis:", err);
+    const msg = "Couldn't load live AI trend analysis right now — please try again later.";
+    trendGrid.innerHTML = `<p class="section-text" style="grid-column:1/-1;color:var(--text-muted);">${msg}</p>`;
+    thematicEl.innerHTML = `<p class="section-text">${msg}</p>`;
+  }
+}
+
+function renderTrendCards(trends) {
   const wrap = document.getElementById("trendGrid");
-  wrap.innerHTML = TREND_CARDS.map((t, i) => `
+  if (!trends.length) {
+    wrap.innerHTML = `<p class="section-text" style="grid-column:1/-1;color:var(--text-muted);">No trend analysis available right now.</p>`;
+    return;
+  }
+  wrap.innerHTML = trends.map((t, i) => `
     <div class="trend-card" data-idx="${i}">
-      <h3>${t.title}</h3>
-      <p>${t.teaser}</p>
+      <h3>${escapeHtml(t.title)}</h3>
+      <p>${escapeHtml(t.teaser)}</p>
       <span class="trend-toggle">Expand analysis ▾</span>
-      <div class="trend-detail">${t.detail}</div>
+      <div class="trend-detail">${escapeHtml(t.detail)}</div>
     </div>
   `).join("");
 
@@ -90,24 +124,75 @@ function renderTrendCards() {
   });
 }
 
+function renderThematicChart(themes) {
+  const el = document.getElementById("thematicChart");
+  if (!themes.length) {
+    el.innerHTML = `<p class="section-text">No thematic data available right now.</p>`;
+    return;
+  }
+  const maxVal = Math.max(...themes.map(t => Number(t.value) || 0), 1);
+  el.innerHTML = themes.map(t => {
+    const val = Number(t.value) || 0;
+    const width = Math.min(100, (val / maxVal) * 100);
+    return `
+      <div class="thematic-row">
+        <span class="thematic-label">${escapeHtml(t.label)}</span>
+        <div class="thematic-bar-bg"><div class="thematic-bar-fill" style="width:${width}%;"></div></div>
+        <span class="thematic-value">${val}%</span>
+      </div>
+    `;
+  }).join("");
+}
+
+/* ---------- Featured + grid (merged across all ready content types) ---------- */
+
+function allReadyItems() {
+  const all = [];
+  TYPES.forEach(t => {
+    if (typeState[t].status === "ready") all.push(...itemsByType[t]);
+  });
+  all.sort((a, b) => {
+    const da = new Date(a.rawDate).getTime() || 0;
+    const db = new Date(b.rawDate).getTime() || 0;
+    return db - da;
+  });
+  return all;
+}
+
+function anyStillLoading() {
+  return TYPES.some(t => typeState[t].status === "loading");
+}
+
 function renderFeatured() {
-  const f = ITEMS[0];
   const card = document.getElementById("featuredCard");
+  const all = allReadyItems();
+
+  if (!all.length) {
+    if (anyStillLoading()) {
+      card.innerHTML = `<div><p class="section-text">Loading live media…</p></div>`;
+    } else {
+      card.innerHTML = `<div><p class="section-text">No live media content available right now — please try again later.</p></div>`;
+    }
+    card.style.cursor = "default";
+    card.onclick = null;
+    return;
+  }
+
+  const f = all[0];
   card.innerHTML = `
     <div>
       ${typeTagHtml(f.type)}
-      <h2>${f.title}</h2>
-      <p class="section-text">Sample featured item for demonstration — illustrates how a lead story would appear once real media ingestion is connected.</p>
-      <div class="media-meta">${f.source} · ${f.date}</div>
+      <h2>${escapeHtml(f.title)}</h2>
+      <p class="section-text">Live content via Google News. Click to preview.</p>
+      <div class="media-meta">${escapeHtml(f.source)} · ${escapeHtml(f.date)}</div>
     </div>
     <div class="featured-visual">Featured visual placeholder</div>
   `;
   card.style.cursor = "pointer";
-  card.addEventListener("click", () => openMediaModal(f));
+  card.onclick = () => openMediaModal(f);
 }
 
 function matchesFilter(item, query) {
-  if (currentType !== "All" && item.type !== currentType) return false;
   if (query) {
     const q = query.toLowerCase();
     if (!item.title.toLowerCase().includes(q) && !item.source.toLowerCase().includes(q) && !item.type.toLowerCase().includes(q)) {
@@ -122,19 +207,35 @@ let currentGridItems = [];
 function renderGrid() {
   const query = document.getElementById("mediaSearchInput").value.trim();
   const grid = document.getElementById("mediaGrid");
-  const rest = ITEMS.slice(1).filter(item => matchesFilter(item, query));
+
+  if (currentType !== "All") {
+    const state = typeState[currentType];
+    if (state.status === "loading") {
+      grid.innerHTML = `<p class="section-text" style="grid-column:1/-1;color:var(--text-muted);">Loading live ${currentType.toLowerCase()}…</p>`;
+      currentGridItems = [];
+      return;
+    }
+    if (state.status === "empty" || state.status === "error") {
+      grid.innerHTML = `<p class="section-text" style="grid-column:1/-1;color:var(--text-muted);">${escapeHtml(state.message)}</p>`;
+      currentGridItems = [];
+      return;
+    }
+  }
+
+  const source = currentType === "All" ? allReadyItems() : itemsByType[currentType];
+  const rest = (currentType === "All" ? source.slice(1) : source).filter(item => matchesFilter(item, query));
   currentGridItems = rest;
 
   if (!rest.length) {
-    grid.innerHTML = `<p class="section-text" style="grid-column:1/-1;color:var(--text-muted);">No sample items match this filter.</p>`;
+    grid.innerHTML = `<p class="section-text" style="grid-column:1/-1;color:var(--text-muted);">No live content matches this search.</p>`;
     return;
   }
 
   grid.innerHTML = rest.map((item, i) => `
     <a class="media-card" href="#" data-idx="${i}">
       ${typeTagHtml(item.type)}
-      <h3>${item.title}</h3>
-      <div class="media-meta">${item.source} · ${item.date}</div>
+      <h3>${escapeHtml(item.title)}</h3>
+      <div class="media-meta">${escapeHtml(item.source)} · ${escapeHtml(item.date)}</div>
     </a>
   `).join("");
 
@@ -191,50 +292,26 @@ function renderTimelineChart() {
   document.getElementById("timelineLabels").innerHTML = labels.map(y => `<span>${y}</span>`).join("");
 }
 
-/* ---------- Illustrative chart: thematic weighting ---------- */
-function renderThematicChart() {
-  const themes = [
-    { label: "Interoperability", value: 34 },
-    { label: "Asia-Pacific Expansion", value: 27 },
-    { label: "Transition Finance", value: 22 },
-    { label: "Disclosure & Assurance", value: 17 }
-  ];
-  const html = themes.map(t => `
-    <div class="thematic-row">
-      <span class="thematic-label">${t.label}</span>
-      <div class="thematic-bar-bg"><div class="thematic-bar-fill" style="width:${t.value * 2}%;"></div></div>
-      <span class="thematic-value">${t.value}%</span>
-    </div>
-  `).join("");
-  document.getElementById("thematicChart").innerHTML = html;
+/* ---------- Media card detail modal (real items, embeds + link out) ---------- */
+
+function modalBodyForItem(item) {
+  return `
+    <p class="modal-body-text">This is a live ${item.type.toLowerCase()} result via Google News. Click below to read the full article on the original publisher's site.</p>
+    <a class="btn-primary" href="${escapeHtml(item.link)}" target="_blank" rel="noopener noreferrer">Read full article ↗</a>
+    <div class="modal-disclaimer">Headline and link via Google News — Global Sustainable Taxonomies does not host or verify third-party articles; always check the original source.</div>
+  `;
 }
-
-/* ---------- Media card detail modal (sample content, no live source yet) ---------- */
-
-function escapeHtml(s) {
-  return String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
-}
-
-const TYPE_VIEWER_NOTE = {
-  News: "open the original news article",
-  Reports: "open the full report (PDF or embedded viewer)",
-  Videos: "play the video in an embedded viewer",
-  Papers: "open the paper (PDF viewer)",
-  Podcasts: "play the episode in an embedded audio player"
-};
 
 function openMediaModal(item) {
   const modal = document.getElementById("mediaModal");
   const overlay = document.getElementById("mediaModalOverlay");
-  const viewerAction = TYPE_VIEWER_NOTE[item.type] || "open the original source";
 
   modal.innerHTML = `
     <button class="modal-close" id="mediaModalClose" aria-label="Close" type="button">✕</button>
     ${typeTagHtml(item.type)}
     <h3>${escapeHtml(item.title)}</h3>
     <div class="media-meta">${escapeHtml(item.source)} · ${escapeHtml(item.date)}</div>
-    <p class="modal-body-text">Sample summary: this illustrative ${item.type.toLowerCase()} item stands in for a real feed entry. Once a live media source is connected, clicking this card will ${viewerAction} for "${escapeHtml(item.title)}".</p>
-    <div class="modal-disclaimer">This is sample content for demonstration only — no live media feed or real source is connected yet.</div>
+    ${modalBodyForItem(item)}
   `;
 
   overlay.classList.add("open");
@@ -256,14 +333,15 @@ function setupMediaModal() {
 }
 
 function init() {
-  ITEMS = buildSampleItems();
-  renderTrendCards();
-  renderFeatured();
-  renderGrid();
   setupFilterChips();
   renderTimelineChart();
-  renderThematicChart();
   setupMediaModal();
+  renderFeatured();
+  renderGrid();
+
+  loadNewsLike("News");
+  loadNewsLike("Reports", "Reports");
+  loadTrends();
 }
 
 document.addEventListener("DOMContentLoaded", init);
