@@ -4588,7 +4588,7 @@ window.TAXONOMY_DATA = {
   },
   "CHE": {
     "name": "Switzerland",
-    "status": "established",
+    "status": "none",
     "region": "Europe",
     "taxonomy": "No single binding taxonomy — interoperability + self-regulation",
     "year": null,
