@@ -106,7 +106,7 @@ async function fetchDirect(url) {
       "Accept-Language": "en-US,en;q=0.9",
       ...(origin ? { Referer: origin } : {})
     }
-  }, 6000);
+  }, 10000);
   if (!upstream.ok) {
     throw new Error(`HTTP ${upstream.status}`);
   }
@@ -138,9 +138,13 @@ async function fetchDirect(url) {
 // IP ranges that aren't blocked the same way. Best-effort: if this also
 // fails, we fall through to the original, more informative error.
 async function fetchViaReaderProxy(url) {
+  // The proxy does the actual document fetch AND text-extraction itself
+  // before responding — for a large, many-page document that's genuinely
+  // slow work on its end, not just network latency, so this needs a much
+  // more generous budget than a normal request/response round trip.
   const proxied = await fetchWithTimeout("https://r.jina.ai/" + url, {
     headers: { "Accept": "text/plain" }
-  }, 8000);
+  }, 25000);
   if (!proxied.ok) {
     throw new Error(`reader proxy HTTP ${proxied.status}`);
   }
@@ -189,10 +193,10 @@ async function extractText(url) {
 
   let result;
   try {
-    result = await withTimeout(fetchDirect(url), 18000, "Direct fetch + parse");
+    result = await withTimeout(fetchDirect(url), 32000, "Direct fetch + parse");
   } catch (directErr) {
     try {
-      result = await withTimeout(fetchViaReaderProxy(url), 18000, "Reader-proxy fetch");
+      result = await withTimeout(fetchViaReaderProxy(url), 28000, "Reader-proxy fetch");
     } catch (proxyErr) {
       console.error(`[translate-pdf] extraction failed for ${url}: direct=${directErr.message} proxy=${proxyErr.message}`);
       throw new Error(`Could not fetch the document (${directErr.message}); fallback fetch also failed (${proxyErr.message}). The source site may be blocking automated requests.`);
