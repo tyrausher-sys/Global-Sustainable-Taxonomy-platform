@@ -8,16 +8,22 @@
      separate curated reports database).
      (Papers was removed 2026-07-26 — Google News rarely surfaces genuine
      academic papers, so the feed was consistently empty/erroring for readers.)
-   - AI Trend Insights + the thematic policy chart -> /api/trends, which
-     analyses the live News headlines with the same Anthropic model already
-     used for the AI Advisor's "Ask AI" tab (reusing ANTHROPIC_API_KEY
-     rather than requiring a second AI provider/key, per the spec's intent
-     of "AI-generated" trend analysis of freshly ingested content).
+   - AI Trend Insights -> /api/trends, which analyses the live News
+     headlines with the same Anthropic model already used for the AI
+     Advisor's "Ask AI" tab (reusing ANTHROPIC_API_KEY rather than
+     requiring a second AI provider/key, per the spec's intent of
+     "AI-generated" trend analysis of freshly ingested content).
    - The taxonomy-development timeline chart is real — built from the
      "year" field in data.js.
 
    Podcasts and Videos were intentionally removed (2026-07-21) — they added
-   noise without clear value for this audience. */
+   noise without clear value for this audience.
+   The "Thematic Policy Trends" bar chart was removed (2026-07-26) — it was
+   a rough AI-estimated percentage breakdown of a small, live news sample,
+   which read as more precise/authoritative than the underlying data
+   actually supported. The AI Trend Insight cards above (same /api/trends
+   call) stay, since those are qualitative write-ups rather than implied
+   statistics. */
 
 const TYPES = ["News", "Reports"];
 
@@ -76,9 +82,7 @@ async function loadNewsLike(type, queryParam) {
 
 async function loadTrends() {
   const trendGrid = document.getElementById("trendGrid");
-  const thematicEl = document.getElementById("thematicChart");
   trendGrid.innerHTML = `<p class="section-text">Loading live AI trend analysis…</p>`;
-  thematicEl.innerHTML = `<p class="section-text">Loading…</p>`;
 
   try {
     const res = await fetch("/api/trends");
@@ -87,17 +91,14 @@ async function loadTrends() {
 
     if ((!data.trends || !data.trends.length) && data.note) {
       trendGrid.innerHTML = `<p class="section-text" style="grid-column:1/-1;color:var(--text-muted);">${escapeHtml(data.note)}</p>`;
-      thematicEl.innerHTML = `<p class="section-text">${escapeHtml(data.note)}</p>`;
       return;
     }
 
     renderTrendCards(data.trends || []);
-    renderThematicChart(data.thematic || []);
   } catch (err) {
     console.error("Failed to load AI trend analysis:", err);
     const msg = "Couldn't load live AI trend analysis right now — please try again later.";
     trendGrid.innerHTML = `<p class="section-text" style="grid-column:1/-1;color:var(--text-muted);">${msg}</p>`;
-    thematicEl.innerHTML = `<p class="section-text">${msg}</p>`;
   }
 }
 
@@ -122,26 +123,6 @@ function renderTrendCards(trends) {
       card.querySelector(".trend-toggle").textContent = expanded ? "Collapse analysis ▴" : "Expand analysis ▾";
     });
   });
-}
-
-function renderThematicChart(themes) {
-  const el = document.getElementById("thematicChart");
-  if (!themes.length) {
-    el.innerHTML = `<p class="section-text">No thematic data available right now.</p>`;
-    return;
-  }
-  const maxVal = Math.max(...themes.map(t => Number(t.value) || 0), 1);
-  el.innerHTML = themes.map(t => {
-    const val = Number(t.value) || 0;
-    const width = Math.min(100, (val / maxVal) * 100);
-    return `
-      <div class="thematic-row">
-        <span class="thematic-label">${escapeHtml(t.label)}</span>
-        <div class="thematic-bar-bg"><div class="thematic-bar-fill" style="width:${width}%;"></div></div>
-        <span class="thematic-value">${val}%</span>
-      </div>
-    `;
-  }).join("");
 }
 
 /* ---------- Featured + grid (merged across all ready content types) ---------- */
