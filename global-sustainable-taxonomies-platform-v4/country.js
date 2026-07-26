@@ -645,7 +645,18 @@ function populateTranslateLangSelect() {
 // embed the original document (see openTranslateModal below). Mirrors the
 // pattern already used elsewhere in the project for the same purpose.
 function looksLikePdf(url) {
-  return /\.pdf(\?|$)/i.test(url) || /\/pdf\//i.test(url) || /[?&](format|type)=pdf/i.test(url);
+  return /\.pdf(\?|$|\/)/i.test(url) ||
+    /\/pdf(\?|\/|$)/i.test(url) ||
+    /[?&](format|type)=pdf/i.test(url) ||
+    // Many government file-serving endpoints (e.g. Korean ministry sites,
+    // Russia's official legal-publication portal) stream a PDF from a
+    // generic "download"/"file" action with no ".pdf" in the URL at all —
+    // route these through the same PDF-viewer path too.
+    /download\.?do\b/i.test(url) ||
+    /download\.aspx/i.test(url) ||
+    /\/download\//i.test(url) ||
+    /readdownloadfile/i.test(url) ||
+    /[?&]fileid=/i.test(url);
 }
 
 // Translates the WHOLE document, not just its first few pages: the backend
@@ -654,6 +665,33 @@ function looksLikePdf(url) {
 // translation to the reader as it arrives and showing a "translating part X
 // of Y" note in between (each chunk is its own request, so nothing appears
 // until the first one finishes, then it grows chunk by chunk).
+// Fetches one chunk from the backend. Returns { ok, data, fetchErr } rather
+// than throwing, so callers (sequential or parallel) can handle failures
+// uniformly without try/catch scattered everywhere.
+async function fetchTranslationChunk(url, lang, chunkIndex) {
+  try {
+    const res = await fetch("/api/translate-pdf", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ url, lang, chunkIndex })
+    });
+    const data = await res.json().catch(() => ({}));
+    return { ok: res.ok, data, fetchErr: null };
+  } catch (err) {
+    return { ok: false, data: null, fetchErr: err };
+  }
+}
+
+// Long documents (some run 100+ pages) used to fetch one chunk at a time,
+// waiting for each full translation to finish before starting the next —
+// for a 128-page document that's dozens of sequential AI calls in a row,
+// each taking up to ~40s, adding up to several minutes of total wait. Since
+// each chunk's translation is independent of the others, chunks after the
+// first (which we need alone first, to learn how many chunks there are in
+// total) are now fetched several at a time in parallel batches instead,
+// cutting the total wall-clock wait roughly in proportion to the batch size.
+const TRANSLATE_PARALLEL_BATCH_SIZE = 4;
+
 async function fetchTranslation(url, lang) {
   const body = document.getElementById("translateModalBody");
   const t = (typeof gstT === "function") ? gstT : (k => k);
@@ -661,65 +699,81 @@ async function fetchTranslation(url, lang) {
 
   body.innerHTML = `<div class="translate-modal-loading"><span class="translate-spinner"></span><span>${t("translate.loading")}</span></div>`;
 
-  let accumulatedHtml = "";
-  let chunkIndex = 0;
-  let totalChunks = 1;
+  const showError = (accumulatedHtml, message, debugLine) => {
+    body.innerHTML = accumulatedHtml + `<p class="translate-modal-error">${message}</p>${debugLine || ""}`;
+  };
 
-  while (chunkIndex < totalChunks) {
-    if (myRequestId !== gstTranslateRequestId) return; // superseded by a newer run
-
-    if (chunkIndex > 0) {
-      const progressLabel = t("translate.loadingPart")
-        .replace("{n}", String(chunkIndex + 1))
-        .replace("{total}", String(totalChunks));
-      body.innerHTML = accumulatedHtml +
-        `<div class="translate-modal-loading translate-modal-progress"><span class="translate-spinner"></span><span>${progressLabel}</span></div>`;
-    }
-
-    let ok, data, fetchErr = null;
-    try {
-      const res = await fetch("/api/translate-pdf", {
-        method: "POST",
-        headers: { "content-type": "application/json" },
-        body: JSON.stringify({ url, lang, chunkIndex })
-      });
-      ok = res.ok;
-      data = await res.json().catch(() => ({}));
-    } catch (err) {
-      fetchErr = err;
-    }
-
-    if (myRequestId !== gstTranslateRequestId) return;
-
-    if (fetchErr) {
+  const handleFailure = (accumulatedHtml, result) => {
+    if (result.fetchErr) {
       // "Failed to fetch" means the request never reached a server at all —
       // typically because the site is being viewed as a local file (file://)
       // or a static host without the /api serverless functions, rather than
       // an actual Vercel deployment with ANTHROPIC_API_KEY set.
-      const looksUndeployed = /failed to fetch|networkerror|load failed/i.test(fetchErr.message || "");
-      body.innerHTML = accumulatedHtml + `<p class="translate-modal-error">${
-        looksUndeployed ? t("translate.errorNotDeployed") : `${t("translate.errorGeneric")} (${fetchErr.message})`
-      }</p>`;
+      const looksUndeployed = /failed to fetch|networkerror|load failed/i.test(result.fetchErr.message || "");
+      showError(accumulatedHtml, looksUndeployed ? t("translate.errorNotDeployed") : `${t("translate.errorGeneric")} (${result.fetchErr.message})`);
       return;
     }
+    const data = result.data;
+    const debugLine = data && data.debugKind
+      ? `<p class="translate-modal-truncated-note">Debug: detected as "${data.debugKind}", sample: ${escapeAttr((data.debugSample || "").slice(0, 150))}</p>`
+      : "";
+    showError(accumulatedHtml, (data && data.error) || t("translate.errorGeneric"), debugLine);
+  };
 
-    if (!ok || !data || data.error) {
-      const debugLine = data && data.debugKind
-        ? `<p class="translate-modal-truncated-note">Debug: detected as "${data.debugKind}", sample: ${escapeAttr((data.debugSample || "").slice(0, 150))}</p>`
-        : "";
-      body.innerHTML = accumulatedHtml + `<p class="translate-modal-error">${(data && data.error) || t("translate.errorGeneric")}</p>${debugLine}`;
-      return;
-    }
+  let accumulatedHtml = "";
 
-    accumulatedHtml += renderTranslatedMarkdown(data.translatedText);
-    totalChunks = data.totalChunks || 1;
+  // Chunk 0 always runs alone first: it's the only request that tells us
+  // totalChunks, and it also does the (possibly slow, first-time) document
+  // extraction that later chunks benefit from via the backend's cache.
+  const first = await fetchTranslationChunk(url, lang, 0);
+  if (myRequestId !== gstTranslateRequestId) return;
+  if (!first.ok || !first.data || first.data.error || first.fetchErr) {
+    handleFailure(accumulatedHtml, first);
+    return;
+  }
 
-    if (data.isLastChunk && data.truncatedOverall) {
-      accumulatedHtml += `<p class="translate-modal-truncated-note">${t("translate.truncatedNote")}</p>`;
+  accumulatedHtml += renderTranslatedMarkdown(first.data.translatedText);
+  const totalChunks = first.data.totalChunks || 1;
+  let truncatedOverall = first.data.truncatedOverall;
+  body.innerHTML = accumulatedHtml;
+
+  let nextIndex = 1;
+  while (nextIndex < totalChunks) {
+    if (myRequestId !== gstTranslateRequestId) return; // superseded by a newer run
+
+    const batchEnd = Math.min(nextIndex + TRANSLATE_PARALLEL_BATCH_SIZE, totalChunks);
+    const progressLabel = t("translate.loadingPart")
+      .replace("{n}", String(batchEnd))
+      .replace("{total}", String(totalChunks));
+    body.innerHTML = accumulatedHtml +
+      `<div class="translate-modal-loading translate-modal-progress"><span class="translate-spinner"></span><span>${progressLabel}</span></div>`;
+
+    const batchResults = await Promise.all(
+      Array.from({ length: batchEnd - nextIndex }, (_, i) => fetchTranslationChunk(url, lang, nextIndex + i))
+    );
+
+    if (myRequestId !== gstTranslateRequestId) return;
+
+    // Apply in order (Promise.all already preserves the input order
+    // regardless of which one actually finished first).
+    for (const result of batchResults) {
+      if (!result.ok || !result.data || result.data.error || result.fetchErr) {
+        handleFailure(accumulatedHtml, result);
+        return;
+      }
+      accumulatedHtml += renderTranslatedMarkdown(result.data.translatedText);
+      if (result.data.isLastChunk) {
+        truncatedOverall = result.data.truncatedOverall;
+      }
     }
 
     body.innerHTML = accumulatedHtml;
-    chunkIndex++;
+    nextIndex = batchEnd;
+  }
+
+  if (truncatedOverall) {
+    accumulatedHtml += `<p class="translate-modal-truncated-note">${t("translate.truncatedNote")}</p>`;
+    body.innerHTML = accumulatedHtml;
   }
 }
 
