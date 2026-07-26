@@ -1,1 +1,217 @@
+Frequently Asked Questions
+(FAQ)
+Taksonomi untuk Keuangan
+Berkelanjutan Indonesia (TKBI)
+Update 4 Februari 2026
+
+Daftar Isi
+Daftar Pertanyaan dan Jawaban - Umum
+a. Penjelasan Umum TKBI
+1. Apa itu TKBI dan apa tujuan strategis TKBI?
+2. Siapa pengguna TKBI?
+3. Bagaimana kedudukan TKBI dalam kerangka Keuangan Berkelanjutan di Indonesia?
+b. Penyesuaian Implementasi TKBI terhadap Kondisi Eksisting dari Taksonomi Hijau
+4. Bagaimana interoperabilitas TKBI dengan taksonomi di negara/kawasan lainnya?
+5. Bagaimana kedudukan TKBI dengan THI yang telah diterbitkan sebelumnya?
+6. Mengapa TKBI masih menggunakan KBLI 2017?
+7. Apakah klasifikasi "Transisi" dalam TKBI merupakan gabungan dari klasifikasi "Kuning" dan "Merah" dalam THI?
+c. Mekanisme Penilaian TKBI
+8. Bagaimana penilaian TKBI dilakukan dan apakah seluruh kriteria dalam taksonomi harus dipenuhi?
+9. Apakah penilaian TKBI dapat dilakukan sendiri/self-assessment atau harus menggunakan pihak ketiga?
+10. Apakah penilaian TKBI dilakukan secara berkala?
+d. Penggunaan TKBI
+12. Apakah TKBI diterapkan untuk aktivitas produktif dan konsumtif?
+e. Penyesuaian metode penilaian TKBI terhadap suatu konteks industri/sektor
+13. Apakah mekanisme penilaian Sector-agnostic Decision Tree (SDT) untuk UMKM hanya berlaku bagi aktivitas ekonomi dalam TKBI atau termasuk juga untuk aktivitas ekonomi dalam THI?
+14. Bagaimana mekanisme referensi silang (cross-referencing) dalam TKBI?
+f. Penjelasan Skala Implementasi TKBI bagi UMKM
+15. Apa manfaat penggunaan TKBI bagi UMKM?
+16. Bagaimana implementasi TKBI untuk UMKM?
+17. Bagaimana mekanisme penilaian TKBI untuk UMKM yang memiliki keterbatasan kapasitas dan kapabilitas dalam memenuhi TSC dalam TKBI?
+g. Standarisasi Tools
+18. Apakah OJK dapat menyediakan standard tools untuk memudahkan implementasi TKBI bagi pelaku industri maupun lembaga jasa keuangan?
+h. Kerangka Kerja dan Model Penerapan TKBI
+19. Apakah kerangka kerja TKBI memengaruhi akses pembiayaan di sektor industri?
+20. Apakah terdapat sanksi/denda apabila belum menggunakan TKBI?
+21. Apakah hasil klasifikasi "Transisi" maupun "Tidak Memenuhi Klasifikasi" dapat diartikan sebagai negative list (kegiatan usaha yang tidak dapat diberikan pembiayaan/investasi)?
+i. Perhitungan Emisi
+22. Bagaimana perhitungan penurunan emisi dari Business as Usual pada tahun 2030 dilakukan?
+23. Apakah carbon offset dapat digunakan sebagai untuk pemenuhan kriteria batasan emisi atau target penurunan emisi dalam TKBI?
+j. Praktik TKBI untuk Aspek Sosial
+24. Bagaimana pengguna TKBI menilai EC-Aspek Sosial?
+25. Apakah dampak yang diperhitungkan saat penilaian DNSH maupun Aspek Sosial mengacu pada dampak saat ini atau di masa yang akan datang?
+26. Terkait EC-Aspek Sosial, bagaimana ketentuan pekerja anak yang berlaku di TKBI?
+27. Bagaimana keterkaitan antara TKBI dengan Grievance Mechanism sebagai sarana untuk penanganan pengaduan dan keluhan dari masyarakat sekitar yang terdampak oleh suatu aktivitas ekonomi?
+k. Pilot Implementation
+28. Bagaimana tata cara penyampaian pelaporan pilot project implementasi TKBI?
+29. Bagaimana mekanisme pilot project pelaporan THI pasca diterbitkannya TKBI?
+30. Apakah implementasi TKBI ini akan mengulang penilaian taksonomi untuk masing-masing debitur secara bertahap sebagaimana saat THI dimulai?
+31. Dalam hal satu debitur memiliki beberapa rekening (misalnya rekening pinjaman), apakah seluruh rekening perlu dilaporkan atau cukup salah satu?
+32. Dalam melaporkan hasil klasifikasi taksonomi, apakah bukti dokumen penilaiannya perlu dilaporkan juga kepada OJK?
+33. Apakah penentuan jumlah debitur yang dilaporkan per tahapan dilakukan berdasarkan plafon atau outstanding? Bagaimana dengan kredit yang bersifat revolving?
+
+Daftar Pertanyaan dan Jawaban - Sektor Energi
+a. Penilaian Batasan Emisi TKBI
+1. Apakah penilaian batasan emisi dalam TKBI menggunakan ukuran lifecycle emission atau direct emission?
+b. Aktivitas PLTU
+2. Apa pertimbangan memasukkan aktivitas PLTU pada TKBI dan bagaimana klasifikasi penilaiannya?
+c. Aktivitas Pertambangan dan Penggalian Mineral Kritis
+3. Apa pertimbangan memasukkan aktivitas pertambangan dan penggalian mineral kritis pada TKBI dan bagaimana klasifikasi penilaiannya?
+4. Apakah pembiayaan/investasi kepada aktivitas Percepatan Pengakhiran Masa Operasional PLTU sama dengan pembiayaan/investasi kepada aktivitas Pembangkitan Tenaga Listrik yang bersumber dari Batu Bara?
+
+[Note: this document also covers further sectors in the full official version — Construction & Real Estate, Transportation & Storage, Agriculture/Forestry/Fishing, Manufacturing, Water Supply/Sewerage/Waste Management, Information & Communication, Professional/Scientific/Technical activities, and the Sunsetting/Grandfathering review mechanism — which are summarized in the country page's own research content.]
+
+===
+
+Daftar Pertanyaan dan Jawaban - Umum
+
+a. Penjelasan Umum TKBI
+
+1. Apa itu TKBI dan apa tujuan strategis TKBI?
+TKBI merupakan klasifikasi aktivitas ekonomi yang mendukung upaya dan Tujuan Pembangunan Berkelanjutan Indonesia yang mencakup aspek ekonomi, lingkungan hidup, dan sosial. TKBI digunakan sebagai panduan untuk meningkatkan alokasi modal dan pembiayaan berkelanjutan dalam mendukung pencapaian target net zero emission Indonesia.
+Tujuan strategis TKBI adalah:
+- Menyempurnakan standar definisi aktivitas ekonomi agar sejalan dengan TPB/SDGs yang menyelaraskan aspek ekonomi, lingkungan hidup, dan sosial;
+- Meminimalkan multitafsir;
+- Menghindari greenwashing, social washing, dan impact washing dengan kerangka yang berbasis sains;
+- Meningkatkan alokasi modal dan pembiayaan berkelanjutan dalam mendukung pencapaian target NZE Indonesia;
+- Menjadi dasar dalam pengembangan kebijakan keberlanjutan antara lain pelaporan keberlanjutan, insentif dan disinsentif, dan pengembangan/inovasi produk dan/atau jasa Keuangan Berkelanjutan;
+- Meningkatkan akses, literasi, dan inklusi produk/jasa berkelanjutan melalui perluasan pengguna yang mencakup UMKM dan non-UMKM, yang pada gilirannya mendorong pertumbuhan ekonomi;
+- Sebagai perwujudan sinergi lintas sektor dengan berbagai pemangku kepentingan dalam mendukung upaya Keuangan Berkelanjutan di Indonesia termasuk memenuhi target Indonesia di berbagai komitmen global tentang perubahan iklim.
+
+2. Siapa pengguna TKBI?
+TKBI dapat digunakan oleh setiap pihak yang berkepentingan untuk menilai apakah suatu Aktivitas telah memenuhi aspek berkelanjutan, seperti perusahaan, LJK, regulator, investor, dll.
+
+3. Bagaimana kedudukan TKBI dalam kerangka Keuangan Berkelanjutan di Indonesia?
+TKBI memiliki peran yang sangat penting dalam kerangka kebijakan Keuangan Berkelanjutan di Indonesia. TKBI berperan sebagai common language untuk mendefinisikan aktivitas ekonomi yang sejalan dengan tujuan pembangunan berkelanjutan serta sebagai alat untuk menciptakan transparansi sehingga dapat menghindari greenwashing, social washing, dan impact washing. Hasil klasifikasi dari TKBI dapat digunakan sebagai basis data yang reliable untuk menyusun kebijakan Keuangan Berkelanjutan lain, misalnya kebijakan terkait disclosure requirement, risk management, produk/jasa, dan lainnya. TKBI juga memastikan bahwa pengungkapan kinerja keberlanjutan antara suatu entitas dengan entitas lainnya dinilai secara seragam. Ke depan, TKBI akan disesuaikan dengan perkembangan pembahasan Rancangan Peraturan Pemerintah (RPP) tentang taksonomi berkelanjutan, sebagaimana diamanatkan dalam Undang-Undang Republik Indonesia Nomor 4 Tahun 2023 tentang Pengembangan dan Penguatan Sektor Keuangan (UU P2SK).
+
+b. Penyesuaian Implementasi TKBI terhadap Kondisi Eksisting dari Taksonomi Hijau
+
+4. Bagaimana interoperabilitas TKBI dengan taksonomi di negara/kawasan lainnya?
+TKBI menggunakan ASEAN Taxonomy for Sustainable Finance (ATFS) sebagai referensi utama. Fitur-fitur utama ATSF yang diadopsi dalam TKBI yaitu memasukkan empat Tujuan Lingkungan/Environmental Objectives (EO), yaitu Climate Change Mitigation (EO1), Climate Change Adaptation (EO2), Protection of Healthy Ecosystems dan Biodiversity (EO3) dan Resource Resilience and the Transition to a Circular Economy (EO4). Di samping itu, tiga kriteria esensial dalam ATSF juga diadopsi oleh TKBI, yakni Do No Significant Harm (DNSH)-Essential Criteria (EC) 1, Remedial Measures to Transition (RMT)-EC2, dan Social Aspect (SA)-EC3. Lebih lanjut, penerapannya pada TKBI disesuaikan dengan kondisi Indonesia termasuk mengelaborasi pendekatan penilaian principle-based dalam Foundation Framework untuk segmen Usaha Mikro, Kecil, dan Menengah (UMKM) dan Technical Screening Criteria (TSC) dalam Plus Standard untuk segmen korporasi/non-UMKM.
+
+5. Bagaimana kedudukan TKBI dengan THI yang telah diterbitkan sebelumnya?
+Pengembangan TKBI menggunakan pendekatan sebagaimana praktik terbaik yang berlaku di kawasan seperti ASEAN Taxonomy yang berfokus pada sektor yang memiliki emisi yang tinggi dan berkontribusi terhadap perekonomian. Sejalan dengan hal tersebut, TKBI hanya akan berfokus pada sektor tertentu berdasarkan komitmen pemerintah Indonesia dalam NDC (tidak mencakup seluruh sektor dalam KBLI). Fokus sektor TKBI mencakup NDC-related sector yaitu Energy, Waste, Manufaktur, Agriculture, dan FOLU, dengan fokus pertama sektor energi di tahun 2024. Sektor lainnya akan dikembangkan di tahun-tahun berikutnya sehingga seluruh sektor NDC akan masuk ke dalam cakupan TKBI. Penilaian menggunakan THI masih berlaku sepanjang tidak bertentangan dengan TKBI, dengan ketentuan sebagai berikut:
+- Aktivitas ekonomi yang masuk ke dalam cakupan THI dan TKBI dinilai menggunakan pendekatan dan mekanisme penilaian pada TKBI. Sebagai contoh, aktivitas Transmisi Tenaga Listrik [35102] tercantum dalam THI dan TKBI. Maka dari itu, pengguna TKBI harus menilai Aktivitas tersebut menggunakan mekanisme penilaian pada TKBI.
+- Aktivitas ekonomi yang masuk ke dalam cakupan THI namun tidak terdapat dalam TKBI dinilai menggunakan mekanisme dan kriteria pada THI. Misalnya pada Aktivitas Pertanian Jagung [01111] yang tercakup pada THI dan tidak masuk dalam TKBI, maka penilaian masih menggunakan mekanisme THI. Definisi klasifikasi "Hijau", "Kuning", "Merah" dalam THI berbeda dengan "Hijau", "Transisi" dan "Tidak Memenuhi Klasifikasi" dalam TKBI. Namun demikian, dalam masa transisi, pelaporan klasifikasi "Hijau", "Kuning", "Merah" dapat dipersamakan dengan "Hijau", "Transisi" dan "Tidak Memenuhi Klasifikasi".
+- Aktivitas ekonomi yang tidak masuk ke dalam cakupan THI namun terdapat dalam TKBI dinilai menggunakan TKBI. Contoh: Percepatan pengakhiran masa operasional pembangkit listrik tenaga uap batu bara (PLTU).
+
+6. Mengapa TKBI masih menggunakan KBLI 2017?
+Sebagaimana THI, TKBI juga masih menggunakan KBLI Tahun 2017 (Peraturan Kepala Badan Pusat Statistik Nomor 19 Tahun 2017 tentang Perubahan atas Peraturan Kepala Badan Pusat Statistik Nomor 95 Tahun 2015 tentang Klasifikasi Baku Lapangan Usaha Indonesia) mengingat saat ini mayoritas sistem pelaporan di Sektor Jasa Keuangan masih menggunakan KBLI Tahun 2017. Untuk memudahkan pengguna, pada Lampiran 3 Buku TKBI telah disajikan pemetaan kesesuaian antara KBLI 2017 dengan KBLI 2025.
+
+7. Apakah klasifikasi "Transisi" dalam TKBI merupakan gabungan dari klasifikasi "Kuning" dan "Merah" dalam THI?
+Klasifikasi "Transisi" dalam TKBI bukan merupakan gabungan dari klasifikasi "Kuning" dan "Merah" dalam THI. Klasifikasi "Transisi" pada TKBI juga memiliki definisi yang berbeda dengan klasifikasi "Kuning" pada THI. Klasifikasi "Transisi" pada TKBI menggambarkan Aktivitas yang saat ini belum sejalan dengan komitmen untuk menjaga kenaikan suhu global, belum berada pada jalur NZE, namun: Bergerak menuju klasifikasi "Hijau" dalam jangka waktu tertentu; Memfasilitasi pengurangan emisi yang signifikan dalam jangka pendek atau menengah dengan batas waktu tertentu; atau Mendorong Aktivitas lain untuk berkelanjutan dan memenuhi aspek sosial.
+
+c. Mekanisme Penilaian TKBI
+
+8. Bagaimana penilaian TKBI dilakukan dan apakah seluruh kriteria dalam taksonomi harus dipenuhi?
+Berbeda dengan mekanisme penilaian THI yang lebih sederhana dan straightforward, mekanisme penilaian pada TKBI dilakukan melalui beberapa tahapan. Setelah pengguna dapat mengidentifikasi aktivitas ekonomi dan skala usaha yang akan dinilai, serta memastikan bahwa aktivitas ekonomi tersebut masuk ke dalam cakupan TKBI, maka langkah yang perlu dilakukan adalah:
+1. Menentukan user entry point/titik awal untuk memastikan EO yang paling relevan atau memiliki kontribusi utama pada suatu aktivitas ekonomi. Tahapan ini krusial mengingat kriteria yang perlu dipenuhi oleh suatu aktivitas akan sangat bergantung dengan EO yang dipilihnya. Satu jenis aktivitas ekonomi yang sama dapat dinilai menggunakan lebih dari satu EO yang berbeda tergantung perspektif/justifikasi dari pengguna taksonomi yang melakukan penilaian (Lampiran 2).
+2. Setelah berhasil mengidentifikasi satu EO yang paling relevan atau memiliki kontribusi utama, selanjutnya pengguna melakukan penilaian pemenuhan EO berdasarkan kriteria yang sesuai dengan EO dimaksud. Untuk skala usaha korporasi/non-UMKM maka penilaian kriteria dilakukan menggunakan TSC (Lampiran 3), sementara untuk UMKM penilaian kriteria dilakukan menggunakan SDT (Lampiran 4). Setiap kriteria pada EO yang tercantum dalam taksonomi harus dipenuhi (bersifat "dan", kecuali ditulis lain: misalnya "atau", "dan/atau", atau "opsi").
+3. Apabila pengguna telah selesai melakukan penilaian terhadap pemenuhan EO, selanjutnya pengguna perlu melakukan penilaian terhadap pemenuhan DNSH untuk EO selain dari EO yang paling relevan atau memiliki kontribusi utama (Lampiran 5). Sebagai contoh, apabila EO utamanya adalah EO1, maka penilaian pemenuhan DNSH dilakukan terhadap kriteria pada EO2, EO3, dan EO4. Perlu menjadi perhatian bahwa kriteria pemenuhan DNSH untuk UMKM dan non-UMKM berbeda. Setiap kriteria pada DNSH yang tercantum dalam taksonomi harus dipenuhi (bersifat "dan", kecuali ditulis lain: misalnya "atau", "dan/atau", atau "opsi").
+4. Dalam hal DNSH tidak terpenuhi, maka pengguna diberikan kesempatan untuk melakukan remedial/perbaikan melalui penilaian terhadap aspek RMT. Penilaian terhadap aspek RMT ini dapat dilakukan menggunakan pertanyaan panduan yang tercantum dalam TKBI atau dapat juga menggunakan pendekatan lain selama seluruh prinsip utamanya terpenuhi (Lampiran 6).
+5. Langkah terakhir dalam penilaian TKBI adalah melakukan penilaian terhadap aspek sosial (Lampiran 7). Perlu menjadi perhatian bahwa kriteria pemenuhan aspek sosial untuk UMKM dan non-UMKM berbeda. Setiap kriteria aspek sosial yang tercantum dalam taksonomi harus dipenuhi (bersifat "dan", kecuali ditulis lain: misalnya "atau", "dan/atau", atau "opsi"). Aspek sosial menjadi penentu akhir yang akan menghasilkan klasifikasi taksonomi dari suatu aktivitas ekonomi ("Hijau", "Transisi", atau "Tidak Memenuhi Klasifikasi").
+
+9. Apakah penilaian TKBI dapat dilakukan sendiri/self-assessment atau harus menggunakan pihak ketiga?
+Dalam menggunakan TKBI, pengguna taksonomi perlu meyakinkan kebenaran klasifikasinya sesuai mekanisme penilaian dan persyaratan yang berlaku pada TKBI baik melalui self-assessment ataupun menggunakan jasa Pihak Ketiga (seperti akuntan, asesor, atau pihak ketiga lainnya), sehingga dapat menghindari greenwashing, social washing dan impact washing. Meskipun saat ini penilaian TKBI masih dapat dilakukan melalui self-assessment, namun para pengguna diharapkan melakukan langkah-langkah untuk meyakinkan validitas hasil penilaiannya. Ke depan verifikasi/validasi dari Pihak Ketiga penting dilakukan untuk memastikan validitas hasil penilaian dan kualitas data yang pada akhirnya dapat digunakan sebagai indikator penilaian green/sustainable performance dalam disclosure requirement. Perlu dicatat bahwa terdapat beberapa kriteria yang penilaiannya telah dilakukan oleh pihak yang berkompeten (misalnya penilaian PROPER, Good Mining Practices, dan sebagainya), sehingga pengguna taksonomi dapat melihat hasil penilaian yang telah dilakukan oleh pihak tersebut.
+
+10. Apakah penilaian TKBI dilakukan secara berkala?
+Penilaian TKBI dilakukan sesuai dengan kebutuhan dari penggunanya. Pengguna TKBI perlu memastikan bahwa kriteria dalam TKBI senantiasa terpenuhi. Dimungkinkan adanya perubahan klasifikasi TKBI apabila terdapat perubahan kondisi yang menyebabkan berubahnya pemenuhan suatu aktivitas ekonomi terhadap kriteria dalam TKBI. Frekuensi penilaian TKBI dilakukan sekurang-kurangnya 1 tahun sekali atau menyesuaikan dengan kebutuhan periode pelaporan dan jangka waktu yang ditetapkan oleh stakeholder terkait (contoh: pemberi dana ataupun investor). Dengan demikian, klasifikasi pada taksonomi dapat berubah sesuai dengan kondisi pada saat penilaian dilakukan.
+
+d. Penggunaan TKBI
+
+12. Apakah TKBI diterapkan untuk aktivitas produktif dan konsumtif?
+TKBI dapat diterapkan untuk tujuan produktif dan konsumtif tertentu (contoh: KPR hijau, kredit/pembiayaan kendaraan listrik dan PLTS). Lebih lanjut dapat dilihat pada Buku TKBI Lampiran 8 - Contoh Penggunaan Taksonomi untuk Keuangan Berkelanjutan Indonesia.
+
+e. Penyesuaian metode penilaian TKBI terhadap suatu konteks industri/sektor
+
+13. Apakah mekanisme penilaian Sector-agnostic Decision Tree (SDT) untuk UMKM hanya berlaku bagi aktivitas ekonomi dalam TKBI atau termasuk juga untuk aktivitas ekonomi dalam THI?
+Untuk saat ini, mekanisme penilaian SDT hanya berlaku untuk aktivitas ekonomi yang masuk ke dalam cakupan TKBI.
+
+14. Bagaimana mekanisme referensi silang (cross-referencing) dalam TKBI?
+Dalam TSC untuk beberapa aktivitas, terdapat mekanisme referensi silang (cross-referencing). Apabila suatu TSC mencantumkan referensi silang, maka pemenuhan TSC aktivitas tersebut harus mengikuti klasifikasi ("Hijau" atau "Transisi") dari aktivitas yang dirujuk. Referensi ini dapat merujuk pada aktivitas lain dalam sektor yang sama maupun sektor berbeda, dengan tujuan memastikan konsistensi penerapan prinsip keberlanjutan di seluruh aktivitas dalam TKBI. Sebagai contoh, dalam TSC untuk Industri Semen, terdapat ketentuan pada angka 2 dalam klasifikasi "Hijau" yang berbunyi: "Apabila tersedia fasilitas CCS/CCUS, maka Aktivitas wajib memenuhi TSC pada Aktivitas CCS/CCUS sektor Energi dalam TKBI (cross-referencing)". Artinya, apabila Aktivitas Industri Semen menggunakan fasilitas CCS/CCUS, maka untuk memenuhi angka 2 pada EO1, fasilitas CCS/CCUS pada Aktivitas tersebut harus sesuai dengan TSC klasifikasi "Hijau" yang berlaku pada Aktivitas CCS/CCUS di sektor Energi dalam TKBI.
+
+f. Penjelasan Skala Implementasi TKBI bagi UMKM
+
+15. Apa manfaat penggunaan TKBI bagi UMKM?
+Dengan terbukanya peluang bagi UMKM untuk menggunakan TKBI, maka UMKM akan memperoleh kesempatan mendapatkan alternatif sumber pendanaan berkelanjutan baik dari dalam negeri maupun luar negeri disamping sumber pendanaan/investasi plain vanilla pada umumnya, serta turut berkontribusi untuk mendukung upaya berkelanjutan seperti sektor-sektor yang mendukung transisi energi.
+
+16. Bagaimana implementasi TKBI untuk UMKM?
+Salah satu tujuan strategis disusunnya TKBI adalah untuk meningkatkan cakupan skala pengguna taksonomi menjadi tidak hanya untuk korporasi/perusahaan besar/non-UMKM, namun juga mencakup UMKM. Dalam rangka memastikan kesiapan UMKM untuk menerapkan TKBI, maka implementasi TKBI pada UMKM akan dilakukan secara bertahap dari mulai Usaha Menengah terlebih dahulu dan akan diperluas seiring dengan perkembangan kesiapan industri.
+
+17. Bagaimana mekanisme penilaian TKBI untuk UMKM yang memiliki keterbatasan kapasitas dan kapabilitas dalam memenuhi TSC dalam TKBI?
+Apabila berdasarkan pengelompokan skala aktivitas ekonomi suatu entitas dinyatakan sesuai dengan kriteria modal usaha dan hasil penjualan UMKM sesuai Peraturan Pemerintah Republik Indonesia Nomor 7 Tahun 2021, penilaian TKBI dilakukan menggunakan pendekatan SDT. SDT sendiri merupakan pendekatan penilaian bersifat pendekatan penilaian yang bersifat principle-based berupa decision tree (pohon keputusan) yang dikembangkan berdasarkan kriteria spesifik dari suatu EO dengan dilengkapi pertanyaan panduan (guiding questions) serta terdiri atas pertanyaan biner ("Ya" atau "Tidak). Metode ini relatif lebih sederhana dibandingkan pendekatan berbasis TSC sehingga lebih memungkinkan untuk diterapkan oleh pelaku UMKM dengan skala aktivitas ekonomi yang lebih kecil dibandingkan korporasi. Untuk informasi terkait persyaratan dan panduan SDT secara lebih detail dapat merujuk pada Metodologi Pendekatan SDT dan Pertanyaan Panduan untuk Penilaian SDT dalam Buku TKBI.
+
+g. Standarisasi Tools
+
+18. Apakah OJK dapat menyediakan standard tools untuk memudahkan implementasi TKBI bagi pelaku industri maupun lembaga jasa keuangan?
+Telah dikembangkan taxonomy navigator, yaitu alat bantu diseminasi TKBI yang dapat digunakan oleh publik untuk memahami lebih mendalam terkait tata cara implementasi TKBI. Taxonomy navigator memiliki dua fitur sebagai berikut:
+- TKBI Explorer: Fitur yang digunakan untuk mencari detail kriteria penilaian suatu aktivitas dalam TKBI.
+- TKBI Simulator: Fitur yang digunakan untuk melakukan simulasi tahapan penilaian TKBI secara komprehensif.
+
+h. Kerangka Kerja dan Model Penerapan TKBI
+
+19. Apakah kerangka kerja TKBI memengaruhi akses pembiayaan di sektor industri?
+TKBI tidak membatasi akses terhadap pembiayaan, melainkan berfungsi untuk memperluas opsi pembiayaan berkelanjutan dengan memberikan panduan yang jelas bagi pelaku usaha dan investor. Kerangka ini membantu mengidentifikasi aktivitas yang memenuhi kriteria keberlanjutan, sehingga meningkatkan daya tarik bagi investor yang berorientasi pada prinsip keberlanjutan.
+
+20. Apakah terdapat sanksi/denda apabila belum menggunakan TKBI?
+Saat ini belum terdapat ketentuan mengenai sanksi maupun denda bagi pengguna TKBI. Penggunaan TKBI bersifat industry-driven atau market-driven.
+
+21. Apakah hasil klasifikasi "Transisi" maupun "Tidak Memenuhi Klasifikasi" dapat diartikan sebagai negative list (kegiatan usaha yang tidak dapat diberikan pembiayaan/investasi)?
+TKBI bukan merupakan negative list pembiayaan/investasi. TKBI merupakan klasifikasi aktivitas ekonomi yang mendukung upaya dan Tujuan Pembangunan Berkelanjutan Indonesia yang mencakup aspek ekonomi, lingkungan hidup, dan sosial. TKBI digunakan sebagai panduan untuk meningkatkan alokasi modal dan pembiayaan berkelanjutan dalam mendukung pencapaian target net zero emission.
+
+i. Perhitungan Emisi
+
+22. Bagaimana perhitungan penurunan emisi dari Business as Usual pada tahun 2030 dilakukan?
+Penurunan emisi dari Business as Usual pada tahun 2030 dilakukan dengan terlebih dahulu menentukan emisi yang dihasilkan proses produksi suatu aktivitas ekonomi untuk skenario Business as Usual sampai dengan 2030, kemudian dibandingkan dengan target penurunan emisi sampai dengan tahun 2030 yang bisa tercapai apabila berbagai upaya mitigasi dilakukan (misalnya penggunaan teknologi ramah lingkungan, pembatasan pengeluaran emisi, dsb.). Hasil perhitungan penurunan emisi harus terverifikasi/tervalidasi untuk memastikan kredibilitas penurunan emisi.
+
+23. Apakah carbon offset dapat digunakan sebagai untuk pemenuhan kriteria batasan emisi atau target penurunan emisi dalam TKBI?
+Carbon offset dari carbon unit yang didapat dari perdagangan karbon berpotensi untuk digunakan sebagai salah satu alternatif cara untuk memenuhi kriteria batasan emisi atau target penurunan emisi dalam TKBI. Namun demikian, pada prinsipnya carbon offset bukan merupakan solusi utama dalam upaya pengurangan emisi. Setiap Aktivitas harus melakukan dan membuktikan upaya yang terbaik dalam melakukan penurunan emisi (misanya melalui penggunaan teknologi ramah lingkungan, efisiensi energi, dan upaya lainnya) terlebih dahulu. Carbon offset digunakan sebagai langkah/upaya terakhir untuk memaksimalkan target penurunan emisi. Saat ini penggunaan carbon offset dalam TKBI masih menunggu perkembangan kebijakan terkait unit karbon termasuk diantaranya batasan penggunaan carbon offset yang diperbolehkan, lingkup penggunaan untuk lintas sektor, kekhususan pada hard-to-abate sector, dan sebagainya.
+
+j. Praktik TKBI untuk Aspek Sosial
+
+24. Bagaimana pengguna TKBI menilai EC-Aspek Sosial?
+Pengguna TKBI (Korporasi dan UMKM) menilai aspek sosial berdasarkan kriteria pada Lampiran 7 buku TKBI. Kriteria yang terdapat dalam Lampiran 7 bersifat principle-based dengan rincian ketentuan yang mengacu pada Lampiran 11 (non-exhaustive list). Beberapa kriteria yang ditetapkan pada Lampiran 7 tersebut merupakan prinsip yang bersifat mendasar dan sudah berlaku umum di Indonesia, serta merupakan minimum requirement pemenuhan aspek keberlanjutan dalam TKBI. Dalam penerapannya, dapat disesuaikan dengan kondisi setempat dan penilaian dilengkapi dengan dokumen terkait (document-based).
+
+25. Apakah dampak yang diperhitungkan saat penilaian DNSH maupun Aspek Sosial mengacu pada dampak saat ini atau di masa yang akan datang?
+Dampak diukur pada titik waktu saat penilaian TKBI dilakukan, meliputi kondisi pada saat penilaian dan mempertimbangkan dampak potensial ke depan pada suatu Aktivitas.
+
+26. Terkait EC-Aspek Sosial, bagaimana ketentuan pekerja anak yang berlaku di TKBI?
+Pelaku usaha dapat mempekerjakan anak selama memenuhi persyaratan dan ketentuan yang telah diatur peraturan perundang-undangan. Berdasarkan Undang-Undang Nomor 13 Tahun 2003 tentang Ketenagakerjaan (UU Ketenagakerjaan), anak yang berusia 13 sampai dengan 15 tahun dapat melakukan pekerjaan ringan sepanjang tidak mengganggu kesehatan fisik, mental, dan sosial dengan persyaratan tertentu (izin tertulis orang tua/wali, perjanjian kerja, waktu kerja maksimum 3 jam, dilakukan siang hari dan tidak mengganggu sekolah, keselamatan dan kesehatan kerja, hubungan kerja yang jelas, dan menerima upah sesuai ketentuan). Terdapat pekerjaan yang dilarang melibatkan anak, termasuk pekerjaan yang membahayakan kesehatan, keselamatan, atau moral anak, sebagaimana diatur dalam Keputusan Menteri Tenaga Kerja Dan Transmigrasi Nomor KEP-235/MEN/2003.
+
+27. Bagaimana keterkaitan antara TKBI dengan Grievance Mechanism sebagai sarana untuk penanganan pengaduan dan keluhan dari masyarakat sekitar yang terdampak oleh suatu aktivitas ekonomi?
+Grievance Mechanism merupakan sarana penanganan pengaduan dan keluhan pemangku kepentingan terkait dampak negatif lingkungan dan sosial dari suatu aktivitas ekonomi terhadap lingkungan/masyarakat sekitarnya. TKBI pada dasarnya telah memasukkan aspek sosial yang salah satu kriterianya adalah menilai dampak terhadap masyarakat yang tinggal dekat dengan investasi. Dalam pelaksanaan penilaiannya, pengguna dapat memastikan apakah suatu aktivitas ekonomi memiliki dampak negatif lingkungan dan sosial ke sekitar dengan melihat pengaduan dan keluhan dari masyarakat sekitar terhadap aktivitas ekonomi tersebut. Di samping itu, grievance mechanism telah masuk ke dalam kerangka sustainability disclosure requirement (misalnya GRI - Disclosure 103-2).
+
+k. Pilot Implementation
+
+28. Bagaimana tata cara penyampaian pelaporan pilot project implementasi TKBI?
+Pelapor menggunakan aplikasi APOLO OJK dalam menyampaikan laporan pilot project TKBI sebagaimana mekanisme pelaporan yang dilakukan pada THI.
+
+29. Bagaimana mekanisme pilot project pelaporan THI pasca diterbitkannya TKBI?
+Penerbitan TKBI tidak mengubah fundamental pelaporan taksonomi kepada OJK. Pelaporan masih dilakukan menggunakan aplikasi APOLO dengan format pelaporan yang sama. Kode sektor ekonomi yang digunakan masih sama, mengingat baik TKBI maupun THI sama-sama menggunakan KBLI 2017. Adapun TKBI menyesuaikan tahapan penilaian yang dilakukan oleh pengguna taksonomi. Untuk kepentingan pelaporan selama masa transisi, labeling "Merah" (THI) dilaporkan menggunakan sandi yang sama dengan "Tidak Memenuhi Klasifikasi" (TKBI). Demikian pula untuk "Kuning" (THI) dan "Transisi" (TKBI).
+
+30. Apakah implementasi TKBI ini akan mengulang penilaian taksonomi untuk masing-masing debitur secara bertahap sebagaimana saat THI dimulai?
+Dengan penerbitan TKBI versi 3 yang telah mencakup seluruh NDC-related sector dan enabling sector, maka pelaporan fokus hanya menggunakan TKBI (THI tidak lagi digunakan).
+
+31. Dalam hal satu debitur memiliki beberapa rekening (misalnya rekening pinjaman), apakah seluruh rekening perlu dilaporkan atau cukup salah satu?
+Seluruh rekening perlu dilaporkan. Oleh karena itu, apabila pada suatu tahapan periode, Pelapor perlu melaporkan 100 debitur besar, maka dimungkinkan bahwa data yang dilaporkan lebih dari 100 baris data (dalam hal terdapat satu debitur yang memiliki lebih dari satu rekening).
+
+32. Dalam melaporkan hasil klasifikasi taksonomi, apakah bukti dokumen penilaiannya perlu dilaporkan juga kepada OJK?
+Bukti dokumen penilaian diperlukan bagi pelapor untuk dapat meyakinkan hasil penilaian yang dilakukan. Saat ini, bukti dokumen tersebut dapat diadministrasikan secara mandiri oleh pelapor. Ke depan, dalam hal pelaporan TKBI masuk ke dalam objek pemeriksaan oleh OJK, maka pelapor dapat menyediakan bukti dokumen tersebut.
+
+33. Apakah penentuan jumlah debitur yang dilaporkan per tahapan dilakukan berdasarkan plafon atau outstanding? Bagaimana dengan kredit yang bersifat revolving?
+Penentuan batasan jumlah debitur dilakukan berdasarkan outstanding pada saat posisi laporan berjalan.
+
+Daftar Pertanyaan dan Jawaban - Sektor Energi
+
+a. Penilaian Batasan Emisi TKBI
+
+1. Apakah penilaian batasan emisi dalam TKBI menggunakan ukuran lifecycle emission atau direct emission?
+Penilaian batasan emisi dalam TKBI menggunakan ukuran lifecycle emission sejalan/interoperable dengan ASEAN Taxonomy. Untuk tahap awal, memperhatikan kesiapan industri di Indonesia saat ini terutama terkait pengukuran emisi, maka diterapkan masa transisi bagi pelaku usaha yang belum dapat memenuhi pengukuran lifecycle emissions untuk dapat menggunakan pengukuran Scope 1 - direct emission sampai dengan 31 Desember 2027 (atau lebih awal).
+
+b. Aktivitas PLTU
+
+2. Apa pertimbangan memasukkan aktivitas PLTU pada TKBI dan bagaimana klasifikasi penilaiannya?
+Di kawasan ASEAN, PLTU merupakan tulang punggung sumber energi listrik yang paling besar. Menurut ASEAN Centre for Energy dalam laporannya yang berjudul ASEAN Power Updates 2023, pada akhir tahun 2022 tercatat 106,3 GW PLTU yang aktif di ASEAN. Di Indonesia, PLTU juga masih mendominasi sumber tenaga listrik dengan kapasitas terpasang sebesar 51,06 GW atau 52% dari total kapasitas listrik terpasang pada Triwulan II 2023 (ADB, 2023). Untuk mendorong transisi energi sektor kelistrikan, pemerintah telah menerbitkan Peraturan Presiden Republik Indonesia Nomor 112 Tahun 2022 tentang Percepatan Pengembangan Energi Terbarukan untuk Penyediaan Tenaga Listrik (Perpres 112/2022) yang menandai dimulainya era pembangunan pembangkit listrik rendah emisi dan ramah lingkungan sekaligus pelarangan pembangunan PLTU baru, namun dengan tidak mengganggu pembangkit listrik yang sudah berjalan, kecuali PLTU yang telah ditetapkan dalam RUPTL sebelum berlakunya Perpres, dan PLTU yang memenuhi persyaratan tertentu (terintegrasi dengan industri strategis, berkomitmen mengurangi emisi minimal 35% dalam 10 tahun, dan beroperasi paling lama sampai 2050). ATSF, sebagai salah satu referensi TKBI, mengklasifikasikan aktivitas ini ke dalam "Green", "Amber Tier 2", dan "Amber Tier 3" dengan kriteria yang ketat, dan TKBI membagi aktivitas PLTU menjadi aktivitas percepatan pengakhiran masa operasional PLTU (mengikuti klasifikasi ATSF "Green"/"Amber") dan aktivitas PLTU yang memenuhi persyaratan Perpres 112/2022.
+
+[The remainder of this FAQ (sectors: Construction & Real Estate, Transportation & Storage, Agriculture/Forestry/Fishing, Manufacturing, Water Supply/Sewerage/Waste Management, Information & Communication, Professional/Scientific/Technical, and the Sunsetting/Grandfathering review mechanism) continues in the official document — see "View Original PDF" above for the complete text.]
 
