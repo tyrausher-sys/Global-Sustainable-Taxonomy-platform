@@ -28,7 +28,6 @@
       <a href="advisor.html" data-i18n="nav.advisor">AI Advisor</a>
       <a href="media.html" data-i18n="nav.media">Media Hub</a>
       <a href="subscribe.html" class="active" data-i18n="nav.subscribe">Subscribe</a>
-      <a href="#" class="disabled" title="Coming soon" data-i18n="nav.resources" data-i18n-title="nav.comingSoon">Resources</a>
       <a href="about.html" data-i18n="nav.about">About</a>
     </nav>
     <div class="topnav-actions">
@@ -59,10 +58,8 @@
   <a class="back-link" href="media.html">&larr; <span data-i18n="subscribe.backToMedia">Back to Media Hub</span></a>
   <div class="subscribe-header">
     <h1 data-i18n="subscribe.heading">Subscribe to the Weekly Digest</h1>
-    <p class="lede" data-i18n="subscribe.lede">Get a weekly summary of taxonomy news, reports and AI trend insights, delivered to your inbox. Only your email address is required — everything else is optional.</p>
+    <p class="lede" data-i18n="subscribe.lede">Get a weekly summary of taxonomy news, reports, AI trend insights and BNZ Partners company updates, delivered to your inbox. Only your email address is required — everything else is optional.</p>
   </div>
-
-  <div class="sample-banner" data-i18n="subscribe.sampleBanner">This form adds subscribers to a real Brevo mailing list once the site is deployed with a Brevo API key (see DEPLOY_INSTRUCTIONS.md). Sending the weekly digest itself is still done manually from the Brevo dashboard — this form only handles sign-ups.</div>
 
   <div class="subscribe-layout">
     <section class="advisor-panel subscribe-form-panel" id="subscribeFormPanel">
@@ -92,6 +89,8 @@
           <option value="de">Deutsch</option>
           <option value="ja">日本語</option>
           <option value="zh">中文</option>
+          <option value="ar">العربية</option>
+          <option value="pt">Português</option>
         </select>
 
         <div class="consent-group">
@@ -102,12 +101,10 @@
 
         <button class="btn-subscribe-large" type="submit" data-i18n="subscribe.submitBtn">Subscribe for Free</button>
 
-        <p class="privacy-note" data-i18n="subscribe.privacyNote">We only use your email to send the digest you've signed up for — it is stored in our Brevo mailing list and is not sold or shared. You can "unsubscribe" at any time via the (non-functional) preferences link below.</p>
+        <p class="privacy-note" data-i18n="subscribe.privacyNote">We only use your email to send the digest you've signed up for — it is stored in our Brevo mailing list and is not sold or shared. You can unsubscribe at any time using the link included in the emails you receive.</p>
       </form>
 
       <div class="subscribe-confirm" id="subscribeConfirm"></div>
-
-      <a class="manage-prefs-link" href="preferences.html"><span data-i18n="subscribe.managePrefs">Manage your preferences</span> &rarr;</a>
     </section>
 
     <aside class="subscribe-benefits">
@@ -147,8 +144,13 @@
 
 <footer class="site-footer">
   <span>© 2026 BNZ PARTNERS</span>
-  <span><span data-i18n="footer.developedBy">Developed by</span> Tyra Usher | <span data-i18n="footer.supervisedBy">Supervised by</span> Yoo, So Young, <span data-i18n="footer.headOfAI">Head of AI Centre</span></span>
-  <a href="http://bnzpartners.co.kr/en/" target="_blank" rel="noopener">bnzpartners.co.kr</a>
+  <span><span data-i18n="footer.developedBy">Developed by</span> BNZ PARTNERS — <span data-i18n="about.coreDeveloper">Core Developer</span>: Tyra Usher, <span data-i18n="footer.supervisorLabel">Supervisor</span>: Yoo, So Young</span>
+  <span class="footer-contact">
+    <a href="http://bnzpartners.co.kr/en/" target="_blank" rel="noopener">bnzpartners.co.kr</a> ·
+    <a href="mailto:bnz@bnzpartners.co.kr">bnz@bnzpartners.co.kr</a> ·
+    <a href="tel:+82227841822">+82 2-784-1822</a>
+  </span>
+  <span class="footer-references"><a href="about.html#key-resources" data-i18n="footer.references">References</a></span>
 </footer>
 
 <script src="theme.js"></script>
